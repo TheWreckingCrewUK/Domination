@@ -97,16 +97,21 @@ twc_LastAO = _name;
 _wreck = (getMarkerPos "radioMarker") nearestObject "Land_TTowerBig_2_ruins_F";
 deleteVehicle _wreck;
 deleteMarker "radioMarker";
+[_pos]spawn{
+	params["_pos"];
+	waitUntil{!([_pos,1000] call twc_fnc_posNearPlayers)};
+	{
+		deleteVehicle _x
+	}forEach (nearestObjects [_pos,["Man","Car","Tank","Air"],800]);
+	{
+		deleteVehicle _x
+	}forEach allDeadMen;
+	{
+		deleteVehicle _x
+	}forEach allDead;
 
-{
-	deleteVehicle _x
-}forEach allDeadMen;
-{
-	deleteVehicle _x
-}forEach allDead;
-
-{
-	deleteGroup _x
-}forEach allGroups;
-
+	{
+		deleteGroup _x
+	}forEach allGroups;
+};
 [] call twc_fnc_getao;
