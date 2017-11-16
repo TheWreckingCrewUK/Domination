@@ -200,7 +200,7 @@ if (typeOf vehicle player == "Modern_British_Squadleader") then {
 	
 	_tmp_items = 
 	[
-		["ACRE_PRC343",1]
+		["ACRE_PRC343",1],
 		["UK3CB_BAF_Tripod",1]
 	];
 };
