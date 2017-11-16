@@ -1353,7 +1353,7 @@ if (g_class == "ANA_TL") then {
 	];
 };
 /*
- //BAF Crew Cheif
+ //BAF Crew Chief
  if (g_class == "PLT_CREW") then {
     _tmp_weapons =
     [
@@ -1412,7 +1412,7 @@ if (g_class == "ANA_TL") then {
 	];
 };
 /*
- //US Crew Cheif
+ //US Crew Chief
  if (g_class == "USPLT_CREW") then {
     _tmp_weapons =
     [
