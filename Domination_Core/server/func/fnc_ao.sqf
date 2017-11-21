@@ -39,7 +39,7 @@ _markerstr setMarkerColor "colorEAST";
 _markerstr setMarkerSize [0.75,0.75];
 
 for "_i" from 1 to 3 do {
-	_spawnPos = [_pos,[200,500],random 360,0] call SHK_pos;
+	_spawnPos = [_pos,[200,400],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squadAA] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 200] call cba_fnc_taskPatrol;
 };
@@ -49,7 +49,7 @@ for "_i" from 1 to 6 do {
 	[_group, _spawnPos, 150,3,false,true] call cba_fnc_taskDefend;
 };
 for "_i" from 1 to 5 do {
-	_spawnPos = [_pos,[200,600],random 360,0] call SHK_pos;
+	_spawnPos = [_pos,[200,400],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 200] call cba_fnc_taskPatrol;
 };
@@ -61,12 +61,12 @@ for "_i" from 1 to 1 do {
 for "_i" from 1 to 1 do {
 	_spawnPos = [_pos,[400,500],random 360,0,[1,100]] call SHK_pos;
 	_group = [_spawnPos, EAST, ifv] call BIS_fnc_spawnGroup;
-	[_group, _spawnPos, 300] call cba_fnc_taskPatrol;
+	[_group, _spawnPos, 200] call cba_fnc_taskPatrol;
 };
 for "_i" from 1 to 3 do {
-	_spawnPos = [_pos,[400,700],random 360,0,[1,100]] call SHK_pos;
+	_spawnPos = [_pos,[400,500],random 360,0,[1,100]] call SHK_pos;
 	_group = [_spawnPos, EAST, apc] call BIS_fnc_spawnGroup;
-	[_group, _spawnPos, 300] call cba_fnc_taskPatrol;
+	[_group, _spawnPos, 200] call cba_fnc_taskPatrol;
 };
 for "_i" from 1 to 2 do {
 	_spawnPos = [_pos,[400,500],random 360,0,[1,100]] call SHK_pos;
@@ -75,15 +75,15 @@ for "_i" from 1 to 2 do {
 };
 
 _trg = createTrigger ["EmptyDetector", _pos];
-_trg setTriggerArea [800, 800, 0, false];
+_trg setTriggerArea [600, 600, 0, false];
 _trg setTriggerActivation ["EAST", "PRESENT", false];
 _trg setTriggerTimeout [10,10,10,True];
-_trg setTriggerStatements ["((EAST countSide thisList) < 12 && ({_x isKindOf 'landVehicle' && side _x == EAST} count thisList == 0))","twc_areaCleared = 1", ""];
+_trg setTriggerStatements ["((EAST countSide thisList) < 15 && ({_x isKindOf 'landVehicle' && side _x == EAST} count thisList == 0))","twc_areaCleared = 1", ""];
 
-_enemyCount = East countSide (nearestObjects [_pos,["Man"],800]);
+_enemyCount = East countSide (nearestObjects [_pos,["Man"],600]);
 
 reinforcementsTrg = createTrigger ["EmptyDetector", _pos];
-reinforcementsTrg setTriggerArea [800, 800, 0, false];
+reinforcementsTrg setTriggerArea [600, 600, 0, false];
 reinforcementsTrg setTriggerActivation ["EAST", "PRESENT", true];
 reinforcementsTrg setTriggerTimeout [300,300,300,True];
 reinforcementsTrg setTriggerStatements [format["(EAST countSide thisList) < %1",_enemyCount],"[getPos thisTrigger] call twc_fnc_spawnReinforcements", ""];
