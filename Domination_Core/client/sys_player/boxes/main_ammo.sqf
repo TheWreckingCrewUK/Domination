@@ -551,6 +551,7 @@ if (typeOf vehicle player == "Modern_British_FSTCommander") then {
 		["ACE_VMH3",1],
 		["UK3CB_BAF_Javelin_Slung_Tube",1],
 		["UK3CB_BAF_Javelin_CLU",1],
+		["CUP_launch_FIM92Stinger",1],
 		["rhs_weap_m72a7",1]
     ];
 
