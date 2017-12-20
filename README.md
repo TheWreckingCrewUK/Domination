@@ -2,7 +2,7 @@
 Domination Public Mission - Framework & Maps
 
 ## Preparing the Environment
-All core scripts, that is non-map specific, are done within \Domination_Core\. This aims to keep a consistent, and up to date experience between all maps. In order to save on effort, this directory utilises NTFS directory junctions & .gitignore to make for an easy work flow.
+All core scripts, that is non-map specific, are done within `\Domination_Core\`. This aims to keep a consistent, and up to date experience between all maps. In order to save on effort, this directory utilises NTFS directory junctions & .gitignore to make for an easy work flow.
 
 In order to edit an existing map or a new map, you need to clone the repo and run `prep_environment.cmd` with admin privs. This will make a link to the `\Domination_Core\` folder within the map folders.
 
