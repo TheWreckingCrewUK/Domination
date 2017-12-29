@@ -265,6 +265,90 @@ if (typeOf vehicle player == "Modern_British_Squadleader") then {
 		["ACRE_PRC343",1]
 	];
 };
+
+//BAF Sniper - adding insurgency kit for the moment as it works
+ if (typeOf vehicle player == "Modern_British_Sniper") then {
+    _tmp_weapons =
+    [
+		["UK3CB_BAF_L115A3_DE",1],
+		["ACE_Vector",1],
+		["rhsusf_weap_glock17g4",1]
+    ];
+
+    _tmp_magazines =
+    [	
+		["UK3CB_BAF_338_5Rnd",50],
+		["UK3CB_BAF_338_5Rnd_Tracer",50],
+		["rhsusf_mag_17Rnd_9x19_JHP",15],
+		["rhsusf_mag_15Rnd_9x19_JHP",15]
+	];
+
+	_tmp_items = 
+	[
+		
+		["RKSL_optic_PMII_525",1],
+		["ACE_fieldDressing",20],
+		["ACE_morphine",10],
+		["STKR_Predator",1],
+		["ACRE_PRC343",1],
+		["rhsusf_ANPVS_14",1],
+		["ACE_IR_Strobe_Item",5],
+		["UK3CB_BAF_G_Tactical_Black",1],
+		["ACE_RangeCard",1],
+		["UK3CB_BAF_MaxiKite",1],
+		["ACE_Tripod",1],
+		["HandGrenade",5]
+	];
+
+
+};
+
+//BAF Spotter
+ if (typeOf vehicle player == "Modern_British_Spotter") then {
+    _tmp_weapons =
+    [
+		["UK3CB_BAF_L85A2_RIS",1],
+		["ACE_Vector",1],
+		["rhsusf_weap_glock17g4",1]
+    ];
+
+    _tmp_magazines =
+    [	
+		["UK3CB_BAF_338_5Rnd",50],
+		["UK3CB_BAF_338_5Rnd_Tracer",50],
+		["UK3CB_BAF_556_30Rnd",50],
+		["UK3CB_BAF_556_30Rnd_T",50],
+		["UK3CB_BAF_762_L42A1_20Rnd", 50],
+		["UK3CB_BAF_762_L42A1_20Rnd_t", 50],
+		["rhsusf_mag_17Rnd_9x19_JHP",15],
+		["HandGrenade",5]
+	];
+
+	_tmp_items = 
+	[
+		["ACE_fieldDressing",20],
+		["ACE_morphine",10],
+		["RKSL_optic_LDS",1],
+		["UK3CB_BAF_LLM_IR",1],
+		["UK3CB_BAF_Eotech",1],
+		["STKR_Predator",1],
+		["rhsusf_ANPVS_14",1],
+		["ACE_IR_Strobe_Item",1],
+		["ACRE_PRC343",1],
+		["UK3CB_BAF_G_Tactical_Black",1],
+		["ACE_Kestrel4500",1],
+		["ACE_RangeCard",1],
+		["ACE_SpottingScope",1],
+		["ACE_MX2A",1],
+		["ACRE_PRC117F_ID_1",1],
+		["UK3CB_BAF_LLM_IR_Black",1],
+		["UK3CB_BAF_MaxiKite",1],
+		["ACE_ATragMX",1],
+		["ACE_Tripod",1],
+		["itemCTAB",1]
+	];
+};
+
 /*
 //BAF Sniper
  if (g_class == "BAF_SN") then {
