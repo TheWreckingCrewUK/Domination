@@ -469,6 +469,8 @@ if (g_class == "BAF_EOD_TECH") then {
 		["UK3CB_BAF_LLM_IR_Black",1]
 	];
 };
+
+*/
 //FST Commander
 if (typeOf vehicle player == "Modern_British_FSTCommander") then {
     _tmp_weapons =
@@ -571,7 +573,7 @@ if (typeOf vehicle player == "Modern_British_FSTCommander") then {
 		["UK3CB_BAF_LLM_IR_Black",1]
 	];
 };
-*/
+
 //US Section Leader
 if (typeOf vehicle player == "TWC_Modern_US_Army_SectionCommander") then {
     _tmp_weapons =
