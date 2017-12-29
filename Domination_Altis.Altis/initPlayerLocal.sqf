@@ -33,7 +33,16 @@ twc_restrictedVehicleSlots = [
 		]
 	],
 	
-	["UK3CB_BAF_Wildcat_AH1_CAS_8A", 
+	["CUP_B_UH1Y_Gunship_Dynamic_USMC", 
+		["driver", 
+			["Modern_USMC_HeliPilot"]
+		],
+		["commander", 
+			["Modern_British_HeliPilot","Modern_USMC_HeliPilot"]
+		]
+	],	
+	
+	["CUP_B_AW159_GB", 
 		["driver", 
 			["Modern_British_HeliPilot"]
 		],
@@ -41,6 +50,24 @@ twc_restrictedVehicleSlots = [
 			["Modern_British_JetPilot","Modern_USMC_HeliPilot"]
 		]
 	],
+
+	["CUP_B_CH47F_GB", 
+		["driver", 
+			["Modern_British_HeliPilot","Modern_USMC_HeliPilot"]
+		],
+		["commander", 
+			["Modern_British_JetPilot","Modern_USMC_HeliPilot"]
+		]
+	],	
+	
+	["CUP_B_UH60S_USN", 
+		["driver", 
+			["Modern_USMC_HeliPilot"]
+		],
+		["commander", 
+			["Modern_British_JetPilot","Modern_USMC_HeliPilot"]
+		]
+	],	
 	
 	["RHS_UH60M_D", 
 		["driver", 
