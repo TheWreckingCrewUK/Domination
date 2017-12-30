@@ -10,7 +10,7 @@
 
 _boxClass = "UK3CB_BAF_Box_L111A1";
 
-_box = _boxClass createVehicle (getPos ammoCrateSpawnPad);
+_box = _boxClass createVehicle (getPos AmmoBoxSpawner);
 
 //clearWeaponCargoGlobal _box;
 //clearBackpackCargoGlobal _box;
@@ -28,9 +28,11 @@ _box = _boxClass createVehicle (getPos ammoCrateSpawnPad);
 
 //Respawn/Despawn Script
 
-_trg = createTrigger ["EmptyDetector", getPos ammoCrateSpawnPad];
+_trg = createTrigger ["EmptyDetector", getPos AmmoBoxSpawner];
 _trg setTriggerArea [5,5,0,false];
 _trg setTriggerActivation ["WEST", "NOT PRESENT", false];
 _trg setTriggerTimeout [1800,1800,1800,true];
 _trg setTriggerStatements ["this", "_box = (getPos thisTrigger) nearestObject 'UK3CB_BAF_Box_L111A1'; deleteVehicle _box;",""];
 _trg attachTo [_box];
+
+[player, _box] call ace_cargo_fnc_startLoadIn;

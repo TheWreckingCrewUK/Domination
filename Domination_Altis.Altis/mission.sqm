@@ -8,7 +8,7 @@ class EditorData
 	toggles=1537;
 	class ItemIDProvider
 	{
-		nextID=201;
+		nextID=204;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={14621.667,53.39809,16733.939};
-		dir[]={-0.54769981,-0.61011875,0.57274055};
-		up[]={-0.42166305,0.79231018,0.44094163};
-		aside[]={0.72282809,-1.7690472e-006,0.69122934};
+		pos[]={14556.457,23.310745,16755.705};
+		dir[]={-0.66351503,-0.26628229,-0.69934678};
+		up[]={-0.18330891,0.96387398,-0.19320728};
+		aside[]={-0.72554857,-5.6764111e-007,0.68837291};
 	};
 };
 binarizationWanted=0;
@@ -45,13 +45,15 @@ addons[]=
 	"CUP_AirVehciles_AW159",
 	"CUP_AirVehciles_UH1Y",
 	"CUP_AirVehicles_CH47",
-	"CUP_AirVehicles_UH60"
+	"CUP_AirVehicles_UH60",
+	"A3_Structures_F_Mil_Helipads",
+	"A3_Structures_F_Civ_InfoBoards"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=21;
+		items=22;
 		class Item0
 		{
 			className="twc_modern";
@@ -177,6 +179,13 @@ class AddonsMetaData
 			className="CUP_AirVehicles_UH60";
 			name="CUP_AirVehicles_UH60";
 		};
+		class Item21
+		{
+			className="A3_Structures_F";
+			name="Arma 3 - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=5408565;
@@ -210,7 +219,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=44;
+		items=46;
 		class Item0
 		{
 			dataType="Group";
@@ -4448,6 +4457,61 @@ class Mission
 				{
 					property="acex_headless_blacklist";
 					expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item44
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14546.062,17.91,16742.053};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="AmmoBoxSpawner";
+			};
+			id=202;
+			type="Land_JumpTarget_F";
+		};
+		class Item45
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14548.706,18.485363,16749.742};
+				angles[]={0,3.9588082,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=203;
+			type="Land_InfoStand_V1_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
 					class Value
 					{
 						class data
