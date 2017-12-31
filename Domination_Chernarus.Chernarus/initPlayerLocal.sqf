@@ -42,7 +42,7 @@ twc_restrictedVehicleSlots = [
 		]
 	],	
 	
-	["CUP_B_AW159_GB", 
+	["UK3CB_BAF_Wildcat_AH1_HEL_8A", 
 		["driver", 
 			["Modern_British_HeliPilot"]
 		],
@@ -60,7 +60,7 @@ twc_restrictedVehicleSlots = [
 		]
 	],	
 	
-	["CUP_B_UH60S_USN", 
+	["CUP_B_MH60S_FFV_USMC", 
 		["driver", 
 			["Modern_USMC_HeliPilot"]
 		],
