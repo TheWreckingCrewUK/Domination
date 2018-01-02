@@ -7,9 +7,8 @@
 *
 */
 
-if (( count(allPlayers - entities "HeadlessClient_F"))<4) then {
-[4] execVM "Domination_Core\client\sys_restrict\restrictedkit.sqf";} else {
-_boxClass = "UK3CB_BAF_Box_L7A2";
+
+_boxClass = "UK3CB_BAF_Box_L16_Ammo_Illumination";
 
 _box = _boxClass createVehicle (getPos AmmoBoxSpawner);
 
@@ -33,8 +32,7 @@ _trg = createTrigger ["EmptyDetector", getPos AmmoBoxSpawner];
 _trg setTriggerArea [5,5,0,false];
 _trg setTriggerActivation ["WEST", "NOT PRESENT", false];
 _trg setTriggerTimeout [1800,1800,1800,true];
-_trg setTriggerStatements ["this", "_box = (getPos thisTrigger) nearestObject 'UK3CB_BAF_Box_L7A2'; deleteVehicle _box;",""];
+_trg setTriggerStatements ["this", "_box = (getPos thisTrigger) nearestObject 'UK3CB_BAF_Box_L16_Ammo_Illumination'; deleteVehicle _box;",""];
 _trg attachTo [_box];
 
-
-[player, _box] call ace_cargo_fnc_startLoadIn;}
+[player, _box] call ace_cargo_fnc_startLoadIn;

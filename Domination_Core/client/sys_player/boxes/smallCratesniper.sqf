@@ -6,6 +6,10 @@
 *
 *
 */
+if (( count(allPlayers - entities "HeadlessClient_F"))<10) then {
+[10] execVM "Domination_Core\client\sys_restrict\restrictedkit.sqf";} else {
+
+
 _boxClass = "ACE_Box_Ammo";
 
 _box = _boxClass createVehicle (getPos AmmoBoxSpawner);
@@ -36,4 +40,4 @@ _box addItemCargoGlobal ["HandGrenade",2];
 _box addItemCargoGlobal ["SmokeShell",2];
 _box addItemCargoGlobal ["SmokeShellRed",2];
 
-[player, _box] call ace_cargo_fnc_startLoadIn;
+[player, _box] call ace_cargo_fnc_startLoadIn;};
