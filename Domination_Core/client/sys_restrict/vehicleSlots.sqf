@@ -1,7 +1,4 @@
-	
-
-
-	_list=[
+_list=[
 		["RHS_M119_D", [
 		["gunner", 
 			["Modern_Artillery_Gunner"]
