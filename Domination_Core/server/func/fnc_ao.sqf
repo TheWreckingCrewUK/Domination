@@ -78,7 +78,7 @@ _trg = createTrigger ["EmptyDetector", _pos];
 _trg setTriggerArea [600, 600, 0, false];
 _trg setTriggerActivation ["EAST", "PRESENT", false];
 _trg setTriggerTimeout [10,10,10,True];
-_trg setTriggerStatements ["((EAST countSide thisList) < 15 && ({_x isKindOf 'landVehicle' && side _x == EAST} count thisList == 0))","twc_areaCleared = 1", ""];
+_trg setTriggerStatements ["((EAST countSide thisList) < 15 && ({_x isKindOf 'landVehicle' && side _x == EAST} count thisList <3))","twc_areaCleared = 1", ""];
 
 _enemyCount = East countSide (nearestObjects [_pos,["Man"],600]);
 
