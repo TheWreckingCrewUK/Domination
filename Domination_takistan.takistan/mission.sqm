@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1794;
+		nextID=1799;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8262.9102,325.8143,2011.7268};
-		dir[]={-0.96538615,-0.26105839,-0.010677363};
-		up[]={-0.26118296,0.96526015,-0.0028866751};
-		aside[]={-0.011054033,-2.5299814e-006,1.0000585};
+		pos[]={8178.3394,305.52469,2206.4114};
+		dir[]={0.59968477,-0.20202512,0.77436817};
+		up[]={0.12371275,0.97937042,0.15974902};
+		aside[]={0.79066521,-5.5273995e-007,-0.61230654};
 	};
 };
 binarizationWanted=0;
@@ -394,7 +394,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=290;
+		items=291;
 		class Item0
 		{
 			dataType="Marker";
@@ -3370,7 +3370,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8249.9238,298.22501,2070.9243};
-				angles[]={-0,5.7944932,0};
+				angles[]={0,5.7944932,0};
 			};
 			side="Empty";
 			flags=4;
@@ -8594,7 +8594,7 @@ class Mission
 			name="base_4";
 			text="Artillery";
 			type="b_art";
-			angle=178.68999;
+			angle=178.68997;
 			id=1749;
 		};
 		class Item267
@@ -9343,7 +9343,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8267.6055,298.22501,2081.3186};
-				angles[]={-0,5.7944932,0};
+				angles[]={0,5.7944932,0};
 			};
 			side="Empty";
 			flags=4;
@@ -9359,7 +9359,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8265.7617,296.64761,2075.6868};
-				angles[]={-0,1.0027966,0};
+				angles[]={0,1.0027966,0};
 			};
 			side="Empty";
 			flags=4;
@@ -9375,7 +9375,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8255.5703,296.64761,2069.7109};
-				angles[]={-0,1.0027966,0};
+				angles[]={0,1.0027966,0};
 			};
 			side="Empty";
 			flags=4;
@@ -9414,10 +9414,10 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				createAsSimpleObject=1;
 			};
 			id=1793;
 			type="CUP_B_LAV25_HQ_desert_USMC";
+			atlOffset=-0.010162354;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9440,6 +9440,60 @@ class Mission
 					};
 				};
 				nAttributes=1;
+			};
+		};
+		class Item290
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={8188.4814,296.21713,2221.8831};
+			};
+			areaSize[]={5,-1,5};
+			flags=1;
+			id=1798;
+			type="ModuleHideTerrainObjects_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=15;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#hideLocally";
+					expression="_this setVariable [""#hideLocally"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 	};

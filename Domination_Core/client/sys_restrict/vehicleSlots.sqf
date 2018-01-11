@@ -204,12 +204,12 @@ _list=[
 		]],14
 	],
 	
-		["twc_public_c5_hercules", [
+		["twc_c5_hercules", [
 		["driver", 
 			["Modern_British_JetPilot"]
 		],
 		["turret", 
-			["Modern_British_JetPilot"]
+			["Modern_British_JetPilot", "Modern_British_crewchief"]
 		]],14
 	],
 	
