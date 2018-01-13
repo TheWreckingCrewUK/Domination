@@ -38,6 +38,7 @@ if (typeOf vehicle player == "Modern_British_Squadleader") then {
         ["UK3CB_BAF_556_30Rnd",50],
 		["UK3CB_BAF_556_30Rnd_T",50],
         ["rhsusf_mag_17Rnd_9x19_JHP",15],
+		["B_IR_Grenade"],
 		["HandGrenade",5]
     ];
 
@@ -231,7 +232,7 @@ if (typeOf vehicle player == "Modern_British_Squadleader") then {
 	[
 		["UK3CB_BAF_TA648_308",1],
 		["UK3CB_BAF_LLM_IR",1],
-		["UK3CB_underbarrel_acc_bipod",1],
+		["UK3CB_underbarrel_acc_fgrip_bipod",1],
 		["ACRE_PRC343",1]
 	];	
 };
@@ -627,6 +628,7 @@ if (typeOf vehicle player == "Modern_British_FSTCommander") then {
 		["ACRE_PRC343",1],
 		["ACRE_PRC152",1],
 		["UK3CB_BAF_LLM_IR_Black",1],
+		["itemCTAB",1],
 		["ACE_SpottingScope",1]
 	];
 };
