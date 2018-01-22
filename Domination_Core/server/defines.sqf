@@ -11,3 +11,6 @@ arty = ["rhs_2s3_Tv"];
 tankaaCombined = (configfile >> "CfgGroups" >> "East" >> "OPF_F" >> "Armored" >> "OIA_TankPlatoon_AA");
 enemyFlag = "rhs_flag_Russia";
 bunkerMarkerClass = "n_unknown";
+lightheli = ["RHS_Mi8MTV3_heavy_vdv", "RHS_Mi8MTV3_heavy_vvs"] call BIS_fnc_selectRandom;
+heavyheli = ["CUP_O_Mi24_D_Dynamic_SLA", "CUP_O_Mi24_D_Dynamic_TK"] call BIS_fnc_selectRandom;
+jet = ["RHS_Su25SM_vvs"] call BIS_fnc_selectRandom;
