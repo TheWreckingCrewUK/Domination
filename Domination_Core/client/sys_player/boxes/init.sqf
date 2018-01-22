@@ -34,6 +34,9 @@ if((typeOf player) in ["Modern_Artillery_Gunner","Modern_Artillery_Commander"])t
 	_artaction2 = ["SpawnmedCreate","Spawn L16 HE Rounds","",{execvm "domination_core\client\sys_player\boxes\staticL16_HE.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_artaction2,true] call ace_interact_menu_fnc_addActionToClass;
 	
+		_artaction3 = ["SpawnrepCreate","Spawn Vehicle Repair Kit","",{execvm "domination_core\client\sys_player\boxes\RepairKit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_artaction3,true] call ace_interact_menu_fnc_addActionToClass;
+	
 
 };
 

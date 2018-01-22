@@ -6,8 +6,8 @@
 *
 *
 */
-if (( count(allPlayers - entities "HeadlessClient_F"))<10) then {
-[10] execVM "Domination_Core\client\sys_restrict\restrictedkit.sqf";} else {
+if (( count(allPlayers - entities "HeadlessClient_F"))<5) then {
+[5] execVM "Domination_Core\client\sys_restrict\restrictedkit.sqf";} else {
 
 
 _boxClass = "ACE_Box_Ammo";
