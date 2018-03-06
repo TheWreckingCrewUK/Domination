@@ -244,6 +244,14 @@ if((typeOf player) in ["1990_British_2IC_Desert","1990_British_SectionCommander_
 	
 	_90charlieaction2 = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "domination_core\client\sys_player\boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_90charlieaction2,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_90charlieaction5 = ["SpawnmedCreate","Spawn Milan Crate","",{"UK3CB_BAF_Box_Milan_Ammo" createVehicle (getPos AmmoBoxSpawner)},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_90charlieaction5,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_90charlieaction5 = ["SpawnmedCreate","Spawn 40mm Ammo","",{"UK3CB_BAF_Box_L134A1_Ammo" createVehicle (getPos AmmoBoxSpawner)},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_90charlieaction5,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	
 		
 };
 
@@ -264,5 +272,10 @@ if((typeOf player) in ["1990_RM_British_2IC_Mix","1990_RM_British_SectionCommand
 
 	_90rmaction2 = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "domination_core\client\sys_player\boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_90rmaction2,true] call ace_interact_menu_fnc_addActionToClass;
-		
+
+	_90charlieaction5 = ["SpawnmedCreate","Spawn Milan Crate","",{"UK3CB_BAF_Box_Milan_Ammo" createVehicle (getPos AmmoBoxSpawner)},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_90charlieaction5,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_90charlieaction5 = ["SpawnmedCreate","Spawn 40mm Ammo","",{"UK3CB_BAF_Box_L134A1_Ammo" createVehicle (getPos AmmoBoxSpawner)},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_90charlieaction5,true] call ace_interact_menu_fnc_addActionToClass;
 };
