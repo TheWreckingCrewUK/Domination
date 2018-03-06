@@ -30,6 +30,10 @@ radioTower = "Land_Antenna";
 //add in an object name and the game will create a location there and spawn enemies from it
 customlocations = [c_1, c_2, c_3, c_4, c_5, c_6, c_7, c_8, c_9];
 
+
+	twc_is90 = 1;
+	publicVariable "twc_is90";
+
 twc_aosToComplete = 3;
 twc_enemyFlag = "Faction_CUP_RU";
 twc_badAOs = ["airfield","Loy manara","Jaza","sultansafe","loy manara oilfield","iedrestrictionzone","Bosquet","Faro","Guran","Feas"];

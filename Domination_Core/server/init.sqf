@@ -14,6 +14,13 @@ if(isNil "customlocations") then{
 };
 
 
+if(isNil "twc_is90") then{
+	twc_is90 = 0;
+	publicVariable "twc_is90";
+};
+
+
+
 {_location = createLocation [ "NameVillage" , getpos _x, 100, 100];
 _location setText "Location " + str floor random 999;
 townLocationArray = townLocationArray + (nearestLocations [getpos _x, ["NameVillage","NameCity","NameCityCapital","nameLocal"], 2]);} foreach customlocations;
