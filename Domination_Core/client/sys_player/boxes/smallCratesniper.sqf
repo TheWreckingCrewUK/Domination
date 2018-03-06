@@ -39,5 +39,4 @@ _box addItemCargoGlobal ["ACE_morphine",5];
 _box addItemCargoGlobal ["HandGrenade",2];
 _box addItemCargoGlobal ["SmokeShell",2];
 _box addItemCargoGlobal ["SmokeShellRed",2];
-
-[player, _box] call ace_cargo_fnc_startLoadIn;};
+};

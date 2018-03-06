@@ -9,7 +9,7 @@
 
 _boxClass = "ACE_Box_Ammo";
 
-_box = _boxClass createVehicle (getPos ammoCrateSpawnPad);
+_box = _boxClass createVehicle (getPos AmmoBoxSpawner);
 
 clearWeaponCargoGlobal _box;
 clearBackpackCargoGlobal _box;
@@ -51,5 +51,3 @@ _box addItemCargoGlobal ["ACE_morphine",5];
 _box addItemCargoGlobal ["HandGrenade",5];
 _box addItemCargoGlobal ["SmokeShell",5];
 _box addItemCargoGlobal ["SmokeShellRed",2];
-
-[player, _box] call ace_cargo_fnc_startLoadIn;

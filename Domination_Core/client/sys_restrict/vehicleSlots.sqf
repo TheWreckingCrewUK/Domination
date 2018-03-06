@@ -139,6 +139,24 @@ _list=[
 		]],10
 	],
 	
+		["RHS_CH_47F_light", [
+		["driver", 
+			["Modern_British_HeliPilot"]
+		],
+		["Turret", 
+			["Modern_British_crewchief"]
+		]],3
+	],
+	
+		["CUP_B_MH60L_DAP_4x_USN", [
+		["driver", 
+			["Modern_British_HeliPilot"]
+		],
+		["gunner", 
+			["Modern_British_crewchief"]
+		]],4
+	],
+	
 		["UK3CB_BAF_Wildcat_AH1_CAS_8A", [
 		["driver", 
 			["Modern_British_HeliPilot"]

@@ -40,6 +40,8 @@ execVM "Domination_Core\client\init.sqf";
 //Set Radios Correctly
 waitUntil {!isNull player};
 sleep 2;
+
+player linkItem "ItemGPS";
 _radioID = [getText (configFile >> "cfgVehicles" >> (typeOf player) >> "twc_radioType")] call acre_api_fnc_getRadioByType;
 _channelNumber = getNumber (configFile >> "cfgVehicles" >> (typeOf player) >> "twc_radioChannel");
 _switchChannel = [_radioID, _channelNumber] call acre_api_fnc_setRadioChannel;
