@@ -11,6 +11,17 @@ _list=[
 		]],14,10
 	],
 	
+		["rhsusf_m1a1aimd_usarmy",[ 
+		["driver", 
+			["1990_British_Tank_Crew_Desert"]
+		],
+		["gunner", 
+			["1990_British_Tank_Crew_Desert"]
+		],
+		["commander", 
+			["1990_British_Tank_Commander_Desert"]
+		]],5
+	],
 		["rhsusf_m1a2sep1wd_usarmy",[ 
 		["driver", 
 			["Modern_British_VehicleCrew"]

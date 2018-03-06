@@ -8,7 +8,7 @@ class EditorData
 	toggles=1537;
 	class ItemIDProvider
 	{
-		nextID=218;
+		nextID=220;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={14547.119,45.193867,16729.822};
-		dir[]={0.60955685,-0.40483379,0.6817596};
-		up[]={0.26985168,0.91437209,0.3018145};
-		aside[]={0.74558574,8.1211329e-007,-0.66662234};
+		pos[]={14585.93,20.383438,16763.201};
+		dir[]={-0.67983407,-0.38921204,0.62157661};
+		up[]={-0.28725138,0.9211452,0.26263505};
+		aside[]={0.67478406,8.8009983e-008,0.73802936};
 	};
 };
 binarizationWanted=0;
@@ -52,13 +52,15 @@ addons[]=
 	"CUP_TrackedVehicles_Bulldog",
 	"rhsusf_c_m1a2",
 	"CUP_WheeledVehicles_LAV25",
-	"CUP_TrackedVehicles_MCV80"
+	"CUP_TrackedVehicles_MCV80",
+	"twc_objects",
+	"CUP_Misc3_Config"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=27;
+		items=29;
 		class Item0
 		{
 			className="twc_modern";
@@ -215,6 +217,16 @@ class AddonsMetaData
 		{
 			className="CUP_TrackedVehicles_MCV80";
 			name="CUP_TrackedVehicles_MCV80";
+		};
+		class Item27
+		{
+			className="twc_objects";
+			name="twc_objects";
+		};
+		class Item28
+		{
+			className="CUP_Misc3_Config";
+			name="CUP_Misc3_Config";
 		};
 	};
 };
@@ -12731,7 +12743,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=55;
+		items=57;
 		class Item0
 		{
 			dataType="Group";
@@ -17978,6 +17990,88 @@ class Mission
 								};
 							};
 							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item55
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14581.694,18.842909,16766.492};
+				angles[]={-0,0.78605139,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{this attachto [table]}";
+			};
+			id=218;
+			type="TWC_Item_Public_Base_LOCSTAT";
+			atlOffset=0.00019454956;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item56
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14581.636,18.435101,16766.467};
+				angles[]={0,0.7860471,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="table";
+				disableSimulation=1;
+			};
+			id=219;
+			type="FoldTable";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
 						};
 					};
 				};

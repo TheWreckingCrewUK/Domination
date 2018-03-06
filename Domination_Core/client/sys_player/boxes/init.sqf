@@ -23,6 +23,17 @@ player addEventHandler ["InventoryClosed", {
 	_infaction1 = ["clearbox","Clear Boxes","",{execvm "domination_core\client\sys_player\boxes\clearboxes.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_infaction1,true] call ace_interact_menu_fnc_addActionToClass;
 	
+	_twc_repveh = ["repveh","Repair Nearby Vehicles","",{[_target] execvm "domination_core\client\sys_player\repairvehicle.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["CUP_B_Wolfhound_LMG_GB_W",0,["ACE_MainActions"],_twc_repveh,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_twc_repvehd = ["repveh","Repair Nearby Vehicles","",{[_target] execvm "domination_core\client\sys_player\repairvehicle.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["CUP_B_Wolfhound_LMG_GB_D",0,["ACE_MainActions"],_twc_repvehd,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_twc_repveh2 = ["repveh","Repair Nearby Vehicles","",{[_target] execvm "domination_core\client\sys_player\repairvehicle.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_twc_repveh2,true] call ace_interact_menu_fnc_addActionToClass;	
+
+	
+	
 if((typeOf player) in ["Modern_Artillery_Gunner","Modern_Artillery_Commander"])then{
 
 	_artaction = ["SpawnsmallcharlieCreate","Spawn L16 Smoke Rounds","",{execvm "domination_core\client\sys_player\boxes\staticL16_Smoke.sqf"},{true}] call ace_interact_menu_fnc_createAction;
@@ -200,6 +211,20 @@ if((typeOf player) in ["1990_British_mg_assistant_Desert"])then{
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_mgaction,true] call ace_interact_menu_fnc_addActionToClass;
 	
 };
+
+
+if((typeOf player) in ["twc_men_1990_us_w_SquadLeader","twc_men_1990_us_w_teamleader"])then{
+
+	_charlieaction = ["SpawnsmallcharlieCreate","Spawn Small US Crate","",{execvm "domination_core\client\sys_player\boxes\smallcrateUS90.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_charlieaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+
+	_charlieaction2 = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "domination_core\client\sys_player\boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_charlieaction2,true] call ace_interact_menu_fnc_addActionToClass;
+	
+};
+
+
 
 if((typeOf player) in ["1990_British_2IC_Desert","1990_British_SectionCommander_Desert"])then{
 

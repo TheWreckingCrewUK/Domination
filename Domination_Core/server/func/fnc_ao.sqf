@@ -55,7 +55,8 @@ for "_i" from 1 to 5 do {
 };
 for "_i" from 1 to 1 do {
 	_spawnPos = [_pos,[400,500],random 360,0,[1,100]] call SHK_pos;
-	_group = [_spawnPos, EAST, tank] call BIS_fnc_spawnGroup;
+	_tank = tank call BIS_fnc_selectRandom;
+	_group = [_spawnPos, EAST, _tank] call BIS_fnc_spawnGroup;
  _group addwaypoint [_spawnPos, 300] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 300] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 300] call CBA_fnc_randPos;  

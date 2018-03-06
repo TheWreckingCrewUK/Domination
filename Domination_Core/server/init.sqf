@@ -5,7 +5,20 @@
 basemode = 0;
 publicvariable "basemode";
 
-townLocationArray = nearestLocations [getMarkerPos "base", ["NameVillage","NameCity","NameCityCapital"], twc_maxObjDistance];
+if(isNil "townLocationArray") then{
+	townLocationArray = [];
+};
+
+if(isNil "customlocations") then{
+	customlocations = [];
+};
+
+
+{_location = createLocation [ "NameVillage" , getpos _x, 100, 100];
+_location setText "Location " + str floor random 999;
+townLocationArray = townLocationArray + (nearestLocations [getpos _x, ["NameVillage","NameCity","NameCityCapital","nameLocal"], 2]);} foreach customlocations;
+
+townLocationArray = townLocationArray + (nearestLocations [getMarkerPos "base", ["NameVillage","NameCity","NameCityCapital"], twc_maxObjDistance]);
 
 [] call twc_fnc_getAO;
 
