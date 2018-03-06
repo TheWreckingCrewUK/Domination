@@ -141,19 +141,13 @@ _list=[
 	
 		["RHS_CH_47F_light", [
 		["driver", 
-			["Modern_British_HeliPilot"]
-		],
-		["Turret", 
-			["Modern_British_crewchief"]
+			["1990_British_HeliPilot_Desert"]
 		]],3
 	],
 	
 		["CUP_B_MH60L_DAP_4x_USN", [
 		["driver", 
-			["Modern_British_HeliPilot"]
-		],
-		["gunner", 
-			["Modern_British_crewchief"]
+			["1990_British_HeliPilot_Desert"]
 		]],4
 	],
 	
