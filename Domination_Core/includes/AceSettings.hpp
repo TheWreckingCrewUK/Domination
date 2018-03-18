@@ -1,4 +1,4 @@
-//ACE Finger
+/* //ACE Finger
 class ace_finger_enabled {
 	value = 1;
 	typeName = "BOOL";
@@ -392,4 +392,4 @@ class ace_medical_ai_enabledFor {
 	value = 2;
 	typeName = "SCALAR";
 	force = 1;
-};
+}; */
