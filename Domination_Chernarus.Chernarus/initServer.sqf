@@ -10,6 +10,13 @@ waitUntil{scriptDone _script};
 
 twc_maxObjDistance = 50000;
 
+
+twc_tankcount = 0;
+twc_apccount = 1 + (random 2);
+twc_ifvcount = 1 + (random 2);
+twc_infcount = 8;
+twc_aainfcount = 2;
+
 twc_aosToComplete = 3;
 twc_enemyFlag = "Faction_CUP_RU";
 twc_badAOs = ["airstrip","Krasnostav","Olsha"];

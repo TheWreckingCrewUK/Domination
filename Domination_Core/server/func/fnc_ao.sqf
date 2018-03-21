@@ -13,6 +13,39 @@ params["_pos","_name"];
 twc_areaCleared = 0;
 twc_towerCount = 0;
 
+
+if(isNil "twc_tankcount") then{
+	twc_tankcount = random 3;
+};
+
+twc_tankcount = twc_tankcount * ( 1+ (random 0.5));
+
+if(isNil "twc_ifvcount") then{
+	twc_ifvcount = 2;
+};
+
+twc_ifvcount = twc_ifvcount * ( 1+ (random 0.5));
+
+if(isNil "twc_apccount") then{
+	twc_apccount = 2;
+};
+
+twc_apccount = twc_apccount * ( 1+ (random 0.5));
+
+if(isNil "twc_infcount") then{
+	twc_infcount = 5;
+};
+twc_infcount = twc_infcount * ( 1+ (random 0.5));
+
+
+if(isNil "twc_aainfcount") then{
+	twc_aainfcount = 3;
+};
+
+twc_aainfcount = twc_aainfcount * ( 1+ (random 0.5));
+
+
+
 //Creates ao marker:
 _markerstr = createMarker ["aoCenterMarker",_pos];
 _markerstr setMarkerShape "ICON";
@@ -38,30 +71,32 @@ _markerstr setMarkerType "loc_Transmitter";
 _markerstr setMarkerColor "colorEAST";
 _markerstr setMarkerSize [0.75,0.75];
 
-for "_i" from 1 to 3 do {
+for "_i" from 1 to twc_aainfcount do {
 	_spawnPos = [_pos,[200,400],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squadAA] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 200] call cba_fnc_taskPatrol;
 };
-for "_i" from 1 to 6 do {
+for "_i" from 1 to twc_infcount do {
 	_spawnPos = [_pos,[0,250],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 150,3,false,true] call cba_fnc_taskDefend;
 };
-for "_i" from 1 to 5 do {
+for "_i" from 1 to twc_infcount do {
 	_spawnPos = [_pos,[200,400],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 200] call cba_fnc_taskPatrol;
 };
-for "_i" from 1 to 1 do {
-	_spawnPos = [_pos,[400,500],random 360,0,[1,100]] call SHK_pos;
+
+
+for "_i" from 1 to twc_tankcount do { _pos2= [_pos, 200] call CBA_fnc_randPos;  
+	_spawnPos = [_pos2,[400,500],random 360,0,[1,100]] call SHK_pos;
 	_tank = tank call BIS_fnc_selectRandom;
 	_group = [_spawnPos, EAST, _tank] call BIS_fnc_spawnGroup;
- _group addwaypoint [_spawnPos, 300] call CBA_fnc_randPos;  
- _group addwaypoint [_spawnPos, 300] call CBA_fnc_randPos;  
- _group addwaypoint [_spawnPos, 300] call CBA_fnc_randPos;  
- _group addwaypoint [_spawnPos, 300] call CBA_fnc_randPos;  
- _group addwaypoint [_spawnPos, 300] call CBA_fnc_randPos;  
+ _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
+ _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
+ _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
+ _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
+ _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos; 
 [_group, 0] setWaypointCompletionRadius 30; 
 [_group, 1] setWaypointCompletionRadius 30; 
 [_group, 2] setWaypointCompletionRadius 30; 
@@ -70,14 +105,15 @@ for "_i" from 1 to 1 do {
 [_group, 5] setWaypointCompletionRadius 30;  
  [_group, 5] setWaypointType "CYCLE";
 };
-for "_i" from 1 to 1 do {
-	_spawnPos = [_pos,[400,500],random 360,0,[1,100]] call SHK_pos;
-	_group = [_spawnPos, EAST, ifv] call BIS_fnc_spawnGroup;
- _group addwaypoint [_spawnPos, 300] call CBA_fnc_randPos;  
- _group addwaypoint [_spawnPos, 300] call CBA_fnc_randPos;  
- _group addwaypoint [_spawnPos, 300] call CBA_fnc_randPos;  
- _group addwaypoint [_spawnPos, 300] call CBA_fnc_randPos;  
- _group addwaypoint [_spawnPos, 300] call CBA_fnc_randPos; 
+for "_i" from 1 to twc_ifvcount do { _pos2= [_pos, 200] call CBA_fnc_randPos;  
+	_spawnPos = [_pos2,[400,500],random 360,0,[1,100]] call SHK_pos;
+	_ifv = ifv call BIS_fnc_selectRandom;
+	_group = [_spawnPos, EAST, _ifv] call BIS_fnc_spawnGroup;
+ _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
+ _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
+ _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
+ _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
+ _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos; 
 [_group, 0] setWaypointCompletionRadius 30; 
 [_group, 1] setWaypointCompletionRadius 30; 
 [_group, 2] setWaypointCompletionRadius 30; 
@@ -86,14 +122,15 @@ for "_i" from 1 to 1 do {
 [_group, 5] setWaypointCompletionRadius 30;   
  [_group, 5] setWaypointType "CYCLE";
 };
-for "_i" from 1 to 3 do {
-	_spawnPos = [_pos,[400,500],random 360,0,[1,100]] call SHK_pos;
-	_group = [_spawnPos, EAST, apc] call BIS_fnc_spawnGroup;
- _group addwaypoint [_spawnPos, 300] call CBA_fnc_randPos;  
- _group addwaypoint [_spawnPos, 300] call CBA_fnc_randPos;  
- _group addwaypoint [_spawnPos, 300] call CBA_fnc_randPos;  
- _group addwaypoint [_spawnPos, 300] call CBA_fnc_randPos;  
- _group addwaypoint [_spawnPos, 300] call CBA_fnc_randPos;  
+for "_i" from 1 to twc_apccount do { _pos2= [_pos, 200] call CBA_fnc_randPos;  
+	_spawnPos = [_pos2,[400,500],random 360,0,[1,100]] call SHK_pos;
+	_apc = apc call BIS_fnc_selectRandom;
+	_group = [_spawnPos, EAST, _apc] call BIS_fnc_spawnGroup;
+ _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
+ _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
+ _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
+ _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
+ _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;   
 [_group, 0] setWaypointCompletionRadius 30; 
 [_group, 1] setWaypointCompletionRadius 30; 
 [_group, 2] setWaypointCompletionRadius 30; 
@@ -102,14 +139,15 @@ for "_i" from 1 to 3 do {
 [_group, 5] setWaypointCompletionRadius 30;  
  [_group, 5] setWaypointType "CYCLE";
 };
-for "_i" from 1 to 2 do {
-	_spawnPos = [_pos,[400,500],random 360,0,[1,100]] call SHK_pos;
-	_group = [_spawnPos, EAST, aa] call BIS_fnc_spawnGroup;
- _group addwaypoint [_spawnPos, 300] call CBA_fnc_randPos;  
- _group addwaypoint [_spawnPos, 300] call CBA_fnc_randPos;  
- _group addwaypoint [_spawnPos, 300] call CBA_fnc_randPos;  
- _group addwaypoint [_spawnPos, 300] call CBA_fnc_randPos;  
- _group addwaypoint [_spawnPos, 300] call CBA_fnc_randPos; 
+for "_i" from 1 to 2 do { _pos2= [_pos, 200] call CBA_fnc_randPos;  
+	_spawnPos = [_pos2,[400,500],random 360,0,[1,100]] call SHK_pos;
+	_aa = aa call BIS_fnc_selectRandom;
+	_group = [_spawnPos, EAST, _aa] call BIS_fnc_spawnGroup;
+ _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
+ _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
+ _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
+ _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
+ _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
 [_group, 0] setWaypointCompletionRadius 30; 
 [_group, 1] setWaypointCompletionRadius 30; 
 [_group, 2] setWaypointCompletionRadius 30; 

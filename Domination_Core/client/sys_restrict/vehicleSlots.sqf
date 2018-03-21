@@ -67,6 +67,28 @@ _list=[
 		]],6
 	],
 	
+		["rhsusf_m113d_usarmy_MK19",[ 
+		["driver", 
+			["1990_British_Tank_Crew_Desert","1990_British_Tank_Commander_Desert"]
+		]],3
+	],
+			["rhsusf_m113d_usarmy",[ 
+		["driver", 
+			["1990_British_Tank_Crew_Desert","1990_British_Tank_Commander_Desert"]
+		]],3
+	],
+		
+		["rhsusf_m113_usarmy_MK19",[ 
+		["driver", 
+			["1990_British_Tank_Crew_Desert","1990_British_Tank_Commander_Desert"]
+		]],3
+	],
+			["rhsusf_m113_usarmy",[ 
+		["driver", 
+			["1990_British_Tank_Crew_Desert","1990_British_Tank_Commander_Desert"]
+		]],3
+	],
+	
 		["CUP_B_MCV80_GB_W_SLAT",[ 
 		["driver", 
 			["Modern_British_VehicleCrew"]
@@ -105,13 +127,13 @@ _list=[
 		
 		["rhsusf_m113d_usarmy_medical",[ 
 		["driver", 
-			["Modern_British_VehicleCrew","Modern_British_VehicleCommander","Modern_USMC_VehicleCrew","Modern_USMC_VehicleCommander","Modern_USMC_Medic","Modern_British_Medic"]
+			["Modern_British_VehicleCrew","Modern_British_VehicleCommander","Modern_USMC_VehicleCrew","Modern_USMC_VehicleCommander","Modern_USMC_Medic","Modern_British_Medic", "1990_RM_British_Medic_Mix", "1990_British_Medic_Desert", "1990_British_Tank_Crew_Desert","1990_British_Tank_Commander_Desert"]
 		]]
 	],
 		
 		["rhsusf_m113_usarmy_medical",[ 
 		["driver", 
-			["Modern_British_VehicleCrew","Modern_British_VehicleCommander","Modern_USMC_VehicleCrew","Modern_USMC_VehicleCommander","Modern_USMC_Medic","Modern_British_Medic"]
+			["Modern_British_VehicleCrew","Modern_British_VehicleCommander","Modern_USMC_VehicleCrew","Modern_USMC_VehicleCommander","Modern_USMC_Medic","Modern_British_Medic", "1990_RM_British_Medic_Mix", "1990_British_Medic_Desert", "1990_British_Tank_Crew_Desert","1990_British_Tank_Commander_Desert"]
 		]]
 	],
 	
@@ -210,7 +232,7 @@ _list=[
 		["driver", 
 			["Modern_British_HeliPilot"]
 		],
-		["Turret", 
+		["gunner", 
 			["Modern_British_crewchief"]
 		]],5
 	],
