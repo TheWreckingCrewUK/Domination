@@ -44,6 +44,12 @@ if(isNil "twc_aainfcount") then{
 
 twc_aainfcount = twc_aainfcount * ( 1+ (random 0.5));
 
+if(isNil "twc_artycount") then{
+	twc_artycount = 3;
+};
+
+twc_artycount = twc_artycount * ( 1+ (random 0.5));
+
 
 
 //Creates ao marker:
@@ -248,6 +254,39 @@ _jet flyInHeight  _flyalt;
 	};
 
 };
+
+_artyspawnpos = [_spawnpos, 2000, 5000, 10, 0, 1, 0, [], [_spawnpos, _spawnpos]] call BIS_fnc_findSafePos;
+_attemptcount = 0;
+while{
+
+ ([_artyspawnpos,1500] call twc_fnc_posNearPlayers) || _artyspawnpos distance2D (getMarkerPos "base") < 1500 
+ }do{
+_artyspawnpos = [_spawnpos, 1000, 3000, 10, 0, 1, 0, [], [_spawnpos, _spawnpos]] call BIS_fnc_findSafePos;
+	_attemptcount = _attemptcount + 1;
+
+if (_attemptcount > 250) exitwith {
+};
+};
+
+	artyspawn = arty call BIS_fnc_selectRandom;
+
+for "_i" from 1 to twc_artycount do {
+  
+	_artyspawnpos2 = [_artyspawnpos,[100,200],random 360,0,[1,100]] call SHK_pos;
+	
+	 _group = createGroup East;  
+ _vehicle = artyspawn createVehicle _artyspawnpos2;  
+ 
+ _driver = _group createUnit ["rhs_pilot_combat_heli", _artyspawnpos2,[], 0.3,"NONE"];  
+ _gunner = _group createUnit ["rhs_pilot_combat_heli", _artyspawnpos2,[], 0.3,"NONE"];  
+  
+ _driver moveInDriver _vehicle;  
+ _gunner moveInGunner _vehicle; 	
+};
+
+	_spawnPos = [_artyspawnpos,[0,50],random 360,0] call SHK_pos;
+	_group = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
+	[_group, _spawnPos, 150,3,false,true] call cba_fnc_taskDefend;
 	
 	
 _trg = createTrigger ["EmptyDetector", _pos];
@@ -255,14 +294,21 @@ _trg setTriggerArea [600, 600, 0, false];
 _trg setTriggerActivation ["EAST", "PRESENT", false];
 _trg setTriggerTimeout [10,10,10,True];
 _trg setTriggerStatements ["((EAST countSide thisList) < 15 && ({_x isKindOf 'landVehicle' && side _x == EAST} count thisList <3))","twc_areaCleared = 1", ""];
-
-_enemyCount = East countSide (nearestObjects [_pos,["Man"],600]);
-
+/*
+reinforcementsTrg = createTrigger ["reinforcementsTrg", _pos];
+reinforcementsTrg setTriggerArea [3500, 3500, 0, false];
+reinforcementsTrg setTriggerActivation ["WEST", "PRESENT", true];
+reinforcementsTrg setTriggerTimeout [1,1,1,True];
+reinforcementsTrg setTriggerStatements ["this", "player setdamage 1",""];
+*/
+_timer = 60 +(random 300);
 reinforcementsTrg = createTrigger ["EmptyDetector", _pos];
-reinforcementsTrg setTriggerArea [600, 600, 0, false];
-reinforcementsTrg setTriggerActivation ["EAST", "PRESENT", true];
-reinforcementsTrg setTriggerTimeout [300,300,300,True];
-reinforcementsTrg setTriggerStatements [format["(EAST countSide thisList) < %1",_enemyCount],"[getPos thisTrigger] call twc_fnc_spawnReinforcements", ""];
+reinforcementsTrg setTriggerArea [2700, 2700, 0, false];
+reinforcementsTrg setTriggerActivation ["WEST", "EAST D", true];
+reinforcementsTrg setTriggerTimeout [_timer,_timer,_timer, true];
+reinforcementsTrg setTriggerStatements ["this","[getPos thisTrigger, thislist] call twc_fnc_spawnReinforcements",""];
+
+//[getPos thisTrigger] call twc_fnc_spawnReinforcements
 
 
 waitUntil {twc_areaCleared == 1 && twc_towerCount == 1};
@@ -270,7 +316,7 @@ waitUntil {twc_areaCleared == 1 && twc_towerCount == 1};
 hint "AO captured";
 deleteMarker "aoCenterMarker";
 twc_LastAO = _name;
-_wreck = (getMarkerPos "radioMarker") nearestObject "Land_TTowerBig_2_ruins_F";
+_wreck = (getMarkerPos "radioMarker") nearestObject radioTower;
 deleteVehicle _wreck;
 deleteMarker "radioMarker";
 [_pos]spawn{
@@ -290,4 +336,9 @@ deleteMarker "radioMarker";
 		deleteGroup _x
 	}forEach allGroups;
 };
+
 [] call twc_fnc_getao;
+	waitUntil{!([_artyspawnpos,1000] call twc_fnc_posNearPlayers)};
+	{
+		deleteVehicle _x
+	}forEach (nearestObjects [_artyspawnpos,["Man","Car","Tank","Air"],800]);

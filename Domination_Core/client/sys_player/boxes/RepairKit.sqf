@@ -7,21 +7,11 @@
 *
 */
 
-if (( count(allPlayers - entities "HeadlessClient_F"))<3) then {
-[3] execVM "Domination_Core\client\sys_restrict\restrictedkit.sqf";} else {
-_boxClass = "ACE_Box_Ammo";
-
-_box = _boxClass createVehicle (getPos AmmoBoxSpawner);
-"ace_Wheel" createVehicle (getPos AmmoBoxSpawner);
-"ace_Wheel" createVehicle (getPos AmmoBoxSpawner);
-"ace_Track" createVehicle (getPos AmmoBoxSpawner);
-"ace_Track" createVehicle (getPos AmmoBoxSpawner);
-
-clearWeaponCargoGlobal _box;
-clearBackpackCargoGlobal _box;
-clearMagazineCargoGlobal _box;
-clearitemCargoGlobal _box;
+if (( count(allPlayers - entities "HeadlessClient_F"))<3) then {_wheel = "ace_Wheel" createVehicle (getPos AmmoBoxSpawner); } else {
 
 
-//supplies
-_box AdditemCargoGlobal ["Toolkit",4];};
+_wheel = "ace_Wheel" createVehicle (getPos AmmoBoxSpawner); 
+ createVehicle ["ace_Wheel", position _wheel vectoradd [random 1,random 1, 0.4], [], 0, "can_collide"];  
+ createVehicle ["ace_Wheel", position _wheel vectoradd [random 1,random 1, 0.8], [], 0, "can_collide"];  
+ createVehicle ["ace_Wheel", position _wheel vectoradd [random 1,random 1, 1.2], [], 0, "can_collide"];  
+};

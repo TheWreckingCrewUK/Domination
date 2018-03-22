@@ -45,7 +45,7 @@ if((typeOf player) in ["Modern_Artillery_Gunner","Modern_Artillery_Commander"])t
 	_artaction2 = ["SpawnmedCreate","Spawn L16 HE Rounds","",{execvm "domination_core\client\sys_player\boxes\staticL16_HE.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_artaction2,true] call ace_interact_menu_fnc_addActionToClass;
 	
-		_artaction3 = ["SpawnrepCreate","Spawn Vehicle Repair Kit","",{execvm "domination_core\client\sys_player\boxes\RepairKit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+		_artaction3 = ["SpawnrepCreate","Spawn Spare Tires","",{execvm "domination_core\client\sys_player\boxes\RepairKit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_artaction3,true] call ace_interact_menu_fnc_addActionToClass;
 	
 
@@ -82,7 +82,8 @@ if((typeOf player) in ["Modern_British_HeliPilot","Modern_USMC_HeliPilot"])then{
 	_hfstaction6 = ["spawn40","Spawn 40mm Ammo","",{execvm "domination_core\client\sys_player\boxes\40ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_hfstaction6,true] call ace_interact_menu_fnc_addActionToClass;
 	
-	
+			_artaction3 = ["SpawnrepCreate","Spawn Spare Tires","",{execvm "domination_core\client\sys_player\boxes\RepairKit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_artaction3,true] call ace_interact_menu_fnc_addActionToClass;
 	
 };
 
@@ -106,7 +107,8 @@ if((typeOf player) in ["Modern_British_Squadleader","Modern_British_2IC"])then{
 	_alphaaction6 = ["spawn40","Spawn 40mm Ammo","",{execvm "domination_core\client\sys_player\boxes\40ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction6,true] call ace_interact_menu_fnc_addActionToClass;
 	
-	
+			_artaction3 = ["SpawnrepCreate","Spawn Spare Tires","",{execvm "domination_core\client\sys_player\boxes\RepairKit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_artaction3,true] call ace_interact_menu_fnc_addActionToClass;
 };
 
 if((typeOf player) in ["Modern_USMC_Squadleader","Modern_USMC_Teamleader"])then{
@@ -120,7 +122,8 @@ if((typeOf player) in ["Modern_USMC_Squadleader","Modern_USMC_Teamleader"])then{
 	_charlieaction2 = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "domination_core\client\sys_player\boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_charlieaction2,true] call ace_interact_menu_fnc_addActionToClass;
 	
-
+		_artaction3 = ["SpawnrepCreate","Spawn Spare Tires","",{execvm "domination_core\client\sys_player\boxes\RepairKit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_artaction3,true] call ace_interact_menu_fnc_addActionToClass;
 };
 
 if((typeOf player) in ["Modern_British_Sniper", "Modern_British_Spotter"])then{
@@ -215,13 +218,14 @@ if((typeOf player) in ["1990_British_mg_assistant_Desert"])then{
 
 if((typeOf player) in ["twc_men_1990_us_w_SquadLeader","twc_men_1990_us_w_teamleader"])then{
 
-	_charlieaction = ["SpawnsmallcharlieCreate","Spawn Small US Crate","",{execvm "domination_core\client\sys_player\boxes\smallcrateUS90.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	_charlieaction = ["SpawnsmallcharlieCreate","Spawn US Crate","",{execvm "domination_core\client\sys_player\boxes\smallcrateUS90.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_charlieaction,true] call ace_interact_menu_fnc_addActionToClass;
 
 
 	_charlieaction2 = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "domination_core\client\sys_player\boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_charlieaction2,true] call ace_interact_menu_fnc_addActionToClass;
-	
+			_artaction3 = ["SpawnrepCreate","Spawn Spare Tires","",{execvm "domination_core\client\sys_player\boxes\RepairKit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_artaction3,true] call ace_interact_menu_fnc_addActionToClass;
 };
 
 
@@ -231,9 +235,6 @@ if((typeOf player) in ["1990_British_2IC_Desert","1990_British_SectionCommander_
 	
 	_90alphaaction = ["Spawnsmall90AlphaCreate","Spawn Ammo Crate","",{execvm "domination_core\client\sys_player\boxes\smallcrateuk90.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_90alphaaction,true] call ace_interact_menu_fnc_addActionToClass;
-	
-	_90alphaaction1 = ["Spawnheartscrate","Spawn Hearts and Minds Kit","",{execvm "domination_core\client\sys_player\boxes\heartsminds.sqf"},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_90alphaaction1,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_90alphaaction3 = ["spawn50","Spawn .50 Ammo","",{execvm "domination_core\client\sys_player\boxes\50calammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_90alphaaction3,true] call ace_interact_menu_fnc_addActionToClass;
@@ -251,18 +252,17 @@ if((typeOf player) in ["1990_British_2IC_Desert","1990_British_SectionCommander_
 	_90charlieaction5 = ["SpawnmedCreate","Spawn 40mm Ammo","",{"UK3CB_BAF_Box_L134A1_Ammo" createVehicle (getPos AmmoBoxSpawner)},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_90charlieaction5,true] call ace_interact_menu_fnc_addActionToClass;
 	
-	
+			_artaction3 = ["SpawnrepCreate","Spawn Spare Tires","",{execvm "domination_core\client\sys_player\boxes\RepairKit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_artaction3,true] call ace_interact_menu_fnc_addActionToClass;
 		
 };
 
-if((typeOf player) in ["1990_RM_British_2IC_Mix","1990_RM_British_SectionCommander_Mix"])then{
 
-	
-	_90rmalphaaction = ["Spawnsmall90AlphaCreate","Spawn Ammo Crate","",{execvm "domination_core\client\sys_player\boxes\smallcrateuk90RM.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+if((typeOf player) in ["1990_British_HeliPilot_Desert"])then{
+
+	_90rmalphaaction = ["Spawnsmall90AlphaCreate","Spawn UK Crate","",{execvm "domination_core\client\sys_player\boxes\smallcrateuk90RM.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_90rmalphaaction,true] call ace_interact_menu_fnc_addActionToClass;
 	
-	_90rmalphaaction1 = ["Spawnheartscrate","Spawn Hearts and Minds Kit","",{execvm "domination_core\client\sys_player\boxes\heartsmindsRM.sqf"},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_90rmalphaaction1,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_90rmalphaaction3 = ["spawn50","Spawn .50 Ammo","",{execvm "domination_core\client\sys_player\boxes\50calammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_90rmalphaaction3,true] call ace_interact_menu_fnc_addActionToClass;
@@ -278,4 +278,35 @@ if((typeOf player) in ["1990_RM_British_2IC_Mix","1990_RM_British_SectionCommand
 	
 	_90charlieaction5 = ["SpawnmedCreate","Spawn 40mm Ammo","",{"UK3CB_BAF_Box_L134A1_Ammo" createVehicle (getPos AmmoBoxSpawner)},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_90charlieaction5,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_charlieaction = ["SpawnsmallcharlieCreate","Spawn US Crate","",{execvm "domination_core\client\sys_player\boxes\smallcrateUS90.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_charlieaction,true] call ace_interact_menu_fnc_addActionToClass;
+			_artaction3 = ["SpawnrepCreate","Spawn Spare Tires","",{execvm "domination_core\client\sys_player\boxes\RepairKit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_artaction3,true] call ace_interact_menu_fnc_addActionToClass;
+	};
+
+if((typeOf player) in ["1990_RM_British_2IC_Mix","1990_RM_British_SectionCommander_Mix"])then{
+
+	
+	_90rmalphaaction = ["Spawnsmall90AlphaCreate","Spawn Ammo Crate","",{execvm "domination_core\client\sys_player\boxes\smallcrateuk90RM.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_90rmalphaaction,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	
+	_90rmalphaaction3 = ["spawn50","Spawn .50 Ammo","",{execvm "domination_core\client\sys_player\boxes\50calammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_90rmalphaaction3,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_90rmalphaaction4 = ["spawn762","Spawn 7.62 Ammo","",{execvm "domination_core\client\sys_player\boxes\762ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_90rmalphaaction4,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_90rmaction2 = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "domination_core\client\sys_player\boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_90rmaction2,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_90charlieaction5 = ["SpawnmedCreate","Spawn Milan Crate","",{"UK3CB_BAF_Box_Milan_Ammo" createVehicle (getPos AmmoBoxSpawner)},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_90charlieaction5,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_90charlieaction5 = ["SpawnmedCreate","Spawn 40mm Ammo","",{"UK3CB_BAF_Box_L134A1_Ammo" createVehicle (getPos AmmoBoxSpawner)},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_90charlieaction5,true] call ace_interact_menu_fnc_addActionToClass;
+	
+			_artaction3 = ["SpawnrepCreate","Spawn Spare Tires","",{execvm "domination_core\client\sys_player\boxes\RepairKit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_artaction3,true] call ace_interact_menu_fnc_addActionToClass;
 };
