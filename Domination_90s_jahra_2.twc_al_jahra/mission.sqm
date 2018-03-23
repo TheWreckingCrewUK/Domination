@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={19416.703,414.35037,16277.368};
-		dir[]={-0.84342706,-0.47594878,-0.2497361};
-		up[]={-0.4563427,0.87952626,-0.13512194};
-		aside[]={-0.28395188,1.9406434e-006,0.95895839};
+		pos[]={19404.855,423.78366,16306.251};
+		dir[]={-0.65632081,-0.63251245,-0.41162065};
+		up[]={-0.53582639,0.77462423,-0.33605012};
+		aside[]={-0.53138447,3.5809353e-007,0.84727436};
 	};
 };
 binarizationWanted=0;
@@ -13606,7 +13606,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this addmagazinecargoglobal [""UK3CB_BAF_127_100Rnd"", 10];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
+				init="call{if(!isServer)exitWith{};this addmagazinecargoglobal [""UK3CB_BAF_127_100Rnd"", 10];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
 			};
 			id=663;
 			type="UK3CB_BAF_LandRover_WMIK_HMG_Sand_A";
@@ -14240,7 +14240,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this addmagazinecargoglobal [""UK3CB_BAF_32Rnd_40mm_G_Box"", 6];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
+				init="call{if(!isServer)exitWith{};this addmagazinecargoglobal [""UK3CB_BAF_32Rnd_40mm_G_Box"", 6];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
 			};
 			id=1734;
 			type="UK3CB_BAF_LandRover_WMIK_GMG_Sand_A";
@@ -14281,7 +14281,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this addmagazinecargoglobal [""UK3CB_BAF_32Rnd_40mm_G_Box"", 6];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
+				init="call{if(!isServer)exitWith{};this addmagazinecargoglobal [""UK3CB_BAF_32Rnd_40mm_G_Box"", 6];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
 			};
 			id=1735;
 			type="UK3CB_BAF_LandRover_WMIK_GMG_Sand_A";
@@ -14885,7 +14885,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this addmagazinecargoglobal [""UK3CB_BAF_1Rnd_Milan"", 10];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
+				init="call{if(!isServer)exitWith{};this addmagazinecargoglobal [""UK3CB_BAF_1Rnd_Milan"", 13];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5]; [this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
 			};
 			id=1923;
 			type="UK3CB_BAF_LandRover_WMIK_Milan_Sand_A";
@@ -14926,7 +14926,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this addmagazinecargoglobal [""UK3CB_BAF_127_100Rnd"", 10];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
+				init="call{if(!isServer)exitWith{};this addmagazinecargoglobal [""UK3CB_BAF_127_100Rnd"", 10];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
 			};
 			id=1924;
 			type="UK3CB_BAF_LandRover_WMIK_HMG_Sand_A";
@@ -14967,7 +14967,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this addmagazinecargoglobal [""UK3CB_BAF_1Rnd_Milan"", 10];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
+				init="call{if(!isServer)exitWith{};this addmagazinecargoglobal [""UK3CB_BAF_1Rnd_Milan"", 13];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5]; [this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
 			};
 			id=1925;
 			type="UK3CB_BAF_LandRover_WMIK_Milan_Sand_A";
@@ -15008,7 +15008,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this addmagazinecargoglobal [""UK3CB_BAF_1Rnd_Milan"", 10];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5]; if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
+				init="call{if(!isServer)exitWith{};this addmagazinecargoglobal [""UK3CB_BAF_1Rnd_Milan"", 13];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5]; [this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
 			};
 			id=1926;
 			type="UK3CB_BAF_LandRover_WMIK_Milan_Sand_A";
@@ -15049,7 +15049,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this addmagazinecargoglobal [""UK3CB_BAF_127_100Rnd"", 10];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
+				init="call{if(!isServer)exitWith{};this addmagazinecargoglobal [""UK3CB_BAF_127_100Rnd"", 10];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
 			};
 			id=1927;
 			type="UK3CB_BAF_LandRover_WMIK_HMG_Sand_A";

@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2082;
+		nextID=2090;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={19382.635,406.59384,16285.698};
-		dir[]={-0.41850436,-0.31979567,0.85019726};
-		up[]={-0.14123467,0.94749564,0.28691941};
-		aside[]={0.89730102,1.4471589e-006,0.44169039};
+		pos[]={19402.947,408.48828,16277.312};
+		dir[]={-0.85121214,-0.27792534,0.44548488};
+		up[]={-0.24624637,0.96061653,0.1288739};
+		aside[]={0.46374801,5.2643009e-007,0.88611293};
 	};
 };
 binarizationWanted=0;
@@ -17668,334 +17668,6 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={19378.969,404.05225,16296.054};
-				angles[]={6.2107778,1.046255,0.024144601};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="call{this addmagazinecargoglobal [""UK3CB_BAF_127_100Rnd"", 10];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
-			};
-			id=2062;
-			type="UK3CB_BAF_LandRover_WMIK_HMG_Sand_A";
-			atlOffset=0.021240234;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""UK3CB_BAF_Javelin_Slung_Tube""],[1]],[[""UK3CB_BAF_762_200Rnd_T"",""UK3CB_BAF_127_100Rnd""],[6,6]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item74
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={19381.08,403.82632,16292.341};
-				angles[]={6.2107778,1.0522765,0.021973098};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="call{this addmagazinecargoglobal [""UK3CB_BAF_32Rnd_40mm_G_Box"", 6];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
-			};
-			id=2063;
-			type="UK3CB_BAF_LandRover_WMIK_GMG_Sand_A";
-			atlOffset=0.0206604;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""UK3CB_BAF_Javelin_Slung_Tube""],[1]],[[""UK3CB_BAF_762_200Rnd_T"",""UK3CB_BAF_32Rnd_40mm_G_Box""],[6,6]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item75
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={19382.834,403.62692,16288.988};
-				angles[]={6.2193294,1.0522765,0.021970386};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="call{this addmagazinecargoglobal [""UK3CB_BAF_32Rnd_40mm_G_Box"", 6];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
-			};
-			id=2064;
-			type="UK3CB_BAF_LandRover_WMIK_GMG_Sand_A";
-			atlOffset=0.018493652;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""UK3CB_BAF_Javelin_Slung_Tube""],[1]],[[""UK3CB_BAF_762_200Rnd_T"",""UK3CB_BAF_32Rnd_40mm_G_Box""],[6,6]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item76
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={19384.146,403.22525,16285.476};
-				angles[]={6.2249141,1.0037563,0.016366711};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="call{this addmagazinecargoglobal [""UK3CB_BAF_1Rnd_Milan"", 10];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
-			};
-			id=2065;
-			type="UK3CB_BAF_LandRover_WMIK_Milan_Sand_A";
-			atlOffset=0.018218994;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""FirstAidKit""],[4]],[[""UK3CB_BAF_1Rnd_Milan"",""UK3CB_BAF_762_200Rnd_T""],[4,6]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item77
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={19376.818,404.23953,16299.353};
-				angles[]={6.2107778,1.046255,0.024144601};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="call{this addmagazinecargoglobal [""UK3CB_BAF_127_100Rnd"", 10];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
-			};
-			id=2066;
-			type="UK3CB_BAF_LandRover_WMIK_HMG_Sand_A";
-			atlOffset=0.021240234;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""UK3CB_BAF_Javelin_Slung_Tube""],[1]],[[""UK3CB_BAF_762_200Rnd_T"",""UK3CB_BAF_127_100Rnd""],[6,6]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item78
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={19386.002,403.06854,16282.313};
-				angles[]={6.2249141,1.0037563,0.016366711};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="call{this addmagazinecargoglobal [""UK3CB_BAF_1Rnd_Milan"", 10];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
-			};
-			id=2067;
-			type="UK3CB_BAF_LandRover_WMIK_Milan_Sand_A";
-			atlOffset=0.015625;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""FirstAidKit""],[4]],[[""UK3CB_BAF_1Rnd_Milan"",""UK3CB_BAF_762_200Rnd_T""],[4,6]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item79
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={19388.307,402.92441,16279.007};
-				angles[]={6.2391052,1.0037563,0.016366711};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="call{this addmagazinecargoglobal [""UK3CB_BAF_1Rnd_Milan"", 10];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5]; if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
-			};
-			id=2068;
-			type="UK3CB_BAF_LandRover_WMIK_Milan_Sand_A";
-			atlOffset=0.014129639;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""FirstAidKit""],[4]],[[""UK3CB_BAF_1Rnd_Milan"",""UK3CB_BAF_762_200Rnd_T""],[4,6]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item80
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={19374.824,404.44144,16302.796};
-				angles[]={6.2106843,1.046255,0.024144601};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="call{this addmagazinecargoglobal [""UK3CB_BAF_127_100Rnd"", 10];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
-			};
-			id=2069;
-			type="UK3CB_BAF_LandRover_WMIK_HMG_Sand_A";
-			atlOffset=0.021209717;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""UK3CB_BAF_Javelin_Slung_Tube""],[1]],[[""UK3CB_BAF_762_200Rnd_T"",""UK3CB_BAF_127_100Rnd""],[6,6]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item81
-		{
-			dataType="Object";
-			class PositionInfo
-			{
 				position[]={19372.164,404.83569,16306.85};
 				angles[]={6.2106843,0,0.024144601};
 			};
@@ -18446,7 +18118,7 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item82
+		class Item74
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18486,7 +18158,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item83
+		class Item75
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18526,13 +18198,13 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item84
+		class Item76
 		{
 			dataType="Object";
 			class PositionInfo
 			{
 				position[]={19372.098,403.45834,16309.861};
-				angles[]={1.5707966,0,-0};
+				angles[]={1.5707966,0,0};
 			};
 			side="Empty";
 			class Attributes
@@ -18543,7 +18215,7 @@ class Mission
 			type="ACE_Wheel";
 			atlOffset=0.82217407;
 		};
-		class Item85
+		class Item77
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18560,7 +18232,7 @@ class Mission
 			type="ACE_Wheel";
 			atlOffset=1.3988953;
 		};
-		class Item86
+		class Item78
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18664,7 +18336,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item87
+		class Item79
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18768,7 +18440,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item88
+		class Item80
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18785,7 +18457,7 @@ class Mission
 			type="rhsusf_weapon_m1911a1";
 			atlOffset=1.0555115;
 		};
-		class Item89
+		class Item81
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18802,7 +18474,7 @@ class Mission
 			type="ACE_Track";
 			atlOffset=1.008728;
 		};
-		class Item90
+		class Item82
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18819,7 +18491,7 @@ class Mission
 			type="ACE_Track";
 			atlOffset=1.0368042;
 		};
-		class Item91
+		class Item83
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18923,7 +18595,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item92
+		class Item84
 		{
 			dataType="Object";
 			class PositionInfo
@@ -18939,6 +18611,334 @@ class Mission
 			id=2081;
 			type="ACE_Track";
 			atlOffset=1.1017456;
+		};
+		class Item85
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={19378.969,404.05225,16296.054};
+				angles[]={6.2107778,1.046255,0.024144601};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{if(!isServer)exitWith{};this addmagazinecargoglobal [""UK3CB_BAF_127_100Rnd"", 10];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
+			};
+			id=2082;
+			type="UK3CB_BAF_LandRover_WMIK_HMG_Sand_A";
+			atlOffset=0.021240234;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""UK3CB_BAF_Javelin_Slung_Tube""],[1]],[[""UK3CB_BAF_762_200Rnd_T"",""UK3CB_BAF_127_100Rnd""],[6,6]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item86
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={19381.08,403.82632,16292.341};
+				angles[]={6.2107778,1.0522765,0.021973098};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{if(!isServer)exitWith{};this addmagazinecargoglobal [""UK3CB_BAF_32Rnd_40mm_G_Box"", 6];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
+			};
+			id=2083;
+			type="UK3CB_BAF_LandRover_WMIK_GMG_Sand_A";
+			atlOffset=0.0206604;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""UK3CB_BAF_Javelin_Slung_Tube""],[1]],[[""UK3CB_BAF_762_200Rnd_T"",""UK3CB_BAF_32Rnd_40mm_G_Box""],[6,6]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item87
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={19382.834,403.62692,16288.988};
+				angles[]={6.2193294,1.0522765,0.021970386};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{if(!isServer)exitWith{};this addmagazinecargoglobal [""UK3CB_BAF_32Rnd_40mm_G_Box"", 6];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
+			};
+			id=2084;
+			type="UK3CB_BAF_LandRover_WMIK_GMG_Sand_A";
+			atlOffset=0.018493652;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""UK3CB_BAF_Javelin_Slung_Tube""],[1]],[[""UK3CB_BAF_762_200Rnd_T"",""UK3CB_BAF_32Rnd_40mm_G_Box""],[6,6]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item88
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={19384.146,403.22525,16285.476};
+				angles[]={6.2249141,1.0037563,0.016366711};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{if(!isServer)exitWith{};this addmagazinecargoglobal [""UK3CB_BAF_1Rnd_Milan"", 13];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5]; [this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
+			};
+			id=2085;
+			type="UK3CB_BAF_LandRover_WMIK_Milan_Sand_A";
+			atlOffset=0.018218994;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[4]],[[""UK3CB_BAF_1Rnd_Milan"",""UK3CB_BAF_762_200Rnd_T""],[4,6]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item89
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={19376.818,404.23953,16299.353};
+				angles[]={6.2107778,1.046255,0.024144601};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{if(!isServer)exitWith{};this addmagazinecargoglobal [""UK3CB_BAF_127_100Rnd"", 10];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
+			};
+			id=2086;
+			type="UK3CB_BAF_LandRover_WMIK_HMG_Sand_A";
+			atlOffset=0.021240234;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""UK3CB_BAF_Javelin_Slung_Tube""],[1]],[[""UK3CB_BAF_762_200Rnd_T"",""UK3CB_BAF_127_100Rnd""],[6,6]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item90
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={19386.002,403.06854,16282.313};
+				angles[]={6.2249141,1.0037563,0.016366711};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{if(!isServer)exitWith{};this addmagazinecargoglobal [""UK3CB_BAF_1Rnd_Milan"", 13];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5]; [this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
+			};
+			id=2087;
+			type="UK3CB_BAF_LandRover_WMIK_Milan_Sand_A";
+			atlOffset=0.015625;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[4]],[[""UK3CB_BAF_1Rnd_Milan"",""UK3CB_BAF_762_200Rnd_T""],[4,6]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item91
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={19388.307,402.92441,16279.007};
+				angles[]={6.2391052,1.0037563,0.016366711};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{if(!isServer)exitWith{};this addmagazinecargoglobal [""UK3CB_BAF_1Rnd_Milan"", 13];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5]; [this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
+			};
+			id=2088;
+			type="UK3CB_BAF_LandRover_WMIK_Milan_Sand_A";
+			atlOffset=0.014129639;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[4]],[[""UK3CB_BAF_1Rnd_Milan"",""UK3CB_BAF_762_200Rnd_T""],[4,6]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item92
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={19374.824,404.44144,16302.796};
+				angles[]={6.2106843,1.046255,0.024144601};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{if(!isServer)exitWith{};this addmagazinecargoglobal [""UK3CB_BAF_127_100Rnd"", 10];this addmagazinecargoglobal [""UK3CB_BAF_762_200Rnd_T"", 5];[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
+			};
+			id=2089;
+			type="UK3CB_BAF_LandRover_WMIK_HMG_Sand_A";
+			atlOffset=0.021209717;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""UK3CB_BAF_Javelin_Slung_Tube""],[1]],[[""UK3CB_BAF_762_200Rnd_T"",""UK3CB_BAF_127_100Rnd""],[6,6]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };
