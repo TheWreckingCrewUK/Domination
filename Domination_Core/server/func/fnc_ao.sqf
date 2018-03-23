@@ -43,14 +43,14 @@ if(isNil "twc_aainfcount") then{
 };
 
 twc_aainfcount = twc_aainfcount * ( 1+ (random 0.5));
-
+/* removing artillery for the moment until I stop them firing on people at really bad times
 if(isNil "twc_artycount") then{
 	twc_artycount = 3;
 };
 
 twc_artycount = twc_artycount * ( 1+ (random 0.5));
-
-
+*/
+twc_artycount = 0;
 
 //Creates ao marker:
 _markerstr = createMarker ["aoCenterMarker",_pos];
