@@ -22,6 +22,17 @@ _list=[
 			["1990_British_Tank_Commander_Desert"]
 		]],5
 	],
+		["ukcw_cvrt_Scim_d_L1",[ 
+		["driver", 
+			["1990_British_Tank_Crew_Desert"]
+		],
+		["gunner", 
+			["1990_British_Tank_Crew_Desert"]
+		],
+		["commander", 
+			["1990_British_Tank_Commander_Desert"]
+		]],3
+	],
 		["rhsusf_m1a2sep1wd_usarmy",[ 
 		["driver", 
 			["Modern_British_VehicleCrew"]
@@ -173,6 +184,14 @@ _list=[
 		]],4
 	],
 	
+		["ukcw_Gazelle", [
+		["driver", 
+			["1990_British_HeliPilot_Desert"]
+		],
+		["turret", 
+			["1990_British_HeliPilot_Desert"]
+		]],0
+	],
 		["UK3CB_BAF_Wildcat_AH1_CAS_8A", [
 		["driver", 
 			["Modern_British_HeliPilot"]
