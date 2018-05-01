@@ -190,7 +190,7 @@ _list=[
 		],
 		["turret", 
 			["1990_British_HeliPilot_Desert"]
-		]],0
+		]],3
 	],
 		["UK3CB_BAF_Wildcat_AH1_CAS_8A", [
 		["driver", 
