@@ -205,7 +205,7 @@ _list=[
 		["driver", 
 			["Modern_British_HeliPilot"]
 		],
-		["turret", 
+		[[2], 
 			["Modern_British_crewchief"]
 		]],9
 	],	
@@ -229,13 +229,14 @@ _list=[
 	],
 
 
+
 		["CUP_B_CH47F_GB",[ 
 		["driver", 
-			["Modern_British_HeliPilot","Modern_USMC_HeliPilot"]
+			["Modern_British_HeliPilot","Modern_USMC_HeliPilot","2000_British_HeliPilot_Desert"]
 		],
-		["turret", 
-			["Modern_British_crewchief","Modern_USMC_crewchief"]
-		]],5
+		[[3], 
+			["Modern_British_crewchief","Modern_USMC_crewchief","Modern_British_HeliPilot"]
+		]],3
 	],
 	
 		["CUP_B_MV22_USMC_RAMPGUN",[ 
@@ -251,7 +252,7 @@ _list=[
 		["driver", 
 			["Modern_British_HeliPilot"]
 		],
-		["gunner", 
+		[[0], 
 			["Modern_British_crewchief"]
 		]],5
 	],
@@ -291,7 +292,9 @@ _list=[
 
 TWC_fnc_notAllowedInSeat = {
 	params ["_playerUnit"];
-	
+	[_playerUnit] spawn {
+	params ["_playerUnit"];
+	sleep 1;
 	_freePassengerSpace = (vehicle _playerUnit) emptyPositions "cargo";
 	_title  = "<t color='#ff0000' size='1.2' shadow='1' shadowColor='#000000' align='center'>RESTRICTED</t>";
 
@@ -308,9 +311,12 @@ TWC_fnc_notAllowedInSeat = {
 	_text = "<br />You are not qualified for that slot.";
 	hint parseText (_title + _text);
 };
-
+};
 TWC_fnc_notenoughplayers = {
 	params ["_playerUnit","_count","_currentcount","_problem"];
+	[_playerUnit,_count,_currentcount,_problem] spawn {
+	params ["_playerUnit","_count","_currentcount","_problem"];
+	sleep 1;
 	if (_problem == "low") then {
 	_title  = "<t color='#ff0000' size='1.2' shadow='1' shadowColor='#000000' align='center'>Not Enough Players</t>";
 
@@ -345,34 +351,55 @@ TWC_fnc_notenoughplayers = {
 	};
 	
 	};
+};
 
 TWC_fnc_checkVehicleSlot = {
 	params ["_playerUnit"];
-	
 	if (vehicle _playerUnit == _playerUnit) exitWith { false; }; // double check
 	
-	_currentSeat = [_playerUnit] call CBA_fnc_vehicleRole;
+	_slotFull = fullCrew vehicle _playerUnit select {(_x select 0) isEqualTo _playerUnit};
+	_slotFullData = _slotFull select 0;
+	_currentSeat = _slotFullData select 1;
+	_currentSeatTurretPath = _slotFullData select 3;
+	
 	{
 		_vehicle = (_x select 0);
 		_slotsAndRoles = (_x select 1);
 		_count = (_x select (count (_x)-1));
 		_maxcount = (_x select (count (_x)-2));
-		_currentcount = ( count(allPlayers - entities "HeadlessClient_F"));
-		_snipercount = 10;
+		_currentcount = (count(allPlayers - entities "HeadlessClient_F"));
+		_snipercount = 0;
 		
-		
- if((typeOf player) in ["Modern_British_Sniper", "Modern_British_Spotter"]) then {if (_snipercount > _currentcount) then {[_playerUnit,_snipercount,_currentcount,"low"] call TWC_fnc_notenoughplayers};};
+		if ((typeOf player) in ["Modern_British_Sniper_coin", "Modern_British_Spotter_coin","Modern_Artillery_Commander","Modern_Artillery_Gunner"]) then {
+			if (_snipercount > _currentcount) then {
+				[_playerUnit, _snipercount, _currentcount, "low"] call TWC_fnc_notenoughplayers;
+			};
+		};
 		
 		if (typeof (vehicle _playerUnit) == _vehicle) then {
 			{
 				_slot = (_x select 0);
 				_roles = (_x select 1);
-				if (_currentSeat == _slot) then {
-//				systemchat format ["%1", _roles];
+
+				_checkWith = _currentSeat;
+				if (typeName _slot == "ARRAY") then { _checkWith = _currentSeatTurretPath select 0; _slot= _slot select 0;};
+
+			
+				if (_checkWith == _slot) then {
 					if (!(typeOf _playerUnit in _roles)) then {
 						[_playerUnit] call TWC_fnc_notAllowedInSeat;
 					} else {
-					if (typename _count == "SCALAR") then {if (_count > _currentcount) then {[_playerUnit,_count,_currentcount,"low"] call TWC_fnc_notenoughplayers} else {if (typename _maxcount == "SCALAR") then {if (_maxcount < _currentcount) then {[_playerUnit,_count,_currentcount,"high"] call TWC_fnc_notenoughplayers};};};};
+						if (typename _count == "SCALAR") then {
+							if (_count > _currentcount) then {
+								[_playerUnit, _count, _currentcount, "low"] call TWC_fnc_notenoughplayers;
+							} else {
+								if (typename _maxcount == "SCALAR") then {
+									if (_maxcount < _currentcount) then {
+										[_playerUnit, _count, _currentcount, "high"] call TWC_fnc_notenoughplayers;
+									};
+								};
+							};
+						};
 					};
 				};
 			} forEach _slotsAndRoles;
@@ -380,15 +407,18 @@ TWC_fnc_checkVehicleSlot = {
 	} forEach twc_restrictedVehicleSlots;
 };
 
-
-
-
 [player, "GetInMan", {
 	params ["_playerUnit"];
-	[_playerUnit] call TWC_fnc_checkVehicleSlot;
+	
+	if (isPlayer _playerUnit) then {
+		[_playerUnit] call TWC_fnc_checkVehicleSlot;
+	};
 }, player] call CBA_fnc_addBISEventHandler;
 
 [player, "SeatSwitchedMan", {
 	params ["_playerUnit"];
-	[_playerUnit] call TWC_fnc_checkVehicleSlot;
+	
+	if (isPlayer _playerUnit) then {
+		[_playerUnit] call TWC_fnc_checkVehicleSlot;
+	};
 }, player] call CBA_fnc_addBISEventHandler;
