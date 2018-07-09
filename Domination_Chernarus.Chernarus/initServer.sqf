@@ -10,11 +10,13 @@ waitUntil{scriptDone _script};
 
 twc_maxObjDistance = 50000;
 
+crampresent = 1;
+publicVariable "crampresent";
 
 twc_tankcount = 0;
 twc_apccount = 1 + (random 2);
 twc_ifvcount = 1 + (random 2);
-twc_infcount = 8;
+twc_infcount = 5;
 twc_aainfcount = 2;
 
 twc_aosToComplete = 3;

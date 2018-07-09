@@ -28,7 +28,7 @@ aa = ["rhs_zsu234_aa"];
 };
 
 if (isNil "radioTower") then {
-radioTower = "Land_TTowerBig_2_F";
+radioTower = "rhs_gaz66_r142_vdv";
 };
 
 if (isNil "mortar") then {
@@ -36,7 +36,7 @@ mortar = ["rhs_2b14_82mm_vdv"];
 };
 
 if (isNil "arty") then {
-arty = ["rhs_2s3_Tv", "RHS_BM21_MSV_01"];
+arty = ["RHS_BM21_MSV_01"];
 };
 
 if (isNil "tankaaCombined") then {

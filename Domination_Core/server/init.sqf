@@ -1,5 +1,6 @@
 #include "defines.sqf";
 #include "func\init.sqf";
+#include "sys_basedefence\init.sqf";
 
 
 basemode = 0;
@@ -51,3 +52,27 @@ _pilotConnectedList = [];
 		[] call twc_fnc_noMorePilots;
 	};
 }] call BIS_fnc_addStackedEventHandler;
+
+sirenlist = (getmarkerpos "base") nearobjects ["Land_Loudspeakers_F", 500];
+
+mainbase = createTrigger ["EmptyDetector", getmarkerpos "base"];
+mainbase setTriggerArea [500, 500, 0, false];
+mainbase setTriggerActivation ["EAST", "PRESENT", true];
+mainbase setTriggerTimeout [60,60,60,True];
+mainbase setTriggerStatements ["count thislist > 6","[""thistrigger""] call twc_fnc_changebase;", "[]spawn {sleep 2;[""thistrigger""] call twc_fnc_changebase;}"];
+
+_trg2 = createTrigger ["EmptyDetector", getmarkerpos "base"];
+_trg2 setTriggerArea [700, 700, 0, false];
+_trg2 setTriggerActivation ["EAST", "PRESENT", true];
+_trg2 setTriggerTimeout [0,0,0,True];
+_trg2 setTriggerStatements ["count thislist > 4","execVM 'domination_core\server\sys_basedefence\INF_Alarm.sqf';", ""];
+
+
+
+_trg3 = createTrigger ["EmptyDetector", getmarkerpos "base"];
+_trg3 setTriggerArea [1000, 1000, 0, false];
+_trg3 setTriggerActivation ["EAST", "PRESENT", true];
+_trg3 setTriggerTimeout [0,0,0,True];
+_trg3 setTriggerStatements ["true","basemode == 1; publicVariable 'basemode';", "basemode == 0; publicVariable 'basemode';"];
+
+

@@ -5,7 +5,7 @@ disableChannels[]={0,1,2,3,4,6};
 
 #include "onLoadMission.hpp"
 onLoadMission = "http://www.thewreckingcrew.eu/";
-author = "Jayman[TWC] / Bosenator[TWC]";
+author = "Jayman[TWC] / Bosenator[TWC]/ Hobbs [TWC]";
 loadScreen = "twc_ui\insurgency\loading.jpg";
 
 class Header {
@@ -17,9 +17,9 @@ class Header {
 //Respawn settings
 respawn="BASE";
 respawndelay = 5;
-//respawnTemplates[] = {"MenuPosition"};
+respawnTemplates[] = {"MenuPosition"};
 respawnDialog = true;
-respawnOnStart = 0;
+respawnOnStart = 1;
 
 enableDebugConsole = 1;
 

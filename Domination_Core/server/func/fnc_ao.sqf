@@ -43,14 +43,15 @@ if(isNil "twc_aainfcount") then{
 };
 
 twc_aainfcount = twc_aainfcount * ( 1+ (random 0.5));
-/* removing artillery for the moment until I stop them firing on people at really bad times
+// removing artillery for the moment until I stop them firing on people at really bad times
+
 if(isNil "twc_artycount") then{
 	twc_artycount = 3;
 };
 
 twc_artycount = twc_artycount * ( 1+ (random 0.5));
-*/
-twc_artycount = 0;
+
+//twc_artycount = 0;
 
 //Creates ao marker:
 _markerstr = createMarker ["aoCenterMarker",_pos];
@@ -64,7 +65,9 @@ parseText format["<t align='center'><t size='2' color='#ff0000'>AO created at </
 
 _spawnPos = [_pos,[100,300],random 360,0,[0,100]] call SHK_pos;
 _tower = radioTower createVehicle _spawnPos;
-_tower setDamage 0.99;
+
+_tower setVehicleLock "LOCKED";
+//_tower setDamage 0.99;
 _tower addEventHandler ["Killed",{"Radio Tower Destroyed. The enemies can no longer call in Reinforcements. Well done!" remoteExec ["hint"]; "radioMarker" setMarkerColor "colorWEST"; twc_towerCount = 1; deleteVehicle reinforcementsTrg}];
 
 _spawnPos = [(_spawnPos select 0) + 5,(_spawnPos select 1), (_spawnPos select 2)];
@@ -76,6 +79,7 @@ _markerstr setMarkerShape "ICON";
 _markerstr setMarkerType "loc_Transmitter";
 _markerstr setMarkerColor "colorEAST";
 _markerstr setMarkerSize [0.75,0.75];
+_markerstr setMarkeralpha 0;
 
 for "_i" from 1 to twc_aainfcount do {
 	_spawnPos = [_pos,[200,400],random 360,0] call SHK_pos;
@@ -269,19 +273,25 @@ if (_attemptcount > 250) exitwith {
 };
 
 	artyspawn = arty call BIS_fnc_selectRandom;
-
+	twc_artyguns = [];
 for "_i" from 1 to twc_artycount do {
   
 	_artyspawnpos2 = [_artyspawnpos,[100,200],random 360,0,[1,100]] call SHK_pos;
 	
 	 _group = createGroup East;  
  _vehicle = artyspawn createVehicle _artyspawnpos2;  
- 
+ twc_artyguns pushback _vehicle;
  _driver = _group createUnit ["rhs_pilot_combat_heli", _artyspawnpos2,[], 0.3,"NONE"];  
  _gunner = _group createUnit ["rhs_pilot_combat_heli", _artyspawnpos2,[], 0.3,"NONE"];  
   
  _driver moveInDriver _vehicle;  
- _gunner moveInGunner _vehicle; 	
+ _gunner moveInGunner _vehicle;
+  
+ _driver disableAI "AUTOTARGET";  
+ _gunner disableAI "AUTOTARGET";
+
+_vehicle addEventHandler ["Fired", {[(_this select 0), (_this select 6)] call twc_fnc_idf}];
+ 
 };
 
 	_spawnPos = [_artyspawnpos,[0,50],random 360,0] call SHK_pos;
@@ -301,10 +311,10 @@ reinforcementsTrg setTriggerActivation ["WEST", "PRESENT", true];
 reinforcementsTrg setTriggerTimeout [1,1,1,True];
 reinforcementsTrg setTriggerStatements ["this", "player setdamage 1",""];
 */
-_timer = 60 +(random 300);
+_timer = 6 +(random 3);
 reinforcementsTrg = createTrigger ["EmptyDetector", _pos];
 reinforcementsTrg setTriggerArea [2700, 2700, 0, false];
-reinforcementsTrg setTriggerActivation ["WEST", "EAST D", true];
+reinforcementsTrg setTriggerActivation ["WEST", "EAST D", false];
 reinforcementsTrg setTriggerTimeout [_timer,_timer,_timer, true];
 reinforcementsTrg setTriggerStatements ["this","[getPos thisTrigger, thislist] call twc_fnc_spawnReinforcements",""];
 
