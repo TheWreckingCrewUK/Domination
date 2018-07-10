@@ -10,6 +10,9 @@ waitUntil{scriptDone _script};
 
 twc_maxObjDistance = 5000;
 
+twc_wdveh = 1;
+publicVariable "twc_wdveh";
+
 twc_aosToComplete = 3;
 twc_enemyFlag = "Faction_CUP_RU";
 twc_badAOs = ["Terminal","airbase","power plant","military"];

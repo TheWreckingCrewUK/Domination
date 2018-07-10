@@ -33,13 +33,13 @@ if(isNil "twc_apccount") then{
 twc_apccount = twc_apccount * ( 1+ (random 0.5));
 
 if(isNil "twc_infcount") then{
-	twc_infcount = 5;
+	twc_infcount = 3;
 };
 twc_infcount = twc_infcount * ( 1+ (random 0.5));
 
 
 if(isNil "twc_aainfcount") then{
-	twc_aainfcount = 3;
+	twc_aainfcount = 2;
 };
 
 twc_aainfcount = twc_aainfcount * ( 1+ (random 0.5));
@@ -101,69 +101,118 @@ for "_i" from 1 to twc_infcount do {
 for "_i" from 1 to twc_tankcount do { _pos2= [_pos, 200] call CBA_fnc_randPos;  
 	_spawnPos = [_pos2,[400,500],random 360,0,[1,100]] call SHK_pos;
 	_tank = tank call BIS_fnc_selectRandom;
-	_group = [_spawnPos, EAST, _tank] call BIS_fnc_spawnGroup;
+	
+	
+ _group = createGroup East;  
+ _vehicle = _tank createVehicle _spawnPos;  
+ 
+ _driver = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];  
+ _gunner = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];  
+ _commander = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];  
+  
+ _driver moveInDriver _vehicle;  
+ _gunner moveInGunner _vehicle;  
+ _commander moveInCommander _vehicle;  
+ 
+	
  _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos; 
-[_group, 0] setWaypointCompletionRadius 30; 
-[_group, 1] setWaypointCompletionRadius 30; 
-[_group, 2] setWaypointCompletionRadius 30; 
-[_group, 3] setWaypointCompletionRadius 30; 
-[_group, 4] setWaypointCompletionRadius 30; 
-[_group, 5] setWaypointCompletionRadius 30;  
+[_group, 0] setWaypointCompletionRadius 50; 
+[_group, 1] setWaypointCompletionRadius 50; 
+[_group, 2] setWaypointCompletionRadius 50; 
+[_group, 3] setWaypointCompletionRadius 50; 
+[_group, 4] setWaypointCompletionRadius 50; 
+[_group, 5] setWaypointCompletionRadius 50;  
  [_group, 5] setWaypointType "CYCLE";
+ 
+ {if (!(_x in crew _vehicle)) then {deletevehicle _x};} foreach (units _group)
+ 
 };
 for "_i" from 1 to twc_ifvcount do { _pos2= [_pos, 200] call CBA_fnc_randPos;  
 	_spawnPos = [_pos2,[400,500],random 360,0,[1,100]] call SHK_pos;
 	_ifv = ifv call BIS_fnc_selectRandom;
-	_group = [_spawnPos, EAST, _ifv] call BIS_fnc_spawnGroup;
+	
+	
+ _group = createGroup East;  
+ _vehicle = _ifv createVehicle _spawnPos;  
+ 
+ _driver = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];  
+ _gunner = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];   
+  
+ _driver moveInDriver _vehicle;  
+ _gunner moveInGunner _vehicle;  
+	
  _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos; 
-[_group, 0] setWaypointCompletionRadius 30; 
-[_group, 1] setWaypointCompletionRadius 30; 
-[_group, 2] setWaypointCompletionRadius 30; 
-[_group, 3] setWaypointCompletionRadius 30; 
-[_group, 4] setWaypointCompletionRadius 30; 
-[_group, 5] setWaypointCompletionRadius 30;   
+[_group, 0] setWaypointCompletionRadius 50; 
+[_group, 1] setWaypointCompletionRadius 50; 
+[_group, 2] setWaypointCompletionRadius 50; 
+[_group, 3] setWaypointCompletionRadius 50; 
+[_group, 4] setWaypointCompletionRadius 50; 
+[_group, 5] setWaypointCompletionRadius 50;   
  [_group, 5] setWaypointType "CYCLE";
 };
 for "_i" from 1 to twc_apccount do { _pos2= [_pos, 200] call CBA_fnc_randPos;  
 	_spawnPos = [_pos2,[400,500],random 360,0,[1,100]] call SHK_pos;
 	_apc = apc call BIS_fnc_selectRandom;
-	_group = [_spawnPos, EAST, _apc] call BIS_fnc_spawnGroup;
+	
+	
+ _group = createGroup East;  
+ _vehicle = _apc createVehicle _spawnPos;  
+ 
+ _driver = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];  
+ _gunner = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];   
+  
+ _driver moveInDriver _vehicle;  
+ _gunner moveInGunner _vehicle;   
+	
+	
  _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;   
-[_group, 0] setWaypointCompletionRadius 30; 
-[_group, 1] setWaypointCompletionRadius 30; 
-[_group, 2] setWaypointCompletionRadius 30; 
-[_group, 3] setWaypointCompletionRadius 30; 
-[_group, 4] setWaypointCompletionRadius 30; 
-[_group, 5] setWaypointCompletionRadius 30;  
+[_group, 0] setWaypointCompletionRadius 50; 
+[_group, 1] setWaypointCompletionRadius 50; 
+[_group, 2] setWaypointCompletionRadius 50; 
+[_group, 3] setWaypointCompletionRadius 50; 
+[_group, 4] setWaypointCompletionRadius 50; 
+[_group, 5] setWaypointCompletionRadius 50;  
  [_group, 5] setWaypointType "CYCLE";
 };
-for "_i" from 1 to 2 do { _pos2= [_pos, 200] call CBA_fnc_randPos;  
+for "_i" from 1 to 1 do { _pos2= [_pos, 200] call CBA_fnc_randPos;  
 	_spawnPos = [_pos2,[400,500],random 360,0,[1,100]] call SHK_pos;
 	_aa = aa call BIS_fnc_selectRandom;
-	_group = [_spawnPos, EAST, _aa] call BIS_fnc_spawnGroup;
+	
+	
+ _group = createGroup East;  
+ _vehicle = _aa createVehicle _spawnPos;  
+ 
+ _driver = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];  
+ _gunner = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];  
+ _commander = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];  
+  
+ _driver moveInDriver _vehicle;  
+ _gunner moveInGunner _vehicle;  
+ _commander moveInCommander _vehicle;  
+ 
  _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 500] call CBA_fnc_randPos;  
-[_group, 0] setWaypointCompletionRadius 30; 
-[_group, 1] setWaypointCompletionRadius 30; 
-[_group, 2] setWaypointCompletionRadius 30; 
-[_group, 3] setWaypointCompletionRadius 30; 
-[_group, 4] setWaypointCompletionRadius 30; 
-[_group, 5] setWaypointCompletionRadius 30; 
+[_group, 0] setWaypointCompletionRadius 50; 
+[_group, 1] setWaypointCompletionRadius 50; 
+[_group, 2] setWaypointCompletionRadius 50; 
+[_group, 3] setWaypointCompletionRadius 50; 
+[_group, 4] setWaypointCompletionRadius 50; 
+[_group, 5] setWaypointCompletionRadius 50; 
  [_group, 5] setWaypointType "CYCLE";
 };
 
@@ -187,12 +236,12 @@ _vehicle flyInHeight  _flyalt;
  _group addwaypoint [_spawnPos, 1500] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 1500] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 1500] call CBA_fnc_randPos;  
-[_group, 0] setWaypointCompletionRadius 30; 
-[_group, 1] setWaypointCompletionRadius 30; 
-[_group, 2] setWaypointCompletionRadius 30; 
-[_group, 3] setWaypointCompletionRadius 30; 
-[_group, 4] setWaypointCompletionRadius 30; 
-[_group, 5] setWaypointCompletionRadius 30; 
+[_group, 0] setWaypointCompletionRadius 50; 
+[_group, 1] setWaypointCompletionRadius 50; 
+[_group, 2] setWaypointCompletionRadius 50; 
+[_group, 3] setWaypointCompletionRadius 50; 
+[_group, 4] setWaypointCompletionRadius 50; 
+[_group, 5] setWaypointCompletionRadius 50; 
  [_group, 5] setWaypointType "CYCLE";
  }
 	};
@@ -217,12 +266,12 @@ _vehicle flyInHeight  _flyalt;
  _group addwaypoint [_spawnPos, 1500] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 1500] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 1500] call CBA_fnc_randPos;  
-[_group, 0] setWaypointCompletionRadius 30; 
-[_group, 1] setWaypointCompletionRadius 30; 
-[_group, 2] setWaypointCompletionRadius 30; 
-[_group, 3] setWaypointCompletionRadius 30; 
-[_group, 4] setWaypointCompletionRadius 30; 
-[_group, 5] setWaypointCompletionRadius 30; 
+[_group, 0] setWaypointCompletionRadius 50; 
+[_group, 1] setWaypointCompletionRadius 50; 
+[_group, 2] setWaypointCompletionRadius 50; 
+[_group, 3] setWaypointCompletionRadius 50; 
+[_group, 4] setWaypointCompletionRadius 50; 
+[_group, 5] setWaypointCompletionRadius 50; 
  [_group, 5] setWaypointType "CYCLE";
  }
 	};
@@ -247,25 +296,25 @@ _jet flyInHeight  _flyalt;
  _group addwaypoint [_spawnPos, 2500] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 2500] call CBA_fnc_randPos;  
  _group addwaypoint [_spawnPos, 2500] call CBA_fnc_randPos; 
-[_group, 0] setWaypointCompletionRadius 30; 
-[_group, 1] setWaypointCompletionRadius 30; 
-[_group, 2] setWaypointCompletionRadius 30; 
-[_group, 3] setWaypointCompletionRadius 30; 
-[_group, 4] setWaypointCompletionRadius 30; 
-[_group, 5] setWaypointCompletionRadius 30;  
+[_group, 0] setWaypointCompletionRadius 50; 
+[_group, 1] setWaypointCompletionRadius 50; 
+[_group, 2] setWaypointCompletionRadius 50; 
+[_group, 3] setWaypointCompletionRadius 50; 
+[_group, 4] setWaypointCompletionRadius 50; 
+[_group, 5] setWaypointCompletionRadius 50;  
  [_group, 5] setWaypointType "CYCLE";
  }
 	};
 
 };
 
-_artyspawnpos = [_spawnpos, 2000, 5000, 10, 0, 1, 0, [], [_spawnpos, _spawnpos]] call BIS_fnc_findSafePos;
+_artyspawnpos = [_spawnpos, 1500, 3000, 10, 0, 1, 0, [], [_spawnpos, _spawnpos]] call BIS_fnc_findSafePos;
 _attemptcount = 0;
 while{
 
- ([_artyspawnpos,1500] call twc_fnc_posNearPlayers) || _artyspawnpos distance2D (getMarkerPos "base") < 1500 
+ ([_artyspawnpos,1500] call twc_fnc_posNearPlayers) || _artyspawnpos distance2D (getMarkerPos "base") < 2500 
  }do{
-_artyspawnpos = [_spawnpos, 1000, 3000, 10, 0, 1, 0, [], [_spawnpos, _spawnpos]] call BIS_fnc_findSafePos;
+_artyspawnpos = [_spawnpos, 1500, 3000, 10, 0, 1, 0, [], [_spawnpos, _spawnpos]] call BIS_fnc_findSafePos;
 	_attemptcount = _attemptcount + 1;
 
 if (_attemptcount > 250) exitwith {
@@ -303,7 +352,7 @@ _trg = createTrigger ["EmptyDetector", _pos];
 _trg setTriggerArea [600, 600, 0, false];
 _trg setTriggerActivation ["EAST", "PRESENT", false];
 _trg setTriggerTimeout [10,10,10,True];
-_trg setTriggerStatements ["((EAST countSide thisList) < 15 && ({_x isKindOf 'landVehicle' && side _x == EAST} count thisList <3))","twc_areaCleared = 1", ""];
+_trg setTriggerStatements ["((EAST countSide thisList) < 25 && ({_x isKindOf 'landVehicle' && side _x == EAST} count thisList <2))","twc_areaCleared = 1", ""];
 /*
 reinforcementsTrg = createTrigger ["reinforcementsTrg", _pos];
 reinforcementsTrg setTriggerArea [3500, 3500, 0, false];
@@ -311,17 +360,19 @@ reinforcementsTrg setTriggerActivation ["WEST", "PRESENT", true];
 reinforcementsTrg setTriggerTimeout [1,1,1,True];
 reinforcementsTrg setTriggerStatements ["this", "player setdamage 1",""];
 */
-_timer = 6 +(random 3);
+_timer = 300 +(random 200);
 reinforcementsTrg = createTrigger ["EmptyDetector", _pos];
 reinforcementsTrg setTriggerArea [2700, 2700, 0, false];
-reinforcementsTrg setTriggerActivation ["WEST", "EAST D", false];
+reinforcementsTrg setTriggerActivation ["WEST", "EAST D", true];
 reinforcementsTrg setTriggerTimeout [_timer,_timer,_timer, true];
 reinforcementsTrg setTriggerStatements ["this","[getPos thisTrigger, thislist] call twc_fnc_spawnReinforcements",""];
 
 //[getPos thisTrigger] call twc_fnc_spawnReinforcements
 
 
-waitUntil {twc_areaCleared == 1 && twc_towerCount == 1};
+waitUntil {twc_areaCleared == 1
+// && twc_towerCount == 1
+};
 [_name, "Succeeded",true] spawn BIS_fnc_taskSetState;
 hint "AO captured";
 deleteMarker "aoCenterMarker";
@@ -331,10 +382,12 @@ deleteVehicle _wreck;
 deleteMarker "radioMarker";
 [_pos]spawn{
 	params["_pos"];
-	waitUntil{!([_pos,1000] call twc_fnc_posNearPlayers)};
+	
+	waitUntil{!([_pos,3000] call twc_fnc_posNearPlayers)};
+	
 	{
 		deleteVehicle _x
-	}forEach (nearestObjects [_pos,["Man","Car","Tank","Air"],800]);
+	}forEach (nearestObjects [_pos,["Man","Car","Tank","Air"],3000]);
 	{
 		deleteVehicle _x
 	}forEach allDeadMen;

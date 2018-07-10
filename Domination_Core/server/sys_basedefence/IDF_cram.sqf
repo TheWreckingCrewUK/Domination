@@ -24,7 +24,7 @@ _complete = 0;
 
 _dir = cram getreldir _shell;
 
-systemchat format ["%1", _shell];
+//systemchat format ["%1", _shell];
 
 _pos = getpos _shell;
 
@@ -47,7 +47,7 @@ sleep 0.2;
 sleep 1;
 cramactive = 1;
 
-systemchat "cram is ready";
+//systemchat "cram is ready";
 _time = time;
 
 Waituntil {(((getposatl _shell select 2) > 60)|| (((vectorMagnitude (velocity _shell)) > 160) && ((getposatl _shell select 2) > 20))) && ((_shell distance cram) < 2000)};

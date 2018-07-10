@@ -5,12 +5,15 @@ params["_pos", "_enemylist"];
 
 //systemchat "reinforcements called";
 
-
+//systemchat format ["I see %1 with %2", _pos, _enemylist];
 
 
 //_enemy = (nearestObjects [_pos, ["SoldierWB"], 5000]) select 0; 
 
 _enemy = _enemylist call BIS_fnc_selectRandom;
+
+//exit if the system is asking artillery to fire on its own friends
+if ((_enemy distance _pos) < 400) exitwith {};
 
 _spawnpos = [0,0,0];
 
@@ -61,7 +64,7 @@ _stagepos = [_pos, 1000] call CBA_fnc_randPos;
 				{_x moveincargo _plane; _Cargo pushback _x} foreach (units _group);
 				
 				 _group addwaypoint [_enemy, 100] call CBA_fnc_randPos;  
-				 _group addwaypoint [_enemy, 100] call CBA_fnc_randPos;  
+				 _group addwaypoint [_stagepos, 100] call CBA_fnc_randPos;  
 				 _group addwaypoint [_enemy, 100] call CBA_fnc_randPos;  
 				 _group addwaypoint [_enemy, 100] call CBA_fnc_randPos;  
 				 _group addwaypoint [_enemy, 100] call CBA_fnc_randPos; 
@@ -81,7 +84,7 @@ _stagepos = [_pos, 1000] call CBA_fnc_randPos;
 				 
 					sleep 1;
 					waituntil {((_plane) distance _enemy) < 1000};
-					systemchat "ejecting";
+					//systemchat "ejecting";
 					{
 					_x addBackPack "B_parachute";
 					moveout _x;
@@ -133,7 +136,7 @@ _stagepos = [_pos, 1000] call CBA_fnc_randPos;
 		_wp = _group1 addwaypoint [_enemy, 200]; 
 		_wp setWaypointCompletionRadius 500;
 		_wp setWaypointType "TR Unload";
-		_wp setWaypointStatements ["true", "(driver this) enableai 'autotarget';(driver this) enableai 'autocombat'; this flyinheight 150;"];
+		_wp setWaypointStatements ["true", "[] spawn {(driver this) enableai 'autotarget';(driver this) enableai 'autocombat'; sleep 60;(driver this) disableai 'autotarget';(driver this) disableai 'autocombat';(driver this) disableai 'TARGET'; this flyinheight 150;}"];
 
 
 		_group1 addwaypoint [[0,0,0], 300]; 
@@ -144,10 +147,10 @@ _stagepos = [_pos, 1000] call CBA_fnc_randPos;
 
 				_group = [[0,0,0], EAST, squad] call BIS_fnc_spawnGroup;
 				
-				{_x moveincargo _plane; _Cargo pushback _x} foreach (units _group);
+				{_x moveincargo _plane; _Cargo pushback _x; if (!(_x in crew _plane)) then {deletevehicle _x};} foreach (units _group);
 				
 				 _group addwaypoint [_enemy, 100];  
-				 _group addwaypoint [_enemy, 100];  
+				 _group addwaypoint [_stagepos, 100];  
 				 _group addwaypoint [_enemy, 100];  
 				 _group addwaypoint [_enemy, 100];  
 				 _group addwaypoint [_enemy, 100];   

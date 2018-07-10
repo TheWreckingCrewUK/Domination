@@ -273,14 +273,17 @@ if (typeOf vehicle player == "Modern_British_Squadleader") then {
     _tmp_weapons =
     [
 		["UK3CB_BAF_L115A3_DE",1],
+		["twc_rhs_weap_M107",1],
 		["ACE_Vector",1],
 		["rhsusf_weap_glock17g4",1]
     ];
 
     _tmp_magazines =
     [	
-		["UK3CB_BAF_338_5Rnd",50],
-		["UK3CB_BAF_338_5Rnd_Tracer",50],
+		["ACE_10Rnd_338_300gr_HPBT_Mag",50],
+		["ACE_10Rnd_338_API526_Mag",50],
+		["rhsusf_mag_10Rnd_STD_50BMG_M33",10],
+		["rhsusf_mag_10Rnd_STD_50BMG_mk211",10],
 		["rhsusf_mag_17Rnd_9x19_JHP",15],
 		["rhsusf_mag_15Rnd_9x19_JHP",15]
 	];
@@ -289,6 +292,7 @@ if (typeOf vehicle player == "Modern_British_Squadleader") then {
 	[
 		
 		["RKSL_optic_PMII_525",1],
+		["UK3CB_BAF_Silencer_L115A3",1],
 		["ACE_fieldDressing",20],
 		["ACE_morphine",10],
 		["STKR_Predator",1],
@@ -302,26 +306,27 @@ if (typeOf vehicle player == "Modern_British_Squadleader") then {
 		["HandGrenade",5]
 	];
 
-
 };
 
 //BAF Spotter
  if (typeOf vehicle player == "Modern_British_Spotter") then {
     _tmp_weapons =
     [
-		["UK3CB_BAF_L85A2_RIS",1],
+		["UK3CB_BAF_L85A2_RIS_ELCAN3D",1],
 		["ACE_Vector",1],
 		["rhsusf_weap_glock17g4",1]
     ];
 
     _tmp_magazines =
     [	
-		["UK3CB_BAF_338_5Rnd",50],
-		["UK3CB_BAF_338_5Rnd_Tracer",50],
+		["ACE_10Rnd_338_300gr_HPBT_Mag",50],
+		["ACE_10Rnd_338_API526_Mag",50],
 		["UK3CB_BAF_556_30Rnd",50],
 		["UK3CB_BAF_556_30Rnd_T",50],
 		["UK3CB_BAF_762_L42A1_20Rnd", 50],
 		["UK3CB_BAF_762_L42A1_20Rnd_t", 50],
+		["rhsusf_mag_10Rnd_STD_50BMG_M33",50],
+		["rhsusf_mag_10Rnd_STD_50BMG_mk211",50],
 		["rhsusf_mag_17Rnd_9x19_JHP",15],
 		["HandGrenade",5]
 	];
@@ -332,6 +337,7 @@ if (typeOf vehicle player == "Modern_British_Squadleader") then {
 		["ACE_morphine",10],
 		["RKSL_optic_LDS",1],
 		["UK3CB_BAF_LLM_IR",1],
+		["UK3CB_BAF_Silencer_L115A3",1],
 		["UK3CB_BAF_Eotech",1],
 		["STKR_Predator",1],
 		["rhsusf_ANPVS_14",1],
@@ -349,6 +355,7 @@ if (typeOf vehicle player == "Modern_British_Squadleader") then {
 		["ACE_Tripod",1],
 		["itemCTAB",1]
 	];
+
 };
 
 /*

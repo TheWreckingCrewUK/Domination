@@ -11,6 +11,9 @@ publicvariable "idfon";
 
 //	[idfalarm, "TWC_sound_idfsiren"] call CBA_fnc_globalSay3d;
 //call TWC_fnc_idfsiren;	
+
+
+lastidftime = time;
 if (twc_is90 == 0) then {
 {
 	[_x, "TWC_sound_idfsiren"] call CBA_fnc_globalSay3d;
@@ -49,8 +52,10 @@ publicvariable "idfreported";
 	sleep 60;
 		basesafe = 0;
 	publicvariable "idfsafe";
-
-terminate execVM "domination_core\server\sys_basedefence\IDF_Alarm.sqf";
+	
+	
+waituntil {((lastidftime + 240) < time) && basemode == 0};
+				execVM "domination_core\server\sys_basedefence\IDF_Clear.sqf";
 };
 
 

@@ -1,0 +1,124 @@
+/* written by [TWC] Hobbs
+the functional opposite of the attachment count system, this will keep everyone to a single main section
+*/
+
+//first up, let's just go open season if there's more slots than our standard layout of infantry can manage
+
+if (( count(allPlayers - entities "HeadlessClient_F")) > 23) exitwith {};
+
+
+//then we'll exit if they haven't joined a regular infantry slot, there's other stuff for that
+if (!(["infantry", str (group player)] call BIS_fnc_inString)) exitwith {};
+
+//init the group count for the first player to join
+if (isnil "twc_groupcount") then {
+	twc_groupcount = 1;
+	publicVariable "twc_groupcount"};
+
+//now exempt the heli crew, it's named as infantry in the sqm to take it out of the attachment stuff
+if(["heli", str (group player)] call BIS_fnc_inString)exitwith{};
+
+_groups = [];
+
+_snowflakes = 0;
+
+{if (_x == leader _x) then {
+	if (!(["sniper", str (group _x)] call BIS_fnc_inString)) then {
+		if ((["infantry", str (group _x)] call BIS_fnc_inString)) then {
+			if (!(["heli", str (group _x)] call BIS_fnc_inString)) then {
+					_groups pushback [group _x];
+					} else {_snowflakes = _snowflakes + (count units group _x)};
+			};
+		} else { //sniper exemption because they can spawn under 5 playercount
+					if ((count(allPlayers - entities "HeadlessClient_F"))< 5) then {
+						_snowflakes = _snowflakes + (count units group _x);
+						};
+					};
+	};
+} foreach allplayers;
+ 
+
+//quick sleep because instring is a bit slow
+sleep 3;
+
+//if the player hasn't increased the number of groups from the last player to do the count, exit the script
+if ((count _groups) == twc_groupcount) exitwith {
+twc_groupcount = count _groups;
+publicVariable "twc_groupcount";
+};
+
+/*
+//no need to do anything if there's only 1 group
+if ((count _groups) == 1) exitwith {
+twc_groupcount = count _groups;
+publicVariable "twc_groupcount";
+};
+*/
+
+//see if the section they're in is populated
+
+if ((count units group player) >= (4 min ((count(allPlayers - entities "HeadlessClient_F")) - _snowflakes))) exitwith {
+twc_groupcount = count _groups;
+publicVariable "twc_groupcount";};
+
+
+//find out if the other infantry groups have any space
+_space = 0;
+{	if(!(group player == _x)) then {
+		if ((count units _x) < 8) then {
+			_space = 1;
+		};
+	};
+} foreach _groups;
+ 
+// if it finds no space in any of the sections, update the server with the new group count to check for future and don't restrict the new guy for joining a new section
+if (space == 0) exitwith {
+twc_groupcount = count _groups;
+publicVariable "twc_groupcount";};
+
+//now use the standard spawn restriction system to let the player know what's up
+
+cutText ["", "Black", 0.001];
+player forceWalk true;
+while {((count units group player) < (4 min ((count(allPlayers - entities "HeadlessClient_F")) - _snowflakes))) || (_space == 1)} do {
+cutText ["", "Black", 0.001];
+    [ 
+        format ["<t size='1.2'>Fill The Sections</t><br/><t size='0.6'>There are other sections that need to be filled. Go there or get 4 or more people in the current section</t>", 
+		
+		0
+		], 0, 0.22, 5, 0, 0, 2 
+    ] spawn bis_fnc_dynamictext;
+	
+	sleep 5;
+	{	if(!(group player == _x)) then {
+		if ((count units _x) < 8) then {
+			_space = 1;
+		};
+	};
+} foreach _groups;
+
+_groups = [];
+
+_snowflakes = 0;
+
+{if (_x == leader _x) then {
+	if ((["infantry", str (group _x)] call BIS_fnc_inString)) then {
+		if (!(["heli", str (group _x)] call BIS_fnc_inString)) then {
+			if (!(["sniper", str (group _x)] call BIS_fnc_inString)) then {
+				_groups pushback [group _x];
+				} else {
+					if ((count(allPlayers - entities "HeadlessClient_F"))< 5) then {
+						_snowflakes = _snowflakes + (count units group _x)
+						};
+					};
+			} else {_snowflakes = _snowflakes + 1};
+		};
+	};
+} foreach allplayers;
+
+
+};
+
+	
+cutText ["","Black IN",5];
+player forceWalk false;

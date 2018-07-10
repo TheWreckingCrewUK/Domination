@@ -22,8 +22,9 @@ if(isNil "twc_is90") then{
 
 
 
+
 {_location = createLocation [ "NameVillage" , getpos _x, 100, 100];
-_location setText "Location " + str floor random 999;
+_location setText "Objective " + str floor random 999;
 townLocationArray = townLocationArray + (nearestLocations [getpos _x, ["NameVillage","NameCity","NameCityCapital","nameLocal"], 2]);} foreach customlocations;
 
 townLocationArray = townLocationArray + (nearestLocations [getMarkerPos "base", ["NameVillage","NameCity","NameCityCapital"], twc_maxObjDistance]);
@@ -59,13 +60,13 @@ mainbase = createTrigger ["EmptyDetector", getmarkerpos "base"];
 mainbase setTriggerArea [500, 500, 0, false];
 mainbase setTriggerActivation ["EAST", "PRESENT", true];
 mainbase setTriggerTimeout [60,60,60,True];
-mainbase setTriggerStatements ["count thislist > 6","[""thistrigger""] call twc_fnc_changebase;", "[]spawn {sleep 2;[""thistrigger""] call twc_fnc_changebase;}"];
+mainbase setTriggerStatements ["count thislist > 6","[""thistrigger""] call twc_fnc_changebase;", "[]spawn {sleep 2;[""thistrigger""] call twc_fnc_changebase; {deleteVehicle _x}forEach allDeadMen;{ deleteVehicle _x }forEach allDead;}"];
 
 _trg2 = createTrigger ["EmptyDetector", getmarkerpos "base"];
 _trg2 setTriggerArea [700, 700, 0, false];
 _trg2 setTriggerActivation ["EAST", "PRESENT", true];
 _trg2 setTriggerTimeout [0,0,0,True];
-_trg2 setTriggerStatements ["count thislist > 4","execVM 'domination_core\server\sys_basedefence\INF_Alarm.sqf';", ""];
+_trg2 setTriggerStatements ["count thislist > 4","execVM 'domination_core\server\sys_basedefence\INF_Alarm.sqf';", " {deleteVehicle _x}forEach allDeadMen;{ deleteVehicle _x }forEach allDead;"];
 
 
 

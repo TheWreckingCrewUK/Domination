@@ -18,6 +18,7 @@ while {_true}do{
 	
 	if(_name in twc_badAOs)then{_true = true};
 	if(_name == twc_LastAO)then{_true = true};
+	if([getpos _town ,2500] call twc_fnc_posNearPlayers)then{_true = true};
 };
 
 _pos = getPos _town;

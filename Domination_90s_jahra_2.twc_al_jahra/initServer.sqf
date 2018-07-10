@@ -18,13 +18,13 @@ squadAA = (configfile >> "CfgGroups" >> "East" >> "CUP_O_TK" >> "Infantry" >> "C
 
 tankaaCombined = (configfile >> "CfgGroups" >> "East" >> "CUP_O_TK" >> "Armored" >> "CUP_O_TK_T55Platoon");
 
-tank = [["CUP_O_T55_TK"], ["CUP_O_BRDM2_ATGM_SLA"]];
+tank = ["CUP_O_T55_TK", "CUP_O_BRDM2_ATGM_SLA"];
 
-ifv = [["CUP_O_BMP1P_TKA"], ["CUP_O_BMP1_TKA"]];
+ifv = ["CUP_O_BMP1P_TKA", "CUP_O_BMP1_TKA"];
 
-apc = [["CUP_O_BTR60_TK"], ["CUP_O_BRDM2_TKA"]];
+apc = ["CUP_O_BTR60_TK", "CUP_O_BRDM2_TKA"];
 
-aa = [["CUP_O_BMP2_ZU_TKA"], ["CUP_O_ZSU23_SLA"]];
+aa = ["CUP_O_BMP2_ZU_TKA", "CUP_O_ZSU23_SLA"];
 
 twc_tankcount = 3 + (random 5);
 twc_apccount = 2 + (random 3);

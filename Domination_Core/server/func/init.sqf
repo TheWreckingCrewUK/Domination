@@ -7,3 +7,12 @@ twc_fnc_noMorePilots = compile preprocessfilelinenumbers "Domination_Core\server
 twc_fnc_spawnJet = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_spawnJet.sqf";"Domination_Core\server\func\fnc_noMorePilots.sqf";
 twc_fnc_artyattack = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_artyattack.sqf";
 twc_fnc_changebase = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_changebase.sqf";
+
+
+if (isServer) then {
+	_eventHandlerID = ["twc_event_baseattack", {
+	//systemchat "respawn event";
+		params ["_pos", "_targetplayer"];
+		[_pos, _targetplayer] call twc_fnc_spawnReinforcements;
+	}] call CBA_fnc_addEventHandler;
+};

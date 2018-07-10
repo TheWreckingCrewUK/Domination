@@ -14,10 +14,6 @@ if(isNil "alarm") then{
 	publicvariable "alarm";
 };
 
-if(isNil "clearing") then{
-	clearing = 0;
-	publicvariable "clearing";
-};
 
 if(isNil "idfreported") then{
 	idfreported = 0;
@@ -29,15 +25,6 @@ if(isNil "idfon") then{
 	publicvariable "idfon";
 };
 
-if(isNil "markertime") then{
-	markertime = 10;
-	publicvariable "markertime";
-};
-
-if(isNil "clearingmarker") then{
-	clearingmarker = 0;
-	publicvariable "clearingmarker";
-};
 
 if(isNil "idfGuns") then{
 	idfGuns = [];

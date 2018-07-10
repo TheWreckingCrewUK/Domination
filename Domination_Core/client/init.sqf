@@ -2,6 +2,7 @@
 #include "sys_restrict\init.sqf";
 #include "sys_cleanup\init.sqf";
 #include "sys_forwardbase\init.sqf";
+execvm "Domination_Core\client\sys_ragdoll\fn_initRagdoll.sqf";
 
 if (isNil "fixedWingPilots") then {
 	fixedWingPilots = ["Modern_British_JetPilot"];

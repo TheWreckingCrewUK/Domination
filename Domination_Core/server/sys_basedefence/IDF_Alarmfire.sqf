@@ -9,18 +9,21 @@ _distance = (_shooter) distance _base;
 
 if(isNil "idfbasesize") then {idfbasesize = 40};
 
+if(isNil "lastidftime") then {lastidftime = -200};
+
 _accuracy = idfbasesize * 0.5;
 
 _distancescale = _accuracy * ((_distance * (_distance*0.2)) / 3500000);
 
 
 
-systemchat format ["%1, %2", _distancescale, _distance];
+//systemchat format ["%1, %2", _distancescale, _distance];
 
 if (isnil "idfreported") then { idfreported = 0};
 
-	//if (idfreported == 0) then {
-	if (0 == 0) then {
+if (!alive idfradar) exitwith {};
+	
+	
 		//systemchat "1";
 		if ((_shooter) distance _base < 25000) then
 {			//systemchat "2";
@@ -39,13 +42,12 @@ if (isnil "idfreported") then { idfreported = 0};
 			
 			if (_dis1 > _dis2) then {
 			
-			systemchat "4";
+			//systemchat "4";
 			basesafe = 0;
-			publicvariable "idfsafe";
+			publicvariable "basesafe";
 
 			idfreported = 1;
 			publicvariable "idfreported";
-
 
 
 			[_shell] execVM "domination_core\server\sys_basedefence\IDF_cram.sqf";
@@ -62,9 +64,6 @@ if (isnil "idfreported") then { idfreported = 0};
 				execVM "domination_core\server\sys_basedefence\IDF_Alarm.sqf";
 
 				};
-				if (clearing == 0) then {
-				execVM "domination_core\server\sys_basedefence\IDF_Clear.sqf";
-				};
 
 				};
 			};
@@ -72,5 +71,5 @@ if (isnil "idfreported") then { idfreported = 0};
 		
 		};
 	};
-};
+
 

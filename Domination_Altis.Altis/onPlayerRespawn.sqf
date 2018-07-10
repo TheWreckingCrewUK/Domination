@@ -1,5 +1,6 @@
 //Stuff that happens on player respawnVehicle
 
+#include "domination_core\client\onRespawn.sqf";
 //If player isn't west then kick them. Apparently players respawning as civ is an issue?
 if(side player != west)then{
 	call BIS_fnc_endMission;
