@@ -20,16 +20,10 @@ hint _spawntext;
  publicVariable "twc_specvehcount";
  
  
- _veh = "CUP_B_M1151_USA" createvehicle _spawnpos;  
+ _veh = "rhsgref_cdf_b_gaz66_zu23" createvehicle _spawnpos;  
   
  
-  
- _gun = "CUP_O_ZU23_TK_INS" createvehicle _spawnpos;  
-  
  
-  
- _gun attachto [_veh, [-0.1,0,1.2]];
-
 
 clearWeaponCargoGlobal _veh;
 clearBackpackCargoGlobal _veh;
@@ -46,7 +40,6 @@ hint _spawntext;
 
 
 _boxaction = ["deleteCreate","Return Vehicle","",{deleteVehicle this;
-deleteVehicle (nearestObject [this, "CUP_O_ZU23_TK_INS"]);
 
  twc_specvehcount = 0;
  publicVariable "twc_specvehcount";

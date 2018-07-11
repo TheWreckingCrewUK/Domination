@@ -28,7 +28,7 @@ sleep random 5;
 
 	for "_i" from 1 to _total do {
 
-	_x doArtilleryFire [([_targetpos,150] call cba_fnc_randpos), currentmagazine _x, 1];
+	_x doArtilleryFire [([_targetpos,250] call cba_fnc_randpos), currentmagazine _x, 1];
 	//_x lookat (_targetpos);
 	sleep 4 +(random 3);
 

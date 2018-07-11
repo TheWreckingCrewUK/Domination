@@ -22,18 +22,27 @@ _groups = [];
 
 _snowflakes = 0;
 
+//now find out what groups we're dealing with. looking for regular infantry groups and adding exemptions for any non-infantry groups that are allowed at low playercounts, like snipers, heli pilots and quartermasters
 {if (_x == leader _x) then {
 	if (!(["sniper", str (group _x)] call BIS_fnc_inString)) then {
+	
 		if ((["infantry", str (group _x)] call BIS_fnc_inString)) then {
+		
 			if (!(["heli", str (group _x)] call BIS_fnc_inString)) then {
+			
+				if (!(["quartermaster", str (typeof _x)] call BIS_fnc_inString)) then {
+				
 					_groups pushback [group _x];
+					
 					} else {_snowflakes = _snowflakes + (count units group _x)};
+					
+				} else {_snowflakes = _snowflakes + (count units group _x)};
 			};
 		} else { //sniper exemption because they can spawn under 5 playercount
-					if ((count(allPlayers - entities "HeadlessClient_F"))< 5) then {
-						_snowflakes = _snowflakes + (count units group _x);
-						};
-					};
+			if ((count(allPlayers - entities "HeadlessClient_F"))< 5) then {
+				_snowflakes = _snowflakes + (count units group _x);
+				};
+			};
 	};
 } foreach allplayers;
  

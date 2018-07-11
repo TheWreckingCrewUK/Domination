@@ -11,18 +11,20 @@ Change the current trigger’s activation to opfor
 params ["_thistrigger"];
 
 if (!isServer) exitWith {};
-systemchat "switching";
+//systemchat "switching";
 [_thistrigger] spawn {
  params ["_thistrigger"];
  
  
 if (!(getMarkerColor "base" == "")) then {
-	systemchat "switched base to opfor"; 
+	//systemchat "switched base to opfor"; 
 	_marker = createmarker ["dummybase", getmarkerpos "base"]; 
 	_marker setMarkerShape "ICON";
 	_marker setMarkerType "b_hq";
 	_marker setMarkerText "Base (ENEMY)";
 	_marker setMarkerColor "colorred";
+	
+	["BASE IN CONTACT, RESPAWN DISABLED","hint",false,true] call BIS_fnc_MP;
 
 	deletemarker "base";
 
@@ -55,29 +57,30 @@ if (!(getMarkerColor "base" == "")) then {
 else 
 { 
  
-systemchat "switching base to blufor"; 
-_marker = createmarker ["base", getmarkerpos "dummybase"]; 
-_marker setMarkerShape "ICON";
-_marker setMarkerType "b_hq";
-_marker setMarkerText "Base (FRIENDLY)";
-_marker setMarkerColor "colorBlufor";
-deletemarker "dummybase"; 
+	systemchat "switching base to blufor"; 
+	_marker = createmarker ["base", getmarkerpos "dummybase"]; 
+	_marker setMarkerShape "ICON";
+	_marker setMarkerType "b_hq";
+	_marker setMarkerText "Base (FRIENDLY)";
+	_marker setMarkerColor "colorBlufor";
+	deletemarker "dummybase"; 
 
-_marker = createmarker ["respawn_west", getmarkerpos "dummyres"]; 
-_marker setMarkerShape "ICON";
-_marker setMarkerType "b_hq";
-_marker setMarkerText "Base (FRIENDLY)";
-_marker setMarkerColor "colorBlufor";
-_marker setMarkeralpha 0;
-deletemarker "dummyres"; 
+	_marker = createmarker ["respawn_west", getmarkerpos "dummyres"]; 
+	_marker setMarkerShape "ICON";
+	_marker setMarkerType "b_hq";
+	_marker setMarkerText "Base (FRIENDLY)";
+	_marker setMarkerColor "colorBlufor";
+	_marker setMarkeralpha 0;
+	deletemarker "dummyres"; 
+
+	["BASE CLEAR, RESPAWN ENABLED","hint",false,true] call BIS_fnc_MP;
 
 
+	twcdomi_baseside = 0;
+	publicVariable "twcdomi_baseside";
+	//mainbase setTriggerActivation ["east", "PRESENT", true]; 
 
-twcdomi_baseside = 0;
-publicVariable "twcdomi_baseside";
-//mainbase setTriggerActivation ["east", "PRESENT", true]; 
-
-//mainbase setTriggerStatements ["count thislist > 4","[""thistrigger""] call twc_fnc_changebase;", ""];
+	//mainbase setTriggerStatements ["count thislist > 4","[""thistrigger""] call twc_fnc_changebase;", ""];
 } 
  
 }

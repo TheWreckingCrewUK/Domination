@@ -1,5 +1,5 @@
-if (typeof _veh == "rhsgref_cdf_b_Mi24D_Early") then {
-	private _pylons = ["rhs_mag_fab500_m54","rhs_mag_fab500_m54","rhs_mag_upk23_mixed","rhs_mag_upk23_mixed","",""];
+if (typeof _veh == "rhsgref_cdf_Mi35") then {
+	private _pylons = ["rhs_mag_ub32_s5m1","rhs_mag_ub32_s5m1","rhs_mag_ub32_s5ko","rhs_mag_ub32_s5ko","",""];
 	private _pylonPaths = (configProperties [configFile >> "CfgVehicles" >> typeOf _veh >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"]) apply {getArray (_x >> "turret")};
 
 	{ _veh removeWeaponGlobal getText (configFile >> "CfgMagazines" >> _x >> "pylonWeapon"); } forEach (getPylonMagazines _veh);
@@ -8,6 +8,13 @@ if (typeof _veh == "rhsgref_cdf_b_Mi24D_Early") then {
 
 if (typeof _veh == "RHS_AH1Z") then {
 	private _pylons = ["","PylonRack_4Rnd_ACE_Hellfire_AGM114K","PylonRack_4Rnd_ACE_Hellfire_AGM114K","PylonRack_4Rnd_ACE_Hellfire_AGM114K","PylonRack_4Rnd_ACE_Hellfire_AGM114K",""];
+	private _pylonPaths = (configProperties [configFile >> "CfgVehicles" >> typeOf _veh >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"]) apply {getArray (_x >> "turret")};
+	{ _veh removeWeaponGlobal getText (configFile >> "CfgMagazines" >> _x >> "pylonWeapon"); } forEach (getPylonMagazines _veh);
+	{ _veh setPylonLoadOut [_forEachIndex + 1, _x, true, _pylonPaths select _forEachIndex]; } forEach _pylons;
+};
+
+if (typeof _veh == "RHS_UH60M_ESSS_d") then {
+	private _pylons = ["rhs_mag_M151_19","rhs_mag_M151_19","rhs_mag_M151_19","rhs_mag_M151_19"];
 	private _pylonPaths = (configProperties [configFile >> "CfgVehicles" >> typeOf _veh >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"]) apply {getArray (_x >> "turret")};
 	{ _veh removeWeaponGlobal getText (configFile >> "CfgMagazines" >> _x >> "pylonWeapon"); } forEach (getPylonMagazines _veh);
 	{ _veh setPylonLoadOut [_forEachIndex + 1, _x, true, _pylonPaths select _forEachIndex]; } forEach _pylons;

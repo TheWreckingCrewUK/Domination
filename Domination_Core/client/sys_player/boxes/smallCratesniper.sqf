@@ -6,13 +6,11 @@
 *
 *
 */
-if (( count(allPlayers - entities "HeadlessClient_F"))<5) then {
-[5] execVM "Domination_Core\client\sys_restrict\restrictedkit.sqf";} else {
-
-
 _boxClass = "ACE_Box_Ammo";
 
-_box = _boxClass createVehicle (getPos AmmoBoxSpawner);
+_box = _boxClass createVehicle (if (count (player nearobjects ["Land_InfoStand_V1_F", 200]) > 0) then {
+(getPos AmmoBoxSpawner)} else 
+{(getPos player)});
 
 clearWeaponCargoGlobal _box;
 clearBackpackCargoGlobal _box;
@@ -29,6 +27,9 @@ _box AddMagazineCargoGlobal ["rhsusf_mag_17Rnd_9x19_JHP",10];
 _box AddMagazineCargoGlobal ["UK3CB_BAF_762_L42A1_20Rnd_T",2];
 _box AddMagazineCargoGlobal ["UK3CB_BAF_762_L42A1_20Rnd",7];
 
+_box AddMagazineCargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_mk211",3];
+_box AddMagazineCargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_M33",5];
+
 
 _box addItemCargoGlobal ["ACE_fieldDressing",5];
 _box addItemCargoGlobal ["ACE_elasticBandage",5];
@@ -39,4 +40,5 @@ _box addItemCargoGlobal ["ACE_morphine",5];
 _box addItemCargoGlobal ["HandGrenade",2];
 _box addItemCargoGlobal ["SmokeShell",2];
 _box addItemCargoGlobal ["SmokeShellRed",2];
-};
+
+[player, _box] call ace_cargo_fnc_startLoadIn;

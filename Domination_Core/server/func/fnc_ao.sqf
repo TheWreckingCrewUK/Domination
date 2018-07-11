@@ -330,13 +330,13 @@ for "_i" from 1 to twc_artycount do {
 	 _group = createGroup East;  
  _vehicle = artyspawn createVehicle _artyspawnpos2;  
  twc_artyguns pushback _vehicle;
- _driver = _group createUnit ["rhs_pilot_combat_heli", _artyspawnpos2,[], 0.3,"NONE"];  
- _gunner = _group createUnit ["rhs_pilot_combat_heli", _artyspawnpos2,[], 0.3,"NONE"];  
+ //_driver = _group createUnit ["rhs_msv_rifleman", _artyspawnpos2,[], 0.3,"NONE"];  
+ _gunner = _group createUnit ["rhs_msv_rifleman", _artyspawnpos2,[], 0.3,"NONE"];  
   
- _driver moveInDriver _vehicle;  
+ //_driver moveInDriver _vehicle;  
  _gunner moveInGunner _vehicle;
   
- _driver disableAI "AUTOTARGET";  
+ //_driver disableAI "AUTOTARGET";  
  _gunner disableAI "AUTOTARGET";
 
 _vehicle addEventHandler ["Fired", {[(_this select 0), (_this select 6)] call twc_fnc_idf}];

@@ -44,7 +44,7 @@ if((typeOf player) in ["Modern_British_Medic_Mert","Modern_British_MERT_HeliPilo
 
 
 
-if((typeOf player) in ["Modern_British_HeliPilot","2000_British_HeliPilot_Desert","2000_British_HeliPilot"])then{
+if((typeOf player) in ["Modern_British_HeliPilot","2000_British_HeliPilot_Desert","2000_British_HeliPilot","1990_British_HeliPilot_Desert","1990_British_HeliPilot"])then{
 if (( count(allPlayers - entities "HeadlessClient_F")) < 5) then {
 
 cutText ["", "Black", 0.001];
@@ -69,7 +69,7 @@ player forceWalk false;
 
 
 
-if((typeOf player) in ["Modern_British_FSTAssistant","Modern_British_FSTCommander", "Modern_British_logitech"])then{
+if(((typeOf player) in ["Modern_British_FSTAssistant","Modern_British_FSTCommander", "Modern_British_logitech"]) || (["fst", typeof player] call BIS_fnc_inString))then{
 
 
 
@@ -80,7 +80,7 @@ execvm "Insurgency_Core\client\sys_restrict\fullFST.sqf";
 
 
 
-if((typeOf player) in ["Modern_British_VehicleCrew", "Modern_British_VehicleCommander"])then{
+if((typeOf player) in ["Modern_British_VehicleCrew", "Modern_British_VehicleCommander", "1990_British_Tank_Crew_Desert", "1990_British_Tank_Commander_Desert"])then{
 
 
 execvm "Insurgency_Core\client\sys_restrict\fullArmourCrew.sqf";

@@ -20,8 +20,21 @@ if(isNil "twc_is90") then{
 	publicVariable "twc_is90";
 };
 
+if(isNil "twc_wdveh") then{
+twc_wdveh = 0;
+publicVariable "twc_wdveh";
+};
+
+if(isNil "twc_nonpersistent") then{
+twc_nonpersistent = 0;
+publicVariable "twc_nonpersistent";
+};
 
 
+twc_missionname = missionname;
+publicVariable "twc_missionname";
+
+if (twc_nonpersistent == 1) then { execvm "Domination_Core\server\func\fnc_nonpersistent.sqf"};
 
 {_location = createLocation [ "NameVillage" , getpos _x, 100, 100];
 _location setText "Objective " + str floor random 999;

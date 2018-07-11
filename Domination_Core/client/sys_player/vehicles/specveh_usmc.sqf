@@ -19,8 +19,11 @@ hint _spawntext;
  twc_specvehcount = 1;
  publicVariable "twc_specvehcount";
  
+ _vehtype = "CUP_B_HMMWV_TOW_USMC"
  
- _veh = "CUP_B_HMMWV_Crows_M2_USA" createvehicle _spawnpos;  
+ if (twc_wdveh == 0) then {_vehtype == "CUP_B_HMMWV_TOW_USA"};
+ 
+ _veh = _vehtype createvehicle _spawnpos;  
   
  
   
@@ -41,7 +44,6 @@ hint _spawntext;
 
 
 _boxaction = ["deleteCreate","Return Vehicle","",{deleteVehicle this;
-deleteVehicle (nearestObject [this, "CUP_O_ZU23_TK_INS"]);
 
  twc_specvehcount = 0;
  publicVariable "twc_specvehcount";

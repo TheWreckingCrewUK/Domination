@@ -1,9 +1,4 @@
 
-if(isNil "twc_wdveh") then{
-twc_wdveh = 0;
-	publicVariable "twc_wdveh";
-};
-
 
 _fstlow = {(( count(allPlayers - entities "HeadlessClient_F")) >= 0)};
 
@@ -11,7 +6,7 @@ _fsthi = {(( count(allPlayers - entities "HeadlessClient_F")) >= 6)};
 
 
 
-if((typeOf player) in ["Modern_British_FSTAssistant","Modern_British_Quartermaster","Modern_British_FSTForwardObserver","Modern_British_FSTCommander", "Modern_British_logitech"])then{
+if((typeOf player) in ["Modern_British_FSTAssistant","Modern_British_Quartermaster","Modern_British_FSTForwardObserver","Modern_British_FSTCommander", "Modern_British_logitech", "1990_British_FSTCommander_Desert", "1990_British_FSTAssistant_Desert", "1990_British_FSTForwardObserver_Desert"])then{
 
 
 
@@ -73,18 +68,20 @@ if((typeOf player) in ["Modern_British_FSTAssistant","Modern_British_Quartermast
 	_fstaction7 = ["SpawnsmallUKCreate","Spawn Small UK Crate","",{execvm "domination_core\client\sys_player\boxes\smallcrateuk.sqf"},_condition] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn"],_fstaction7,true] call ace_interact_menu_fnc_addActionToClass;
 	
-	_fstaction7 = ["SpawnsmallUKCreate","Spawn Coyote GMG","",{["UK3CB_BAF_Coyote_Logistics_L134A1_W"] execvm "domination_core\client\sys_player\vehicles\coyote.sqf"},_fsthi] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawnwoodland"],_fstaction7,true] call ace_interact_menu_fnc_addActionToClass;
-
-	_fstaction7 = ["SpawnsmallUKCreate","Spawn Coyote GMG","",{["UK3CB_BAF_Coyote_Logistics_L134A1_D"] execvm "domination_core\client\sys_player\vehicles\coyote.sqf"},_fsthi] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawndesert"],_fstaction7,true] call ace_interact_menu_fnc_addActionToClass;
+		if (!(["90", twc_missionname] call BIS_fnc_inString)) then {
 	
-	_fstaction7 = ["SpawnsmallUKCreate","Spawn Coyote HMG","",{["UK3CB_BAF_Coyote_Logistics_L111A1_W"] execvm "domination_core\client\sys_player\vehicles\coyote.sqf"},_condition] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawnwoodland"],_fstaction7,true] call ace_interact_menu_fnc_addActionToClass;
+		_fstaction7 = ["SpawnsmallUKCreate","Spawn Coyote GMG","",{["UK3CB_BAF_Coyote_Logistics_L134A1_W"] execvm "domination_core\client\sys_player\vehicles\coyote.sqf"},_fsthi] call ace_interact_menu_fnc_createAction;
+		["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawnwoodland"],_fstaction7,true] call ace_interact_menu_fnc_addActionToClass;
 
-	_fstaction7 = ["SpawnsmallUKCreate","Spawn Coyote HMG","",{["UK3CB_BAF_Coyote_Logistics_L111A1_D"] execvm "domination_core\client\sys_player\vehicles\coyote.sqf"},_condition] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawndesert"],_fstaction7,true] call ace_interact_menu_fnc_addActionToClass;
+		_fstaction7 = ["SpawnsmallUKCreate","Spawn Coyote GMG","",{["UK3CB_BAF_Coyote_Logistics_L134A1_D"] execvm "domination_core\client\sys_player\vehicles\coyote.sqf"},_fsthi] call ace_interact_menu_fnc_createAction;
+		["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawndesert"],_fstaction7,true] call ace_interact_menu_fnc_addActionToClass;
+		
+		_fstaction7 = ["SpawnsmallUKCreate","Spawn Coyote HMG","",{["UK3CB_BAF_Coyote_Logistics_L111A1_W"] execvm "domination_core\client\sys_player\vehicles\coyote.sqf"},_condition] call ace_interact_menu_fnc_createAction;
+		["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawnwoodland"],_fstaction7,true] call ace_interact_menu_fnc_addActionToClass;
 
+		_fstaction7 = ["SpawnsmallUKCreate","Spawn Coyote HMG","",{["UK3CB_BAF_Coyote_Logistics_L111A1_D"] execvm "domination_core\client\sys_player\vehicles\coyote.sqf"},_condition] call ace_interact_menu_fnc_createAction;
+		["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawndesert"],_fstaction7,true] call ace_interact_menu_fnc_addActionToClass;
+		};
 	
 	};
 

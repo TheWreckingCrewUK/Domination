@@ -15,5 +15,14 @@ twc_enemyFlag = "Faction_CUP_RU";
 twc_badAOs = ["Ghufran", "Durrishahwar", "Yafiah", "Usaimah", "Johari"];
 twc_LastAO = "";
 
+twc_tankcount = random 3;
+twc_apccount = 1 + (random 2);
+twc_ifvcount = 2 + (random 2);
+twc_infcount = 2;
+twc_aainfcount = 1;
+
+twc_wdveh = 0;
+publicVariable "twc_wdveh";
+
 // event handlers run in the non-scheduled environment (can't be execVM)
 [] call compile preprocessFile "Domination_Core\server\init.sqf";
