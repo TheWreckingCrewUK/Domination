@@ -50,7 +50,10 @@ cramactive = 1;
 //systemchat "cram is ready";
 _time = time;
 
-Waituntil {(((getposatl _shell select 2) > 60)|| (((vectorMagnitude (velocity _shell)) > 160) && ((getposatl _shell select 2) > 20))) && ((_shell distance cram) < 2000)};
+Waituntil {((((getposatl _shell select 2) > 60)|| (((vectorMagnitude (velocity _shell)) > 160) && ((getposatl _shell select 2) > 20))) && ((_shell distance cram) < 2000)) || !alive _shell};
+
+
+if (!alive _shell )exitwith {};
 
 _chance = 18;
 if ((vectorMagnitude (velocity _shell)) > 160) then {_chance = 15};

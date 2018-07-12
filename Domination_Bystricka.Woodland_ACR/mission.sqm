@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2003;
+		nextID=2010;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3655.2217,354.65314,5307.6821};
-		dir[]={-0.34872836,-0.11635779,0.93011194};
-		up[]={-0.040885098,0.99320436,0.1090451};
-		aside[]={0.93647814,2.8638169e-006,0.35111797};
+		pos[]={3617.3074,386.73862,5281.1016};
+		dir[]={0.46246007,-0.38875347,0.79693151};
+		up[]={0.19511113,0.92134917,0.33622381};
+		aside[]={0.86495668,3.4109689e-008,-0.50193542};
 	};
 };
 binarizationWanted=0;
@@ -47,7 +47,8 @@ addons[]=
 	"CUP_WheeledVehicles_T810",
 	"A3_Structures_F_Mil_Shelters",
 	"A3_Modules_F",
-	"UK3CB_BAF_Weapons_Static"
+	"UK3CB_BAF_Weapons_Static",
+	"A3_Structures_F_System"
 };
 class AddonsMetaData
 {
@@ -12689,7 +12690,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=65;
+		items=66;
 		class Item0
 		{
 			dataType="Marker";
@@ -12803,12 +12804,12 @@ class Mission
 		class Item3
 		{
 			dataType="Marker";
-			position[]={3638.5127,347.73389,5318.4043};
+			position[]={3674.6455,350.37946,5318.4043};
 			name="crate";
 			type="Empty";
 			angle=151.94548;
 			id=93;
-			atlOffset=-2.6455688;
+			atlOffset=-0.77111816;
 		};
 		class Item4
 		{
@@ -13651,10 +13652,12 @@ class Mission
 		class Item15
 		{
 			dataType="Marker";
-			position[]={3673.104,351.3446,5328.0728};
+			position[]={3673.104,351.345,5328.0732};
 			name="respawn_west";
+			text="Base";
 			type="Empty";
 			id=1605;
+			atlOffset=0.00039672852;
 		};
 		class Item16
 		{
@@ -15058,7 +15061,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=3;
+				items=4;
 				class Item0
 				{
 					dataType="Object";
@@ -15177,6 +15180,24 @@ class Mission
 						};
 						nAttributes=1;
 					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3799.1572,308.04291,5491.73};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						isPlayer=1;
+						isPlayable=1;
+					};
+					id=2009;
+					type="Modern_British_FSTForwardObserver";
+					atlOffset=-3.0517578e-005;
 				};
 			};
 			class Attributes
@@ -16199,7 +16220,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3627.4243,351.534,5377.8027};
+				position[]={3628.9678,351.51624,5376.5425};
 				angles[]={0,3.9150875,0};
 			};
 			side="Empty";
@@ -16209,7 +16230,7 @@ class Mission
 			};
 			id=1954;
 			type="Land_HelipadEmpty_F";
-			atlOffset=6.1035156e-005;
+			atlOffset=9.1552734e-005;
 		};
 		class Item45
 		{
@@ -16791,6 +16812,22 @@ class Mission
 			};
 			id=2002;
 			type="UK3CB_BAF_Static_L111A1_Deployed_Mid";
+		};
+		class Item65
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3628.8447,351.51688,5376.6987};
+				angles[]={0.013327583,3.8924117,6.2605257};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=2003;
+			type="Land_ClutterCutter_large_F";
 		};
 	};
 };

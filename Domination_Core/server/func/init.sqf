@@ -6,7 +6,9 @@ twc_fnc_posNearPlayers = compile preprocessfilelinenumbers "Domination_Core\serv
 twc_fnc_noMorePilots = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_noMorePilots.sqf";
 twc_fnc_spawnJet = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_spawnJet.sqf";"Domination_Core\server\func\fnc_noMorePilots.sqf";
 twc_fnc_artyattack = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_artyattack.sqf";
-twc_fnc_changebase = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_changebase.sqf";
+twc_fnc_changebase = compile preprocessfilelinenumbers "Domination_Core\server\func\base\fnc_changebase.sqf";
+twc_fnc_changebase_bluetored = compile preprocessfilelinenumbers "Domination_Core\server\func\base\fnc_bluetored.sqf";
+twc_fnc_changebase_redtoblue = compile preprocessfilelinenumbers "Domination_Core\server\func\base\fnc_redtoblue.sqf";
 
 
 if (isServer) then {
@@ -16,3 +18,6 @@ if (isServer) then {
 		[_pos, _targetplayer] call twc_fnc_spawnReinforcements;
 	}] call CBA_fnc_addEventHandler;
 };
+
+
+execvm "Domination_Core\server\func\fnc_Reinforcements_init.sqf";

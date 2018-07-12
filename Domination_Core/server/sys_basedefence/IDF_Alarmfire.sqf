@@ -36,11 +36,20 @@ if (!alive idfradar) exitwith {};
 			
 			params ["_base", "_shell", "_distance", "_shooter"];
 			
-			_dis1= _shell distance _base;
-			sleep 3;
-			_dis2= _shell distance _base;
+			[_shooter,_distance] execvm "domination_core\server\sys_basedefence\IDF_marker.sqf";
+		
 			
-			if (_dis1 > _dis2) then {
+			[_shell] execVM "domination_core\server\sys_basedefence\IDF_cram.sqf";
+			
+			//delay variable for automated siren vs human shouting. human shouting (90's) takes a little longer to register the call
+			_delay = 1.5;
+			if (twc_is90 == 1) then {_delay = 2;};
+			
+			waituntil {((_shell distance _base) < (((_shooter) distance _base) / _delay)) || !alive _shell};
+			
+			if (!alive _shell )exitwith {
+			//systemchat "base not the target"
+			};
 			
 			//systemchat "4";
 			basesafe = 0;
@@ -50,9 +59,7 @@ if (!alive idfradar) exitwith {};
 			publicvariable "idfreported";
 
 
-			[_shell] execVM "domination_core\server\sys_basedefence\IDF_cram.sqf";
 
-			[_shooter,_distance] execvm "domination_core\server\sys_basedefence\IDF_marker.sqf";
 			if (alarm == 0) then {
 				alarm = 1;
 				publicvariable "alarm";
@@ -66,7 +73,7 @@ if (!alive idfradar) exitwith {};
 				};
 
 				};
-			};
+			
 			};
 		
 		};

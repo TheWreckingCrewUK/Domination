@@ -8,30 +8,27 @@ waituntil count players == 0 then if there’s still no patrolbase then if there
 Create the proper marker and delete the dummy one
 Change the current trigger’s activation to opfor
 */
-params ["_thistrigger"];
+
+if ((getMarkerColor "base" == "")) exitwith {};
 
 if (!isServer) exitWith {};
 //systemchat "switching";
-[_thistrigger] spawn {
- params ["_thistrigger"];
- 
- 
-if (!(getMarkerColor "base" == "")) then {
+[] spawn {
 	//systemchat "switched base to opfor"; 
 	_marker = createmarker ["dummybase", getmarkerpos "base"]; 
 	_marker setMarkerShape "ICON";
 	_marker setMarkerType "b_hq";
-	_marker setMarkerText "Base (ENEMY)";
+	_marker setMarkerText "BASE (UNSAFE)";
 	_marker setMarkerColor "colorred";
 	
-	["BASE IN CONTACT, RESPAWN DISABLED","hint",false,true] call BIS_fnc_MP;
+	"BASE IN CONTACT, RESPAWN DISABLED" remoteExec ["hint"];
 
 	deletemarker "base";
 
 	_marker = createmarker ["dummyres", getmarkerpos "respawn_west"]; 
 	_marker setMarkerShape "ICON";
 	_marker setMarkerType "b_hq";
-	_marker setMarkerText "Base (ENEMY)";
+	_marker setMarkerText "BASE (UNSAFE)";
 	_marker setMarkerColor "colorred";
 	_marker setMarkeralpha 0;
 
@@ -53,34 +50,4 @@ if (!(getMarkerColor "base" == "")) then {
 	//systemchat "got a backup"
 	};
 	};
-} 
-else 
-{ 
- 
-	systemchat "switching base to blufor"; 
-	_marker = createmarker ["base", getmarkerpos "dummybase"]; 
-	_marker setMarkerShape "ICON";
-	_marker setMarkerType "b_hq";
-	_marker setMarkerText "Base (FRIENDLY)";
-	_marker setMarkerColor "colorBlufor";
-	deletemarker "dummybase"; 
-
-	_marker = createmarker ["respawn_west", getmarkerpos "dummyres"]; 
-	_marker setMarkerShape "ICON";
-	_marker setMarkerType "b_hq";
-	_marker setMarkerText "Base (FRIENDLY)";
-	_marker setMarkerColor "colorBlufor";
-	_marker setMarkeralpha 0;
-	deletemarker "dummyres"; 
-
-	["BASE CLEAR, RESPAWN ENABLED","hint",false,true] call BIS_fnc_MP;
-
-
-	twcdomi_baseside = 0;
-	publicVariable "twcdomi_baseside";
-	//mainbase setTriggerActivation ["east", "PRESENT", true]; 
-
-	//mainbase setTriggerStatements ["count thislist > 4","[""thistrigger""] call twc_fnc_changebase;", ""];
-} 
- 
-}
+};

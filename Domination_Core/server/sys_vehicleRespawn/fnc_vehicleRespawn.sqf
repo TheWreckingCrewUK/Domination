@@ -46,6 +46,7 @@ _veh addEventHandler ["GetOut",{
 					_time = time + vehicleRespawnDelay;
 				}else{
 					_respawnInfo = _veh getVariable "respawnInfo";
+					waituntil {basemode == 0};
 					deleteVehicle _veh;
 					sleep 20;
 		_checkpos = [(_respawnInfo select 1) select 0, (_respawnInfo select 1) select 1, 0];
@@ -95,6 +96,7 @@ _veh addEventHandler ["Killed",{
 		waituntil {(count(_checkpos nearobjects [typeof _veh, 3]) ==0)};
 		sleep (2+ (random 10)); //reason for sleep and double check is so that mass casualty events don't cause the cookoff to instantly injure the new vehicle
 		*/
+		waituntil {basemode == 0};
 		while {(count(_checkpos nearobjects [typeof _veh, 3]) >0)} do {
 		{if ((damage _x) == 1) then {deletevehicle _x}} foreach (_checkpos nearobjects [typeof _veh, 4]);};
 		sleep 10;

@@ -27,8 +27,12 @@ diwako_ragdoll_ai = true;
 
 ["ace_unconscious", {
   params [["_unit", objNull],["_state", false]];
-  if(!diwako_ragdoll_ragdolling) exitWith {systemchat "nah 1";}; // ragdolling if it active
-  if( (_unit != player && {!diwako_ragdoll_ai}) || (!local _unit)) exitWith {systemchat "nah 2";}; // only ragdoll players and only ragdolling if it active
+  if(!diwako_ragdoll_ragdolling) exitWith {
+  //systemchat "nah 1";
+  }; // ragdolling if it active
+  if( (_unit != player && {!diwako_ragdoll_ai}) || (!local _unit)) exitWith {
+  //systemchat "nah 2";
+  }; // only ragdoll players and only ragdolling if it active
   if(_state && {vehicle _unit == _unit && {!([_unit] call ace_medical_fnc_isBeingCarried) && {!([_unit] call ace_medical_fnc_isBeingDragged)}}}) then {
     // ragdoll player
     _unit setUnconscious true;
