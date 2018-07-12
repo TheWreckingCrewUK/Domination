@@ -12,6 +12,9 @@ Change the current trigger’s activation to opfor
 if ((getMarkerColor "base" == "")) exitwith {};
 
 if (!isServer) exitWith {};
+
+
+if (time < 120) exitWith {};
 //systemchat "switching";
 [] spawn {
 	//systemchat "switched base to opfor"; 

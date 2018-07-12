@@ -45,7 +45,7 @@ sleep 0.2;
 //systemchat "cram is targetting";
 };
 sleep 1;
-cramactive = 1;
+
 
 //systemchat "cram is ready";
 _time = time;
@@ -53,8 +53,8 @@ _time = time;
 Waituntil {((((getposatl _shell select 2) > 60)|| (((vectorMagnitude (velocity _shell)) > 160) && ((getposatl _shell select 2) > 20))) && ((_shell distance cram) < 2000)) || !alive _shell};
 
 
-if (!alive _shell )exitwith {};
-
+if (!alive _shell )exitwith {cram lookat objnull};
+cramactive = 1;
 _chance = 18;
 if ((vectorMagnitude (velocity _shell)) > 160) then {_chance = 15};
 

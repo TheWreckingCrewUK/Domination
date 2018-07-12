@@ -30,6 +30,11 @@ twc_nonpersistent = 0;
 publicVariable "twc_nonpersistent";
 };
 
+if(isNil "twc_idflist") then{
+twc_idflist = [];
+publicVariable "twc_idflist";
+};
+
 
 twc_missionname = missionname;
 publicVariable "twc_missionname";
@@ -43,6 +48,11 @@ townLocationArray = townLocationArray + (nearestLocations [getpos _x, ["NameVill
 townLocationArray = townLocationArray + (nearestLocations [getMarkerPos "base", ["NameVillage","NameCity","NameCityCapital"], twc_maxObjDistance]);
 
 [] call twc_fnc_getAO;
+
+ _eventHandlerID = ["twc_event_artyattack", { 
+params ["_enemy"]; 
+[_enemy] call twc_fnc_artyattack;}] call CBA_fnc_addEventHandler; 
+
 
 _pilotConnectedList = [];
 

@@ -29,7 +29,7 @@ player forceWalk false;
 
 if((typeOf player) in ["Modern_British_Spotter","Modern_British_Sniper"])then{
 
-execvm "Insurgency_Core\client\sys_restrict\fullsniperteam.sqf";
+execvm "Domination_Core\client\sys_restrict\fullsniperteam.sqf";
 
 };
 
@@ -38,7 +38,7 @@ execvm "Insurgency_Core\client\sys_restrict\fullsniperteam.sqf";
 
 if((typeOf player) in ["Modern_British_Medic_Mert","Modern_British_MERT_HeliPilot"])then{
 
-	execvm "Insurgency_Core\client\sys_restrict\fullmertteam.sqf";
+	execvm "Domination_Core\client\sys_restrict\fullmertteam.sqf";
 
 };
 
@@ -73,7 +73,7 @@ if(((typeOf player) in ["Modern_British_FSTAssistant","Modern_British_FSTCommand
 
 
 
-execvm "Insurgency_Core\client\sys_restrict\fullFST.sqf";
+execvm "Domination_Core\client\sys_restrict\fullFST.sqf";
 
 };
 
@@ -83,7 +83,7 @@ execvm "Insurgency_Core\client\sys_restrict\fullFST.sqf";
 if((typeOf player) in ["Modern_British_VehicleCrew", "Modern_British_VehicleCommander", "1990_British_Tank_Crew_Desert", "1990_British_Tank_Commander_Desert"])then{
 
 
-execvm "Insurgency_Core\client\sys_restrict\fullArmourCrew.sqf";
+execvm "Domination_Core\client\sys_restrict\fullArmourCrew.sqf";
 
 };
 
@@ -93,7 +93,7 @@ execvm "Insurgency_Core\client\sys_restrict\fullArmourCrew.sqf";
 if((typeOf player) in ["Modern_British_JetPilot", "Modern_British_FSTForwardObserver"])then{
 
 
-execvm "Insurgency_Core\client\sys_restrict\fulljetteam.sqf";
+execvm "Domination_Core\client\sys_restrict\fulljetteam.sqf";
 
 };
 

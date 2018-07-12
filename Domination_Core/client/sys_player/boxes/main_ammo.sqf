@@ -300,7 +300,6 @@ if (typeOf vehicle player == "Modern_British_Squadleader") then {
 		["rhsusf_ANPVS_14",1],
 		["ACE_IR_Strobe_Item",5],
 		["UK3CB_BAF_G_Tactical_Black",1],
-		["ACE_RangeCard",1],
 		["UK3CB_BAF_MaxiKite",1],
 		["ACE_Tripod",1],
 		["HandGrenade",5]
@@ -1658,7 +1657,9 @@ if (g_class == "ANA_TL") then {
  if (typeOf vehicle player in ["Modern_pol_rifleman_at", "Modern_pol_rifleman_at_d"]) then {
     _tmp_weapons =
     [
-        ["twc_ak74_pol",1]
+        ["twc_ak74_pol",1],
+        ["rhs_weap_igla",1],
+        ["twc_rpg_pol",1]
     ];
 
 	_tmp_magazines =

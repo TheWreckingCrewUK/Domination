@@ -1,7 +1,9 @@
 /*
 * After completion of an AO this gets the location of a new one and passes it to twc_fnc_ao
 */
-params["_pos", "_enemylist"];
+params["_pos", "_enemylist", "_arty"];
+
+if (isnil "_arty") then {_arty = false};
 
 //systemchat "reinforcements called";
 
@@ -46,5 +48,6 @@ if (_landorair > 0.5) then {
 
 	[_spawnpos, _enemy, _stagepos, _num] spawn twc_reinforce_mechanised;
 };
-[_enemy] call twc_fnc_artyattack;
+
+["twc_event_artyattack", [_enemy], twc_artyguns] call CBA_fnc_targetEvent;
 

@@ -15,7 +15,7 @@ _total = 5 +(random 10);
 
 _x lookat objnull;
 
-_x setvehicleammo 1;
+_x setvehicleammodef 1;
 sleep random 5;
 
 	if ((_x distance _targetpos) > 8000) exitwith {
@@ -35,7 +35,7 @@ sleep random 5;
 	}; 
 	_x lookat objnull;
 
-	_x setvehicleammo 1;
+	_x setvehicleammodef 0;
 
 
 //sleep 30 + (random 180);

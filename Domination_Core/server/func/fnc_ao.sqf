@@ -338,11 +338,19 @@ for "_i" from 1 to twc_artycount do {
   
  //_driver disableAI "AUTOTARGET";  
  _gunner disableAI "AUTOTARGET";
+ _gunner disableAI "AUTOCOMBAT";
+ _gunner disableAI "TARGET";
+ _vehicle disableAI "AUTOTARGET";
+ _vehicle disableAI "AUTOCOMBAT";
+ _vehicle disableAI "TARGET";
+ 
 
 _vehicle addEventHandler ["Fired", {[(_this select 0), (_this select 6)] call twc_fnc_idf}];
  
 };
 
+ publicVariable "twc_artyguns";
+ 
 	_spawnPos = [_artyspawnpos,[0,50],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 150,3,false,true] call cba_fnc_taskDefend;
@@ -365,7 +373,7 @@ reinforcementsTrg = createTrigger ["EmptyDetector", _pos];
 reinforcementsTrg setTriggerArea [2700, 2700, 0, false];
 reinforcementsTrg setTriggerActivation ["WEST", "EAST D", true];
 reinforcementsTrg setTriggerTimeout [_timer,_timer,_timer, true];
-reinforcementsTrg setTriggerStatements ["this","[getPos thisTrigger, thislist] call twc_fnc_spawnReinforcements",""];
+reinforcementsTrg setTriggerStatements ["this","if (!isserver) exitwith {};[getPos thisTrigger, thislist, true] call twc_fnc_spawnReinforcements",""];
 
 //[getPos thisTrigger] call twc_fnc_spawnReinforcements
 
