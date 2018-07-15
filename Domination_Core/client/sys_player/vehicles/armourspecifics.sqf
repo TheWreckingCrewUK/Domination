@@ -110,6 +110,7 @@ if (twc_wdveh == 1) then {
 	true
 	] call BIS_fnc_initVehicle;
 	} else {
+	[
 	_veh,
 	["Desert",1], 
 	true

@@ -5,12 +5,12 @@ params["_pos", "_enemylist", "_arty"];
 
 if (isnil "_arty") then {_arty = false};
 
-//systemchat "reinforcements called";
+if (isnil "twc_lastattack") then {twc_lastattack = 1200};
 
-//systemchat format ["I see %1 with %2", _pos, _enemylist];
+//exit if it's been too soon since the last attack. current count at 20 minutes
+if (time < twc_lastattack) exitwith {};
 
-
-//_enemy = (nearestObjects [_pos, ["SoldierWB"], 5000]) select 0; 
+twc_lastattack = time + 1200;
 
 _enemy = _enemylist call BIS_fnc_selectRandom;
 
@@ -18,6 +18,10 @@ _enemy = _enemylist call BIS_fnc_selectRandom;
 if ((_enemy distance _pos) < 400) exitwith {};
 
 _spawnpos = [0,0,0];
+
+/* future plan is to do a while isnearplayers 10km do a new bis fnc safepos to get a decent spawnpos
+
+*/
 
 _stagepos = [_pos, 1000] call CBA_fnc_randPos;
 
@@ -37,11 +41,11 @@ _landorair = 1;
 if (_landorair > 0.5) then {
 //armour is dropped by c130, so have the same condition on this as for the c130 airdrop of infantry
 	if ((_num) > 0.5) then {
-		[_spawnpos, _enemy, _stagepos] spawn twc_reinforce_armourdrop;
+		[_spawnpos, _enemy, _stagepos] spawn twc_fnc_armourdrop;
 	};
 	for "_i" from 1 to 2 do {
 
-		[_spawnpos, _enemy, _stagepos, _num] spawn twc_reinforce_airdrop;
+		[_spawnpos, _enemy, _stagepos, _num] spawn twc_fnc_infantrydrop;
 
 	};
 } else {

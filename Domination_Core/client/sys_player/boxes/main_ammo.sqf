@@ -1671,6 +1671,7 @@ if (g_class == "ANA_TL") then {
 		["rhs_rpg7_PG7VL_mag",10],
 		["rhs_rpg7_PG7VR_mag",10],
 		["rhs_rpg7_TBG7V_mag",10],
+		["rhs_mag_9k38_rocket",1],
 		["rhs_rpg7_type69_airburst_mag",10],
 		["HandGrenade",5]
     ];

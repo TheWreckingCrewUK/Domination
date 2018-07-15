@@ -12,11 +12,10 @@ if (faction player == "ana_units") then {
 };
 
 	
-#include "sys_restrict\init.sqf";
 
 sleep 10;
 
-if ((random 1)< 0.1) then {
+if ((random 1)< 0.05) then {
 if (( count(allPlayers - entities "HeadlessClient_F"))>2) then {
 [getmarkerpos "aoCenterMarker", [player], getmarkerpos "aoCenterMarker"] remoteExec ["twc_fnc_spawnReinforcements", 2];
 

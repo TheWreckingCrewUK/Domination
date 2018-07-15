@@ -36,7 +36,7 @@ mortar = ["rhs_2b14_82mm_vdv"];
 };
 
 if (isNil "arty") then {
-arty = ["RHS_BM21_MSV_01", "rhs_2b14_82mm_msv"];
+arty = ["RHS_BM21_MSV_01"];
 };
 
 if (isNil "tankaaCombined") then {

@@ -232,7 +232,7 @@ if((typeOf player) in ["1990_British_2IC_Desert","1990_British_SectionCommander_
 		
 };
 
-
+/*
 if((typeOf player) in ["1990_British_HeliPilot_Desert"])then{
 
 	_90rmalphaaction = ["Spawnsmall90AlphaCreate","Spawn UK Crate","",{execvm "domination_core\client\sys_player\boxes\smallcrateuk90RM.sqf"},{true}] call ace_interact_menu_fnc_createAction;
@@ -259,7 +259,7 @@ if((typeOf player) in ["1990_British_HeliPilot_Desert"])then{
 			_artaction3 = ["SpawnrepCreate","Spawn Spare Tires","",{execvm "domination_core\client\sys_player\boxes\RepairKit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_artaction3,true] call ace_interact_menu_fnc_addActionToClass;
 	};
-
+*/
 if((typeOf player) in ["1990_RM_British_2IC_Mix","1990_RM_British_SectionCommander_Mix"])then{
 
 	
@@ -287,7 +287,7 @@ if((typeOf player) in ["1990_RM_British_2IC_Mix","1990_RM_British_SectionCommand
 };
 
 if((typeOf player) in ["TWC_2000_US_Army_SectionCommander","TWC_2000_US_Army_TeamLeader","2000_British_SectionCommander_Desert","2000_British_SectionCommander","2000_British_2IC_Desert","2000_British_2IC","1990_RM_British_2IC_Mix","1990_RM_British_SectionCommander_Mix","1990_British_2IC_Desert","1990_British_SectionCommander_Desert", "Modern_British_Spotter_coin","Modern_British_FSTCommander","Modern_USMC_Squadleader","Modern_USMC_Teamleader", "Modern_USMC_Squadleader_d","Modern_USMC_Teamleader_d","twc_ana_commander","twc_ana_subcommander","Modern_British_Squadleader","Modern_British_2IC_COIN","Modern_pol_commander","Modern_pol_commander_d","Modern_pol_subcommander","Modern_pol_subcommander_d"])then{
-	_vic = ["spawn762","Spawn Vehicles","",{[_target] execvm "domination_core\client\sys_player\vehicledrop.sqf"},_condition] call ace_interact_menu_fnc_createAction;
+	_vic = ["spawn762","Spawn Vehicles","",{[_target] execvm "domination_core\client\sys_player\vehicledrop.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["twc_SuppliesBox",0,["ACE_MainActions"],_vic,true] call ace_interact_menu_fnc_addActionToClass;};
 
 

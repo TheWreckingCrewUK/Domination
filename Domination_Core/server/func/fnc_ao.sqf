@@ -368,7 +368,7 @@ reinforcementsTrg setTriggerActivation ["WEST", "PRESENT", true];
 reinforcementsTrg setTriggerTimeout [1,1,1,True];
 reinforcementsTrg setTriggerStatements ["this", "player setdamage 1",""];
 */
-_timer = 300 +(random 200);
+_timer = 300 +(random 300);
 reinforcementsTrg = createTrigger ["EmptyDetector", _pos];
 reinforcementsTrg setTriggerArea [2700, 2700, 0, false];
 reinforcementsTrg setTriggerActivation ["WEST", "EAST D", true];

@@ -89,7 +89,7 @@ _veh addEventHandler ["Killed",{
 		_respawnInfo = _veh getVariable "respawnInfo";
 		//[_veh]spawn{
 		waitUntil {!([(_this select 0),500] call CBA_fnc_nearPlayer)};
-		deleteVehicle (_this select 0)
+		deleteVehicle (_this select 0);
 		//};
 		sleep 10;
 		_checkpos = [(_respawnInfo select 1) select 0, (_respawnInfo select 1) select 1, 0.5];
