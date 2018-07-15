@@ -521,6 +521,30 @@ _list=[
 		["commander", 
 			["Modern_British_VehicleCommander"]
 		]],0
+	],
+	
+		["ukcw_cvrt_Scim_d_L1",[
+		["driver",
+			["1990_British_Tank_Crew_Desert"]
+		],
+		["gunner", 
+			["1990_British_Tank_Crew_Desert"]
+		],
+		["commander", 
+			["1990_British_Tank_Commander_Desert"]
+		]],0
+	],
+	
+		["ukcw_cvrt_Scim_w_L2",[
+		["driver",
+			["1990_British_Tank_Crew_Desert"]
+		],
+		["gunner", 
+			["1990_British_Tank_Crew_Desert"]
+		],
+		["commander", 
+			["1990_British_Tank_Commander_Desert"]
+		]],0
 	]
 	]
 ;

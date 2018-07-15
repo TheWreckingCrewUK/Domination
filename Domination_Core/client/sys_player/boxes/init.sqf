@@ -79,12 +79,6 @@ if((typeOf player) in ["Modern_British_Squadleader","Modern_British_2IC"])then{
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_artaction3,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	
-
-	_UKaction5 = ["SpawnmedCreate","Spawn ZSU GAZ","",{execvm "domination_core\client\sys_player\vehicles\specveh_pol.sqf"},{(count units group player) >= 6}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction5,true] call ace_interact_menu_fnc_addActionToClass;	
-	
-	
-	
 };
 
 if((typeOf player) in ["Modern_USMC_Squadleader","Modern_USMC_Teamleader"])then{
@@ -108,7 +102,7 @@ if((typeOf player) in ["Modern_British_Sniper", "Modern_British_Spotter"])then{
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_snaction1,true] call ace_interact_menu_fnc_addActionToClass;
 };
 
-if((typeOf player) in ["Modern_British_Medic", "1990_British_Medic", "1990_British_Medic_Desert", "1990_RM_British_Medic_Mix", "Modern_USMC_Medic"])then{
+if((typeOf player) in ["Modern_British_Medic", "1990_British_Medic", "1990_British_Medic_Desert", "1990_RM_British_Medic_Mix", "Modern_USMC_Medic", "Modern_pol_medic", "Modern_pol_medic_d"])then{
 
 	_medaction = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "domination_core\client\sys_player\boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_medaction,true] call ace_interact_menu_fnc_addActionToClass;
@@ -136,8 +130,14 @@ if((typeOf player) in ["Modern_pol_commander","Modern_pol_commander_d", "Modern_
 	_UKaction5 = ["SpawnmedCreate","Spawn ZSU GAZ","",{execvm "domination_core\client\sys_player\vehicles\specveh_pol.sqf"},{(count units group player) >= 6}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction5,true] call ace_interact_menu_fnc_addActionToClass;	
 	
-
-
+	
+	
+			_artaction3 = ["SpawnrepCreate","Spawn Landmines","",{execvm "domination_core\client\sys_player\boxes\tm62_mines.sqf"},{(count units group player) >= 4}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_artaction3,true] call ace_interact_menu_fnc_addActionToClass;
+	
+			_artaction3 = ["SpawnrepCreate","Spawn Marksman Rifle","",{execvm "domination_core\client\sys_player\boxes\specCratepol_svd.sqf"},{(count units group player) >= 8}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_artaction3,true] call ace_interact_menu_fnc_addActionToClass;
+	
 };
 
 

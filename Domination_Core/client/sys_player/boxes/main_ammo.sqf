@@ -1569,8 +1569,7 @@ if (g_class == "ANA_TL") then {
 	[
         ["ACE_MapTools",1],
 		["ACRE_PRC148",1],
-		["rhsusf_ANPVS_14",1],
-		["ACRE_PRC117F",1]
+		["rhsusf_ANPVS_14",1]
 	];
 };
 
@@ -1627,8 +1626,7 @@ if (g_class == "ANA_TL") then {
 	[
         ["ACE_MapTools",1],
 		["ACRE_PRC148",1],
-		["rhsusf_ANPVS_14",1],
-		["ACRE_PRC117F",1]
+		["rhsusf_ANPVS_14",1]
 	];
 };
 
@@ -1648,8 +1646,7 @@ if (g_class == "ANA_TL") then {
 	[
         ["ACE_MapTools",1],
 		["ACRE_PRC148",1],
-		["rhsusf_ANPVS_14",1],
-		["ACRE_PRC117F",1]
+		["rhsusf_ANPVS_14",1]
 	];
 };
 
@@ -1679,8 +1676,7 @@ if (g_class == "ANA_TL") then {
 	[
         ["ACE_MapTools",1],
 		["ACRE_PRC148",1],
-		["rhsusf_ANPVS_14",1],
-		["ACRE_PRC117F",1]
+		["rhsusf_ANPVS_14",1]
 	];
 };
 
