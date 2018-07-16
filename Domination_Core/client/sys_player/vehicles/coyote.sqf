@@ -12,9 +12,9 @@ if(isNil "twc_coyotecount") then{
 if (twc_coyotecount >= 2) exitwith {
 	
 	
-_title  = "<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>Too Many Coyotes</t>"; 
+_title  = "<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>Too Many FST Vehicles</t>"; 
 
- _text1 = format ["<br />There Are Already 2 Coyotes In The AO. You Can Return Them To Base To Have Access to Another",1];
+ _text1 = format ["<br />There Are Already 2 FST Vehicles In The AO. You Can Return Them To Base To Have Access to Another",1];
 _spawntext = parsetext (_title + _text1);
 hint _spawntext;
 	
@@ -30,9 +30,9 @@ clearBackpackCargoGlobal _veh;
 //clearMagazineCargoGlobal _veh;
 clearitemCargoGlobal _veh;
 
-_title  = "<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>Coyote Spawner</t>"; 
+_title  = "<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>FST Vehicle Spawner</t>"; 
 
- _text1 =  "<br />The Coyote Has Been Spawned.";
+ _text1 =  "<br />The FST Vehicle Has Been Spawned.";
 _spawntext = parsetext (_title + _text1);
 hint _spawntext;
 

@@ -27,7 +27,7 @@ player forceWalk false;
 
 
 
-if((typeOf player) in ["Modern_British_Spotter","Modern_British_Sniper"])then{
+if ((["sniper", typeof player] call BIS_fnc_inString) || (["spotter", typeof player] call BIS_fnc_inString)) then {
 
 execvm "Domination_Core\client\sys_restrict\fullsniperteam.sqf";
 
@@ -69,7 +69,7 @@ player forceWalk false;
 
 
 
-if(((typeOf player) in ["Modern_British_FSTAssistant","Modern_British_FSTCommander", "Modern_British_logitech"]) || (["fst", typeof player] call BIS_fnc_inString))then{
+if(((typeOf player) in ["Modern_British_logitech"]) || (["fst", typeof player] call BIS_fnc_inString))then{
 
 
 
@@ -80,7 +80,7 @@ execvm "Domination_Core\client\sys_restrict\fullFST.sqf";
 
 
 
-if((typeOf player) in ["Modern_British_VehicleCrew", "Modern_British_VehicleCommander", "1990_British_Tank_Crew_Desert", "1990_British_Tank_Commander_Desert"])then{
+if((typeOf player) in ["Modern_British_VehicleCrew", "Modern_British_VehicleCommander", "1990_British_Tank_Crew_Desert", "1990_British_Tank_Commander_Desert", "2000_British_Vehicle_Commander", "2000_British_Vehicle_Crew"])then{
 
 
 execvm "Domination_Core\client\sys_restrict\fullArmourCrew.sqf";
@@ -90,7 +90,7 @@ execvm "Domination_Core\client\sys_restrict\fullArmourCrew.sqf";
 
 
 
-if((typeOf player) in ["Modern_British_JetPilot", "Modern_British_FSTForwardObserver"])then{
+if((typeOf player) in ["Modern_British_JetPilot", "Modern_British_FSTForwardObserver", "2000_British_JetPilot", "2000_British_FSTForwardObserver", "2000_British_FSTForwardObserver_Desert"])then{
 
 
 execvm "Domination_Core\client\sys_restrict\fulljetteam.sqf";

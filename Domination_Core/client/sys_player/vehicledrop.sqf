@@ -19,9 +19,9 @@ _car2 = "I_G_Offroad_01_armed_F";
 
 if (["usmc", typeof player] call BIS_fnc_inString) then {
 
-_car1 = "CUP_B_HMMWV_Unarmed_USA";
+_car1 = "CUP_B_HMMWV_Unarmed_USMC";
 
-_car2 = "CUP_B_HMMWV_M2_USA";
+_car2 = "CUP_B_HMMWV_M1114_USMC";
 };
 
 
@@ -45,9 +45,9 @@ _car2 = "CUP_I_Datsun_PK_TK_Random";
 
 if (["usmc", typeof player] call BIS_fnc_inString) then {
 
-_car1 = "CUP_B_HMMWV_Unarmed_USA";
+_car1 = "CUP_B_HMMWV_Unarmed_USMC";
 
-_car2 = "CUP_B_HMMWV_M2_USA";
+_car2 = "CUP_B_HMMWV_M1114_USMC";
 };
 };
 

@@ -30,7 +30,13 @@ if(isNil "twc_apccount") then{
 	twc_apccount = 2;
 };
 
-twc_apccount = twc_apccount * ( 1+ (random 0.5));
+twc_ifvcount = twc_ifvcount * ( 1+ (random 0.5));
+
+if(isNil "twc_aacount") then{
+	twc_aacount = 1;
+};
+
+twc_aacount = twc_aacount * ( 1+ (random 0.5));
 
 if(isNil "twc_infcount") then{
 	twc_infcount = 3;
@@ -186,7 +192,7 @@ for "_i" from 1 to twc_apccount do { _pos2= [_pos, 200] call CBA_fnc_randPos;
 [_group, 5] setWaypointCompletionRadius 50;  
  [_group, 5] setWaypointType "CYCLE";
 };
-for "_i" from 1 to 1 do { _pos2= [_pos, 200] call CBA_fnc_randPos;  
+for "_i" from 1 to twc_aacount do { _pos2= [_pos, 200] call CBA_fnc_randPos;  
 	_spawnPos = [_pos2,[100,500],random 360,0,[1,100]] call SHK_pos;
 	_aa = aa call BIS_fnc_selectRandom;
 	

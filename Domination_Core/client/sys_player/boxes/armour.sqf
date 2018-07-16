@@ -94,7 +94,7 @@ if((typeOf player) in ["Modern_British_VehicleCommander"])then{
 	};
 
 	
-if((typeOf player) in ["1990_British_Tank_Commander_Desert"])then{
+if((typeOf player) in ["1990_British_Tank_Commander_Desert", "2000_British_Vehicle_Commander"])then{
 
 
 

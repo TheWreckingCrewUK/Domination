@@ -261,13 +261,13 @@ _list=[
 		
 		["rhsusf_m113d_usarmy_medical",[ 
 		["driver", 
-			["Modern_British_VehicleCrew","Modern_British_VehicleCommander","Modern_USMC_VehicleCrew","Modern_USMC_VehicleCommander","Modern_USMC_Medic","Modern_British_Medic","1990_British_Tank_Commander_Desert", "1990_British_Tank_Crew_Desert", "1990_RM_British_Medic_Mix", "1990_British_Medic_Desert", "Modern_pol_medic", "Modern_pol_medic_d"]
+			["Modern_British_VehicleCrew","Modern_British_VehicleCommander","Modern_USMC_VehicleCrew","Modern_USMC_VehicleCommander","Modern_USMC_Medic","Modern_British_Medic","1990_British_Tank_Commander_Desert", "1990_British_Tank_Crew_Desert", "1990_RM_British_Medic_Mix", "1990_British_Medic_Desert", "Modern_pol_medic", "Modern_pol_medic_d", "2000_British_Medic", "2000_British_Medic_desert", "TWC_2000_US_Army_Medic", "2000_British_Vehicle_Crew", "2000_British_Vehicle_Commander"]
 		]]
 	],
 		
 		["rhsusf_m113_usarmy_medical",[ 
 		["driver", 
-			["Modern_British_VehicleCrew","Modern_British_VehicleCommander","Modern_USMC_VehicleCrew","Modern_USMC_VehicleCommander","Modern_USMC_Medic","Modern_British_Medic","1990_British_Tank_Commander_Desert", "1990_British_Tank_Crew_Desert", "1990_RM_British_Medic_Mix", "1990_British_Medic_Desert", "Modern_pol_medic", "Modern_pol_medic_d"]
+			["Modern_British_VehicleCrew","Modern_British_VehicleCommander","Modern_USMC_VehicleCrew","Modern_USMC_VehicleCommander","Modern_USMC_Medic","Modern_British_Medic","1990_British_Tank_Commander_Desert", "1990_British_Tank_Crew_Desert", "1990_RM_British_Medic_Mix", "1990_British_Medic_Desert", "Modern_pol_medic", "Modern_pol_medic_d", "2000_British_Medic", "2000_British_Medic_desert", "TWC_2000_US_Army_Medic", "2000_British_Vehicle_Crew", "2000_British_Vehicle_Commander"]
 		]]
 	],
 	

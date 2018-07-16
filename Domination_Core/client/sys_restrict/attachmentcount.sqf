@@ -6,8 +6,7 @@ this will count the current number of groups, disregarding any groups that have 
 
 if (( count(allPlayers - entities "HeadlessClient_F")) > 23) exitwith {};
 
-
-if((typeOf player) in ["Modern_British_Spotter_coin","Modern_British_Sniper_coin"])then{
+if ((["sniper", typeof player] call BIS_fnc_inString) || (["spotter", typeof player] call BIS_fnc_inString)) then {
 waituntil {(( count(allPlayers - entities "HeadlessClient_F")) >= 5)};
 };
 
