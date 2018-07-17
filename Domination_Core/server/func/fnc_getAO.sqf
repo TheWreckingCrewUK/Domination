@@ -2,8 +2,9 @@
 * After completion of an AO this gets the location of a new one and passes it to twc_fnc_ao
 */
 params[""];
-
-if (twc_aosToComplete == 0)exitWith{"Won" call BIS_fnc_endMissionServer};
+[] spawn {
+	if (twc_aosToComplete == 0)exitWith{sleep 30;"Won" call BIS_fnc_endMissionServer};
+};
 twc_aosToComplete = twc_aosToComplete - 1;
 
 
