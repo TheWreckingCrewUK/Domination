@@ -16,7 +16,7 @@ if (faction player == "ana_units") then {
 sleep 10;
 
 if ((random 1)< 0.1) then {
-if (( count(allPlayers - entities "HeadlessClient_F"))>2) then {
+if (( count(allPlayers - entities "HeadlessClient_F"))>6) then {
 [getmarkerpos "aoCenterMarker", [player], getmarkerpos "aoCenterMarker"] remoteExec ["twc_fnc_spawnReinforcements", 2];
 
 //["twc_event_artyattack", [getpos player], twc_artyguns] call CBA_fnc_targetEvent;

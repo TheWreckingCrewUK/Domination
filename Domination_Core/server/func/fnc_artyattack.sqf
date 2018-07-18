@@ -51,9 +51,11 @@ sleep random 5;
 };
 
 } foreach twc_artyguns;
-
+[_targetpos] spawn {
+params ["_targetpos"];
 sleep 120 +(random 200);
 
 if ((random 1) < 0.1) exitwith {
 
 [_targetpos] call twc_fnc_artyattack;};
+};

@@ -60,6 +60,51 @@ if (twc_wdveh == 1) then {
 
 
 
+if (typeof _veh == "CUP_B_Challenger2_2CW_BAF") then {
+
+if (twc_wdveh == 1) then {
+	[
+	_veh,
+	["woodlandTwoColor",1], 
+	true
+] call BIS_fnc_initVehicle;
+	} else {
+[
+	_veh,
+	["desertTan",1], 
+	true
+] call BIS_fnc_initVehicle;
+	};
+};
+
+
+if (typeof _veh == "CUP_B_MCV80_GB_D_SLAT") then {
+
+		if ((["90", twc_missionname] call BIS_fnc_inString) || (["00", twc_missionname] call BIS_fnc_inString)) then {
+
+[
+	_veh,
+	["Desert",1], 
+	["HideSlat",0,"HideProxy_Desert",1,"HideProxy_Woodland",0]
+] call BIS_fnc_initVehicle;
+};
+};
+
+
+if (typeof _veh == "CUP_B_MCV80_GB_W_SLAT") then {
+
+		if ((["90", twc_missionname] call BIS_fnc_inString) || (["00", twc_missionname] call BIS_fnc_inString)) then {
+
+[
+	_veh,
+	["Woodland",1], 
+	["HideSlat",0,"HideProxy_Desert",0,"HideProxy_Woodland",1]
+] call BIS_fnc_initVehicle;
+};
+};
+
+
+
 
 if (typeof _veh == "rhsusf_m1a2sep1tuskid_usarmy") then {
 

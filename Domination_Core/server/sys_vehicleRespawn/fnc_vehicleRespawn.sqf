@@ -87,10 +87,10 @@ _veh addEventHandler ["Killed",{
 		params["_veh"];
 		
 		_respawnInfo = _veh getVariable "respawnInfo";
-		//[_veh]spawn{
+		[_veh]spawn{
 		waitUntil {!([(_this select 0),500] call CBA_fnc_nearPlayer)};
 		deleteVehicle (_this select 0);
-		//};
+		};
 		sleep 10;
 		_checkpos = [(_respawnInfo select 1) select 0, (_respawnInfo select 1) select 1, 0.5];
 		/*
@@ -101,7 +101,7 @@ _veh addEventHandler ["Killed",{
 		*/
 		waituntil {basemode == 0};
 		while {(count(_checkpos nearobjects [typeof _veh, 3]) >0)} do {
-		{if ((damage _x) == 1) then {deletevehicle _x}} foreach (_checkpos nearobjects [typeof _veh, 4]);};
+		{if ((damage _x) == 1) then {deletevehicle _x}} foreach (_checkpos nearobjects [typeof _veh, 4]);sleep 1;};
 		sleep 10;
 		//waituntil {(count(_checkpos nearobjects [typeof _veh, 3]) ==0)};
 		

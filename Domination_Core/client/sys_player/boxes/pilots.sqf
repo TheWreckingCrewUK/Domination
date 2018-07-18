@@ -472,7 +472,7 @@ if((typeOf player) in ["1990_British_HeliPilot_Desert","1990_British_HeliPilot"]
 	
 
 
-if((typeOf player) in ["2000_British_HeliPilot_Desert","2000_British_HeliPilot"])then{
+if((typeOf player) in ["2000_British_HeliPilot_Desert","2000_British_HeliPilot","2000_British_CrewChief"])then{
 
 
 
