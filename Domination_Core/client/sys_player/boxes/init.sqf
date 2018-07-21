@@ -19,7 +19,7 @@ player addEventHandler ["InventoryClosed", {
 		[_this select 1]execVM "Domination_Core\client\sys_player\boxes\base_box\main_ammo.sqf";
 	};
 }];
-
+_condition = {true};
 	_infaction1 = ["clearbox","Clear Boxes","",{execvm "domination_core\client\sys_player\boxes\clearboxes.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_infaction1,true] call ace_interact_menu_fnc_addActionToClass;
 	
@@ -84,10 +84,9 @@ execVM "domination_core\client\zeus\camera.sqf";
 };
 
 
-if(((typeOf player) in ["Modern_British_Spotter_coin"]) || (["commander", typeof player] call BIS_fnc_inString) || (["leader", typeof player] call BIS_fnc_inString) || (["2ic", typeof player] call BIS_fnc_inString))then{
-	_vic = ["spawn762","Spawn Vehicles","",{[_target] execvm "domination_core\client\sys_player\vehicledrop.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+
+	_vic = ["spawn762","Spawn Vehicles","",{[_target] execvm "domination_core\client\sys_player\vehicledrop.sqf"},{leader _player == _player}] call ace_interact_menu_fnc_createAction;
 	["twc_SuppliesBox",0,["ACE_MainActions"],_vic,true] call ace_interact_menu_fnc_addActionToClass;
-};
 
 
 

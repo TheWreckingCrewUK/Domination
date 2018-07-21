@@ -93,7 +93,7 @@ _space = 0;
 systemchat format ["space equals %1", _space];
  
 // if it finds no space in any of the sections, update the server with the new group count to check for future and don't restrict the new guy for joining a new section
-if (space == 0) exitwith {
+if (_space == 0) exitwith {
 twc_groupcount = count _groups;
 publicVariable "twc_groupcount";
 systemchat "section system thinks all the sections are full, let Hobbs know ASAP if this isn't the case";

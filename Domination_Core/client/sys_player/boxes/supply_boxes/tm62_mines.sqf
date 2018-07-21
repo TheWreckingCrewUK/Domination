@@ -35,5 +35,6 @@ clearitemCargoGlobal _box;
 
 //supplies
 _box AddMagazineCargoGlobal ["rhs_mine_tm62m_mag",10];
+_box AddItemCargoGlobal ["ACE_DefusalKit",2];
 
 [player, _box] call ace_cargo_fnc_startLoadIn;
