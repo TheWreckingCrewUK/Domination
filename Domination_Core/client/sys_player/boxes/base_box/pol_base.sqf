@@ -171,7 +171,7 @@
 		["rhs_100Rnd_762x54mmR_green",10],
 		["rhs_VOG25",30],
 		["rhs_GRD40_White",30],
-		["rhs_rpg7_TBG7V_mag",10],
+		["rhs_rpg7_PG7VL_mag",10],
 		["rhs_rpg7_TBG7V_mag",10],
 		["HandGrenade",5]
     ];
