@@ -4,8 +4,9 @@
 params[""];
 [] spawn {
 	if (twc_aosToComplete == 0)exitWith{sleep 30;"Won" call BIS_fnc_endMissionServer};
+	twc_aosToComplete = twc_aosToComplete - 1;
 };
-twc_aosToComplete = twc_aosToComplete - 1;
+
 
 
 _true = true;

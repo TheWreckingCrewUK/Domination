@@ -18,6 +18,9 @@ if((typeOf player) in ["2000_British_SectionCommander","2000_British_SectionComm
 	_tmp_items =
 	[
 		["ACRE_PRC117F",1],
+		["SatchelCharge_Remote_Mag",1],
+		["DemoCharge_Remote_Mag",1],
+		["ACE_M26_Clacker",1],
 		["ACRE_PRC343",1]
 	];
 };
@@ -105,6 +108,9 @@ if((typeOf player) in ["2000_British_2IC","2000_British_2IC_Desert"])then{
 
 	_tmp_items =
 	[
+		["SatchelCharge_Remote_Mag",1],
+		["DemoCharge_Remote_Mag",1],
+		["ACE_M26_Clacker",1],
 		["ACRE_PRC343",1]
 	];
 };
@@ -206,6 +212,9 @@ if((typeOf player) in ["2000_British_FSTCommander","2000_British_FSTCommander_De
 	_tmp_items =
 	[
 		["ACRE_PRC117F",1],
+		["SatchelCharge_Remote_Mag",1],
+		["DemoCharge_Remote_Mag",1],
+		["ACE_M26_Clacker",1],
 		["ACRE_PRC343",1]
 	];
 };
@@ -245,7 +254,10 @@ if((typeOf player) in ["2000_British_FSTAssistant","2000_British_FSTAssistant_De
 	];
 
 	_tmp_magazines =
-   [            
+   [       
+		["SatchelCharge_Remote_Mag",1],
+		["DemoCharge_Remote_Mag",1],
+		["ACE_M26_Clacker",1],     
 		["UK3CB_BAF_556_30Rnd",20],
 		["UK3CB_BAF_556_30Rnd_T",10],
 		["HandGrenade",5]
@@ -315,6 +327,9 @@ if((typeOf player) in ["TWC_2000_US_Army_SectionCommander"])then{
 	_tmp_items =
 	[
 		["ACRE_PRC117F",1],
+		["SatchelCharge_Remote_Mag",1],
+		["DemoCharge_Remote_Mag",1],
+		["ACE_M26_Clacker",1],
 		["ACRE_PRC148",1]
 	];
 };
@@ -335,6 +350,9 @@ if((typeOf player) in ["TWC_2000_US_Army_TeamLeader"])then{
 
 	_tmp_items =
 	[
+		["SatchelCharge_Remote_Mag",1],
+		["DemoCharge_Remote_Mag",1],
+		["ACE_M26_Clacker",1],
 		["ACRE_PRC148",1]
 	];
 };

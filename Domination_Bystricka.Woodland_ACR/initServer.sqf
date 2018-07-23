@@ -12,9 +12,12 @@ twc_maxObjDistance = 10000;
 
 twc_wdveh = 1;
 publicVariable "twc_wdveh";
+
 twc_nonpersistent = 1;
 publicVariable "twc_nonpersistent";
+
 twc_aosToComplete = 1;
+
 twc_enemyFlag = "Faction_CUP_RU";
 twc_badAOs = ["Ghufran", "Durrishahwar", "Yafiah", "Usaimah", "Johari"];
 twc_LastAO = "";

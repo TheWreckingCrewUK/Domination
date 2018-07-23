@@ -5,12 +5,12 @@ params["_pos", "_enemylist", "_arty"];
 
 if (isnil "_arty") then {_arty = false};
 
-if (isnil "twc_lastattack") then {twc_lastattack = 1200};
+if (isnil "twc_lastattack") then {twc_lastattack = 10000};
 
 //exit if it's been too soon since the last attack. current count at 20 minutes
 if (time < twc_lastattack) exitwith {};
 
-twc_lastattack = time + 1200;
+twc_lastattack = time + 10000;
 
 _enemy = _enemylist call BIS_fnc_selectRandom;
 

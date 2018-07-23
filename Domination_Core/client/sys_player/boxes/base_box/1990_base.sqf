@@ -18,6 +18,9 @@ if((typeOf player) in ["1990_RM_British_SectionCommander_Mix","1990_British_Sect
 	_tmp_items =
 	[
 		["ACRE_PRC117F",1],
+		["SatchelCharge_Remote_Mag",1],
+		["DemoCharge_Remote_Mag",1],
+		["ACE_M26_Clacker",1],
 		["ACRE_PRC343",1]
 	];
 };
@@ -119,6 +122,9 @@ if((typeOf player) in ["1990_RM_British_SectionCommander_Mix","1990_British_Sect
 
 	_tmp_items =
 	[
+		["SatchelCharge_Remote_Mag",1],
+		["DemoCharge_Remote_Mag",1],
+		["ACE_M26_Clacker",1],
 		["ACRE_PRC343",1]
 	];
 };
@@ -342,6 +348,9 @@ if((typeOf player) in ["1990_RM_British_SectionCommander_Mix","1990_British_Sect
 	[
 		["UK3CB_BAF_SUSAT_3D",1],
 		["rhs_optic_maaws",1],
+		["SatchelCharge_Remote_Mag",1],
+		["DemoCharge_Remote_Mag",1],
+		["ACE_M26_Clacker",1],
 		["ACRE_PRC343",1]
 	];
 };

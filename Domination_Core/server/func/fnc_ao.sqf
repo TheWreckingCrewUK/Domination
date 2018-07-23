@@ -72,9 +72,14 @@ parseText format["<t align='center'><t size='2' color='#ff0000'>AO created at </
 _spawnPos = [_pos,[100,300],random 360,0,[0,100]] call SHK_pos;
 _tower = radioTower createVehicle _spawnPos;
 
+twc_enemyhasradio = 1;
+publicVariable "twc_enemyhasradio";
+
 _tower setVehicleLock "LOCKED";
 //_tower setDamage 0.99;
-_tower addEventHandler ["Killed",{"Radio Tower Destroyed. The enemies can no longer call in Reinforcements. Well done!" remoteExec ["hint"]; "radioMarker" setMarkerColor "colorWEST"; twc_towerCount = 1; deleteVehicle reinforcementsTrg}];
+_tower addEventHandler ["Killed",{"Radio Tower Destroyed. The enemies can no longer call in Reinforcements. Well done!" remoteExec ["hint"];
+twc_enemyhasradio = 0;
+publicVariable "twc_enemyhasradio"; "radioMarker" setMarkerColor "colorWEST"; twc_towerCount = 1; deleteVehicle reinforcementsTrg}];
 
 _spawnPos = [(_spawnPos select 0) + 5,(_spawnPos select 1), (_spawnPos select 2)];
 _group = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
@@ -314,6 +319,7 @@ _jet flyInHeight  _flyalt;
 
 };
 
+/*
 _artyspawnpos = [_spawnpos, 1500, 3000, 10, 0, 1, 0, [], [_spawnpos, _spawnpos]] call BIS_fnc_findSafePos;
 _attemptcount = 0;
 while{
@@ -360,7 +366,7 @@ _vehicle addEventHandler ["Fired", {[(_this select 0), (_this select 6)] call tw
 	_spawnPos = [_artyspawnpos,[0,50],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 150,3,false,true] call cba_fnc_taskDefend;
-	
+	*/
 	
 _trg = createTrigger ["EmptyDetector", _pos];
 _trg setTriggerArea [600, 600, 0, false];
