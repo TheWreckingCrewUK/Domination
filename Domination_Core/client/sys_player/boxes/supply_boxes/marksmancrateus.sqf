@@ -36,11 +36,11 @@ clearMagazineCargoGlobal _box;
 clearitemCargoGlobal _box;
 
 //Weapons
-_box AddWeaponCargoGlobal ["rhs_weap_svdp_npz",1];
+_box AddWeaponCargoGlobal ["rhs_weap_m14ebrri_leu",1];
 
 
 //supplies
-_box AddMagazineCargoGlobal ["rhs_10Rnd_762x54mmR_7N1",7];
+_box AddMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m118_special_Mag",10];
 
-_box addItemCargoGlobal ["rhsusf_acc_M8541_low",1];
+
 _box addItemCargoGlobal ["ACE_RangeCard",1];
