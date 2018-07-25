@@ -26,11 +26,11 @@ twc_restrictedSecondaryWeapons = ["CUP_launch_RPG7V"];
 player addEventHandler ["Take", {
 	params["_unit","_container","_item"];
 		if (_item in twc_restrictedPrimaryWeapons) then {
-		execvm "Insurgency_Core\client\sys_restrict\restrictedprimary.sqf";
+		execvm "domination_core\client\sys_restrict\restrictedprimary.sqf";
 	};
 	
 		if(_item in twc_restrictedSecondaryWeapons)then{
-		execvm "Insurgency_Core\client\sys_restrict\restrictedsecondary.sqf";
+		execvm "domination_core\client\sys_restrict\restrictedsecondary.sqf";
 					if (random 1>0.98) then {
 			"R_60mm_HE" createVehicle (getPos player);
 			hint "WEAPON DETONATION";	

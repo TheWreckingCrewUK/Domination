@@ -29,4 +29,4 @@ player forceWalk false;
 
 
 
-execvm "Insurgency_Core\client\sys_restrict\fullArmourCrew.sqf";
+execvm "domination_core\client\sys_restrict\fullArmourCrew.sqf";

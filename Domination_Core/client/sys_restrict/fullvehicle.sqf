@@ -91,4 +91,4 @@ cutText ["","Black IN",0.001];
 twc_fullrestrictactive = 0;
 sleep 1;
 
-[_checkedseat, _roles] execvm "Insurgency_Core\client\sys_restrict\fullvehicle.sqf";
+[_checkedseat, _roles] execvm "Domination_Core\client\sys_restrict\fullvehicle.sqf";

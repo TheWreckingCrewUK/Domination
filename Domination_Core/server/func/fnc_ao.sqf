@@ -228,7 +228,7 @@ for "_i" from 1 to twc_aacount do { _pos2= [_pos, 200] call CBA_fnc_randPos;
 };
 
 if (( count(allPlayers - entities "HeadlessClient_F")) < 8) then {
-	if (random 1 > 0.6) then {
+	if (random 1 > 0.8) then {
  
  _spawnPos = [_pos,[100,500],random 360,0,[1,100]] call SHK_pos;  
  _group = createGroup East;  
@@ -258,7 +258,7 @@ _vehicle flyInHeight  _flyalt;
 	};
 	
 	if (( count(allPlayers - entities "HeadlessClient_F")) > 14) then {
-	if (random 1 > 0.6) then {
+	if (random 1 > 0.8) then {
  
  _spawnPos = [_pos,[100,500],random 360,0,[1,100]] call SHK_pos;  
  _group = createGroup East;  

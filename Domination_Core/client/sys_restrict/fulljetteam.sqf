@@ -42,4 +42,4 @@ cutText ["","Black IN",5];
 player forceWalk false;
 
 
-execvm "Insurgency_Core\client\sys_restrict\fulljetteam.sqf";
+execvm "domination_core\client\sys_restrict\fulljetteam.sqf";

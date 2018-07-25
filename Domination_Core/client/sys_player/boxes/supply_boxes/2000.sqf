@@ -3,6 +3,9 @@ if((typeOf player) in ["2000_British_SectionCommander","2000_British_SectionComm
 	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Small Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallCrateUK2000.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;
 	
+	_hUKaction3 = ["SpawnsmallUKCreate","Spawn Marksman Rifle","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\marksmancrateuk.sqf"},{(count units group player) >= 8}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_hUKaction3,true] call ace_interact_menu_fnc_addActionToClass;
+	
 	_alphaaction3 = ["spawn50","Spawn .50 Ammo","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\50calammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction3,true] call ace_interact_menu_fnc_addActionToClass;
 
@@ -25,6 +28,9 @@ if((typeOf player) in ["TWC_2000_US_Army_SectionCommander","TWC_2000_US_Army_Tea
 
 	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Small Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallCrateUS2000.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_hUKaction3 = ["SpawnsmallUKCreate","Spawn Marksman Rifle","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\marksmancrateus.sqf"},{(count units group player) >= 8}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_hUKaction3,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_alphaaction3 = ["spawn50","Spawn .50 Ammo","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\50calammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction3,true] call ace_interact_menu_fnc_addActionToClass;

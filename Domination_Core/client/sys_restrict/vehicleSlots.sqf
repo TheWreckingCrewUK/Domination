@@ -665,7 +665,7 @@ TWC_fnc_checkVehicleSlot = {
 
 					} else {
 								if (((typeof vehicle _playerUnit)) in twc_fullvehicles) then {
-								[_currentSeat, _slotsAndRoles] execvm "Insurgency_Core\client\sys_restrict\fullvehicle.sqf"; };
+								[_currentSeat, _slotsAndRoles] execvm "domination_core\client\sys_restrict\fullvehicle.sqf"; };
 						if (typename _count == "SCALAR") then {
 							if (_count > _currentcount) then {
 								[_playerUnit, _count, _currentcount, "low"] call TWC_fnc_notenoughplayers;
@@ -689,7 +689,7 @@ TWC_fnc_checkVehicleSlot = {
 	
 	if (isPlayer _playerUnit) then {
 	if ((str (typeof vehicle _playerUnit)) in twc_fullvehicles) then {
-execvm "Insurgency_Core\client\sys_restrict\fullvehicle.sqf"; };
+execvm "domination_core\client\sys_restrict\fullvehicle.sqf"; };
 		[_playerUnit] call TWC_fnc_checkVehicleSlot;
 	};
 }, player] call CBA_fnc_addBISEventHandler;
