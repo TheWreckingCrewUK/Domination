@@ -155,7 +155,7 @@ for "_i" from 1 to twc_ifvcount do { _pos2= [_pos, 200] call CBA_fnc_randPos;
   
  _driver moveInDriver _vehicle;  
  _gunner moveInGunner _vehicle;  
-	
+ _vehicle setVehicleLock "LOCKEDPLAYER";
  _group addwaypoint [_spawnPos, 500];  
  _group addwaypoint [_spawnPos, 500];  
  _group addwaypoint [_spawnPos, 500];  
@@ -181,7 +181,8 @@ for "_i" from 1 to twc_apccount do { _pos2= [_pos, 200] call CBA_fnc_randPos;
  _gunner = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];   
   
  _driver moveInDriver _vehicle;  
- _gunner moveInGunner _vehicle;   
+ _gunner moveInGunner _vehicle;  
+ _vehicle setVehicleLock "LOCKEDPLAYER"; 
 	
 	
  _group addwaypoint [_spawnPos, 500];  
@@ -212,6 +213,7 @@ for "_i" from 1 to twc_aacount do { _pos2= [_pos, 200] call CBA_fnc_randPos;
  _driver moveInDriver _vehicle;  
  _gunner moveInGunner _vehicle;  
  _commander moveInCommander _vehicle;  
+ _vehicle setVehicleLock "LOCKEDPLAYER";
  
  _group addwaypoint [_spawnPos, 500];  
  _group addwaypoint [_spawnPos, 500];  
@@ -238,7 +240,8 @@ if (( count(allPlayers - entities "HeadlessClient_F")) < 8) then {
  _gunner = _group createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
   
  _driver moveInDriver _vehicle;  
- _gunner moveInGunner _vehicle;  
+ _gunner moveInGunner _vehicle; 
+ _vehicle setVehicleLock "LOCKEDPLAYER"; 
  _flyalt = (100 + (0.03* (_spawnpos distance getmarkerpos "respawn_west"))) min 200;
  _vehicle setVehiclePosition [(_spawnpos vectoradd [0,0,_flyalt]), [],0,"FLY"]; 
 _vehicle flyInHeight  _flyalt;
@@ -268,7 +271,8 @@ _vehicle flyInHeight  _flyalt;
  _gunner = _group createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
   
  _driver moveInDriver _vehicle;  
- _gunner moveInGunner _vehicle;  
+ _gunner moveInGunner _vehicle; 
+ _vehicle setVehicleLock "LOCKEDPLAYER"; 
  _flyalt = (100 + (0.04* (_spawnpos distance getmarkerpos "respawn_west"))) min 350;
  _vehicle setVehiclePosition [(_spawnpos vectoradd [0,0,_flyalt]), [],0,"FLY"]; 
 _vehicle flyInHeight  _flyalt;

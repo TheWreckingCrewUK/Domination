@@ -7,6 +7,15 @@ the functional opposite of the attachment count system, this will keep everyone 
 if (( count(allPlayers - entities "HeadlessClient_F")) > 23) exitwith {};
 
 
+
+if (isnil "twc_skipsectionsystem") then {
+twc_skipsectionsystem = 0;
+publicVariable "twc_skipsectionsystem";
+};
+
+if (twc_skipsectionsystem == 1) exitwith {};
+
+
 //then we'll exit if they haven't joined a regular infantry slot, there's other stuff for that
 if (!(["infantry", str (group player)] call BIS_fnc_inString)) exitwith {
 systemchat "section system thinks you've taken a non standard slot. Let Hobbs know ASAP if this isn't the case";
