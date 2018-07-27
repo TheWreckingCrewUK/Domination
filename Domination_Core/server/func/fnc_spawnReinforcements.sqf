@@ -53,5 +53,5 @@ if (_landorair > 0.5) then {
 	[_spawnpos, _enemy, _stagepos, _num] spawn twc_reinforce_mechanised;
 };
 
-["twc_event_artyattack", [_enemy], twc_artyguns] call CBA_fnc_targetEvent;
+//["twc_event_artyattack", [_enemy], twc_artyguns] call CBA_fnc_targetEvent;
 

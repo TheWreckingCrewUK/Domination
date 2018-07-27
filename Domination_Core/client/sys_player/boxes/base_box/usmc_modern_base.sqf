@@ -246,6 +246,8 @@ if (typeOf vehicle player == "Modern_USMC_AsstMachineGunner") then {
 		["ACE_epinephrine",50],
 		["ACE_atropine", 50],
 		["ACE_salineIV",50],
+		["ACE_salineIV_250",50],
+		["ACE_salineIV_500",50],
 		["ACE_bodyBag",10],
 		["ACE_tourniquet", 5],
 		["rhsusf_acc_ACOG",1],

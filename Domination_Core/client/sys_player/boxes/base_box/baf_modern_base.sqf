@@ -234,6 +234,8 @@ if (typeOf vehicle player == "Modern_British_Squadleader") then {
 		["ACE_epinephrine",50],
 		["ACE_atropine", 50],
 		["ACE_salineIV",50],
+		["ACE_salineIV_250",50],
+		["ACE_salineIV_500",50],
 		["ACE_bodyBag",10],
 		["ACE_surgicalKit", 50],
 		["ACE_tourniquet", 5],

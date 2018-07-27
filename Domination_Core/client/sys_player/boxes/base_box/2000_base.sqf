@@ -186,6 +186,8 @@ if((typeOf player) in ["2000_British_Medic","2000_British_Medic_Desert"])then{
 		["ACE_epinephrine",50],
 		["ACE_atropine", 50],
 		["ACE_salineIV",50],
+		["ACE_salineIV_250",50],
+		["ACE_salineIV_500",50],
 		["ACE_bodyBag",10],
 		["ACE_surgicalKit", 50],
 		["ACE_tourniquet", 5],
@@ -457,6 +459,8 @@ if((typeOf player) in ["TWC_2000_US_Army_Medic"])then{
 		["ACE_epinephrine",50],
 		["ACE_atropine", 50],
 		["ACE_salineIV",50],
+		["ACE_salineIV_250",50],
+		["ACE_salineIV_500",50],
 		["ACE_bodyBag",10],
 		["ACE_surgicalKit", 50],
 		["ACE_tourniquet", 5]
