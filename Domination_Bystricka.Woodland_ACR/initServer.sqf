@@ -30,8 +30,7 @@ twc_infcount = 2;
 twc_aainfcount = 1;
 
 customlocations = (getmarkerpos "base") nearobjects ["Land_Can_Rusty_F", worldsize * 2];
-twc_wdveh = 0;
-publicVariable "twc_wdveh";
+
 
 // event handlers run in the non-scheduled environment (can't be execVM)
 [] call compile preprocessFile "Domination_Core\server\init.sqf";

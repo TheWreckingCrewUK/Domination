@@ -18,6 +18,13 @@ _heli = "CUP_B_LAV25_USMC";
 };
 
 
+if ( _heli == "RHS_M6") then {
+
+if (twc_wdveh == 1) then {
+_heli = "RHS_M6_wd";
+};
+};
+
 if ( _heli == "ukcw_cvrt_Scim_d") then {
 
 if (twc_wdveh == 1) then {

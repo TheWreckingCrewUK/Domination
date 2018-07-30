@@ -132,6 +132,28 @@ _list=[
 			["Modern_British_VehicleCommander"]
 		]],0
 	],	
+			["RHS_M6_wd",[ 
+		["driver", 
+			["Modern_British_VehicleCrew", "2000_British_Vehicle_Crew"]
+		],
+		["gunner", 
+			["Modern_British_VehicleCrew", "2000_British_Vehicle_Crew"]
+		],
+		["commander", 
+			["Modern_British_VehicleCommander", "2000_British_Vehicle_Commander"]
+		]],0
+	],
+			["RHS_M6",[ 
+		["driver", 
+			["Modern_British_VehicleCrew", "2000_British_Vehicle_Crew"]
+		],
+		["gunner", 
+			["Modern_British_VehicleCrew", "2000_British_Vehicle_Crew"]
+		],
+		["commander", 
+			["Modern_British_VehicleCommander", "2000_British_Vehicle_Commander"]
+		]],0
+	],
 			["RHS_M2A3_BUSKIII",[ 
 		["driver", 
 			["Modern_British_VehicleCrew"]
@@ -559,69 +581,69 @@ _list=[
 ;
 {twc_restrictedVehicleSlots pushback _x} foreach _list;
 
-twc_fullvehicles = ["ukcw_cvrt_Scim_w", "ukcw_cvrt_Scim_d", "CUP_B_MCV80_GB_D_SLAT", "CUP_B_MCV80_GB_W_SLAT", "RHS_AH64D", "RHS_AH1Z", "CUP_B_LAV25_desert_USMC", "CUP_B_LAV25_USMC", "CUP_B_M1130_CV_M2_Woodland_Slat", "CUP_B_M1130_CV_M2_Desert_Slat", "CUP_B_AAV_USMC", "RHS_M2A3_BUSKIII", "rhsusf_m1a2sep1tuskiid_usarmy", "rhsusf_m1a2sep1tuskid_usarmy", "rhsusf_m1a1aimwd_usarmy", "rhsusf_M1117_D", "rhsgref_cdf_b_bmp1", "rhsgref_ins_t72bb", "RHS_M2A3_BUSKIII_wd", "B_APC_Wheeled_01_cannon_F", "CUP_B_M1128_MGS_Woodland", "rhsgref_cdf_Mi35"];
+twc_fullvehicles = ["ukcw_cvrt_Scim_w", "ukcw_cvrt_Scim_d", "CUP_B_MCV80_GB_D_SLAT", "CUP_B_MCV80_GB_W_SLAT", "RHS_AH64D", "RHS_AH1Z", "CUP_B_LAV25_desert_USMC", "CUP_B_LAV25_USMC", "CUP_B_M1130_CV_M2_Woodland_Slat", "CUP_B_M1130_CV_M2_Desert_Slat", "CUP_B_AAV_USMC", "RHS_M2A3_BUSKIII", "rhsusf_m1a2sep1tuskiid_usarmy", "rhsusf_m1a2sep1tuskid_usarmy", "rhsusf_m1a1aimwd_usarmy", "rhsusf_M1117_D", "rhsgref_cdf_b_bmp1", "rhsgref_ins_t72bb", "RHS_M2A3_BUSKIII_wd", "B_APC_Wheeled_01_cannon_F", "CUP_B_M1128_MGS_Woodland", "rhsgref_cdf_Mi35", "RHS_M6", "RHS_M6_wd"];
 
 
 TWC_fnc_notAllowedInSeat = {
 	params ["_playerUnit"];
 	[_playerUnit] spawn {
-	params ["_playerUnit"];
-	sleep 1;
-	_freePassengerSpace = (vehicle _playerUnit) emptyPositions "cargo";
-	_title  = "<t color='#ff0000' size='1.2' shadow='1' shadowColor='#000000' align='center'>RESTRICTED</t>";
+		params ["_playerUnit"];
+		sleep 1;
+		_freePassengerSpace = (vehicle _playerUnit) emptyPositions "cargo";
+		_title  = "<t color='#ff0000' size='1.2' shadow='1' shadowColor='#000000' align='center'>RESTRICTED</t>";
 
-	// move them to the passenger seats first, prevents annoyance/unnecessary death in the air
-	if (_freePassengerSpace > 0) exitWith {
-		_veh = vehicle _playerUnit;
+		// move them to the passenger seats first, prevents annoyance/unnecessary death in the air
+		if (_freePassengerSpace > 0) exitWith {
+			_veh = vehicle _playerUnit;
+			moveOut _playerUnit;
+			_playerUnit moveInCargo _veh;
+			_text = "<br />You are not qualified for that slot. Take a seat in back.";
+			hint parseText (_title + _text);
+		};
+		
 		moveOut _playerUnit;
-		_playerUnit moveInCargo _veh;
-		_text = "<br />You are not qualified for that slot. Take a seat in back.";
+		_text = "<br />You are not qualified for that slot.";
 		hint parseText (_title + _text);
-	};
-	
-	moveOut _playerUnit;
-	_text = "<br />You are not qualified for that slot.";
-	hint parseText (_title + _text);
 };
 };
 TWC_fnc_notenoughplayers = {
 	params ["_playerUnit","_count","_currentcount","_problem"];
 	[_playerUnit,_count,_currentcount,_problem] spawn {
-	params ["_playerUnit","_count","_currentcount","_problem"];
-	sleep 1;
-	if (_problem == "low") then {
-	_title  = "<t color='#ff0000' size='1.2' shadow='1' shadowColor='#000000' align='center'>Not Enough Players</t>";
+		params ["_playerUnit","_count","_currentcount","_problem"];
+		sleep 1;
+		if (_problem == "low") then {
+		_title  = "<t color='#ff0000' size='1.2' shadow='1' shadowColor='#000000' align='center'>Not Enough Players</t>";
 
-	moveOut _playerUnit;
-	if (_Currentcount > 1) then {
-	_text1 = "<br />There are ";
-	_text2 = " players in the server.";
-	_text3 = "<br />You need ";
-	_text4 = " to be able to use this vehicle";
-	hint parseText (_title + _text1 + str _currentcount + _text2 + _text3 + str _count + _text4);
-	} else
-	{
-	_text1 = "<br />You're the only player on the server.";
-	_text3 = "<br />You need more than ";
-	_text4 = " to be able to use this vehicle";
-	
-	
-	hint parseText (_title + _text1 + _text3 + str _count + _text4);
-	};}
-	
-	else
-	{
-	
-	_title  = "<t color='#ff0000' size='1.2' shadow='1' shadowColor='#000000' align='center'>Too Many Players</t>";
+		moveOut _playerUnit;
+		if (_Currentcount > 1) then {
+		_text1 = "<br />There are ";
+		_text2 = " players in the server.";
+		_text3 = "<br />You need ";
+		_text4 = " to be able to use this vehicle";
+		hint parseText (_title + _text1 + str _currentcount + _text2 + _text3 + str _count + _text4);
+		} else
+		{
+		_text1 = "<br />You're the only player on the server.";
+		_text3 = "<br />You need more than ";
+		_text4 = " to be able to use this vehicle";
+		
+		
+		hint parseText (_title + _text1 + _text3 + str _count + _text4);
+		};}
+		
+		else
+		{
+		
+		_title  = "<t color='#ff0000' size='1.2' shadow='1' shadowColor='#000000' align='center'>Too Many Players</t>";
 
-	moveOut _playerUnit;
-	_text1 = "<br />There are ";
-	_text2 = " players in the server.";
-	_text3 = "<br />You need less than ";
-	_text4 = " to be able to use this vehicle";
-	hint parseText (_title + _text1 + str _currentcount + _text2 + _text3 + str _count + _text4);
-	};
-	
+		moveOut _playerUnit;
+		_text1 = "<br />There are ";
+		_text2 = " players in the server.";
+		_text3 = "<br />You need less than ";
+		_text4 = " to be able to use this vehicle";
+		hint parseText (_title + _text1 + str _currentcount + _text2 + _text3 + str _count + _text4);
+		};
+		
 	};
 };
 
