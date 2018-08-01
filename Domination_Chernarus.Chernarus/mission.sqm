@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={11975.422,184.76453,12727.821};
-		dir[]={-0.3966006,-0.47612944,-0.78493899};
-		up[]={-0.21472342,0.87936884,-0.42497575};
-		aside[]={-0.8926025,2.2724271e-007,0.45099726};
+		pos[]={11970.384,184.76453,12726.724};
+		dir[]={-0.80362612,-0.56753325,-0.17948087};
+		up[]={-0.55389124,0.82334709,-0.12370635};
+		aside[]={-0.21798533,-2.3283064e-008,0.97602367};
 	};
 };
 binarizationWanted=0;
@@ -20176,8 +20176,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11925.325,161.67409,12716.623};
-				angles[]={0,5.9761071,0};
+				position[]={11925.325,161.67432,12716.624};
+				angles[]={0,5.9761124,0};
 			};
 			side="Empty";
 			flags=4;
@@ -20187,7 +20187,30 @@ class Mission
 			};
 			id=2134;
 			type="rhsusf_m113_usarmy_medical";
-			atlOffset=0.044784546;
+			atlOffset=0.044998169;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item245
 		{
