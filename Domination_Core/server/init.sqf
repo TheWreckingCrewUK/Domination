@@ -6,6 +6,8 @@
 basemode = 0;
 publicvariable "basemode";
 
+execvm "domination_core\client\sys_ragdoll\fn_initRagdoll.sqf";
+
 if(isNil "townLocationArray") then{
 	townLocationArray = [];
 };
