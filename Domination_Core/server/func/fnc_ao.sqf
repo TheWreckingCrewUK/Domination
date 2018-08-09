@@ -126,11 +126,11 @@ for "_i" from 1 to twc_tankcount do { _pos2= [_pos, 200] call CBA_fnc_randPos;
  _commander moveInCommander _vehicle;  
  
 	
- _group addwaypoint [_spawnPos, 500];  
- _group addwaypoint [_spawnPos, 500];  
- _group addwaypoint [_spawnPos, 500];  
- _group addwaypoint [_spawnPos, 500];  
- _group addwaypoint [_spawnPos, 500]; 
+ _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
+ _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
+ _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
+ _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
+ _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
 [_group, 0] setWaypointCompletionRadius 50; 
 [_group, 1] setWaypointCompletionRadius 50; 
 [_group, 2] setWaypointCompletionRadius 50; 
@@ -156,11 +156,11 @@ for "_i" from 1 to twc_ifvcount do { _pos2= [_pos, 200] call CBA_fnc_randPos;
  _driver moveInDriver _vehicle;  
  _gunner moveInGunner _vehicle;  
  _vehicle setVehicleLock "LOCKEDPLAYER";
- _group addwaypoint [_spawnPos, 500];  
- _group addwaypoint [_spawnPos, 500];  
- _group addwaypoint [_spawnPos, 500];  
- _group addwaypoint [_spawnPos, 500];  
- _group addwaypoint [_spawnPos, 500]; 
+ _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
+ _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
+ _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
+ _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
+ _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
 [_group, 0] setWaypointCompletionRadius 50; 
 [_group, 1] setWaypointCompletionRadius 50; 
 [_group, 2] setWaypointCompletionRadius 50; 
@@ -185,11 +185,11 @@ for "_i" from 1 to twc_apccount do { _pos2= [_pos, 200] call CBA_fnc_randPos;
  _vehicle setVehicleLock "LOCKEDPLAYER"; 
 	
 	
- _group addwaypoint [_spawnPos, 500];  
- _group addwaypoint [_spawnPos, 500];  
- _group addwaypoint [_spawnPos, 500];  
- _group addwaypoint [_spawnPos, 500];  
- _group addwaypoint [_spawnPos, 500];   
+ _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
+ _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
+ _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
+ _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
+ _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
 [_group, 0] setWaypointCompletionRadius 50; 
 [_group, 1] setWaypointCompletionRadius 50; 
 [_group, 2] setWaypointCompletionRadius 50; 
@@ -215,11 +215,11 @@ for "_i" from 1 to twc_aacount do { _pos2= [_pos, 200] call CBA_fnc_randPos;
  _commander moveInCommander _vehicle;  
  _vehicle setVehicleLock "LOCKEDPLAYER";
  
- _group addwaypoint [_spawnPos, 500];  
- _group addwaypoint [_spawnPos, 500];  
- _group addwaypoint [_spawnPos, 500];  
- _group addwaypoint [_spawnPos, 500];  
- _group addwaypoint [_spawnPos, 500];  
+ _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
+ _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
+ _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
+ _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
+ _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
 [_group, 0] setWaypointCompletionRadius 50; 
 [_group, 1] setWaypointCompletionRadius 50; 
 [_group, 2] setWaypointCompletionRadius 50; 
@@ -425,7 +425,8 @@ deleteMarker "radioMarker";
 };
 
 [] call twc_fnc_getao;
-	waitUntil{!([_artyspawnpos,1000] call twc_fnc_posNearPlayers)};
+	/*waitUntil{!([_artyspawnpos,1000] call twc_fnc_posNearPlayers)};
 	{
 		deleteVehicle _x
 	}forEach (nearestObjects [_artyspawnpos,["Man","Car","Tank","Air"],800]);
+	*/
