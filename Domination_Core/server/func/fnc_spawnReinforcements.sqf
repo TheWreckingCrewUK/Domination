@@ -12,7 +12,14 @@ if (time < twc_lastattack) exitwith {};
 
 twc_lastattack = time + 3000;
 
-_enemy = _enemylist call BIS_fnc_selectRandom;
+if (count _enemylist == 0) then {
+	_enemy = allplayers call BIS_fnc_selectRandom
+	} 
+	
+	else {
+
+	_enemy = _enemylist call BIS_fnc_selectRandom;
+};
 
 //exit if the system is asking artillery to fire on its own friends
 if ((_enemy distance _pos) < 400) exitwith {};
@@ -31,7 +38,7 @@ _stagepos = [_pos, 1000] call CBA_fnc_randPos;
 
 _landorair = random 1;
 
-if (_enemy distance getmarkerpos "aoCenterMarker" > 2500) then {_landorair = 1};
+//if (_enemy distance getmarkerpos "aoCenterMarker" > 2500) then {_landorair = 1};
 
 _num = random 1;
 

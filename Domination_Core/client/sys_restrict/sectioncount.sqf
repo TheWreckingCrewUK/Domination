@@ -13,6 +13,12 @@ twc_skipsectionsystem = 0;
 publicVariable "twc_skipsectionsystem";
 };
 
+
+if (isnil "twc_sectionsize") then {
+twc_sectionsize = 8;
+publicVariable "twc_sectionsize";
+};
+
 if (twc_skipsectionsystem == 1) exitwith {};
 
 
@@ -95,7 +101,7 @@ systemchat format ["I see %1", _groups];
 //find out if the other infantry groups have any space
 _space = 0;
 {	if(!(str group player == str _x)) then {
-		if ((count units _x) < 8) then {
+		if ((count units _x) < twc_sectionsize) then {
 			_space = 1;
 		} else {systemchat "found a full group"};
 	} else {systemchat "got your number"};
@@ -127,7 +133,7 @@ cutText ["", "Black", 0.001];
 	_space = 0;
 	sleep 5;
 	{	if(!(group player == _x)) then {
-		if ((count units _x) < 8) then {
+		if ((count units _x) < twc_sectionsize) then {
 			_space = 1;
 		};
 	};
