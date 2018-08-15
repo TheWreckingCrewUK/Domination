@@ -2,7 +2,7 @@
 #include "sys_restrict\init.sqf";
 #include "sys_cleanup\init.sqf";
 #include "sys_forwardbase\init.sqf";
-#include "sys_ragdoll\init.sqf";
+//#include "sys_ragdoll\init.sqf";
 
 if (isNil "fixedWingPilots") then {
 	fixedWingPilots = ["Modern_British_JetPilot"];
