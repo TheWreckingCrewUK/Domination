@@ -19,7 +19,7 @@ hint _spawntext;
  twc_specvehcount = 1;
  publicVariable "twc_specvehcount";
  
- _vehtype = "CUP_B_HMMWV_TOW_USMC"
+ _vehtype = "CUP_B_HMMWV_TOW_USMC";
  
  if (twc_wdveh == 0) then {_vehtype == "CUP_B_HMMWV_TOW_USA"};
  

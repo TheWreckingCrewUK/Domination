@@ -1,7 +1,7 @@
 
 
 	params ["_spawnpos", "_enemy", "_stagepos"];
-	sleep 10 + (random 20);
+	sleep (10 + random 20);
 		_plane = createVehicle ["CUP_O_C130J_TKA", (([_spawnPos, 200] call CBA_fnc_randPos) vectoradd [0,0,500]), [], 0, "FLY"]; 
 
 		_dir = ([_plane, _enemy] call BIS_fnc_relativeDirTo);
