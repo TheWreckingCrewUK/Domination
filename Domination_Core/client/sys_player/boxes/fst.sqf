@@ -93,7 +93,7 @@ if(((typeOf player) in ["Modern_British_logitech"]) || (["fst", typeof player] c
 			_fstaction7 = ["SpawnsmallUKCreate","Spawn WMIK Milan","",{["UK3CB_BAF_LandRover_WMIK_Milan_Sand_A"] execvm "domination_core\client\sys_player\vehicles\coyote.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 			["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawndesert"],_fstaction7,true] call ace_interact_menu_fnc_addActionToClass;
 
-			_fstaction7 = ["SpawnsmallUKCreate","Spawn Milan Box","",{["UK3CB_BAF_Box_Milan_Ammo"] createvehicle getpos ammoboxspawner},{true}] call ace_interact_menu_fnc_createAction;
+			_fstaction7 = ["SpawnsmallUKCreate","Spawn Milan Box","",{"UK3CB_BAF_Box_Milan_Ammo" createvehicle getpos ammoboxspawner},{true}] call ace_interact_menu_fnc_createAction;
 			["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn"],_fstaction7,true] call ace_interact_menu_fnc_addActionToClass;
 			};
 		};
