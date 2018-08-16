@@ -76,7 +76,7 @@ if (isServer) then {
         _para setPos getPos _this;
         _paras =  [_para];
         _this attachTo [_para, [0,2,0]];
-        {
+  /*      {
             _p = createVehicle [_class, [0,0,0], [], 0, "FLY"];
             _paras set [count _paras, _p];
             _p attachTo [_para, [0,0,0]];
@@ -84,6 +84,7 @@ if (isServer) then {
         } count [
             [0.5,0.4,0.6],[-0.5,0.4,0.6],[0.5,-0.4,0.6],[-0.5,-0.4,0.6]
         ];
+		*/
         0 = [_this, _paras] spawn {
             _veh = _this select 0;
             waitUntil {getPos _veh select 2 < 4};
