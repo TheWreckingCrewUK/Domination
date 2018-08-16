@@ -81,11 +81,11 @@ if (isServer) then {
             _paras set [count _paras, _p];
             _p attachTo [_para, [0,0,0]];
             _p setVectorUp _x;
-        } foreach [
+        } count [
             [0.5,0.4,0.6],[-0.5,0.4,0.6],[0.5,-0.4,0.6],[-0.5,-0.4,0.6]
         ];
 		
-        0 = [_this, _paras] spawn {
+        _0 = [_this, _paras] spawn {
             _veh = _this select 0;
             waitUntil {getPos _veh select 2 < 4};
             _vel = velocity _veh;
