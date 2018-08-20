@@ -174,6 +174,10 @@
 		["rhs_GRD40_White",30],
 		["rhs_rpg7_PG7VL_mag",10],
 		["rhs_rpg7_TBG7V_mag",10],
+		["ATMine_Range_Mag", 5],
+		["SLAMDirectionalMine_Wire_Mag", 5],
+		["APERSMine_Range_Mag", 5],
+		["APERSBoundingMine_Range_Mag", 5],
 		["HandGrenade",5]
     ];
 	_tmp_items =

@@ -103,6 +103,9 @@ if((typeOf player) in ["2000_British_2IC","2000_British_2IC_Desert"])then{
 		["UK3CB_BAF_556_200Rnd_T",10],
 		["UK3CB_BAF_762_200Rnd",10],
 		["UK3CB_BAF_762_200Rnd_T",10],
+		["ATMine_Range_Mag", 5],
+		["APERSMine_Range_Mag", 5],
+		["APERSBoundingMine_Range_Mag", 5],
 		["HandGrenade",5]
     ];
 

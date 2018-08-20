@@ -63,6 +63,10 @@
         ["1Rnd_SmokeBlue_Grenade_shell", 10],
 		["UGL_FlareWhite_F", 10],
         ["rhsusf_mag_7x45acp_MHP",15],
+		["ATMine_Range_Mag", 5],
+		["SLAMDirectionalMine_Wire_Mag", 5],
+		["APERSMine_Range_Mag", 5],
+		["APERSBoundingMine_Range_Mag", 5],
 		["HandGrenade",5]
 	];
 

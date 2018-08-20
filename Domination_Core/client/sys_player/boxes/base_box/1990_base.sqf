@@ -117,6 +117,9 @@ if((typeOf player) in ["1990_RM_British_SectionCommander_Mix","1990_British_Sect
    [            
 		["UK3CB_BAF_556_30Rnd",30],
 		["UK3CB_BAF_556_30Rnd_T",20],
+		["ATMine_Range_Mag", 5],
+		["APERSMine_Range_Mag", 5],
+		["APERSBoundingMine_Range_Mag", 5],
 		["HandGrenade",5]
     ];
 

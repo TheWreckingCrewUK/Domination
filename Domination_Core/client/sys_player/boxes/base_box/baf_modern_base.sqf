@@ -146,6 +146,10 @@ if (typeOf vehicle player == "Modern_British_Squadleader") then {
 		//Marksman
         ["UK3CB_BAF_762_L42A1_20Rnd",25],
 		["UK3CB_BAF_762_L42A1_20Rnd_T",10],	
+		["ATMine_Range_Mag", 5],
+		["SLAMDirectionalMine_Wire_Mag", 5],
+		["APERSMine_Range_Mag", 5],
+		["APERSBoundingMine_Range_Mag", 5],
 		["HandGrenade",5]
 	];
 
