@@ -65,7 +65,7 @@
 				 
 				 };
 		sleep 3;
-			 [_plane, _cargo, _enemy] spawn {
+			 [_plane, _cargo, getpos _enemy] spawn {
 				 params ["_plane", "_cargo", "_enemy"];
 				 
 					sleep 1;

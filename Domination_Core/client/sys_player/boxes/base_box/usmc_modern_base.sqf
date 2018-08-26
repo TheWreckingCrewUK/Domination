@@ -242,6 +242,7 @@ if (typeOf vehicle player == "Modern_USMC_AsstMachineGunner") then {
 	_tmp_items =
 	[
 		["ACE_fieldDressing",50],
+		["ACE_surgicalKit", 1],
 		["ACE_elasticBandage", 50],
 		["ACE_quikclot", 50],
 		["ACE_packingBandage", 50],
