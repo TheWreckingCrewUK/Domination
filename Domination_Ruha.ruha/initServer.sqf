@@ -8,7 +8,7 @@ twc_surrenderVote = false;
 _script = execVM "Domination_Core\SHK_pos\shk_pos_init.sqf";
 waitUntil{scriptDone _script};
 
-twc_maxObjDistance = 6000;
+twc_maxObjDistance = 5000;
 
 crampresent = 1;
 publicVariable "crampresent";

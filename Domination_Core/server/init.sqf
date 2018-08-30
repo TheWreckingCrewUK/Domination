@@ -47,7 +47,7 @@ if (twc_nonpersistent == 1) then { execvm "Domination_Core\server\func\fnc_nonpe
 _location setText "Objective " + str floor random 999;
 townLocationArray = townLocationArray + (nearestLocations [getpos _x, ["NameVillage","NameCity","NameCityCapital","nameLocal"], 2]);} foreach customlocations;
 
-townLocationArray = townLocationArray + (nearestLocations [getMarkerPos "base", ["NameVillage","NameCity","NameCityCapital"], twc_maxObjDistance]);
+townLocationArray = townLocationArray + (nearestLocations [getMarkerPos "base", ["NameVillage","NameCity","NameCityCapital"], twc_maxObjDistance]) + (nearestLocations [getMarkerPos "base", ["NameVillage","NameCity","NameCityCapital"], (twc_maxObjDistance / 1.5)]) + (nearestLocations [getMarkerPos "base", ["NameVillage","NameCity","NameCityCapital"], (twc_maxObjDistance / 2)]) + (nearestLocations [getMarkerPos "base", ["NameVillage","NameCity","NameCityCapital"], (twc_maxObjDistance / 2)]);
 
 [] call twc_fnc_getAO;
 
