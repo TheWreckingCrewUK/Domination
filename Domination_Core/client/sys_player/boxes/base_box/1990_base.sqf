@@ -150,7 +150,7 @@ if((typeOf player) in ["1990_RM_British_SectionCommander_Mix","1990_British_Sect
 	_tmp_items =
 	[
 		["ACRE_PRC343",1],
-		["ACE_surgicalKit", 1],
+		["TWC_Item_Medical_SutureKit_20", 1],
 		["ACE_fieldDressing", 50],
 		["ACE_elasticBandage", 50],
 		["ACE_quikclot", 50],

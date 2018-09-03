@@ -181,7 +181,7 @@ if((typeOf player) in ["2000_British_Medic","2000_British_Medic_Desert"])then{
 	_tmp_items =
 	[
 		["ACE_fieldDressing",50],
-		["ACE_surgicalKit", 1],
+		["TWC_Item_Medical_SutureKit_20", 1],
 		["ACE_elasticBandage", 50],
 		["ACE_quikclot", 50],
 		["ACE_packingBandage", 50],
@@ -193,7 +193,7 @@ if((typeOf player) in ["2000_British_Medic","2000_British_Medic_Desert"])then{
 		["ACE_salineIV_250",50],
 		["ACE_salineIV_500",50],
 		["ACE_bodyBag",10],
-		["ACE_surgicalKit", 50],
+		["TWC_Item_Medical_SutureKit_20", 50],
 		["ACE_tourniquet", 5],
 		["ACRE_PRC343",1]
 	];
@@ -454,7 +454,7 @@ if((typeOf player) in ["TWC_2000_US_Army_Medic"])then{
 	_tmp_items =
 	[
 		["ACRE_PRC148",1],
-		["ACE_surgicalKit", 1],
+		["TWC_Item_Medical_SutureKit_20", 1],
 		["ACE_fieldDressing",50],
 		["ACE_elasticBandage", 50],
 		["ACE_quikclot", 50],
@@ -467,7 +467,7 @@ if((typeOf player) in ["TWC_2000_US_Army_Medic"])then{
 		["ACE_salineIV_250",50],
 		["ACE_salineIV_500",50],
 		["ACE_bodyBag",10],
-		["ACE_surgicalKit", 50],
+		["TWC_Item_Medical_SutureKit_20", 50],
 		["ACE_tourniquet", 5]
 	];
 };

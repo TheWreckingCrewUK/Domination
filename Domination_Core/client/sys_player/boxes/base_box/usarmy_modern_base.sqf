@@ -261,7 +261,7 @@ if (typeOf vehicle player == "TWC_Modern_US_Army_TeamLeader") then {
 	_tmp_items =
 	[
 		["ACE_fieldDressing",50],
-		["ACE_surgicalKit", 1],
+		["TWC_Item_Medical_SutureKit_20", 1],
 		["ACE_elasticBandage", 50],
 		["ACE_quikclot", 50],
 		["ACE_packingBandage", 50],
@@ -273,7 +273,7 @@ if (typeOf vehicle player == "TWC_Modern_US_Army_TeamLeader") then {
 		["ACE_salineIV_250",50],
 		["ACE_salineIV_500",50],
 		["ACE_bodyBag",10],
-		["ACE_surgicalKit", 50],
+		["TWC_Item_Medical_SutureKit_20", 50],
 		["ACE_tourniquet", 5],
 		["UK3CB_BAF_TA31F_3D",1],
 		["UK3CB_BAF_Eotech",1],
