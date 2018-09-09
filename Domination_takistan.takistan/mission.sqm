@@ -8,7 +8,7 @@ class EditorData
 	toggles=9;
 	class ItemIDProvider
 	{
-		nextID=1971;
+		nextID=1972;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8213.8916,458.9231,2011.7701};
-		dir[]={-0.16694571,-0.85504514,0.49094546};
-		up[]={-0.27527693,0.51855552,0.80952036};
-		aside[]={0.94675845,2.7474016e-008,0.32194465};
+		pos[]={7583.4048,334.0033,2147.6367};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -64,13 +64,14 @@ addons[]=
 	"twc_framework_public_modern_us",
 	"twc_objects",
 	"A3_Characters_F_Common",
-	"A3_Static_F_Jets_AAA_System_01"
+	"A3_Static_F_Jets_AAA_System_01",
+	"twc_medical"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=34;
+		items=35;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -282,6 +283,12 @@ class AddonsMetaData
 			name="Arma 3 Jets - Turrets";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
+		};
+		class Item34
+		{
+			className="twc_medical";
+			name="twc_medical";
+			author="Bosenator";
 		};
 	};
 };
@@ -12798,7 +12805,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=191;
+		items=192;
 		class Item0
 		{
 			dataType="Marker";
@@ -19907,6 +19914,40 @@ class Mission
 					};
 				};
 				nAttributes=2;
+			};
+		};
+		class Item191
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={7578.9438,308.25797,2170.6782};
+				angles[]={-0,0,6.1514535};
+			};
+			id=1971;
+			type="TWC_Module_Medical";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="TWC_Module_Medical_enablePublicCPRChance";
+					expression="_this setVariable ['enablePublicCPRChance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
 			};
 		};
 	};

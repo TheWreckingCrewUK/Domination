@@ -8,7 +8,7 @@ class EditorData
 	toggles=522;
 	class ItemIDProvider
 	{
-		nextID=2294;
+		nextID=2295;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={16566.855,93.892288,3103.9253};
-		dir[]={-0.43509912,-0.23089953,0.87035364};
-		up[]={-0.10326314,0.97296298,0.20656316};
-		aside[]={0.89451444,-1.0465737e-007,0.44717774};
+		pos[]={16615.426,109.96515,3716.0911};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -60,13 +60,14 @@ addons[]=
 	"twc_objects",
 	"A3_Characters_F_Common",
 	"A3_Static_F_Jets_AAA_System_01",
-	"rhsusf_c_m113"
+	"rhsusf_c_m113",
+	"twc_medical"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=30;
+		items=31;
 		class Item0
 		{
 			className="CUP_WarfareBuildings";
@@ -253,6 +254,12 @@ class AddonsMetaData
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
+		class Item30
+		{
+			className="twc_medical";
+			name="twc_medical";
+			author="Bosenator";
+		};
 	};
 };
 randomSeed=16337384;
@@ -286,7 +293,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=191;
+		items=192;
 		class Item0
 		{
 			dataType="Object";
@@ -10018,6 +10025,40 @@ class Mission
 								};
 							};
 							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item191
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={16610.996,82.830147,3738.5051};
+				angles[]={-0,0,6.1514535};
+			};
+			id=2294;
+			type="TWC_Module_Medical";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="TWC_Module_Medical_enablePublicCPRChance";
+					expression="_this setVariable ['enablePublicCPRChance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
 						};
 					};
 				};

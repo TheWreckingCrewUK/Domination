@@ -8,7 +8,7 @@ class EditorData
 	toggles=545;
 	class ItemIDProvider
 	{
-		nextID=2478;
+		nextID=2479;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6620.4233,66.316917,1269.4056};
-		dir[]={0.34686452,-0.31657347,-0.88302124};
-		up[]={0.11574293,0.94858277,-0.29465276};
-		aside[]={-0.93091017,1.2679957e-006,-0.36567232};
+		pos[]={6121.5107,70.395142,1316.058};
+		dir[]={0,-0.70710677,0.70710683};
+		up[]={0,0.70710677,0.70710671};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -54,13 +54,14 @@ addons[]=
 	"RHS_US_A2_AirImport",
 	"CUP_AirVehicles_CH47",
 	"ukcw_cvrt",
-	"ukcw_fv432"
+	"ukcw_fv432",
+	"twc_medical"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=29;
+		items=30;
 		class Item0
 		{
 			className="CUP_Misc3_Config";
@@ -239,6 +240,12 @@ class AddonsMetaData
 		{
 			className="ukcw_fv432";
 			name="ukcw_fv432";
+		};
+		class Item29
+		{
+			className="twc_medical";
+			name="twc_medical";
+			author="Bosenator";
 		};
 	};
 };
@@ -12755,7 +12762,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=70;
+		items=71;
 		class Item0
 		{
 			dataType="Object";
@@ -12778,7 +12785,7 @@ class Mission
 			position[]={6650.6855,46.47644,1116.8081};
 			name="crate";
 			type="Empty";
-			angle=89.901367;
+			angle=89.90136;
 			id=167;
 			atlOffset=0.0077056885;
 		};
@@ -19384,6 +19391,40 @@ class Mission
 					};
 				};
 				nAttributes=7;
+			};
+		};
+		class Item70
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={6120.1426,45.548172,1335.4435};
+				angles[]={-0,0,6.1514535};
+			};
+			id=2478;
+			type="TWC_Module_Medical";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="TWC_Module_Medical_enablePublicCPRChance";
+					expression="_this setVariable ['enablePublicCPRChance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
 			};
 		};
 	};

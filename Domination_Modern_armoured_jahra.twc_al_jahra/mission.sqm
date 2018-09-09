@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2261;
+		nextID=2262;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={19346.197,438.26843,16188.984};
-		dir[]={0.48000798,-0.352431,0.80351287};
-		up[]={0.18079336,0.93582994,0.3026334};
-		aside[]={0.85859203,-5.9854938e-007,-0.5129202};
+		pos[]={18726.754,431.07095,16316.789};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -47,13 +47,14 @@ addons[]=
 	"A3_Structures_F_Ind_WindPowerPlant",
 	"twc_modern",
 	"UK3CB_BAF_Vehicles_Coyote_Jackal",
-	"UK3CB_BAF_Weapons_Ammo"
+	"UK3CB_BAF_Weapons_Ammo",
+	"twc_medical"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=20;
+		items=21;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -181,6 +182,12 @@ class AddonsMetaData
 			name="3CB BAF Weapons - Ammo";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
+		};
+		class Item20
+		{
+			className="twc_medical";
+			name="twc_medical";
+			author="Bosenator";
 		};
 	};
 };
@@ -12874,7 +12881,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=96;
+		items=97;
 		class Item0
 		{
 			dataType="Marker";
@@ -18699,6 +18706,40 @@ class Mission
 								};
 							};
 							value="[[[[""UK3CB_BAF_Javelin_Slung_Tube""],[10]],[[],[]],[[""UK3CB_BAF_Javelin_CLU""],[2]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item96
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={18725.695,406.16891,16338.646};
+				angles[]={-0,0,6.1514535};
+			};
+			id=2261;
+			type="TWC_Module_Medical";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="TWC_Module_Medical_enablePublicCPRChance";
+					expression="_this setVariable ['enablePublicCPRChance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
 						};
 					};
 				};

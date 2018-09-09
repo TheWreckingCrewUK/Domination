@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2584;
+		nextID=2585;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4626.3857,442.83276,10362.734};
-		dir[]={0.6582557,-0.71946543,-0.22207165};
-		up[]={0.68172336,0.69456744,-0.22999147};
-		aside[]={-0.31973046,3.6393758e-006,-0.94771892};
+		pos[]={10357.16,278.61792,12611.918};
+		dir[]={0,-0.70710659,0.70710707};
+		up[]={0,0.70710701,0.70710653};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -57,13 +57,14 @@ addons[]=
 	"CUP_TrackedVehicles_MCV80",
 	"ukcw_cvrt",
 	"RHS_US_A2_AirImport",
-	"CUP_AirVehicles_CH47"
+	"CUP_AirVehicles_CH47",
+	"twc_medical"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=30;
+		items=31;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -241,6 +242,12 @@ class AddonsMetaData
 		{
 			className="CUP_AirVehicles_CH47";
 			name="CUP_AirVehicles_CH47";
+		};
+		class Item30
+		{
+			className="twc_medical";
+			name="twc_medical";
+			author="Bosenator";
 		};
 	};
 };
@@ -12757,7 +12764,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=74;
+		items=75;
 		class Item0
 		{
 			dataType="Marker";
@@ -17615,6 +17622,40 @@ class Mission
 					};
 				};
 				nAttributes=2;
+			};
+		};
+		class Item74
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={10361.058,254.10875,12635.446};
+				angles[]={-0,0,6.1514535};
+			};
+			id=2584;
+			type="TWC_Module_Medical";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="TWC_Module_Medical_enablePublicCPRChance";
+					expression="_this setVariable ['enablePublicCPRChance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
 			};
 		};
 	};

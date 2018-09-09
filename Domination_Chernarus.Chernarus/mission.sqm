@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2462;
+		nextID=2463;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={11970.384,184.76453,12726.724};
-		dir[]={-0.80362612,-0.56753325,-0.17948087};
-		up[]={-0.55389124,0.82334709,-0.12370635};
-		aside[]={-0.21798533,-2.3283064e-008,0.97602367};
+		pos[]={11869.884,183.97859,12614.104};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -65,13 +65,14 @@ addons[]=
 	"A3_Structures_F_Mil_BagFence",
 	"CUP_CAMisc_ACR_ScaffoldingSmall",
 	"rhsusf_c_troops",
-	"A3_Structures_F_Items_Food"
+	"A3_Structures_F_Items_Food",
+	"twc_medical"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=31;
+		items=32;
 		class Item0
 		{
 			className="CUP_Misc3_Config";
@@ -262,6 +263,12 @@ class AddonsMetaData
 			name="RHSUSF Infantry & Equipment";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
+		};
+		class Item31
+		{
+			className="twc_medical";
+			name="twc_medical";
+			author="Bosenator";
 		};
 	};
 };
@@ -12778,7 +12785,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=331;
+		items=332;
 		class Item0
 		{
 			dataType="Object";
@@ -23738,6 +23745,40 @@ class Mission
 					};
 				};
 				nAttributes=2;
+			};
+		};
+		class Item331
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={11867.478,159,12634.019};
+				angles[]={-0,0,6.1514535};
+			};
+			id=2462;
+			type="TWC_Module_Medical";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="TWC_Module_Medical_enablePublicCPRChance";
+					expression="_this setVariable ['enablePublicCPRChance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
 			};
 		};
 	};

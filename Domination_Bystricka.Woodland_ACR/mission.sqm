@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2016;
+		nextID=2017;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4120.3354,246.5526,6416.582};
-		dir[]={0.68193609,-0.19872047,-0.70390666};
-		up[]={0.13827235,0.980057,-0.14272702};
-		aside[]={-0.71823132,1.0756776e-007,-0.69581461};
+		pos[]={3005.562,619.17688,5527.1699};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -47,13 +47,14 @@ addons[]=
 	"CUP_WheeledVehicles_T810",
 	"A3_Structures_F_Mil_Shelters",
 	"UK3CB_BAF_Weapons_Static",
-	"A3_Structures_F_System"
+	"A3_Structures_F_System",
+	"twc_medical"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=19;
+		items=20;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -166,6 +167,12 @@ class AddonsMetaData
 			name="3CB BAF Weapons - Statics";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
+		};
+		class Item19
+		{
+			className="twc_medical";
+			name="twc_medical";
+			author="Bosenator";
 		};
 	};
 };
@@ -12682,7 +12689,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=66;
+		items=67;
 		class Item0
 		{
 			dataType="Marker";
@@ -16840,6 +16847,40 @@ class Mission
 			id=2011;
 			type="UK3CB_BAF_Static_L111A1_Deployed_High";
 			atlOffset=0.0090332031;
+		};
+		class Item66
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2998.4912,355.7804,5753.4336};
+				angles[]={-0,0,6.1514535};
+			};
+			id=2016;
+			type="TWC_Module_Medical";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="TWC_Module_Medical_enablePublicCPRChance";
+					expression="_this setVariable ['enablePublicCPRChance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };
