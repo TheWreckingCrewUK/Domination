@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2463;
+		nextID=2466;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={11869.884,183.97859,12614.104};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		pos[]={11976.562,167.0988,12730.92};
+		dir[]={-0.75753933,-0.5622434,-0.33173257};
+		up[]={-0.51502258,0.82697493,-0.22553258};
+		aside[]={-0.40113878,2.2584572e-008,0.91603589};
 	};
 };
 binarizationWanted=0;
@@ -12785,7 +12785,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=332;
+		items=333;
 		class Item0
 		{
 			dataType="Object";
@@ -23753,7 +23753,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11867.478,159,12634.019};
-				angles[]={-0,0,6.1514535};
+				angles[]={0,0,6.1514535};
 			};
 			id=2462;
 			type="TWC_Module_Medical";
@@ -23779,6 +23779,142 @@ class Mission
 					};
 				};
 				nAttributes=1;
+			};
+		};
+		class Item332
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11967.556,159.00146,12727.382};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=2464;
+					type="Modern_British_Platoon_Commander";
+					atlOffset=3.0517578e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={11968.771,159.00137,12726.468};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=2465;
+					type="Modern_British_Platoon_Sergeant";
+					atlOffset=-6.1035156e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=2463;
+			atlOffset=3.0517578e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="HQ";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="acex_headless_blacklist";
+					expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 	};

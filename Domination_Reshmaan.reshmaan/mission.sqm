@@ -8,7 +8,7 @@ class EditorData
 	toggles=522;
 	class ItemIDProvider
 	{
-		nextID=2295;
+		nextID=2298;
 	};
 	class MarkerIDProvider
 	{
@@ -16,7 +16,7 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={16615.426,109.96515,3716.0911};
+		pos[]={16511.121,107.83505,3148.1733};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
 		aside[]={0.99999994,0,-0};
@@ -293,7 +293,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=192;
+		items=193;
 		class Item0
 		{
 			dataType="Object";
@@ -10037,7 +10037,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={16610.996,82.830147,3738.5051};
-				angles[]={-0,0,6.1514535};
+				angles[]={0,0,6.1514535};
 			};
 			id=2294;
 			type="TWC_Module_Medical";
@@ -10063,6 +10063,142 @@ class Mission
 					};
 				};
 				nAttributes=1;
+			};
+		};
+		class Item192
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={16506.07,82.799057,3166.7878};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=2296;
+					type="Modern_British_Platoon_Commander";
+					atlOffset=-7.6293945e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={16507.287,83.126785,3165.8738};
+					};
+					side="West";
+					flags=1;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=2297;
+					type="Modern_British_Platoon_Sergeant";
+					atlOffset=0.32772064;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=2295;
+			atlOffset=-7.6293945e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="HQ";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="acex_headless_blacklist";
+					expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 	};

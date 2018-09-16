@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2112;
+		nextID=2118;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={18710.658,431.19666,16315.038};
-		dir[]={0.46059054,-0.71247917,0.52936798};
-		up[]={0.46766999,0.70169312,0.53750467};
-		aside[]={0.75441462,-9.3132257e-010,-0.65639824};
+		pos[]={19341.342,417.61905,16305.541};
+		dir[]={0.21296374,-0.6884253,-0.69334757};
+		up[]={0.20213149,0.72530675,-0.65808171};
+		aside[]={-0.95593196,-4.5145862e-007,-0.29361743};
 	};
 };
 binarizationWanted=0;
@@ -12981,7 +12981,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=77;
+		items=78;
 		class Item0
 		{
 			dataType="Marker";
@@ -18271,7 +18271,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={18724.992,406.35281,16329.61};
-				angles[]={-0,0,6.1514535};
+				angles[]={0,0,6.1514535};
 			};
 			id=2111;
 			type="TWC_Module_Medical";
@@ -18297,6 +18297,139 @@ class Mission
 					};
 				};
 				nAttributes=1;
+			};
+		};
+		class Item77
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={19345.957,400.71713,16290.104};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=2116;
+					type="1990_British_Platoon_Commander_Desert";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={19344.248,400.65567,16288.947};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=2117;
+					type="1990_British_Platoon_Sergeant_Desert";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=2115;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="HQ";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="acex_headless_blacklist";
+					expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 	};
