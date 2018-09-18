@@ -5,7 +5,7 @@ params["_pos", "_enemylist", "_arty"];
 
 if (isnil "_arty") then {_arty = false};
 
-if (isnil "twc_lastattack") then {twc_lastattack = 1000};
+if (isnil "twc_lastattack") then {twc_lastattack = 0};
 
 //exit if it's been too soon since the last attack. current count at 20 minutes
 if (time < twc_lastattack) exitwith {};
