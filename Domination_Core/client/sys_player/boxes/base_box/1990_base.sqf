@@ -4,14 +4,15 @@ if((typeOf player) in ["1990_RM_British_SectionCommander_Mix","1990_British_Sect
 
     _tmp_weapons =
     [
-        ["UK3CB_BAF_L85A1_SUSAT3D_Lazer",1]
+        ["UK3CB_BAF_L85A1_SUSAT3D_Lazer",1],
+        ["UK3CB_BAF_L9A1",1]
 	];
 
 	_tmp_magazines =
    [            
 		["UK3CB_BAF_556_30Rnd",20],
 		["UK3CB_BAF_556_30Rnd_T",10],
-		["CUP_15Rnd_9x19_M9",10],
+		["UK3CB_BAF_9_13Rnd",10],
 		["HandGrenade",5]
     ];
 

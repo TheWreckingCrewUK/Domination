@@ -4,17 +4,18 @@ if((typeOf player) in ["2000_British_SectionCommander","2000_British_SectionComm
 
     _tmp_weapons =
     [
-        ["UK3CB_BAF_L85A1_SUSAT3D_Lazer",1]
+        ["UK3CB_BAF_L85A1_SUSAT3D_Lazer",1],
+        ["UK3CB_BAF_L107A1",1]
 	];
 
 	_tmp_magazines =
    [            
-		["UK3CB_BAF_556_30Rnd",20],
-		["UK3CB_BAF_556_30Rnd_T",10],
-		["CUP_15Rnd_9x19_M9",10],
+		["UK3CB_BAF_556_30Rnd",30],
+		["UK3CB_BAF_556_30Rnd_T",20],
+		["UK3CB_BAF_9_15Rnd",20],
 		["HandGrenade",5]
     ];
-
+	
 	_tmp_items =
 	[
 		["ACRE_PRC117F",1],
