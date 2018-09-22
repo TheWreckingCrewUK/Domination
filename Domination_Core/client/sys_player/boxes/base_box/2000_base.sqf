@@ -4,7 +4,7 @@ if((typeOf player) in ["2000_British_SectionCommander","2000_British_SectionComm
 
     _tmp_weapons =
     [
-        ["UK3CB_BAF_L85A1_SUSAT3D_Lazer",1],
+        ["UK3CB_BAF_L85A2_SUSAT",1],
         ["UK3CB_BAF_L107A1",1]
 	];
 
@@ -30,7 +30,7 @@ if((typeOf player) in ["2000_British_Rifleman","2000_British_Rifleman_Desert"])t
 
     _tmp_weapons =
     [
-        ["UK3CB_BAF_L85A1_SUSAT3D_Lazer",1],
+        ["UK3CB_BAF_L85A2_SUSAT",1],
 		["rhs_weap_M136_hedp",2],
 		["rhs_weap_m72a7",4]
 	];
@@ -74,11 +74,12 @@ if((typeOf player) in ["2000_British_Gunner","2000_British_Gunner_Desert"])then{
 
     _tmp_weapons =
     [
-        ["UK3CB_BAF_L110A1",1]
+        ["TWC_UK3CB_BAF_L110A2_SUSAT",1]
 	];
 
 	_tmp_magazines =
    [            
+		["UK3CB_BAF_556_200Rnd",10],
 		["UK3CB_BAF_556_200Rnd_T",10],
 		["HandGrenade",5]
     ];
@@ -93,7 +94,7 @@ if((typeOf player) in ["2000_British_2IC","2000_British_2IC_Desert"])then{
 
     _tmp_weapons =
     [
-        ["UK3CB_BAF_L85A1_SUSAT3D_Lazer",1]
+        ["UK3CB_BAF_L85A2_SUSAT",1]
 	];
 
 	_tmp_magazines =
@@ -145,7 +146,7 @@ if((typeOf player) in ["2000_British_mg_assistant","2000_British_mg_assistant_De
 
     _tmp_weapons =
     [
-        ["UK3CB_BAF_L85A1_SUSAT3D_Lazer",1]
+        ["UK3CB_BAF_L85A2_SUSAT",1]
 	];
 
 	_tmp_magazines =
@@ -169,7 +170,7 @@ if((typeOf player) in ["2000_British_Medic","2000_British_Medic_Desert"])then{
 
     _tmp_weapons =
     [
-        ["UK3CB_BAF_L85A1_SUSAT3D_Lazer",1]
+        ["UK3CB_BAF_L85A2_SUSAT",1]
 	];
 
 	_tmp_magazines =
@@ -205,7 +206,7 @@ if((typeOf player) in ["2000_British_FSTCommander","2000_British_FSTCommander_De
 
     _tmp_weapons =
     [
-        ["UK3CB_BAF_L85A1_SUSAT3D_Lazer",1]
+        ["UK3CB_BAF_L85A2_SUSAT",1]
 	];
 
 	_tmp_magazines =
@@ -255,7 +256,7 @@ if((typeOf player) in ["2000_British_FSTAssistant","2000_British_FSTAssistant_De
 
     _tmp_weapons =
     [
-        ["UK3CB_BAF_L85A1_SUSAT3D_Lazer",1],
+        ["UK3CB_BAF_L85A2_SUSAT",1],
 		["rhs_weap_M136_hedp",2],
 		["rhs_weap_m72a7",4]
 	];

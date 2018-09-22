@@ -11,6 +11,10 @@ if (isNil "fixedWingPilots") then {
 // wait till init
 waitUntil {!isNull player};
 
+_forceMapForced = forcedMap select 0;
+_openMapForced = forcedMap select 1;
+if (_forceMapForced || _openMapForced) then {player setdamage 1};
+
 if (typeOf player in fixedWingPilots) then {
 	["TWC_PilotConnected", [getPlayerUID player]] call CBA_fnc_serverEvent;
 };
@@ -22,9 +26,3 @@ player addEventHandler ["Hit", {[] spawn {if !(vehicle player == player) exitwit
 if (!(["infantry", str (group player)] call BIS_fnc_inString)) then {
 execvm "domination_core\client\sys_restrict\attachmentcount.sqf" 
 };
-
-sleep 20;
-
-_forceMapForced = forcedMap select 0;
-_openMapForced = forcedMap select 1;
-if (_forceMapForced || _openMapForced) then {player setdamage 1};
