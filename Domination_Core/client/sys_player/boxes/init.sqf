@@ -39,6 +39,7 @@ _condition = {true};
 #include "pilots.sqf";
 #include "armour.sqf";
 #include "fst.sqf";
+#include "HQ.sqf";
 
 
 #include "supply_boxes\1990.sqf";
