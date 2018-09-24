@@ -16,6 +16,10 @@ if(isNil "customlocations") then{
 	customlocations = [];
 };
 
+if(isNil "twc_attachmentgap") then{
+	twc_attachmentgap = 12;
+	publicVariable "twc_attachmentgap";
+};
 
 if(isNil "twc_is90") then{
 	twc_is90 = 0;
