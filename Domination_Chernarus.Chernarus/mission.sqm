@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2466;
+		nextID=2467;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={11976.562,167.0988,12730.92};
-		dir[]={-0.75753933,-0.5622434,-0.33173257};
-		up[]={-0.51502258,0.82697493,-0.22553258};
-		aside[]={-0.40113878,2.2584572e-008,0.91603589};
+		pos[]={11929.01,213.64365,12629.578};
+		dir[]={0.43893075,-0.57976967,0.68647569};
+		up[]={0.31231755,0.8147797,0.48845693};
+		aside[]={0.8425191,1.9022264e-007,-0.53870422};
 	};
 };
 binarizationWanted=0;
@@ -12785,7 +12785,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=333;
+		items=332;
 		class Item0
 		{
 			dataType="Object";
@@ -18256,6 +18256,7 @@ class Mission
 			};
 			id=2059;
 			type="UK3CB_BAF_Jackal2_L134A1_W";
+			atlOffset=-0.024169922;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -18297,6 +18298,7 @@ class Mission
 			};
 			id=2060;
 			type="UK3CB_BAF_Jackal2_L134A1_W";
+			atlOffset=-0.024169922;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -18338,7 +18340,7 @@ class Mission
 			};
 			id=2062;
 			type="UK3CB_BAF_Jackal2_L111A1_W";
-			atlOffset=-0.0028533936;
+			atlOffset=-0.027038574;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -21913,23 +21915,6 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={12054.49,159.4039,12683.084};
-				angles[]={0,0.31993034,0};
-			};
-			side="Empty";
-			class Attributes
-			{
-				name="planespawnpad";
-			};
-			id=2346;
-			type="Land_HelipadSquare_F";
-			atlOffset=0.58830261;
-		};
-		class Item322
-		{
-			dataType="Object";
-			class PositionInfo
-			{
 				position[]={11925.545,161.10844,12726.356};
 				angles[]={0,5.0158668,0};
 			};
@@ -21965,7 +21950,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item323
+		class Item322
 		{
 			dataType="Group";
 			side="West";
@@ -22381,7 +22366,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item324
+		class Item323
 		{
 			dataType="Group";
 			side="West";
@@ -22576,7 +22561,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item325
+		class Item324
 		{
 			dataType="Group";
 			side="West";
@@ -22768,7 +22753,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item326
+		class Item325
 		{
 			dataType="Group";
 			side="West";
@@ -22941,7 +22926,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item327
+		class Item326
 		{
 			dataType="Group";
 			side="West";
@@ -23172,7 +23157,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item328
+		class Item327
 		{
 			dataType="Group";
 			side="West";
@@ -23344,7 +23329,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item329
+		class Item328
 		{
 			dataType="Group";
 			side="West";
@@ -23536,218 +23521,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item330
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=4;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12013.642,159.00143,12744.436};
-					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=2455;
-					type="Modern_British_MERT_HeliPilot";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12013.369,159.00143,12746.772};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=2456;
-					type="Modern_British_Medic_Mert";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12015.546,159.00143,12745.007};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=2457;
-					type="Modern_British_Medic_Mert";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={12015.36,159.00143,12742.171};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						isPlayable=1;
-					};
-					id=2458;
-					type="Modern_British_Medic_Mert";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-			};
-			class Attributes
-			{
-			};
-			id=2454;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="groupID";
-					expression="[_this, _value] call CBA_fnc_setCallsign";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="MERT Team";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="acex_headless_blacklist";
-					expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item331
+		class Item329
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -23781,7 +23555,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item332
+		class Item330
 		{
 			dataType="Group";
 			side="West";
@@ -23916,6 +23690,23 @@ class Mission
 				};
 				nAttributes=2;
 			};
+		};
+		class Item331
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12054.49,159.40359,12683.084};
+				angles[]={0,0.31993631,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="planespawnpad";
+			};
+			id=2466;
+			type="Land_HelipadEmpty_F";
+			atlOffset=0.58799744;
 		};
 	};
 };
