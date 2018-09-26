@@ -9,8 +9,8 @@
 
     _tmp_magazines =
     [
-        ["30Rnd_556x45_Stanag",50],
-		["30Rnd_556x45_Stanag_Tracer_Red",20],
+        ["rhs_mag_30Rnd_556x45_M855_Stanag",50],
+		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",20],
         ["rhsusf_mag_7x45acp_MHP",15],
 		["1Rnd_HE_Grenade_shell", 30],
 	    ["1Rnd_Smoke_Grenade_shell", 10],
@@ -52,8 +52,8 @@
 
     _tmp_magazines =
     [
-        ["30Rnd_556x45_Stanag",50],
-		["30Rnd_556x45_Stanag_Tracer_Red",20],
+        ["rhs_mag_30Rnd_556x45_M855_Stanag",50],
+		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",20],
 		["1Rnd_HE_Grenade_shell", 30],
 	    ["1Rnd_Smoke_Grenade_shell", 10],
 	    ["1Rnd_SmokeRed_Grenade_shell", 10],
@@ -99,8 +99,8 @@
 
     _tmp_magazines =
     [
-        ["30Rnd_556x45_Stanag",50],
-		["30Rnd_556x45_Stanag_Tracer_Red",10],
+        ["rhs_mag_30Rnd_556x45_M855_Stanag",50],
+		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",10],
 		["CUP_SMAW_HEAA_M",3],
 		["CUP_SMAW_HEDP_M",3],
 		["CUP_SMAW_Spotting",8],
@@ -130,8 +130,8 @@ if (typeOf vehicle player == "Modern_USMC_Autorifleman") then {
     [
         ["rhsusf_100Rnd_556x45_soft_pouch",20],
 		["rhsusf_200Rnd_556x45_soft_pouch",10],
-		["30Rnd_556x45_Stanag",50],
-		["30Rnd_556x45_Stanag_Tracer_Red",20],
+		["rhs_mag_30Rnd_556x45_M855_Stanag",50],
+		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",20],
 		["HandGrenade",5]
     ];
 
@@ -156,8 +156,8 @@ if (typeOf vehicle player == "Modern_USMC_AsstAutorifleman") then {
 
     _tmp_magazines =
     [
-        ["30Rnd_556x45_Stanag",50],
-		["30Rnd_556x45_Stanag_Tracer_Red",20],
+        ["rhs_mag_30Rnd_556x45_M855_Stanag",50],
+		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",20],
 		["rhsusf_100Rnd_556x45_soft_pouch",10],
 		["rhsusf_200Rnd_556x45_soft_pouch",10],
 		["HandGrenade",5]
@@ -208,8 +208,8 @@ if (typeOf vehicle player == "Modern_USMC_AsstMachineGunner") then {
 
     _tmp_magazines =
     [
-        ["30Rnd_556x45_Stanag",50],
-		["30Rnd_556x45_Stanag_Tracer_Red",20],
+        ["rhs_mag_30Rnd_556x45_M855_Stanag",50],
+		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",20],
 		["rhsusf_100Rnd_762x51",10],
 		["rhsusf_100Rnd_762x51_m62_tracer",10],
 		["HandGrenade",5]
@@ -234,8 +234,8 @@ if (typeOf vehicle player == "Modern_USMC_AsstMachineGunner") then {
 
     _tmp_magazines =
     [
-        ["30Rnd_556x45_Stanag",50],
-		["30Rnd_556x45_Stanag_Tracer_Red",20],
+        ["rhs_mag_30Rnd_556x45_M855_Stanag",50],
+		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",20],
 		["HandGrenade",5]
     ];
 
