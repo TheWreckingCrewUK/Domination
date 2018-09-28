@@ -90,6 +90,14 @@ if((typeOf player) in ["Modern_British_VehicleCommander"])then{
 	_armouraction1 = ["spawnl111","Spawn FV432","",{["ukcw_fv432"] execvm "domination_core\client\sys_player\vehicles\spawnarmour.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawnwoodland", "lightvehicles"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
 	
+
+	
+	_armouraction1 = ["spawnl111","Spawn Bulldog (GPMG)","",{["UK3CB_BAF_FV432_Mk3_GPMG_Green"] execvm "domination_core\client\sys_player\vehicles\spawnarmour.sqf"},_condition] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawnwoodland"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
+
+	
+	_armouraction1 = ["spawnl111","Spawn Bulldog (RWS)","",{["UK3CB_BAF_FV432_Mk3_RWS_Green"] execvm "domination_core\client\sys_player\vehicles\spawnarmour.sqf"},{(_a2 || _a4)}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawnwoodland"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
 	
 
 

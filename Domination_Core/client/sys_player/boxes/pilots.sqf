@@ -254,7 +254,7 @@ if((typeOf player) in ["Modern_British_HeliPilot","Modern_British_crewchief", "M
 
 	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Mi-8","",{
 	
-	["rhsgref_cdf_reg_Mi8amt"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
+	["CUP_O_Mi8_CHDKZ"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
 	
 	},_transportcond2] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawntransport"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;

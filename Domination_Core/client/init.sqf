@@ -11,9 +11,7 @@ if (isNil "fixedWingPilots") then {
 // wait till init
 waitUntil {!isNull player};
 
-_forceMapForced = forcedMap select 0;
-_openMapForced = forcedMap select 1;
-if (_forceMapForced || _openMapForced) then {player setdamage 1};
+if ((!(forcedMap select 0)) && ((forcedMap select 1))) then {player setdamage 1};
 
 if (typeOf player in fixedWingPilots) then {
 	["TWC_PilotConnected", [getPlayerUID player]] call CBA_fnc_serverEvent;

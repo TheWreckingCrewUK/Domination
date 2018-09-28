@@ -1,527 +1,33 @@
+_pilots = ["Modern_British_HeliPilot","Modern_British_MERT_HeliPilot","2000_British_HeliPilot_Desert","2000_British_HeliPilot","1990_British_HeliPilot","Modern_British_MERT_HeliPilot"];
+
+_crewchiefs = ["Modern_British_crewchief","2000_British_CrewChief","2000_British_CrewChief_Desert"];
+
+_armourcrew = ["Modern_British_VehicleCrew","Modern_USMC_VehicleCrew","1990_British_Tank_Crew_Desert","2000_British_Vehicle_Crew"];
+
+_armourcommanders = ["Modern_British_VehicleCommander","Modern_USMC_VehicleCommander","1990_British_Tank_Commander_Desert","2000_British_Vehicle_Commander"];
+
 _list=[
+		["CUP_B_M119_US", [
+		["gunner", 
+			["Modern_Artillery_Gunner"]
+		]],20,9
+	],
 	
-		["rhsusf_m1a1aimwd_usarmy",[ 
-		["driver", 
-			["1990_British_Tank_Crew_Desert"]
-		],
+			["UK3CB_BAF_Static_L16_Deployed", [
 		["gunner", 
-			["1990_British_Tank_Crew_Desert"]
-		],
-		["commander", 
-			["1990_British_Tank_Commander_Desert"]
-		]],0
-	],
-		["rhsusf_m1a2sep1tuskiid_usarmy",[ 
-		["driver", 
-			["Modern_British_VehicleCrew"]
-		],
-		["gunner", 
-			["Modern_British_VehicleCrew"]
-		],
-		["commander", 
-			["Modern_British_VehicleCommander"]
-		]],0
-	],
-		["rhsusf_m1a2sep1tuskid_usarmy",[ 
-		["driver", 
-			["Modern_British_VehicleCrew"]
-		],
-		["gunner", 
-			["Modern_British_VehicleCrew"]
-		],
-		["commander", 
-			["Modern_British_VehicleCommander"]
-		]],0
-	],
-		["rhsusf_m1a2sep1tuskiwd_usarmy",[ 
-		["driver", 
-			["Modern_British_VehicleCrew"]
-		],
-		["gunner", 
-			["Modern_British_VehicleCrew"]
-		],
-		["commander", 
-			["Modern_British_VehicleCommander"]
-		]],0
+			["Modern_Artillery_Gunner"]
+		]],14,10
 	],
 		["B_APC_Wheeled_01_cannon_F",[ 
 		["driver", 
-			["Modern_British_VehicleCrew"]
+			_armourcrew
 		],
 		["gunner", 
-			["Modern_British_VehicleCrew"]
+			_armourcrew
 		],
 		["commander", 
-			["Modern_British_VehicleCommander"]
-		]],0
-	],
-		["CUP_B_Challenger2_2CW_BAF",[ 
-		["driver", 
-			["Modern_British_VehicleCrew", "2000_British_Vehicle_Crew"]
-		],
-		["gunner", 
-			["Modern_British_VehicleCrew", "2000_British_Vehicle_Crew"]
-		],
-		["commander", 
-			["Modern_British_VehicleCommander", "2000_British_Vehicle_Commander"]
-		]],0
-	],
-	
-		["rhsgref_ins_t72bb",[ 
-		["driver", 
-			["Modern_British_VehicleCrew"]
-		],
-		["gunner", 
-			["Modern_British_VehicleCrew"]
-		],
-		["commander", 
-			["Modern_British_VehicleCommander"]
-		]],0
-	],
-		["rhsgref_cdf_b_bmp1",[ 
-		["driver", 
-			["Modern_British_VehicleCrew"]
-		],
-		["gunner", 
-			["Modern_British_VehicleCrew"]
-		],
-		["commander", 
-			["Modern_British_VehicleCommander"]
-		]],0
-	],
-	
-		["rhsusf_M1117_D",[ 
-		["driver", 
-			["Modern_British_VehicleCrew","Modern_British_VehicleCommander"]
-		],["gunner", 
-			["Modern_British_VehicleCrew","Modern_British_VehicleCommander"]
-		]],0
-	],
-		["rhsusf_m113d_usarmy_MK19",[ 
-		["driver", 
-			["Modern_USMC_VehicleCrew","Modern_USMC_VehicleCommander"]
-		]],0
-	],
-			["rhsusf_m113d_usarmy",[ 
-		["driver", 
-			["Modern_USMC_VehicleCrew","Modern_USMC_VehicleCommander"]
-		]],0
-	],
-		
-		["rhsusf_m113_usarmy_MK19",[ 
-		["driver", 
-			["Modern_USMC_VehicleCrew","Modern_USMC_VehicleCommander"]
-		]],0
-	],
-			["rhsusf_m113_usarmy",[ 
-		["driver", 
-			["Modern_USMC_VehicleCrew","Modern_USMC_VehicleCommander"]
-		]],0
-	],
-	
-
-	
-			["CUP_B_AAV_USMC",[ 
-		["driver", 
-			["Modern_British_VehicleCrew"]
-		],
-		["gunner", 
-			["Modern_British_VehicleCrew"]
-		],
-		["commander", 
-			["Modern_British_VehicleCommander"]
-		]],0
-	],	
-			["RHS_M6_wd",[ 
-		["driver", 
-			["Modern_British_VehicleCrew", "2000_British_Vehicle_Crew"]
-		],
-		["gunner", 
-			["Modern_British_VehicleCrew", "2000_British_Vehicle_Crew"]
-		],
-		["commander", 
-			["Modern_British_VehicleCommander", "2000_British_Vehicle_Commander"]
-		]],0
-	],
-			["RHS_M6",[ 
-		["driver", 
-			["Modern_British_VehicleCrew", "2000_British_Vehicle_Crew"]
-		],
-		["gunner", 
-			["Modern_British_VehicleCrew", "2000_British_Vehicle_Crew"]
-		],
-		["commander", 
-			["Modern_British_VehicleCommander", "2000_British_Vehicle_Commander"]
-		]],0
-	],
-			["RHS_M2A3_BUSKIII",[ 
-		["driver", 
-			["Modern_British_VehicleCrew"]
-		],
-		["gunner", 
-			["Modern_British_VehicleCrew"]
-		],
-		["commander", 
-			["Modern_British_VehicleCommander"]
-		]],0
-	],
-			["RHS_M2A3_BUSKIII_wd",[ 
-		["driver", 
-			["Modern_British_VehicleCrew"]
-		],
-		["gunner", 
-			["Modern_British_VehicleCrew"]
-		],
-		["commander", 
-			["Modern_British_VehicleCommander"]
-		]],0
-	],	
-			["RHS_M2A2",[ 
-		["driver", 
-			["1990_British_Tank_Crew_Desert"]
-		],
-		["gunner", 
-			["1990_British_Tank_Crew_Desert"]
-		],
-		["commander", 
-			["1990_British_Tank_Commander_Desert"]
-		]],0
-	],	
-	
-			["CUP_B_MCV80_GB_D_SLAT",[ 
-		["driver", 
-			["Modern_British_VehicleCrew","2000_British_Vehicle_Crew", "1990_British_Tank_Crew_Desert"]
-		],
-		["gunner", 
-			["Modern_British_VehicleCrew","2000_British_Vehicle_Crew", "1990_British_Tank_Crew_Desert"]
-		],
-		["commander", 
-			["Modern_British_VehicleCommander", "2000_British_Vehicle_Commander", "1990_British_Tank_Commander_Desert"]
-		]],0
-	],	
-			["CUP_B_MCV80_GB_W_SLAT",[ 
-		["driver", 
-			["Modern_British_VehicleCrew","2000_British_Vehicle_Crew", "1990_British_Tank_Crew_Desert"]
-		],
-		["gunner", 
-			["Modern_British_VehicleCrew","2000_British_Vehicle_Crew", "1990_British_Tank_Crew_Desert"]
-		],
-		["commander", 
-			["Modern_British_VehicleCommander", "2000_British_Vehicle_Commander", "1990_British_Tank_Commander_Desert"]
-		]],0
-	],	
-	
-			["CUP_B_M1128_MGS_Woodland",[ 
-		["driver", 
-			["Modern_British_VehicleCrew"]
-		],
-		["commander", 
-			["Modern_British_VehicleCommander","Modern_British_VehicleCrew"]
-		]],0
-	],	
-	
-			["CUP_B_M1130_CV_M2_Desert_Slat",[ 
-		["driver", 
-			["Modern_British_VehicleCrew"]
-		],
-		["commander", 
-			["Modern_British_VehicleCommander","Modern_British_VehicleCrew"]
-		]],0
-	],	
-			["CUP_B_M1130_CV_M2_Woodland_Slat",[ 
-		["driver", 
-			["Modern_British_VehicleCrew"]
-		],
-		["commander", 
-			["Modern_British_VehicleCommander","Modern_British_VehicleCrew"]
-		]],0
-	],	
-			["CUP_B_M1126_ICV_M2_Woodland_Slat",[ 
-		["driver", 
-			["Modern_British_VehicleCrew"]
-		],
-		["commander", 
-			["2000_British_Vehicle_Commander","2000_British_Vehicle_Crew"]
-		]],0
-	],	
-			["CUP_B_M1126_ICV_M2_Desert_Slat",[ 
-		["driver", 
-			["2000_British_Vehicle_Crew"]
-		],
-		["commander", 
-			["2000_British_Vehicle_Commander","2000_British_Vehicle_Crew"]
-		]],0
-	],	
-	
-		["ukcw_fv432",[ 
-		["driver", 
-			["Modern_British_VehicleCrew","Modern_British_VehicleCommander","1990_British_Tank_Commander_Desert", "1990_British_Tank_Crew_Desert", "2000_British_Vehicle_Crew", "2000_British_Vehicle_Commander"]
-		]],0
-	],	
-	
-		["rhsusf_m113d_usarmy_M240",[ 
-		["driver", 
-			["Modern_British_VehicleCrew","Modern_British_VehicleCommander"]
-		]],0
-	],
-		["rhsusf_m113_usarmy_M240",[ 
-		["driver", 
-			["Modern_British_VehicleCrew","Modern_British_VehicleCommander"]
-		]],0
-	],
-	
-		["CUP_B_FV432_Bulldog_GB_W",[ 
-		["driver", 
-			["Modern_British_VehicleCrew","Modern_British_VehicleCommander"]
-		]],0
-	],
-	
-			["CUP_B_FV432_Bulldog_GB_D",[ 
-		["driver", 
-			["Modern_British_VehicleCrew","Modern_British_VehicleCommander"]
-		]],0
-	],
-		
-		["rhsusf_m113d_usarmy_medical",[ 
-		["driver", 
-			["Modern_British_VehicleCrew","Modern_British_VehicleCommander","Modern_USMC_VehicleCrew","Modern_USMC_VehicleCommander","Modern_USMC_Medic","Modern_British_Medic","1990_British_Tank_Commander_Desert", "1990_British_Tank_Crew_Desert", "1990_RM_British_Medic_Mix", "1990_British_Medic_Desert", "Modern_pol_medic", "Modern_pol_medic_d", "2000_British_Medic", "2000_British_Medic_desert", "TWC_2000_US_Army_Medic", "2000_British_Vehicle_Crew", "2000_British_Vehicle_Commander"]
-		]]
-	],
-		
-		["rhsusf_m113_usarmy_medical",[ 
-		["driver", 
-			["Modern_British_VehicleCrew","Modern_British_VehicleCommander","Modern_USMC_VehicleCrew","Modern_USMC_VehicleCommander","Modern_USMC_Medic","Modern_British_Medic","1990_British_Tank_Commander_Desert", "1990_British_Tank_Crew_Desert", "1990_RM_British_Medic_Mix", "1990_British_Medic_Desert", "Modern_pol_medic", "Modern_pol_medic_d", "2000_British_Medic", "2000_British_Medic_desert", "TWC_2000_US_Army_Medic", "2000_British_Vehicle_Crew", "2000_British_Vehicle_Commander"]
-		]]
-	],
-	
-		["CUP_B_LAV25_USMC",[ 
-		["driver", 
-			["Modern_British_VehicleCrew"]
-		],
-		["gunner", 
-			["Modern_British_VehicleCrew"]
-		],
-		["commander", 
-			["Modern_British_VehicleCommander"]
-		]],0
-	],
-		
-		["CUP_B_LAV25_desert_USMC",[ 
-		["driver", 
-			["Modern_British_VehicleCrew"]
-		],
-		["gunner", 
-			["Modern_British_VehicleCrew"]
-		],
-		["commander", 
-			["Modern_British_VehicleCommander"]
-		]],0
-	],
-	
-		
-		["UK3CB_BAF_Wildcat_AH1_CAS_8A",[ 
-		["driver", 
-			["Modern_British_HeliPilot"]
-		],
-		["gunner", 
-			["Modern_British_crewchief"]
-		]],0
-	],
-	
-		
-		["UK3CB_BAF_Wildcat_AH1_CAS_8B",[ 
-		["driver", 
-			["Modern_British_HeliPilot"]
-		],
-		["gunner", 
-			["Modern_British_crewchief"]
-		]],0
-	],
-	
-		["ukcw_Gazelle", [
-		["driver", 
-			["Modern_British_HeliPilot","2000_British_HeliPilot_Desert","2000_British_HeliPilot"]
-		],
-		["turret", 
-			["Modern_British_crewchief","2000_British_CrewChief","2000_British_CrewChief_Desert"]
-		]],0
-	],
-	
-		["CUP_B_UH1Y_Gunship_Dynamic_USMC",[ 
-		["driver", 
-			["Modern_British_HeliPilot"]
-		],
-		[[2], 
-			["Modern_British_crewchief"]
-		]],0
-	],	
-	
-		["UK3CB_BAF_Wildcat_AH1_HEL_8A",[ 
-		["driver", 
-			["Modern_British_HeliPilot"]
-		],
-		["gunner", 
-			["Modern_British_crewchief"]
-		]],0
-	],
-	
-
-		["RHS_AH64D",[ 
-		["driver", 
-			["Modern_British_HeliPilot", "2000_British_HeliPilot", "2000_British_HeliPilot_Desert"]
-		],
-		["gunner", 
-			["Modern_British_crewchief", "2000_British_CrewChief", "2000_British_CrewChief_Desert"]
-		]],7
-	],
-
-		["RHS_AH1Z",[ 
-		["driver", 
-			["Modern_British_HeliPilot"]
-		],
-		["Turret", 
-			["Modern_British_crewchief"]
-		]],7
-	],
-		["CUP_B_SA330_Puma_HC2_BAF",[ 
-		["driver", 
-			["2000_British_HeliPilot","2000_British_HeliPilot_Desert"]
-		],
-		[[2], 
-			["2000_British_CrewChief","2000_British_CrewChief_Desert"]
-		]],0
-	],	
-		["CUP_O_UH1H_TKA",[ 
-		["driver", 
-			["Modern_British_HeliPilot"]
-		],
-		[[2], 
-			["Modern_British_crewchief"]
-		]],0
-	],	
-		["rhsgref_cdf_b_Mi24D_Early",[ 
-		["driver", 
-			["Modern_British_HeliPilot"]
-		],
-		[[0], 
-			["Modern_British_crewchief"]
-		]],0
-	],	
-		["rhsgref_cdf_Mi24D_Early",[ 
-		["driver", 
-			["Modern_British_HeliPilot"]
-		],
-		[[0], 
-			["Modern_British_crewchief"]
-		]],0
-	],	
-		["rhsgref_cdf_Mi35",[ 
-		["driver", 
-			["Modern_British_HeliPilot"]
-		],
-		[[0], 
-			["Modern_British_crewchief"]
-		]],0
-	],	
-
-
-		["CUP_B_CH47F_GB",[ 
-		["driver", 
-			["Modern_British_HeliPilot","Modern_USMC_HeliPilot","2000_British_HeliPilot_Desert","2000_British_HeliPilot","1990_British_HeliPilot_Desert"]
-		],
-		[[3], 
-			["Modern_British_crewchief","Modern_USMC_crewchief","Modern_British_HeliPilot","1990_British_HeliPilot_Desert","2000_British_CrewChief","2000_British_CrewChief_Desert"]
-		]],0
-	],
-
-		["twc_mert_ch47",[ 
-		["driver", 
-			["Modern_British_MERT_HeliPilot"]
-		],
-		[[3], 
-			["Modern_British_MERT_HeliPilot"]
-		]],0
-	],
-	
-		["CUP_B_MV22_USMC_RAMPGUN",[ 
-		["driver", 
-			["Modern_British_HeliPilot"]
-		],
-		["gunner", 
-			["Modern_British_crewchief"]
-		]],0
-	],	
-		["CUP_O_Mi8_CHDKZ",[ 
-		["driver", 
-			["Modern_British_HeliPilot"]
-		],
-		[[2], 
-			["Modern_British_crewchief"]
-		]],0
-	],	
-		["RHS_UH1Y_d",[ 
-		["driver", 
-			["Modern_British_HeliPilot"]
-		],
-		[[0], 
-			["Modern_British_crewchief"]
-		]],0
-	],	
-		["UK3CB_BAF_Merlin_HC3_18_GPMG",[ 
-		["driver", 
-			["Modern_British_HeliPilot"]
-		],
-		["gunner", 
-			["Modern_British_crewchief"]
-		]],0
-	],	
-	
-		["RHS_UH60M",[ 
-		["driver", 
-			["Modern_British_HeliPilot"]
-		],
-		[[0], 
-			["Modern_British_crewchief"]
-		]],0
-	],
-	
-		["RHS_UH60M_ESSS_d",[ 
-		["driver", 
-			["1990_British_HeliPilot_Desert","2000_British_HeliPilot"]
-		],
-		[[0], 
-			["1990_British_HeliPilot_Desert","2000_British_HeliPilot","2000_British_CrewChief","2000_British_CrewChief_Desert"]
-		]],0
-	],
-	
-				["CUP_B_A10_DYN_USA", [
-		["driver", 
-			["Modern_British_JetPilot", "2000_British_JetPilot"]
-		]],10
-	],
-		
-					["CUP_B_GR9_DYN_GB", [
-		["driver", 
-			["Modern_British_JetPilot", "2000_British_JetPilot"]
-		]],8
-	],
-	
-		["TWC_Vehicle_Generic_Hercules_RAF", [
-		["driver", 
-			["Modern_British_JetPilot", "2000_British_JetPilot"]
-		],
-		["turret", 
-			["Modern_British_JetPilot", "2000_British_JetPilot"]
-		]],0
-	],
-	
-		["CUP_B_C130J_Cargo_GB",[
-		["driver",
-			["Modern_British_JetPilot", "2000_British_JetPilot"]
-		],
-		["turret", 
-			["Modern_British_JetPilot", "2000_British_JetPilot"]
-		]],0
+			_armourcommanders
+		]],5
 	],
 	
 		["UK3CB_BAF_LandRover_Hard_FFR_Green_A_TWCBaseRadio",[
@@ -530,60 +36,630 @@ _list=[
 		]],6
 	],
 	
+		["rhsusf_m1a2sep1wd_usarmy",[ 
+		["driver", 
+			_armourcrew
+		],
+		["gunner", 
+			_armourcrew
+		],
+		["commander", 
+			_armourcommanders
+		]],0
+	],
+		["rhsusf_m1a2sep1tuskiid_usarmy",[ 
+		["driver", 
+			_armourcrew
+		],
+		["gunner", 
+			_armourcrew
+		],
+		["commander", 
+			_armourcommanders
+		]],0
+	],
+		["rhsusf_m1a2sep1tuskiiwd_usarmy",[ 
+		["driver", 
+			_armourcrew
+		],
+		["gunner", 
+			_armourcrew
+		],
+		["commander", 
+			_armourcommanders
+		]],0
+	],
+		["rhsusf_m1a2sep1d_usarmy",[ 
+		["driver", 
+			_armourcrew
+		],
+		["gunner", 
+			_armourcrew
+		],
+		["commander", 
+			_armourcommanders
+		]],12
+	],
+	
+		["rhsusf_M1117_D",[ 
+		["driver", 
+			_armourcrew + _armourcommanders
+		],["gunner", 
+			_armourcrew + _armourcommanders
+		]],0
+	],
+		["rhsusf_m113d_usarmy_MK19",[ 
+		["driver", 
+			_armourcrew + _armourcommanders
+		]],6
+	],
+			["rhsusf_m113d_usarmy",[ 
+		["driver", 
+			_armourcrew + _armourcommanders
+		]],0
+	],
+		
+		["rhsusf_m113_usarmy_MK19",[ 
+		["driver", 
+			_armourcrew + _armourcommanders
+		]],0
+	],
+			["rhsusf_m113_usarmy",[ 
+		["driver", 
+			_armourcrew + _armourcommanders
+		]],0
+	],
+	
+		["CUP_B_MCV80_GB_W_SLAT",[ 
+		["driver", 
+			_armourcrew
+		],
+		["gunner", 
+			_armourcrew
+		],
+		["commander", 
+			_armourcommanders
+		]],0
+	],	
+	
+			["CUP_B_AAV_USMC",[ 
+		["driver", 
+			_armourcrew
+		],
+		["gunner", 
+			_armourcrew
+		],
+		["commander", 
+			_armourcommanders
+		]],0
+	],	
+			["RHS_M2A2",[ 
+		["driver", 
+			_armourcrew
+		],
+		["gunner", 
+			_armourcrew
+		],
+		["commander", 
+			_armourcommanders
+		]],0
+	],	
+			["RHS_M2A2_wd",[ 
+		["driver", 
+			_armourcrew
+		],
+		["gunner", 
+			_armourcrew
+		],
+		["commander", 
+			_armourcommanders
+		]],0
+	],	
+			["RHS_M2A3_BUSKIII",[ 
+		["driver", 
+			_armourcrew
+		],
+		["gunner", 
+			_armourcrew
+		],
+		["commander", 
+			_armourcommanders
+		]],0
+	],	
+	
+			["CUP_B_MCV80_GB_D_SLAT",[ 
+		["driver", 
+			_armourcrew
+		],
+		["gunner", 
+			_armourcrew
+		],
+		["commander", 
+			_armourcommanders
+		]],0
+	],	
+	
+			["CUP_B_M1130_CV_M2_Desert_Slat",[ 
+		["driver", 
+			_armourcrew + _armourcommanders
+		],
+		["commander", 
+			_armourcrew + _armourcommanders
+		]],0
+	],	
+			["CUP_B_M1130_CV_M2_Woodland_Slat",[ 
+		["driver", 
+			_armourcrew + _armourcommanders
+		],
+		["commander", 
+			_armourcrew + _armourcommanders
+		]],0
+	],	
+			["CUP_B_M1126_ICV_M2_Woodland_Slat",[ 
+		["driver", 
+			_armourcrew + _armourcommanders
+		],
+		["commander", 
+			_armourcrew + _armourcommanders
+		]],0
+	],	
+			["CUP_B_M1126_ICV_M2_Desert_Slat",[ 
+		["driver", 
+			_armourcrew + _armourcommanders
+		],
+		["commander", 
+			_armourcrew + _armourcommanders
+		]],0
+	],	
+	
+		["ukcw_fv432",[ 
+		["driver", 
+			_armourcrew + _armourcommanders
+		]],0
+	],	
+	
+		["rhsusf_m113d_usarmy_M240",[ 
+		["driver", 
+			_armourcrew + _armourcommanders
+		]],0
+	],
+	
+		["rhsusf_m113_usarmy_M240",[ 
+		["driver", 
+			_armourcrew + _armourcommanders
+		]],0
+	],
+	
+		["CUP_B_FV432_Bulldog_GB_W",[ 
+		["driver", 
+			_armourcrew + _armourcommanders
+		]],0
+	],
+	
+			["CUP_B_FV432_Bulldog_GB_D",[ 
+		["driver", 
+			_armourcrew + _armourcommanders
+		]],0
+	],
+		
+		["rhsusf_m113d_usarmy_medical",[ 
+		["driver", 
+			_armourcrew + _armourcommanders
+		]]
+	],
+		
+		["rhsusf_m113_usarmy_medical",[ 
+		["driver", 
+			_armourcrew + _armourcommanders
+		]]
+	],
+	
+		["CUP_B_LAV25_USMC",[ 
+		["driver", 
+			_armourcrew
+		],
+		["gunner", 
+			_armourcrew
+		],
+		["commander", 
+			_armourcommanders
+		]],0
+	],
+		
+		["CUP_B_LAV25_desert_USMC",[ 
+		["driver", 
+			_armourcrew
+		],
+		["gunner", 
+			_armourcrew
+		],
+		["commander", 
+			_armourcommanders
+		]],0
+	],
+	
+		
+		["UK3CB_BAF_Wildcat_AH1_HEL_6A",[ 
+		["driver", 
+			_pilots
+		],
+		["gunner", 
+			_crewchiefs
+		]],3
+	],
+		
+		["UK3CB_BAF_Wildcat_AH1_CAS_8A",[ 
+		["driver", 
+			_pilots
+		],
+		["gunner", 
+			_crewchiefs
+		]],3
+	],
+	
+		
+		["UK3CB_BAF_Wildcat_AH1_CAS_8B",[ 
+		["driver", 
+			_pilots
+		],
+		["gunner", 
+			_crewchiefs
+		]],3
+	],
+	
+		["ukcw_Gazelle", [
+		["driver", 
+			_pilots
+		],
+		["turret", 
+			_crewchiefs
+		]],3
+	],
+	
+		["CUP_B_SA330_Puma_HC2_BAF", [
+		["driver", 
+			_pilots
+		],
+		[[0], 
+			_crewchiefs
+		]],3
+	],
+	
+		["ukcw_Gazelle_dyn", [
+		["driver", 
+			_pilots
+		],
+		["turret", 
+			_crewchiefs
+		]],3
+	],
+	
+		["CUP_B_UH1Y_Gunship_Dynamic_USMC",[ 
+		["driver", 
+			_pilots
+		],
+		[[2], 
+			_crewchiefs
+		]],3
+	],	
+	
+		["UK3CB_BAF_Wildcat_AH1_HEL_8A",[ 
+		["driver", 
+			_pilots
+		],
+		["gunner", 
+			_crewchiefs
+		]],3
+	],
+	
+
+		["RHS_AH64D",[ 
+		["driver", 
+			_pilots
+		],
+		["gunner", 
+			_crewchiefs
+		]],7
+	],
+
+		["RHS_AH1Z",[ 
+		["driver", 
+			_pilots
+		],
+		["Turret", 
+			_crewchiefs
+		]],7
+	],
+		["CUP_O_UH1H_TKA",[ 
+		["driver", 
+			_pilots
+		],
+		[[2], 
+			_crewchiefs
+		]],3
+	],	
+		["rhsgref_cdf_b_Mi24D_Early",[ 
+		["driver", 
+			_pilots
+		],
+		[[0], 
+			_crewchiefs
+		]],3
+	],	
+		["rhsgref_cdf_Mi24D_Early",[ 
+		["driver", 
+			_pilots
+		],
+		[[0], 
+			_crewchiefs
+		]],3
+	],	
+	
+	
+		["rhsgref_cdf_Mi35",[ 
+		["driver", 
+			_pilots
+		],
+		[[0], 
+			_crewchiefs
+		]],0
+	],	
+
+
+		["CUP_B_CH47F_GB",[ 
+		["driver", 
+			_pilots
+		],
+		[[3], 
+			_crewchiefs
+		]],3
+	],
+
+		["twc_mert_ch47",[ 
+		["driver", 
+			["Modern_British_MERT_HeliPilot"]
+		],
+		[[3], 
+			["Modern_British_MERT_HeliPilot"]
+		]],3
+	],
+		["RHS_UH60M_ESSS_d",[ 
+		["driver", 
+			_pilots
+		],
+		[[0], 
+			_crewchiefs
+		]],0
+	],
+	
+		["CUP_B_MV22_USMC_RAMPGUN",[ 
+		["driver", 
+			_pilots
+		],
+		["gunner", 
+			_crewchiefs
+		]],3
+	],	
+		["CUP_O_Mi8_CHDKZ",[ 
+		["driver", 
+			_pilots
+		],
+		[[2], 
+			_crewchiefs
+		]],3
+	],	
+		["RHS_UH1Y_d",[ 
+		["driver", 
+			_pilots
+		],
+		[[0], 
+			_crewchiefs
+		]],3
+	],	
+		["UK3CB_BAF_Merlin_HC3_18_GPMG",[ 
+		["driver", 
+			_pilots
+		],
+		["gunner", 
+			_crewchiefs
+		]],3
+	],	
+	
+		["RHS_UH60M",[ 
+		["driver", 
+			_pilots
+		],
+		[[0], 
+			_crewchiefs
+		]],3
+	],
+	
+		["RHS_UH60M_ESSS",[ 
+		["driver", 
+			_pilots
+		],
+		[[0], 
+			_crewchiefs
+		]],3
+	],
+	
+		["CUP_B_UH60M_FFV_US",[ 
+		["driver", 
+			_pilots
+		],
+		[[0], 
+			_crewchiefs
+		]],3
+	],
+	
+				["CUP_B_A10_DYN_USA", [
+		["driver", 
+			["Modern_British_JetPilot"]
+		]],10
+	],
+	
+				["twc_c5_hercules", [
+		["driver", 
+			["Modern_British_JetPilot"]
+		]],5
+	],
+		
+					["CUP_B_GR9_DYN_GB", [
+		["driver", 
+			["Modern_British_JetPilot"]
+		]],8
+	],
+	
+		["TWC_Vehicle_Generic_Hercules_RAF", [
+		["driver", 
+			["Modern_British_JetPilot"]
+		],
+		["turret", 
+			["Modern_British_JetPilot"]
+		]],6
+	],
+	
+		["CUP_B_C130J_Cargo_GB",[
+		["driver",
+			["Modern_British_JetPilot"]
+		],
+		["turret", 
+			["Modern_British_JetPilot"]
+		]],6
+	],
+		["rhsusf_m1a1aimwd_usarmy",[ 
+		["driver", 
+			_armourcrew
+		],
+		["gunner", 
+			_armourcrew
+		],
+		["commander", 
+			_armourcommanders
+		]],0
+	],
+	
+		["UK3CB_BAF_FV432_Mk3_GPMG_Green",[
+		["driver",
+			_armourcrew + _armourcommanders
+		]],0
+	],
+	
+		["UK3CB_BAF_FV432_Mk3_GPMG_Sand",[
+		["driver",
+			_armourcrew + _armourcommanders
+		]],0
+	],
+	
+		["UK3CB_BAF_FV432_Mk3_RWS_Sand",[
+		["driver",
+			_armourcrew + _armourcommanders
+		],
+		["gunner", 
+			_armourcrew + _armourcommanders
+		]],0
+	],
+	
+		["UK3CB_BAF_FV432_Mk3_RWS_Green",[
+		["driver",
+			_armourcrew + _armourcommanders
+		],
+		["gunner", 
+			_armourcrew + _armourcommanders
+		]],0
+	],
+			["RHS_M6_wd",[ 
+		["driver", 
+			_armourcrew
+		],
+		["gunner", 
+			_armourcrew
+		],
+		["commander", 
+			_armourcommanders
+		]],0
+	],
+			["RHS_M6",[ 
+		["driver", 
+			_armourcrew
+		],
+		["gunner", 
+			_armourcrew
+		],
+		["commander", 
+			_armourcommanders
+		]],0
+	],
+	
 		["ukcw_cvrt_Scim_d",[
 		["driver",
-			["Modern_British_VehicleCrew"]
+			_armourcrew
 		],
 		["gunner", 
-			["Modern_British_VehicleCrew"]
+			_armourcrew
 		],
 		["commander", 
-			["Modern_British_VehicleCommander"]
-		]],0
-	],
-	
-		["ukcw_cvrt_Scim_w",[
-		["driver",
-			["Modern_British_VehicleCrew"]
-		],
-		["gunner", 
-			["Modern_British_VehicleCrew"]
-		],
-		["commander", 
-			["Modern_British_VehicleCommander"]
-		]],0
-	],
-	
-		["ukcw_cvrt_Scim_d_L1",[
-		["driver",
-			["1990_British_Tank_Crew_Desert", "2000_British_Vehicle_Crew"]
-		],
-		["gunner", 
-			["1990_British_Tank_Crew_Desert", "2000_British_Vehicle_Crew"]
-		],
-		["commander", 
-			["1990_British_Tank_Commander_Desert", "2000_British_Vehicle_Commander"]
+			_armourcommanders
 		]],0
 	],
 	
 		["ukcw_cvrt_Scim_w_L1",[
 		["driver",
-			["1990_British_Tank_Crew_Desert", "2000_British_Vehicle_Crew"]
+			_armourcrew
 		],
 		["gunner", 
-			["1990_British_Tank_Crew_Desert", "2000_British_Vehicle_Crew"]
+			_armourcrew
 		],
 		["commander", 
-			["1990_British_Tank_Commander_Desert", "2000_British_Vehicle_Commander"]
+			_armourcommanders
+		]],0
+	],
+	
+	
+		["ukcw_cvrt_Scim_w",[
+		["driver",
+			_armourcrew
+		],
+		["gunner", 
+			_armourcrew
+		],
+		["commander", 
+			_armourcommanders
 		]],0
 	]
 	]
 ;
 {twc_restrictedVehicleSlots pushback _x} foreach _list;
 
-twc_fullvehicles = ["ukcw_cvrt_Scim_w", "ukcw_cvrt_Scim_d", "CUP_B_MCV80_GB_D_SLAT", "CUP_B_MCV80_GB_W_SLAT", "RHS_AH64D", "RHS_AH1Z", "CUP_B_LAV25_desert_USMC", "CUP_B_LAV25_USMC", "CUP_B_M1130_CV_M2_Woodland_Slat", "CUP_B_M1130_CV_M2_Desert_Slat", "CUP_B_AAV_USMC", "RHS_M2A3_BUSKIII", "rhsusf_m1a2sep1tuskiid_usarmy", "rhsusf_m1a2sep1tuskid_usarmy", "rhsusf_m1a1aimwd_usarmy", "rhsusf_M1117_D", "rhsgref_cdf_b_bmp1", "rhsgref_ins_t72bb", "RHS_M2A3_BUSKIII_wd", "B_APC_Wheeled_01_cannon_F", "CUP_B_M1128_MGS_Woodland", "rhsgref_cdf_Mi35", "RHS_M6", "RHS_M6_wd"];
+twc_fullvehicles = [
+"ukcw_cvrt_Scim_w",
+ "ukcw_cvrt_Scim_d",
+ "ukcw_cvrt_Scim_w_L1",
+ "CUP_B_MCV80_GB_D_SLAT",
+ "CUP_B_MCV80_GB_W_SLAT",
+ "RHS_AH64D",
+ "RHS_AH1Z",
+ "CUP_B_LAV25_desert_USMC",
+ "CUP_B_LAV25_USMC",
+ "CUP_B_M1130_CV_M2_Woodland_Slat",
+ "CUP_B_M1130_CV_M2_Desert_Slat",
+ "CUP_B_M1126_ICV_M2_Desert_Slat",
+ "CUP_B_M1126_ICV_M2_Woodland_Slat",
+ "CUP_B_AAV_USMC",
+ "RHS_M2A3_BUSKIII",
+ "RHS_M2A3_BUSKIII_wd",
+ "rhsgref_ins_t72bb",
+ "rhsgref_cdf_b_bmp1",
+ "rhsusf_m1a2sep1tuskid_usarmy",
+ "rhsusf_m1a2sep1tuskiwd_usarmy",
+ "UK3CB_BAF_FV432_Mk3_RWS_Sand",
+ "UK3CB_BAF_FV432_Mk3_RWS_Green",
+ "RHS_M6",
+ "RHS_M6_wd",
+ "RHS_M6_wd",
+ "rhsusf_M1117_D"];
 
-
+ 
 TWC_fnc_notAllowedInSeat = {
 	params ["_playerUnit"];
 	[_playerUnit] spawn {
