@@ -12,11 +12,10 @@ if (time < twc_lastattack) exitwith {};
 
 twc_lastattack = time + 3000;
 
-if (count _enemylist == 0) then {
-	_enemy = allplayers call BIS_fnc_selectRandom
-	} 
-	
-	else {
+
+	_enemy = allplayers call BIS_fnc_selectRandom;
+
+if ((count _enemylist) > 0) then {
 
 	_enemy = _enemylist call BIS_fnc_selectRandom;
 };

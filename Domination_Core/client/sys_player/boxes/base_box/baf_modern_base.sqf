@@ -1,5 +1,5 @@
 //BAF Section Leader
-if (typeOf vehicle player == "Modern_British_Squadleader") then {
+if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squadleader_Light"]) then {
     _tmp_weapons =
     [
         ["UK3CB_BAF_L85A2_RIS",1],
@@ -34,15 +34,13 @@ if (typeOf vehicle player == "Modern_British_Squadleader") then {
 };
 
 //BAF Rifleman Pointman
- if (typeOf vehicle player == "Modern_British_Rifleman") then {
+ if (typeOf vehicle player in ["Modern_British_Rifleman", "Modern_British_Pointman_Light"]) then {
     _tmp_weapons =
     [
 		["UK3CB_BAF_L85A2_RIS",1],
 		["rhs_weap_m72a7",4],
 		["rhs_weap_M136_hedp",2],
-		["launch_NLAW_F",3],
-		["UK3CB_BAF_Javelin_CLU",1],
-		["UK3CB_BAF_Javelin_Slung_Tube",2]
+		["launch_NLAW_F",3]
     ];
 
     _tmp_magazines =
@@ -61,7 +59,7 @@ if (typeOf vehicle player == "Modern_British_Squadleader") then {
 };
 
 //BAF Grenadier
- if (typeOf vehicle player == "Modern_British_Grenadier") then {
+ if (typeOf vehicle player in ["Modern_British_Grenadier", "Modern_British_Grenadier_COIN_Light"]) then {
     _tmp_weapons =
     [
         ["UK3CB_BAF_L85A2_UGL",1],
@@ -94,7 +92,7 @@ if (typeOf vehicle player == "Modern_British_Squadleader") then {
 };
 
 //BAF Automatic Rifleman
- if (typeOf vehicle player == "Modern_British_Autorifleman") then {
+ if (typeOf vehicle player in ["Modern_British_Autorifleman", "Modern_British_Autorifleman_COIN_Light"]) then {
     _tmp_weapons =
     [
         ["UK3CB_BAF_L110A2",1],
@@ -116,7 +114,7 @@ if (typeOf vehicle player == "Modern_British_Squadleader") then {
 };
 
 //BAF 2IC
- if (typeOf vehicle player == "Modern_British_2IC") then {
+ if (typeOf vehicle player in ["Modern_British_2IC", "Modern_British_2IC_COIN_Light"]) then {
     _tmp_weapons =
     [
 		["UK3CB_BAF_L85A2_RIS",1],
@@ -165,7 +163,7 @@ if (typeOf vehicle player == "Modern_British_Squadleader") then {
 };
 
 //BAF Machine Gunner
- if (typeOf vehicle player == "Modern_British_Machinegunner") then {
+ if (typeOf vehicle player in ["Modern_British_Machinegunner", "Modern_British_Machinegunner_Light"]) then {
     _tmp_weapons =
     [
         ["UK3CB_BAF_L7A2",1],
@@ -188,15 +186,13 @@ if (typeOf vehicle player == "Modern_British_Squadleader") then {
 };
  
 //BAF Marksman
- if (typeOf vehicle player == "Modern_British_Marksman") then {
+ if (typeOf vehicle player in ["Modern_British_Marksman", "Modern_British_Marksman_COIN_Light"]) then {
     _tmp_weapons =
     [
         ["UK3CB_BAF_L129A1_FGrip",1],
 		["ACE_Vector",1],
 		["launch_NLAW_F",3],
-		["rhs_weap_M136_hedp",2],
-		["UK3CB_BAF_Javelin_CLU",1],
-		["UK3CB_BAF_Javelin_Slung_Tube",2]
+		["rhs_weap_M136_hedp",2]
 	];
        
     _tmp_magazines =
@@ -474,4 +470,67 @@ if (typeOf vehicle player == "Modern_British_FSTCommander") then {
 	];
 };
 
+
+ if (typeOf vehicle player in ["Modern_British_Recce_Autorifleman"]) then {
+    _tmp_weapons =
+    [
+        ["UK3CB_BAF_L110A2",1]
+	];
+
+	_tmp_magazines =
+   [            
+		["UK3CB_BAF_556_200Rnd",20],
+		["UK3CB_BAF_556_200Rnd_T",10],
+        ["rhsusf_mag_17Rnd_9x19_JHP",15]
+    ];
+
+	_tmp_items =
+	[
+		["UK3CB_BAF_SpecterLDS_Dot",1],
+		["ACE_DAGR",1],
+		["ACRE_PRC343",1]
+	];
+};
+
+ if (typeOf vehicle player in ["Modern_British_Recce_Rifleman"]) then {
+    _tmp_weapons =
+    [
+        ["rhs_weap_m72a7",1]
+	];
+
+	_tmp_magazines =
+   [            
+        ["rhs_mag_30Rnd_556x45_M855_Stanag",50],
+		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",20],
+        ["rhsusf_mag_17Rnd_9x19_JHP",15]
+    ];
+
+	_tmp_items =
+	[
+		["UK3CB_BAF_SpecterLDS_Dot",1],
+		["ACE_DAGR",1],
+		["ACRE_PRC343",1]
+	];
+};
+
+ if (typeOf vehicle player in ["Modern_British_Recce_Commander"]) then {
+    _tmp_weapons =
+    [
+        ["rhsusf_mag_17Rnd_9x19_JHP",15]
+	];
+
+	_tmp_magazines =
+   [            
+        ["rhs_mag_30Rnd_556x45_M855_Stanag",50],
+		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",20]
+    ];
+
+	_tmp_items =
+	[
+		["UK3CB_BAF_SpecterLDS_Dot",1],
+		["ACE_DAGR",1],
+		["ACRE_PRC148",1],
+		["ACRE_PRC343",1]
+	];
+};
 

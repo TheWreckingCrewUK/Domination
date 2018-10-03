@@ -90,8 +90,6 @@
     _tmp_weapons =
     [
         ["twc_rhs_weap_m4a1_acog_lazer",1],
-		["UK3CB_BAF_Javelin_Slung_Tube",2],
-		["UK3CB_BAF_Javelin_CLU",1],
 		["CUP_launch_Mk153Mod0",1],
 		["rhs_weap_M136_hedp",2],
 		["rhs_weap_m72a7",2]

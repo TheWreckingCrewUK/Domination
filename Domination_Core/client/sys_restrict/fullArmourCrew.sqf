@@ -19,9 +19,16 @@ while {(count (units group player)) < 2}do{
 
 cutText ["", "Black", 0.001];
     [
-        "<t size='1.2'>Armour Crew</t><br/><t size='0.6'>You need at least 2 people in the armour crew before you can proceed</t>", 0, 0.22, 5, 0, 0, 2
+        "<t size='1.2'>Armour Crew</t><br/><t size='0.6'>You need at least 2 people in the group before you can proceed</t>", 0, 0.22, 5, 0, 0, 2
     ] spawn bis_fnc_dynamictext;
+	
 	sleep 5;
+	
+	if ((count (units group player)) >= 2) then {
+	
+		cutText ["","Black IN",5];
+		player forceWalk false;
+	};
 };
 cutText ["","Black IN",5];
 player forceWalk false;

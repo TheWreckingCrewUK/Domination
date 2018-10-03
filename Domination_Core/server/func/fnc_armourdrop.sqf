@@ -1,6 +1,13 @@
 
 
 	params ["_spawnpos", "_enemy", "_stagepos"];
+	
+	
+	
+	if (isnil "_enemy") then {_enemy = allplayers call bis_fnc_selectrandom};
+	
+	_enemy = getpos _enemy;
+	
 	sleep (10 + random 20);
 		_plane = createVehicle ["CUP_O_C130J_TKA", (([_spawnPos, 200] call CBA_fnc_randPos) vectoradd [0,0,500]), [], 0, "FLY"]; 
 

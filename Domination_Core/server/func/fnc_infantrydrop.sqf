@@ -4,6 +4,11 @@
 	if (isnil "_num") then {
 		_num = random 1;
 	};
+	
+	if (isnil "_enemy") then {_enemy = allplayers call bis_fnc_selectrandom};
+	
+	_enemy = getpos _enemy;
+	
 	sleep random 20;
 	
 	
@@ -65,7 +70,7 @@
 				 
 				 };
 		sleep 3;
-			 [_plane, _cargo, getpos _enemy] spawn {
+			 [_plane, _cargo, _enemy] spawn {
 				 params ["_plane", "_cargo", "_enemy"];
 				 
 					sleep 1;

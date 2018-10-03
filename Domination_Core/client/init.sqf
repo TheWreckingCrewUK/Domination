@@ -4,6 +4,8 @@
 #include "sys_forwardbase\init.sqf";
 //#include "sys_ragdoll\init.sqf";
 
+twc_fnc_crewcount = compile preprocessfilelinenumbers "Domination_Core\server\sys_mechanised\crewcount.sqf";
+
 if (isNil "fixedWingPilots") then {
 	fixedWingPilots = ["Modern_British_JetPilot"];
 };
