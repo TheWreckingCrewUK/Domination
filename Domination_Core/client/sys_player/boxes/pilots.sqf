@@ -453,6 +453,10 @@ if((typeOf player) in ["1990_British_HeliPilot_Desert","1990_British_HeliPilot"]
 	_hUKaction3 = ["SpawnsmallUKCreate","Spawn Small UK RM Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallCrateUKRM.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnlight"],_hUKaction3,true] call ace_interact_menu_fnc_addActionToClass;	
 	
+	
+	_hUKaction3 = ["SpawnsmallUKCreate","Spawn Sniper Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallcratesniper2000.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnlight"],_hUKaction3,true] call ace_interact_menu_fnc_addActionToClass;
+	
 	_hcharlieaction2 = ["SpawnsmallcharlieCreate","Spawn Small US Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallCrateUS90.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnlight"],_hcharlieaction2,true] call ace_interact_menu_fnc_addActionToClass;
 
@@ -536,6 +540,9 @@ _helispawn1 = ["SpawnsmallcharlieCreate","Spawn Gazelle","",{
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnlight"],_hUKaction3,true] call ace_interact_menu_fnc_addActionToClass;
 	
 
+	
+	_hUKaction3 = ["SpawnsmallUKCreate","Spawn Sniper Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallcratesniper2000.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnlight"],_hUKaction3,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_haction5 = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnlight"],_haction5,true] call ace_interact_menu_fnc_addActionToClass;

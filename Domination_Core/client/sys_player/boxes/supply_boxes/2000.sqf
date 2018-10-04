@@ -24,6 +24,13 @@ if((typeOf player) in ["2000_British_SectionCommander","2000_British_SectionComm
 	
 };
 
+if((typeOf player) in ["2000_British_Spotter","2000_British_Spotter_Desert"])then{
+	
+	
+	_hUKaction3 = ["SpawnsmallUKCreate","Spawn Sniper Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallcratesniper2000.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnlight"],_hUKaction3,true] call ace_interact_menu_fnc_addActionToClass;
+	};
+
 if((typeOf player) in ["TWC_2000_US_Army_SectionCommander","TWC_2000_US_Army_TeamLeader"])then{
 
 	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Small Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallCrateUS2000.sqf"},{true}] call ace_interact_menu_fnc_createAction;

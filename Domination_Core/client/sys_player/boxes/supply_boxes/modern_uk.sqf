@@ -45,4 +45,16 @@ if((typeOf player) in ["Modern_British_Sniper", "Modern_British_Spotter"])then{
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_snaction1,true] call ace_interact_menu_fnc_addActionToClass;
 };
 
+if((typeOf player) in ["Modern_British_Recce_Commander"])then{
+
+	_snaction1 = ["Spawnsnipbox","Spawn Ammo Box","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallCrateRecce.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_snaction1,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_snaction1 = ["Spawnsnipbox","Spawn Loaded GMG Jackal","",{execvm "domination_core\client\sys_player\vehicles\reccejackal.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_snaction1,true] call ace_interact_menu_fnc_addActionToClass;
+		
+	_alphaaction6 = ["spawn40","Spawn 40mm Ammo","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\40ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction6,true] call ace_interact_menu_fnc_addActionToClass;
+};
+
 

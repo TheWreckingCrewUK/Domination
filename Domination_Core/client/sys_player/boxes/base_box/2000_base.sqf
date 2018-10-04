@@ -281,11 +281,14 @@ if((typeOf player) in ["2000_British_Sniper","2000_British_Sniper_Desert"])then{
 
     _tmp_weapons =
     [
-        ["twc_l96_w",1]
+        ["twc_l96_w",1],
+		["twc_rhs_weap_M107",1]
 	];
 
 	_tmp_magazines =
    [            
+		["rhsusf_mag_10Rnd_STD_50BMG_M33",10],
+		["rhsusf_mag_10Rnd_STD_50BMG_mk211",10],
 		["UK3CB_BAF_762_L42A1_10Rnd",20],
 		["UK3CB_BAF_762_L42A1_10Rnd_T",10]
     ];
@@ -302,11 +305,16 @@ if((typeOf player) in ["2000_British_Spotter","2000_British_Spotter_Desert"])the
 
     _tmp_weapons =
     [
-        ["twc_l96_w",1]
+        ["twc_l96_w",1],
+        ["UK3CB_BAF_L85A2_SUSAT",1]
 	];
 
 	_tmp_magazines =
-   [            
+   [    
+		["rhsusf_mag_10Rnd_STD_50BMG_M33",10],
+		["rhsusf_mag_10Rnd_STD_50BMG_mk211",10],
+		["UK3CB_BAF_556_30Rnd",20],
+		["UK3CB_BAF_556_30Rnd_T",10],
 		["UK3CB_BAF_762_L42A1_10Rnd",20],
 		["UK3CB_BAF_762_L42A1_10Rnd_T",10]
     ];
@@ -328,8 +336,8 @@ if((typeOf player) in ["TWC_2000_US_Army_SectionCommander"])then{
 
 	_tmp_magazines =
    [            
-		["30Rnd_556x45_Stanag",20],
-		["30Rnd_556x45_Stanag_Tracer_Red",10]
+		["rhs_mag_30Rnd_556x45_M855_Stanag",20],
+		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",10]
     ];
 
 	_tmp_items =
@@ -352,8 +360,8 @@ if((typeOf player) in ["TWC_2000_US_Army_TeamLeader"])then{
    [            
 		["1Rnd_HE_Grenade_shell",20],
 		["1Rnd_Smoke_Grenade_shell",20],
-		["30Rnd_556x45_Stanag",20],
-		["30Rnd_556x45_Stanag_Tracer_Red",10]
+		["rhs_mag_30Rnd_556x45_M855_Stanag",20],
+		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",10]
     ];
 
 	_tmp_items =
@@ -375,8 +383,8 @@ if((typeOf player) in ["TWC_2000_US_Army_Rifleman"])then{
 
 	_tmp_magazines =
    [            
-		["30Rnd_556x45_Stanag",20],
-		["30Rnd_556x45_Stanag_Tracer_Red",10]
+		["rhs_mag_30Rnd_556x45_M855_Stanag",20],
+		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",10]
     ];
 
 	_tmp_items =
@@ -395,8 +403,8 @@ if((typeOf player) in ["TWC_2000_US_Army_Grenadier"])then{
    [            
 		["1Rnd_HE_Grenade_shell",20],
 		["1Rnd_Smoke_Grenade_shell",20],
-		["30Rnd_556x45_Stanag",20],
-		["30Rnd_556x45_Stanag_Tracer_Red",10]
+		["rhs_mag_30Rnd_556x45_M855_Stanag",20],
+		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",10]
     ];
 
 	_tmp_items =
@@ -431,8 +439,8 @@ if((typeOf player) in ["TWC_2000_US_Army_AutomaticRifleman"])then{
 
 	_tmp_magazines =
    [
-		["30Rnd_556x45_Stanag",20],
-		["30Rnd_556x45_Stanag_Tracer_Red",10]
+		["rhs_mag_30Rnd_556x45_M855_Stanag",20],
+		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",10]
     ];
 
 	_tmp_items =
@@ -449,8 +457,8 @@ if((typeOf player) in ["TWC_2000_US_Army_Medic"])then{
 
 	_tmp_magazines =
    [
-		["30Rnd_556x45_Stanag",20],
-		["30Rnd_556x45_Stanag_Tracer_Red",10]
+		["rhs_mag_30Rnd_556x45_M855_Stanag",20],
+		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",10]
     ];
 
 	_tmp_items =

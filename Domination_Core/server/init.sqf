@@ -1,6 +1,7 @@
 #include "defines.sqf";
 #include "func\init.sqf";
 #include "sys_basedefence\init.sqf";
+#include "sys_mechanised\init.sqf";
 
 
 basemode = 0;
