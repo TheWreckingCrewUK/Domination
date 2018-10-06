@@ -652,6 +652,8 @@ twc_fullvehicles = [
  "rhsgref_cdf_b_bmp1",
  "rhsusf_m1a2sep1tuskid_usarmy",
  "rhsusf_m1a2sep1tuskiwd_usarmy",
+ "rhsusf_m1a2sep1wd_usarmy",
+ "rhsusf_m1a1aimwd_usarmy",
  "UK3CB_BAF_FV432_Mk3_RWS_Sand",
  "UK3CB_BAF_FV432_Mk3_RWS_Green",
  "RHS_M6",

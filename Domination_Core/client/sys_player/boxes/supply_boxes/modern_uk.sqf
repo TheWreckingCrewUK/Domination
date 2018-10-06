@@ -16,7 +16,7 @@ if((typeOf player) in ["Modern_Artillery_Gunner","Modern_Artillery_Commander"])t
 };
 
 
-if((typeOf player) in ["Modern_British_Squadleader","Modern_British_2IC"])then{
+if((typeOf player) in ["Modern_British_Squadleader","Modern_British_2IC", "Modern_British_Squadleader_Light","Modern_British_2IC_COIN_Light"])then{
 
 	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Small UK Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallcrateuk.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;
@@ -38,6 +38,13 @@ if((typeOf player) in ["Modern_British_Squadleader","Modern_British_2IC"])then{
 	
 	
 };
+
+	if((typeOf player) in ["Modern_British_Squadleader_Light","Modern_British_2IC_COIN_Light"])then{
+		_UKaction5 = ["SpawnmedCreate","Spawn Loaded WMIK","",{execvm "domination_core\client\sys_player\vehicles\patrolwmik.sqf"},{((group player getvariable ["twc_ismechanised", 0]) == 0)}] call ace_interact_menu_fnc_createAction;
+		["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction5,true] call ace_interact_menu_fnc_addActionToClass;
+		_UKaction5 = ["SpawnmedCreate","Spawn Loaded Mastiff","",{execvm "domination_core\client\sys_player\vehicles\patrolmastiff.sqf"},{(count units group player > 3) && ((group player getvariable ["twc_ismechanised", 0]) == 0)}] call ace_interact_menu_fnc_createAction;
+		["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction5,true] call ace_interact_menu_fnc_addActionToClass;
+	};
 
 if((typeOf player) in ["Modern_British_Sniper", "Modern_British_Spotter"])then{
 
