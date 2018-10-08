@@ -26,7 +26,7 @@ if((typeOf player) in ["Modern_British_VehicleCommander"])then{
 
 
 
-	_armouraction1 = ["spawnl111","Spawn M1A2","",{["rhsusf_m1a2sep1tuskid_usarmy"] execvm "domination_core\client\sys_player\vehicles\spawnarmour.sqf"},{(((group player getvariable ["armourcount", 1])/ 3) == (floor ((group player getvariable ["armourcount", 1])/ 3))) && ((count units group player) <= 3) && ((group player getvariable ["twc_ismechanised", 0]) == 0)}] call ace_interact_menu_fnc_createAction;
+	_armouraction1 = ["spawnl111","Spawn M1A2","",{["rhsusf_m1a2sep1tuskiid_usarmy"] execvm "domination_core\client\sys_player\vehicles\spawnarmour.sqf"},{(((group player getvariable ["armourcount", 1])/ 3) == (floor ((group player getvariable ["armourcount", 1])/ 3))) && ((count units group player) <= 3) && ((group player getvariable ["twc_ismechanised", 0]) == 0)}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawnwoodland", "heavyvehicles"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	

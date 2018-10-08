@@ -19,10 +19,16 @@ publicVariable "twc_wdveh";
 //add in an object name and the game will create a location there and spawn enemies from it
 customlocations = [];
 
+tank = ["rhs_t72bd_tv", "rhs_t80uk", "rhs_t80", "rhs_t90a_tv"];
+
+ifv = ["rhs_bmp3mera_msv", "rhs_bmp2d_msv", "rhs_bmp1_msv"];
+
+apc = ["rhs_btr80a_msv", "rhs_btr80a_msv"];
+
 twc_is90 = 1;
 publicVariable "twc_is90";
 
-twc_tankcount = random 2;
+twc_tankcount = 1 + random 2;
 twc_apccount = 1 + random 2;
 twc_ifvcount = 2 + random 2;
 twc_aacount = 1;

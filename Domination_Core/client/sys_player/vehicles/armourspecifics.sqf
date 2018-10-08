@@ -105,6 +105,23 @@ if (typeof _veh == "CUP_B_MCV80_GB_W_SLAT") then {
 
 
 
+if (typeof _veh == "rhsusf_m1a2sep1tuskiid_usarmy") then {
+
+if (twc_wdveh == 1) then {
+	[
+	_veh,
+	["woodland",1], 
+	["IFF_Panels_Hide",0,"Miles_Hide",1,"showCamonetTurret",0,"showCamonetHull",0,"DUKE_Hide",1]
+	] call BIS_fnc_initVehicle;
+	} else {
+
+[
+	_veh,
+	["desert",1], 
+	["IFF_Panels_Hide",0,"Miles_Hide",1,"showCamonetTurret",0,"showCamonetHull",0,"DUKE_Hide",1]
+	] call BIS_fnc_initVehicle;
+	};
+};
 
 if (typeof _veh == "rhsusf_m1a2sep1tuskid_usarmy") then {
 

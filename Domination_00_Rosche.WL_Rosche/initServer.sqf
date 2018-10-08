@@ -22,7 +22,7 @@ customlocations = [];
 twc_is90 = 1;
 publicVariable "twc_is90";
 
-twc_tankcount = random 2;
+twc_tankcount = 1 + random 2;
 twc_apccount = random 2;
 twc_ifvcount = random 2;
 twc_aacount = 1;
