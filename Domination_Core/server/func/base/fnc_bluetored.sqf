@@ -24,6 +24,8 @@ if (time < 120) exitWith {};
 	_marker setMarkerText "BASE (UNSAFE)";
 	_marker setMarkerColor "colorred";
 	
+	twc_basepos = getmarkerpos "dummybase";
+	
 	"BASE IN CONTACT, RESPAWN DISABLED" remoteExec ["hint"];
 
 	deletemarker "base";

@@ -37,6 +37,8 @@ deletevehicle _mainbase;
 	_marker setMarkerText "BASE";
 	_marker setMarkerColor "colorBlufor";
 	deletemarker "dummybase"; 
+	
+	twc_basepos = getmarkerpos "base";
 
 	_marker = createmarker ["respawn_west", getmarkerpos "dummyres"]; 
 	_marker setMarkerShape "ICON";

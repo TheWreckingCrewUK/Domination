@@ -410,7 +410,7 @@ deleteMarker "radioMarker";
 	waitUntil{!([_pos,3000] call twc_fnc_posNearPlayers)};
 	
 	{
-		deleteVehicle _x
+		if ((twc_basepos distance _x) > 300) then {deleteVehicle _x};
 	}forEach (nearestObjects [_pos,["Man","Car","Tank","Air"],3000]);
 	{
 		deleteVehicle _x

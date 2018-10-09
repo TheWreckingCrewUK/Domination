@@ -13,6 +13,10 @@ if(isNil "townLocationArray") then{
 	townLocationArray = [];
 };
 
+if(isNil "twc_basepos") then{
+	twc_basepos = getmarkerpos "base";
+};
+
 if(isNil "customlocations") then{
 	customlocations = [];
 };
