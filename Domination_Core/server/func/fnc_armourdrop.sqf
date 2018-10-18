@@ -7,6 +7,7 @@
 	if (isnil "_enemy") then {_enemy = allplayers call bis_fnc_selectrandom};
 	
 	_enemy = getpos _enemy;
+	_enemylandingpos = [_enemy, 5, 100, 0, 0, 20, 0] call BIS_fnc_findSafePos;
 	
 	sleep (10 + random 20);
 		_plane = createVehicle ["CUP_O_C130J_TKA", (([_spawnPos, 200] call CBA_fnc_randPos) vectoradd [0,0,500]), [], 0, "FLY"]; 
@@ -29,7 +30,7 @@ _wp = _group1 addwaypoint [_stagepos , 500];
 
 
 		//_wppos = _enemy getRelPos [2000, _dir - 90];
-			_wp = _group1 addwaypoint [_enemy, 200];  
+			_wp = _group1 addwaypoint [_enemylandingpos, 200];  
 
 
 		_group1 addwaypoint [[0,0,0], 300]; 
@@ -39,7 +40,7 @@ _wp = _group1 addwaypoint [_stagepos , 500];
 
 	
 		sleep 3;
-			 [_plane, _enemy] spawn {
+			 [_plane, _enemylandingpos] spawn {
 				 params ["_plane", "_enemy"];
 				 
 					sleep 1;
@@ -64,7 +65,7 @@ _wp = _group1 addwaypoint [_stagepos , 500];
 				sleep 1;
 				_tank call KK_fnc_paraDrop;
 					
-				 _group addwaypoint [_enemy, 100];  
+				 _group addwaypoint [_enemy, 20];  
 				 _group addwaypoint [_enemy, 100];  
 				 _group addwaypoint [_enemy, 300];  
 				 _group addwaypoint [_enemy, 400];  

@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7754.8574,63.357094,7629.6074};
-		dir[]={-0.93896145,-0.074206725,0.33619383};
-		up[]={-0.069932148,0.99723488,0.025039347};
-		aside[]={0.33712834,9.4436109e-007,0.9415707};
+		pos[]={6261.2354,97.389961,7111.8037};
+		dir[]={0.93454373,-0.25289705,-0.25071713};
+		up[]={0.24431376,0.96747738,-0.0655443};
+		aside[]={-0.25914389,8.7025546e-007,-0.96595168};
 	};
 };
 binarizationWanted=0;
@@ -47,6 +47,7 @@ addons[]=
 	"twc_modern",
 	"RHS_US_A2_AirImport",
 	"CUP_AirVehicles_CH47",
+	"TWC_gearFixes",
 	"twc_medical",
 	"A3_Structures_F_Mil_Helipads",
 	"A3_Structures_F_System",
@@ -60,7 +61,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=28;
+		items=29;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -192,42 +193,47 @@ class AddonsMetaData
 		};
 		class Item21
 		{
+			className="TWC_gearFixes";
+			name="TWC_gearFixes";
+		};
+		class Item22
+		{
 			className="twc_medical";
 			name="twc_medical";
 			author="Bosenator";
 		};
-		class Item22
+		class Item23
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item23
+		class Item24
 		{
 			className="A3_Structures_F_Exp";
 			name="Arma 3 Apex - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item24
+		class Item25
 		{
 			className="UK3CB_BAF_Vehicles_Coyote_Jackal";
 			name="3CB BAF Vehicles - Coyote and Jackal";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item25
+		class Item26
 		{
 			className="CUP_WheeledVehicles_Mastiff";
 			name="CUP_WheeledVehicles_Mastiff";
 		};
-		class Item26
+		class Item27
 		{
 			className="twc_framework_public_modern_us";
 			name="twc_framework_public_modern_us";
 		};
-		class Item27
+		class Item28
 		{
 			className="UK3CB_BAF_Vehicles_Bulldog";
 			name="3CB BAF Vehicles - Bulldog";
@@ -12875,8 +12881,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6426.438,32.359482,7039.1885};
-				angles[]={0,1.1351118,0};
+				position[]={6426.438,32.35952,7039.188};
+				angles[]={0,1.1351098,0};
 			};
 			side="Empty";
 			flags=4;
@@ -12887,7 +12893,7 @@ class Mission
 			};
 			id=1496;
 			type="CUP_B_MTVR_Refuel_USMC";
-			atlOffset=-0.013038635;
+			atlOffset=-0.013000488;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -12905,7 +12911,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],true]";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -15511,18 +15517,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6442.0508,32.904243,7032.5625};
-				angles[]={0.0093286335,2.6712856,0};
+				position[]={6442.0508,32.903938,7032.563};
+				angles[]={0.0093200579,2.6712787,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				lock="UNLOCKED";
+				init="call{if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
 			};
 			id=2134;
 			type="rhsusf_m113_usarmy_medical";
-			atlOffset=-0.0027008057;
+			atlOffset=-0.0030021667;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15907,14 +15914,15 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6422.8853,32.318439,7029.0908};
-				angles[]={0,5.7386451,0};
+				position[]={6422.8848,32.318439,7029.0908};
+				angles[]={0,5.7386422,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				fuel=0;
+				init="call{if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
 			};
 			id=2419;
 			type="UK3CB_BAF_LandRover_Hard_FFR_Green_A_TWCBaseRadio";
@@ -16607,7 +16615,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6397.6641,32.982918,7038.6738};
-				angles[]={0,2.5616207,0};
+				angles[]={0,2.5616198,0};
 			};
 			side="Empty";
 			flags=4;
@@ -16618,6 +16626,29 @@ class Mission
 			id=2597;
 			type="UK3CB_BAF_Jackal2_L111A1_W";
 			atlOffset=-1.9073486e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[1]],[[""UK3CB_BAF_127_100Rnd"",""UK3CB_BAF_762_200Rnd_T""],[9,9]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item51
 		{
@@ -16642,16 +16673,40 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6409.6724,32.318439,7030.082};
-				angles[]={0,2.5478063,0};
+				position[]={6409.6719,32.318439,7030.082};
+				angles[]={0,2.5478141,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="call{if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
 			};
 			id=2599;
 			type="UK3CB_BAF_LandRover_Hard_Green_B";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item53
 		{
@@ -16659,15 +16714,39 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6401.627,32.318439,7041.2559};
-				angles[]={0,2.5478063,0};
+				angles[]={0,2.5478141,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="call{if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
 			};
 			id=2600;
 			type="UK3CB_BAF_LandRover_Hard_Green_B";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit""],[4]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item54
 		{
@@ -16675,15 +16754,39 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6410.6826,30.299999,7049.0249};
-				angles[]={0,5.7485886,0};
+				angles[]={0,5.7485909,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="call{if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
 			};
 			id=2601;
 			type="CUP_B_Mastiff_HMG_GB_W";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""CUP_arifle_L85A2_G"",""CUP_launch_M136"",""FirstAidKit"",""Medikit""],[4,2,20,2]],[[""CUP_30Rnd_556x45_Stanag"",""CUP_200Rnd_TE4_Red_Tracer_556x45_M249"",""CUP_1Rnd_HEDP_M203"",""CUP_M136_M"",""CUP_HandGrenade_M67"",""SmokeShell"",""SmokeShellOrange"",""Chemlight_red""],[20,4,10,2,4,4,4,4]],[[""ToolKit""],[1]],[[""CUP_B_Bergen_BAF""],[8]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item55
 		{
@@ -16691,15 +16794,39 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6405.8149,30.299999,7045.9619};
-				angles[]={0,5.7485886,0};
+				angles[]={0,5.7485909,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="call{if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
 			};
 			id=2602;
 			type="CUP_B_Mastiff_HMG_GB_W";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""CUP_arifle_L85A2_G"",""CUP_launch_M136"",""FirstAidKit"",""Medikit""],[4,2,20,2]],[[""CUP_30Rnd_556x45_Stanag"",""CUP_200Rnd_TE4_Red_Tracer_556x45_M249"",""CUP_1Rnd_HEDP_M203"",""CUP_M136_M"",""CUP_HandGrenade_M67"",""SmokeShell"",""SmokeShellOrange"",""Chemlight_red""],[20,4,10,2,4,4,4,4]],[[""ToolKit""],[1]],[[""CUP_B_Bergen_BAF""],[8]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item56
 		{

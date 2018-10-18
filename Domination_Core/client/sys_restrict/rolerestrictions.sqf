@@ -69,7 +69,8 @@ player forceWalk false;
 
 
 
-if(((typeOf player) in ["Modern_British_logitech"]) || ((["fst", typeof player] call BIS_fnc_inString) && (!(["observer", typeof player] call BIS_fnc_inString))))then{
+
+if(["FST", str (group player)] call BIS_fnc_inString)then{
 
 
 

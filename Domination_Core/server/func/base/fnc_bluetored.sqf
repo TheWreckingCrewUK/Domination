@@ -21,7 +21,7 @@ if (time < 120) exitWith {};
 	_marker = createmarker ["dummybase", getmarkerpos "base"]; 
 	_marker setMarkerShape "ICON";
 	_marker setMarkerType "b_hq";
-	_marker setMarkerText "BASE (UNSAFE)";
+	_marker setMarkerText "BASE (IN CONTACT)";
 	_marker setMarkerColor "colorred";
 	
 	twc_basepos = getmarkerpos "dummybase";
@@ -33,7 +33,7 @@ if (time < 120) exitWith {};
 	_marker = createmarker ["dummyres", getmarkerpos "respawn_west"]; 
 	_marker setMarkerShape "ICON";
 	_marker setMarkerType "b_hq";
-	_marker setMarkerText "BASE (UNSAFE)";
+	_marker setMarkerText "BASE (IN CONTACT)";
 	_marker setMarkerColor "colorred";
 	_marker setMarkeralpha 0;
 

@@ -11,6 +11,7 @@ twc_fnc_changebase_bluetored = compile preprocessfilelinenumbers "Domination_Cor
 twc_fnc_changebase_redtoblue = compile preprocessfilelinenumbers "Domination_Core\server\func\base\fnc_redtoblue.sqf";
 twc_fnc_armourdrop = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_armourdrop.sqf";
 twc_fnc_infantrydrop = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_infantrydrop.sqf";
+twc_fnc_crewcount = compile preprocessfilelinenumbers "Domination_Core\server\sys_mechanised\crewcount.sqf";
 
 
 if (isServer) then {

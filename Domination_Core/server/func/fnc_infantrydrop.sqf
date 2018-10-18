@@ -9,6 +9,8 @@
 	
 	_enemy = getpos _enemy;
 	
+	_enemylandingpos = [_enemy, 300, 600, 0, 0, 20, 0] call BIS_fnc_findSafePos;
+	
 	sleep random 20;
 	
 	
@@ -36,7 +38,7 @@
 
 
 		//_wppos = _enemy getRelPos [2000, _dir - 90];
-		_wp = _group1 addwaypoint [_enemy, 200]; 
+		_wp = _group1 addwaypoint [_enemylandingpos, 200]; 
 		_wp setWaypointCompletionRadius 1000;
 
 		_group1 addwaypoint [[0,0,0], 300]; 
@@ -70,7 +72,7 @@
 				 
 				 };
 		sleep 3;
-			 [_plane, _cargo, _enemy] spawn {
+			 [_plane, _cargo, _enemylandingpos] spawn {
 				 params ["_plane", "_cargo", "_enemy"];
 				 
 					sleep 1;
@@ -124,10 +126,10 @@
 		_wp setWaypointStatements ["true", "this flyinheight 100;"];
 
 		//_wppos = _enemy getRelPos [2000, _dir - 90];
-		_wp = _group1 addwaypoint [_enemy, 200]; 
+		_wp = _group1 addwaypoint [_enemylandingpos, 200]; 
 		_wp setWaypointCompletionRadius 500;
 		_wp setWaypointType "TR Unload";
-		_wp setWaypointStatements ["true", "[] spawn {(driver this) enableai 'autotarget';(driver this) enableai 'autocombat'; sleep 60;(driver this) disableai 'autotarget';(driver this) disableai 'autocombat';(driver this) disableai 'TARGET'; this flyinheight 150;}"];
+		_wp setWaypointStatements ["true", "[this] spawn {params ['_this'];(driver _this) enableai 'autotarget';(driver _this) enableai 'autocombat'; sleep 60;(driver _this) disableai 'autotarget';(driver _this) disableai 'autocombat';(driver _this) disableai 'TARGET'; _this flyinheight 150;}"];
 
 
 		_group1 addwaypoint [[0,0,0], 300]; 

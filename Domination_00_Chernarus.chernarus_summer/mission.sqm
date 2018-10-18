@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4876.7764,364,10053.968};
-		dir[]={-0.57469213,-0.43700445,0.69192278};
-		up[]={-0.2792159,0.89945918,0.33617258};
-		aside[]={0.76926607,1.3969839e-008,0.63893127};
+		pos[]={4652.7324,340.53766,10462.108};
+		dir[]={0.02163304,0.059514306,-0.99800789};
+		up[]={-0.0012892307,0.99822974,0.05949378};
+		aside[]={-0.99978447,-1.7529965e-007,-0.021670626};
 	};
 };
 binarizationWanted=0;
@@ -58,13 +58,14 @@ addons[]=
 	"ukcw_cvrt",
 	"RHS_US_A2_AirImport",
 	"CUP_AirVehicles_CH47",
+	"TWC_gearFixes",
 	"twc_medical"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=31;
+		items=32;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -244,6 +245,11 @@ class AddonsMetaData
 			name="CUP_AirVehicles_CH47";
 		};
 		class Item30
+		{
+			className="TWC_gearFixes";
+			name="TWC_gearFixes";
+		};
+		class Item31
 		{
 			className="twc_medical";
 			name="twc_medical";
