@@ -11,6 +11,18 @@ if (faction player == "ana_units") then {
 [_me, ["PersianHead_A3_01","PersianHead_A3_02","PersianHead_A3_03"]call bis_fnc_selectrandom] remoteExec ["setFace", 0, _me] 
 };
 
+_nobackpack = getNumber (configFile >> "cfgVehicles" >> (typeOf player) >> "twc_nobackpack");
+
+if (!isnil "_nobackpack") then {
+
+	if (_nobackpack == 1) then {
+		player addEventHandler ["Take", {
+			params ["_unit", "_container", "_item"];
+			removebackpack player;
+		}];
+	};
+};
+
 //Set Radios Correctly
 _radioID = [getText (configFile >> "cfgVehicles" >> (typeOf player) >> "twc_radioType")] call acre_api_fnc_getRadioByType; 
  if (!isNil "_radioID") then { 
