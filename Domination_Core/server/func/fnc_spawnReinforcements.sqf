@@ -7,6 +7,8 @@ if (isnil "_arty") then {_arty = false};
 
 if (isnil "twc_lastattack") then {twc_lastattack = 0};
 
+if (twc_enemyhasradio == 0) exitwith {};
+
 //exit if it's been too soon since the last attack. current count at 20 minutes
 if (time < twc_lastattack) exitwith {};
 
@@ -32,6 +34,13 @@ _spawnpos = [0,0,0];
 _stagepos = [_pos, 1000] call CBA_fnc_randPos;
 
 
+
+if (((random 1)< 0.2) && (( count(allPlayers - entities "HeadlessClient_F"))>6) && ((_enemy distance artyspawnpos) < 4500)) exitwith {
+
+		twc_mortar_targetlist pushback (getpos _enemy);
+		publicVariable "twc_mortar_targetlist";
+	
+};
 
 
 
@@ -59,5 +68,4 @@ if (_landorair > 0.5) then {
 	[_spawnpos, _enemy, _stagepos, _num] spawn twc_reinforce_mechanised;
 };
 
-//["twc_event_artyattack", [_enemy], twc_artyguns] call CBA_fnc_targetEvent;
 

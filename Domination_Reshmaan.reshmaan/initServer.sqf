@@ -24,5 +24,9 @@ twc_aainfcount = 1;
 twc_wdveh = 0;
 publicVariable "twc_wdveh";
 
+
+sirenlist = [idfalarm_1, idfalarm_2, idfalarm_3];
+publicVariable "sirenlist";
+
 // event handlers run in the non-scheduled environment (can't be execVM)
 [] call compile preprocessFile "Domination_Core\server\init.sqf";

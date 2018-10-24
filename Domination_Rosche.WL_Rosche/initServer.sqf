@@ -10,7 +10,7 @@ waitUntil{scriptDone _script};
 
 twc_maxObjDistance = 5000;
 
-crampresent = 1;
+crampresent = 0;
 publicVariable "crampresent";
 
 twc_wdveh = 1;
@@ -25,8 +25,11 @@ ifv = ["rhs_bmp3mera_msv", "rhs_bmp2d_msv", "rhs_bmp1_msv"];
 
 apc = ["rhs_btr80a_msv", "rhs_btr80a_msv"];
 
-twc_is90 = 1;
+twc_is90 = 0;
 publicVariable "twc_is90";
+
+sirenlist = [idfradar];
+publicVariable "sirenlist";
 
 twc_tankcount = 1 + random 2;
 twc_apccount = 1 + random 2;

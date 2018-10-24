@@ -36,6 +36,11 @@ twc_wdveh = 0;
 publicVariable "twc_wdveh";
 };
 
+if(isNil "twc_mortar_targetlist") then{
+	twc_mortar_targetlist = [];
+	publicVariable "twc_mortar_targetlist";
+};
+
 if(isNil "twc_nonpersistent") then{
 twc_nonpersistent = 0;
 publicVariable "twc_nonpersistent";

@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=1.5707964;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=522;
+	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=2393;
+		nextID=2396;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={16593.811,125.88725,3672.0537};
-		dir[]={-0.20616873,-0.22307691,-0.95283926};
-		up[]={-0.047179304,0.97480965,-0.21805061};
-		aside[]={-0.97746801,-1.1769589e-007,0.21149856};
+		pos[]={16533.613,95.449501,3235.7573};
+		dir[]={0.23503086,-0.494573,-0.83676773};
+		up[]={0.13374062,0.86913216,-0.47615144};
+		aside[]={-0.96275097,-5.8906153e-008,-0.27041763};
 	};
 };
 binarizationWanted=0;
@@ -59,13 +59,15 @@ addons[]=
 	"twc_modern",
 	"rhsusf_c_m113",
 	"twc_medical",
-	"twc_framework_public_modern_us"
+	"twc_framework_public_modern_us",
+	"A3_Characters_F_Common",
+	"A3_Static_F_Jets_AAA_System_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=29;
+		items=31;
 		class Item0
 		{
 			className="CUP_WarfareBuildings";
@@ -244,6 +246,20 @@ class AddonsMetaData
 			className="twc_framework_public_modern_us";
 			name="twc_framework_public_modern_us";
 		};
+		class Item29
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item30
+		{
+			className="A3_Static_F_Jets";
+			name="Arma 3 Jets - Turrets";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=16337384;
@@ -277,7 +293,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=192;
+		items=194;
 		class Item0
 		{
 			dataType="Object";
@@ -745,13 +761,13 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={16493.76,86.300812,3141.2402};
+				position[]={16493.76,86.300812,3141.24};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				name="idfalarm_5";
+				name="idfalarm_1";
 			};
 			id=1433;
 			type="Land_Loudspeakers_F";
@@ -767,11 +783,11 @@ class Mission
 			flags=1;
 			class Attributes
 			{
-				name="idfalarm_6";
+				name="idfalarm_2";
 			};
 			id=1434;
 			type="Land_Loudspeakers_F";
-			atlOffset=2.1197891;
+			atlOffset=2.1197968;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -802,13 +818,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={16515.162,84.50666,3138.885};
-				angles[]={0,1.7460063,0};
+				angles[]={0,1.7460099,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				name="idfradar_1";
+				name="idfradar";
 			};
 			id=1463;
 			type="US_WarfareBUAVterminal_Base_EP1";
@@ -1620,11 +1636,9 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				name="idfradar";
 			};
 			id=1490;
 			type="76n6ClamShell_EP1";
-			atlOffset=-7.6293945e-006;
 		};
 		class Item24
 		{
@@ -1647,14 +1661,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={16549.16,86.300812,3183.0847};
-				angles[]={0,0.11374048,0};
+				position[]={16549.16,86.300812,3183.085};
+				angles[]={0,0.11374311,0};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				name="idfalarm_7";
+				name="idfalarm_3";
 			};
 			id=1497;
 			type="Land_Loudspeakers_F";
@@ -10838,6 +10852,83 @@ class Mission
 				};
 				nAttributes=2;
 			};
+		};
+		class Item192
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={16555.813,92.027061,3293.3481};
+						angles[]={6.2799387,0,0};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						name="cramG";
+					};
+					id=2395;
+					type="B_UAV_AI";
+					atlOffset=0.24200439;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=2395;
+						item1=2394;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=2393;
+			atlOffset=0.24156952;
+		};
+		class Item193
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16555.813,94.531364,3293.29};
+				angles[]={6.2799387,0,0};
+			};
+			side="West";
+			flags=6;
+			class Attributes
+			{
+				init="call{crampresent = 1;}";
+				name="cram";
+				reportRemoteTargets=1;
+				receiveRemoteTargets=1;
+				reportOwnPosition=1;
+				aiRadarUsage=1;
+			};
+			id=2394;
+			type="B_AAA_System_01_F";
+			atlOffset=0.24156952;
 		};
 	};
 };

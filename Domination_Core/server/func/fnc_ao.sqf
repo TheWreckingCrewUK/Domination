@@ -323,14 +323,15 @@ _jet flyInHeight  _flyalt;
 
 };
 
-/*
-_artyspawnpos = [_spawnpos, 1500, 3000, 10, 0, 1, 0, [], [_spawnpos, _spawnpos]] call BIS_fnc_findSafePos;
+if ((random 1) < 0.3) then {
+
+artyspawnpos = [_spawnpos, 1500, 3000, 10, 0, 1, 0, [], [_spawnpos, _spawnpos]] call BIS_fnc_findSafePos;
 _attemptcount = 0;
 while{
 
- ([_artyspawnpos,1500] call twc_fnc_posNearPlayers) || _artyspawnpos distance2D (getMarkerPos "base") < 2500 
+ ([artyspawnpos,1500] call twc_fnc_posNearPlayers) || artyspawnpos distance2D (getMarkerPos "base") < 2500 
  }do{
-_artyspawnpos = [_spawnpos, 1500, 3000, 10, 0, 1, 0, [], [_spawnpos, _spawnpos]] call BIS_fnc_findSafePos;
+artyspawnpos = [_spawnpos, 1500, 3000, 10, 0, 1, 0, [], [_spawnpos, _spawnpos]] call BIS_fnc_findSafePos;
 	_attemptcount = _attemptcount + 1;
 
 if (_attemptcount > 250) exitwith {
@@ -341,7 +342,7 @@ if (_attemptcount > 250) exitwith {
 	twc_artyguns = [];
 for "_i" from 1 to twc_artycount do {
   
-	_artyspawnpos2 = [_artyspawnpos,[100,200],random 360,0,[1,100]] call SHK_pos;
+	_artyspawnpos2 = [artyspawnpos, 1, 350, 9, 0, 20, 0] call BIS_fnc_findSafePos;
 	
 	 _group = createGroup East;  
  _vehicle = artyspawn createVehicle _artyspawnpos2;  
@@ -356,22 +357,18 @@ for "_i" from 1 to twc_artycount do {
  _gunner disableAI "AUTOTARGET";
  _gunner disableAI "AUTOCOMBAT";
  _gunner disableAI "TARGET";
- _vehicle disableAI "AUTOTARGET";
- _vehicle disableAI "AUTOCOMBAT";
- _vehicle disableAI "TARGET";
  
-
 _vehicle addEventHandler ["Fired", {[(_this select 0), (_this select 6)] call twc_fnc_idf}];
- 
+[_vehicle] spawn twc_fnc_artyattack;
 };
 
  publicVariable "twc_artyguns";
  
-	_spawnPos = [_artyspawnpos,[0,50],random 360,0] call SHK_pos;
+	_spawnPos = [artyspawnpos,[0,50],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 150,3,false,true] call cba_fnc_taskDefend;
-	*/
 	
+	};
 _trg = createTrigger ["EmptyDetector", _pos];
 _trg setTriggerArea [600, 600, 0, false];
 _trg setTriggerActivation ["EAST", "PRESENT", false];
@@ -425,8 +422,9 @@ deleteMarker "radioMarker";
 };
 
 [] call twc_fnc_getao;
-	/*waitUntil{!([_artyspawnpos,1000] call twc_fnc_posNearPlayers)};
+	waitUntil{!([artyspawnpos,1000] call twc_fnc_posNearPlayers)};
 	{
-		deleteVehicle _x
-	}forEach (nearestObjects [_artyspawnpos,["Man","Car","Tank","Air"],800]);
-	*/
+		
+		if ((twc_basepos distance _x) > 300) then {deleteVehicle _x};
+	}forEach (nearestObjects [artyspawnpos,["Man","Car","Tank","Air"],800]);
+	

@@ -7,16 +7,16 @@ _armourcrew = ["Modern_British_VehicleCrew","Modern_USMC_VehicleCrew","1990_Brit
 _armourcommanders = ["Modern_British_VehicleCommander","Modern_USMC_VehicleCommander","1990_British_Tank_Commander_Desert","2000_British_Vehicle_Commander"];
 
 _list=[
-		["CUP_B_M119_US", [
+		["ukcw_l118", [
 		["gunner", 
 			["Modern_Artillery_Gunner"]
-		]],20,9
+		]],0
 	],
 	
 			["UK3CB_BAF_Static_L16_Deployed", [
 		["gunner", 
 			["Modern_Artillery_Gunner"]
-		]],14,10
+		]],0
 	],
 		["B_APC_Wheeled_01_cannon_F",[ 
 		["driver", 

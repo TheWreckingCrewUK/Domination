@@ -1,7 +1,7 @@
 
 params ["_shell", "_override"];
 
-if (isnil "crampresent") exitwith {
+if ((isnil "crampresent") && (crampresent == 0)) exitwith {
 //systemchat "no cram"
 };
 
@@ -76,18 +76,19 @@ if (!(str _pos2 == "[0,0,0]")) then {_pos = _pos2};
 
 sleep 0.001;
 };
+//systemchat format ["%1", (vectorMagnitude (velocity _shell))];
 
+//harder = higher
 
+_chance = ((8 * (1 + ((_shell distance cram)/1000))) * (0.7 + (((vectorMagnitude (velocity _shell)) + 1) / 250)));
+systemchat format ["%1", _chance];
 if (_D20 > _chance) then {
 [_shell] spawn {
 params ["_shell"];
 sleep 1;
 _pos = getpos _shell;
 
-
-//systemchat format ["%1", _pos];
-
-
+systemchat "shell defeated";
 deletevehicle _shell;
 'rhs_ammo_ptb1500' createvehicle _pos;
 _complete = 1;
