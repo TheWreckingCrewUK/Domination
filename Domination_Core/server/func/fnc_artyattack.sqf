@@ -33,7 +33,7 @@ sleep (1 + random 3);
 
 if ((_mortar distance _targetpos) > 4500) exitwith {
 [_mortar] spawn twc_fnc_artyattack;
-twc_mortar_targetlist deleteAt 0;
+twc_mortar_targetlist deleteAt (twc_mortar_targetlist find _targetpos);
 publicVariable "twc_mortar_targetlist";};
 
 _mortar setvehicleammodef 1;

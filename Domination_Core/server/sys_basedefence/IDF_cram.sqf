@@ -52,7 +52,7 @@ _time = time;
 
 Waituntil {((((getposatl _shell select 2) > 60)|| (((vectorMagnitude (velocity _shell)) > 160) && ((getposatl _shell select 2) > 20))) && ((_shell distance cram) < 2000)) || !alive _shell};
 
-
+_size = sizeof typeof _shell;
 if (!alive _shell )exitwith {cram lookat objnull};
 cramactive = 1;
 _chance = 18;
@@ -80,8 +80,8 @@ sleep 0.001;
 
 //harder = higher
 
-_chance = ((8 * (1 + ((_shell distance cram)/1000))) * (0.7 + (((vectorMagnitude (velocity _shell)) + 1) / 250)));
-systemchat format ["%1", _chance];
+_chance = ((8 * (1 + ((_shell distance cram)/1000))) * (0.7 + (((vectorMagnitude (velocity _shell)) + 1) / 250)) / (1 + (_size / 15)));
+systemchat format ["%1", sizeof typeof _shell];
 if (_D20 > _chance) then {
 [_shell] spawn {
 params ["_shell"];
