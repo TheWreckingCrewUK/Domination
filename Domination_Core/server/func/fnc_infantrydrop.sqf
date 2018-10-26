@@ -33,6 +33,7 @@
 
 		_driver disableai "autotarget";
 		_driver disableai "autocombat";
+		_plane setVehicleLock "LOCKEDPLAYER";
 
 		_wp = _group1 addwaypoint [_stagepos , 500]; 
 
@@ -111,6 +112,7 @@
 		 
 		_driver moveInDriver _plane; 
 
+		_plane setVehicleLock "LOCKEDPLAYER";
 
 		_group2 = createGroup East;
 		_gunner = _group2 createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  

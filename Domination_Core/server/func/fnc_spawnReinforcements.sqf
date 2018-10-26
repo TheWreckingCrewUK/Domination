@@ -16,10 +16,14 @@ twc_lastattack = time + 3000;
 
 
 	_enemy = allplayers call BIS_fnc_selectRandom;
+	
+	_targetlist = [];
 
 if ((count _enemylist) > 0) then {
 
 	_enemy = _enemylist call BIS_fnc_selectRandom;
+} else {
+	_targetlist = _enemylist;
 };
 
 //exit if the system is asking artillery to fire on its own friends
@@ -52,6 +56,11 @@ _num = random 1;
 
 //making only airdrops for the moment because land pathfinding sucks
 _landorair = 1;
+
+if (((!(["90", twc_missionname] call BIS_fnc_inString)) || (!(["00", twc_missionname] call BIS_fnc_inString))) && ((random 1) < 0.2)) exitwith {
+
+	[_spawnpos, _enemy, _stagepos, _targetlist] spawn twc_fnc_infantrydrop_heavy;
+};
 
 if (_landorair > 0.5) then {
 //armour is dropped by c130, so have the same condition on this as for the c130 airdrop of infantry
