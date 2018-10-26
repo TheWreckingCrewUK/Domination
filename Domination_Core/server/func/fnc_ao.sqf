@@ -18,30 +18,30 @@ if(isNil "twc_tankcount") then{
 	twc_tankcount = random 3;
 };
 
-twc_tankcount = twc_tankcount * ( 1+ (random 0.5));
+twc_tankcount = twc_tankcount * ( 1+ (random 0.2));
 
 if(isNil "twc_ifvcount") then{
 	twc_ifvcount = 2;
 };
 
-twc_ifvcount = twc_ifvcount * ( 1+ (random 0.5));
+twc_ifvcount = twc_ifvcount * ( 1+ (random 0.2));
 
 if(isNil "twc_apccount") then{
 	twc_apccount = 2;
 };
 
-twc_ifvcount = twc_ifvcount * ( 1+ (random 0.5));
+twc_ifvcount = twc_ifvcount * ( 1+ (random 0.2));
 
 if(isNil "twc_aacount") then{
 	twc_aacount = 1;
 };
 
-twc_aacount = twc_aacount * ( 1+ (random 0.5));
+twc_aacount = twc_aacount * ( 1+ (random 0.2));
 
 if(isNil "twc_infcount") then{
 	twc_infcount = 3;
 };
-twc_infcount = twc_infcount * ( 1+ (random 0.5));
+twc_infcount = twc_infcount * ( 1+ (random 0.7));
 
 
 if(isNil "twc_aainfcount") then{
@@ -56,6 +56,8 @@ if(isNil "twc_artycount") then{
 };
 
 twc_artycount = twc_artycount * ( 1+ (random 0.5));
+
+twc_activearty = 0;
 
 //twc_artycount = 0;
 
@@ -323,26 +325,27 @@ _jet flyInHeight  _flyalt;
 
 };
 
-if ((random 1) < 0.3) then {
-
 artyspawnpos = [_spawnpos, 1500, 3000, 10, 0, 1, 0, [], [_spawnpos, _spawnpos]] call BIS_fnc_findSafePos;
+if ((random 1) < 0.4) then {
+
 _attemptcount = 0;
 while{
 
  ([artyspawnpos,1500] call twc_fnc_posNearPlayers) || artyspawnpos distance2D (getMarkerPos "base") < 2500 
  }do{
-artyspawnpos = [_spawnpos, 1500, 3000, 10, 0, 1, 0, [], [_spawnpos, _spawnpos]] call BIS_fnc_findSafePos;
+artyspawnpos = [_spawnpos, 1500, 3000, 10, 0, 15, 0, [], [_spawnpos, _spawnpos]] call BIS_fnc_findSafePos;
 	_attemptcount = _attemptcount + 1;
 
 if (_attemptcount > 250) exitwith {
 };
 };
 
+twc_activearty = 1;
 	artyspawn = arty call BIS_fnc_selectRandom;
 	twc_artyguns = [];
 for "_i" from 1 to twc_artycount do {
   
-	_artyspawnpos2 = [artyspawnpos, 1, 350, 9, 0, 20, 0] call BIS_fnc_findSafePos;
+	_artyspawnpos2 = [artyspawnpos, 1, 50, 9, 0, 20, 0] call BIS_fnc_findSafePos;
 	
 	 _group = createGroup East;  
  _vehicle = artyspawn createVehicle _artyspawnpos2;  
@@ -406,6 +409,9 @@ deleteMarker "radioMarker";
 	
 	waitUntil{!([_pos,3000] call twc_fnc_posNearPlayers)};
 	
+	{
+		if ((twc_basepos distance _x) > 300) then {deleteVehicle _x};
+	}forEach (nearestObjects [_pos,["Man","Car","Tank","Air"],3000]);
 	{
 		if ((twc_basepos distance _x) > 300) then {deleteVehicle _x};
 	}forEach (nearestObjects [_pos,["Man","Car","Tank","Air"],3000]);

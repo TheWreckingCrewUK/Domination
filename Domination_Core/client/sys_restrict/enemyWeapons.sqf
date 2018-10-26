@@ -46,7 +46,7 @@ player addEventHandler ["Take", {
 }];
 
 
-
+/*
 player addEventHandler ["InventoryOpened", {
 	params ["_unit", "_container"];
 	if((getPos player) distance2D (getMarkerPos "base") > 200) exitwith {};
@@ -70,3 +70,4 @@ player addEventHandler ["InventoryOpened", {
 
 	};
 }];
+*/

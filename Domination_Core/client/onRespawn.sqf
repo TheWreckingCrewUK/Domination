@@ -71,7 +71,10 @@ if ((random 1)< 0.1) then {
 	};
 
 	if (twc_enemyhasradio == 0) exitwith {};
-		twc_mortar_targetlist pushback twc_basepos;
+	
+	if ((player distance artyspawnpos) < 4000) then {
+		twc_mortar_targetlist pushback getpos player;
 		publicVariable "twc_mortar_targetlist";
+		};
 	};
 };

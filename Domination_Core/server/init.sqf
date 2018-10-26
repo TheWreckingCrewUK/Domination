@@ -17,6 +17,10 @@ if(isNil "twc_basepos") then{
 	twc_basepos = getmarkerpos "base";
 };
 
+if(isNil "twc_activearty") then{
+	twc_activearty = 0;
+};
+
 if(isNil "customlocations") then{
 	customlocations = [];
 };

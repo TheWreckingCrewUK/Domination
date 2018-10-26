@@ -35,7 +35,7 @@ _stagepos = [_pos, 1000] call CBA_fnc_randPos;
 
 
 
-if (((random 1)< 0.2) && (( count(allPlayers - entities "HeadlessClient_F"))>6) && ((_enemy distance artyspawnpos) < 4500)) exitwith {
+if (((random 1)< 0.6) && (( count(allPlayers - entities "HeadlessClient_F"))>6) && ((_enemy distance artyspawnpos) < 4500) && (twc_activearty == 1)) exitwith {
 
 		twc_mortar_targetlist pushback (getpos _enemy);
 		publicVariable "twc_mortar_targetlist";
