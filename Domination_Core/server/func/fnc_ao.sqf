@@ -326,7 +326,7 @@ _jet flyInHeight  _flyalt;
 };
 
 artyspawnpos = [_spawnpos, 1500, 3000, 10, 0, 1, 0, [], [_spawnpos, _spawnpos]] call BIS_fnc_findSafePos;
-if ((random 1) < 0.4) then {
+if ((random 1) < 10.4) then {
 
 _attemptcount = 0;
 while{
@@ -349,6 +349,7 @@ for "_i" from 1 to twc_artycount do {
 	
 	 _group = createGroup East;  
  _vehicle = artyspawn createVehicle _artyspawnpos2;  
+ 
  twc_artyguns pushback _vehicle;
  //_driver = _group createUnit ["rhs_msv_rifleman", _artyspawnpos2,[], 0.3,"NONE"];  
  _gunner = _group createUnit ["rhs_msv_rifleman", _artyspawnpos2,[], 0.3,"NONE"];  
@@ -356,6 +357,14 @@ for "_i" from 1 to twc_artycount do {
  //_driver moveInDriver _vehicle;  
  _gunner moveInGunner _vehicle;
   
+ [_gunner, _vehicle] spawn {
+ params ["_gunner", "_vehicle"];
+	sleep 5;
+	if ((_gunner getVariable ["twc_mortar_walking", 0]) == 0) then {
+	_vehicle addEventHandler ["Fired", {
+		[_this select 6, _this select 7] call twc_fnc_mortarwalk_fnc_mortarwalk; }];
+	};
+};
  //_driver disableAI "AUTOTARGET";  
  _gunner disableAI "AUTOTARGET";
  _gunner disableAI "AUTOCOMBAT";
