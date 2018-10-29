@@ -326,7 +326,10 @@ _jet flyInHeight  _flyalt;
 };
 
 artyspawnpos = [_spawnpos, 1500, 3000, 10, 0, 1, 0, [], [_spawnpos, _spawnpos]] call BIS_fnc_findSafePos;
-if ((random 1) < 10.4) then {
+
+if (isnil "prevartyspawnpos") then {prevartyspawnpos = artyspawnpos;};
+
+if ((random 1) < 0.4) then {
 
 _attemptcount = 0;
 while{
@@ -437,9 +440,11 @@ deleteMarker "radioMarker";
 };
 
 [] call twc_fnc_getao;
-	waitUntil{!([artyspawnpos,1000] call twc_fnc_posNearPlayers)};
+	waitUntil{!([prevartyspawnpos,1000] call twc_fnc_posNearPlayers)};
 	{
 		
 		if ((twc_basepos distance _x) > 300) then {deleteVehicle _x};
-	}forEach (nearestObjects [artyspawnpos,["Man","Car","Tank","Air"],800]);
+	}forEach (nearestObjects [prevartyspawnpos,["Man","Car","Tank","Air","StaticWeapon"],800]);
+	sleep 10;
+	prevartyspawnpos = artyspawnpos;
 	

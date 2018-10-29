@@ -36,7 +36,13 @@ _channelNumber = getNumber (configFile >> "cfgVehicles" >> (typeOf player) >> "t
  
  if (typeof player in _armourcrew) then {
  
-	[player] remoteExec ["twc_fnc_crewcount", 2];
+	//[player] remoteExec ["twc_fnc_crewcount", 2];
+	
+	_crewcount = 0;
+
+	{if (typeof _x in _armourcrew) then {_crewcount = _crewcount + 1;}} foreach units group player;
+
+	group player setvariable ["armourcount", _crewcount, true];
 	
 	if ((["infantry", str (group player)] call BIS_fnc_inString)) then {
 		if ((group player getvariable ["twc_ismechanised", 0]) == 0) then {
@@ -45,6 +51,16 @@ _channelNumber = getNumber (configFile >> "cfgVehicles" >> (typeOf player) >> "t
 	};
 };
 
+if ((group player getvariable ["twc_ismechanised", 0]) == 1) then {
+	_crewcount = 0;
+
+	{if (typeof _x in _armourcrew) then {_crewcount = _crewcount + 1;}} foreach units group player;
+	group player setvariable ["armourcount", _crewcount, true];
+		if ((group player getvariable ["armourcount", 3]) == 0) then {
+			group player setvariable ["twc_ismechanised", 0, true];
+		};
+	
+};
 sleep 10;
 
 if ((random 1)< 0.1) then {
