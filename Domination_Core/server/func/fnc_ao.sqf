@@ -363,10 +363,8 @@ for "_i" from 1 to twc_artycount do {
  [_gunner, _vehicle] spawn {
  params ["_gunner", "_vehicle"];
 	sleep 5;
-	if ((_gunner getVariable ["twc_mortar_walking", 0]) == 0) then {
 	_vehicle addEventHandler ["Fired", {
 		[_this select 6, _this select 7] call twc_fnc_mortarwalk_fnc_mortarwalk; }];
-	};
 };
  //_driver disableAI "AUTOTARGET";  
  _gunner disableAI "AUTOTARGET";
