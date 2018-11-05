@@ -1,4 +1,4 @@
-if((typeOf player) in ["2000_British_SectionCommander","2000_British_SectionCommander_Desert","2000_British_2IC","2000_British_2IC_Desert"])then{
+if((typeOf player) in ["2000_British_SectionCommander","2000_British_SectionCommander_Desert","2000_British_2IC","2000_British_2IC_Desert","2000_British_SectionCommander_light","2000_British_SectionCommander_Desert_light","2000_British_2IC_light","2000_British_2IC_Desert_light"])then{
 
 	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Small Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallCrateUK2000.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;

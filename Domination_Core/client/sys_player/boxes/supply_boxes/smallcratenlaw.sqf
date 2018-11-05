@@ -17,5 +17,5 @@ clearMagazineCargoGlobal _box;
 clearitemCargoGlobal _box;
 
 //Weapons
-_box AddWeaponCargoGlobal ["Weapon_launch_NLAW_F",1];
+_box AddWeaponCargoGlobal ["launch_NLAW_F",2];
 

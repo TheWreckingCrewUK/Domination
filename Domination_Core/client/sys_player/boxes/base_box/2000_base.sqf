@@ -1,6 +1,6 @@
 
 //00's era kit
-if((typeOf player) in ["2000_British_SectionCommander","2000_British_SectionCommander_Desert"])then{
+if((typeOf player) in ["2000_British_SectionCommander","2000_British_SectionCommander_Desert","2000_British_SectionCommander_light","2000_British_SectionCommander_Desert_light"])then{
 
     _tmp_weapons =
     [
@@ -26,7 +26,7 @@ if((typeOf player) in ["2000_British_SectionCommander","2000_British_SectionComm
 	];
 };
 
-if((typeOf player) in ["2000_British_Rifleman","2000_British_Rifleman_Desert"])then{
+if((typeOf player) in ["2000_British_Rifleman","2000_British_Rifleman_Desert","2000_British_Rifleman_light","2000_British_Rifleman_Desert_light"])then{
 
     _tmp_weapons =
     [
@@ -48,7 +48,7 @@ if((typeOf player) in ["2000_British_Rifleman","2000_British_Rifleman_Desert"])t
 	];
 };
 
-if((typeOf player) in ["2000_British_Grenadier","2000_British_Grenadier_Desert"])then{
+if((typeOf player) in ["2000_British_Grenadier","2000_British_Grenadier_Desert","2000_British_Grenadier_light","2000_British_Grenadier_Desert_light"])then{
 
     _tmp_weapons =
     [
@@ -70,7 +70,7 @@ if((typeOf player) in ["2000_British_Grenadier","2000_British_Grenadier_Desert"]
 	];
 };
 
-if((typeOf player) in ["2000_British_Gunner","2000_British_Gunner_Desert"])then{
+if((typeOf player) in ["2000_British_Gunner","2000_British_Gunner_Desert","2000_British_Gunner_light","2000_British_Gunner_Desert_light"])then{
 
     _tmp_weapons =
     [
@@ -90,7 +90,7 @@ if((typeOf player) in ["2000_British_Gunner","2000_British_Gunner_Desert"])then{
 	];
 };
 
-if((typeOf player) in ["2000_British_2IC","2000_British_2IC_Desert"])then{
+if((typeOf player) in ["2000_British_2IC","2000_British_2IC_Desert","2000_British_2IC_light","2000_British_2IC_Desert_light"])then{
 
     _tmp_weapons =
     [
@@ -166,7 +166,7 @@ if((typeOf player) in ["2000_British_mg_assistant","2000_British_mg_assistant_De
 	];
 };
 
-if((typeOf player) in ["2000_British_Medic","2000_British_Medic_Desert"])then{
+if((typeOf player) in ["2000_British_Medic","2000_British_Medic_Desert","2000_British_Medic_light","2000_British_Medic_Desert_light"])then{
 
     _tmp_weapons =
     [

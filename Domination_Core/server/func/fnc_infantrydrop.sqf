@@ -101,10 +101,11 @@
 			
 		_Cargo = [];
 		_helitype = "RHS_Mi24V_UPK23_vdv";
-		
+	/*	
 		if ((_num) > 0.3) then {
 			_helitype = "RHS_Mi24P_vvsc";
 		};
+		*/
 		_plane = createVehicle [_helitype, (([_spawnPos, 200] call CBA_fnc_randPos) vectoradd [0,0,500]), [], 0, "FLY"]; 
 
 		_dir = ([_plane, _enemy] call BIS_fnc_relativeDirTo);

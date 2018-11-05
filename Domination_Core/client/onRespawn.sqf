@@ -1,5 +1,4 @@
 
-
 if (["interpreter", typeof player] call BIS_fnc_inString) then {
 	twc_terp = player;
 	publicvariable "twc_terp";
@@ -61,7 +60,7 @@ if ((group player getvariable ["twc_ismechanised", 0]) == 1) then {
 		};
 	
 };
-sleep 10;
+sleep 5;
 
 if ((random 1)< 0.1) then {
 	if (( count(allPlayers - entities "HeadlessClient_F"))>6) then {
