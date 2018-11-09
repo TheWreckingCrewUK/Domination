@@ -26,9 +26,9 @@ apc = ["CUP_O_BTR60_TK", "CUP_O_BRDM2_TKA"];
 
 aa = ["CUP_O_BMP2_ZU_TKA", "CUP_O_ZSU23_SLA"];
 
-twc_tankcount = 4 + (random 5);
-twc_apccount = 2 + (random 3);
-twc_ifvcount = 4 + (random 5);
+twc_tankcount = 2 + (random 3);
+twc_apccount = 2 + (random 2);
+twc_ifvcount = 2 + (random 2);
 twc_infcount = 0;
 twc_aainfcount = 0;
 
