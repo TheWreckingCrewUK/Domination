@@ -765,7 +765,7 @@ TWC_fnc_checkVehicleSlot = {
 
 					} else {
 								if (((typeof vehicle _playerUnit)) in twc_fullvehicles) then {
-								[_currentSeat, _slotsAndRoles] execvm "domination_core\client\sys_restrict\fullvehicle.sqf"; };
+								[_currentSeat, _slotsAndRoles, (vehicle _playerUnit)] execvm "domination_core\client\sys_restrict\fullvehicle.sqf"; };
 						if (typename _count == "SCALAR") then {
 							if (_count > _currentcount) then {
 								[_playerUnit, _count, _currentcount, "low"] call TWC_fnc_notenoughplayers;

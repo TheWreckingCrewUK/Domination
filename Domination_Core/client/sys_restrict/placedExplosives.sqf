@@ -11,6 +11,7 @@
 		hint "You Cannot place explosives this close to base";
 	};
 	
+	if ((_exp iskindof "pipebombbase"))exitwith {};
 	
 	_marker = createMarker [format ["%1", _exp], getpos _exp];
 	_marker setMarkerType "mil_triangle";
@@ -24,7 +25,7 @@
 			_pos = getpos _exp;
 			
 			waituntil {!alive _exp};
-			
+			sleep 7200;
 			deletemarker format ["%1", _exp];
 			
 			_marker = createMarker [format ["%1", _pos], _pos];

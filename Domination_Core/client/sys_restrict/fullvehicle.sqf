@@ -1,4 +1,4 @@
-params ["_checkedseat", "_roles"];
+params ["_checkedseat", "_roles", "_vehicle"];
 
 
 
@@ -42,7 +42,7 @@ _takenslots = fullcrew vehicle player;
 	
 	//waits until crew positions aren't filled before doing anything proper. dumb script because fullcrew can't filter multiple types
 	waituntil {(count _restrictedslots > ((count fullCrew [vehicle player, "driver"]) + (count fullCrew [vehicle player, "commander"]) + (count fullCrew [vehicle player, "gunner"]) + (count fullCrew [vehicle player,"turret"]) - _stryker)
-	) && (gunner vehicle player == player)
+	) && ((gunner vehicle player == player) || (_vehicle isKindOf "air";))
 	};
 	
 
@@ -93,4 +93,4 @@ cutText ["","Black IN",0.001];
 twc_fullrestrictactive = 0;
 sleep 1;
 
-[_checkedseat, _roles] execvm "Domination_Core\client\sys_restrict\fullvehicle.sqf";
+[_checkedseat, _roles, _vehicle] execvm "Domination_Core\client\sys_restrict\fullvehicle.sqf";

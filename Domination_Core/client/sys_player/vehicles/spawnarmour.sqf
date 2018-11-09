@@ -31,10 +31,6 @@ publicVariable "twc_armourcount";
 			group player setvariable ["twc_ismechanised", 0, true];
 		};
 
-clearWeaponCargoGlobal _veh;
-clearBackpackCargoGlobal _veh;
-clearMagazineCargoGlobal _veh;
-clearitemCargoGlobal _veh;
 
 _boxaction = ["deleteCreate","Return Vehicle","",{deleteVehicle this;
 

@@ -2,6 +2,11 @@
 
 */
 
+clearWeaponCargoGlobal _veh;
+clearBackpackCargoGlobal _veh;
+clearMagazineCargoGlobal _veh;
+clearitemCargoGlobal _veh;
+
 //rosomak, polish APC
 if (typeof _veh == "B_APC_Wheeled_01_cannon_F") then {
 
