@@ -54,14 +54,16 @@ _wp = _group1 addwaypoint [_stagepos , 500];
 				_tank setpos (_plane getRelPos [50, getdir _plane - 180]);
 				_tank setposatl [(getpos _tank select 0),(getpos _tank select 1),(getpos _plane select 2)];
 				
-				
+				_tank setVehicleLock "lockedplayer";
 				_group = createGroup East; 
 				
 				 _driver = _group createUnit ["CUP_O_RU_Crew_EMR", [0,0,0],[], 0.3,"NONE"];  
 				 _gunner = _group createUnit ["CUP_O_RU_Crew_EMR", [0,0,0],[], 0.3,"NONE"];  
 				  
 				 _driver moveInDriver _tank;  
-				 _gunner moveInGunner _tank;  
+				 _gunner moveInGunner _tank; 
+				_tank addEventHandler ["Fired", {
+					[_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk_fnc_gunwalk; }]; 
 				sleep 1;
 				_tank call KK_fnc_paraDrop;
 					

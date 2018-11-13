@@ -57,7 +57,7 @@ _num = random 1;
 //making only airdrops for the moment because land pathfinding sucks
 _landorair = 1;
 
-if (((!(["90", twc_missionname] call BIS_fnc_inString)) || (!(["00", twc_missionname] call BIS_fnc_inString))) && ((random 1) < 0.2)) exitwith {
+if (((!(["90", twc_missionname] call BIS_fnc_inString)) && (!(["00", twc_missionname] call BIS_fnc_inString))) && ((random 1) < 0.2)) exitwith {
 
 	[_spawnpos, _enemy, _stagepos, _targetlist] spawn twc_fnc_infantrydrop_heavy;
 };
