@@ -63,7 +63,7 @@ _wp = _group1 addwaypoint [_stagepos , 500];
 				 _driver moveInDriver _tank;  
 				 _gunner moveInGunner _tank; 
 				_tank addEventHandler ["Fired", {
-					[_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk_fnc_gunwalk; }]; 
+					[_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk; }]; 
 				sleep 1;
 				_tank call KK_fnc_paraDrop;
 					

@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6394.6714,178.42429,7082.4985};
-		dir[]={0.45390344,-0.87750763,-0.15564254};
-		up[]={0.83001727,0.47966459,-0.28461462};
-		aside[]={-0.32440352,-4.1909516e-009,-0.94607443};
+		pos[]={6571.4385,42.981533,6831.9644};
+		dir[]={0.69094121,-0.31882083,-0.64881742};
+		up[]={0.23242879,0.94780719,-0.21825807};
+		aside[]={-0.68454081,2.9057264e-007,-0.72898328};
 	};
 };
 binarizationWanted=0;
@@ -19418,7 +19418,7 @@ class Mission
 			flags=2;
 			class Attributes
 			{
-				init="call{if (!isserver) exitwith{}; CRAMPRESENT = 1; publicVariable ""crampresent"";this attachto [cramtruck]}";
+				init="call{if (!isserver) exitwith{}; CRAMPRESENT = 1; publicVariable ""crampresent"";this attachto [cramtruck];this setObjectTextureGlobal [0, ""uk3cb_baf_equipment\backpacks\data\backpack_oli_co.paa""];this setObjectTextureGlobal [1, ""uk3cb_baf_equipment\backpacks\data\backpack_oli_co.paa""]}";
 				name="cram";
 				reportRemoteTargets=1;
 				receiveRemoteTargets=1;

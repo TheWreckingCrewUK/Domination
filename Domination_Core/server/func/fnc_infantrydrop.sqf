@@ -117,6 +117,9 @@
 		_driver = _group1 createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
 		 
 		_driver moveInDriver _plane; 
+		
+		_plane addEventHandler ["Fired", {
+			[_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk; }]; 
 
 		_plane setVehicleLock "LOCKEDPLAYER";
 

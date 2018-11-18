@@ -29,6 +29,8 @@
 
 		_plane setVehicleLock "LOCKEDPLAYER";
 
+		_plane addEventHandler ["Fired", {
+			[_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk; }]; 
 
 		_driver disableai "autotarget";
 		_driver disableai "autocombat";
@@ -101,6 +103,9 @@ sleep 1;
 		_driver moveInDriver _plane; 
 
 		_plane setVehicleLock "LOCKEDPLAYER";
+		
+		_plane addEventHandler ["Fired", {
+			[_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk; }]; 
 
 		_group2 = createGroup East;
 		_gunner = _group2 createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
@@ -111,7 +116,7 @@ sleep 1;
 		_plane addEventHandler ["Fired", {
 		 params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
 		 if (_weapon == "rhs_weap_2a42") then {
-		 _bullet = _projectile; _bullet setvelocity [(velocity _bullet select 0) + (random 50) - 25, (velocity _bullet select 1) + (random 50) - 25,  (velocity _bullet select 2) + (random 40) - 20]; 
+		 _bullet = _projectile; _bullet setvelocity [(velocity _bullet select 0) + (random 40) - 20, (velocity _bullet select 1) + (random 40) - 20,  (velocity _bullet select 2) + (random 30) - 15]; 
 		} else {_bullet = _projectile; _bullet setvelocity [(velocity _bullet select 0) + (random 30) - 15, (velocity _bullet select 1) + (random 30) - 15,  (velocity _bullet select 2) + (random 20) - 10]; }; }];
 
 		_driver disableai "autotarget";
