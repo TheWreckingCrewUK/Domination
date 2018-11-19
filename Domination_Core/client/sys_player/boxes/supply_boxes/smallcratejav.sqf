@@ -36,6 +36,7 @@ clearMagazineCargoGlobal _box;
 clearitemCargoGlobal _box;
 
 //Weapons
+_box AddWeaponCargoGlobal ["UK3CB_BAF_Javelin_Slung_Tube",1];
 
 _box AddWeaponCargoGlobal ["UK3CB_BAF_Javelin_CLU",1];
 
