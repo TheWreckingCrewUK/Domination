@@ -17,6 +17,9 @@ if((typeOf player) in ["Modern_pol_commander","Modern_pol_commander_d", "Modern_
 
 	_UKaction5 = ["SpawnmedCreate","Spawn ZSU GAZ","",{execvm "domination_core\client\sys_player\vehicles\specveh_pol.sqf"},{(count units group player) >= 6}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction5,true] call ace_interact_menu_fnc_addActionToClass;	
+
+	_UKaction5 = ["SpawnmedCreate","Spawn Cargo Truck","",{execvm "domination_core\client\sys_player\vehicles\cargoveh_pol.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction5,true] call ace_interact_menu_fnc_addActionToClass;	
 	
 	
 	
@@ -25,6 +28,9 @@ if((typeOf player) in ["Modern_pol_commander","Modern_pol_commander_d", "Modern_
 	
 			_artaction3 = ["SpawnrepCreate","Spawn Marksman Rifle","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\marksmancratepol.sqf"},{(count units group player) >= 8}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_artaction3,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_alphaaction = ["SpawnsmallAlphaCreate","Spawn TOW Launcher","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallcratetow.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;
 	
 };
 

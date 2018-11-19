@@ -58,7 +58,8 @@
  if (typeOf vehicle player in ["Modern_pol_grenadier", "Modern_pol_grenadier_d"]) then {
     _tmp_weapons =
     [
-        ["twc_ak74_gp25_pol",1]
+        ["twc_ak74_gp25_pol",1],
+        ["rhs_weap_rpg75",1]
     ];
 
 	_tmp_magazines =
@@ -134,6 +135,7 @@
     _tmp_weapons =
     [
         ["ACE_Vector",1],
+        ["rhs_weap_rpg75",1],
         ["twc_ak74_pol_2",1]
     ];
 
@@ -162,6 +164,7 @@
     _tmp_weapons =
     [
         ["ACE_Vector",1],
+        ["rhs_weap_rpg75",1],
         ["twc_ak74_pol_2",1]
     ];
 

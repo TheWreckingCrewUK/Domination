@@ -1,29 +1,26 @@
-/*
-*    TWC public sevrer
-*   Sling loadable ammo crates
-*
-*  Paddock Change all ammo boxes to have the correct ammo and weapons
-*
-*
-*/
+ _spawnpos = getpos AmmoBoxSpawner;
+ 
+ 
 
-_boxClass = "ACE_Box_Ammo";
+ 
+ 
+ _veh = "rhs_kamaz5350_msv" createvehicle _spawnpos;  
+  
+ 
+ 
 
-_box = _boxClass createVehicle (if (count (player nearobjects ["Land_InfoStand_V1_F", 200]) > 0) then {
-(getPos AmmoBoxSpawner)} else 
-{(getPos player)});
+clearWeaponCargoGlobal _veh;
+clearBackpackCargoGlobal _veh;
+clearMagazineCargoGlobal _veh;
+clearitemCargoGlobal _veh;
 
-clearWeaponCargoGlobal _box;
-clearBackpackCargoGlobal _box;
-clearMagazineCargoGlobal _box;
-clearitemCargoGlobal _box;
+_title  = "<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>Vehicle Spawner</t>"; 
 
-//Weapons
+ _text1 =  "<br />The Vehicle Has Been Spawned.";
+_spawntext = parsetext (_title + _text1);
+hint _spawntext;
 
-//supplies
-
-
-
+_box = _veh;
 _box AddWeaponCargoGlobal ["rhs_weap_rpg75",3];
 
 _box AddMagazineCargoGlobal ["twc_rhsgref_30rnd_556x45_m21",30];
@@ -54,4 +51,10 @@ _box addItemCargoGlobal ["HandGrenade",5];
 _box addItemCargoGlobal ["SmokeShell",5];
 _box addItemCargoGlobal ["SmokeShellRed",2];
 
-[player, _box] call ace_cargo_fnc_startLoadIn;
+
+_boxaction = ["deleteCreate","Return Vehicle","",{deleteVehicle this;
+
+ twc_specvehcount = 0;
+ publicVariable "twc_specvehcount";
+},{(count (player nearobjects ["Land_InfoStand_V1_F", 200]) > 0)}] call ace_interact_menu_fnc_createAction;
+[_veh,0,["ACE_MainActions"],_boxaction] call ace_interact_menu_fnc_addActionToobject;

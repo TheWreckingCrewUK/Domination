@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={16509.654,97.665382,3160.9714};
-		dir[]={0.15697134,-0.46573219,0.87104571};
-		up[]={0.082646124,0.8847962,0.45861343};
-		aside[]={0.98423761,-1.8348219e-006,-0.17736901};
+		pos[]={16518.229,102.77663,3165.7573};
+		dir[]={-0.36546937,-0.55234694,0.74940789};
+		up[]={-0.2422161,0.83346921,0.49667096};
+		aside[]={0.89889532,-1.8452993e-006,0.43837124};
 	};
 };
 binarizationWanted=0;
@@ -971,6 +971,25 @@ class Mission
 			{
 				class Attribute0
 				{
+					property="twc_ModuleMission_specialIntro";
+					expression="_this setVariable ['specialIntro',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute1
+				{
 					property="twc_ModuleMission_zuesObjects";
 					expression="_this setVariable ['zuesObjects',_value,true];";
 					class Value
@@ -988,7 +1007,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute1
+				class Attribute2
 				{
 					property="twc_ModuleMission_era";
 					expression="_this setVariable ['era',_value,true];";
@@ -1007,7 +1026,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute2
+				class Attribute3
 				{
 					property="twc_ModuleMission_safeZone";
 					expression="_this setVariable ['safeZone',_value,true];";
@@ -1026,7 +1045,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute3
+				class Attribute4
 				{
 					property="twc_ModuleMission_boatSafety";
 					expression="_this setVariable ['boatSafety',_value,true];";
@@ -1045,7 +1064,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute4
+				class Attribute5
 				{
 					property="twc_ModuleMission_civilianEquipment";
 					expression="_this setVariable ['civilianEquipment',_value,true];";
@@ -1064,7 +1083,26 @@ class Mission
 						};
 					};
 				};
-				class Attribute5
+				class Attribute6
+				{
+					property="twc_ModuleMission_disableIntro";
+					expression="_this setVariable ['disableIntro',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute7
 				{
 					property="twc_ModuleMission_disconectGear";
 					expression="_this setVariable ['disconectGear',_value,true];";
@@ -1083,7 +1121,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute6
+				class Attribute8
 				{
 					property="twc_ModuleMission_enabled";
 					expression="_this setVariable ['enabled',_value,true];";
@@ -1102,7 +1140,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute7
+				class Attribute9
 				{
 					property="twc_ModuleMission_run";
 					expression="_this setVariable ['run',_value,true];";
@@ -1121,7 +1159,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute8
+				class Attribute10
 				{
 					property="twc_ModuleMission_deadBodies";
 					expression="_this setVariable ['deadBodies',_value,true];";
@@ -1140,7 +1178,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute9
+				class Attribute11
 				{
 					property="twc_ModuleMission_rollSleeves";
 					expression="_this setVariable ['rollSleeves',_value,true];";
@@ -1159,7 +1197,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute10
+				class Attribute12
 				{
 					property="twc_ModuleMission_nightGear";
 					expression="_this setVariable ['nightGear',_value,true];";
@@ -1178,7 +1216,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=11;
+				nAttributes=13;
 			};
 		};
 		class Item12
@@ -8662,7 +8700,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[""UK3CB_BAF_Javelin_Slung_Tube"",""FirstAidKit""],[1,4]],[[""UK3CB_BAF_762_200Rnd_T"",""UK3CB_BAF_32Rnd_40mm_G_Box""],[6,6]],[[],[]],[[],[]]],false]";
+							value="[[[[""FirstAidKit""],[4]],[[""UK3CB_BAF_762_200Rnd_T"",""UK3CB_BAF_32Rnd_40mm_G_Box""],[6,6]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -8741,7 +8779,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[""UK3CB_BAF_Javelin_Slung_Tube"",""FirstAidKit""],[1,4]],[[""UK3CB_BAF_762_200Rnd_T"",""UK3CB_BAF_32Rnd_40mm_G_Box""],[6,6]],[[],[]],[[],[]]],false]";
+							value="[[[[""FirstAidKit""],[4]],[[""UK3CB_BAF_762_200Rnd_T"",""UK3CB_BAF_32Rnd_40mm_G_Box""],[6,6]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};
@@ -8870,7 +8908,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={16527.123,85.168884,3194.0461};
+				position[]={16527.123,85.168884,3194.0459};
 			};
 			side="Empty";
 			flags=4;
@@ -8897,7 +8935,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[""UK3CB_BAF_Javelin_Slung_Tube"",""FirstAidKit""],[1,4]],[[""UK3CB_BAF_762_200Rnd_T"",""UK3CB_BAF_127_100Rnd""],[6,6]],[[],[]],[[],[]]],false]";
+							value="[[[[""FirstAidKit""],[4]],[[""UK3CB_BAF_762_200Rnd_T"",""UK3CB_BAF_127_100Rnd""],[6,6]],[[],[]],[[],[]]],false]";
 						};
 					};
 				};

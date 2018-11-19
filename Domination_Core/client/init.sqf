@@ -6,6 +6,8 @@
 
 twc_fnc_crewcount = compile preprocessfilelinenumbers "Domination_Core\server\sys_mechanised\crewcount.sqf";
 
+twc_fnc_aps = compile preprocessfilelinenumbers "Domination_Core\client\func\fn_APS.sqf";
+
 if (isNil "fixedWingPilots") then {
 	fixedWingPilots = ["Modern_British_JetPilot"];
 };
@@ -26,3 +28,8 @@ player addEventHandler ["Hit", {[] spawn {if !(vehicle player == player) exitwit
 if (!(["infantry", str (group player)] call BIS_fnc_inString)) then {
 execvm "domination_core\client\sys_restrict\attachmentcount.sqf" 
 };
+
+player addEventHandler ["Fired", {
+	params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
+	if (_weapon isKindOf ["Launcher", configFile >> "CfgWeapons"]) then {[_projectile] call twc_fnc_aps};
+}];

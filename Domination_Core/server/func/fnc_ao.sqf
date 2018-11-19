@@ -14,6 +14,14 @@ twc_areaCleared = 0;
 twc_towerCount = 0;
 
 
+if(isNil "twc_hasaps") then{
+	twc_hasaps = ["rhs_t90a_tv"];
+};
+
+if(isNil "twc_APS_list") then{
+	twc_APS_list = [];
+};
+
 if(isNil "twc_tankcount") then{
 	twc_tankcount = random 3;
 };
@@ -125,7 +133,12 @@ for "_i" from 1 to twc_tankcount do { _pos2= [_pos, 200] call CBA_fnc_randPos;
   
  _driver moveInDriver _vehicle;  
  _gunner moveInGunner _vehicle;  
- _commander moveInCommander _vehicle;  
+ _commander moveInCommander _vehicle; 
+
+if (_tank in twc_hasaps) then {
+	twc_APS_list pushback _vehicle;
+	publicVariable "twc_APS_list";
+};
  
 _vehicle addEventHandler ["Fired", {
 	[_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk; }];
