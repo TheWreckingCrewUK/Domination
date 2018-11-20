@@ -15,7 +15,7 @@ twc_towerCount = 0;
 
 
 if(isNil "twc_hasaps") then{
-	twc_hasaps = ["rhs_t90a_tv"];
+	twc_hasaps = ["rhs_t90a_tv", "rhs_t72be_tv"];
 };
 
 if(isNil "twc_APS_list") then{
