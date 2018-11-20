@@ -18,7 +18,7 @@ squad = (configfile >> "CfgGroups" >> "East" >> "rhs_faction_msv" >> "rhs_group_
 if (isNil "squadAT") then {
 squadAT = (configfile >> "CfgGroups" >> "East" >> "rhs_faction_msv" >> "rhs_group_rus_msv_infantry_emr" >> "rhs_group_rus_msv_infantry_emr_section_AT");
 };
-
+ 
 if (isNil "squadAA") then {
 squadAA = (configfile >> "CfgGroups" >> "East" >> "rhs_faction_msv" >> "rhs_group_rus_msv_infantry_emr" >> "rhs_group_rus_msv_infantry_emr_section_AA");
 };
