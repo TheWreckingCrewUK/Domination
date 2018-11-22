@@ -22,6 +22,10 @@ if(isNil "twc_APS_list") then{
 	twc_APS_list = [];
 };
 
+if(isNil "twc_nonAPS_list") then{
+	twc_nonAPS_list = [];
+};
+
 if(isNil "twc_tankcount") then{
 	twc_tankcount = random 3;
 };
@@ -138,6 +142,10 @@ for "_i" from 1 to twc_tankcount do { _pos2= [_pos, 200] call CBA_fnc_randPos;
 if (_tank in twc_hasaps) then {
 	twc_APS_list pushback _vehicle;
 	publicVariable "twc_APS_list";
+} else {
+	
+	twc_nonAPS_list pushback _vehicle;
+	publicVariable "twc_nonAPS_list";
 };
 
 //T72B3's are killing their gunners on spawn for some reason
