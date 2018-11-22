@@ -12,7 +12,7 @@ if ((isnil "twc_APS_list") && (isnil "twc_nonAPS_list")) exitwith {};
 
 if (((count twc_APS_list) == 0) && ((count twc_nonAPS_list) == 0)) exitwith {};
 //systemchat "start";
-/*
+
 twc_smokegen = {[(_this select 0), "rhs_weap_smokegen"] call BIS_fnc_fire;};
 
 twc_smoketurret = {[(_this select 0), "rhs_weap_902a"] call BIS_fnc_fire;
@@ -23,11 +23,6 @@ _pos = getpos (_this select 0);
 _pos = [getpos (_this select 0), 20, 200, 10, 0, 1, 0, [], [getpos (_this select 0), getpos (_this select 0)]] call BIS_fnc_findSafePos;
 (driver (_this select 0)) domove _pos;
 };
-
-[[_x],twc_smokegen] remoteExec ["bis_fnc_call", 2];
-[[_x],twc_smoketurret] remoteExec ["bis_fnc_call", 2];
-[[_x],twc_panictank] remoteExec ["bis_fnc_call", 2];
-*/
 
 {
 	[_rocket, _x] spawn {
@@ -62,14 +57,11 @@ _pos = [getpos (_this select 0), 20, 200, 10, 0, 1, 0, [], [getpos (_this select
 							params ["_x"];
 							//systemchat "oh snap it's a rocket";
 							sleep 1.5;
-							[_x, "rhs_weap_902a"] call BIS_fnc_fire;
-							[_x, "rhs_weap_902b"] call BIS_fnc_fire;
+							[[_x],twc_smoketurret] remoteExec ["bis_fnc_call", 2];
 							sleep 1;
-							[_x, "rhs_weap_smokegen"] call BIS_fnc_fire;
+							[[_x],twc_smokegen] remoteExec ["bis_fnc_call", 2];
 							sleep 2;
-							_pos = getpos _x;
-							_pos = [getpos _x, 20, 200, 10, 0, 1, 0, [], [getpos _x, getpos _x]] call BIS_fnc_findSafePos;
-							(driver _x) domove _pos;
+							[[_x],twc_panictank] remoteExec ["bis_fnc_call", 2];
 						};
 					};
 				};
@@ -93,16 +85,14 @@ _pos = [getpos (_this select 0), 20, 200, 10, 0, 1, 0, [], [getpos (_this select
 							sleep (random 5);
 							//the canisters can be mashed but the generator can't, so have a timer in there so that GMG spam doesn't spam smoke. No need to broadcast
 							if ((_x getvariable ["twc_lastsmokegen",0]) < (time + 6)) then {
-								[_x, "rhs_weap_smokegen"] call BIS_fnc_fire;
+								[[_x],twc_smokegen] remoteExec ["bis_fnc_call", 2];
 								_x setvariable ["twc_lastsmokegen",time];
 							};
 						};
 					} else {
 						waituntil {(!alive _rocket)};
 						sleep 2;
-						_pos = getpos _x;
-						_pos = [getpos _x, 20, 200, 10, 0, 1, 0, [], [getpos _x, getpos _x]] call BIS_fnc_findSafePos;
-						(driver _x) domove _pos;
+						[[_x],twc_panictank] remoteExec ["bis_fnc_call", 2];
 					};
 				};
 			};
@@ -143,14 +133,11 @@ _pos = [getpos (_this select 0), 20, 200, 10, 0, 1, 0, [], [getpos (_this select
 							params ["_x"];
 							//systemchat "oh snap it's a rocket";
 							sleep 1.5;
-							[_x, "rhs_weap_902a"] call BIS_fnc_fire;
-							[_x, "rhs_weap_902b"] call BIS_fnc_fire;
+							[[_x],twc_smoketurret] remoteExec ["bis_fnc_call", 2];
 							sleep 1;
-							[_x, "rhs_weap_smokegen"] call BIS_fnc_fire;
+							[[_x],twc_smokegen] remoteExec ["bis_fnc_call", 2];
 							sleep 2;
-							_pos = getpos _x;
-							_pos = [getpos _x, 20, 200, 10, 0, 1, 0, [], [getpos _x, getpos _x]] call BIS_fnc_findSafePos;
-							(driver _x) domove _pos;
+							[[_x],twc_panictank] remoteExec ["bis_fnc_call", 2];
 						};
 					};
 				};
@@ -178,8 +165,7 @@ _pos = [getpos (_this select 0), 20, 200, 10, 0, 1, 0, [], [getpos (_this select
 							[_x] spawn {
 								params ["_x"];
 								sleep 0.7;
-								[_x, "rhs_weap_902a"] call BIS_fnc_fire;
-								[_x, "rhs_weap_902b"] call BIS_fnc_fire;
+								[[_x],twc_smoketurret] remoteExec ["bis_fnc_call", 2];
 							};
 						};
 						
@@ -189,10 +175,9 @@ _pos = [getpos (_this select 0), 20, 200, 10, 0, 1, 0, [], [getpos (_this select
 							[_x] spawn {
 								params ["_x"];
 								sleep 2;
-								[_x, "rhs_weap_smokegen"] call BIS_fnc_fire;
+								[[_x],twc_smokegen] remoteExec ["bis_fnc_call", 2];
 								sleep 2;
-								_pos = [getpos _x, 20, 200, 10, 0, 1, 0, [], [getpos _x, getpos _x]] call BIS_fnc_findSafePos;
-								(driver _x) domove _pos;
+								[[_x],twc_panictank] remoteExec ["bis_fnc_call", 2];
 							};
 						};
 						
@@ -240,8 +225,7 @@ _pos = [getpos (_this select 0), 20, 200, 10, 0, 1, 0, [], [getpos (_this select
 								//if the APS fails, driver nopes out of there
 									if ((!((driver _x) == objnull)) && (alive (driver _x))) then {
 										sleep 2;
-										_pos = [getpos _x, 20, 200, 10, 0, 1, 0, [], [getpos _x, getpos _x]] call BIS_fnc_findSafePos;
-										(driver _x) domove _pos;
+										[[_x],twc_panictank] remoteExec ["bis_fnc_call", 2];
 									};
 								};
 							};
