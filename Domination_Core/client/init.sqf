@@ -31,5 +31,5 @@ execvm "domination_core\client\sys_restrict\attachmentcount.sqf"
 
 player addEventHandler ["Fired", {
 	params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
-	if (_weapon isKindOf ["LauncherCore", configFile >> "CfgWeapons"]) then {[_projectile] call twc_fnc_aps};
+	if ((_ammo isKindOf ["GrenadeCore", configFile >> "CfgAmmo"]) || (_ammo isKindOf ["RocketCore", configFile >> "CfgAmmo"]) || (_ammo isKindOf ["MissileCore", configFile >> "CfgAmmo"]) || (_ammo isKindOf ["G_40mm_Smoke", configFile >> "CfgAmmo"])) then {[_projectile] call twc_fnc_aps};
 }];

@@ -127,18 +127,30 @@ for "_i" from 1 to twc_tankcount do { _pos2= [_pos, 200] call CBA_fnc_randPos;
  _group = createGroup East;  
  _vehicle = _tank createVehicle _spawnPos;  
  
- _driver = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];  
- _gunner = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];  
- _commander = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];  
-  
+ _driver = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos vectoradd [0,0,200],[], 0.3,"NONE"];  
  _driver moveInDriver _vehicle;  
+ _gunner = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos vectoradd [0,0,200],[], 0.3,"NONE"];  
  _gunner moveInGunner _vehicle;  
+ _commander = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos vectoradd [0,0,200],[], 0.3,"NONE"];  
  _commander moveInCommander _vehicle; 
+  
 
 if (_tank in twc_hasaps) then {
 	twc_APS_list pushback _vehicle;
 	publicVariable "twc_APS_list";
 };
+
+//T72B3's are killing their gunners on spawn for some reason
+[_vehicle] spawn {
+params ["_vehicle"];
+sleep 10;
+if ((gunner _vehicle) == objnull) then {
+systemchat "new gunner";
+ _gunner = _group createUnit ["CUP_O_RU_Crew_EMR", [0,0,200],[], 0.3,"NONE"];  
+ _gunner moveInGunner _vehicle;  
+};
+};
+
  
 _vehicle addEventHandler ["Fired", {
 	[_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk; }];
