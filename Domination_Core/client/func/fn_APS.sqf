@@ -18,10 +18,27 @@ twc_smokegen = {[(_this select 0), "rhs_weap_smokegen"] call BIS_fnc_fire;};
 twc_smoketurret = {[(_this select 0), "rhs_weap_902a"] call BIS_fnc_fire;
 [(_this select 0), "rhs_weap_902b"] call BIS_fnc_fire;};
 
+twc_revealtotank = {
+params ["_player", "_tank", "_amount"];
+	_tank reveal [_player, _amount];
+};
+
 twc_panictank = {
 _pos = getpos (_this select 0);
 _pos = [getpos (_this select 0), 20, 200, 10, 0, 1, 0, [], [getpos (_this select 0), getpos (_this select 0)]] call BIS_fnc_findSafePos;
 (driver (_this select 0)) domove _pos;
+};
+
+twc_tankclosedistance = {
+params ["_player", "_tank"];
+_pos = getpos _player;
+_dir = _tank getdir _player;
+_dis = _player distance _tank;
+
+_pos1 = _tank getRelPos [(_dis - (200 + random 300)), _dir];
+_movepos = getpos _player;
+_movepos = [_pos1, 20, 200, 10, 0, 1, 0, [], [_pos1, _pos1]] call BIS_fnc_findSafePos;
+(driver _tank) domove _movepos;
 };
 
 {
@@ -43,29 +60,41 @@ _pos = [getpos (_this select 0), 20, 200, 10, 0, 1, 0, [], [getpos (_this select
 			
 			//if it's far out and the turret is already pointed straight at it, fire the smoke early
 			
-			if ((_rocket distance _x) > 500) then {
-			
-			
-			if ((!(_gunner == objnull)) && (alive _gunner)) then {
-			
-				_dir = ((gunner _x) getreldir _rocket);
+			if ((_rocket distance _x) > 50) then {
 				
-				_rmod1 = ((_rocket distance _x) / 100) min 15;
+				_lr = 0;
+				if ((_rocket distance _x) > 600) then {
+					_lr = 1;
+				};
+				
+				
+				if ((!(_gunner == objnull)) && (alive _gunner)) then {
+				
+					_dir = ((gunner _x) getreldir _rocket);
 					
-					if ((_dir > (340 + _rmod1)) || (_dir < (20 - _rmod1))) then {
-						[_x] spawn {
-							params ["_x"];
-							//systemchat "oh snap it's a rocket";
-							sleep 1.5;
-							[[_x],twc_smoketurret] remoteExec ["bis_fnc_call", 2];
-							sleep 1;
-							[[_x],twc_smokegen] remoteExec ["bis_fnc_call", 2];
-							sleep 2;
-							[[_x],twc_panictank] remoteExec ["bis_fnc_call", 2];
+					_rmod1 = ((_rocket distance _x) / 100) min 15;
+						
+						if ((_dir > (340 + _rmod1)) || (_dir < (20 - _rmod1))) then {
+							[_x, _lr] spawn {
+								params ["_x", "_lr"];
+								//systemchat "oh snap it's a rocket";
+								sleep 1.5;
+								[[_x],twc_smoketurret] remoteExec ["bis_fnc_call", 2];
+								[[player, gunner _x, 4],twc_revealtotank] remoteExec ["bis_fnc_call", 2];
+								sleep 1;
+								[[_x],twc_smokegen] remoteExec ["bis_fnc_call", 2];
+								[[_x],twc_panictank] remoteExec ["bis_fnc_call", 2];
+								if (_lr == 1) then {
+									[_x] spawn {
+										params ["_x"];
+										sleep 10;
+										[[player, _x],twc_tankclosedistance] remoteExec ["bis_fnc_call", 2];
+									};
+								};
+							};
 						};
 					};
 				};
-			};
 			
 			if ((!(_gunner == objnull)) && (alive _gunner)) then {
 			
@@ -93,6 +122,7 @@ _pos = [getpos (_this select 0), 20, 200, 10, 0, 1, 0, [], [getpos (_this select
 						waituntil {(!alive _rocket)};
 						sleep 2;
 						[[_x],twc_panictank] remoteExec ["bis_fnc_call", 2];
+						[[player, gunner _x, 1.5],twc_revealtotank] remoteExec ["bis_fnc_call", 2];
 					};
 				};
 			};
@@ -120,6 +150,11 @@ _pos = [getpos (_this select 0), 20, 200, 10, 0, 1, 0, [], [getpos (_this select
 			
 			_gunner = gunner _x;
 			if ((_rocket distance _x) > 50) then {
+				
+				_lr = 0;
+				if ((_rocket distance _x) > 600) then {
+					_lr = 1;
+				};
 			
 			
 			if ((!(_gunner == objnull)) && (alive _gunner)) then {
@@ -129,15 +164,23 @@ _pos = [getpos (_this select 0), 20, 200, 10, 0, 1, 0, [], [getpos (_this select
 				_rmod1 = ((_rocket distance _x) / 100) min 15;
 					
 					if ((_dir > (340 + _rmod1)) || (_dir < (20 - _rmod1))) then {
-						[_x] spawn {
-							params ["_x"];
+						[_x, _lr] spawn {
+							params ["_x", "_lr"];
 							//systemchat "oh snap it's a rocket";
 							sleep 1.5;
 							[[_x],twc_smoketurret] remoteExec ["bis_fnc_call", 2];
+							[[player, gunner _x, 4],twc_revealtotank] remoteExec ["bis_fnc_call", 2];
 							sleep 1;
 							[[_x],twc_smokegen] remoteExec ["bis_fnc_call", 2];
 							sleep 2;
 							[[_x],twc_panictank] remoteExec ["bis_fnc_call", 2];
+							if (_lr == 1) then {
+								[_x] spawn {
+									params ["_x"];
+									sleep 10;
+									[[player, _x],twc_tankclosedistance] remoteExec ["bis_fnc_call", 2];
+								};
+							};
 						};
 					};
 				};
@@ -219,13 +262,14 @@ _pos = [getpos (_this select 0), 20, 200, 10, 0, 1, 0, [], [getpos (_this select
 										_airpos = getpos _rocket;
 										deletevehicle _rocket;
 										'rhs_ammo_ptb1500' createvehicle _airpos;
-										(gunner _x) reveal [player, 1.5];
+										[[player, gunner _x, 2],twc_revealtotank] remoteExec ["bis_fnc_call", 2];
 									};
 								} else {
 								//if the APS fails, driver nopes out of there
 									if ((!((driver _x) == objnull)) && (alive (driver _x))) then {
 										sleep 2;
 										[[_x],twc_panictank] remoteExec ["bis_fnc_call", 2];
+										[[player, gunner _x, 1.5],twc_revealtotank] remoteExec ["bis_fnc_call", 2];
 									};
 								};
 							};

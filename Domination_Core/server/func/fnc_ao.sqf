@@ -138,6 +138,7 @@ for "_i" from 1 to twc_tankcount do { _pos2= [_pos, 200] call CBA_fnc_randPos;
  _commander = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos vectoradd [0,0,200],[], 0.3,"NONE"];  
  _commander moveInCommander _vehicle; 
   
+  _vehicle setVehicleLock "LOCKEDPLAYER";
 
 if (_tank in twc_hasaps) then {
 	twc_APS_list pushback _vehicle;
@@ -190,6 +191,16 @@ for "_i" from 1 to twc_ifvcount do { _pos2= [_pos, 200] call CBA_fnc_randPos;
  _driver = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];  
  _gunner = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];   
   
+  
+if (_ifv in twc_hasaps) then {
+	twc_APS_list pushback _vehicle;
+	publicVariable "twc_APS_list";
+} else {
+	
+	twc_nonAPS_list pushback _vehicle;
+	publicVariable "twc_nonAPS_list";
+};
+  
  _driver moveInDriver _vehicle;  
  _gunner moveInGunner _vehicle;  
  _vehicle setVehicleLock "LOCKEDPLAYER";
@@ -218,6 +229,16 @@ for "_i" from 1 to twc_apccount do { _pos2= [_pos, 200] call CBA_fnc_randPos;
  
  _driver = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];  
  _gunner = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];   
+  
+   
+if (_apc in twc_hasaps) then {
+	twc_APS_list pushback _vehicle;
+	publicVariable "twc_APS_list";
+} else {
+	
+	twc_nonAPS_list pushback _vehicle;
+	publicVariable "twc_nonAPS_list";
+};
   
  _driver moveInDriver _vehicle;  
  _gunner moveInGunner _vehicle;  

@@ -19,7 +19,7 @@ publicVariable "twc_wdveh";
 //add in an object name and the game will create a location there and spawn enemies from it
 customlocations = [];
 
-tank = ["rhs_t72be_tv", "rhs_t80uk", "rhs_t90a_tv"];
+tank = ["rhs_t72be_tv", "rhs_t80um", "rhs_t90a_tv"];
 
 ifv = ["rhs_bmp2d_msv", "rhs_bmp1_msv"];
 
@@ -37,7 +37,14 @@ twc_ifvcount = 2 + random 2;
 twc_aacount = 1;
 twc_infcount = 2;
 twc_aainfcount = 1;
-
+/*
+twc_tankcount = 5;
+twc_apccount = 0;
+twc_ifvcount = 0;
+twc_aacount = 0;
+twc_infcount = 0;
+twc_aainfcount = 0;
+*/
 twc_aosToComplete = 3;
 twc_enemyFlag = "Faction_CUP_RU";
 twc_badAOs = ["airstrip","Krasnostav","Olsha"];
