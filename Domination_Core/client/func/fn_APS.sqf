@@ -140,6 +140,10 @@ _movepos = [_pos1, 20, 200, 10, 0, 1, 0, [], [_pos1, _pos1]] call BIS_fnc_findSa
 			twc_APS_list deleteat (twc_APS_list find _x);
 			publicVariable "twc_APS_list";
 		};
+		_sr = 0;
+		if ((_rocket distance _x) < 100) then {
+			_sr = 1;
+		};
 		
 		_dis1 = _x distance _rocket;
 		sleep 0.2;
@@ -164,7 +168,7 @@ _movepos = [_pos1, 20, 200, 10, 0, 1, 0, [], [_pos1, _pos1]] call BIS_fnc_findSa
 				_rmod1 = ((_rocket distance _x) / 100) min 15;
 					
 					if ((_dir > (340 + _rmod1)) || (_dir < (20 - _rmod1))) then {
-						[_x, _lr] spawn {
+						[_x, _lr,_sr] spawn {
 							params ["_x", "_lr"];
 							//systemchat "oh snap it's a rocket";
 							sleep 1.5;
@@ -240,29 +244,30 @@ _movepos = [_pos1, 20, 200, 10, 0, 1, 0, [], [_pos1, _pos1]] call BIS_fnc_findSa
 								_bang setdamage 1;
 								_x setvariable ["twc_aps_fired" + _charge, 1, true];
 								
-								waituntil {((_rocket distance _x) < 25) || (!alive _rocket) || (!alive _x)};
+								waituntil {((_rocket distance _x) < 30) || (!alive _rocket) || (!alive _x)};
 								
 								_c1 = (_x getRelPos [3, _hulldir]) vectoradd [0,0,3.5];
 								//_bang2 = createvehicle ["rhsusf_mine_m14_ammo", _c1, [], 0, "can_collide"];
 								//_bang2 setdamage 1;
 								_bang3 = createvehicle ["APERSMine_Range_Ammo", _c1, [], 0, "can_collide"];
 								_bang3 setdamage 1;
-								
+								sleep 0.1;
 								//systemchat "yep";
-								if ((random 1) < 0.5) then {
+								if (((random 1) < 0.5) && (_sr == 0)) then {
 									
 						
 									waituntil {((_rocket distance _x) < 20) || (!alive _rocket) || (!alive _x)};
 									
-									if (!alive _rocket) exitwith {};
-									if (!alive _x) then {
-										twc_APS_list deleteat (twc_APS_list find _x);
-										publicVariable "twc_APS_list";
-									} else {
-										_airpos = getpos _rocket;
-										deletevehicle _rocket;
-										'rhs_ammo_ptb1500' createvehicle _airpos;
-										[[player, gunner _x, 2],twc_revealtotank] remoteExec ["bis_fnc_call", 2];
+									if (alive _rocket) then {
+										if (!alive _x) then {
+											twc_APS_list deleteat (twc_APS_list find _x);
+											publicVariable "twc_APS_list";
+										} else {
+											_airpos = getpos _rocket;
+											deletevehicle _rocket;
+											'rhs_ammo_ptb1500' createvehicle _airpos;
+											[[player, gunner _x, 2],twc_revealtotank] remoteExec ["bis_fnc_call", 2];
+										};
 									};
 								} else {
 								//if the APS fails, driver nopes out of there
