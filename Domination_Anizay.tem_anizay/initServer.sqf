@@ -30,7 +30,7 @@ customlocations = [c_1, c_2, c_3, c_4, c_5];
 twc_tankcount = random 1;
 twc_apccount = 2 + (random 2);
 twc_ifvcount = random 2;
-twc_infcount = 3;
+twc_infcount = 1;
 twc_aainfcount = 1;
 
 twc_aosToComplete = 3;
