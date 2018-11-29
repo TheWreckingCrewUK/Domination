@@ -29,6 +29,7 @@ _box AddWeaponCargoGlobal ["rhs_weap_rpg75",3];
 _box AddMagazineCargoGlobal ["twc_rhsgref_30rnd_556x45_m21",30];
 _box AddMagazineCargoGlobal ["twc_rhsgref_30rnd_556x45_m21_t",10];
 
+_box AddMagazineCargoGlobal ["ACE_SpareBarrel",1];
 
 _box AddMagazineCargoGlobal ["rhs_rpg7_PG7VL_mag",3];
 _box AddMagazineCargoGlobal ["rhs_rpg7_TBG7V_mag",2];

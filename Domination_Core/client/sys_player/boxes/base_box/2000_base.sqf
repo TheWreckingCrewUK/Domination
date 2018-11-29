@@ -81,6 +81,7 @@ if((typeOf player) in ["2000_British_Gunner","2000_British_Gunner_Desert","2000_
    [            
 		["UK3CB_BAF_556_200Rnd",10],
 		["UK3CB_BAF_556_200Rnd_T",10],
+		["ACE_SpareBarrel",1],
 		["HandGrenade",5]
     ];
 
@@ -133,6 +134,7 @@ if((typeOf player) in ["2000_British_MachineGunner","2000_British_MachineGunner_
 		["UK3CB_BAF_762_200Rnd_T",10],
 		["UK3CB_BAF_762_100Rnd",10],
 		["UK3CB_BAF_762_100Rnd_T",10],
+		["ACE_SpareBarrel",1],
 		["HandGrenade",5]
     ];
 
@@ -157,6 +159,7 @@ if((typeOf player) in ["2000_British_mg_assistant","2000_British_mg_assistant_De
 		["UK3CB_BAF_762_200Rnd_T",10],
 		["UK3CB_BAF_762_100Rnd",10],
 		["UK3CB_BAF_762_100Rnd_T",10],
+		["ACE_SpareBarrel",1],
 		["HandGrenade",5]
     ];
 
@@ -422,25 +425,8 @@ if((typeOf player) in ["TWC_2000_US_Army_AutomaticRifleman"])then{
 	_tmp_magazines =
    [
 		["rhs_200rnd_556x45_B_SAW",20],
+		["ACE_SpareBarrel",1],
 		["rhs_200rnd_556x45_T_SAW",10]
-    ];
-
-	_tmp_items =
-	[
-		["ACRE_PRC148",1]
-	];
-};
-
-if((typeOf player) in ["TWC_2000_US_Army_AutomaticRifleman"])then{
-
-    _tmp_weapons =
-    [
-	];
-
-	_tmp_magazines =
-   [
-		["rhs_mag_30Rnd_556x45_M855_Stanag",20],
-		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",10]
     ];
 
 	_tmp_items =

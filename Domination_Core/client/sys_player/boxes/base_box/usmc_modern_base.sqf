@@ -160,6 +160,7 @@
     [
         ["rhsusf_100Rnd_556x45_soft_pouch",20],
 		["rhsusf_200Rnd_556x45_soft_pouch",10],
+		["ACE_SpareBarrel",1],
 		["rhs_mag_30Rnd_556x45_M855_Stanag",50],
 		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",20],
 		["HandGrenade",5]
@@ -188,6 +189,7 @@
     [
         ["rhs_mag_30Rnd_556x45_M855_Stanag",50],
 		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",20],
+		["ACE_SpareBarrel",1],
 		["rhsusf_100Rnd_556x45_soft_pouch",10],
 		["rhsusf_200Rnd_556x45_soft_pouch",10],
 		["HandGrenade",5]
@@ -214,6 +216,7 @@
     [
 		["rhsusf_100Rnd_762x51",20],
 		["rhsusf_100Rnd_762x51_m62_tracer",10],
+		["ACE_SpareBarrel",1],
         ["rhsusf_mag_7x45acp_MHP",15],
 		["HandGrenade",5]
     ];
@@ -240,6 +243,7 @@
     [
         ["rhs_mag_30Rnd_556x45_M855_Stanag",50],
 		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",20],
+		["ACE_SpareBarrel",1],
 		["rhsusf_100Rnd_762x51",10],
 		["rhsusf_100Rnd_762x51_m62_tracer",10],
 		["HandGrenade",5]

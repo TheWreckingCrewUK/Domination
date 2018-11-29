@@ -117,6 +117,7 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 		["UK3CB_BAF_556_200Rnd_T",10],
 		["rhsusf_mag_17Rnd_9x19_JHP",15],
 		["UK3CB_BAF_9_15Rnd",15],
+		["ACE_SpareBarrel",1],
 		["HandGrenade",5]
     ];
 
@@ -159,6 +160,7 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 		//GPMG
         ["UK3CB_BAF_762_100Rnd",20],
 		["UK3CB_BAF_762_100Rnd_T",10],
+		["ACE_SpareBarrel",1],
 		//Marksman
         ["UK3CB_BAF_762_L42A1_20Rnd",25],
 		["UK3CB_BAF_762_L42A1_20Rnd_T",10],	
@@ -193,6 +195,7 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
     [
         ["UK3CB_BAF_762_100Rnd",20],
 		["UK3CB_BAF_762_100Rnd_T",10],
+		["ACE_SpareBarrel",1],
 		["rhsusf_mag_17Rnd_9x19_JHP",15],
 		["UK3CB_BAF_9_15Rnd",15],
 		["HandGrenade",5]
@@ -508,6 +511,7 @@ if (typeOf vehicle player == "Modern_British_FSTCommander") then {
    [            
 		["UK3CB_BAF_556_200Rnd",20],
 		["UK3CB_BAF_556_200Rnd_T",10],
+		["ACE_SpareBarrel",1],
         ["rhsusf_mag_17Rnd_9x19_JHP",15]
     ];
 

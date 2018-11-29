@@ -243,6 +243,7 @@ if((typeOf player) in ["1990_RM_British_SectionCommander_Mix","1990_British_Sect
    [            
 		["UK3CB_BAF_762_200Rnd",30],
 		["UK3CB_BAF_762_200Rnd_T",20],
+		["ACE_SpareBarrel",1],
 		["HandGrenade",5]
     ];
 
@@ -263,6 +264,7 @@ if((typeOf player) in ["1990_RM_British_SectionCommander_Mix","1990_British_Sect
    [            
 		["UK3CB_BAF_762_200Rnd",30],
 		["UK3CB_BAF_762_200Rnd_T",20],
+		["ACE_SpareBarrel",1],
 		["UK3CB_BAF_556_30Rnd",30],
 		["UK3CB_BAF_556_30Rnd_T",20],
 		["HandGrenade",5]

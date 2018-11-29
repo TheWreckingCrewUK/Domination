@@ -144,6 +144,7 @@ if (typeOf vehicle player == "TWC_Modern_US_Army_TeamLeader") then {
     [
 		["rhsusf_100Rnd_556x45_soft_pouch",20],
 		["rhsusf_200Rnd_556x45_soft_pouch",10],
+		["ACE_SpareBarrel",1],
 		["rhsusf_mag_15Rnd_9x19_JHP",15],
 		["HandGrenade",5]
     ];
