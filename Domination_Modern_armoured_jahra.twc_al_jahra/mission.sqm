@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2262;
+		nextID=2263;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={18726.754,431.07095,16316.789};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		pos[]={19330.205,403.59476,16242.982};
+		dir[]={0.82897758,-0.19714959,-0.52339625};
+		up[]={0.16670629,0.98037332,-0.10525445};
+		aside[]={-0.53387403,4.4063199e-007,-0.84557354};
 	};
 };
 binarizationWanted=0;
@@ -48,13 +48,14 @@ addons[]=
 	"twc_modern",
 	"UK3CB_BAF_Vehicles_Coyote_Jackal",
 	"UK3CB_BAF_Weapons_Ammo",
-	"twc_medical"
+	"twc_medical",
+	"Burnes_FV4034"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=21;
+		items=22;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -188,6 +189,11 @@ class AddonsMetaData
 			className="twc_medical";
 			name="twc_medical";
 			author="Bosenator";
+		};
+		class Item21
+		{
+			className="Burnes_FV4034";
+			name="Burnes_FV4034";
 		};
 	};
 };
@@ -12881,7 +12887,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=97;
+		items=98;
 		class Item0
 		{
 			dataType="Marker";
@@ -13025,6 +13031,25 @@ class Mission
 			{
 				class Attribute0
 				{
+					property="twc_ModuleMission_specialIntro";
+					expression="_this setVariable ['specialIntro',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute1
+				{
 					property="twc_ModuleMission_zuesObjects";
 					expression="_this setVariable ['zuesObjects',_value,true];";
 					class Value
@@ -13042,7 +13067,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute1
+				class Attribute2
 				{
 					property="twc_ModuleMission_era";
 					expression="_this setVariable ['era',_value,true];";
@@ -13061,7 +13086,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute2
+				class Attribute3
 				{
 					property="twc_ModuleMission_safeZone";
 					expression="_this setVariable ['safeZone',_value,true];";
@@ -13080,7 +13105,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute3
+				class Attribute4
 				{
 					property="twc_ModuleMission_boatSafety";
 					expression="_this setVariable ['boatSafety',_value,true];";
@@ -13099,7 +13124,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute4
+				class Attribute5
 				{
 					property="twc_ModuleMission_civilianEquipment";
 					expression="_this setVariable ['civilianEquipment',_value,true];";
@@ -13118,7 +13143,26 @@ class Mission
 						};
 					};
 				};
-				class Attribute5
+				class Attribute6
+				{
+					property="twc_ModuleMission_disableIntro";
+					expression="_this setVariable ['disableIntro',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute7
 				{
 					property="twc_ModuleMission_disconectGear";
 					expression="_this setVariable ['disconectGear',_value,true];";
@@ -13137,7 +13181,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute6
+				class Attribute8
 				{
 					property="twc_ModuleMission_enabled";
 					expression="_this setVariable ['enabled',_value,true];";
@@ -13156,7 +13200,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute7
+				class Attribute9
 				{
 					property="twc_ModuleMission_run";
 					expression="_this setVariable ['run',_value,true];";
@@ -13175,7 +13219,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute8
+				class Attribute10
 				{
 					property="twc_ModuleMission_deadBodies";
 					expression="_this setVariable ['deadBodies',_value,true];";
@@ -13194,7 +13238,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute9
+				class Attribute11
 				{
 					property="twc_ModuleMission_rollSleeves";
 					expression="_this setVariable ['rollSleeves',_value,true];";
@@ -13213,7 +13257,7 @@ class Mission
 						};
 					};
 				};
-				class Attribute10
+				class Attribute12
 				{
 					property="twc_ModuleMission_nightGear";
 					expression="_this setVariable ['nightGear',_value,true];";
@@ -13232,7 +13276,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=11;
+				nAttributes=13;
 			};
 		};
 		class Item6
@@ -17192,6 +17236,7 @@ class Mission
 			};
 			id=2209;
 			type="UK3CB_BAF_Jackal2_L134A1_D";
+			atlOffset=-0.024169922;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17232,7 +17277,7 @@ class Mission
 			};
 			id=2210;
 			type="UK3CB_BAF_Jackal2_L134A1_D";
-			atlOffset=0.021514893;
+			atlOffset=-0.0027160645;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17273,7 +17318,7 @@ class Mission
 			};
 			id=2211;
 			type="UK3CB_BAF_Jackal2_L134A1_D";
-			atlOffset=0.021514893;
+			atlOffset=-0.0027160645;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17314,7 +17359,7 @@ class Mission
 			};
 			id=2212;
 			type="UK3CB_BAF_Jackal2_L134A1_D";
-			atlOffset=0.023651123;
+			atlOffset=-0.00061035156;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17355,7 +17400,7 @@ class Mission
 			};
 			id=2213;
 			type="UK3CB_BAF_Jackal2_L134A1_D";
-			atlOffset=0.023651123;
+			atlOffset=-0.00061035156;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17396,7 +17441,7 @@ class Mission
 			};
 			id=2214;
 			type="UK3CB_BAF_Jackal2_L111A1_D";
-			atlOffset=-0.0042724609;
+			atlOffset=-0.028442383;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17437,6 +17482,7 @@ class Mission
 			};
 			id=2215;
 			type="UK3CB_BAF_Jackal2_L111A1_D";
+			atlOffset=-0.024230957;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17477,7 +17523,7 @@ class Mission
 			};
 			id=2216;
 			type="UK3CB_BAF_Jackal2_L111A1_D";
-			atlOffset=-0.00012207031;
+			atlOffset=-0.02432251;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17518,6 +17564,7 @@ class Mission
 			};
 			id=2217;
 			type="UK3CB_BAF_Jackal2_L111A1_D";
+			atlOffset=-0.024230957;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17558,7 +17605,7 @@ class Mission
 			};
 			id=2218;
 			type="UK3CB_BAF_Jackal2_L111A1_D";
-			atlOffset=-0.00042724609;
+			atlOffset=-0.024658203;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17599,6 +17646,7 @@ class Mission
 			};
 			id=2219;
 			type="UK3CB_BAF_Jackal2_L111A1_D";
+			atlOffset=-0.024261475;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -18718,7 +18766,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={18725.695,406.16891,16338.646};
-				angles[]={-0,0,6.1514535};
+				angles[]={0,0,6.1514535};
 			};
 			id=2261;
 			type="TWC_Module_Medical";
@@ -18745,6 +18793,22 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item97
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={19340.066,402.19632,16237.463};
+				angles[]={6.2817206,0,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=2262;
+			type="Burnes_FV4034_02";
 		};
 	};
 };
