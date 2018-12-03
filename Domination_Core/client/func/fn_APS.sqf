@@ -13,14 +13,19 @@ if ((isnil "twc_APS_list") && (isnil "twc_nonAPS_list")) exitwith {};
 if (((count twc_APS_list) == 0) && ((count twc_nonAPS_list) == 0)) exitwith {};
 //systemchat "start2";
 
-twc_smokegen = {[(_this select 0), "rhs_weap_smokegen"] call BIS_fnc_fire;};
+twc_smokegen = {[(_this select 0), "rhs_weap_smokegen"] call BIS_fnc_fire;
+//systemchat "exhaust smoke";
+};
 
 twc_smoketurret = {[(_this select 0), "rhs_weap_902a"] call BIS_fnc_fire;
-[(_this select 0), "rhs_weap_902b"] call BIS_fnc_fire;};
+[(_this select 0), "rhs_weap_902b"] call BIS_fnc_fire;
+//systemchat "turret smoke";
+};
 
 twc_revealtotank = {
 params ["_player", "_tank", "_amount"];
 	_tank reveal [_player, _amount];
+	//systemchat "reveal player";
 };
 
 twc_panictank = {
@@ -103,18 +108,18 @@ twc_tankfacethreat = {
 									params ["_x", "_lr"];
 									//systemchat "oh snap it's a rocket";
 									sleep 1.5;
-									[[_x],twc_smoketurret] remoteExec ["bis_fnc_call", 2];
-									[[player, gunner _x, 4],twc_revealtotank] remoteExec ["bis_fnc_call", 2];
-									[player, _x] spawn twc_tankfacethreat;
+									[_x] remoteexec ["twc_smoketurret", 2];
+									[player, gunner _x, 4] remoteexec ["twc_revealtotank", 2];
+									[player, _x] remoteexec ["twc_tankfacethreat", 2];
 									sleep 1;
-									[[_x],twc_smokegen] remoteExec ["bis_fnc_call", 2];
+									[_x] remoteexec ["twc_smokegen", 2];
 									sleep 15;
-									[[_x],twc_panictank] remoteExec ["bis_fnc_call", 2];
+									[_x] remoteexec ["twc_panictank", 2];
 									if (_lr == 1) then {
 										[_x] spawn {
 											params ["_x"];
 											sleep 10;
-											[[player, _x],twc_tankclosedistance] remoteExec ["bis_fnc_call", 2];
+											[player, _x] remoteexec ["twc_tankclosedistance", 2];
 										};
 									};
 								};
@@ -140,7 +145,7 @@ twc_tankfacethreat = {
 								sleep (random 5);
 								//the canisters can be mashed but the generator can't, so have a timer in there so that GMG spam doesn't spam smoke. No need to broadcast
 								if ((_x getvariable ["twc_lastsmokegen",0]) < (time + 6)) then {
-									[[_x],twc_smokegen] remoteExec ["bis_fnc_call", 2];
+									[_x] remoteexec ["twc_smokegen", 2];
 									_x setvariable ["twc_lastsmokegen",time];
 								};
 							};
@@ -153,7 +158,7 @@ twc_tankfacethreat = {
 						
 						_dir2 = ((driver _x) getreldir _rocket);
 						if ((_dir2 < (320)) && (_dir2 > (40))) then {
-							[player, _x] spawn twc_tankfacethreat;
+							[player, _x] remoteexec ["twc_tankfacethreat", 2];
 						};
 					};
 				};
@@ -203,26 +208,26 @@ twc_tankfacethreat = {
 								params ["_x", "_lr", "_rocket"];
 								//systemchat "oh snap it's a rocket";
 								sleep 1.5;
-								[[_x],twc_smoketurret] remoteExec ["bis_fnc_call", 2];
-								[[player, gunner _x, 4],twc_revealtotank] remoteExec ["bis_fnc_call", 2];
+								[_x] remoteexec ["twc_smoketurret", 2];
+								[player, gunner _x, 4] remoteexec ["twc_revealtotank", 2];
 								sleep 1;
-								[[_x],twc_smokegen] remoteExec ["bis_fnc_call", 2];
+								[_x] remoteexec ["twc_smokegen", 2];
 								sleep 2;
 								
 								if ((_x distance player) > 500) then {
-									[[_x],twc_panictank] remoteExec ["bis_fnc_call", 2];
+									[_x] remoteexec ["twc_panictank", 2];
 								} else {
 								
 									_dir2 = ((driver _x) getreldir _rocket);
 									if ((_dir2 < (320)) && (_dir2 > (40))) then {
-										[player, _x] spawn twc_tankfacethreat;
+										[player, _x] remoteexec ["twc_tankfacethreat", 2];
 									};
 								};
 								if (_lr == 1) then {
 									[_x] spawn {
 										params ["_x"];
 										sleep 10;
-										[[player, _x],twc_tankclosedistance] remoteExec ["bis_fnc_call", 2];
+										[player, _x] remoteexec ["twc_tankclosedistance", 2];
 									};
 								};
 							};
@@ -252,7 +257,7 @@ twc_tankfacethreat = {
 								[_x] spawn {
 									params ["_x"];
 									sleep 0.7;
-									[[_x],twc_smoketurret] remoteExec ["bis_fnc_call", 2];
+									[_x] remoteexec ["twc_smoketurret", 2];
 								};
 							};
 							
@@ -262,7 +267,7 @@ twc_tankfacethreat = {
 								[_x] spawn {
 									params ["_x"];
 									sleep 2;
-									[[_x],twc_smokegen] remoteExec ["bis_fnc_call", 2];
+									[_x] remoteexec ["twc_smokegen", 2];
 									sleep 2;
 									//[[_x],twc_panictank] remoteExec ["bis_fnc_call", 2];
 								};
@@ -309,12 +314,12 @@ twc_tankfacethreat = {
 												_airpos = getpos _rocket;
 												deletevehicle _rocket;
 												'rhs_ammo_ptb1500' createvehicle _airpos;
-												[[player, gunner _x, 2],twc_revealtotank] remoteExec ["bis_fnc_call", 2];
+												[player, gunner _x, 4] remoteexec ["twc_revealtotank", 2];
 											};
 										};
 										_dir2 = ((driver _x) getreldir _rocket);
 										if ((_dir2 < (320)) && (_dir2 > (40))) then {
-											[player, _x] spawn twc_tankfacethreat;
+											[player, _x] remoteexec ["twc_tankfacethreat", 2];
 										};
 									} else {
 									//if the APS fails, driver nopes out of there
@@ -322,11 +327,11 @@ twc_tankfacethreat = {
 											sleep 2;
 											
 											if ((random 1) < 0.3) then {
-												[[_x],twc_panictank] remoteExec ["bis_fnc_call", 2];
+												[_x] remoteexec ["twc_panictank", 2];
 											} else {
 												_dir2 = ((driver _x) getreldir _rocket);
 												if ((_dir2 < (320)) && (_dir2 > (40))) then {
-													[player, _x] spawn twc_tankfacethreat;
+													[player, _x] remoteexec ["twc_tankfacethreat", 2];
 												};
 											};
 											[[player, gunner _x, 1.5],twc_revealtotank] remoteExec ["bis_fnc_call", 2];
@@ -338,7 +343,7 @@ twc_tankfacethreat = {
 						waituntil {((_rocket distance _x) < 20)};
 						sleep 1;
 						//systemchat "turning";
-						[player, _x] spawn twc_tankfacethreat;
+						[player, _x] remoteexec ["twc_tankfacethreat", 2];
 						
 					};
 				};
