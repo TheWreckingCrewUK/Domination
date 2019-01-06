@@ -17,7 +17,7 @@ clearMagazineCargoGlobal _box;
 clearitemCargoGlobal _box;
 
 //Weapons
-_box AddWeaponCargoGlobal ["UK3CB_BAF_AT4_CS_AP_Launcher",2];
+_box AddWeaponCargoGlobal ["rhs_weap_M136",2];
 
 _box AddMagazineCargoGlobal ["ACE_SpareBarrel",1];
 
@@ -30,7 +30,7 @@ _box AddMagazineCargoGlobal ["UGL_FlareWhite_F",5];
 _box AddMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",20];
 _box AddMagazineCargoGlobal ["1Rnd_Smoke_Grenade_shell",5];
 
-_box AddMagazineCargoGlobal ["rhs_200rnd_556x45_B_SAW",8];
+_box AddMagazineCargoGlobal ["rhs_200rnd_556x45_T_SAW",8];
 
 _box AddMagazineCargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP",10];
 

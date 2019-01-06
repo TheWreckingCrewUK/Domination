@@ -363,11 +363,11 @@ if((typeOf player) in ["1990_RM_British_SectionCommander_Mix","1990_British_Sect
 	];
 };
 
- if (typeOf vehicle player == "twc_men_1990_us_w_SquadLeader") then {
+  if ((typeOf vehicle player) in ["twc_men_1990_us_w_SquadLeader", "twc_men_1990_us_d_SquadLeader"]) then {
     _tmp_weapons =
     [
         ["CUP_arifle_M16A2_GL",1],
-        ["ACE_Vector",1],
+        ["ACE_Yardage450",1],
 		["rhsusf_weap_m1911a1",1]
     ];
 
@@ -401,7 +401,7 @@ if((typeOf player) in ["1990_RM_British_SectionCommander_Mix","1990_British_Sect
 	];
 };
 //USMC Team Leader
- if (typeOf vehicle player == "twc_men_1990_us_w_teamleader") then {
+  if ((typeOf vehicle player) in ["twc_men_1990_us_w_teamleader", "twc_men_1990_us_d_teamleader"]) then {
     _tmp_weapons =
     [
         ["CUP_arifle_M16A2_GL",1],
@@ -438,7 +438,7 @@ if((typeOf player) in ["1990_RM_British_SectionCommander_Mix","1990_British_Sect
 };
 
 //USMC Rifleman
- if (typeOf vehicle player == "twc_men_1990_us_w_rifleman") then {
+  if ((typeOf vehicle player) in ["twc_men_1990_us_w_rifleman", "twc_men_1990_us_d_rifleman"]) then {
     _tmp_weapons =
     [
         ["CUP_arifle_M16A2",1]
@@ -459,7 +459,7 @@ if((typeOf player) in ["1990_RM_British_SectionCommander_Mix","1990_British_Sect
 };
 
 //USMC Auto Rifleman
-if (typeOf vehicle player == "twc_men_1990_us_w_rifleman_at") then {
+  if ((typeOf vehicle player) in ["twc_men_1990_us_w_rifleman_at", "twc_men_1990_us_d_rifleman_at"]) then {
     _tmp_weapons =
     [
         ["CUP_arifle_M16A2",1],
@@ -481,7 +481,7 @@ if (typeOf vehicle player == "twc_men_1990_us_w_rifleman_at") then {
 };
 
 //USMC Auto Rifleman Assistant
-if (typeOf vehicle player == "twc_men_1990_us_w_autorifleman") then {
+  if ((typeOf vehicle player) in ["twc_men_1990_us_w_autorifleman", "twc_men_1990_us_d_autorifleman"]) then {
     _tmp_weapons =
     [
         ["rhs_weap_m249",1]
@@ -489,8 +489,9 @@ if (typeOf vehicle player == "twc_men_1990_us_w_autorifleman") then {
 
     _tmp_magazines =
     [
-        ["rhs_200rnd_556x45_B_SAW",50],
+        ["rhs_200rnd_556x45_T_SAW",50],
 		["rhsusf_100Rnd_556x45_soft_pouch",20],
+		["ACE_SpareBarrel",1],
 		["HandGrenade",5]
     ];
 

@@ -43,6 +43,7 @@ _condition = {true};
 
 
 #include "supply_boxes\1990.sqf";
+#include "supply_boxes\1990_us.sqf";
 #include "supply_boxes\2000.sqf";
 #include "supply_boxes\modern_pol.sqf";
 #include "supply_boxes\modern_uk.sqf";
