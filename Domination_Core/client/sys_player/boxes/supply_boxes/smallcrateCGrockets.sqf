@@ -16,11 +16,11 @@
 if ((twc_javtubetimeout > (time))) exitwith {
 	hint format ["The Heavy AT spawner is on cooldown currently. %1 minutes remaining.", (ceil ( (twc_javtubetimeout-time) / 60))];
 	waituntil {(twc_javtubetimeout-time) < 0};
-	hint "More Javelin Tubes are now available from the spawner";
+	hint "More Gustav Rockets are now available from the spawner";
 	
 };
 
-hint "The Tubes have been spawned. 1 hour remaining until more become available";
+hint "The Rockets have been spawned. 1 hour remaining until more become available";
 
 twc_javtubetimeout = (time + 3600);
  publicVariable "twc_javtubetimeout";
@@ -35,5 +35,7 @@ clearMagazineCargoGlobal _box;
 clearitemCargoGlobal _box;
 
 //Weapons
-_box AddWeaponCargoGlobal ["UK3CB_BAF_Javelin_Slung_Tube",1];
+_box AddMagazineCargoGlobal ["rhs_mag_maaws_HEDP",2];
+_box AddMagazineCargoGlobal ["rhs_mag_maaws_HEAT",2];
+_box AddMagazineCargoGlobal ["rhs_mag_maaws_HE",2];
 

@@ -78,6 +78,14 @@ execvm "Domination_Core\client\sys_restrict\fullFST.sqf";
 
 };
 
+if(["Recce", str (group player)] call BIS_fnc_inString)then{
+
+
+
+execvm "Domination_Core\client\sys_restrict\fullrecce.sqf";
+
+};
+
 
 
 

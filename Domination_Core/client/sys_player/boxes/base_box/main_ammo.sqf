@@ -25,6 +25,7 @@ _tmp_items = [];
 _tmp_backpacks = [];
 
 #include "pol_base.sqf";
+#include "ger_base.sqf";
 #include "usmc_modern_base.sqf";
 #include "1990_base.sqf";
 #include "2000_base.sqf";
