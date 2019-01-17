@@ -160,10 +160,10 @@ systemchat "new gunner";
 };
 };
 
- 
+ /*
 _vehicle addEventHandler ["Fired", {
 	[_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk; }];
-	
+	*/
  _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
  _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
  _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
@@ -204,8 +204,10 @@ if (_ifv in twc_hasaps) then {
  _driver moveInDriver _vehicle;  
  _gunner moveInGunner _vehicle;  
  _vehicle setVehicleLock "LOCKEDPLAYER";
+ /*
 _vehicle addEventHandler ["Fired", {
 	[_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk; }];
+	*/
  _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
  _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
  _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
@@ -243,9 +245,10 @@ if (_apc in twc_hasaps) then {
  _driver moveInDriver _vehicle;  
  _gunner moveInGunner _vehicle;  
  _vehicle setVehicleLock "LOCKEDPLAYER"; 
+ /*
 _vehicle addEventHandler ["Fired", {
 	[_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk; }];
-	
+	*/
 	
  _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
  _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
@@ -276,9 +279,10 @@ for "_i" from 1 to twc_aacount do { _pos2= [_pos, 200] call CBA_fnc_randPos;
  _gunner moveInGunner _vehicle;  
  _commander moveInCommander _vehicle;  
  _vehicle setVehicleLock "LOCKEDPLAYER";
+ /*
 _vehicle addEventHandler ["Fired", {
 	[_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk; }];
- 
+ */
  _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
  _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
  _group addwaypoint [[_spawnPos,[100,500],random 360,0,[1,100]] call SHK_pos, 0];
@@ -306,8 +310,10 @@ if (( count(allPlayers - entities "HeadlessClient_F")) < 8) then {
  _driver moveInDriver _vehicle;  
  _gunner moveInGunner _vehicle; 
  _vehicle setVehicleLock "LOCKEDPLAYER"; 
+ /*
 _vehicle addEventHandler ["Fired", {
 	[_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk; }];
+	*/
  _flyalt = (100 + (0.03* (_spawnpos distance getmarkerpos "respawn_west"))) min 200;
  _vehicle setVehiclePosition [(_spawnpos vectoradd [0,0,_flyalt]), [],0,"FLY"]; 
 _vehicle flyInHeight  _flyalt;
@@ -339,8 +345,10 @@ _vehicle flyInHeight  _flyalt;
  _driver moveInDriver _vehicle;  
  _gunner moveInGunner _vehicle; 
  _vehicle setVehicleLock "LOCKEDPLAYER"; 
+ /*
 _vehicle addEventHandler ["Fired", {
 	[_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk; }];
+	*/
  _flyalt = (100 + (0.04* (_spawnpos distance getmarkerpos "respawn_west"))) min 350;
  _vehicle setVehiclePosition [(_spawnpos vectoradd [0,0,_flyalt]), [],0,"FLY"]; 
 _vehicle flyInHeight  _flyalt;
@@ -429,8 +437,10 @@ _vehicle setVehicleLock "LOCKEDPLAYER";
  [_gunner, _vehicle] spawn {
  params ["_gunner", "_vehicle"];
 	sleep 5;
+	/*
 	_vehicle addEventHandler ["Fired", {
 		[_this select 6, _this select 7] call twc_fnc_mortarwalk; }];
+		*/
 };
  //_driver disableAI "AUTOTARGET";  
  _gunner disableAI "AUTOTARGET";
