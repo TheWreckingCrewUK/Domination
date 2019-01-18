@@ -685,7 +685,7 @@ TWC_fnc_notAllowedInSeat = {
 };
 };
 TWC_fnc_notenoughplayers = {
-	params ["_playerUnit","_count","_currentcount","_problem"];
+/*	params ["_playerUnit","_count","_currentcount","_problem"];
 	[_playerUnit,_count,_currentcount,_problem] spawn {
 		params ["_playerUnit","_count","_currentcount","_problem"];
 		sleep 1;
@@ -722,7 +722,7 @@ TWC_fnc_notenoughplayers = {
 		hint parseText (_title + _text1 + str _currentcount + _text2 + _text3 + str _count + _text4);
 		};
 		
-	};
+	};*/
 };
 
 
