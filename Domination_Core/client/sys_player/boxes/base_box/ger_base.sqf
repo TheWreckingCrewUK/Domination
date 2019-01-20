@@ -57,6 +57,7 @@
  if (typeOf vehicle player in ["Modern_ger_grenadier", "Modern_ger_grenadier_d"]) then {
     _tmp_weapons =
     [
+        ["rhs_weap_rpg75",1],
         ["CUP_arifle_AG36",1]
     ];
 
@@ -104,7 +105,7 @@
 };
 
 
- if (typeOf vehicle player in ["Modern_ger_rifleman_at", "Modern_ger_rifleman_at_d"]) then {
+ if (typeOf vehicle player in ["Modern_ger_rif_AT", "Modern_ger_rif_AT_d"]) then {
     _tmp_weapons =
     [
         ["CUP_arifle_G36A",1]
