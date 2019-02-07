@@ -1,4 +1,4 @@
-if((typeOf player) in ["Modern_USMC_Squadleader","Modern_USMC_Teamleader"])then{
+if((typeOf player) in ["Modern_USMC_Squadleader","Modern_USMC_Teamleader","Modern_USMC_Squadleader_d","Modern_USMC_Teamleader_d"])then{
 
 	_charlieaction = ["SpawnsmallcharlieCreate","Spawn Small Charlie Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallcrateUSMC.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_charlieaction,true] call ace_interact_menu_fnc_addActionToClass;

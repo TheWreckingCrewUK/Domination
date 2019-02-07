@@ -2,10 +2,7 @@
 
 */
 
-clearWeaponCargoGlobal _veh;
-clearBackpackCargoGlobal _veh;
-clearMagazineCargoGlobal _veh;
-clearitemCargoGlobal _veh;
+
 
 //rosomak, polish APC
 if (typeof _veh == "B_APC_Wheeled_01_cannon_F") then {
@@ -130,8 +127,7 @@ if (typeof _veh == "CUP_B_MCV80_GB_D_SLAT") then {
 
 
 			//supplies
-			_box AddMagazineCargoGlobal ["UK3CB_BAF_762_100Rnd_T",6];
-			_box AddMagazineCargoGlobal ["UK3CB_BAF_762_100Rnd",10];
+			_box AddMagazineCargoGlobal ["UK3CB_BAF_762_100Rnd_T",15];
 
 			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd",40];
 			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd_T",15];
@@ -140,8 +136,8 @@ if (typeof _veh == "CUP_B_MCV80_GB_D_SLAT") then {
 			_box AddMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",20];
 			_box AddMagazineCargoGlobal ["1Rnd_Smoke_Grenade_shell",5];
 
-			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd",10];
-			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd_T",5];
+			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd_T",15];
+			_box AddMagazineCargoGlobal ["ACE_SpareBarrel",1];
 
 			_box AddMagazineCargoGlobal ["UK3CB_BAF_9_15Rnd",3];
 
@@ -172,8 +168,7 @@ if (typeof _veh == "CUP_B_MCV80_GB_D_SLAT") then {
 
 
 	//supplies
-	_box AddMagazineCargoGlobal ["UK3CB_BAF_762_100Rnd_T",5];
-	_box AddMagazineCargoGlobal ["UK3CB_BAF_762_100Rnd",9];
+	_box AddMagazineCargoGlobal ["UK3CB_BAF_762_100Rnd_T",14];
 
 	_box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd",40];
 	_box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd_T",15];
@@ -182,8 +177,8 @@ if (typeof _veh == "CUP_B_MCV80_GB_D_SLAT") then {
 	_box AddMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",20];
 	_box AddMagazineCargoGlobal ["1Rnd_Smoke_Grenade_shell",5];
 
-	_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd",9];
-	_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd_T",4];
+	_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd_T",12];
+	_box AddMagazineCargoGlobal ["ACE_SpareBarrel",1];
 
 	_box AddMagazineCargoGlobal ["UK3CB_BAF_762_L42A1_20Rnd_T",4];
 	_box AddMagazineCargoGlobal ["UK3CB_BAF_762_L42A1_20Rnd",10];
@@ -257,8 +252,7 @@ if (typeof _veh == "CUP_B_MCV80_GB_W_SLAT") then {
 
 
 			//supplies
-			_box AddMagazineCargoGlobal ["UK3CB_BAF_762_100Rnd_T",6];
-			_box AddMagazineCargoGlobal ["UK3CB_BAF_762_100Rnd",10];
+			_box AddMagazineCargoGlobal ["UK3CB_BAF_762_100Rnd_T",16];
 
 			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd",40];
 			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd_T",15];
@@ -267,8 +261,8 @@ if (typeof _veh == "CUP_B_MCV80_GB_W_SLAT") then {
 			_box AddMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",20];
 			_box AddMagazineCargoGlobal ["1Rnd_Smoke_Grenade_shell",5];
 
-			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd",10];
-			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd_T",5];
+			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd_T",15];
+			_box AddMagazineCargoGlobal ["ACE_SpareBarrel",1];
 
 			_box AddMagazineCargoGlobal ["UK3CB_BAF_9_15Rnd",3];
 
@@ -299,8 +293,7 @@ if (typeof _veh == "CUP_B_MCV80_GB_W_SLAT") then {
 
 
 	//supplies
-	_box AddMagazineCargoGlobal ["UK3CB_BAF_762_100Rnd_T",5];
-	_box AddMagazineCargoGlobal ["UK3CB_BAF_762_100Rnd",9];
+	_box AddMagazineCargoGlobal ["UK3CB_BAF_762_100Rnd_T",14];
 
 	_box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd",40];
 	_box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd_T",15];
@@ -309,8 +302,8 @@ if (typeof _veh == "CUP_B_MCV80_GB_W_SLAT") then {
 	_box AddMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",20];
 	_box AddMagazineCargoGlobal ["1Rnd_Smoke_Grenade_shell",5];
 
-	_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd",9];
-	_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd_T",4];
+	_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd_T",13];
+	_box AddMagazineCargoGlobal ["ACE_SpareBarrel",1];
 
 	_box AddMagazineCargoGlobal ["UK3CB_BAF_762_L42A1_20Rnd_T",4];
 	_box AddMagazineCargoGlobal ["UK3CB_BAF_762_L42A1_20Rnd",10];
@@ -462,8 +455,8 @@ _box = _veh;
 
 			_box AddMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",10];
 
-			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd",7];
-			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd_T",4];
+			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd_T",10];
+			_box AddMagazineCargoGlobal ["ACE_SpareBarrel",1];
 
 			_box AddMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",10];
 
@@ -496,8 +489,8 @@ _box = _veh;
 
 	_box AddMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",10];
 
-	_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd",7];
-	_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd_T",3];
+	_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd_T",10];
+	_box AddMagazineCargoGlobal ["ACE_SpareBarrel",1];
 
 	_box AddMagazineCargoGlobal ["UK3CB_BAF_762_L42A1_20Rnd_T",4];
 	_box AddMagazineCargoGlobal ["UK3CB_BAF_762_L42A1_20Rnd",10];
@@ -577,8 +570,8 @@ _box = _veh;
 
 			_box AddMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",5];
 
-			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd",5];
-			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd_T",2];
+			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd_T",7];
+			_box AddMagazineCargoGlobal ["ACE_SpareBarrel",1];
 
 			_box AddMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",5];
 
@@ -612,8 +605,8 @@ _box = _veh;
 
 	_box AddMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",6];
 
-	_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd",6];
-	_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd_T",3];
+	_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd_T",8];
+	_box AddMagazineCargoGlobal ["ACE_SpareBarrel",1];
 	
 	_box AddMagazineCargoGlobal ["UK3CB_BAF_762_100Rnd_T",2];
 	_box AddMagazineCargoGlobal ["UK3CB_BAF_762_100Rnd",6];

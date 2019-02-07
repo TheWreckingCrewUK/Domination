@@ -18,6 +18,6 @@ if(getMarkerColor "respawn_forwardBase" != "")exitWith{_return = "Forward Base i
 
 "twc_radioTable" createVehicle _pos;
 "twc_portableGenerator" createVehicle _pos;
-"twc_SuppliesBox" createVehicle _pos;
+//"twc_SuppliesBox" createVehicle _pos;
 _return = "Items Created Successfully";
 _return

@@ -2,6 +2,7 @@
 #include "noFireInBase.sqf";
 #include "placedExplosives.sqf";
 #include "vehicleSlots.sqf";
+#include "heavybackpacks.sqf";
 #include "minimi.sqf";
 
 

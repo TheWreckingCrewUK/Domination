@@ -51,6 +51,10 @@ if ((["90", twc_missionname] call BIS_fnc_inString) || (["00", twc_missionname] 
 _veh AddWeaponCargoGlobal ["UK3CB_BAF_L85A1_SUSAT3D_Lazer",1];
 _veh AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd",2];
 };
-	
+
+clearWeaponCargoGlobal _veh;
+clearBackpackCargoGlobal _veh;
+clearMagazineCargoGlobal _veh;
+clearitemCargoGlobal _veh;	
 
 #include "armourspecifics.sqf";

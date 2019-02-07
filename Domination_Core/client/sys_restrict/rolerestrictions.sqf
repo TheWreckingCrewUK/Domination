@@ -1,7 +1,7 @@
 sleep 5;
 if(!isMultiplayer)exitWith{};
 //domination version with different classnames
-
+/*
 
 if((typeOf player) in ["Modern_British_crewchief", "2000_British_CrewChief", "2000_British_CrewChief_Desert"])then{
 if (( count(allPlayers - entities "HeadlessClient_F")) < 14) then {
