@@ -25,6 +25,10 @@ if (typeOf player in fixedWingPilots) then {
 player addEventHandler ["Hit", {[] spawn {if !(vehicle player == player) exitwith{};if (stance player == "PRONE") exitwith {};if ((random 1)>1.5) exitwith{}; _this = player; _this setUnconscious true; sleep 0.1; _this setUnconscious false}}]
 */
 
+if (sunormoon == 0) then {
+	player addweapon "rhsusf_ANPVS_14";
+};
+
 if (!(["infantry", str (group player)] call BIS_fnc_inString)) then {
 execvm "domination_core\client\sys_restrict\attachmentcount.sqf" 
 };

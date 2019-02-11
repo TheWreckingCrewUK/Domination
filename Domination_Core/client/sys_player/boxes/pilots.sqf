@@ -252,6 +252,15 @@ if((typeOf player) in ["Modern_British_HeliPilot","Modern_British_crewchief", "M
 	},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawntransport"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 
+	
+
+	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Lynx","",{
+	
+	["ukcw_lynx_2gpmg"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
+	
+	},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawntransport"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
+
 	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Mi-8","",{
 	
 	["CUP_O_Mi8_CHDKZ"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
@@ -436,6 +445,13 @@ if((typeOf player) in ["1990_British_HeliPilot_Desert","1990_British_HeliPilot"]
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawntransport"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 
 
+
+	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Lynx","",{
+	
+	["ukcw_lynx_2gpmg"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
+	
+	},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawntransport"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Blackhawk (Armed)","",{
 	
@@ -533,6 +549,13 @@ _helispawn1 = ["SpawnsmallcharlieCreate","Spawn Gazelle","",{
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawntransport"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 
 
+
+	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Lynx","",{
+	
+	["ukcw_lynx_2gpmg"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
+	
+	},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawntransport"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Blackhawk (Armed)","",{
 	
