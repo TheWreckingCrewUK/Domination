@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2187;
+		nextID=2190;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2288.7141,369.87708,6200.6187};
-		dir[]={0.5972771,-0.77703273,0.1989096};
-		up[]={0.737212,0.62947482,0.24551116};
-		aside[]={0.31597659,1.1199154e-006,-0.94880569};
+		pos[]={2286.1262,319.12393,6046.9707};
+		dir[]={-0.10320366,-0.33385015,0.9369635};
+		up[]={-0.036551692,0.94262588,0.33184442};
+		aside[]={0.99399364,6.6880602e-008,0.10948577};
 	};
 };
 binarizationWanted=0;
@@ -12697,7 +12697,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=82;
+		items=83;
 		class Item0
 		{
 			dataType="Marker";
@@ -17942,7 +17942,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=4;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
@@ -18041,47 +18041,6 @@ class Mission
 					};
 					id=2166;
 					type="Modern_British_VehicleCrew";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2286.6677,314.42786,6076.8237};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-						isPlayable=1;
-					};
-					id=2167;
-					type="Modern_British_VehicleCrew";
-					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18745,6 +18704,54 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item82
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2281.2517,313.47571,6070.0264};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						skill=0.44999999;
+						rank="CORPORAL";
+						isPlayable=1;
+					};
+					id=2188;
+					type="Modern_British_Quartermaster";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2284.2517,313.24261,6067.0264};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+						isPlayable=1;
+					};
+					id=2189;
+					type="Modern_British_Quartermaster";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=2187;
 		};
 	};
 };

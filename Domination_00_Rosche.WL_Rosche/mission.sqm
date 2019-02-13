@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2655;
+		nextID=2658;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6370.042,51.174389,7007.2632};
-		dir[]={0.8684811,-0.28043443,-0.40905064};
-		up[]={0.25382861,0.95983237,-0.11955368};
-		aside[]={-0.42613614,-1.7724233e-006,-0.90477544};
+		pos[]={6363.0454,51.970001,6579.2974};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -12747,7 +12747,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=63;
+		items=64;
 		class Item0
 		{
 			dataType="Marker";
@@ -17159,7 +17159,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=4;
+				items=3;
 				class Item0
 				{
 					dataType="Object";
@@ -17256,46 +17256,6 @@ class Mission
 						isPlayable=1;
 					};
 					id=2636;
-					type="2000_British_Vehicle_Crew";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_blacklist";
-							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={6365.9053,26.854515,6598.2222};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-						isPlayable=1;
-					};
-					id=2637;
 					type="2000_British_Vehicle_Crew";
 					class CustomAttributes
 					{
@@ -17849,7 +17809,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6441.5747,31.528988,6963.4277};
-				angles[]={-0,5.7451386,0};
+				angles[]={0,5.7451386,0};
 			};
 			side="Empty";
 			flags=4;
@@ -17881,7 +17841,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6451.7925,31.528988,6956.6938};
-				angles[]={-0,5.7451386,0};
+				angles[]={0,5.7451386,0};
 			};
 			side="Empty";
 			flags=4;
@@ -17897,7 +17857,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6447.0874,31.528988,6954.1714};
-				angles[]={-0,5.7451386,0};
+				angles[]={0,5.7451386,0};
 			};
 			side="Empty";
 			flags=4;
@@ -17906,6 +17866,77 @@ class Mission
 			};
 			id=2654;
 			type="UK3CB_BAF_MAN_HX58_Container_Green";
+		};
+		class Item63
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6359.3452,26.764908,6596.6333};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						skill=0.44999999;
+						rank="CORPORAL";
+						isPlayable=1;
+					};
+					id=2656;
+					type="2000_British_quartermaster";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6362.3452,26.703682,6593.6333};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+						isPlayable=1;
+					};
+					id=2657;
+					type="2000_British_quartermaster";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=2655;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="QM";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };

@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2630;
+		nextID=2637;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={11863.561,164.98216,12681.073};
-		dir[]={0.82200915,-0.35989898,-0.44143072};
-		up[]={0.31716296,0.93295836,-0.17031838};
-		aside[]={-0.47313493,1.6740523e-007,-0.88104302};
+		pos[]={12108.521,152.60977,12954.288};
+		dir[]={-0.01970054,-0.67604226,0.73660123};
+		up[]={-0.018074423,0.73686343,0.6758005};
+		aside[]={0.99964362,5.0640665e-009,0.02673565};
 	};
 };
 binarizationWanted=0;
@@ -12787,7 +12787,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=346;
+		items=348;
 		class Item0
 		{
 			dataType="Object";
@@ -23838,6 +23838,142 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item346
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12104.641,137.07996,12970.024};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						skill=0.44999999;
+						rank="CORPORAL";
+						isPlayable=1;
+					};
+					id=2631;
+					type="Modern_British_VehicleCommander";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12107.641,137.27228,12967.024};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+						isPlayable=1;
+					};
+					id=2632;
+					type="Modern_British_VehicleCrew";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12109.641,137.21896,12967.024};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+						isPlayable=1;
+					};
+					id=2633;
+					type="Modern_British_VehicleCrew";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=2630;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Armour";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item347
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12104.992,137.45374,12965.92};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						skill=0.44999999;
+						rank="CORPORAL";
+						isPlayable=1;
+					};
+					id=2635;
+					type="Modern_British_Quartermaster";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={12107.992,137.60976,12962.92};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+						isPlayable=1;
+					};
+					id=2636;
+					type="Modern_British_Quartermaster";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=2634;
 		};
 	};
 };
