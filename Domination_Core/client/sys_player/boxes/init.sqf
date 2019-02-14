@@ -59,8 +59,11 @@ if(["medic", typeof player] call BIS_fnc_inString)then{
 
 
 
-if(["quartermaster", typeof player] call BIS_fnc_inString)then{
-execVM "domination_core\client\zeus\camera.sqf";
+//if(["quartermaster", typeof player] call BIS_fnc_inString)then{
+if([player] call TWC_Core_fnc_ismanagement)then{
+	execVM "domination_core\client\zeus\camera.sqf";
+	_vehaction1 = ["base_Interact","Base","",{},{true}] call ace_interact_menu_fnc_createAction;
+	[player, 1, ["ACE_SelfActions"], _vehaction1] call ace_interact_menu_fnc_addActionToObject;
 
 	_action2 = ["Zeus","Spectator On","",{execVM "domination_core\client\zeus\spectator_on.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	[player, 1, ["ACE_SelfActions", "base_Interact"], _action2] call ace_interact_menu_fnc_addActionToObject;
@@ -71,6 +74,8 @@ execVM "domination_core\client\zeus\camera.sqf";
 	_action5 = ["Zeus","Basemode Off","",{execVM "domination_core\client\zeus\basemode_off.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	[player, 1, ["ACE_SelfActions", "base_Interact"], _action5] call ace_interact_menu_fnc_addActionToObject;
 	
+	_action6 = ["Zeus","Repair Current Vehicle","",{execVM "domination_core\client\zeus\zrepair.sqf"},_condition] call ace_interact_menu_fnc_createAction;
+	[player, 1, ["ACE_SelfActions", "base_Interact"], _action6] call ace_interact_menu_fnc_addActionToObject;
 	_action6 = ["Zeus","Enemy Siren","",{execVM "domination_core\server\sys_basedefence\INF_Alarm.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	[player, 1, ["ACE_SelfActions", "base_Interact"], _action6] call ace_interact_menu_fnc_addActionToObject;
 	

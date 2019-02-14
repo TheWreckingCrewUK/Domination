@@ -16,13 +16,14 @@ publicVariable "crampresent";
 twc_wdveh = 1;
 publicVariable "twc_wdveh";
 
-squad = (configfile >> "CfgGroups" >> "East" >> "CUP_O_TK" >> "Infantry" >> "CUP_O_TK_InfantrySquad");
+//add in an object name and the game will create a location there and spawn enemies from it
+customlocations = [];
 
-squadAT = (configfile >> "CfgGroups" >> "East" >> "CUP_O_TK" >> "Infantry" >> "CUP_O_TK_InfantrySectionAT");
+squad = (configfile >> "CfgGroups" >> "East" >> "rhs_faction_msv" >> "rhs_group_rus_msv_infantry" >> "rhs_group_rus_msv_infantry_squad");
 
-squadAA = (configfile >> "CfgGroups" >> "East" >> "CUP_O_TK" >> "Infantry" >> "CUP_O_TK_InfantrySectionAA");
+squadAT = (configfile >> "CfgGroups" >> "East" >> "rhs_faction_msv" >> "rhs_group_rus_msv_infantry" >> "rhs_group_rus_msv_infantry_section_AT");
 
-tankaaCombined = (configfile >> "CfgGroups" >> "East" >> "CUP_O_TK" >> "Armored" >> "CUP_O_TK_T55Platoon");
+squadAA = (configfile >> "CfgGroups" >> "East" >> "rhs_faction_msv" >> "rhs_group_rus_msv_infantry" >> "rhs_group_rus_msv_infantry_section_AA");
 
 tank = ["rhs_t72ba_tv", "rhs_t72bb_tv"];
 
@@ -30,8 +31,8 @@ ifv = ["rhs_bmp2e_msv", "rhs_bmp1_msv"];
 
 apc = ["rhs_btr70_msv", "rhs_btr80_msv"];
 
-//add in an object name and the game will create a location there and spawn enemies from it
-customlocations = [];
+twc_is90 = 1;
+publicVariable "twc_is90";
 
 twc_tankcount = random 2;
 twc_apccount = random 2;
@@ -39,8 +40,6 @@ twc_ifvcount = random 2;
 twc_aacount = 0;
 twc_infcount = 3;
 twc_aainfcount = 2;
-
-squad = (configfile >> "CfgGroups" >> "East" >> "rhs_faction_msv" >> "rhs_group_rus_msv_infantry" >> "rhs_group_rus_msv_infantry_section_AT");
 
 twc_aosToComplete = 3;
 twc_enemyFlag = "Faction_CUP_RU";

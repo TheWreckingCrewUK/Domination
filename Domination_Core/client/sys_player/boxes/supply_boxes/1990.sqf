@@ -11,7 +11,7 @@ if((typeOf player) in ["1990_British_quartermaster_Desert"])then{
 
 };
 
-if((typeOf player) in ["1990_British_mg_assistant_Desert"])then{
+if((typeOf player) in ["1990_British_mg_assistant","1990_British_mg_assistant_Desert"])then{
 
 	_mgaction = ["Spawn762","Spawn 7.62 Ammo","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\762ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_mgaction,true] call ace_interact_menu_fnc_addActionToClass;
@@ -19,21 +19,10 @@ if((typeOf player) in ["1990_British_mg_assistant_Desert"])then{
 };
 
 
-if((typeOf player) in ["twc_men_1990_us_w_SquadLeader","twc_men_1990_us_w_teamleader"])then{
-
-	_charlieaction = ["SpawnsmallcharlieCreate","Spawn US Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallcrateUS90.sqf"},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_charlieaction,true] call ace_interact_menu_fnc_addActionToClass;
-
-
-	_charlieaction2 = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_charlieaction2,true] call ace_interact_menu_fnc_addActionToClass;
-			_artaction3 = ["SpawnrepCreate","Spawn Spare Tires","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\RepairKit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_artaction3,true] call ace_interact_menu_fnc_addActionToClass;
-};
 
 
 
-if((typeOf player) in ["1990_British_2IC_Desert","1990_British_SectionCommander_Desert"])then{
+if((typeOf player) in ["1990_British_2IC","1990_British_SectionCommander","1990_British_2IC_Desert","1990_British_SectionCommander_Desert"])then{
 
 	
 	_90alphaaction = ["Spawnsmall90AlphaCreate","Spawn Ammo Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallcrateuk90.sqf"},{true}] call ace_interact_menu_fnc_createAction;
