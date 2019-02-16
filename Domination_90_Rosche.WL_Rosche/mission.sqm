@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2750;
+		nextID=2783;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={11102.346,35.197273,7928.7612};
-		dir[]={0.9023537,-0.34476668,0.2588875};
-		up[]={0.33141646,0.93868244,0.09508469};
-		aside[]={0.27579474,9.5902942e-007,-0.9612897};
+		pos[]={11084.259,57.868168,8467.4004};
+		dir[]={0.061735135,-0.68806714,0.7230525};
+		up[]={0.058534283,0.72565722,0.68556148};
+		aside[]={0.99640292,-1.1583325e-008,-0.085073993};
 	};
 };
 binarizationWanted=0;
@@ -12727,7 +12727,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=63;
+		items=61;
 		class Item0
 		{
 			dataType="Marker";
@@ -12803,7 +12803,7 @@ class Mission
 			name="base";
 			text="Base";
 			type="b_hq";
-			angle=28.495935;
+			angle=28.495924;
 			id=1369;
 			atlOffset=1.9073486e-006;
 		};
@@ -14309,7 +14309,7 @@ class Mission
 			name="base_1";
 			text="Spawner";
 			type="b_hq";
-			angle=28.495935;
+			angle=28.495924;
 			id=2333;
 			atlOffset=1.9073486e-006;
 		};
@@ -16539,85 +16539,6 @@ class Mission
 			};
 			id=2747;
 			type="ukcw_lynx_2gpmg";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item61
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11085.212,30.074619,8498.249};
-				angles[]={0,3.8878176,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=2748;
-			type="ukcw_lynx_tow";
-			atlOffset=0.031848907;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item62
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11068.696,28.978027,8514.1299};
-				angles[]={0.063912325,3.8878176,0.039979152};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=2749;
-			type="ukcw_lynx_tow";
 			class CustomAttributes
 			{
 				class Attribute0

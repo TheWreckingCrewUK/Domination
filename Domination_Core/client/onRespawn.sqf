@@ -65,7 +65,16 @@ if (!((backpack player) == "")) then {
 };
  
  
- _armourcrew = ["Modern_British_VehicleCrew","Modern_USMC_VehicleCrew","1990_British_Tank_Crew_Desert","2000_British_Vehicle_Crew","Modern_British_VehicleCommander","Modern_USMC_VehicleCommander","1990_British_Tank_Commander_Desert","2000_British_Vehicle_Commander"];
+ _armourcrew = ["Modern_British_VehicleCrew",
+ "Modern_British_VehicleCommander",
+ "Modern_USMC_VehicleCommander",
+ "Modern_USMC_VehicleCrew",
+ "1990_British_Vehicle_Commander",
+ "1990_British_Vehicle_Crew",
+ "1990_British_Tank_Commander_Desert",
+ "1990_British_Tank_Crew_Desert",
+ "2000_British_Vehicle_Commander",
+ "2000_British_Vehicle_Crew"];
  
  if (typeof player in _armourcrew) then {
  
@@ -103,9 +112,9 @@ _channelNumber = getNumber (configFile >> "cfgVehicles" >> (typeOf player) >> "t
  _switchChannel = [_radioID, _channelNumber] call acre_api_fnc_setRadioChannel; 
  Hint parseText format ["<t color='#d0dd00' size='1.2' shadow='1' shadowColor='#000000' align='center'>Radio Set</t><br/><t color='#d0dd00' size='0.8' shadow='1' shadowColor='#565656' align='left'>Radio:</t><t color='##013bb6' size='0.8' shadow='1' shadowColor='#565656' align='right'>%1</t><br/><t color='#d0dd00' size='0.8' shadow='1' shadowColor='#565656' align='left'>Channel:</t><t color='##013bb6' size='0.8' shadow='1' shadowColor='#565656' align='right'>%2</t>",getText (configFile >> "cfgVehicles" >> (typeOf player) >> "twc_radioType"),_channelNumber]; 
  };
-
+ 
 if ((random 1)< 0.1) then {
-	if (( count(allPlayers - entities "HeadlessClient_F"))>6) then {
+	//if (( count(allPlayers - entities "HeadlessClient_F"))>6) then {
 
 	if (isnil "twc_enemyhasradio") then {
 		twc_enemyhasradio = 0;
@@ -113,10 +122,20 @@ if ((random 1)< 0.1) then {
 	};
 
 
-	[getmarkerpos "aoCenterMarker", [player], getmarkerpos "aoCenterMarker"] remoteExec ["twc_fnc_spawnReinforcements", 2];
+	//[getmarkerpos "aoCenterMarker", [player], getmarkerpos "aoCenterMarker"] remoteExec ["twc_fnc_spawnReinforcements", 2];
+	[] spawn {
+	sleep (random 600);
+_timer = 2;
 
+_reinforcementsTrg = createTrigger ["EmptyDetector", getpos player];
+_reinforcementsTrg setTriggerArea [2700, 2700, 0, false];
+_reinforcementsTrg setTriggerActivation ["WEST", "PRESENT", false];
+_reinforcementsTrg setTriggerTimeout [_timer,_timer,_timer, true];
+//_reinforcementsTrg setTriggerStatements ["(count thislist > 7) && (time > (missionnamespace getvariable ['twc_lastattack', 0]))","if (!isserver) exitwith {};[getPos thisTrigger, thislist, true] call twc_fnc_spawnReinforcements",""];
+_reinforcementsTrg setTriggerStatements ["(count thislist > 7) && (time > (missionnamespace getvariable ['twc_lastattack', 0])) && ((missionnamespace getvariable ['twc_enemyhasradio', 0]) == 1)","if (!isserver) exitwith {};[getmarkerpos 'aoCenterMarker', thislist, getmarkerpos 'aoCenterMarker'] remoteExec ['twc_fnc_spawnReinforcements', 2];",""];
+};
 	//["twc_event_artyattack", [getpos player], twc_artyguns] call CBA_fnc_targetEvent;
-	};
+	//};
 };
 
 if ((random 1)< 0.1) then {

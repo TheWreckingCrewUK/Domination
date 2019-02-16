@@ -16,8 +16,8 @@ if (twc_aosToComplete > 0) then {
 	while {_true}do{
 		_true = false;
 		_town =(townLocationArray call bis_fnc_selectRandom);
-		_name = text _town;
-		
+		//_name = text _town;
+		_name = "Objective " + (twc_objnames call bis_fnc_selectrandom);
 		if(_name in twc_badAOs)then{_true = true};
 		if(_name == twc_LastAO)then{_true = true};
 		if([getpos _town ,2500] call twc_fnc_posNearPlayers)then{_true = true};

@@ -286,6 +286,15 @@ _list=[
 			_crewchiefs
 		]],3
 	],
+	
+		["ukcw_lynx_tow",[ 
+		["driver", 
+			_pilots
+		],
+		["gunner", 
+			_crewchiefs
+		]],3
+	],
 		
 		["UK3CB_BAF_Wildcat_AH1_HEL_6A",[ 
 		["driver", 
@@ -780,6 +789,7 @@ TWC_fnc_checkVehicleSlot = {
 			
 				if (_checkWith == _slot) then {
 					if (!(typeOf _playerUnit in _roles)) then {
+						if (isserver) exitwith {hint "Seat restrict triggered, but not enforcing on singleplayer"};
 						[_playerUnit] call TWC_fnc_notAllowedInSeat;
 				
 

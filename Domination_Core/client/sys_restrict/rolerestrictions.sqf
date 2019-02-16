@@ -1,7 +1,7 @@
 sleep 5;
 if(!isMultiplayer)exitWith{};
 //domination version with different classnames
-/*
+
 
 if((typeOf player) in ["Modern_British_crewchief", "2000_British_CrewChief", "2000_British_CrewChief_Desert"])then{
 if (( count(allPlayers - entities "HeadlessClient_F")) < 14) then {
@@ -87,9 +87,18 @@ execvm "Domination_Core\client\sys_restrict\fullrecce.sqf";
 };
 
 
+ _armourcrew = ["Modern_British_VehicleCrew",
+ "Modern_British_VehicleCommander",
+ "Modern_USMC_VehicleCommander",
+ "Modern_USMC_VehicleCrew",
+ "1990_British_Vehicle_Commander",
+ "1990_British_Vehicle_Crew",
+ "1990_British_Tank_Commander_Desert",
+ "1990_British_Tank_Crew_Desert",
+ "2000_British_Vehicle_Commander",
+ "2000_British_Vehicle_Crew"];
 
-
-if((typeOf player) in ["Modern_British_VehicleCrew", "Modern_British_VehicleCommander", "1990_British_Tank_Crew_Desert", "1990_British_Tank_Commander_Desert", "2000_British_Vehicle_Commander", "2000_British_Vehicle_Crew"])then{
+if((typeOf player) in _armourcrew)then{
 
 
 execvm "Domination_Core\client\sys_restrict\fullArmourCrew.sqf";

@@ -61,8 +61,9 @@ publicVariable "twc_missionname";
 
 if (twc_nonpersistent == 1) then { execvm "Domination_Core\server\func\fnc_nonpersistent.sqf"};
 
+
 {_location = createLocation [ "NameVillage" , getpos _x, 100, 100];
-_location setText "Objective " + str floor random 999;
+_location setText "Objective " + (twc_objnames call bis_fnc_selectrandom);
 townLocationArray = townLocationArray + (nearestLocations [getpos _x, ["NameVillage","NameCity","NameCityCapital","nameLocal"], 2]);} foreach customlocations;
 
 townLocationArray = townLocationArray + (nearestLocations [getMarkerPos "base", ["NameVillage","NameCity","NameCityCapital"], twc_maxObjDistance]) + (nearestLocations [getMarkerPos "base", ["NameVillage","NameCity","NameCityCapital"], (twc_maxObjDistance / 1.5)]) + (nearestLocations [getMarkerPos "base", ["NameVillage","NameCity","NameCityCapital"], (twc_maxObjDistance / 2)]) + (nearestLocations [getMarkerPos "base", ["NameVillage","NameCity","NameCityCapital"], (twc_maxObjDistance / 2)]);

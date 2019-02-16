@@ -26,8 +26,6 @@ if ((count _enemylist) > 0) then {
 	_targetlist = _enemylist;
 };
 
-//exit if the system is asking artillery to fire on its own friends
-if ((_enemy distance _pos) < 400) exitwith {};
 
 _spawnpos = [0,0,0];
 
@@ -38,15 +36,14 @@ _spawnpos = [0,0,0];
 _stagepos = [_pos, 1000] call CBA_fnc_randPos;
 
 
-
-if (((random 1)< 0.6) && (( count(allPlayers - entities "HeadlessClient_F"))>6) && ((_enemy distance artyspawnpos) < 4500) && (twc_activearty == 1)) exitwith {
+/*
+if (((random 1)< 0.6) && (( count(allPlayers - entities "HeadlessClient_F"))>6) && ((_enemy distance artyspawnpos) < 4500) && (twc_activearty == 1) && ((_enemy distance _pos) < 400)) exitwith {
 
 		twc_mortar_targetlist pushback (getpos _enemy);
 		publicVariable "twc_mortar_targetlist";
 	
 };
-
-
+*/
 
 _landorair = random 1;
 

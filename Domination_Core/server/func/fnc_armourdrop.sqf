@@ -48,9 +48,14 @@ _wp = _group1 addwaypoint [_stagepos , 500];
 					
 					sleep 3;
 					//systemchat "ejecting tank";
-				
+					_vehtype = "rhs_bmd2";
+					if (!(isnil "twc_missionname")) then {
+						if ((["90", twc_missionname] call BIS_fnc_inString) || (["00", twc_missionname] call BIS_fnc_inString)) then {
+							_vehtype = "rhs_bmd1k";
+						};
+					};
 	for "_i" from 1 to 2 do {
-				_tank = "rhs_bmd2" createvehicle [0,0,0];
+				_tank = _vehtype createvehicle [0,0,0];
 				_tank setpos (_plane getRelPos [50, getdir _plane - 180]);
 				_tank setposatl [(getpos _tank select 0),(getpos _tank select 1),(getpos _plane select 2)];
 				

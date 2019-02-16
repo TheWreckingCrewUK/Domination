@@ -1,15 +1,15 @@
 
-_attackcond = {( count(allPlayers - entities "HeadlessClient_F")) >= 14};
+_attackcond = {((count units group player) > 1) && (twc_aosToComplete == 1)};
 
-_attackcond2 = {( count(allPlayers - entities "HeadlessClient_F")) >= 14};
+_attackcond2 = {((count units group player) > 1) && (twc_aosToComplete == 1)};
 
 _utilitycond = {( count(allPlayers - entities "HeadlessClient_F")) >= 8};
 
 _transportcond1 = {true};
 
-_transportcond2 = {( count(allPlayers - entities "HeadlessClient_F")) >= 7};
+_transportcond2 = {(twc_aosToComplete > 3)};
 
-_cascond = {( count(allPlayers - entities "HeadlessClient_F")) >= 8};
+_cascond = {(twc_aosToComplete > 3)};
 
 _planecondlow = {( count(allPlayers - entities "HeadlessClient_F")) >= 0};
 
@@ -298,7 +298,7 @@ if((typeOf player) in ["Modern_British_HeliPilot","Modern_British_crewchief", "M
 	["rhsgref_cdf_Mi35"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
 	
 	},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawncas"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawnattack"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 
 	
 	
@@ -452,6 +452,13 @@ if((typeOf player) in ["1990_British_HeliPilot_Desert","1990_British_HeliPilot"]
 	
 	},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawntransport"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Lynx TOW","",{
+	
+	["ukcw_lynx_tow"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
+	
+	},{(count units group player) > 1}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawntransport"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Blackhawk (Armed)","",{
 	
@@ -555,6 +562,13 @@ _helispawn1 = ["SpawnsmallcharlieCreate","Spawn Gazelle","",{
 	["ukcw_lynx_2gpmg"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
 	
 	},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawntransport"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Lynx TOW","",{
+	
+	["ukcw_lynx_tow"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
+	
+	},{(count units group player) > 1}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawntransport"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Blackhawk (Armed)","",{

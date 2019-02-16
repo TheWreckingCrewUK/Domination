@@ -104,7 +104,7 @@ if (typeof _veh == "CUP_B_MCV80_GB_D_SLAT") then {
 			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd",50];
 			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd_T",20];
 
-			_box AddMagazineCargoGlobal ["ukcw_13rd_9x19",8];
+			_box AddMagazineCargoGlobal ["UK3CB_BAF_9_13Rnd",8];
 
 			_box addItemCargoGlobal ["ACE_fieldDressing",15];
 			_box addItemCargoGlobal ["ACE_elasticBandage",15];
@@ -157,7 +157,7 @@ if (typeof _veh == "CUP_B_MCV80_GB_D_SLAT") then {
 
 
 
-		if ((!(["90", twc_missionname] call BIS_fnc_inString)) || (!(["00", twc_missionname] call BIS_fnc_inString))) then {
+		if ((!(["90", twc_missionname] call BIS_fnc_inString)) && (!(["00", twc_missionname] call BIS_fnc_inString))) then {
 
 // Modern
 
@@ -229,7 +229,7 @@ if (typeof _veh == "CUP_B_MCV80_GB_W_SLAT") then {
 			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd",50];
 			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd_T",20];
 
-			_box AddMagazineCargoGlobal ["ukcw_13rd_9x19",8];
+			_box AddMagazineCargoGlobal ["UK3CB_BAF_9_13Rnd",8];
 
 			_box addItemCargoGlobal ["ACE_fieldDressing",15];
 			_box addItemCargoGlobal ["ACE_elasticBandage",15];
@@ -282,7 +282,7 @@ if (typeof _veh == "CUP_B_MCV80_GB_W_SLAT") then {
 
 
 
-		if ((!(["90", twc_missionname] call BIS_fnc_inString)) || (!(["00", twc_missionname] call BIS_fnc_inString))) then {
+		if ((!(["90", twc_missionname] call BIS_fnc_inString)) && (!(["00", twc_missionname] call BIS_fnc_inString))) then {
 
 // Modern
 
@@ -426,7 +426,7 @@ _box = _veh;
 			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd",40];
 			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd_T",15];
 
-			_box AddMagazineCargoGlobal ["ukcw_13rd_9x19",3];
+			_box AddMagazineCargoGlobal ["UK3CB_BAF_9_13Rnd",3];
 
 			_box addItemCargoGlobal ["ACE_fieldDressing",15];
 			_box addItemCargoGlobal ["ACE_elasticBandage",15];
@@ -475,7 +475,7 @@ _box = _veh;
 			_box addItemCargoGlobal ["SmokeShellRed",4];
 			};
 
-		if ((!(["90", twc_missionname] call BIS_fnc_inString)) || (!(["00", twc_missionname] call BIS_fnc_inString))) then {
+		if ((!(["90", twc_missionname] call BIS_fnc_inString)) && (!(["00", twc_missionname] call BIS_fnc_inString))) then {
 
 // Modern
 
@@ -540,7 +540,7 @@ _box = _veh;
 			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd",30];
 			_box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd_T",15];
 
-			_box AddMagazineCargoGlobal ["ukcw_13rd_9x19",3];
+			_box AddMagazineCargoGlobal ["UK3CB_BAF_9_13Rnd",3];
 
 			_box addItemCargoGlobal ["ACE_fieldDressing",15];
 			_box addItemCargoGlobal ["ACE_elasticBandage",15];
@@ -590,7 +590,7 @@ _box = _veh;
 			_box addItemCargoGlobal ["SmokeShellRed",4];
 			};
 
-		if ((!(["90", twc_missionname] call BIS_fnc_inString)) || (!(["00", twc_missionname] call BIS_fnc_inString))) then {
+		if ((!(["90", twc_missionname] call BIS_fnc_inString)) && (!(["00", twc_missionname] call BIS_fnc_inString))) then {
 
 // Modern
 

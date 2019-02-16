@@ -18,7 +18,7 @@ squadAA = (configfile >> "CfgGroups" >> "East" >> "CUP_O_TK" >> "Infantry" >> "C
 
 tankaaCombined = (configfile >> "CfgGroups" >> "East" >> "CUP_O_TK" >> "Armored" >> "CUP_O_TK_T55Platoon");
 
-tank = ["CUP_O_T55_TK", "CUP_O_BRDM2_ATGM_SLA"];
+tank = ["CUP_O_T55_TK", "rhs_t72ba_tv"];
 
 ifv = ["CUP_O_BMP1P_TKA", "CUP_O_BMP1_TKA"];
 
@@ -26,19 +26,23 @@ apc = ["CUP_O_BTR60_TK", "CUP_O_BRDM2_TKA"];
 
 aa = ["CUP_O_BMP2_ZU_TKA", "CUP_O_ZSU23_SLA"];
 
-twc_tankcount = 2 + (random 3);
-twc_apccount = 2 + (random 2);
+twc_tankcount = 3 + (random 3);
+twc_apccount = 0;
 twc_ifvcount = 2 + (random 2);
 twc_infcount = 0;
-twc_aainfcount = 0;
+twc_aainfcount = 1;
 
 radioTower = "Land_Antenna";
 //add in an object name and the game will create a location there and spawn enemies from it
 customlocations = [c_1, c_2, c_3, c_4, c_5, c_6, c_7, c_8, c_9];
 
 
-	twc_is90 = 1;
-	publicVariable "twc_is90";
+twc_is90 = 1;
+publicVariable "twc_is90";
+
+
+twc_wdveh = 0;
+publicVariable "twc_wdveh";
 
 twc_aosToComplete = 3;
 twc_enemyFlag = "Faction_CUP_RU";

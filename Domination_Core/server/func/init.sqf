@@ -13,6 +13,7 @@ twc_fnc_armourdrop = compile preprocessfilelinenumbers "Domination_Core\server\f
 twc_fnc_infantrydrop = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_infantrydrop.sqf";
 twc_fnc_infantrydrop_heavy = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_infantrydrop_heavy.sqf";
 twc_fnc_crewcount = compile preprocessfilelinenumbers "Domination_Core\server\sys_mechanised\crewcount.sqf";
+twc_fnc_aps_server = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_APS_server.sqf";
 
 
 if (isServer) then {
@@ -23,6 +24,7 @@ if (isServer) then {
 	}] call CBA_fnc_addEventHandler;
 };
 
+call twc_fnc_aps_server;
 
 if (!isDedicated) then {
     KK_fnc_FX = {

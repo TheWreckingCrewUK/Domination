@@ -80,7 +80,7 @@ _markerstr setMarkerType twc_enemyFlag;
 
 parseText format["<t align='center'><t size='2' color='#ff0000'>AO created at </t><br/><t align='center'><t size='1.5' color='#ffffff'> %1</t><br/><t align='center'>---------------------<br/></t><t align='left'><t size='1' shadow='1.1' shadowColor='#000000' color='#CC4D00'>Destroy the radio tower quickly to stop enemy reinforcements. </t>", _name] remoteExec ["hint"];
 
-[West,[_name],["To capture the AO you must Destroy the Radio tower and then eliminate the remaining enemies from the area. While the radio tower is alive the enemy will be able to call for reinforcements.",format["%1 AO",_name],""],objNull,True,1,True,"",False] call BIS_fnc_taskCreate;
+[West,[_name],["To capture the AO you must Destroy the Radio tower and then eliminate the remaining enemies from the area. While the radio tower is alive the enemy will be able to call for reinforcements.",format["%1",_name],""],objNull,True,1,True,"",False] call BIS_fnc_taskCreate;
 
 
 _spawnPos = [_pos,[100,300],random 360,0,[0,100]] call SHK_pos;
@@ -149,6 +149,13 @@ if (_tank in twc_hasaps) then {
 	publicVariable "twc_nonAPS_list";
 };
 
+if ((_tank == "rhs_t72ba_tv") && (twc_wdveh == 0)) then {
+	[
+	_vehicle,
+	["rhs_Sand",1], 
+	["hide_com_shield",0]
+	] call BIS_fnc_initVehicle;
+};
 //T72B3's are killing their gunners on spawn for some reason
 [_vehicle] spawn {
 params ["_vehicle"];
@@ -471,11 +478,12 @@ reinforcementsTrg setTriggerTimeout [1,1,1,True];
 reinforcementsTrg setTriggerStatements ["this", "player setdamage 1",""];
 */
 _timer = 200 +(random 200);
+
 reinforcementsTrg = createTrigger ["EmptyDetector", _pos];
 reinforcementsTrg setTriggerArea [2700, 2700, 0, false];
 reinforcementsTrg setTriggerActivation ["WEST", "EAST D", true];
 reinforcementsTrg setTriggerTimeout [_timer,_timer,_timer, true];
-reinforcementsTrg setTriggerStatements ["this","if (!isserver) exitwith {};[getPos thisTrigger, thislist, true] call twc_fnc_spawnReinforcements",""];
+reinforcementsTrg setTriggerStatements ["this && (time > (missionnamespace getvariable ['twc_lastattack', 6000]))","if (!isserver) exitwith {};[getPos thisTrigger, thislist, true] call twc_fnc_spawnReinforcements",""];
 
 //[getPos thisTrigger] call twc_fnc_spawnReinforcements
 

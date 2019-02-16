@@ -15,6 +15,16 @@ _veh = _heli createvehicle getpos ammoboxspawner;
 twc_armourcount = twc_armourcount +1;
 publicVariable "twc_armourcount";
 
+_armourcrew = ["Modern_British_VehicleCrew",
+ "Modern_British_VehicleCommander",
+ "Modern_USMC_VehicleCommander",
+ "Modern_USMC_VehicleCrew",
+ "1990_British_Vehicle_Commander",
+ "1990_British_Vehicle_Crew",
+ "1990_British_Tank_Commander_Desert",
+ "1990_British_Tank_Crew_Desert",
+ "2000_British_Vehicle_Commander",
+ "2000_British_Vehicle_Crew"];
 	
 	if (typeof _veh == "rhsusf_M1117_D") then {
 [

@@ -121,7 +121,7 @@ if((typeOf player) in ["Modern_British_VehicleCrew"])then{
 	};
 
 	
-if((typeOf player) in ["1990_British_Tank_Commander_Desert", "2000_British_Vehicle_Commander","1990_British_Vehicle_Crew"])then{
+if((typeOf player) in ["1990_British_Tank_Commander_Desert", "2000_British_Vehicle_Commander","1990_British_Vehicle_Crew","1990_British_Vehicle_Commander"])then{
 
 
 
@@ -173,7 +173,7 @@ if((typeOf player) in ["2000_British_Vehicle_Commander", "2000_British_Vehicle_C
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawnwoodland"],_armouraction1,true] call ace_interact_menu_fnc_addActionToClass;
 	};
 	
-if((typeOf player) in ["1990_British_Tank_Crew_Desert","1990_British_Tank_Commander_Desert"])then{
+if((typeOf player) in ["1990_British_Tank_Crew_Desert","1990_British_Tank_Commander_Desert","1990_British_Vehicle_Commander","1990_British_Vehicle_Crew"])then{
 
 
 	_armouraction1 = ["spawnl111","Spawn FV432","",{["ukcw_fv432"] execvm "domination_core\client\sys_player\vehicles\spawnarmour.sqf"},{true}] call ace_interact_menu_fnc_createAction;

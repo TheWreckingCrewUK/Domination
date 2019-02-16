@@ -27,7 +27,7 @@ squadAA = (configfile >> "CfgGroups" >> "East" >> "rhs_faction_msv" >> "rhs_grou
 
 tank = ["rhs_t72ba_tv", "rhs_t72bb_tv"];
 
-ifv = ["rhs_bmp2e_msv", "rhs_bmp1_msv"];
+ifv = ["rhs_bmp1_msv"];
 
 apc = ["rhs_btr70_msv", "rhs_btr80_msv"];
 
@@ -38,8 +38,8 @@ twc_tankcount = random 2;
 twc_apccount = random 2;
 twc_ifvcount = random 2;
 twc_aacount = 0;
-twc_infcount = 3;
-twc_aainfcount = 2;
+twc_infcount = 2;
+twc_aainfcount = 1;
 
 twc_aosToComplete = 3;
 twc_enemyFlag = "Faction_CUP_RU";
