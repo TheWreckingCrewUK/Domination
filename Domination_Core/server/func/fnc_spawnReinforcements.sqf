@@ -5,7 +5,8 @@ params["_pos", "_enemylist", "_arty"];
 
 if (isnil "_arty") then {_arty = false};
 
-if (isnil "twc_lastattack") then {twc_lastattack = 0};
+if (isnil "twc_lastattack") then {twc_lastattack = 0;
+publicVariable "twc_lastattack";};
 
 if (twc_enemyhasradio == 0) exitwith {};
 
@@ -13,6 +14,7 @@ if (twc_enemyhasradio == 0) exitwith {};
 if (time < twc_lastattack) exitwith {};
 
 twc_lastattack = time + 3000;
+publicVariable "twc_lastattack";
 
 
 	_enemy = allplayers call BIS_fnc_selectRandom;
