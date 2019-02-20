@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2190;
+		nextID=2191;
 	};
 	class MarkerIDProvider
 	{
@@ -17853,16 +17853,16 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2288.0725,314.90027,6080.5938};
+						position[]={2288.073,314.9003,6080.5938};
 					};
 					side="West";
-					flags=5;
+					flags=4;
 					class Attributes
 					{
 						isPlayable=1;
 					};
-					id=2162;
-					type="Modern_British_logitech";
+					id=2190;
+					type="Modern_British_FSTForwardObserver";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -17884,7 +17884,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male05ENG";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
