@@ -33,7 +33,7 @@ execvm "Domination_Core\client\sys_restrict\fullsniperteam.sqf";
 
 };
 
-if ((["artillery", group player] call BIS_fnc_inString)) then {
+if ((["artillery", str group player] call BIS_fnc_inString)) then {
 
 execvm "domination_core\client\sys_restrict\fullArtyCrew.sqf";
 
