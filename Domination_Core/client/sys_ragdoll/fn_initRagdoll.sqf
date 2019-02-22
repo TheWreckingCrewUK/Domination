@@ -23,7 +23,7 @@ diwako_ragdoll_ragdolling = true;
 diwako_ragdoll_ai = true;
 diwako_ragdoll_server_only = true;
 
-diwako_ragdoll_fnc_animChangedEH = compile preprocessfilelinenumbers "Domination_Core\client\sys_ragdoll\fn_animChangedEH.sqf";
+diwako_ragdoll_fnc_animChangedEH = compile preprocessfilelinenumbers "Insurgency_Core\client\sys_ragdoll\fn_animChangedEH.sqf";
 
 
 ["ace_unconscious", {

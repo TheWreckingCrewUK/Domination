@@ -61,7 +61,7 @@ twc_tankfacethreat = {
 		(driver _tank) domove _pos1;
 		waituntil {(((driver _tank) getreldir _player) > 350) || (((driver _tank) getreldir _player) < 10)};
 		doStop (driver _tank);
-		sleep 10 + random 10;
+		sleep (10 + (random 10));
 		//systemchat "moving on";
 		(driver _tank) dofollow (leader (driver _tank));
 	};
@@ -113,7 +113,7 @@ twc_tankfacethreat = {
 									[player, _x] remoteexec ["twc_tankfacethreat", _x];
 									sleep 1;
 									[_x] remoteexec ["twc_smokegen", _x];
-									sleep 15;
+									sleep 5;
 									[_x] remoteexec ["twc_panictank", _x];
 									if (_lr == 1) then {
 										[_x] spawn {
@@ -139,7 +139,7 @@ twc_tankfacethreat = {
 				
 						//if it's somewhere kinda off the left rear quarter, fire the exhaust smoke
 						_hulldir = (_x) getreldir _rocket;
-						if ((_hulldir < 320) && (_hulldir > 150) && ((random 1) < 0.7)) then {
+						if ((_hulldir < 320) && (_hulldir > 70) && ((random 1) < 0.7)) then {
 							[_x] spawn {
 								params ["_x"];
 								sleep (random 5);
@@ -147,6 +147,8 @@ twc_tankfacethreat = {
 								if ((_x getvariable ["twc_lastsmokegen",0]) < (time + 6)) then {
 									[_x] remoteexec ["twc_smokegen", _x];
 									_x setvariable ["twc_lastsmokegen",time, true];
+									sleep (random 5);
+									[_x] remoteexec ["twc_panictank", _x];
 								};
 							};
 						} else {
@@ -269,7 +271,7 @@ twc_tankfacethreat = {
 									sleep 2;
 									[_x] remoteexec ["twc_smokegen", _x];
 									sleep 2;
-									//[[_x],twc_panictank] remoteExec ["bis_fnc_call", 2];
+									[_x] remoteexec ["twc_panictank", _x];
 								};
 							};
 							
