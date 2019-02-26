@@ -47,7 +47,7 @@ twc_tankfacethreat = {
 		(driver _tank) domove _pos1;
 		waituntil {(((driver _tank) getreldir _player) > 350) || (((driver _tank) getreldir _player) < 10)};
 		doStop (driver _tank);
-		sleep 10 + random 10;
+		sleep (10 + (random 10));
 		//systemchat "moving on";
 		(driver _tank) dofollow (leader (driver _tank));
 	};

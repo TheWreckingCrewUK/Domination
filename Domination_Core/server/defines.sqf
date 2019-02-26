@@ -24,7 +24,7 @@ squadAA = (configfile >> "CfgGroups" >> "East" >> "rhs_faction_msv" >> "rhs_grou
 };
 
 if (isNil "aa") then {
-aa = ["rhs_zsu234_aa", "CUP_O_2S6_RU"];
+aa = ["rhs_zsu234_aa", "CUP_O_2S6M_RU"];
 };
 
 if (isNil "radioTower") then {
