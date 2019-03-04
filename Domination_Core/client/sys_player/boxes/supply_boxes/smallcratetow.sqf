@@ -26,8 +26,8 @@ hint _spawntext;
  publicVariable "twc_spectowcount";
 
 
-_boxClass = "rhsusf_launcher_crate";
-
+_boxClass = "RHS_TOW_TriPod_D";
+/*
 _box = _boxClass createVehicle (getPos AmmoBoxSpawner);
 
 clearWeaponCargoGlobal _box;
@@ -38,6 +38,6 @@ clearitemCargoGlobal _box;
 //Weapons
 _box AddbackpackCargoGlobal ["rhs_TOW_Tripod_Bag",1];
 _box AddbackpackCargoGlobal ["rhs_Tow_Gun_Bag",1];
-
+*/
 [_box, 5] call ace_cargo_fnc_setSize;
-[_box, false, [0, 3, 1], 10] call ace_dragging_fnc_setCarryable;
+//[_box, false, [0, 3, 1], 10] call ace_dragging_fnc_setCarryable;

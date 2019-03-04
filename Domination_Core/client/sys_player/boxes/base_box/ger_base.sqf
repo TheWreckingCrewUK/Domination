@@ -93,6 +93,7 @@
         ["CUP_30Rnd_TE1_Red_Tracer_556x45_G36",30],
 		["UK3CB_BAF_762_200Rnd_T",10],
 		["rhs_200rnd_556x45_T_SAW",15],
+		["CUP_100Rnd_TE1_Red_Tracer_556x45_BetaCMag",5],
 		["ACE_SpareBarrel",1],
 		["HandGrenade",5]
     ];
@@ -108,6 +109,7 @@
  if (typeOf vehicle player in ["Modern_ger_rif_AT", "Modern_ger_rif_AT_d"]) then {
     _tmp_weapons =
     [
+        ["rhs_weap_fim92",1],
         ["CUP_arifle_G36A",1]
     ];
 
@@ -116,6 +118,7 @@
         ["CUP_30Rnd_556x45_G36",50],
 		["CUP_30Rnd_TE1_Red_Tracer_556x45_G36",50],
 		["rhs_mag_maaws_HEDP",10],
+		["rhs_fim92_mag",2],
 		["HandGrenade",5]
     ];
 	_tmp_items =

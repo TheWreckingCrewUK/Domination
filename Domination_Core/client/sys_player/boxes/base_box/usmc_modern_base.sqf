@@ -9,8 +9,8 @@
 
     _tmp_magazines =
     [
-        ["rhs_mag_30Rnd_556x45_M855_Stanag",50],
-		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",20],
+        ["rhs_mag_30Rnd_556x45_M855A1_Stanag",50],
+		["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",20],
         ["rhsusf_mag_7x45acp_MHP",15],
 		["1Rnd_HE_Grenade_shell", 30],
 	    ["1Rnd_Smoke_Grenade_shell", 10],
@@ -27,7 +27,7 @@
 	[
 		["ACE_epinephrine",5],
 		["SatchelCharge_Remote_Mag",1],
-		["DemoCharge_Remote_Mag",1],
+		["DemoCharge_Remote_Mag",3],
 		["ACE_M26_Clacker",1],
 		["rhsusf_acc_ACOG",1],
 		["rhsusf_acc_compm4",1],
@@ -52,8 +52,8 @@
 
     _tmp_magazines =
     [
-        ["rhs_mag_30Rnd_556x45_M855_Stanag",50],
-		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",20],
+        ["rhs_mag_30Rnd_556x45_M855A1_Stanag",50],
+		["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",20],
 		["1Rnd_HE_Grenade_shell", 30],
 	    ["1Rnd_Smoke_Grenade_shell", 10],
 	    ["1Rnd_SmokeRed_Grenade_shell", 10],
@@ -78,7 +78,7 @@
 		["rhsusf_assault_eagleaiii_ocp",1],
 		["ACRE_PRC148",1],
 		["SatchelCharge_Remote_Mag",1],
-		["DemoCharge_Remote_Mag",1],
+		["DemoCharge_Remote_Mag",3],
 		["ACE_M26_Clacker",1],
 		["ACE_IR_Strobe_Item",1]
 		
@@ -97,8 +97,8 @@
 
     _tmp_magazines =
     [
-        ["rhs_mag_30Rnd_556x45_M855_Stanag",50],
-		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",10],
+        ["rhs_mag_30Rnd_556x45_M855A1_Stanag",50],
+		["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",10],
         ["rhsusf_mag_7x45acp_MHP",15],
 		["rhsusf_8Rnd_00Buck",10],
 		["rhsusf_8Rnd_Slug",10],
@@ -111,7 +111,6 @@
 		["rhsusf_acc_ACOG",1],
 		["rhsusf_acc_compm4",1],
 		["rhsusf_acc_anpeq15_bk_light",1],
-		["rhsusf_assault_eagleaiii_ocp",1],
 		["ACRE_PRC148",1]
 	];
 };
@@ -122,29 +121,27 @@
     _tmp_weapons =
     [
         ["twc_rhs_weap_m4a1_acog_lazer",1],
-		["CUP_launch_Mk153Mod0",1],
+		["rhs_weap_smaw_gr_optic",1],
 		["rhs_weap_M136_hedp",2],
-		["rhs_weap_m72a7",2]
+		["rhs_weap_fim92",1],
+		["rhs_weap_m72a7",4]
 	];
 
     _tmp_magazines =
     [
-        ["rhs_mag_30Rnd_556x45_M855_Stanag",50],
-		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",10],
-		["CUP_SMAW_HEAA_M",3],
-		["CUP_SMAW_HEDP_M",3],
-		["CUP_SMAW_Spotting",8],
+        ["rhs_mag_30Rnd_556x45_M855A1_Stanag",50],
+		["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",10],
+		["rhs_mag_smaw_HEAA",8],
+		["rhs_mag_smaw_SR",5],
+		["rhs_fim92_mag",3],
 		["HandGrenade",5]
     ];
 
 	_tmp_items =
 	[
-		["rhsusf_acc_ACOG",1],
 		["rhsusf_acc_compm4",1],
 		["rhsusf_acc_anpeq15A",1],
-		["rhsusf_assault_eagleaiii_ocp",1],
-		["ACRE_PRC148",1],
-		["CUP_optic_SMAW_Scope",1]
+		["ACRE_PRC148",1]
 	];
 };
 
@@ -153,24 +150,23 @@
     _tmp_weapons =
     [
         ["twc_rhs_weap_m249_pip_L_mgo_lazer",1],
-		["twc_rhs_weap_m27iar_grip_acog_lazer",1]
+		["twc_rhs_weap_m27iar_grip_acog_lazer",1],
+		["rhs_weap_m72a7",1]
 	];
 
     _tmp_magazines =
     [
-        ["rhsusf_100Rnd_556x45_soft_pouch",20],
-		["rhsusf_200Rnd_556x45_soft_pouch",10],
+        ["rhsusf_100Rnd_556x45_mixed_soft_pouch",20],
+		["rhsusf_200rnd_556x45_mixed_box",10],
 		["ACE_SpareBarrel",1],
-		["rhs_mag_30Rnd_556x45_M855_Stanag",50],
-		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",20],
+		["rhs_mag_30Rnd_556x45_M855A1_Stanag",50],
+		["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",20],
 		["HandGrenade",5]
     ];
 
 	_tmp_items =
 	[
-		["rhsusf_acc_ELCAN",1],
 		["rhsusf_acc_anpeq15A",1],
-		["rhsusf_assault_eagleaiii_ocp",1],
 		["bipod_01_F_blk",1],
 		["ACRE_PRC148",1]
 	];
@@ -181,26 +177,24 @@
     _tmp_weapons =
     [
         ["twc_rhs_weap_m4a1_acog_lazer",1],     
-		["rhs_weap_M136_hedp",2],
-		["rhs_weap_m72a7",4]
+		["rhs_weap_M136_hedp",1],
+		["rhs_weap_m72a7",2]
 	];
 
     _tmp_magazines =
     [
-        ["rhs_mag_30Rnd_556x45_M855_Stanag",50],
-		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",20],
+        ["rhs_mag_30Rnd_556x45_M855A1_Stanag",50],
+		["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",20],
 		["ACE_SpareBarrel",1],
-		["rhsusf_100Rnd_556x45_soft_pouch",10],
-		["rhsusf_200Rnd_556x45_soft_pouch",10],
+		["rhsusf_100Rnd_556x45_mixed_soft_pouch",10],
+		["rhsusf_200rnd_556x45_mixed_box",10],
 		["HandGrenade",5]
     ];
 
 	_tmp_items =
 	[
-		["rhsusf_acc_ACOG",1],
 		["rhsusf_acc_compm4",1],
 		["rhsusf_acc_anpeq15A",1],
-		["rhsusf_assault_eagleaiii_ocp",1],
 		["ACRE_PRC148",1]
 	];
 };
@@ -208,14 +202,14 @@
   if ((typeOf vehicle player) in ["Modern_USMC_MachineGunner", "Modern_USMC_MachineGunner_d"]) then {
     _tmp_weapons =
     [
-        ["twc_rhs_weap_m240B_mgo_lazer",1],
+        ["rhs_weap_m240B_twcslow",1],
 		["rhsusf_weap_m1911a1",1]
 	];
 
     _tmp_magazines =
     [
-		["rhsusf_100Rnd_762x51",20],
-		["rhsusf_100Rnd_762x51_m62_tracer",10],
+		["rhsusf_100Rnd_762x51_m62_tracer",20],
+		["rhsusf_100Rnd_762x51_m61_ap",10],
 		["ACE_SpareBarrel",1],
         ["rhsusf_mag_7x45acp_MHP",15],
 		["HandGrenade",5]
@@ -223,9 +217,7 @@
 
 	_tmp_items =
 	[
-		["rhsusf_acc_ELCAN",1],
 		["rhsusf_acc_anpeq15A",1],
-		["rhsusf_assault_eagleaiii_ocp",1],
 		["ACRE_PRC148",1]
 	];
 };
@@ -236,25 +228,22 @@
     [
         ["twc_rhs_weap_m4a1_acog_lazer",1],
 		["rhs_weap_M136_hedp",2],
-		["rhs_weap_m72a7",4]
+		["rhs_weap_m72a7",2]
 	];
 
     _tmp_magazines =
     [
-        ["rhs_mag_30Rnd_556x45_M855_Stanag",50],
-		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",20],
+        ["rhs_mag_30Rnd_556x45_M855A1_Stanag",50],
+		["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",20],
 		["ACE_SpareBarrel",1],
-		["rhsusf_100Rnd_762x51",10],
-		["rhsusf_100Rnd_762x51_m62_tracer",10],
+		["rhsusf_100Rnd_762x51_m62_tracer",15],
 		["HandGrenade",5]
     ];
 
 	_tmp_items =
 	[
-		["rhsusf_acc_ACOG",1],
 		["rhsusf_acc_compm4",1],
 		["rhsusf_acc_anpeq15A",1],
-		["rhsusf_assault_eagleaiii_ocp",1],
 		["ACRE_PRC148",1]
 	];
 };
@@ -268,15 +257,15 @@
 
     _tmp_magazines =
     [
-        ["rhs_mag_30Rnd_556x45_M855_Stanag",50],
-		["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",20],
+        ["rhs_mag_30Rnd_556x45_M855A1_Stanag",20],
+		["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",5],
 		["HandGrenade",5]
     ];
 
 	_tmp_items =
 	[
 		["ACE_fieldDressing",50],
-		["TWC_Item_Medical_SutureKit_20", 1],
+		["TWC_Item_Medical_SutureKit_20", 5],
 		["ACE_elasticBandage", 50],
 		["ACE_quikclot", 50],
 		["ACE_packingBandage", 50],
@@ -289,10 +278,8 @@
 		["ACE_salineIV_500",50],
 		["ACE_bodyBag",10],
 		["ACE_tourniquet", 5],
-		["rhsusf_acc_ACOG",1],
 		["rhsusf_acc_compm4",1],
 		["rhsusf_acc_anpeq15A",1],
-		["rhsusf_assault_eagleaiii_ocp",1],
 		["ACRE_PRC148",1]
 	];
 };

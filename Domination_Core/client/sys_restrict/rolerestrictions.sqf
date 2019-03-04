@@ -6,15 +6,15 @@ if(isserver)exitWith{
 
 
 if(["crewchief", typeof player] call BIS_fnc_inString)then{
-if (( count(allPlayers - entities "HeadlessClient_F")) < 14) then {
+if (( count(allPlayers - entities "HeadlessClient_F")) < 11) then {
 
 cutText ["", "Black", 0.001];
 player forceWalk true;
-while {( count(allPlayers - entities "HeadlessClient_F")) < 14} do {
+while {( count(allPlayers - entities "HeadlessClient_F")) < 11} do {
 cutText ["", "Black", 0.001];
 
     [
-        "<t size='1.2'>Helicopter Crew Chief</t><br/><t size='0.6'>You need 14 or more players on the server before you can be a Crew Chief</t>", 0, 0.22, 5, 0, 0, 2
+        "<t size='1.2'>Helicopter Crew Chief</t><br/><t size='0.6'>You need 11 or more players on the server before you can be a Crew Chief</t>", 0, 0.22, 5, 0, 0, 2
     ] spawn bis_fnc_dynamictext;
 	
 	sleep 5;

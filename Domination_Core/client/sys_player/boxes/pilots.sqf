@@ -3,7 +3,7 @@ _attackcond = {((count units group player) > 1) && (twc_aosToComplete == 1)};
 
 _attackcond2 = {((count units group player) > 1) && (twc_aosToComplete == 1)};
 
-_utilitycond = {( count(allPlayers - entities "HeadlessClient_F")) >= 8};
+_utilitycond = {(twc_aosToComplete < 3)};
 
 _transportcond1 = {true};
 
@@ -89,6 +89,10 @@ if((typeOf player) in ["Modern_British_HeliPilot","Modern_British_crewchief","20
 	
 	_ammoaction4 = ["ammospawnheavy","Heavy Ammo","",{},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions","ammospawn"],_ammoaction4,true] call ace_interact_menu_fnc_addActionToClass;
+	
+
+	_UKaction5 = ["Spawnrockets","Spawn AT4 Box","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallcrateat4.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnsupport"],_UKaction5,true] call ace_interact_menu_fnc_addActionToClass;	
 	
 	
 	if(!((typeOf player) in ["Modern_British_logitech"]))then{
@@ -196,6 +200,7 @@ if((typeOf player) in ["Modern_British_JetPilot", "2000_British_JetPilot"])then{
 	
 	_hfstaction6 = ["spawn40","Spawn 40mm Ammo","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\40ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnsupport"],_hfstaction6,true] call ace_interact_menu_fnc_addActionToClass;
+
 	
 	
 };
@@ -208,14 +213,22 @@ if((typeOf player) in ["Modern_British_HeliPilot","Modern_British_crewchief", "M
 	
 	["ukcw_Gazelle"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
 	
-	},{true}] call ace_interact_menu_fnc_createAction;
+	},_utilitycond] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawnutility"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 
 	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Merlin","",{
 	
 	["UK3CB_BAF_Merlin_HC3_18_GPMG"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
 	
-	},_transportcond2] call ace_interact_menu_fnc_createAction;
+	},_utilitycond] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawnutility"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
+	
+
+	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Lynx","",{
+	
+	["ukcw_lynx_2gpmg"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
+	
+	},_utilitycond] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawnutility"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 	
 /*
@@ -252,14 +265,6 @@ if((typeOf player) in ["Modern_British_HeliPilot","Modern_British_crewchief", "M
 	},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawntransport"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 
-	
-
-	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Lynx","",{
-	
-	["ukcw_lynx_2gpmg"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
-	
-	},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawntransport"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 
 	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Mi-8","",{
 	
@@ -297,8 +302,8 @@ if((typeOf player) in ["Modern_British_HeliPilot","Modern_British_crewchief", "M
 	
 	["rhsgref_cdf_Mi35"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
 	
-	},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawnattack"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
+	},{((count units group player) > 1)}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawncas"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 
 	
 	
@@ -375,6 +380,7 @@ if((typeOf player) in ["Modern_British_HeliPilot","Modern_British_crewchief", "M
 
 	_UKaction5 = ["Spawnrockets","Spawn German AT Rockets","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallcrateCGrockets.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnsupport"],_UKaction5,true] call ace_interact_menu_fnc_addActionToClass;	
+
 	
 	/*
 	
@@ -423,8 +429,15 @@ if((typeOf player) in ["1990_British_HeliPilot_Desert","1990_British_HeliPilot"]
 	
 	["ukcw_Gazelle"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
 	
-	},{true}] call ace_interact_menu_fnc_createAction;
+	},_utilitycond] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawnutility"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Gazelle (Armed)","",{
+	
+	["ukcw_Gazelle_dyn"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
+	
+	},_cascond] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawncas"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 
 	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Puma","",{
 	
@@ -433,6 +446,20 @@ if((typeOf player) in ["1990_British_HeliPilot_Desert","1990_British_HeliPilot"]
 	},_transportcond2] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawnutility"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 	
+
+	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Lynx","",{
+	
+	["ukcw_lynx_2gpmg"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
+	
+	},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawnutility"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Lynx TOW","",{
+	
+	["ukcw_lynx_tow"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
+	
+	},(count units group player) > 1] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawncas"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 
 
 	
@@ -445,27 +472,13 @@ if((typeOf player) in ["1990_British_HeliPilot_Desert","1990_British_HeliPilot"]
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawntransport"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 
 
-
-	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Lynx","",{
-	
-	["ukcw_lynx_2gpmg"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
-	
-	},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawntransport"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
-
-	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Lynx TOW","",{
-	
-	["ukcw_lynx_tow"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
-	
-	},{(count units group player) > 1}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawntransport"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Blackhawk (Armed)","",{
 	
 	["RHS_UH60M_ESSS_d"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
 	
-	},_transportcond2] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawntransport"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
+	},_cascond] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawncas"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 	
 
 	
@@ -529,14 +542,14 @@ _helispawn1 = ["SpawnsmallcharlieCreate","Spawn Gazelle","",{
 	
 	["ukcw_Gazelle"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
 	
-	},{true}] call ace_interact_menu_fnc_createAction;
+	},_utilitycond] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawnutility"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 
 	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Puma","",{
 	
 	["CUP_B_SA330_Puma_HC2_BAF"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
 	
-	},_transportcond2] call ace_interact_menu_fnc_createAction;
+	},_utilitycond] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawnutility"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 	
 
@@ -561,22 +574,22 @@ _helispawn1 = ["SpawnsmallcharlieCreate","Spawn Gazelle","",{
 	
 	["ukcw_lynx_2gpmg"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
 	
-	},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawntransport"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
+	},_utilitycond] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawnutility"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 
 	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Lynx TOW","",{
 	
 	["ukcw_lynx_tow"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
 	
 	},{(count units group player) > 1}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawntransport"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawncas"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Blackhawk (Armed)","",{
 	
 	["RHS_UH60M_ESSS_d"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
 	
-	},_transportcond2] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawntransport"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
+	},_cascond] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn", "vehiclespawncas"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 	
 
 

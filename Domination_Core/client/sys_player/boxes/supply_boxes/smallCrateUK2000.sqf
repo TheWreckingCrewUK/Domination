@@ -21,6 +21,7 @@ clearitemCargoGlobal _box;
 
 //Weapons
 _box AddWeaponCargoGlobal ["rhs_weap_m72a7",2];
+_box AddMagazineCargoGlobal ["rhs_fim92_mag",1];
 
 _box AddMagazineCargoGlobal ["ACE_SpareBarrel",1];
 

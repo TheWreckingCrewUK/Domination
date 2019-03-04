@@ -16,13 +16,14 @@ clearMagazineCargoGlobal _box;
 clearitemCargoGlobal _box;
 
 //Weapons
-_box AddWeaponCargoGlobal ["UK3CB_BAF_AT4_CS_AP_Launcher",2];
+_box AddWeaponCargoGlobal ["rhs_weap_M136",2];
 
 _box AddMagazineCargoGlobal ["ACE_SpareBarrel",1];
 
 //supplies
 _box AddMagazineCargoGlobal ["rhsusf_100Rnd_762x51_m62_tracer",1];
 _box AddMagazineCargoGlobal ["rhsusf_100Rnd_762x51",4];
+_box AddMagazineCargoGlobal ["rhs_fim92_mag",1];
 
 _box AddMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855_Stanag",20];
 _box AddMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red",10];

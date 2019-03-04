@@ -26,6 +26,7 @@ _box AddWeaponCargoGlobal ["rhs_weap_m72a7",2];
 //supplies
 _box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd",30];
 _box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd_T",10];
+_box AddMagazineCargoGlobal ["rhs_fim92_mag",1];
 
 _box addItemCargoGlobal ["ACE_fieldDressing",5];
 _box addItemCargoGlobal ["ACE_elasticBandage",5];

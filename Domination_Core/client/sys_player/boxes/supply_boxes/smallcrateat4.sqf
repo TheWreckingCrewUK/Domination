@@ -6,7 +6,8 @@
 *
 *
 */
-_boxClass = "ACE_Box_Ammo";
+
+_boxClass = "UK3CB_BAF_Box_WpsLaunch_NLAW";
 
 _box = _boxClass createVehicle (getPos AmmoBoxSpawner);
 
@@ -16,9 +17,5 @@ clearMagazineCargoGlobal _box;
 clearitemCargoGlobal _box;
 
 //Weapons
+_box AddWeaponCargoGlobal ["rhs_weap_M136",5];
 
-
-//supplies
-_box AddMagazineCargoGlobal ["UK3CB_BAF_762_200Rnd_T",10];
-
-[player, _box] call ace_cargo_fnc_startLoadIn;

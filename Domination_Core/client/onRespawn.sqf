@@ -10,6 +10,8 @@ if (faction player == "ana_units") then {
 [_me, ["PersianHead_A3_01","PersianHead_A3_02","PersianHead_A3_03"]call bis_fnc_selectrandom] remoteExec ["setFace", 0, _me] 
 };
 
+//[crateBox] execVM "Domination_Core\client\sys_player\boxes\base_box\main_ammo.sqf";
+
 /*
 _nobackpack = getNumber (configFile >> "cfgVehicles" >> (typeOf player) >> "twc_nobackpack");
 

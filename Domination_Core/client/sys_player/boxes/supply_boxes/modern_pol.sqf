@@ -21,6 +21,9 @@ if((typeOf player) in ["Modern_pol_commander","Modern_pol_commander_d", "Modern_
 	_UKaction5 = ["SpawnmedCreate","Spawn Cargo Truck","",{execvm "domination_core\client\sys_player\vehicles\cargoveh_pol.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_UKaction5,true] call ace_interact_menu_fnc_addActionToClass;	
 	
+	_UKaction5 = ["Spawnrockets","Spawn AT4 Box","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallcrateat4.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnsupport"],_UKaction5,true] call ace_interact_menu_fnc_addActionToClass;
+	
 	
 	
 			_artaction3 = ["SpawnrepCreate","Spawn Landmines","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\tm62_mines.sqf"},{true}] call ace_interact_menu_fnc_createAction;

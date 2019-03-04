@@ -13,12 +13,13 @@ crateBox setPosATL (getMarkerPos _marker);
 crateBox allowDamage false;
 
 [crateBox] execVM "Domination_Core\client\sys_player\boxes\base_box\main_ammo.sqf";
-
+/*
 player addEventHandler ["InventoryClosed", {
 	if((_this select 1) == crateBox)then{
 		[_this select 1]execVM "Domination_Core\client\sys_player\boxes\base_box\main_ammo.sqf";
 	};
 }];
+*/
 _condition = {true};
 	_infaction1 = ["clearbox","Clear Boxes","",{execvm "domination_core\client\sys_player\boxes\clearboxes.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_infaction1,true] call ace_interact_menu_fnc_addActionToClass;
