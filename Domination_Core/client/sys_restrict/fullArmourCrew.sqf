@@ -9,22 +9,22 @@ Once they have enough, then it runs itself again to wait until the situation cha
 
 waitUntil {!isNull player};
 
-waituntil {(count (units group player)) < 2};
+waituntil {(count (units group player)) < 3};
 
 if(!isMultiplayer)exitWith{};
 cutText ["", "Black", 0.001];
 player forceWalk true;
 
-while {(count (units group player)) < 2}do{
+while {(count (units group player)) < 3}do{
 
 cutText ["", "Black", 0.001];
     [
-        "<t size='1.2'>Armour Crew</t><br/><t size='0.6'>You need at least 2 people in the group before you can proceed</t>", 0, 0.22, 5, 0, 0, 2
+        "<t size='1.2'>Armour Crew</t><br/><t size='0.6'>You need all 3 people in the group before you can proceed</t>", 0, 0.22, 5, 0, 0, 2
     ] spawn bis_fnc_dynamictext;
 	
 	sleep 5;
 	
-	if ((count (units group player)) >= 2) then {
+	if ((count (units group player)) >= 3) then {
 	
 		cutText ["","Black IN",5];
 		player forceWalk false;

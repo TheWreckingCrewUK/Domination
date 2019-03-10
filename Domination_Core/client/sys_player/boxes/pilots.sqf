@@ -1,15 +1,15 @@
 
-_attackcond = {((count units group player) > 1) && (twc_aosToComplete == 1)};
+_attackcond = {((count units group player) > 1) && (twc_aosToComplete < 2)};
 
-_attackcond2 = {((count units group player) > 1) && (twc_aosToComplete == 1)};
+_attackcond2 = {((count units group player) > 1) && (twc_aosToComplete < 2)};
 
-_utilitycond = {(twc_aosToComplete < 3)};
+_utilitycond = {(twc_aosToComplete < 2)};
 
 _transportcond1 = {true};
 
-_transportcond2 = {(twc_aosToComplete > 3)};
+_transportcond2 = {(twc_aosToComplete < 2)};
 
-_cascond = {(twc_aosToComplete > 3)};
+_cascond = {(twc_aosToComplete < 2)};
 
 _planecondlow = {( count(allPlayers - entities "HeadlessClient_F")) >= 0};
 
@@ -73,7 +73,7 @@ if((typeOf player) in ["Modern_British_JetPilot"])then{
 
 
 //second check to incorporate the logistics crew without giving them the ability to spawn helis
-if((typeOf player) in ["Modern_British_HeliPilot","Modern_British_crewchief","2000_British_HeliPilot_Desert","2000_British_HeliPilot","2000_British_CrewChief_Desert","2000_British_CrewChief", "Modern_British_logitech", "1990_British_HeliPilot_Desert","1990_British_HeliPilot"])then{
+if((typeOf player) in ["Modern_British_HeliPilot","Modern_British_crewchief","2000_British_HeliPilot_Desert","2000_British_HeliPilot","2000_British_CrewChief_Desert","2000_British_CrewChief", "Modern_British_logitech", "1990_British_HeliPilot_Desert","1990_British_HeliPilot","1990_British_Crewchief"])then{
 
 
 
@@ -422,7 +422,7 @@ if((typeOf player) in ["Modern_British_HeliPilot","Modern_British_crewchief", "M
 };
 	
 
-if((typeOf player) in ["1990_British_HeliPilot_Desert","1990_British_HeliPilot"])then{
+if((typeOf player) in ["1990_British_HeliPilot_Desert","1990_British_HeliPilot","1990_British_Crewchief"])then{
 
 
 	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Gazelle","",{

@@ -464,6 +464,10 @@ _vehicle addEventHandler ["Fired", {[(_this select 0), (_this select 6)] call tw
 	_group = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 150,3,false,true] call cba_fnc_taskDefend;
 	
+	_spawnPos = [_pos,[200,400],random 360,0] call SHK_pos;
+	_group = [_spawnPos, EAST, squadAA] call BIS_fnc_spawnGroup;
+	[_group, _spawnPos, 200] call cba_fnc_taskPatrol;
+	
 	};
 _trg = createTrigger ["EmptyDetector", _pos];
 _trg setTriggerArea [600, 600, 0, false];

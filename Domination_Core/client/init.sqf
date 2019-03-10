@@ -16,11 +16,20 @@ twc_fnc_aps = compile preprocessfilelinenumbers "Domination_Core\client\func\fn_
 if (isNil "fixedWingPilots") then {
 	fixedWingPilots = ["Modern_British_JetPilot"];
 };
-
+cutText ["","Black IN",0.001];
 // wait till init
 waitUntil {!isNull player};
+cutText ["","Black IN",0.001];
 
 if ((!(forcedMap select 0)) && ((forcedMap select 1))) then {player setdamage 1};
+
+twc_firstspawned = 0;
+
+player addEventHandler ["Respawn", {
+	params ["_unit", "_corpse"];
+if (twc_firstspawned == 1) exitwith {};
+twc_firstspawned = 1;
+
 
 if (typeOf player in fixedWingPilots) then {
 	["TWC_PilotConnected", [getPlayerUID player]] call CBA_fnc_serverEvent;
@@ -103,3 +112,5 @@ player addEventHandler ["GetInMan", {
 	
 }];
 */
+
+}];

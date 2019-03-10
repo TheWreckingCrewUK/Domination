@@ -1,9 +1,9 @@
-sleep 5;
+/*
 if(isserver)exitWith{
 	systemchat "role restrict skipped for server";
 };
 
-
+*/
 
 if(["crewchief", typeof player] call BIS_fnc_inString)then{
 if (( count(allPlayers - entities "HeadlessClient_F")) < 11) then {
