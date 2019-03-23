@@ -13,19 +13,21 @@ if (twc_aosToComplete > 0) then {
 	_true = true;
 	_name = "";
 	_town = "";
+	_tname = "";
 
 	while {_true}do{
 		_true = false;
 		_town =(townLocationArray call bis_fnc_selectRandom);
-		//_name = text _town;
+		_tname = text _town;
 		_name = "Objective " + (twc_objnames call bis_fnc_selectrandom);
-		if(_name in twc_badAOs)then{_true = true};
-		if(_name == twc_LastAO)then{_true = true};
+		if(_tname in twc_badAOs)then{_true = true};
+		if(_tname in (missionnamespace getvariable ["twc_prevaos", []]))then{_true = true};
+		if(_tname == twc_LastAO)then{_true = true};
 		if([getpos _town ,2500] call twc_fnc_posNearPlayers)then{_true = true};
 	};
 
 	townLocationArray deleteat (townLocationArray find _town);
 
 	_pos = getPos _town;
-	[_pos,_name] spawn twc_fnc_ao;
+	[_pos,_name,_tname] spawn twc_fnc_ao;
 };

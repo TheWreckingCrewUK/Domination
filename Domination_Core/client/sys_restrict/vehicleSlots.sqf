@@ -696,6 +696,7 @@ TWC_fnc_notAllowedInSeat = {
 	[_playerUnit] spawn {
 		params ["_playerUnit"];
 		sleep 1;
+		if (isserver) exitwith {hint "Seat restrict triggered, but not enforcing on singleplayer"};
 		_freePassengerSpace = (vehicle _playerUnit) emptyPositions "cargo";
 		_title  = "<t color='#ff0000' size='1.2' shadow='1' shadowColor='#000000' align='center'>RESTRICTED</t>";
 
@@ -789,7 +790,7 @@ TWC_fnc_checkVehicleSlot = {
 			
 				if (_checkWith == _slot) then {
 					if (!(typeOf _playerUnit in _roles)) then {
-						if (isserver) exitwith {hint "Seat restrict triggered, but not enforcing on singleplayer"};
+						
 						[_playerUnit] call TWC_fnc_notAllowedInSeat;
 				
 

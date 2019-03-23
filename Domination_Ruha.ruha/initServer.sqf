@@ -13,7 +13,7 @@ twc_maxObjDistance = 5000;
 crampresent = 1;
 publicVariable "crampresent";
 
-tank = ["rhs_t72bd_tv", "rhs_t80uk", "rhs_t80", "rhs_t90a_tv"];
+tank = ["rhs_t72be_tv", "rhs_t80um", "rhs_t90a_tv"];
 
 ifv = ["rhs_bmp2d_msv", "rhs_bmp1_msv"];
 

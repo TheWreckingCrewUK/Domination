@@ -1,4 +1,4 @@
-params["_pos","_name"];
+params["_pos","_name", "_tname"];
 
 /*
 * Function to spawn an AO
@@ -8,7 +8,6 @@ params["_pos","_name"];
 * returns nothing, but creates the AO
 */
 
-params["_pos","_name"];
 
 twc_areaCleared = 0;
 twc_towerCount = 0;
@@ -498,7 +497,10 @@ waitUntil {twc_areaCleared == 1
 [_name, "Succeeded",true] spawn BIS_fnc_taskSetState;
 hint "AO captured";
 deleteMarker "aoCenterMarker";
-twc_LastAO = _name;
+twc_LastAO = _tname;
+
+missionnamespace setvariable ["twc_prevaos", (missionnamespace getvariable ["twc_prevaos", []]) + [_tname]];
+
 _wreck = (getMarkerPos "radioMarker") nearestObject radioTower;
 deleteVehicle _wreck;
 deleteMarker "radioMarker";
