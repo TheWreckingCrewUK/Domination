@@ -5,19 +5,50 @@ if(isserver)exitWith{
 
 */
 
-if(["crewchief", typeof player] call BIS_fnc_inString)then{
-if (( count(allPlayers - entities "HeadlessClient_F")) < 11) then {
+twc_fnc_helicheck = compile preprocessfilelinenumbers "Domination_Core\client\sys_restrict\helicheck.sqf";
+
+
+
+if(["helipilot", typeof player] call BIS_fnc_inString)then{
+_return = call twc_fnc_helicheck;
+if ((_return) < 1) then {
 
 cutText ["", "Black", 0.001];
 player forceWalk true;
-while {( count(allPlayers - entities "HeadlessClient_F")) < 11} do {
+while {((_return) < 1)} do {
 cutText ["", "Black", 0.001];
 
     [
-        "<t size='1.2'>Helicopter Crew Chief</t><br/><t size='0.6'>You need 11 or more players on the server before you can be a Crew Chief</t>", 0, 0.22, 5, 0, 0, 2
+        "<t size='1.2'>Helicopter Pilot</t><br/><t size='0.6'>You need an infantry commander online before you can be a helicopter pilot</t>", 0, 0.22, 5, 0, 0, 2
     ] spawn bis_fnc_dynamictext;
 	
 	sleep 5;
+	
+	_return = call twc_fnc_helicheck;
+
+};
+
+	
+cutText ["","Black IN",5];
+player forceWalk false;
+};
+};
+
+if(["crewchief", typeof player] call BIS_fnc_inString)then{
+_return = call twc_fnc_helicheck;
+if (((_return) < 2)) then {
+
+cutText ["", "Black", 0.001];
+player forceWalk true;
+while {((_return) < 2)} do {
+cutText ["", "Black", 0.001];
+
+    [
+        "<t size='1.2'>Helicopter Crew Chief</t><br/><t size='0.6'>You need 2 or more infantry commanders on the server before you can be a Crew Chief</t>", 0, 0.22, 5, 0, 0, 2
+    ] spawn bis_fnc_dynamictext;
+	
+	sleep 5;
+	_return = call twc_fnc_helicheck;
 
 };
 
@@ -50,29 +81,6 @@ if((typeOf player) in ["Modern_British_Medic_Mert","Modern_British_MERT_HeliPilo
 
 };
 
-
-
-if(["helipilot", typeof player] call BIS_fnc_inString)then{
-if (( count(allPlayers - entities "HeadlessClient_F")) < 5) then {
-
-cutText ["", "Black", 0.001];
-player forceWalk true;
-while {( count(allPlayers - entities "HeadlessClient_F")) < 5} do {
-cutText ["", "Black", 0.001];
-
-    [
-        "<t size='1.2'>Helicopter Pilot</t><br/><t size='0.6'>You need 5 or more people before you can be a helicopter pilot</t>", 0, 0.22, 5, 0, 0, 2
-    ] spawn bis_fnc_dynamictext;
-	
-	sleep 5;
-
-};
-
-	
-cutText ["","Black IN",5];
-player forceWalk false;
-};
-};
 
 
 
