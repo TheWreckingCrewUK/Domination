@@ -18,10 +18,13 @@ _title  = "<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align=
  
  _titlemem = "";
  _textmem = "";
+ _titlemgmt  = "";
+_textmgmt  = "";
  //secondary files for member and management news, not viewable on github
  //#include "membernews.sqf";
+ if ([player] call twc_core_fnc_ismanagement) then {
  #include "managementnews.sqf";
- 
+ };
  _news = parsetext (_title + _text1 + _titlemem + _textmem + _titlemgmt + _textmgmt);
  
  hint _news;
