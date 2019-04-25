@@ -71,6 +71,7 @@ sleep 1;
 				[_group, 3] setWaypointCompletionRadius 30; 
 				[_group, 4] setWaypointCompletionRadius 30; 
 				 [_group, 5] setWaypointType "CYCLE"; 
+				[leader _group] execvm "Domination_Core\server\func\ai\fnc_aiscramble.sqf";
 		};
 				 
 			sleep 120;

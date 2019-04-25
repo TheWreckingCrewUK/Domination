@@ -59,7 +59,14 @@ publicVariable "twc_idflist";
 twc_missionname = missionname;
 publicVariable "twc_missionname";
 
-if (twc_nonpersistent == 1) then { execvm "Domination_Core\server\func\fnc_nonpersistent.sqf"};
+if (twc_nonpersistent == 1) then {
+	addMissionEventHandler ["HandleDisconnect", {
+		params ["_unit", "_id", "_uid", "_name"];
+		if ((count allplayers) ==0) then {
+			"Won" call BIS_fnc_endMissionServer;
+		};
+	}];
+};
 
 
 {_location = createLocation [ "NameVillage" , getpos _x, 100, 100];
