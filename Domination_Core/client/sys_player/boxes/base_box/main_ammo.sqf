@@ -70,6 +70,7 @@ _spawnitems = [(configFile >> "CfgVehicles" >> (typeOf player)), "weapons", "non
 _spawnweps pushback (_x select 0);
 } foreach _tmp_items;
 
+
 _checkweps = (player getvariable ["twc_allowedweapons", []]);
 if (count _checkweps == 0) then {player setvariable ["twc_allowedweapons", _spawnweps]};
 
@@ -80,4 +81,6 @@ if (count _checkweps == 0) then {player setvariable ["twc_allowedweapons", _spaw
 {crateBox addMagazineCargo [(_x select 0),(_x select 1)]} foreach _magazines;
 
 {crateBox addItemCargo [(_x select 0),(_x select 1)]} foreach _items;
+
+{crateBox addBackpackCargo [(_x select 0),(_x select 1)]} foreach _backpacks;
 

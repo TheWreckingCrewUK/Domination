@@ -75,6 +75,8 @@ twc_objnames = [
 "SHEPHERD",
 "VIKING",
 "VALKYRIE",
+"GOOSE",
+"STRAWBERRY",
 "CURSE",
 "MISTBORN",
 "SAPPHIRE",

@@ -34,6 +34,13 @@ player forceWalk false;
 };
 };
 
+
+if ((["uksf", typeof player] call BIS_fnc_inString)) then {
+
+execvm "Domination_Core\client\sys_restrict\fullsfteam.sqf";
+
+};
+
 if(["crewchief", typeof player] call BIS_fnc_inString)then{
 _return = call twc_fnc_helicheck;
 if (((_return) < 2)) then {
