@@ -14,13 +14,24 @@
  };
  
 if ((twc_javtubetimeout > (time))) exitwith {
-	hint format ["The Heavy AT spawner is on cooldown currently. %1 minutes remaining.", (ceil ( (twc_javtubetimeout-time) / 60))];
-	waituntil {(twc_javtubetimeout-time) < 0};
-	hint "More Gustav Rockets are now available from the spawner";
+
+	_title ="<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>Heavy AT Spawner</t>";
+	_text1 = format ["<br />The Heavy AT spawner is on cooldown currently. %1 minutes remaining.<br /><br />Note: NLAWs and AT4s are not restricted in this manner.", (ceil ( (twc_javtubetimeout-time) / 60))];
+	hint parsetext (_title + _text1);
+	while {(twc_javtubetimeout-time) > 0} do {
+		sleep 20;
+	};
+	
+
+	_title ="<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>Heavy AT Spawner</t>";
+	_text1 = "<br />More Heavy AT Rockets are now available from the spawner";
+	hint parsetext (_title + _text1);
 	
 };
 
-hint "The Rockets have been spawned. 1 hour remaining until more become available";
+_title ="<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>Heavy AT Spawner</t>";
+_text1 = "<br />The Rockets have been spawned. 1 hour remaining until more become available";
+hint parsetext (_title + _text1);
 
 twc_javtubetimeout = (time + 3600);
  publicVariable "twc_javtubetimeout";

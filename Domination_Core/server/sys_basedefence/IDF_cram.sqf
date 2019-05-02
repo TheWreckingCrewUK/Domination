@@ -55,6 +55,7 @@ Waituntil {((((getposatl _shell select 2) > 60)|| (((vectorMagnitude (velocity _
 _size = sizeof typeof _shell;
 if (!alive _shell )exitwith {cram lookat objnull};
 cramactive = 1;
+cram setvehicleammo 1;
 _chance = 18;
 if ((vectorMagnitude (velocity _shell)) > 160) then {_chance = 15};
 
@@ -119,4 +120,7 @@ cram setvehicleammo 1;
 sleep 15;
 if ((cram ammo (currentWeapon cram)) == 1550) then {
 //cram lookat objnull;cram doWatch objnull;
-cramactive = 0};
+cramactive = 0;;
+
+cram setvehicleammo 0;
+};

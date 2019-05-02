@@ -19,3 +19,8 @@ clearitemCargoGlobal _box;
 //Weapons
 _box AddWeaponCargoGlobal ["rhs_weap_M136",5];
 
+
+
+_title ="<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>Ammo Spawner</t>";
+_text1 = "<br />The Ammo has been spawned.";
+hint parsetext (_title + _text1);

@@ -133,6 +133,10 @@ for "_i" from 1 to twc_tankcount do { _pos2= [_pos, 200] call CBA_fnc_randPos;
  _group = createGroup East;  
  _vehicle = _tank createVehicle _spawnPos;  
  
+ clearWeaponCargoGlobal _vehicle;
+clearBackpackCargoGlobal _vehicle;
+clearitemCargoGlobal _vehicle;
+ 
  _driver = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos vectoradd [0,0,200],[], 0.3,"NONE"];  
  _driver moveInDriver _vehicle;  
  _gunner = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos vectoradd [0,0,200],[], 0.3,"NONE"];  
@@ -198,6 +202,10 @@ for "_i" from 1 to twc_ifvcount do { _pos2= [_pos, 200] call CBA_fnc_randPos;
  _group = createGroup East;  
  _vehicle = _ifv createVehicle _spawnPos;  
  
+ clearWeaponCargoGlobal _vehicle;
+clearBackpackCargoGlobal _vehicle;
+clearitemCargoGlobal _vehicle;
+ 
  _driver = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];  
  _gunner = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];   
   
@@ -238,6 +246,10 @@ for "_i" from 1 to twc_apccount do { _pos2= [_pos, 200] call CBA_fnc_randPos;
 	
  _group = createGroup East;  
  _vehicle = _apc createVehicle _spawnPos;  
+ 
+ clearWeaponCargoGlobal _vehicle;
+clearBackpackCargoGlobal _vehicle;
+clearitemCargoGlobal _vehicle;
  
  _driver = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];  
  _gunner = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];   
@@ -281,6 +293,10 @@ for "_i" from 1 to twc_aacount do { _pos2= [_pos, 200] call CBA_fnc_randPos;
  _group = createGroup East;  
  _vehicle = _aa createVehicle _spawnPos;  
  
+ clearWeaponCargoGlobal _vehicle;
+clearBackpackCargoGlobal _vehicle;
+clearitemCargoGlobal _vehicle;
+ 
  _driver = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];  
  _gunner = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];  
  _commander = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];  
@@ -314,6 +330,10 @@ if (( count(allPlayers - entities "HeadlessClient_F")) < 8) then {
  _spawnPos = [_pos,[100,500],random 360,0,[1,100]] call SHK_pos;  
  _group = createGroup East;  
  _vehicle = lightheli createVehicle _spawnPos;  
+ 
+ clearWeaponCargoGlobal _vehicle;
+clearBackpackCargoGlobal _vehicle;
+clearitemCargoGlobal _vehicle;
  
  _driver = _group createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
  _gunner = _group createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
@@ -349,6 +369,10 @@ _vehicle flyInHeight  _flyalt;
  _spawnPos = [_pos,[100,500],random 360,0,[1,100]] call SHK_pos;  
  _group = createGroup East;  
  _vehicle = heavyheli createVehicle _spawnPos;  
+ 
+ clearWeaponCargoGlobal _vehicle;
+clearBackpackCargoGlobal _vehicle;
+clearitemCargoGlobal _vehicle;
  
  _driver = _group createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
  _gunner = _group createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
@@ -386,6 +410,10 @@ if (_pos distance getmarkerpos "respawn_west" > 5000) then {
  _group = createGroup East;  
  _jet = jet createVehicle _spawnPos;  
  
+ clearWeaponCargoGlobal _vehicle;
+clearBackpackCargoGlobal _vehicle;
+clearitemCargoGlobal _vehicle;
+ 
  _driver = _group createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
   
  _driver moveInDriver _jet;  
@@ -410,18 +438,28 @@ _jet flyInHeight  _flyalt;
 
 };
 
-artyspawnpos = [_spawnpos, 1500, 3000, 10, 0, 1, 0, [], [_spawnpos, _spawnpos]] call BIS_fnc_findSafePos;
+//artyspawnpos = [_spawnpos, 1500, 3000, 10, 0, 1, 0, [], [_spawnpos, _spawnpos]] call BIS_fnc_findSafePos;
 
+maptrg = createTrigger ["EmptyDetector", [worldSize / 2, worldsize / 2, 0]];
+maptrg setTriggerArea [worldSize / 2, worldSize / 2, 0, true];
+
+artyspawnpos = [_spawnpos, 1500, 3500, 50, 0, 0.7, 0] call BIS_fnc_findSafePos;
+/*
+while {!(artyspawnpos inarea maptrg)} do {
+	artyspawnpos = [_spawnpos, 1500, 3500, 50, 0, 0.7, 0] call BIS_fnc_findSafePos;
+};
+*/
 if (isnil "prevartyspawnpos") then {prevartyspawnpos = artyspawnpos;};
 
-if ((random 1) < 0.4) then {
+//if ((random 1) < 0.4) then {
+if (true) then {
 
 _attemptcount = 0;
 while{
 (_attemptcount < 250) &&
-( ([artyspawnpos,1500] call twc_fnc_posNearPlayers) || artyspawnpos distance2D (getMarkerPos "base") < 2500 
- )}do{
-artyspawnpos = [_spawnpos, 1500, 3000, 10, 0, 15, 0, [], [_spawnpos, _spawnpos]] call BIS_fnc_findSafePos;
+( ([artyspawnpos,1500] call twc_fnc_posNearPlayers) || (artyspawnpos distance2D (getMarkerPos "base") < 2500 
+ ) || (!(artyspawnpos inarea maptrg)))}do{
+	artyspawnpos = [_spawnpos, 1500, 3500, 50, 0, 0.7, 0] call BIS_fnc_findSafePos;
 	_attemptcount = _attemptcount + 1;
 
 //if (_attemptcount > 250) exitwith {};
@@ -437,6 +475,10 @@ for "_i" from 1 to twc_artycount do {
 	 _group = createGroup East;  
  _vehicle = artyspawn createVehicle _artyspawnpos2;  
 _vehicle setVehicleLock "LOCKEDPLAYER";
+ 
+ clearWeaponCargoGlobal _vehicle;
+clearBackpackCargoGlobal _vehicle;
+clearitemCargoGlobal _vehicle;
  
  twc_artyguns pushback _vehicle;
  //_driver = _group createUnit ["rhs_msv_rifleman", _artyspawnpos2,[], 0.3,"NONE"];  
@@ -514,7 +556,9 @@ deleteMarker "radioMarker";
 [_pos]spawn{
 	params["_pos"];
 	
-	waitUntil{!([_pos,3000] call twc_fnc_posNearPlayers)};
+	while {([_pos,3000] call twc_fnc_posNearPlayers)} do {
+		sleep 10;
+	};
 	
 	{
 		if ((twc_basepos distance _x) > 300) then {deleteVehicle _x};

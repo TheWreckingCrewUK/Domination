@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=1.5707964;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2858;
+		nextID=2935;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6686.8545,45.597027,7205.855};
-		dir[]={0.56387973,-0.43118912,-0.70451254};
-		up[]={0.26943621,0.90226078,-0.33663529};
-		aside[]={-0.78080195,-9.057112e-008,-0.62493879};
+		pos[]={6571.896,53.938236,7062.7988};
+		dir[]={-0.92592764,-0.19699153,-0.32261652};
+		up[]={-0.18604583,0.98039675,-0.064822763};
+		aside[]={-0.32905865,-2.826564e-007,0.94441932};
 	};
 };
 binarizationWanted=0;
@@ -12785,7 +12785,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=117;
+		items=118;
 		class Item0
 		{
 			dataType="Marker";
@@ -14099,7 +14099,7 @@ class Mission
 			};
 			id=2134;
 			type="rhsusf_m113_usarmy_medical";
-			atlOffset=-0.0030021667;
+			atlOffset=-0.15471649;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -20225,6 +20225,16 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item117
+		{
+			dataType="Group";
+			side="East";
+			class Attributes
+			{
+			};
+			id=2862;
+			atlOffset=-6.6966667;
 		};
 	};
 };

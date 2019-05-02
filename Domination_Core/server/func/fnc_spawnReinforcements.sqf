@@ -13,8 +13,6 @@ if (twc_enemyhasradio == 0) exitwith {};
 //exit if it's been too soon since the last attack. current count at 20 minutes
 if (time < twc_lastattack) exitwith {};
 
-twc_lastattack = time + 3000;
-publicVariable "twc_lastattack";
 
 
 	_enemy = allplayers call BIS_fnc_selectRandom;
@@ -38,14 +36,18 @@ _spawnpos = [0,0,0];
 _stagepos = [_pos, 1000] call CBA_fnc_randPos;
 
 
-/*
-if (((random 1)< 0.6) && (( count(allPlayers - entities "HeadlessClient_F"))>6) && ((_enemy distance artyspawnpos) < 4500) && (twc_activearty == 1) && ((_enemy distance _pos) < 400)) exitwith {
 
-		twc_mortar_targetlist pushback (getpos _enemy);
-		publicVariable "twc_mortar_targetlist";
+if (((random 1)< 0.4) && (( count(allPlayers - entities "HeadlessClient_F"))>6) && ((_enemy distance artyspawnpos) < 4500) && (twc_activearty == 1)) exitwith {
+
+	twc_mortar_targetlist pushback (getpos _enemy);
+	publicVariable "twc_mortar_targetlist";
+	twc_lastattack = time + 300;
+	publicVariable "twc_lastattack";
 	
 };
-*/
+
+twc_lastattack = time + 3000;
+publicVariable "twc_lastattack";
 
 _landorair = random 1;
 
@@ -56,7 +58,7 @@ _num = random 1;
 //making only airdrops for the moment because land pathfinding sucks
 _landorair = 1;
 
-if (((!(["90", twc_missionname] call BIS_fnc_inString)) && (!(["00", twc_missionname] call BIS_fnc_inString))) && ((random 1) < 0.2)) exitwith {
+if (((!(["90", twc_missionname] call BIS_fnc_inString)) && (!(["00", twc_missionname] call BIS_fnc_inString))) && ((random 1) < 0.4)) exitwith {
 
 	[_spawnpos, _enemy, _stagepos, _targetlist] spawn twc_fnc_infantrydrop_heavy;
 };
@@ -65,6 +67,11 @@ if (_landorair > 0.5) then {
 //armour is dropped by c130, so have the same condition on this as for the c130 airdrop of infantry
 	if ((_num) > 0.7) then {
 		[_spawnpos, _enemy, _stagepos] spawn twc_fnc_armourdrop;
+		
+		_title ="<t color='#ff0000' size='1.2' shadow='1' shadowColor='#000000' align='center'>ENEMY ACTION</t>";
+		_text1 = "<br />ENEMY FORCES CONVERGING ON BASE.<br />PREPARE DEFENCES.";
+		_warning = parsetext (_title + _text1);
+		[_warning] remoteExec ["hint"];
 	};
 	for "_i" from 1 to 2 do {
 

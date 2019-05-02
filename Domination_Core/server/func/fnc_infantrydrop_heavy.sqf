@@ -26,6 +26,8 @@
 		_driver = _group1 createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
 		 
 		_driver moveInDriver _plane;
+		
+		_driver setskill 1;
 
 		_plane setVehicleLock "LOCKEDPLAYER";
 
@@ -88,7 +90,6 @@ sleep 1;
 	params ["_spawnpos", "_enemy", "_stagepos", "_enemylandingpos", "_targetlist"];
 	
 	
-	
 			
 		_Cargo = [];
 		_plane = createVehicle ["rhs_mi28n_vvsc", (([_spawnPos, 200] call CBA_fnc_randPos) vectoradd [0,0,500]), [], 0, "FLY"]; 
@@ -102,7 +103,7 @@ sleep 1;
 		_driver = _group1 createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
 		 
 		_driver moveInDriver _plane; 
-
+		_driver setskill 1;
 		_plane setVehicleLock "LOCKEDPLAYER";
 		
 		_plane addEventHandler ["Fired", {
