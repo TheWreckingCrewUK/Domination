@@ -24,6 +24,8 @@ _complete = 0;
 
 _dir = cram getreldir _shell;
 
+cram setvehicleammo 1;
+
 //systemchat format ["%1", _shell];
 
 _pos = getpos _shell;
@@ -74,7 +76,8 @@ if (!(str _pos2 == "[0,0,0]")) then {_pos = _pos2};
 
 
 [cram, currentweapon cram] call BIS_fnc_fire;
-
+systemchat "woo";
+cram setvehicleammo 1;
 sleep 0.001;
 };
 //systemchat format ["%1", (vectorMagnitude (velocity _shell))];
@@ -113,14 +116,13 @@ if (cramactive == 0) then {cram lookat objnull;cram doWatch objnull;};
 };
 sleep 0.5;
 
-cram setvehicleammo 1;
 
 //systemchat "fire complete";
 
 sleep 15;
 if ((cram ammo (currentWeapon cram)) == 1550) then {
 //cram lookat objnull;cram doWatch objnull;
-cramactive = 0;;
+cramactive = 0;
 
 cram setvehicleammo 0;
 };

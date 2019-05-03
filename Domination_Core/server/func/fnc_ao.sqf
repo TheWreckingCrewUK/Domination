@@ -41,7 +41,7 @@ if(isNil "twc_apccount") then{
 	twc_apccount = 2;
 };
 
-twc_ifvcount = twc_ifvcount * ( 1+ (random 0.2));
+twc_apccount = twc_apccount * ( 1+ (random 0.2));
 
 if(isNil "twc_aacount") then{
 	twc_aacount = 1;
@@ -443,7 +443,7 @@ _jet flyInHeight  _flyalt;
 maptrg = createTrigger ["EmptyDetector", [worldSize / 2, worldsize / 2, 0]];
 maptrg setTriggerArea [worldSize / 2, worldSize / 2, 0, true];
 
-artyspawnpos = [_spawnpos, 1500, 3500, 50, 0, 0.7, 0] call BIS_fnc_findSafePos;
+artyspawnpos = [_spawnpos, 150, 3500, 50, 0, 0.7, 0] call BIS_fnc_findSafePos;
 /*
 while {!(artyspawnpos inarea maptrg)} do {
 	artyspawnpos = [_spawnpos, 1500, 3500, 50, 0, 0.7, 0] call BIS_fnc_findSafePos;
@@ -535,7 +535,7 @@ reinforcementsTrg = createTrigger ["EmptyDetector", _pos];
 reinforcementsTrg setTriggerArea [2700, 2700, 0, false];
 reinforcementsTrg setTriggerActivation ["WEST", "EAST D", true];
 reinforcementsTrg setTriggerTimeout [_timer,_timer,_timer, true];
-reinforcementsTrg setTriggerStatements ["this && (time > (missionnamespace getvariable ['twc_lastattack', 6000]))","if (!isserver) exitwith {};[getPos thisTrigger, thislist, true] call twc_fnc_spawnReinforcements",""];
+reinforcementsTrg setTriggerStatements ["this && (time > (missionnamespace getvariable ['twc_lastattack', 1800]))","if (!isserver) exitwith {};[getPos thisTrigger, thislist, true] call twc_fnc_spawnReinforcements",""];
 
 //[getPos thisTrigger] call twc_fnc_spawnReinforcements
 

@@ -16,6 +16,15 @@ twc_fnc_aps = compile preprocessfilelinenumbers "Domination_Core\client\func\fn_
 if (isNil "fixedWingPilots") then {
 	fixedWingPilots = ["Modern_British_JetPilot"];
 };
+
+twc_reinwarnmsg = {
+
+	_title ="<t color='#ff0000' size='1.5' shadow='1' shadowColor='#000000' align='center'>ENEMY ACTION</t>";
+	_text1 = "<br />ENEMY FORCES CONVERGING ON BASE.<br />PREPARE DEFENCES.";
+	_warning = parsetext (_title + _text1);
+	[_warning] remoteExec ["hint"];
+};
+
 cutText ["","Black IN",0.001];
 // wait till init
 waitUntil {!isNull player};
@@ -27,9 +36,24 @@ twc_firstspawned = 0;
 
 player addEventHandler ["Respawn", {
 	params ["_unit", "_corpse"];
-if (twc_firstspawned == 1) exitwith {};
-twc_firstspawned = 1;
+	
+	if ((!(isnull _corpse)) && ((_corpse distance twc_basepos) < 500)) then {
+	[_corpse] spawn {
+		params ["_corpse"];
+		_corpse setvehicleammo 0;
+		clearweaponcargoglobal _corpse;
+		clearitemcargoglobal _corpse;
+	};
+};
 
+if ((time > (twc_serstarttime + 600)) && (twc_firstspawned > 1)) exitwith {
+	player setvehicleammo 0.2;
+};
+
+twc_lastspawned = time;
+if (twc_firstspawned > 1) exitwith {};
+twc_firstspawned = time;
+twc_serstarttime = time;
 
 if (typeOf player in fixedWingPilots) then {
 	["TWC_PilotConnected", [getPlayerUID player]] call CBA_fnc_serverEvent;

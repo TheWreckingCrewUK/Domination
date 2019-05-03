@@ -4,7 +4,7 @@
     _tmp_weapons =
     [
         ["twc_ak74_pol",1],
-        ["rhs_weap_M136_hedp",3]
+        ["rhs_weap_M136_hedp",5]
     ];
 
 	_tmp_magazines =

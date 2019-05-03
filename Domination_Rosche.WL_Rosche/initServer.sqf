@@ -25,6 +25,8 @@ ifv = ["rhs_bmp2d_msv", "rhs_bmp1_msv"];
 
 apc = ["rhs_btr80a_msv", "rhs_btr80_msv"];
 
+twc_canlandattack = 1;
+
 twc_is90 = 0;
 publicVariable "twc_is90";
 

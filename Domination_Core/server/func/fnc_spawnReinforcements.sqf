@@ -46,7 +46,8 @@ if (((random 1)< 0.4) && (( count(allPlayers - entities "HeadlessClient_F"))>6) 
 	
 };
 
-twc_lastattack = time + 3000;
+_incamount = (3600 / (1 + ((count allplayers) / 15))) max 1200;
+twc_lastattack = time + _incamount;
 publicVariable "twc_lastattack";
 
 _landorair = random 1;
@@ -55,32 +56,51 @@ _landorair = random 1;
 
 _num = random 1;
 
-//making only airdrops for the moment because land pathfinding sucks
-_landorair = 1;
 
-if (((!(["90", twc_missionname] call BIS_fnc_inString)) && (!(["00", twc_missionname] call BIS_fnc_inString))) && ((random 1) < 0.4)) exitwith {
+
+if (((!(["90", twc_missionname] call BIS_fnc_inString)) && (!(["00", twc_missionname] call BIS_fnc_inString))) && ((random 1) < 0.2)) exitwith {
 
 	[_spawnpos, _enemy, _stagepos, _targetlist] spawn twc_fnc_infantrydrop_heavy;
+	
+	_title ="<t color='#ff0000' size='1.2' shadow='1' shadowColor='#000000' align='center'>ENEMY ACTION</t>";
+	_text1 = "<br />ENEMY AIR ASSETS CONVERGING ON BASE.<br />PREPARE DEFENCES.";
+	
+	_warning = parsetext (_title + _text1);
+	
+	_dis2 = _enemy distance twc_basepos;
+	
+	if (_dis2 < 400) then {
+		[_warning] remoteExec ["hint"];
+	};
+	
 };
 
-if (_landorair > 0.5) then {
+if ((_landorair > 0.6) || (["90", twc_missionname] call BIS_fnc_inString) || (["00", twc_missionname] call BIS_fnc_inString) || (missionnamespace getvariable ["twc_canlandattack", 0] == 0)) then {
 //armour is dropped by c130, so have the same condition on this as for the c130 airdrop of infantry
 	if ((_num) > 0.7) then {
 		[_spawnpos, _enemy, _stagepos] spawn twc_fnc_armourdrop;
 		
-		_title ="<t color='#ff0000' size='1.2' shadow='1' shadowColor='#000000' align='center'>ENEMY ACTION</t>";
-		_text1 = "<br />ENEMY FORCES CONVERGING ON BASE.<br />PREPARE DEFENCES.";
-		_warning = parsetext (_title + _text1);
-		[_warning] remoteExec ["hint"];
+		
 	};
 	for "_i" from 1 to 2 do {
 
 		[_spawnpos, _enemy, _stagepos, _num] spawn twc_fnc_infantrydrop;
 
 	};
+	_title ="<t color='#ff0000' size='1.2' shadow='1' shadowColor='#000000' align='center'>ENEMY ACTION</t>";
+	_text1 = "<br />ENEMY AIR FORCES CONVERGING ON BASE.<br />PREPARE DEFENCES.";
+	
+	_warning = parsetext (_title + _text1);
+	
+	_dis2 = _enemy distance twc_basepos;
+	
+	if (_dis2 < 400) then {
+		[_warning] remoteExec ["hint"];
+	};
+	
+	
 } else {
-
-	[_spawnpos, _enemy, _stagepos, _num] spawn twc_reinforce_mechanised;
+	[_enemylist] spawn twc_reinforce_land;
 };
 
 

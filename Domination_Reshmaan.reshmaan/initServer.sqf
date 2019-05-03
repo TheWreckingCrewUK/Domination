@@ -20,7 +20,7 @@ tank = ["rhs_t72bd_tv", "rhs_t80uk", "rhs_t80", "rhs_t90a_tv"];
 ifv = ["rhs_bmp2d_msv", "rhs_bmp1_msv"];
 
 apc = ["rhs_btr80a_msv", "rhs_btr80_msv"];
-
+twc_canlandattack = 1;
 twc_tankcount = random 3;
 twc_apccount = 1 + (random 2);
 twc_ifvcount = 2 + (random 2);

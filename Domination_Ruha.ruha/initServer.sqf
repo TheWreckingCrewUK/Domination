@@ -24,7 +24,7 @@ publicVariable "twc_wdveh";
 
 //add in an object name and the game will create a location there and spawn enemies from it
 customlocations = [];
-
+twc_canlandattack = 1;
 twc_tankcount = random 2;
 twc_apccount = random 2;
 twc_ifvcount = random 2;
