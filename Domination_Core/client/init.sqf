@@ -2,6 +2,7 @@
 #include "sys_restrict\init.sqf";
 #include "sys_cleanup\init.sqf";
 #include "sys_forwardbase\init.sqf";
+#include "func\init.sqf";
 //#include "news.sqf";
 //#include "sys_ragdoll\init.sqf";
 
@@ -44,6 +45,46 @@ player addEventHandler ["Respawn", {
 		clearweaponcargoglobal _corpse;
 		clearitemcargoglobal _corpse;
 	};
+};
+
+
+ _armourcrew = ["Modern_British_VehicleCrew",
+ "Modern_British_VehicleCommander",
+ "Modern_USMC_VehicleCommander",
+ "Modern_USMC_VehicleCrew",
+ "1990_British_Vehicle_Commander",
+ "1990_British_Vehicle_Crew",
+ "1990_British_Tank_Commander_Desert",
+ "1990_British_Tank_Crew_Desert",
+ "2000_British_Vehicle_Commander",
+ "2000_British_Vehicle_Crew"];
+ 
+ if (typeof player in _armourcrew) then {
+ 
+	//[player] remoteExec ["twc_fnc_crewcount", 2];
+	
+	_crewcount = 0;
+
+	{if (typeof _x in _armourcrew) then {_crewcount = _crewcount + 1;}} foreach units group player;
+
+	group player setvariable ["armourcount", _crewcount, true];
+	
+	if ((["infantry", str (group player)] call BIS_fnc_inString)) then {
+		if ((group player getvariable ["twc_ismechanised", 0]) == 0) then {
+			group player setvariable ["twc_ismechanised", 1, true];
+		};
+	};
+};
+
+if ((group player getvariable ["twc_ismechanised", 0]) == 1) then {
+	_crewcount = 0;
+
+	{if (typeof _x in _armourcrew) then {_crewcount = _crewcount + 1;}} foreach units group player;
+	group player setvariable ["armourcount", _crewcount, true];
+		if ((group player getvariable ["armourcount", 3]) == 0) then {
+			group player setvariable ["twc_ismechanised", 0, true];
+		};
+	
 };
 
 if ((time > (twc_serstarttime + 600)) && (twc_firstspawned > 1)) exitwith {

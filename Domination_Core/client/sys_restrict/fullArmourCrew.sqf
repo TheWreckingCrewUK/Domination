@@ -11,9 +11,14 @@ waitUntil {!isNull player};
 
 waituntil {(count (units group player)) < 3};
 
-if(!isMultiplayer)exitWith{};
+//if it's been more than half an hour since they last respawned, and they're more than 1km from base then they can have it
+if (((twc_lastspawned < (time - 1800)) && ((player distance twc_basepos) > 1000))||((twc_lastspawned < (time - 60)) && ((player distance twc_basepos) > 4000))) exitwith {};
+
 cutText ["", "Black", 0.001];
 player forceWalk true;
+
+
+(group player) setvariable ["twc_teamrestrictedgrp", 1, true];
 
 while {(count (units group player)) < 3}do{
 
@@ -32,6 +37,21 @@ cutText ["", "Black", 0.001];
 };
 cutText ["","Black IN",5];
 player forceWalk false;
+
+
+//legit group system
+(group player) setvariable ["twc_teamrestrictedgrp", 0, true];
+
+if (((group player) getVariable ["twc_attachrestrictedgrp",1]) == 0) then {
+	(group player) setvariable ["twc_legitgrp", time, true];
+};
+
+//last man, to de-legit the group when leaving
+[] spawn {
+	waituntil {(count (units group player)) == 1};
+	(group player) setvariable ["twc_legitgrp", -99999, true];
+};	
+
 
 
 

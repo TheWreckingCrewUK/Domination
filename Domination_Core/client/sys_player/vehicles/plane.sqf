@@ -38,7 +38,7 @@ clearitemCargoGlobal _veh;
 
 
 
-_title  = "<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>plane Spawner</t>"; 
+_title  = "<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>Plane Spawner</t>"; 
 
  _text1 =  "<br />The Plane Has Been Spawned On The Taxiway.";
 _spawntext = parsetext (_title + _text1);
@@ -53,12 +53,13 @@ publicVariable "twc_planecount";
 
 
 _veh addEventHandler ["Killed",{
-[] spawn { sleep 36000;
+	[] spawn { 
+		sleep 600;
 
-twc_planecount=twc_planecount - 1;
-publicVariable "twc_planecount";
-};
-	}];
+		twc_planecount=twc_planecount - 1;
+		publicVariable "twc_planecount";
+	};
+}];
 
 #include "planespecifics.sqf";
 

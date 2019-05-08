@@ -32,7 +32,7 @@ if((typeOf player) in ["1990_British_SectionCommander","1990_RM_British_SectionC
     _tmp_weapons =
     [
         ["UK3CB_BAF_L85A1_SUSAT3D",1],
-        ["rhs_weap_m72a7",1]
+        ["rhs_weap_m72a7",5]
 	];
 
 	_tmp_magazines =

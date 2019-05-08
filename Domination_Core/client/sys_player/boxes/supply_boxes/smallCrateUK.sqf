@@ -7,10 +7,10 @@
 *
 */
 
-params ["_box"];
 
 _boxClass = "ACE_Box_Ammo";
 
+params ["_box"];
 if (isnil "_box") then {
 	_box = _boxClass createVehicle (getPos AmmoBoxSpawner);
 };
@@ -35,8 +35,7 @@ _box AddMagazineCargoGlobal ["UGL_FlareWhite_F",5];
 _box AddMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",10];
 _box AddMagazineCargoGlobal ["1Rnd_Smoke_Grenade_shell",5];
 
-_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd",6];
-_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd_T",2];
+_box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd_T",8];
 
 _box AddMagazineCargoGlobal ["UK3CB_BAF_762_L42A1_20Rnd_T",2];
 _box AddMagazineCargoGlobal ["UK3CB_BAF_762_L42A1_20Rnd",7];

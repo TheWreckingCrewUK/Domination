@@ -14,7 +14,7 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 		["UK3CB_BAF_556_30Rnd_T",20],
         ["rhsusf_mag_17Rnd_9x19_JHP",15],
 		["UK3CB_BAF_9_15Rnd",15],
-		["B_IR_Grenade"],
+		["B_IR_Grenade",1],
 		["HandGrenade",5]
     ];
 
@@ -527,6 +527,7 @@ if (typeOf vehicle player in ["Modern_UKSF_Squadleader"]) then {
     [
         ["CUP_30Rnd_556x45_Emag",50],
 		["CUP_30Rnd_556x45_Emag_Tracer_Red",20],
+		["CUP_60Rnd_556x45_SureFire",1],
         ["rhsusf_mag_17Rnd_9x19_JHP",15],
         ["UK3CB_BAF_9_15Rnd",15],
 		["B_IR_Grenade",2],
@@ -579,6 +580,7 @@ if (typeOf vehicle player in ["Modern_UKSF_Pointman"]) then {
     [
         ["CUP_30Rnd_556x45_Emag",50],
 		["CUP_30Rnd_556x45_Emag_Tracer_Red",20],
+		["CUP_60Rnd_556x45_SureFire",1],
 		[_cqbmag,25],
         ["rhsusf_mag_17Rnd_9x19_JHP",15],
         ["UK3CB_BAF_9_15Rnd",15],
@@ -618,6 +620,7 @@ if (typeOf vehicle player in ["Modern_UKSF_Base"]) then {
     [
         ["CUP_30Rnd_556x45_Emag",50],
 		["CUP_30Rnd_556x45_Emag_Tracer_Red",20],
+		["CUP_60Rnd_556x45_SureFire",1],
         ["rhsusf_mag_17Rnd_9x19_JHP",15],
         ["UK3CB_BAF_9_15Rnd",15],
 		["B_IR_Grenade",2],
@@ -653,6 +656,7 @@ if (typeOf vehicle player in ["Modern_UKSF_Grenadier"]) then {
     [
         ["CUP_30Rnd_556x45_Emag",50],
 		["CUP_30Rnd_556x45_Emag_Tracer_Red",20],
+		["CUP_60Rnd_556x45_SureFire",1],
         ["rhsusf_mag_17Rnd_9x19_JHP",15],
         ["UK3CB_BAF_9_15Rnd",15],
         ["1Rnd_HE_Grenade_shell",25],
@@ -694,6 +698,7 @@ if (typeOf vehicle player in ["Modern_UKSF_2IC"]) then {
         ["CUP_30Rnd_556x45_Emag",80],
 		["CUP_30Rnd_556x45_Emag_Tracer_Red",30],
         ["UK3CB_BAF_762_L42A1_20Rnd_T",30],
+		["CUP_60Rnd_556x45_SureFire",1],
         ["rhsusf_mag_17Rnd_9x19_JHP",25],
         ["UK3CB_BAF_9_15Rnd",25],
         ["1Rnd_HE_Grenade_shell",25],
@@ -769,6 +774,7 @@ if (typeOf vehicle player in ["Modern_UKSF_Medic"]) then {
     [
         ["CUP_30Rnd_556x45_Emag",40],
 		["CUP_30Rnd_556x45_Emag_Tracer_Red",10],
+		["CUP_60Rnd_556x45_SureFire",1],
         ["rhsusf_mag_17Rnd_9x19_JHP",25],
         ["UK3CB_BAF_9_15Rnd",25],
 		["B_IR_Grenade",2],
@@ -799,4 +805,27 @@ if (typeOf vehicle player in ["Modern_UKSF_Medic"]) then {
 		["TWC_Backpack_UKSF_Medic_H",1]
 	];
 	
+};
+if (typeOf vehicle player in ["Modern_British_VehicleCommander", "Modern_British_VehicleCrew"]) then {
+    _tmp_weapons =
+    [
+		["UK3CB_BAF_L107A1",1],
+		["rhsusf_weap_glock17g4",1]
+    ];
+
+	_tmp_magazines =
+    [
+        ["UK3CB_BAF_556_30Rnd",10],
+        ["rhsusf_mag_17Rnd_9x19_JHP",15],
+		["UK3CB_BAF_9_15Rnd",15],
+		["B_IR_Grenade", 5]
+    ];
+
+    _tmp_items = 
+	[
+		["DemoCharge_Remote_Mag",3],
+		["ACE_M26_Clacker",1],
+		["ACRE_PRC343",1],
+		["ACE_IR_Strobe_Item",1]
+    ];
 };

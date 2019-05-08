@@ -6,10 +6,13 @@
 *
 *
 */
-_boxClass = "ACE_Box_Ammo";
+_boxClass = "twc_public_40mmbox_small";
 
-_box = _boxClass createVehicle (getPos AmmoBoxSpawner);
 
+params ["_box"];
+if (isnil "_box") then {
+	_box = _boxClass createVehicle (getPos AmmoBoxSpawner);
+};
 clearWeaponCargoGlobal _box;
 clearBackpackCargoGlobal _box;
 clearMagazineCargoGlobal _box;

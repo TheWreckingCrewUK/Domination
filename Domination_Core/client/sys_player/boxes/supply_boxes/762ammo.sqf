@@ -8,8 +8,11 @@
 */
 _boxClass = "ACE_Box_Ammo";
 
-_box = _boxClass createVehicle (getPos AmmoBoxSpawner);
 
+params ["_box"];
+if (isnil "_box") then {
+	_box = _boxClass createVehicle (getPos AmmoBoxSpawner);
+};
 clearWeaponCargoGlobal _box;
 clearBackpackCargoGlobal _box;
 clearMagazineCargoGlobal _box;

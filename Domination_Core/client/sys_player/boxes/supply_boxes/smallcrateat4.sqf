@@ -7,7 +7,7 @@
 *
 */
 
-_boxClass = "UK3CB_BAF_Box_WpsLaunch_NLAW";
+_boxClass = "twc_public_launcherbox_small_at4";
 
 _box = _boxClass createVehicle (getPos AmmoBoxSpawner);
 

@@ -20,7 +20,9 @@ player addEventHandler ["InventoryClosed", {
 	};
 }];
 */
-_condition = {true};
+//_condition = {true};
+//only allow spawning of ammo if they're at main base
+_condition = {call twc_fnc_isplayeratbase};
 	_infaction1 = ["clearbox","Clear Boxes","",{execvm "domination_core\client\sys_player\boxes\clearboxes.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_infaction1,true] call ace_interact_menu_fnc_addActionToClass;
 	
@@ -35,6 +37,12 @@ _condition = {true};
 	
 	_twc_repveh2 = ["repveh","Repair Nearby Vehicles","",{[_target] execvm "domination_core\client\sys_player\repairvehicle.sqf"},_condition] call ace_interact_menu_fnc_createAction;
 	["UK3CB_BAF_MAN_HX58_Container_Green",0,["ACE_MainActions"],_twc_repveh2,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_twc_repveh2 = ["repveh","Teleport to Airbase","",{call twc_fnc_basetp},{call twc_fnc_cantp1}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_twc_repveh2,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_twc_repveh2 = ["repveh","Teleport to Mainbase","",{call twc_fnc_basetp},{call twc_fnc_cantp2}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_twc_repveh2,true] call ace_interact_menu_fnc_addActionToClass;
 
 	
 #include "pilots.sqf";

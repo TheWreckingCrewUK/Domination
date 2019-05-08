@@ -33,7 +33,7 @@ _tankattack = {
 	params [["_spawnpos", [0,0,0]], "_enemy", "_dis2"];
 	
 	
-	_vehtype = ["rhsgref_BRDM2_msv", "rhs_t90a_tv"] call bis_fnc_selectrandom;
+	_vehtype = ["rhsgref_BRDM2_msv", "rhs_t80um"] call bis_fnc_selectrandom;
 	
 	
 	_title ="<t color='#ff0000' size='1.2' shadow='1' shadowColor='#000000' align='center'>ENEMY ACTION</t>";

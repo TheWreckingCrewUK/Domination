@@ -31,7 +31,8 @@ if((typeOf player) in ["2000_British_Rifleman","2000_British_Rifleman_Desert","2
     _tmp_weapons =
     [
         ["UK3CB_BAF_L85A2_SUSAT",1],
-		["rhs_weap_M136_hedp",2],
+		["ukcw_law80",5],
+		["rhs_weap_M136_hedp",5],
 		["rhs_weap_fim92",1],
 		["rhs_weap_m72a7",4]
 	];
@@ -55,7 +56,7 @@ if((typeOf player) in ["2000_British_Grenadier","2000_British_Grenadier_Desert",
     _tmp_weapons =
     [
         ["UK3CB_BAF_L85A2_UGL_SUSAT",1],
-		["rhs_weap_m72a7",1]
+		["rhs_weap_m72a7",4]
 	];
 
 	_tmp_magazines =

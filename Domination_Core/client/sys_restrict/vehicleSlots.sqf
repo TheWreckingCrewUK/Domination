@@ -526,6 +526,11 @@ _list=[
 			["Modern_British_JetPilot"]
 		]],8
 	],
+					["CUP_B_F35B_BAF", [
+		["driver", 
+			["Modern_British_JetPilot"]
+		]],8
+	],
 	
 		["TWC_Vehicle_Generic_Hercules_RAF", [
 		["driver", 

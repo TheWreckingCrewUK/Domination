@@ -8,7 +8,7 @@
 */
 
 
-_boxClass = "ACE_medicalSupplyCrate_advanced";
+_boxClass = "twc_public_medicalbox_small";
 
 _box = _boxClass createVehicle (getPos AmmoBoxSpawner);
 
@@ -29,12 +29,3 @@ _box addItemCargoGlobal ["ACE_salineIV_250",10];
 _box addItemCargoGlobal ["ACE_atropine",15];
 _box addItemCargoGlobal ["ACE_epinephrine",15];
 _box addItemCargoGlobal ["ACE_morphine",15];
-
-//Respawn/Despawn Script
-
-_trg = createTrigger ["EmptyDetector", getPos AmmoBoxSpawner];
-_trg setTriggerArea [5,5,0,false];
-_trg setTriggerActivation ["WEST", "NOT PRESENT", false];
-_trg setTriggerTimeout [1800,1800,1800,true];
-_trg setTriggerStatements ["this", "_box = (getPos thisTrigger) nearestObject 'ACE_medicalSupplyCrate_advanced'; deleteVehicle _box;",""];
-_trg attachTo [_box];

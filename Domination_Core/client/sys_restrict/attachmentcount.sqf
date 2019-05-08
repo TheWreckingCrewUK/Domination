@@ -20,9 +20,15 @@ if ((["Quartermaster", (typeof player)] call BIS_fnc_inString) && ([player] call
 //testing a potential method of filling servers, if they're the first into the server then they get first pick of attachments
 if (( count(allPlayers - entities "HeadlessClient_F")) == (count (units group player))) exitwith {};
 
+_pilots = ["Modern_British_HeliPilot","Modern_British_MERT_HeliPilot","2000_British_HeliPilot_Desert","2000_British_HeliPilot","1990_British_HeliPilot","1990_British_HeliPilot_Desert","Modern_British_MERT_HeliPilot"];
+
 _groups = [];
+_snowflakes=0;
 
 {if (_x == leader _x) then {
+	if (typeof player in _pilots) then {
+		_snowflakes = _snowflakes + 1;
+	};
 	if (!(["infantry", str (group _x)] call BIS_fnc_inString)) then {
 		if (!(["HQ", str (group _x)] call BIS_fnc_inString)) then {
 			_groups pushback [group _x]
@@ -31,9 +37,20 @@ _groups = [];
 	};
 } foreach allplayers;
  
+ //skip the system in the opening stages of the mission
+if (time < 1800) exitwith {
+	(group player) setvariable ["twc_attachrestrictedgrp", 0, true];
+};
 
 //quick sleep because instring is a bit slow
 sleep 3;
+
+//legit group system. If it's been less than 10 hours since the group was legitimately formed (with both the attachment slot system and the full team system recognising it) then skip the attachment slot system for new players. Does not interrupt the full team system so no lone wolves, instead allows players to join existing FST/SF/Armour teams when the payerbase is mixed between attachment/regular roles
+if (((group player) getVariable ["twc_legitgrp",-999999]) > (time - 36000)) exitwith {
+	(group player) setvariable ["twc_attachrestrictedgrp", 0, true];
+
+};
+
 
 _attachmentcount = count _groups;
 

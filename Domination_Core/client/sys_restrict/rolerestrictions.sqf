@@ -1,9 +1,7 @@
-/*
-if(isserver)exitWith{
-	systemchat "role restrict skipped for server";
-};
 
-*/
+if(isserver)exitWith{	systemchat "role restrict skipped for server";};
+
+
 
 twc_fnc_helicheck = compile preprocessfilelinenumbers "Domination_Core\client\sys_restrict\helicheck.sqf";
 
@@ -82,15 +80,6 @@ execvm "domination_core\client\sys_restrict\fullArtyCrew.sqf";
 
 
 
-if((typeOf player) in ["Modern_British_Medic_Mert","Modern_British_MERT_HeliPilot"])then{
-
-	execvm "Domination_Core\client\sys_restrict\fullmertteam.sqf";
-
-};
-
-
-
-
 
 
 if(["FST", str (group player)] call BIS_fnc_inString)then{
@@ -98,14 +87,6 @@ if(["FST", str (group player)] call BIS_fnc_inString)then{
 
 
 execvm "Domination_Core\client\sys_restrict\fullFST.sqf";
-
-};
-
-if(["Recce", str (group player)] call BIS_fnc_inString)then{
-
-
-
-execvm "Domination_Core\client\sys_restrict\fullrecce.sqf";
 
 };
 

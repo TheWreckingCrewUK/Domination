@@ -9,10 +9,11 @@
 
 _boxClass = "ACE_Box_Ammo";
 
-_box = _boxClass createVehicle (if (count (player nearobjects ["Land_InfoStand_V1_F", 200]) > 0) then {
-(getPos AmmoBoxSpawner)} else 
-{(getPos player)});
 
+params ["_box"];
+if (isnil "_box") then {
+	_box = _boxClass createVehicle (getPos AmmoBoxSpawner);
+};
 clearWeaponCargoGlobal _box;
 clearBackpackCargoGlobal _box;
 clearMagazineCargoGlobal _box;
