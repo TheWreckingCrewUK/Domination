@@ -39,6 +39,7 @@ deletevehicle _mainbase;
 	deletemarker "dummybase"; 
 	
 	twc_basepos = getmarkerpos "base";
+	publicVariable "twc_basepos";
 
 	_marker = createmarker ["respawn_west", getmarkerpos "dummyres"]; 
 	_marker setMarkerShape "ICON";

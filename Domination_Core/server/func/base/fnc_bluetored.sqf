@@ -25,6 +25,7 @@ if (time < 120) exitWith {};
 	_marker setMarkerColor "colorred";
 	
 	twc_basepos = getmarkerpos "dummybase";
+	publicVariable "twc_basepos";
 	
 	"BASE IN CONTACT, RESPAWN DISABLED" remoteExec ["hint"];
 

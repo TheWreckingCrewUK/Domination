@@ -35,7 +35,7 @@ player forceWalk false;
 
 if ((["uksf", typeof player] call BIS_fnc_inString)) then {
 
-execvm "Domination_Core\client\sys_restrict\fullsfteam.sqf";
+	execvm "Domination_Core\client\sys_restrict\fullsfteam.sqf";
 
 };
 

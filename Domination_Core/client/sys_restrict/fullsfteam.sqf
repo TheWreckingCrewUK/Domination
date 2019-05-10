@@ -36,27 +36,7 @@ player forceWalk false;
 //legit group system
 (group player) setvariable ["twc_teamrestrictedgrp", 0, true];
 
-//domination additions
 
-
-if (typeOf vehicle player in ["Modern_UKSF_Marksman"]) then {
-	player addweapon "UK3CB_BAF_Javelin_CLU";
-	player addweapon "UK3CB_BAF_Javelin_Slung_Tube";
-};
-
-if ((secondaryweapon player) == "") then {
-	player addweapon "rhs_weap_M136";
-};
-
-if (((group player) getVariable ["twc_attachrestrictedgrp",1]) == 0) then {
-	(group player) setvariable ["twc_legitgrp", time, true];
-};
-
-//last man, to de-legit the group when leaving
-[] spawn {
-	waituntil {(count (units group player)) == 1};
-	(group player) setvariable ["twc_legitgrp", -99999, true];
-};	
-
+[player] call twc_fnc_legitgroup;
 
 execvm "Domination_Core\client\sys_restrict\fullsfteam.sqf";

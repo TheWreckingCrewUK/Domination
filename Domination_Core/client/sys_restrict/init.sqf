@@ -19,3 +19,16 @@ if (((_item) == "UK3CB_BAF_U_RolledUniform_MTP") && ((["90", twc_missionname] ca
 	(player) setObjectTextureGlobal [0, "uk3cb_baf_equipment\backpacks\data\backpack_ddpm_co.paa"];
 };
 }];
+
+
+twc_fnc_legitgroup = {
+	
+	//legit group system
+	(group player) setvariable ["twc_teamrestrictedgrp", 0, true];
+
+	if (((group player) getVariable ["twc_attachrestrictedgrp",1]) == 0) then {
+		(group player) setvariable ["twc_legitgrp", (time - 36000 + 600), true];
+	};
+	//last man, to de-legit the group when leaving
+	[{(count units group (_this select 0)) == 1}, {(group (_this select 0)) setvariable ["twc_legitgrp", time - 36000 + 900, true]}, [player]] call CBA_fnc_waitUntilAndExecute;
+};

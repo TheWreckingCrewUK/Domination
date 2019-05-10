@@ -26,6 +26,14 @@ twc_reinwarnmsg = {
 	[_warning] remoteExec ["hint"];
 };
 
+twc_pubcamo = 500;
+if (["90", twc_missionname] call BIS_fnc_inString) then {
+	twc_pubcamo = 20;
+};
+if (["00", twc_missionname] call BIS_fnc_inString) then {
+	twc_pubcamo = 50;
+};
+
 cutText ["","Black IN",0.001];
 // wait till init
 waitUntil {!isNull player};
@@ -37,6 +45,8 @@ twc_firstspawned = 0;
 
 player addEventHandler ["Respawn", {
 	params ["_unit", "_corpse"];
+	
+	player setunittrait ["camouflageCoef", twc_pubcamo];
 	
 	if ((!(isnull _corpse)) && ((_corpse distance twc_basepos) < 500)) then {
 	[_corpse] spawn {
@@ -100,6 +110,20 @@ if (typeOf player in fixedWingPilots) then {
 	["TWC_PilotConnected", [getPlayerUID player]] call CBA_fnc_serverEvent;
 };
 
+
+if ((["uksf", typeof player] call BIS_fnc_inString)) then {
+
+	if (typeOf vehicle player in ["Modern_UKSF_Marksman"]) then {
+		player addweapon "UK3CB_BAF_Javelin_CLU";
+		player addweapon "UK3CB_BAF_Javelin_Slung_Tube";
+	};
+
+	if ((secondaryweapon player) == "") then {
+		player addweapon "rhs_weap_M136";
+	};
+
+};
+
 /*
 player addEventHandler ["Hit", {[] spawn {if !(vehicle player == player) exitwith{};if (stance player == "PRONE") exitwith {};if ((random 1)>1.5) exitwith{}; _this = player; _this setUnconscious true; sleep 0.1; _this setUnconscious false}}]
 */
@@ -112,11 +136,26 @@ if (!(["infantry", str (group player)] call BIS_fnc_inString)) then {
 execvm "domination_core\client\sys_restrict\attachmentcount.sqf" 
 };
 
+//Set Radios Correctly
+_radioID = [getText (configFile >> "cfgVehicles" >> (typeOf player) >> "twc_radioType")] call acre_api_fnc_getRadioByType; 
+ if (!isNil "_radioID") then { 
+_channelNumber = getNumber (configFile >> "cfgVehicles" >> (typeOf player) >> "twc_radioChannel"); 
+ _switchChannel = [_radioID, _channelNumber] call acre_api_fnc_setRadioChannel; 
+ Hint parseText format ["<t color='#d0dd00' size='1.2' shadow='1' shadowColor='#000000' align='center'>Radio Set</t><br/><t color='#d0dd00' size='0.8' shadow='1' shadowColor='#565656' align='left'>Radio:</t><t color='##013bb6' size='0.8' shadow='1' shadowColor='#565656' align='right'>%1</t><br/><t color='#d0dd00' size='0.8' shadow='1' shadowColor='#565656' align='left'>Channel:</t><t color='##013bb6' size='0.8' shadow='1' shadowColor='#565656' align='right'>%2</t>",getText (configFile >> "cfgVehicles" >> (typeOf player) >> "twc_radioType"),_channelNumber]; 
+ };
+
 player addEventHandler ["Fired", {
 	params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
 	if (_ammo == "rhs_ammo_smaw_SR") exitwith {};
 	if ((_ammo isKindOf ["GrenadeCore", configFile >> "CfgAmmo"]) || (_ammo isKindOf ["RocketCore", configFile >> "CfgAmmo"]) || (_ammo isKindOf ["MissileCore", configFile >> "CfgAmmo"]) || (_ammo isKindOf ["G_40mm_Smoke", configFile >> "CfgAmmo"])) then {[_projectile] call twc_fnc_aps};
 }];
+player addEventHandler ["GetInMan", {
+	params ["_unit", "_role", "_vehicle", "_turret"];
+	_vehicle setunittrait ["camouflageCoef", twc_pubcamo];
+}];
+
+
+
 /*
 player addEventHandler ["GetInMan", {
 	params ["_unit", "_role", "_vehicle", "_turret"];

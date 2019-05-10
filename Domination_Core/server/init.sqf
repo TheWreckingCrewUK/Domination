@@ -15,6 +15,7 @@ if(isNil "townLocationArray") then{
 
 if(isNil "twc_basepos") then{
 	twc_basepos = getmarkerpos "base";
+	publicVariable "twc_basepos";
 };
 
 if(isNil "twc_activearty") then{
