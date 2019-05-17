@@ -79,6 +79,7 @@ twc_objnames = [
 "NAPALM",
 "CHERRY",
 "LINCOLN",
+"SHRIKE",
 "YORK",
 "SHEPHERD",
 "VIKING",

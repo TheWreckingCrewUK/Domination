@@ -33,6 +33,6 @@ if (typeof _veh == "ukcw_Gazelle") then {
 	[_veh, 3] call ace_cargo_fnc_setSpace;
 };
 
-if (typeof _veh in ["RHS_UH60M", "UK3CB_BAF_Wildcat_AH1_HEL_6A", "RHS_UH1Y_d", "CUP_O_Mi8_CHDKZ"]) then {
+if (typeof _veh in ["RHS_UH60M", "UK3CB_BAF_Wildcat_AH1_HEL_6A", "RHS_UH1Y_d", "ukcw_lynx_2gpmg", "CUP_O_Mi8_CHDKZ"]) then {
 	[_veh] call ace_fastroping_fnc_equipFRIES;
 };

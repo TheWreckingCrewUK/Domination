@@ -33,11 +33,11 @@ publicVariable "twc_is90";
 sirenlist = [idfradar];
 publicVariable "sirenlist";
 
-twc_tankcount = random 2;
-twc_apccount = 1 + random 2;
-twc_ifvcount = 2 + random 2;
+twc_tankcount = random 1;
+twc_apccount = random 2;
+twc_ifvcount = random 2;
 twc_aacount = 1;
-twc_infcount = 2;
+twc_infcount = 3;
 twc_aainfcount = 1;
 /*
 twc_tankcount = 5;

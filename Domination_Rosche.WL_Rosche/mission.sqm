@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=1.5707964;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2964;
+		nextID=2994;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6353.2505,48.718761,6495.5186};
-		dir[]={0.48789495,-0.48667693,0.72464687};
-		up[]={0.27180958,0.8735798,0.40370604};
-		aside[]={0.82950962,-6.4261258e-008,-0.55849856};
+		pos[]={6360.269,36.350513,6554.8423};
+		dir[]={-0.22212352,-0.27577758,0.93525422};
+		up[]={-0.063719422,0.96123421,0.26829365};
+		aside[]={0.97298771,-8.4226485e-007,0.23108841};
 	};
 };
 binarizationWanted=0;
@@ -57,13 +57,18 @@ addons[]=
 	"rhsusf_vehicles",
 	"CUP_WheeledVehicles_Mastiff",
 	"UK3CB_BAF_Vehicles_MAN",
-	"CUP_CAMisc"
+	"CUP_CAMisc",
+	"CUP_CAStructures_E_Misc_Misc_Construction",
+	"rhsusf_c_troops",
+	"rhsusf_c_statics",
+	"CUP_Creatures_Military_USMC",
+	"CUP_WheeledVehicles_HMMWV"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=32;
+		items=37;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -262,6 +267,35 @@ class AddonsMetaData
 		{
 			className="CUP_CAMisc";
 			name="CUP_CAMisc";
+		};
+		class Item32
+		{
+			className="CUP_CAStructures_E_Misc_Misc_Construction";
+			name="CUP_CAStructures_E_Misc_Misc_Construction";
+		};
+		class Item33
+		{
+			className="rhsusf_c_troops";
+			name="RHSUSF Infantry & Equipment";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item34
+		{
+			className="rhsusf_c_statics";
+			name="RHSUSF Static Weapons";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item35
+		{
+			className="CUP_Creatures_Military_USMC";
+			name="CUP_Creatures_Military_USMC";
+		};
+		class Item36
+		{
+			className="CUP_WheeledVehicles_HMMWV";
+			name="CUP_WheeledVehicles_HMMWV";
 		};
 	};
 };
@@ -12778,7 +12812,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=106;
+		items=114;
 		class Item0
 		{
 			dataType="Marker";
@@ -12793,7 +12827,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6390.6279,25.594679,6555.0625};
+				position[]={6390.6279,25.467588,6555.0625};
 				angles[]={0,2.6320357,0};
 			};
 			side="Empty";
@@ -12803,6 +12837,7 @@ class Mission
 			};
 			id=254;
 			type="USMC_WarfareBFieldhHospital";
+			atlOffset=-0.12709045;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -18632,8 +18667,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6360.0791,26.71632,6577.2705};
-				angles[]={6.2685208,5.7488179,0.014664836};
+				position[]={6360.0796,26.715837,6577.2705};
+				angles[]={6.2685246,5.7488179,0.014660765};
 			};
 			side="Empty";
 			flags=4;
@@ -18643,7 +18678,7 @@ class Mission
 			};
 			id=2818;
 			type="CUP_B_Mastiff_HMG_GB_W";
-			atlOffset=-0.011508942;
+			atlOffset=-0.01199913;
 		};
 		class Item80
 		{
@@ -19569,54 +19604,13 @@ class Mission
 		};
 		class Item98
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={6355.2896,26.650305,6574.3779};
-				angles[]={6.2645216,5.7110686,0.0080009829};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="call{if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
-			};
-			id=2940;
-			type="CUP_B_Mastiff_GMG_GB_W";
-			atlOffset=-0.013763428;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item99
-		{
 			dataType="Marker";
 			position[]={6383.6362,26.33,6539.0088};
 			name="twc_tp1";
 			type="Empty";
 			id=2946;
 		};
-		class Item100
+		class Item99
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19655,7 +19649,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item101
+		class Item100
 		{
 			dataType="Marker";
 			position[]={760.64899,15.13,4746.4858};
@@ -19664,7 +19658,7 @@ class Mission
 			angle=138.63554;
 			id=2947;
 		};
-		class Item102
+		class Item101
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19704,7 +19698,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item103
+		class Item102
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19720,7 +19714,7 @@ class Mission
 			id=2949;
 			type="HeliHEmpty";
 		};
-		class Item104
+		class Item103
 		{
 			dataType="Group";
 			side="West";
@@ -19791,7 +19785,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item105
+		class Item104
 		{
 			dataType="Object";
 			class PositionInfo
@@ -19830,6 +19824,360 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item105
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6392.4751,27.02759,6545.7979};
+				angles[]={6.2805324,2.5791254,0.0026529003};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2964;
+			type="Land_Misc_IronPipes_EP1";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item106
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6437.4219,30.211437,6860.251};
+						angles[]={0,3.2812054,0};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+					};
+					id=2967;
+					type="rhsusf_usmc_marpat_wd_rifleman";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=2967;
+						item1=2966;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=2965;
+		};
+		class Item107
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6437.4219,31.727724,6860.1992};
+				angles[]={0,3.2812054,0};
+			};
+			side="West";
+			flags=6;
+			class Attributes
+			{
+			};
+			id=2966;
+			type="RHS_Stinger_AA_pod_USMC_WD";
+		};
+		class Item108
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6147.6396,27.355721,6868.8252};
+						angles[]={6.2685208,5.8762608,0.015998369};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+					};
+					id=2969;
+					type="rhsusf_usmc_marpat_wd_rifleman";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=2969;
+						item1=2970;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=2968;
+		};
+		class Item109
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6147.6152,28.871624,6868.7515};
+				angles[]={6.2685208,5.8762608,0.015998369};
+			};
+			side="West";
+			flags=6;
+			class Attributes
+			{
+			};
+			id=2970;
+			type="RHS_Stinger_AA_pod_USMC_WD";
+		};
+		class Item110
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6511.0898,30.541439,7003.189};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+					};
+					id=2982;
+					type="CUP_B_USMC_Crew";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=2982;
+						item1=2980;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=2979;
+			atlOffset=1.9073486e-006;
+		};
+		class Item111
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6511.0898,33.665329,7003.1392};
+			};
+			side="West";
+			flags=6;
+			class Attributes
+			{
+				lock="LOCKEDPLAYER";
+				fuel=0;
+			};
+			id=2980;
+			type="CUP_B_HMMWV_Avenger_USMC";
+			atlOffset=1.9073486e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""CUP_arifle_M16A4_Base"",""CUP_launch_M72A6"",""FirstAidKit"",""Medikit""],[2,1,10,1]],[[""CUP_30Rnd_556x45_Stanag"",""CUP_M72A6_M"",""SmokeShell"",""SmokeShellOrange"",""Chemlight_red""],[20,2,2,2,2]],[[""ToolKit""],[1]],[[""CUP_B_USMC_MOLLE""],[4]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item112
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6702.5024,30.541439,7170.9736};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						skill=0.55000001;
+						rank="LIEUTENANT";
+						isPlayable=1;
+					};
+					id=2984;
+					type="Modern_British_Platoon_Commander";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6705.5024,30.541439,7167.9736};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						rank="SERGEANT";
+						isPlayable=1;
+					};
+					id=2985;
+					type="Modern_British_Platoon_Sergeant";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=2983;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="HQ";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item113
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6355.1797,26.660429,6574.2305};
+				angles[]={6.2645278,5.7381539,0.0079936078};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
+			};
+			id=2990;
+			type="CUP_B_Mastiff_GMG_GB_W";
 		};
 	};
 };

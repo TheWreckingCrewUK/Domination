@@ -22,7 +22,7 @@ _spawntext = parsetext (_title + _text1);
 hint _spawntext;
  };
  
- twc_specjavcount = time + 7200;
+ twc_specjavcount = time + 900;
  publicVariable "twc_specjavcount";
 
 

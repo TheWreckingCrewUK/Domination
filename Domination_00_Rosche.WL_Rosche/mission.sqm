@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2658;
+		nextID=2666;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6363.0454,51.970001,6579.2974};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,0};
+		pos[]={6359.5781,28.304813,6596.5625};
+		dir[]={-0.24516298,0.138804,0.95950937};
+		up[]={0.034359805,0.99031925,-0.13447602};
+		aside[]={0.96888536,-9.8138116e-008,0.2475581};
 	};
 };
 binarizationWanted=0;
@@ -54,13 +54,14 @@ addons[]=
 	"twc_1990",
 	"twc_framework_public_modern_us",
 	"rhsusf_vehicles",
-	"UK3CB_BAF_Vehicles_MAN"
+	"UK3CB_BAF_Vehicles_MAN",
+	"CUP_CAMisc"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=28;
+		items=29;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -231,6 +232,11 @@ class AddonsMetaData
 			name="3CB BAF Vehicles - MAN Truck";
 			author="AUTHOR_3CB";
 			url="www.3commandobrigade.com";
+		};
+		class Item28
+		{
+			className="CUP_CAMisc";
+			name="CUP_CAMisc";
 		};
 	};
 };
@@ -12747,7 +12753,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=64;
+		items=70;
 		class Item0
 		{
 			dataType="Marker";
@@ -17937,6 +17943,165 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item64
+		{
+			dataType="Marker";
+			position[]={6427.4766,30.38809,7007.9082};
+			name="twc_tp1";
+			type="Empty";
+			id=2658;
+		};
+		class Item65
+		{
+			dataType="Marker";
+			position[]={760.22888,15.13,4745.3682};
+			name="twc_tp2";
+			type="Empty";
+			angle=138.63554;
+			id=2659;
+		};
+		class Item66
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={762.72791,15.705364,4742.1523};
+				angles[]={-0,2.3071041,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=2660;
+			type="Land_InfoStand_V1_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item67
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={774.68787,15.13,4685.7144};
+				angles[]={-0,4.1734138,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="planespawnpad";
+			};
+			id=2661;
+			type="HeliHEmpty";
+		};
+		class Item68
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={796.09705,18.33362,4705.6646};
+				angles[]={0,3.9730501,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=2662;
+			type="UK3CB_BAF_MAN_HX60_Fuel_Green";
+			atlOffset=0.40074539;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item69
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6360.1021,26.651438,6592.0869};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						skill=0.44999999;
+						rank="CORPORAL";
+						isPlayable=1;
+					};
+					id=2664;
+					type="2000_British_FSTForwardObserver";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6363.1021,26.651438,6589.0869};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+						isPlayable=1;
+					};
+					id=2665;
+					type="2000_British_JetPilot";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=2663;
 		};
 	};
 };

@@ -22,13 +22,15 @@ if (((_item) == "UK3CB_BAF_U_RolledUniform_MTP") && ((["90", twc_missionname] ca
 
 
 twc_fnc_legitgroup = {
-	
-	//legit group system
-	(group player) setvariable ["twc_teamrestrictedgrp", 0, true];
+	[] spawn {
+		_group = group player;
+		//legit group system
+		_group setvariable ["twc_teamrestrictedgrp", 0, true];
 
-	if (((group player) getVariable ["twc_attachrestrictedgrp",1]) == 0) then {
-		(group player) setvariable ["twc_legitgrp", (time - 36000 + 600), true];
+		waituntil {((_group getVariable ["twc_attachrestrictedgrp",1]) == 0)};
+		_group setvariable ["twc_legitgrp", (time), true];
+		
+		//last man, to de-legit the group when leaving
+		[{(count units (_this select 0)) == 1}, {(_this select 0) setvariable ["twc_legitgrp", time - 36000 + 900, true]}, [_group]] call CBA_fnc_waitUntilAndExecute;
 	};
-	//last man, to de-legit the group when leaving
-	[{(count units group (_this select 0)) == 1}, {(group (_this select 0)) setvariable ["twc_legitgrp", time - 36000 + 900, true]}, [player]] call CBA_fnc_waitUntilAndExecute;
 };

@@ -79,6 +79,10 @@ cutText ["", "Black", 0.001];
     ] spawn bis_fnc_dynamictext;
 	
 	sleep 5;
+	if (((group player) getVariable ["twc_legitgrp",-999999]) > (time - 36000)) exitwith {
+		(group player) setvariable ["twc_attachrestrictedgrp", 0, true];
+
+	};
 
 };
 
