@@ -64,6 +64,7 @@ if(["medic", typeof player] call BIS_fnc_inString)then{
 	_medaction = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_medaction,true] call ace_interact_menu_fnc_addActionToClass;
 		
+	player additemtovest "TWC_Item_Medical_SutureKit_20";
 };
 
 

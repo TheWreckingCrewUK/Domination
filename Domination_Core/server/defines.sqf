@@ -90,6 +90,7 @@ twc_objnames = [
 "FANDANGO",
 "FLAMENCO",
 "TANGO",
+"NUTMEG",
 "SHADOW",
 "TAILS",
 "SONIC",
