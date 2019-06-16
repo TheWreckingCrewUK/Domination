@@ -1,3 +1,7 @@
+
+twc_fnc_seenbyplayers = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_seenbyplayers.sqf";
+twc_fnc_seenbyblufor = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_seenbyblufor.sqf";
+
 twc_fnc_cantp1 = {
 
 	_return = false;

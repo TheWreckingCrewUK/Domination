@@ -69,7 +69,8 @@ _veh AddWeaponCargoGlobal ["ACE_Yardage450",1];
 _veh AddMagazineCargoGlobal ["CUP_30Rnd_556x45_Emag",20];
 _veh AddMagazineCargoGlobal ["CUP_30Rnd_556x45_Emag_Tracer_Red",5];
 
-_veh AddMagazineCargoGlobal ["rhs_mag_maaws_HEAT",5];
+_veh AddMagazineCargoGlobal ["rhs_mag_maaws_HEAT",4];
+_veh AddMagazineCargoGlobal ["rhs_mag_maaws_flechette",2];
 
 _veh AddMagazineCargoGlobal ["UGL_FlareWhite_F",5];
 _veh AddMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",10];

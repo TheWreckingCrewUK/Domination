@@ -36,7 +36,7 @@ if (!((backpack player) == "")) then {
 			_unit allowsprint false;
 			hint "This Role is not used to fighting with a Backpack. You are unable to Sprint";
 		};
-		if (_item isKindOf ["twc_dpm_belt", configFile >> "CfgVehicles"]) exitwith {
+		if ((_item isKindOf ["twc_dpm_belt", configFile >> "CfgVehicles"]) || (_item isKindOf ["CUP_B_ACRScout_m95", configFile >> "CfgVehicles"])) exitwith {
 			_unit allowsprint true;
 		};
 		
@@ -45,6 +45,10 @@ if (!((backpack player) == "")) then {
 		_newbackpack = backpack player;
 		
 		_newload = [(configFile >> "CfgVehicles" >> _newbackpack), "maximumload", 0] call BIS_fnc_returnConfigEntry;
+		
+		if (_newload < (130)) exitwith {
+			_unit allowsprint true;
+		};
 		
 		if (_newload > (_playerload * 1.1)) then {
 			hint "This Backpack is bigger that what this role is used to fighting with. You are unable to Sprint";

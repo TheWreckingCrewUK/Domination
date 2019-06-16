@@ -16,6 +16,8 @@ twc_fnc_crewcount = compile preprocessfilelinenumbers "Domination_Core\server\sy
 twc_fnc_aps_server = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_APS_server.sqf";
 twc_reinforce_land = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_armourattack.sqf";
 
+twc_fnc_seenbyplayers = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_seenbyplayers.sqf";
+twc_fnc_seenbyblufor = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_seenbyblufor.sqf";
 
 if (isServer) then {
 	_eventHandlerID = ["twc_event_baseattack", {

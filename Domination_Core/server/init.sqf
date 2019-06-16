@@ -36,6 +36,18 @@ if(isNil "twc_is90") then{
 	publicVariable "twc_is90";
 };
 
+//list of leaders that can do attachments without the slot system
+twc_goodeggs = [
+"76561198018609662", //sarge
+"76561198050512686", //patty
+"76561198034730503", //cuck
+"76561198053960783", //crow
+"76561198042520910", //aleyboy
+"76561198030665694" //hobbs
+
+];
+publicVariable "twc_goodeggs";
+
 if(isNil "twc_wdveh") then{
 twc_wdveh = 0;
 publicVariable "twc_wdveh";

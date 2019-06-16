@@ -22,6 +22,19 @@ if (( count(allPlayers - entities "HeadlessClient_F")) == (count (units group pl
 
 _pilots = ["Modern_British_HeliPilot","Modern_British_MERT_HeliPilot","2000_British_HeliPilot_Desert","2000_British_HeliPilot","1990_British_HeliPilot","1990_British_HeliPilot_Desert","Modern_British_MERT_HeliPilot"];
 
+
+	
+_arr = missionnamespace getvariable ["twc_goodeggs", []];
+_freepass = 0;
+
+{
+	if ((getPlayerUID _x) in _arr) then {
+		_freepass = 1;
+	};
+} foreach (units group player);
+
+if (_freepass == 1) exitwith {(group player) setvariable ["twc_attachrestrictedgrp", 0, true];};
+
 _groups = [];
 _snowflakes=0;
 
@@ -68,7 +81,7 @@ exitwith {
 
 cutText ["", "Black", 0.001];
 player forceWalk true;
-while {(((_attachmentcount * twc_attachmentgap)+ 5) > ( count(allPlayers - entities "HeadlessClient_F")))} do {
+while {((((_attachmentcount * twc_attachmentgap)+ 5) > ( count(allPlayers - entities "HeadlessClient_F"))) && (_Freepass == 0))} do {
 cutText ["", "Black", 0.001];
     [ 
         format ["<t size='1.2'>Attachment Role</t><br/><t size='0.6'>There are currently no attachment roles available, join one of the regular infantry roles. %1 players need to be online for the next attachment to become available</t>", 
@@ -84,6 +97,18 @@ cutText ["", "Black", 0.001];
 
 	};
 
+	_arr = missionnamespace getvariable ["twc_goodeggs", []];
+	{
+		if ((getPlayerUID _x) in _arr) then {
+			_freepass = 1;
+		};
+	} foreach (units group player);
+};
+
+(group player) setvariable ["twc_attachrestrictedgrp", 0, true];
+
+if (((group player) getVariable ["twc_teamrestrictedgrp",1]) == 0) then {
+	(group player) setvariable ["twc_legitgrp", time, true];
 };
 
 	
