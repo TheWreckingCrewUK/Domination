@@ -31,7 +31,7 @@ if(isNil {_veh getVariable "respawnInfo"})then{
 _veh addEventHandler ["GetOut",{
 	_veh = _this select 0;
 	if((getPos _veh) distance2D ((_veh getVariable "respawnInfo") select 1) < 50) exitWith{};
-	if((getPos _veh) distance2D (getMarkerPos "respawn_forwardBase") < vehicleRespawnDistanceForwardBase) exitWith{};
+	if((getPos _veh) distance2D (getMarkerPos "respawn_west_forwardBase") < vehicleRespawnDistanceForwardBase) exitWith{};
 	
 	[_veh]spawn{
 		params["_veh"];
@@ -39,18 +39,26 @@ _veh addEventHandler ["GetOut",{
 		_true = true;
 		_time = time + vehicleRespawnDelay;
 		while{_true}do{
-			waitUntil {str (fullCrew _veh) != "[]" || _time < time};
+			while {(_time > time ) || ([getpos _veh,1000] call twc_fnc_posNearPlayers)} do {
+				sleep 10;
+				//systemchat (typeof _veh + str (random 100));
+				if(str (fullCrew _veh) != "[]")exitWith{};
+			};
+			
 			if(str (fullCrew _veh) != "[]")exitWith{};
 			if(_time < time)then{
-				if([_veh,vehicleRespawnDistancePlayers] call CBA_fnc_nearPlayer)then{
-					_time = time + vehicleRespawnDelay;
-				}else{
+				//if([_veh,vehicleRespawnDistancePlayers] call CBA_fnc_nearPlayer)then{
+				//	_time = time + vehicleRespawnDelay;
+				//}else{
 					_respawnInfo = _veh getVariable "respawnInfo";
 					waituntil {basemode == 0};
 					deleteVehicle _veh;
 					sleep 20;
 		_checkpos = [(_respawnInfo select 1) select 0, (_respawnInfo select 1) select 1, 0];
-		waituntil {(count(_checkpos nearobjects ["all", 4]) ==0)};
+		
+		while {(count(_checkpos nearobjects ["all", 4]) >0)} do {
+			sleep 10;
+		};
 					_veh = (_respawnInfo select 0) createVehicle [0,0,(200 + (random 1000))];
 		
 					_veh allowdamage false;
@@ -104,7 +112,7 @@ _veh addEventHandler ["GetOut",{
 					_veh setVariable ["respawnInfo",_respawnInfo];
 					[_veh] call twc_fnc_vehicleRespawn;
 					_true = false;
-				};			
+				//};			
 			};
 		};
 	};

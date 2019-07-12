@@ -2,7 +2,6 @@
 if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squadleader_Light"]) then {
     _tmp_weapons =
     [
-        ["UK3CB_BAF_L85A2_RIS",1],
         ["ACE_Vector",1],
 		["UK3CB_BAF_L107A1",1],
 		["rhsusf_weap_glock17g4",1]
@@ -21,14 +20,11 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
     _tmp_items = 
 	[
 		["ACE_epinephrine",5],
-		["UK3CB_BAF_SpecterLDS_Dot",1],
 		["SatchelCharge_Remote_Mag",1],
 		["DemoCharge_Remote_Mag",3],
 		["ACE_M26_Clacker",1],
 		["ACE_DAGR",1],
 		["ACRE_PRC343",1],
-		["ACRE_PRC117F",1],
-		["UK3CB_BAF_LLM_IR_Black",1],
 		["ACE_wirecutter", 1],
 		["ACE_IR_Strobe_Item",1]
     ];
@@ -38,7 +34,6 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
  if (typeOf vehicle player in ["Modern_British_Rifleman", "Modern_British_Pointman_Light"]) then {
     _tmp_weapons =
     [
-		["UK3CB_BAF_L85A2_RIS",1],
 		["rhs_weap_m72a7",4],
 		["rhs_weap_M136_hedp",2],
 		["rhsusf_weap_glock17g4",1],
@@ -59,9 +54,7 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 
 	_tmp_items = 
 	[
-		["UK3CB_BAF_SpecterLDS_Dot",1],
-		["ACRE_PRC343",1],
-		["UK3CB_BAF_LLM_IR_Black",1]
+		["ACRE_PRC343",1]
 	];
 };
 
@@ -69,7 +62,6 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
  if (typeOf vehicle player in ["Modern_British_Grenadier", "Modern_British_Grenadier_COIN_Light"]) then {
     _tmp_weapons =
     [
-        ["UK3CB_BAF_L85A2_UGL",1],
         ["ACE_Yardage450",1],
 		["rhs_weap_M136_hedp",2],
 		["rhsusf_weap_glock17g4",1],
@@ -96,9 +88,7 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 
 	_tmp_items =
 	[
-		["UK3CB_BAF_SpecterLDS_Dot",1],
-		["ACRE_PRC343",1],
-		["UK3CB_BAF_LLM_IR_Black",1]
+		["ACRE_PRC343",1]
 	];
 };
 
@@ -106,7 +96,6 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
  if (typeOf vehicle player in ["Modern_British_Autorifleman", "Modern_British_Autorifleman_COIN_Light"]) then {
     _tmp_weapons =
     [
-        ["UK3CB_BAF_L110A2",1],
 		["rhsusf_weap_glock17g4",1],
 		["UK3CB_BAF_L107A1",1],
 		["rhs_weap_m72a7",4]
@@ -123,7 +112,6 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 
 	_tmp_items =
 	[
-		["UK3CB_BAF_SpecterLDS_Dot",1],
 		["ACRE_PRC343",1]
 	];
 };
@@ -132,7 +120,6 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
  if (typeOf vehicle player in ["Modern_British_2IC", "Modern_British_2IC_COIN_Light"]) then {
     _tmp_weapons =
     [
-		["UK3CB_BAF_L85A2_RIS",1],
 		["ACE_Yardage450",1],
 		["rhsusf_weap_glock17g4",1],
 		["UK3CB_BAF_L107A1",1],
@@ -171,10 +158,6 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 
 	_tmp_items = 
 	[
-		["UK3CB_BAF_SpecterLDS_Dot",1],
-		["UK3CB_BAF_LLM_IR",1],
-		["ACRE_PRC343",1],
-		["UK3CB_BAF_LLM_IR_Black",1],
 		["ACE_wirecutter", 1],
 		["ACE_IR_Strobe_Item",1]
 	];
@@ -200,7 +183,6 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 	
 	_tmp_items = 
 	[
-		["ACRE_PRC343",1],
 		["UK3CB_BAF_Tripod",1]
 	];
 };
@@ -209,7 +191,6 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
  if (typeOf vehicle player in ["Modern_British_Marksman", "Modern_British_Marksman_COIN_Light"]) then {
     _tmp_weapons =
     [
-        ["UK3CB_BAF_L129A1_FGrip",1],
 		["rhsusf_weap_glock17g4",1],
 		["UK3CB_BAF_L107A1",1],
 		["ACE_Yardage450",1],
@@ -228,9 +209,6 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 		
 	_tmp_items = 
 	[
-		["UK3CB_BAF_TA648_308",1],
-		["UK3CB_BAF_LLM_IR",1],
-		["UK3CB_underbarrel_acc_fgrip_bipod",1],
 		["ACRE_PRC343",1]
 	];	
 };
@@ -239,8 +217,7 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
     _tmp_weapons =
     [
 		["rhsusf_weap_glock17g4",1],
-		["UK3CB_BAF_L107A1",1],
-		["UK3CB_BAF_L85A2_RIS",1]
+		["UK3CB_BAF_L107A1",1]
 	];
 
     _tmp_magazines =
@@ -268,9 +245,6 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 		["ACE_salineIV_500",50],
 		["ACE_bodyBag",10],
 		["ACE_tourniquet", 5],
-		["RKSL_optic_LDS",1],
-		["UK3CB_BAF_SpecterLDS_Dot",1],
-		["UK3CB_BAF_LLM_IR_Black",1],
 		["ACRE_PRC343",1]
 	];
 };
@@ -279,7 +253,6 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
  if (typeOf vehicle player == "Modern_British_Sniper") then {
     _tmp_weapons =
     [
-		["twc_l115a3_gh",1],
 		["twc_rhs_weap_M107",1],
 		["rhsusf_weap_glock17g4",1]
     ];
@@ -297,10 +270,8 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 	[
 		["ACE_fieldDressing",20],
 		["ACE_morphine",10],
-		["ACRE_PRC343",1],
 		["rhsusf_ANPVS_14",1],
 		["ACE_IR_Strobe_Item",5],
-		["UK3CB_BAF_G_Tactical_Black",1],
 		["UK3CB_BAF_MaxiKite",1],
 		["ACE_Tripod",1],
 		["HandGrenade",5]
@@ -335,25 +306,13 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 	[
 		["ACE_fieldDressing",20],
 		["ACE_morphine",10],
-		["RKSL_optic_LDS",1],
-		["UK3CB_BAF_LLM_IR",1],
-		["UK3CB_BAF_Silencer_L115A3",1],
-		["UK3CB_BAF_Eotech",1],
-		["STKR_Predator",1],
 		["rhsusf_ANPVS_14",1],
 		["ACE_IR_Strobe_Item",1],
-		["ACRE_PRC343",1],
-		["UK3CB_BAF_G_Tactical_Black",1],
-		["ACE_Kestrel4500",1],
-		["ACE_RangeCard",1],
 		["ACE_SpottingScope",1],
 		["ACE_MX2A",1],
 		["ACRE_PRC117F_ID_1",1],
-		["UK3CB_BAF_LLM_IR_Black",1],
 		["UK3CB_BAF_MaxiKite",1],
-		["ACE_ATragMX",1],
-		["ACE_Tripod",1],
-		["itemCTAB",1]
+		["ACE_Tripod",1]
 	];
 
 };

@@ -50,7 +50,7 @@ if (time < 120) exitWith {};
 
 	waituntil {({isPlayer _x && alive _x} count allUnits)==0};
 	if (getMarkerColor "base" == "") then { 
-	if ((getMarkerColor "respawn_forwardBase" == "") ) then {
+	if ((getMarkerColor "respawn_west_forwardBase" == "") ) then {
 	//systemchat "no base and no backup";
 	"baselost" call BIS_fnc_endMissionServer;} else {
 	//systemchat "got a backup"

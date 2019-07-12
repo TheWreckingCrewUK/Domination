@@ -14,7 +14,7 @@ twc_towerCount = 0;
 
 
 if(isNil "twc_hasaps") then{
-	twc_hasaps = ["rhs_t90a_tv", "rhs_t72be_tv"];
+	twc_hasaps = ["rhs_t90a_tv", "rhs_t72be_tv", "rhs_t14_tv"];
 };
 
 if(isNil "twc_APS_list") then{
@@ -77,9 +77,9 @@ _markerstr = createMarker ["aoCenterMarker",_pos];
 _markerstr setMarkerShape "ICON";
 _markerstr setMarkerType twc_enemyFlag;
 
-parseText format["<t align='center'><t size='2' color='#ff0000'>AO created at </t><br/><t align='center'><t size='1.5' color='#ffffff'> %1</t><br/><t align='center'>---------------------<br/></t><t align='left'><t size='1' shadow='1.1' shadowColor='#000000' color='#CC4D00'>Destroy the radio tower quickly to stop enemy reinforcements. </t>", _name] remoteExec ["hint"];
+parseText format["<t align='center'><t size='2' color='#ff0000'>AO created at </t><br/><t align='center'><t size='1.5' color='#ffffff'> %1</t><br/><t align='center'>---------------------<br/></t><t align='left'><t size='1' shadow='1.1' shadowColor='#000000' color='#CC4D00'>Destroy the command vehicle quickly to stop enemy reinforcements. </t>", _name] remoteExec ["hint"];
 
-[West,[_name],["To capture the AO you must Destroy the Radio tower and then eliminate the remaining enemies from the area. While the radio tower is alive the enemy will be able to call for reinforcements.",format["%1",_name],""],objNull,True,1,True,"",False] call BIS_fnc_taskCreate;
+[West,[_name],["To capture the AO you must Destroy the command vehicle and then eliminate the remaining enemies from the area. While the command vehicle is alive the enemy will be able to call for reinforcements.",format["%1",_name],""],objNull,True,1,True,"",False] call BIS_fnc_taskCreate;
 
 
 _spawnPos = [_pos,[100,300],random 360,0,[0,100]] call SHK_pos;
@@ -90,7 +90,7 @@ publicVariable "twc_enemyhasradio";
 
 _tower setVehicleLock "LOCKED";
 //_tower setDamage 0.99;
-_tower addEventHandler ["Killed",{"Radio Tower Destroyed. The enemies can no longer call in Reinforcements. Well done!" remoteExec ["hint"];
+_tower addEventHandler ["Killed",{"Command Vehicle Destroyed. The enemies can no longer call in Reinforcements. Well done!" remoteExec ["hint"];
 twc_enemyhasradio = 0;
 publicVariable "twc_enemyhasradio"; "radioMarker" setMarkerColor "colorWEST"; twc_towerCount = 1; deleteVehicle reinforcementsTrg}];
 
@@ -324,7 +324,7 @@ _vehicle addEventHandler ["Fired", {
 [leader _group] execvm "Domination_Core\server\func\ai\fnc_aiscramble.sqf";
 };
 
-if (( count(allPlayers - entities "HeadlessClient_F")) < 8) then {
+if (( count(allPlayers - entities "HeadlessClient_F")) < 14) then {
 	if (random 1 > 0.8) then {
  
  _spawnPos = [_pos,[100,500],random 360,0,[1,100]] call SHK_pos;  
@@ -363,7 +363,7 @@ _vehicle flyInHeight  _flyalt;
  }
 	};
 	
-	if (( count(allPlayers - entities "HeadlessClient_F")) > 14) then {
+	if (( count(allPlayers - entities "HeadlessClient_F")) > 13) then {
 	if (random 1 > 0.8) then {
  
  _spawnPos = [_pos,[100,500],random 360,0,[1,100]] call SHK_pos;  

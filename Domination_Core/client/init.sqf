@@ -46,8 +46,26 @@ twc_firstspawned = 0;
 player addEventHandler ["Respawn", {
 	params ["_unit", "_corpse"];
 	
-	player setunittrait ["camouflageCoef", twc_pubcamo];
-	
+	if ((!(["sniper", typeof player] call BIS_fnc_inString)) && (!(["spotter", typeof player] call BIS_fnc_inString))) then {
+		player setunittrait ["camouflageCoef", twc_pubcamo];
+	} else {
+		player setunittrait ["camouflageCoef", 0.5];
+	};
+	twc_client_nightcamo = {
+	if (((["sniper", typeof player] call BIS_fnc_inString)) && ((["spotter", typeof player] call BIS_fnc_inString))) exitwith {};
+		while {(sunOrMoon == 1)} do {
+			sleep 120;
+		};
+		player setunittrait ["camouflageCoef", 3];
+		while {(sunOrMoon == 0)} do {
+			sleep 120;
+		};
+		player setunittrait ["camouflageCoef", twc_pubcamo];
+		
+		[] spawn twc_client_nightcamo;
+		
+	};
+	[] spawn twc_client_nightcamo;
 	if ((!(isnull _corpse)) && ((_corpse distance twc_basepos) < 500)) then {
 	[_corpse] spawn {
 		params ["_corpse"];

@@ -29,6 +29,20 @@ if (isServer) then {
 
 call twc_fnc_aps_server;
 
+
+twc_hintfullsection = {
+	params ["_group"];
+	
+	_arr = [];
+	{
+		_arr pushback [name _x, typeof _x, getPlayerUID _x];
+	} foreach (units _group);
+	
+	if (!hasinterface) exitwith {
+		diag_log ("twcgoodeggs "+(str _arr));
+	};
+};
+
 if (!isDedicated) then {
     KK_fnc_FX = {
         private "_veh";

@@ -43,6 +43,8 @@ twc_goodeggs = [
 "76561198034730503", //cuck
 "76561198053960783", //crow
 "76561198042520910", //aleyboy
+"76561198035067970", //martingw
+"76561198005456546", //bosenator
 "76561198030665694" //hobbs
 
 ];
@@ -120,11 +122,6 @@ _pilotConnectedList = [];
 
 sirenlist = (getmarkerpos "base") nearobjects ["Land_Loudspeakers_F", 500];
 
-mainbase = createTrigger ["EmptyDetector", getmarkerpos "base"];
-mainbase setTriggerArea [200, 200, 0, false];
-mainbase setTriggerActivation ["EAST", "PRESENT", true];
-mainbase setTriggerTimeout [10,10,10,True];
-mainbase setTriggerStatements ["count thislist > 1","call twc_fnc_changebase_bluetored;", "call twc_fnc_changebase_redtoblue;"];
 
 mainbase = createTrigger ["EmptyDetector", getmarkerpos "base"];
 mainbase setTriggerArea [500, 500, 0, false];

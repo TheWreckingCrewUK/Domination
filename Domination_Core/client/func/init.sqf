@@ -1,6 +1,7 @@
 
 twc_fnc_seenbyplayers = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_seenbyplayers.sqf";
 twc_fnc_seenbyblufor = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_seenbyblufor.sqf";
+twc_fnc_posNearPlayers = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_posNearPlayers.sqf";
 
 twc_fnc_cantp1 = {
 
@@ -36,6 +37,19 @@ twc_fnc_isplayeratbase = {
 	_return;
 };
 
+
+twc_hintfullsection = {
+	params ["_group"];
+	
+	_arr = [];
+	{
+		_arr pushback [name _x, typeof _x, getPlayerUID _x];
+	} foreach (units _group);
+	
+	if (!hasinterface) exitwith {
+		diag_log ("twcgoodeggs "+(str _arr));
+	};
+};
 
 twc_fnc_basetp = {
 
