@@ -88,7 +88,7 @@ _helicount = ceil (((count allplayers) / 8) min 4);
 				[_group, 3] setWaypointCompletionRadius 30; 
 				[_group, 4] setWaypointCompletionRadius 30; 
 				 [_group, 5] setWaypointType "CYCLE"; 
-				 [leader _group] execvm "Domination_Core\server\func\ai\fnc_aiscramble.sqf";
+				 [leader _group] spawn TWC_Core_fnc_aiscramble;
 				 
 				 
 			sleep 120;
@@ -157,7 +157,7 @@ _helicount = ceil (((count allplayers) / 8) min 4);
 				[_group, 4] setWaypointCompletionRadius 30; 
 				[_group, 5] setWaypointCompletionRadius 30; 
 				 [_group, 5] setWaypointType "CYCLE"; 
-				[leader _group] execvm "Domination_Core\server\func\ai\fnc_aiscramble.sqf";
+				[leader _group] spawn TWC_Core_fnc_aiscramble;
 				 
 				 
 				 };
@@ -256,7 +256,7 @@ _helicount = ceil (((count allplayers) / 8) min 4);
 				[_group, 3] setWaypointCompletionRadius 30; 
 				[_group, 4] setWaypointCompletionRadius 30; 
 				 [_group, 5] setWaypointType "CYCLE"; 
-				[leader _group] execvm "Domination_Core\server\func\ai\fnc_aiscramble.sqf";
+				[leader _group] spawn TWC_Core_fnc_aiscramble;
 				 
 				 
 			sleep 120;
