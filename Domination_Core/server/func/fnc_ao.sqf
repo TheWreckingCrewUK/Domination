@@ -109,19 +109,19 @@ for "_i" from 1 to twc_aainfcount do {
 	_spawnPos = [_pos,[200,400],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squadAA] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 200] call cba_fnc_taskPatrol;
-	[leader _group] spawn TWC_Core_fnc_aiscramble;
+	[leader _group] execvm "Domination_Core\server\func\ai\fnc_aiscramble.sqf";
 };
 for "_i" from 1 to twc_infcount do {
 	_spawnPos = [_pos,[0,250],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 150,3,false,true] call cba_fnc_taskDefend;
-	[leader _group] spawn TWC_Core_fnc_aiscramble;
+	[leader _group] execvm "Domination_Core\server\func\ai\fnc_aiscramble.sqf";
 };
 for "_i" from 1 to twc_infcount do {
 	_spawnPos = [_pos,[200,400],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 200] call cba_fnc_taskPatrol;
-	[leader _group] spawn TWC_Core_fnc_aiscramble;
+	[leader _group] execvm "Domination_Core\server\func\ai\fnc_aiscramble.sqf";
 };
 
 
@@ -190,7 +190,7 @@ _vehicle addEventHandler ["Fired", {
 [_group, 5] setWaypointCompletionRadius 50;  
  [_group, 5] setWaypointType "CYCLE";
  
-[leader _group] spawn TWC_Core_fnc_aiscramble;
+[leader _group] execvm "Domination_Core\server\func\ai\fnc_aiscramble.sqf";
  {if (!(_x in crew _vehicle)) then {deletevehicle _x};} foreach (units _group)
  
 };
@@ -321,7 +321,7 @@ _vehicle addEventHandler ["Fired", {
 [_group, 4] setWaypointCompletionRadius 50; 
 [_group, 5] setWaypointCompletionRadius 50; 
  [_group, 5] setWaypointType "CYCLE";
-[leader _group] spawn TWC_Core_fnc_aiscramble;
+[leader _group] execvm "Domination_Core\server\func\ai\fnc_aiscramble.sqf";
 };
 
 if (( count(allPlayers - entities "HeadlessClient_F")) < 14) then {
@@ -509,12 +509,12 @@ _vehicle addEventHandler ["Fired", {[(_this select 0), (_this select 6)] call tw
 	_spawnPos = [artyspawnpos,[0,50],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 150,3,false,true] call cba_fnc_taskDefend;
-	[leader _group] spawn TWC_Core_fnc_aiscramble;
+	[leader _group] execvm "Domination_Core\server\func\ai\fnc_aiscramble.sqf";
 	
 	_spawnPos = [_pos,[200,400],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squadAA] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 200] call cba_fnc_taskPatrol;
-	[leader _group] spawn TWC_Core_fnc_aiscramble;
+	[leader _group] execvm "Domination_Core\server\func\ai\fnc_aiscramble.sqf";
 	
 	};
 _trg = createTrigger ["EmptyDetector", _pos];

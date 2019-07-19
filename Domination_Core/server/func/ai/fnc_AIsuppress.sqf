@@ -25,12 +25,12 @@ _unit setvariable ["twc_aisuppression", 1];
 if (_inittime < (time - 600)) exitwith {_unit setvariable ["twc_aisuppression", 0];};
 
 
-while {((getSuppression _unit) < 0.1) && (alive _unit)} do {
-	sleep 1;
+
+while {((getSuppression _unit) < 0.2) && (alive _unit)} do {
+	sleep 2;
 };
 if (!(alive _unit)) exitwith {};
 
-systemchat "logic test2";
 _enemy = _unit findnearestenemy _unit;
 if ((_enemy distance _unit) < 50) exitwith {
 	[_unit, _inittime, _enemy] execvm "Domination_Core\server\func\ai\fnc_aisuppresscqb.sqf";
@@ -39,8 +39,7 @@ if ((_enemy distance _unit) < 50) exitwith {
 //systemchat format ["%1", typeof _unit];
 
 _ogroup = group _unit;
-//_ngroup = creategroup [east, true];
-_ngroup = creategroup [sidelogic, true];
+_ngroup = creategroup [east, true];
 
 //_npos = [_unit, 50, 150, 0, 0, 20, 0] call BIS_fnc_findSafePos;
 
@@ -48,11 +47,11 @@ _ngroup = creategroup [sidelogic, true];
 
 _check = 0;
 _npos = getpos _enemy;
-_radius = 20;
+_radius = 10;
 while {(_check == 0) && (_radius < 100)} do {
-	_npos = [_unit, 10, _radius, 5, 0, 20, 0] call BIS_fnc_findSafePos;
+	_npos = [_unit, 1, _radius, 5, 0, 20, 0] call BIS_fnc_findSafePos;
 	_npos2 = AtlToAsl ([_npos select 0,_npos select 1, (7 + (random 3))]);
-	_vis = [objNull, "VIEW"] checkVisibility [(GETPosasl _enemy) vectoradd [0,0,(2 + (random 7))], _npos2];
+	_vis = [objNull, "VIEW"] checkVisibility [(GETPosasl _enemy) vectoradd [0,0,(7 + (random 7))], _npos2];
 	//_vis = lineIntersects [(GETPos _enemy) vectoradd [0,0,(1 + (random 3))], (_npos2), _enemy, _unit];
 	if (_vis == 0) then {
 		_check = 1;
@@ -74,8 +73,7 @@ _unit disableai "checkvisible";
 {_unit forgetTarget _x} foreach allplayers;
 _unit domove _npos;
 _unit setspeedmode "full";
-(group _unit) setBehaviour "aware";
-//(group _unit) setBehaviour "careless";
+(group _unit) setBehaviour "careless";
 sleep (4 + random 10);
 [_unit] joinsilent _ogroup;
 //_unit setunitpos "auto";
