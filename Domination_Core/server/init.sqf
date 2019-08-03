@@ -3,6 +3,7 @@
 #include "sys_basedefence\init.sqf";
 #include "sys_mechanised\init.sqf";
 
+CIVILIAN setFriend [EAST, 1];
 
 basemode = 0;
 publicvariable "basemode";
