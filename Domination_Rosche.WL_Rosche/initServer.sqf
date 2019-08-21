@@ -19,7 +19,8 @@ publicVariable "twc_wdveh";
 //add in an object name and the game will create a location there and spawn enemies from it
 customlocations = [];
 
-tank = ["rhs_t72be_tv", "rhs_t80um", "rhs_t90a_tv"];
+
+tank = ["rhs_t72be_tv","rhs_t72be_tv","rhs_t72be_tv", "rhs_t80um", "rhs_t80um", "rhs_t80um", "rhs_t80um", "rhs_t90a_tv", "rhs_t90sab_tv", "rhs_t90saa_tv"];
 
 ifv = ["rhs_bmp2d_msv", "rhs_bmp1_msv"];
 

@@ -59,7 +59,8 @@ clearWeaponCargoGlobal _veh;
 clearBackpackCargoGlobal _veh;
 clearMagazineCargoGlobal _veh;
 clearitemCargoGlobal _veh;
-
+_mult = 1;
+_veh AddMagazineCargoGlobal ["UK3CB_BAF_127_100Rnd",5*_mult];
 
 _veh AddWeaponCargoGlobal ["rhs_weap_m72a7",2];
 _veh AddWeaponCargoGlobal ["rhs_weap_maaws_optic",1];
@@ -105,6 +106,11 @@ _veh AddMagazineCargoGlobal [_mag ,5];
 if ((random 1) < 0.5) then {
 	_fsgun = ["UK3CB_BAF_L110A2_ELCAN3D",1];
 	_fsmag = ["UK3CB_BAF_556_200Rnd_T",5];
+};
+
+if ((random 1) < 0.2) then {
+	_fsgun = ["UK3CB_BAF_M6",1];
+	_fsmag = ["UK3CB_BAF_1Rnd_60mm_Mo_Shells",15];
 };
 
 _veh AddWeaponCargoGlobal _fsgun;

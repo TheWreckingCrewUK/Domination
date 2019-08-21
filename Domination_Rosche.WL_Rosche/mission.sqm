@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2994;
+		nextID=3021;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6360.269,36.350513,6554.8423};
-		dir[]={-0.22212352,-0.27577758,0.93525422};
-		up[]={-0.063719422,0.96123421,0.26829365};
-		aside[]={0.97298771,-8.4226485e-007,0.23108841};
+		pos[]={6362.9961,35.229992,6632.7129};
+		dir[]={-0.10437454,-0.3331311,-0.93714309};
+		up[]={-0.036873661,0.94289297,-0.3310672};
+		aside[]={-0.99391359,-8.3900522e-007,0.11069445};
 	};
 };
 binarizationWanted=0;
@@ -12812,7 +12812,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=114;
+		items=115;
 		class Item0
 		{
 			dataType="Marker";
@@ -14125,7 +14125,7 @@ class Mission
 			};
 			id=2134;
 			type="rhsusf_m113_usarmy_medical";
-			atlOffset=-0.00011634827;
+			atlOffset=-0.15182114;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17223,7 +17223,7 @@ class Mission
 			};
 			id=2713;
 			type="rhsusf_M977A4_BKIT_usarmy_wd";
-			atlOffset=-0.0001411438;
+			atlOffset=-0.76641846;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -20178,6 +20178,16 @@ class Mission
 			};
 			id=2990;
 			type="CUP_B_Mastiff_GMG_GB_W";
+		};
+		class Item114
+		{
+			dataType="Group";
+			side="East";
+			class Attributes
+			{
+			};
+			id=2999;
+			atlOffset=-6.6966667;
 		};
 	};
 };

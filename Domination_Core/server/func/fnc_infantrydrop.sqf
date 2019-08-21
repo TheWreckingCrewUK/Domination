@@ -28,7 +28,7 @@ _helicount = ceil (((count allplayers) / 8) min 4);
 		};
 		*/
 		_plane = createVehicle [_helitype, (([_spawnPos, 200] call CBA_fnc_randPos) vectoradd [0,0,500]), [], 0, "FLY"]; 
-
+		_plane setvariable ["twc_walk_onlydisperse", 4];
 		_dir = ([_plane, _enemy] call BIS_fnc_relativeDirTo);
 
 		_plane setdir _dir;
@@ -196,7 +196,7 @@ _helicount = ceil (((count allplayers) / 8) min 4);
 		};
 		*/
 		_plane = createVehicle [_helitype, (([_spawnPos, 200] call CBA_fnc_randPos) vectoradd [0,0,500]), [], 0, "FLY"]; 
-
+		_plane setvariable ["twc_walk_onlydisperse", 4];
 		_dir = ([_plane, _enemy] call BIS_fnc_relativeDirTo);
 
 		_plane setdir _dir;

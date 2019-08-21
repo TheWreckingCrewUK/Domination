@@ -16,7 +16,7 @@
 			
 		_Cargo = [];
 		_plane = createVehicle ["RHS_Mi8AMT_vvsc", (([_spawnPos, 200] call CBA_fnc_randPos) vectoradd [0,0,500]), [], 0, "FLY"]; 
-
+		_plane setvariable ["twc_walk_onlydisperse", 4];
 		_dir = ([_plane, _enemy] call BIS_fnc_relativeDirTo);
 
 		_plane setdir _dir;
@@ -93,7 +93,7 @@ sleep 1;
 			
 		_Cargo = [];
 		_plane = createVehicle ["rhs_mi28n_vvsc", (([_spawnPos, 200] call CBA_fnc_randPos) vectoradd [0,0,500]), [], 0, "FLY"]; 
-
+		_plane setvariable ["twc_walk_onlydisperse", 4];
 		_dir = ([_plane, _enemy] call BIS_fnc_relativeDirTo);
 
 		_plane setdir _dir;

@@ -14,7 +14,7 @@ twc_towerCount = 0;
 
 
 if(isNil "twc_hasaps") then{
-	twc_hasaps = ["rhs_t90a_tv", "rhs_t72be_tv", "rhs_t14_tv"];
+	twc_hasaps = ["rhs_t90a_tv", "rhs_t72be_tv", "rhs_t14_tv", "rhs_t90sab_tv", "rhs_t90saa_tv"];
 };
 
 if(isNil "twc_APS_list") then{
@@ -329,16 +329,19 @@ if (( count(allPlayers - entities "HeadlessClient_F")) < 14) then {
  
  _spawnPos = [_pos,[100,500],random 360,0,[1,100]] call SHK_pos;  
  _group = createGroup East;  
- _vehicle = lightheli createVehicle _spawnPos;  
+ _vehicle = createVehicle [lightheli, (_spawnPos vectoradd [0,0, 30]), [], 0, "FLY"];
  
  clearWeaponCargoGlobal _vehicle;
 clearBackpackCargoGlobal _vehicle;
 clearitemCargoGlobal _vehicle;
+
+_vehicle setvariable ["twc_walk_onlydisperse", 4];
  
  _driver = _group createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
  _gunner = _group createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
   
  _driver moveInDriver _vehicle;  
+ _driver setskill 1;
  _gunner moveInGunner _vehicle; 
  _vehicle setVehicleLock "LOCKEDPLAYER"; 
  /*
@@ -369,16 +372,18 @@ _vehicle flyInHeight  _flyalt;
  _spawnPos = [_pos,[100,500],random 360,0,[1,100]] call SHK_pos;  
  _group = createGroup East;  
  _vehicle = heavyheli createVehicle _spawnPos;  
- 
+ _vehicle setvariable ["twc_walk_onlydisperse", 4];
  clearWeaponCargoGlobal _vehicle;
 clearBackpackCargoGlobal _vehicle;
 clearitemCargoGlobal _vehicle;
- 
+ _vehicle setvariable ["twc_walk_onlydisperse", 4];
  _driver = _group createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
  _gunner = _group createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
   
  _driver moveInDriver _vehicle;  
+ _driver setskill 0.8;
  _gunner moveInGunner _vehicle; 
+ _gunner setskill 0.8;
  _vehicle setVehicleLock "LOCKEDPLAYER"; 
  /*
 _vehicle addEventHandler ["Fired", {
@@ -410,10 +415,10 @@ if (_pos distance getmarkerpos "respawn_west" > 5000) then {
  _group = createGroup East;  
  _jet = jet createVehicle _spawnPos;  
  
- clearWeaponCargoGlobal _vehicle;
-clearBackpackCargoGlobal _vehicle;
-clearitemCargoGlobal _vehicle;
- 
+ clearWeaponCargoGlobal _jet;
+clearBackpackCargoGlobal _jet;
+clearitemCargoGlobal _jet;
+ _jet setvariable ["twc_walk_onlydisperse", 4];
  _driver = _group createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
   
  _driver moveInDriver _jet;  

@@ -105,7 +105,7 @@ if((typeOf player) in ["Modern_UKSF_Squadleader","Modern_UKSF_2IC"])then{
 	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Javelin Tubes","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallcratejav_tube.sqf"},_condition] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions","ammospawn", "ammospawnheavy"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;
 	
-	_artaction3 = ["SpawnrepCreate","Spawn MRZR","",{execvm "domination_core\client\sys_player\vehicles\sfmrzr.sqf"},_condition] call ace_interact_menu_fnc_createAction;
+	_artaction3 = ["SpawnrepCreate","Spawn RG","",{execvm "domination_core\client\sys_player\vehicles\sfrg.sqf"},_condition] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "vehiclespawn"],_artaction3,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	
