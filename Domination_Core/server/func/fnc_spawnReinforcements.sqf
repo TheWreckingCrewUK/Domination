@@ -75,7 +75,7 @@ if (((!(["90", twc_missionname] call BIS_fnc_inString)) && (!(["00", twc_mission
 	
 };
 
-if ((_landorair > 0.6) || (["90", twc_missionname] call BIS_fnc_inString) || (["00", twc_missionname] call BIS_fnc_inString) || (missionnamespace getvariable ["twc_canlandattack", 0] == 0)) then {
+if ((_landorair > 0.8) || (["90", twc_missionname] call BIS_fnc_inString) || (["00", twc_missionname] call BIS_fnc_inString) || (missionnamespace getvariable ["twc_canlandattack", 0] == 0)) then {
 //armour is dropped by c130, so have the same condition on this as for the c130 airdrop of infantry
 	if ((_num) > 0.7) then {
 		[_spawnpos, _enemy, _stagepos] spawn twc_fnc_armourdrop;

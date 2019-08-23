@@ -51,14 +51,13 @@ _veh addItemCargoGlobal ["ACE_fieldDressing",25*_mult];
 _veh addItemCargoGlobal ["ACE_elasticBandage",15*_mult];
 _veh addItemCargoGlobal ["ACE_quikclot",15*_mult];
 _veh addItemCargoGlobal ["ACE_packingBandage",15*_mult];
-_veh addItemCargoGlobal ["ACE_salineIV_250",15*_mult];
-_veh addItemCargoGlobal ["ACE_salineIV_500",15*_mult];
-_veh addItemCargoGlobal ["ACE_atropine",5*_mult];
+_veh addItemCargoGlobal ["ACE_salineIV_250",5*_mult];
+_veh addItemCargoGlobal ["ACE_salineIV_500",5*_mult];
 _veh addItemCargoGlobal ["ACE_epinephrine",10*_mult];
 _veh addItemCargoGlobal ["ACE_morphine",10*_mult];
 _veh addItemCargoGlobal ["HandGrenade",2*_mult];
 _veh addItemCargoGlobal ["SmokeShell",3*_mult];
-_veh addItemCargoGlobal ["SmokeShellRed",3*_mult];
+_veh addItemCargoGlobal ["SmokeShellRed",1];
 
 _fsgun = ["twc_rhs_weap_m240B_mgo_lazer",1];
 _fsmag = ["UK3CB_BAF_762_100Rnd_T",5*_mult];
