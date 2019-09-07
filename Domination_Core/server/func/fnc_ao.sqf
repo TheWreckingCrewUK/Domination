@@ -109,19 +109,19 @@ for "_i" from 1 to twc_aainfcount do {
 	_spawnPos = [_pos,[200,400],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squadAA] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 200] call cba_fnc_taskPatrol;
-	[leader _group] spawn TWC_fnc_aiscramble;
+	[leader _group, 2] spawn TWC_fnc_aiscramble;
 };
 for "_i" from 1 to twc_infcount do {
 	_spawnPos = [_pos,[0,250],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 150,3,false,true] call cba_fnc_taskDefend;
-	[leader _group] spawn TWC_fnc_aiscramble;
+	[leader _group, 2] spawn TWC_fnc_aiscramble;
 };
 for "_i" from 1 to twc_infcount do {
 	_spawnPos = [_pos,[200,400],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 200] call cba_fnc_taskPatrol;
-	[leader _group] spawn TWC_fnc_aiscramble;
+	[leader _group, 2] spawn TWC_fnc_aiscramble;
 };
 
 
@@ -145,7 +145,7 @@ clearitemCargoGlobal _vehicle;
  _commander moveInCommander _vehicle; 
   
   _vehicle setVehicleLock "LOCKEDPLAYER";
-
+[leader _group, 2] spawn TWC_fnc_aiscramble;
 if (_tank in twc_hasaps) then {
 	twc_APS_list pushback _vehicle;
 	publicVariable "twc_APS_list";
@@ -167,7 +167,7 @@ if ((_tank == "rhs_t72ba_tv") && (twc_wdveh == 0)) then {
 params ["_vehicle"];
 sleep 10;
 if ((gunner _vehicle) == objnull) then {
-systemchat "new gunner";
+
  _gunner = _group createUnit ["CUP_O_RU_Crew_EMR", [0,0,200],[], 0.3,"NONE"];  
  _gunner moveInGunner _vehicle;  
 };
@@ -190,7 +190,7 @@ _vehicle addEventHandler ["Fired", {
 [_group, 5] setWaypointCompletionRadius 50;  
  [_group, 5] setWaypointType "CYCLE";
  
-[leader _group] spawn TWC_fnc_aiscramble;
+[leader _group, 2] spawn TWC_fnc_aiscramble;
  {if (!(_x in crew _vehicle)) then {deletevehicle _x};} foreach (units _group)
  
 };
@@ -208,7 +208,7 @@ clearitemCargoGlobal _vehicle;
  
  _driver = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];  
  _gunner = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];   
-  
+  [leader _group, 2] spawn TWC_fnc_aiscramble;
   
 if (_ifv in twc_hasaps) then {
 	twc_APS_list pushback _vehicle;
@@ -305,6 +305,8 @@ clearitemCargoGlobal _vehicle;
  _gunner moveInGunner _vehicle;  
  _commander moveInCommander _vehicle;  
  _vehicle setVehicleLock "LOCKEDPLAYER";
+ 
+ [leader _group, 2] spawn TWC_fnc_aiscramble;
  /*
 _vehicle addEventHandler ["Fired", {
 	[_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk; }];
@@ -321,7 +323,7 @@ _vehicle addEventHandler ["Fired", {
 [_group, 4] setWaypointCompletionRadius 50; 
 [_group, 5] setWaypointCompletionRadius 50; 
  [_group, 5] setWaypointType "CYCLE";
-[leader _group] spawn TWC_fnc_aiscramble;
+[leader _group, 2] spawn TWC_fnc_aiscramble;
 };
 
 if (( count(allPlayers - entities "HeadlessClient_F")) < 14) then {
@@ -514,12 +516,12 @@ _vehicle addEventHandler ["Fired", {[(_this select 0), (_this select 6)] call tw
 	_spawnPos = [artyspawnpos,[0,50],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 150,3,false,true] call cba_fnc_taskDefend;
-	[leader _group] spawn TWC_fnc_aiscramble;
+	[leader _group, 2] spawn TWC_fnc_aiscramble;
 	
 	_spawnPos = [_pos,[200,400],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squadAA] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 200] call cba_fnc_taskPatrol;
-	[leader _group] spawn TWC_fnc_aiscramble;
+	[leader _group, 2] spawn TWC_fnc_aiscramble;
 	
 	};
 _trg = createTrigger ["EmptyDetector", _pos];
