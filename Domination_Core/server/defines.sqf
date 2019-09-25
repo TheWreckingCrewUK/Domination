@@ -76,6 +76,8 @@ twc_objnames = [
 "DUCK",
 "BUSTER",
 "FIDO",
+"PATH",
+"HEX",
 "NAPALM",
 "CHERRY",
 "LINCOLN",

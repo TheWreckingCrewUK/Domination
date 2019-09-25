@@ -25,7 +25,7 @@ twc_reinwarnmsg = {
 	_warning = parsetext (_title + _text1);
 	[_warning] remoteExec ["hint"];
 };
-
+waituntil {!isnil "twc_missionname"};
 twc_pubcamo = 500;
 if (["90", twc_missionname] call BIS_fnc_inString) then {
 	twc_pubcamo = 20;
@@ -116,13 +116,66 @@ if ((group player getvariable ["twc_ismechanised", 0]) == 1) then {
 };
 
 if ((time > (twc_serstarttime + 600)) && (twc_firstspawned > 1)) exitwith {
-	player setvehicleammo 0.2;
+
+	_items = (backpackitems player);
+	{player removeitemfrombackpack _x} foreach (backpackitems player);
+	player setvehicleammo 0.8;
+	{
+		player additemtobackpack _x;
+	} foreach _items;
 };
 
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//persistent loadout stuff
+[] spawn {
+sleep 20;
+player addEventHandler ["Inventoryclosed", {
+	profilenamespace setvariable ["twcpubloadout" + (typeof player), [uniformitems player, vestitems player, backpackitems player]];
+	saveprofilenamespace;
+}];
+
+player addEventHandler ["Reloaded", {
+	profilenamespace setvariable ["twcpubloadout" + (typeof player), [uniformitems player, vestitems player, backpackitems player]];
+	saveprofilenamespace;
+}];
+
+player addEventHandler ["Hit", {
+	profilenamespace setvariable ["twcpubloadout" + (typeof player), [uniformitems player, vestitems player, backpackitems player]];
+	saveprofilenamespace;
+}];
+};
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
 twc_lastspawned = time;
-if (twc_firstspawned > 1) exitwith {};
+if (twc_firstspawned > 1) exitwith {
+
+_role = typeof vehicle player;
+
+_profile = profilenamespace getvariable ["twcpubloadout" + _role, []];
+
+if ((count _profile) > 0) then {
+	profilenamespace setvariable ["twcpubloadout" + _role, [uniformitems player, vestitems player, backpackitems player]];
+	saveprofilenamespace;
+};
+};
 twc_firstspawned = time;
 twc_serstarttime = time;
+
+
+[] spawn {
+sleep 2;
+call twc_fnc_pubstartingloadout;
+
 
 if (typeOf player in fixedWingPilots) then {
 	["TWC_PilotConnected", [getPlayerUID player]] call CBA_fnc_serverEvent;
@@ -142,9 +195,6 @@ if ((["uksf", typeof player] call BIS_fnc_inString)) then {
 
 };
 
-/*
-player addEventHandler ["Hit", {[] spawn {if !(vehicle player == player) exitwith{};if (stance player == "PRONE") exitwith {};if ((random 1)>1.5) exitwith{}; _this = player; _this setUnconscious true; sleep 0.1; _this setUnconscious false}}]
-*/
 
 if (sunormoon == 0) then {
 	player addweapon "rhsusf_ANPVS_14";
@@ -172,67 +222,6 @@ player addEventHandler ["GetInMan", {
 	_vehicle setunittrait ["camouflageCoef", twc_pubcamo];
 }];
 
-
-
-/*
-player addEventHandler ["GetInMan", {
-	params ["_unit", "_role", "_vehicle", "_turret"];
-	
-	_clear = 1;
-	_array = attachedobjects _vehicle;
-	{if (typeof _x == "CBA_B_InvisibleTarget") then {
-		_clear = 0;
-	};
-	} foreach _array;
-	
-	if (_clear == 0) exitwith {};
-	
-	_object = "CBA_B_InvisibleTarget" createvehicle (getpos _vehicle);
-	_object attachto [_vehicle, [0, 0, ((boundingBox _vehicle) #1#2) - 2]];
-	//[_object] spawn twc_fnc_baseobject;
-	
-	
-	_object setunittrait ['camouflageCoef', 500];
-	_object setvehiclelock "locked";
-	_object allowdamage false;
-	_object setvehicleammo 0;
-
-	_varname = (str getpos _object) + "baseobj";
-
-	missionnamespace setvariable [_varname, _object];
-
-	_trg2 = createTrigger ['EmptyDetector', getpos _object];
-	_trg2 setTriggerArea [100, 100, 0, false]; 
-	_trg2 setTriggerActivation ['EAST', 'PRESENT', true];
-	_trg2 setTriggerTimeout [0,0,0,True];
-	_trg2 setTriggerStatements ["this || (missionNamespace getvariable ['twc_overridebaseobjs_SALT', 0] == 1)","_varname = (str getpos thistrigger) + 'baseobj';_object = nearestObject [thistrigger, 'CBA_B_InvisibleTarget'];deletevehicle (gunner _object);deletevehicle (_object)", ""];
-
-	_trg2 attachto [_vehicle];
-
-	_vehicle addEventHandler ["Killed", {
-		params ["_unit", "_killer", "_instigator", "_useEffects"];
-		_array = attachedobjects _unit;
-		{
-			if (typeof _x == "CBA_B_InvisibleTarget") then {
-				deletevehicle (gunner _x);
-				deletevehicle (_x);
-			};
-		} foreach _array;
-	}];
-	
-	_vehicle addEventHandler ["Hit", {
-		params ["_unit", "_source", "_damage", "_instigator"];
-		if (((damage _unit) < 0.5) && (_unit getHitPointDamage "hitEngine" < 0.9)) exitwith {};
-		_array = attachedobjects _unit;
-		{
-			if (typeof _x == "CBA_B_InvisibleTarget") then {
-				deletevehicle (gunner _x);
-				deletevehicle (_x);
-			};
-		} foreach _array;
-	}];
-	
-}];
-*/
+};
 
 }];

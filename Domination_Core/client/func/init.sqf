@@ -3,6 +3,8 @@ twc_fnc_seenbyplayers = compile preprocessfilelinenumbers "Domination_Core\clien
 twc_fnc_seenbyblufor = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_seenbyblufor.sqf";
 twc_fnc_posNearPlayers = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_posNearPlayers.sqf";
 
+twc_fnc_pubstartingloadout = compile preprocessfilelinenumbers "Domination_Core\client\sys_player\fnc_startingloadout.sqf";
+
 twc_fnc_cantp1 = {
 
 	_return = false;
