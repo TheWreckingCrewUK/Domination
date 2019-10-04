@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={11125.175,35.752949,7924.2783};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,0};
+		pos[]={11126.057,51.508698,8446.8438};
+		dir[]={-0.55359632,-0.69150752,0.46410105};
+		up[]={-0.52992427,0.72237176,0.44425523};
+		aside[]={0.6424557,-1.4749821e-007,0.76634544};
 	};
 };
 binarizationWanted=0;
@@ -51,13 +51,14 @@ addons[]=
 	"rhsusf_vehicles",
 	"UK3CB_BAF_Vehicles_MAN",
 	"twc_1990",
-	"ukcw_lynx"
+	"CUP_AirVehciles_SA330",
+	"TWC_gearFixes"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=25;
+		items=26;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -209,8 +210,13 @@ class AddonsMetaData
 		};
 		class Item24
 		{
-			className="ukcw_lynx";
-			name="ukcw_lynx";
+			className="CUP_AirVehciles_SA330";
+			name="CUP_AirVehciles_SA330";
+		};
+		class Item25
+		{
+			className="TWC_gearFixes";
+			name="TWC_gearFixes";
 		};
 	};
 };
@@ -12803,7 +12809,7 @@ class Mission
 			name="base";
 			text="Base";
 			type="b_hq";
-			angle=28.49592;
+			angle=28.495918;
 			id=1369;
 			atlOffset=1.9073486e-006;
 		};
@@ -14061,7 +14067,7 @@ class Mission
 			};
 			id=2134;
 			type="rhsusf_m113_usarmy_medical";
-			atlOffset=-0.0028762817;
+			atlOffset=-0.15459061;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14309,7 +14315,7 @@ class Mission
 			name="base_1";
 			text="Spawner";
 			type="b_hq";
-			angle=28.49592;
+			angle=28.495918;
 			id=2333;
 			atlOffset=1.9073486e-006;
 		};
@@ -16606,7 +16612,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11125.385,32.952644,8463.8398};
+				position[]={11125.385,33.170517,8463.8398};
 				angles[]={6.2591896,3.89447,0.019996032};
 			};
 			side="Empty";
@@ -16615,8 +16621,7 @@ class Mission
 			{
 			};
 			id=2746;
-			type="ukcw_lynx_2gpmg";
-			atlOffset=0.0010566711;
+			type="CUP_B_SA330_Puma_HC1_BAF";
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16646,7 +16651,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11107.307,32.927116,8479.5693};
+				position[]={11107.307,33.145393,8479.5693};
 				angles[]={0.0066682254,3.89447,0.021328852};
 			};
 			side="Empty";
@@ -16655,7 +16660,7 @@ class Mission
 			{
 			};
 			id=2747;
-			type="ukcw_lynx_2gpmg";
+			type="CUP_B_SA330_Puma_HC1_BAF";
 			class CustomAttributes
 			{
 				class Attribute0
