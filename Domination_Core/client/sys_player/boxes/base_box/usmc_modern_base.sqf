@@ -92,7 +92,7 @@
         ["twc_rhs_weap_m4a1_acog_lazer",1],
 		["ACE_VMM3",1],
         ["rhsusf_weap_m1911a1",1],
-		["rhs_weap_M590_8RD",1]
+		["twc_benelli_m4",1]
 	];
 
     _tmp_magazines =
@@ -100,16 +100,14 @@
         ["rhs_mag_30Rnd_556x45_M855A1_Stanag",50],
 		["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",10],
         ["rhsusf_mag_7x45acp_MHP",15],
-		["rhsusf_8Rnd_00Buck",10],
-		["rhsusf_8Rnd_Slug",10],
+		["CUP_8Rnd_B_Beneli_74Pellets",10],
+		["CUP_8Rnd_B_Beneli_74Slug",10],
 		["HandGrenade",5]
     ];
 
 	_tmp_items =
 	[
         ["ACE_MapTools",1],
-		["rhsusf_acc_ACOG",1],
-		["rhsusf_acc_compm4",1],
 		["rhsusf_acc_anpeq15_bk_light",1],
 		["ACRE_PRC148",1]
 	];
@@ -139,8 +137,6 @@
 
 	_tmp_items =
 	[
-		["rhsusf_acc_compm4",1],
-		["rhsusf_acc_anpeq15A",1],
 		["ACRE_PRC148",1]
 	];
 };

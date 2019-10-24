@@ -15,6 +15,11 @@ if (isNil "squad") then {
 squad = (configfile >> "CfgGroups" >> "East" >> "rhs_faction_msv" >> "rhs_group_rus_msv_infantry_emr" >> "rhs_group_rus_msv_infantry_emr_squad");
 };
 
+if (isNil "SF") then {
+SF = ["CUP_O_RUS_SpecOps", "CUP_O_RUS_SpecOps_SD", "CUP_O_RUS_SpecOps_Scout", "CUP_O_RUS_Soldier_TL", "CUP_O_RUS_Soldier_GL"];
+SF = ["TWC_Russian_SF_MG", "TWC_Russian_SF_SMG", "TWC_Russian_SF_SL", "TWC_Russian_SF_Base", "TWC_Russian_SF_Base"];
+};
+
 if (isNil "squadAT") then {
 squadAT = (configfile >> "CfgGroups" >> "East" >> "rhs_faction_msv" >> "rhs_group_rus_msv_infantry_emr" >> "rhs_group_rus_msv_infantry_emr_section_AT");
 };
@@ -86,6 +91,10 @@ twc_objnames = [
 "SHEPHERD",
 "VIKING",
 "VALKYRIE",
+"NIGHTMARE",
+"DREAMER",
+"STARLIGHT",
+"STARFIRE",
 "VALHALLA",
 "GOOSE",
 "ATRIOX",

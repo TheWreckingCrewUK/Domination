@@ -274,7 +274,8 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 		["ACE_morphine",10],
 		["rhsusf_ANPVS_14",1],
 		["ACE_IR_Strobe_Item",5],
-		["UK3CB_BAF_MaxiKite",1],
+		["cup_optic_an_pas_13c1",1],
+		["rhsusf_acc_premier_anpvs27",1],
 		["ACE_Tripod",1],
 		["HandGrenade",5]
 	];
@@ -309,6 +310,7 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 		["ACE_morphine",10],
 		["rhsusf_ANPVS_14",1],
 		["ACE_IR_Strobe_Item",1],
+		["APERSTripMine_Wire_Mag",5],
 		["ACE_SpottingScope",1],
 		["ACE_MX2A",1],
 		["ACRE_PRC117F_ID_1",1],

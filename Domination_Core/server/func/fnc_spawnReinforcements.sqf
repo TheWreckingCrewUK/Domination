@@ -56,6 +56,9 @@ _landorair = random 1;
 
 _num = random 1;
 
+if ((random 1) < 0.1) exitwith {
+	[_enemy] spawn twc_fnc_SFambush;
+};
 
 
 if (((!(["90", twc_missionname] call BIS_fnc_inString)) && (!(["00", twc_missionname] call BIS_fnc_inString))) && ((random 1) < 0.2)) exitwith {

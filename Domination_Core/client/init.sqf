@@ -45,27 +45,34 @@ twc_firstspawned = 0;
 
 player addEventHandler ["Respawn", {
 	params ["_unit", "_corpse"];
+	if ((!(["sniper", typeof player] call BIS_fnc_inString)) && (!(["spotter", typeof player] call BIS_fnc_inString)) && (!(["uksf", typeof player] call BIS_fnc_inString))) then {
+		player setunittrait ["camouflageCoef", twc_pubcamo];
+	};
+twc_client_nightcamo = {
+	_namount = 3;
+	_damount = twc_pubcamo;
+	if (((["sniper", typeof player] call BIS_fnc_inString)) || ((["spotter", typeof player] call BIS_fnc_inString))) then {
+		_namount = 0.5;
+		_damount = 1;
+	};
+	if (((["uksf", typeof player] call BIS_fnc_inString))) then {
+		_namount = 1;
+		_damount = 5;
+	};
+	player setunittrait ["camouflageCoef", _damount];
+	while {(sunOrMoon == 1)} do {
+		sleep 120;
+	};
+	player setunittrait ["camouflageCoef", _namount];
+	while {(sunOrMoon == 0)} do {
+		sleep 120;
+	};
+	player setunittrait ["camouflageCoef", _damount];
 	
-	if ((!(["sniper", typeof player] call BIS_fnc_inString)) && (!(["spotter", typeof player] call BIS_fnc_inString))) then {
-		player setunittrait ["camouflageCoef", twc_pubcamo];
-	} else {
-		player setunittrait ["camouflageCoef", 0.5];
-	};
-	twc_client_nightcamo = {
-	if (((["sniper", typeof player] call BIS_fnc_inString)) && ((["spotter", typeof player] call BIS_fnc_inString))) exitwith {};
-		while {(sunOrMoon == 1)} do {
-			sleep 120;
-		};
-		player setunittrait ["camouflageCoef", 3];
-		while {(sunOrMoon == 0)} do {
-			sleep 120;
-		};
-		player setunittrait ["camouflageCoef", twc_pubcamo];
-		
-		[] spawn twc_client_nightcamo;
-		
-	};
 	[] spawn twc_client_nightcamo;
+	
+};
+[] spawn twc_client_nightcamo;
 	if ((!(isnull _corpse)) && ((_corpse distance twc_basepos) < 500)) then {
 	[_corpse] spawn {
 		params ["_corpse"];

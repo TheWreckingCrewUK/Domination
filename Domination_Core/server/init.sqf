@@ -19,6 +19,14 @@ if(isNil "twc_basepos") then{
 	publicVariable "twc_basepos";
 };
 
+
+_trg = createTrigger ["EmptyDetector", twc_basepos];
+_trg setTriggerArea [1000, 1000, 0, false];
+_trg setTriggerActivation ["ANYPLAYER", "PRESENT", true];
+_trg setTriggerTimeout [0,0,0, true];
+
+_trg setTriggerStatements ["this","[twc_basepos, true] call twc_fnc_civfluff;",""];
+
 if(isNil "twc_activearty") then{
 	twc_activearty = 0;
 };
