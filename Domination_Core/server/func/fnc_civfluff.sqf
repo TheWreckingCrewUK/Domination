@@ -41,9 +41,9 @@ missionnamespace setvariable [("twccivfluff" + (str _pos)), 0];
 				_maxcivs = (((count ((getpos _player) nearObjects ["House", 100])) / 2) min 25);
 				//systemchat ("max2 gets " + (str _maxcivs) + "with current of " + (str _var));
 				
-				_gop = [(_player getRelPos [(((speed _player) + 0.1) * ((speed _player) + 0.1)), 0]), 10, 80, 3, false] call twc_fnc_findsneakypos;
+				_gop = [(_player getRelPos [(((speed _player) + 0.1) * ((speed _player) + 0.1)), 0]), 50, 150, 3, false] call twc_fnc_findsneakypos;
 				
-				if (((_gop distance _player) > 10) && ((_gop distance _player) < 80)) then {
+				if (((_gop distance _player) > 10) && ((_gop distance _player) < 150) && (!([_gop,50] call twc_fnc_posNearPlayers))) then {
 					_side = civilian;
 					if (_isblufor) then {
 						_side = west;
@@ -65,7 +65,7 @@ missionnamespace setvariable [("twccivfluff" + (str _pos)), 0];
 					
 					
 					if (!_isblufor) then {
-					
+					[_unit] spawn twc_fnc_enemychatter;
 					_westKilled = _unit addEventHandler ["Killed", {
 						params ["_unit", "_killer", "_instigator", "_useEffects"];
 						

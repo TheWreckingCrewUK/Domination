@@ -92,7 +92,7 @@
         ["twc_rhs_weap_m4a1_acog_lazer",1],
 		["ACE_VMM3",1],
         ["rhsusf_weap_m1911a1",1],
-		["twc_benelli_m4",1]
+		["CUP_sgun_M1014",1]
 	];
 
     _tmp_magazines =
