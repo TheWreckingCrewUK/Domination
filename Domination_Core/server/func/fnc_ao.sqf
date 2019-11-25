@@ -97,6 +97,11 @@ publicVariable "twc_enemyhasradio"; "radioMarker" setMarkerColor "colorWEST"; tw
 _spawnPos = [(_spawnPos select 0) + 5,(_spawnPos select 1), (_spawnPos select 2)];
 _group = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
 [_group, _spawnPos, 50] call cba_fnc_taskPatrol;
+	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
+		{
+			_x addHeadgear "rhs_xmas_antlers";
+		} foreach (units _group);
+	};
 		
 _markerstr = createMarker ["radioMarker",_spawnPos];
 _markerstr setMarkerShape "ICON";
@@ -110,18 +115,34 @@ for "_i" from 1 to twc_aainfcount do {
 	_group = [_spawnPos, EAST, squadAA] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 200] call cba_fnc_taskPatrol;
 	[leader _group, 2] spawn TWC_fnc_aiscramble;
+	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
+		{
+			_x addHeadgear "rhs_xmas_antlers";
+		} foreach (units _group);
+	};
+
 };
 for "_i" from 1 to twc_infcount do {
 	_spawnPos = [_pos,[0,250],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 150,3,false,true] call cba_fnc_taskDefend;
 	[leader _group, 2] spawn TWC_fnc_aiscramble;
+	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
+		{
+			_x addHeadgear "rhs_xmas_antlers";
+		} foreach (units _group);
+	};
 };
 for "_i" from 1 to twc_infcount do {
 	_spawnPos = [_pos,[200,400],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 200] call cba_fnc_taskPatrol;
 	[leader _group, 2] spawn TWC_fnc_aiscramble;
+	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
+		{
+			_x addHeadgear "rhs_xmas_antlers";
+		} foreach (units _group);
+	};
 };
 
 
@@ -146,6 +167,11 @@ clearitemCargoGlobal _vehicle;
   
   _vehicle setVehicleLock "LOCKEDPLAYER";
 [leader _group, 2] spawn TWC_fnc_aiscramble;
+	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
+		{
+			_x addHeadgear "rhs_xmas_antlers";
+		} foreach (units _group);
+	};
 if (_tank in twc_hasaps) then {
 	twc_APS_list pushback _vehicle;
 	publicVariable "twc_APS_list";
@@ -170,6 +196,11 @@ if ((gunner _vehicle) == objnull) then {
 
  _gunner = _group createUnit ["CUP_O_RU_Crew_EMR", [0,0,200],[], 0.3,"NONE"];  
  _gunner moveInGunner _vehicle;  
+	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
+		{
+			_x addHeadgear "rhs_xmas_antlers";
+		} foreach (units _group);
+	};
 };
 };
 
@@ -191,6 +222,11 @@ _vehicle addEventHandler ["Fired", {
  [_group, 5] setWaypointType "CYCLE";
  
 [leader _group, 2] spawn TWC_fnc_aiscramble;
+	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
+		{
+			_x addHeadgear "rhs_xmas_antlers";
+		} foreach (units _group);
+	};
  {if (!(_x in crew _vehicle)) then {deletevehicle _x};} foreach (units _group)
  
 };
@@ -209,6 +245,11 @@ clearitemCargoGlobal _vehicle;
  _driver = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];  
  _gunner = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];   
   [leader _group, 2] spawn TWC_fnc_aiscramble;
+	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
+		{
+			_x addHeadgear "rhs_xmas_antlers";
+		} foreach (units _group);
+	};
   
 if (_ifv in twc_hasaps) then {
 	twc_APS_list pushback _vehicle;
@@ -253,6 +294,11 @@ clearitemCargoGlobal _vehicle;
  
  _driver = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];  
  _gunner = _group createUnit ["CUP_O_RU_Crew_EMR", _spawnPos,[], 0.3,"NONE"];   
+	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
+		{
+			_x addHeadgear "rhs_xmas_antlers";
+		} foreach (units _group);
+	};
   
    
 if (_apc in twc_hasaps) then {
@@ -305,6 +351,11 @@ clearitemCargoGlobal _vehicle;
  _gunner moveInGunner _vehicle;  
  _commander moveInCommander _vehicle;  
  _vehicle setVehicleLock "LOCKEDPLAYER";
+	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
+		{
+			_x addHeadgear "rhs_xmas_antlers";
+		} foreach (units _group);
+	};
  
  [leader _group, 2] spawn TWC_fnc_aiscramble;
  /*
@@ -323,7 +374,6 @@ _vehicle addEventHandler ["Fired", {
 [_group, 4] setWaypointCompletionRadius 50; 
 [_group, 5] setWaypointCompletionRadius 50; 
  [_group, 5] setWaypointType "CYCLE";
-[leader _group, 2] spawn TWC_fnc_aiscramble;
 };
 
 if (( count(allPlayers - entities "HeadlessClient_F")) < 14) then {
@@ -346,6 +396,11 @@ _vehicle setvariable ["twc_walk_onlydisperse", 4];
  _driver setskill 1;
  _gunner moveInGunner _vehicle; 
  _vehicle setVehicleLock "LOCKEDPLAYER"; 
+	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
+		{
+			_x addHeadgear "rhs_xmas_antlers";
+		} foreach (units _group);
+	};
  /*
 _vehicle addEventHandler ["Fired", {
 	[_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk; }];
@@ -387,6 +442,11 @@ clearitemCargoGlobal _vehicle;
  _gunner moveInGunner _vehicle; 
  _gunner setskill 0.8;
  _vehicle setVehicleLock "LOCKEDPLAYER"; 
+	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
+		{
+			_x addHeadgear "rhs_xmas_antlers";
+		} foreach (units _group);
+	};
  /*
 _vehicle addEventHandler ["Fired", {
 	[_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk; }];
@@ -423,7 +483,12 @@ clearitemCargoGlobal _jet;
  _jet setvariable ["twc_walk_onlydisperse", 4];
  _driver = _group createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
   
- _driver moveInDriver _jet;  
+ _driver moveInDriver _jet; 
+	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
+		{
+			_x addHeadgear "rhs_xmas_antlers";
+		} foreach (units _group);
+	}; 
  _flyalt = (150 + (0.06* (_spawnpos distance getmarkerpos "respawn_west"))) min 450;
  _jet setVehiclePosition [(_spawnpos vectoradd [0,0,_flyalt]), [],0,"FLY"]; 
 _jet setvelocity [150 * (sin (getdir _jet )), 150 * (cos (getdir _jet )), 0] ; 
@@ -493,15 +558,21 @@ clearitemCargoGlobal _vehicle;
   
  //_driver moveInDriver _vehicle;  
  _gunner moveInGunner _vehicle;
-  
+	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
+		{
+			_x addHeadgear "rhs_xmas_antlers";
+		} foreach (units _group);
+	};
+  /*
  [_gunner, _vehicle] spawn {
  params ["_gunner", "_vehicle"];
 	sleep 5;
-	/*
+	
 	_vehicle addEventHandler ["Fired", {
 		[_this select 6, _this select 7] call twc_fnc_mortarwalk; }];
-		*/
+		
 };
+*/
  //_driver disableAI "AUTOTARGET";  
  _gunner disableAI "AUTOTARGET";
  _gunner disableAI "AUTOCOMBAT";
@@ -517,11 +588,21 @@ _vehicle addEventHandler ["Fired", {[(_this select 0), (_this select 6)] call tw
 	_group = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 150,3,false,true] call cba_fnc_taskDefend;
 	[leader _group, 2] spawn TWC_fnc_aiscramble;
+	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
+		{
+			_x addHeadgear "rhs_xmas_antlers";
+		} foreach (units _group);
+	};
 	
 	_spawnPos = [_pos,[200,400],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squadAA] call BIS_fnc_spawnGroup;
 	[_group, _spawnPos, 200] call cba_fnc_taskPatrol;
 	[leader _group, 2] spawn TWC_fnc_aiscramble;
+	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
+		{
+			_x addHeadgear "rhs_xmas_antlers";
+		} foreach (units _group);
+	};
 	
 	};
 _trg = createTrigger ["EmptyDetector", _pos];

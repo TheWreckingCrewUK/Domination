@@ -71,6 +71,7 @@ jet = ["RHS_Su25SM_vvs"] call BIS_fnc_selectRandom;
 
 
 
+if (isNil "twc_objnames") then {
 twc_objnames = [
 "RABBIT",
 "GOOSE",
@@ -351,3 +352,5 @@ twc_objnames = [
 "PRIEST",
 "CARDINAL",
 "DEACON"];
+
+};

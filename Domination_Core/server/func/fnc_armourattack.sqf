@@ -134,6 +134,11 @@ _mechattack = {
 		
 		for "_i" from 1 to (_vehtype select 1) do {
 			_infgroup =[_spawnPos, EAST, (configfile >> "CfgGroups" >> "East" >> "rhs_faction_msv" >> "rhs_group_rus_msv_infantry_emr" >> "rhs_group_rus_msv_infantry_emr_fireteam")] call BIS_fnc_spawnGroup;
+	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
+		{
+			_x addHeadgear "rhs_xmas_antlers";
+		} foreach (units _group);
+	};
 			{
 				_x moveincargo _veh;
 				_x addEventHandler ["Killed", {

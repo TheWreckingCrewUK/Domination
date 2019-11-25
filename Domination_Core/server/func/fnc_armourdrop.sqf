@@ -44,7 +44,11 @@ _wp = _group1 addwaypoint [_stagepos , 500];
 				 params ["_plane", "_enemy"];
 				 
 					sleep 1;
-					waituntil {((_plane) distance _enemy) < 1000};
+					
+					while {((_plane distance _enemy) > 1000)} do {
+						sleep 2;
+					};
+					//waituntil {((_plane) distance _enemy) < 1000};
 					
 					sleep 3;
 					//systemchat "ejecting tank";

@@ -71,6 +71,11 @@ _helicount = ceil (((count allplayers) / 8) min 4);
 
 
 				_group = [[0,0,0], EAST, squad] call BIS_fnc_spawnGroup;
+	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
+		{
+			_x addHeadgear "rhs_xmas_antlers";
+		} foreach (units _group);
+	};
 				
 				{_x moveincargo _plane; _Cargo pushback _x; if (!(_x in crew _plane)) then {deletevehicle _x};} foreach (units _group);
 				
@@ -138,6 +143,11 @@ _helicount = ceil (((count allplayers) / 8) min 4);
 			for "_i" from 1 to 2 do {
 
 				_group = [[0,0,0], EAST, squad] call BIS_fnc_spawnGroup;
+	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
+		{
+			_x addHeadgear "rhs_xmas_antlers";
+		} foreach (units _group);
+	};
 				
 				{_x moveincargo _plane; _Cargo pushback _x} foreach (units _group);
 				
@@ -239,6 +249,11 @@ _helicount = ceil (((count allplayers) / 8) min 4);
 
 
 				_group = [[0,0,0], EAST, squad] call BIS_fnc_spawnGroup;
+	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
+		{
+			_x addHeadgear "rhs_xmas_antlers";
+		} foreach (units _group);
+	};
 				
 				{_x moveincargo _plane; _Cargo pushback _x; if (!(_x in crew _plane)) then {deletevehicle _x};} foreach (units _group);
 				

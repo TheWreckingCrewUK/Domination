@@ -1,4 +1,29 @@
 
+twc_christmas = 1;
+twc_objnames = [
+"SNOW",
+"REINDEER",
+"SANTA",
+"PRESENT",
+"NICHOLAS",
+"CHRISTMAS",
+"CHRIST",
+"CHOCOLATE",
+"CHEER",
+"CAROL",
+"BELL",
+"WINTER",
+"DASHER",
+"DANCER",
+"PRANCER",
+"VIXEN",
+"COMET",
+"CUPID",
+"DUNDER",
+"BLITZEN",
+"RUDOLPH",
+"YULETIDE",
+"ELF"];
 
 //Enable or Disable Debug
 twc_serverDebug = false;
@@ -8,7 +33,7 @@ twc_surrenderVote = false;
 _script = execVM "Domination_Core\SHK_pos\shk_pos_init.sqf";
 waitUntil{scriptDone _script};
 
-twc_maxObjDistance = 13000;
+twc_maxObjDistance = 7000;
 
 crampresent = 1;
 publicVariable "crampresent";
@@ -41,5 +66,30 @@ twc_LastAO = "";
 // event handlers run in the non-scheduled environment (can't be execVM)
 [] call compile preprocessFile "Domination_Core\server\init.sqf";
 
+[] spawn {
+	while {true} do {
+		sleep 600;
+		IF ((count allplayers) > 1) then {
+		twc_objnames = [
+		"SNOW",
+		"REINDEER",
+		"SANTA",
+		"PRESENT",
+		"CHRISTMAS",
+		"CHOCOLATE",
+		"CHEER",
+		"CAROL",
+		"YULETIDE",
+		"WINTER",
+		"ELF",
+		("SANTA HATES " + ( toUpper (name (allplayers call bis_fnc_selectrandom)))),
+		(( toUpper (name (allplayers call bis_fnc_selectrandom))) + " HATES CHRISTMAS"),
+		(( toUpper (name (allplayers call bis_fnc_selectrandom))) + " ATE ALL THE PIES"),
+		(( toUpper (name (allplayers call bis_fnc_selectrandom))) + " IS THE GRINCH"),
+		(( toUpper (name (allplayers call bis_fnc_selectrandom))) + " DOESNT BELIEVE IN SANTA")
+		];
+		};
+	};
+};
 
 
