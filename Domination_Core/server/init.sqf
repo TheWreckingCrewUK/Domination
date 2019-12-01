@@ -94,11 +94,13 @@ if (twc_nonpersistent == 1) then {
 };
 
 
-{_location = createLocation [ "NameVillage" , getpos _x, 100, 100];
-_location setText "Objective " + (twc_objnames call bis_fnc_selectrandom);
-townLocationArray = townLocationArray + (nearestLocations [getpos _x, ["NameVillage","NameCity","NameCityCapital","nameLocal"], 2]);} foreach customlocations;
+{
+townLocationArray pushback (getpos _x);} foreach customlocations;
 
-townLocationArray = townLocationArray + (nearestLocations [getMarkerPos "base", ["NameVillage","NameCity","NameCityCapital"], twc_maxObjDistance]) + (nearestLocations [getMarkerPos "base", ["NameVillage","NameCity","NameCityCapital"], (twc_maxObjDistance / 1.5)]) + (nearestLocations [getMarkerPos "base", ["NameVillage","NameCity","NameCityCapital"], (twc_maxObjDistance / 2)]) + (nearestLocations [getMarkerPos "base", ["NameVillage","NameCity","NameCityCapital"], (twc_maxObjDistance / 2)]);
+//townLocationArray = townLocationArray + (nearestLocations [getMarkerPos "base", ["NameVillage","NameCity","NameCityCapital"], twc_maxObjDistance]) + (nearestLocations [getMarkerPos "base", ["NameVillage","NameCity","NameCityCapital"], (twc_maxObjDistance / 1.5)]) + (nearestLocations [getMarkerPos "base", ["NameVillage","NameCity","NameCityCapital"], (twc_maxObjDistance / 2)]) + (nearestLocations [getMarkerPos "base", ["NameVillage","NameCity","NameCityCapital"], (twc_maxObjDistance / 2)]);
+
+_buildingarray = nearestObjects [getMarkerPos "base", ["House", "Building"], twc_maxObjDistance];
+{townlocationarray pushback (getpos _x);} foreach _buildingarray;
 
 [] call twc_fnc_getAO;
 

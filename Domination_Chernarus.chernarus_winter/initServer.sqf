@@ -52,9 +52,9 @@ twc_canlandattack = 1;
 //add in an object name and the game will create a location there and spawn enemies from it
 customlocations = [c_1, c_2, c_3, c_4, c_5];
 
-twc_tankcount = random 2;
-twc_apccount = 1 + (random 2);
-twc_ifvcount = 1 + (random 2);
+twc_tankcount = random 1;
+twc_apccount = (random 1);
+twc_ifvcount = (random 1);
 twc_infcount = 3;
 twc_aainfcount = 1;
 
