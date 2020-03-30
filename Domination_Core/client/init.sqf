@@ -139,9 +139,12 @@ if ((time > (twc_serstarttime + 600)) && (twc_firstspawned > 1)) exitwith {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //persistent loadout stuff
+
 [] spawn {
-sleep 20;
+sleep 10;
 player addEventHandler ["Inventoryclosed", {
+	_array =profilenamespace getvariable ["twcpubloadout" + (typeof player), []];
+	if ((str _array) == (str ([uniformitems player, vestitems player, backpackitems player]))) exitwith {};
 	profilenamespace setvariable ["twcpubloadout" + (typeof player), [uniformitems player, vestitems player, backpackitems player]];
 	saveprofilenamespace;
 }];
@@ -151,9 +154,12 @@ player addEventHandler ["Reloaded", {
 	saveprofilenamespace;
 }];
 
-player addEventHandler ["Hit", {
+player addEventHandler ["killed", {
 	profilenamespace setvariable ["twcpubloadout" + (typeof player), [uniformitems player, vestitems player, backpackitems player]];
-	saveprofilenamespace;
+	[] spawn {
+		sleep 3;
+		saveprofilenamespace;
+	};
 }];
 };
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

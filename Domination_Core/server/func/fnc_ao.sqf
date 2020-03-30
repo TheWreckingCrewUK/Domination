@@ -85,12 +85,14 @@ parseText format["<t align='center'><t size='2' color='#ff0000'>AO created at </
 _spawnPos = [_pos,[100,300],random 360,0,[0,100]] call SHK_pos;
 _tower = radioTower createVehicle _spawnPos;
 
+twc_currentradiotower = _tower;
 twc_enemyhasradio = 1;
 publicVariable "twc_enemyhasradio";
 
 _tower setVehicleLock "LOCKED";
 //_tower setDamage 0.99;
-_tower addEventHandler ["Killed",{"Command Vehicle Destroyed. The enemies can no longer call in Reinforcements. Well done!" remoteExec ["hint"];
+
+_tower addEventHandler ["hit",{params ["_veh", "_source", "_damage", "_instigator"];if (((damage _veh) < 0.2) || (twc_enemyhasradio == 0) || (twc_currentradiotower != _veh)) exitwith {};"Command Vehicle Disabled. The enemies can no longer call in Reinforcements. Well done!" remoteExec ["hint"];
 twc_enemyhasradio = 0;
 publicVariable "twc_enemyhasradio"; "radioMarker" setMarkerColor "colorWEST"; twc_towerCount = 1; deleteVehicle reinforcementsTrg}];
 
