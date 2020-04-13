@@ -31,6 +31,10 @@ _box AddMagazineCargoGlobal ["rhs_fim92_mag",1];
 _box AddMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855_Stanag",20];
 _box AddMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",10];
 
+_box AddMagazineCargoGlobal ["rhs_mag_smaw_HEAA",6];
+_box AddMagazineCargoGlobal ["rhs_mag_smaw_HEDP",6];
+_box AddMagazineCargoGlobal ["rhs_mag_smaw_SR",3];
+
 _box AddMagazineCargoGlobal ["UGL_FlareWhite_F",10];
 _box AddMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",10];
 _box AddMagazineCargoGlobal ["1Rnd_Smoke_Grenade_shell",10];

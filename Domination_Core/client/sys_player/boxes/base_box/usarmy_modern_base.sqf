@@ -103,6 +103,7 @@ if (typeOf vehicle player == "TWC_Modern_US_Army_TeamLeader") then {
 		["rhsusf_8Rnd_00Buck",10],
 		["rhsusf_8Rnd_Slug",10],
 		["rhs_mag_smaw_HEAA",8],
+		["rhs_mag_smaw_HEDP",8],
 		["rhs_mag_smaw_SR",5],
 		["rhs_fim92_mag",3],
 		["HandGrenade",5]
