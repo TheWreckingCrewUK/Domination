@@ -3,7 +3,7 @@
  if (typeOf vehicle player in ["Modern_ger_Base", "Modern_ger_Base_d"]) then {
     _tmp_weapons =
     [
-        ["twc_G36A_acog",1],
+        ["twc_G36A_acog",0],
         ["rhs_weap_rpg75",10]
     ];
 
@@ -15,8 +15,11 @@
     ];
 	_tmp_items =
 	[
+        ["cup_optic_g36optics15x",1],
+        ["cup_optic_g36optics_holo",1],
+        ["cup_optic_g36optics",1],
         ["ACE_MapTools",1],
-		["ACRE_PRC148",1],
+		["ACRE_PRC148",0],
 		["rhsusf_ANPVS_14",1]
 	];
 };
@@ -25,7 +28,7 @@
  if (typeOf vehicle player in ["Modern_ger_medic", "Modern_ger_medic_d"]) then {
     _tmp_weapons =
     [
-        ["twc_G36A_acog",1]
+        ["twc_G36A_acog",0]
     ];
 
 	_tmp_magazines =
@@ -36,7 +39,10 @@
     ];
 	_tmp_items =
 	[
-		["ACRE_PRC148",1],
+        ["cup_optic_g36optics15x",1],
+        ["cup_optic_g36optics_holo",1],
+        ["cup_optic_g36optics",1],
+		["ACRE_PRC148",0],
 		["TWC_Item_Medical_SutureKit_20",1],
 		["ACE_fieldDressing", 50],
 		["ACE_elasticBandage", 50],
@@ -58,7 +64,7 @@
     _tmp_weapons =
     [
         ["rhs_weap_rpg75",5],
-        ["twc_G36A_AG36_acog",1]
+        ["twc_G36A_AG36_acog",0]
     ];
 
 	_tmp_magazines =
@@ -74,8 +80,11 @@
     ];
 	_tmp_items =
 	[
+        ["cup_optic_g36optics15x",1],
+        ["cup_optic_g36optics_holo",1],
+        ["cup_optic_g36optics",1],
         ["ACE_MapTools",1],
-		["ACRE_PRC148",1],
+		["ACRE_PRC148",0],
 		["rhsusf_ANPVS_14",1]
 	];
 };
@@ -84,7 +93,7 @@
     _tmp_weapons =
     [
         ["twc_HK_MG3",1],
-        ["twc_MG36_acog",1],
+        ["twc_MG36_acog",0],
         ["twc_MG36_eotech",1],
         ["twc_HK_MG4",1]
     ];
@@ -100,8 +109,11 @@
     ];
 	_tmp_items =
 	[
+        ["cup_optic_g36optics15x",1],
+        ["cup_optic_g36optics_holo",1],
+        ["cup_optic_g36optics",1],
         ["ACE_MapTools",1],
-		["ACRE_PRC148",1],
+		["ACRE_PRC148",0],
 		["rhsusf_ANPVS_14",1]
 	];
 };
@@ -112,7 +124,7 @@
     [
         ["rhs_weap_fim92",1],
         ["rhs_weap_rpg75",15],
-        ["twc_G36A_acog",1]
+        ["twc_G36A_acog",0]
     ];
 
 	_tmp_magazines =
@@ -125,8 +137,11 @@
     ];
 	_tmp_items =
 	[
+        ["cup_optic_g36optics15x",1],
+        ["cup_optic_g36optics_holo",1],
+        ["cup_optic_g36optics",1],
         ["ACE_MapTools",1],
-		["ACRE_PRC148",1],
+		["ACRE_PRC148",0],
 		["rhsusf_ANPVS_14",1]
 	];
 };
@@ -135,7 +150,7 @@
     _tmp_weapons =
     [
         ["ACE_Vector",1],
-        ["twc_G36A_acog",1]
+        ["twc_G36A_acog",0]
     ];
 
 	_tmp_magazines =
@@ -146,12 +161,15 @@
     ];
 	_tmp_items =
 	[
+        ["cup_optic_g36optics15x",1],
+        ["cup_optic_g36optics_holo",1],
+        ["cup_optic_g36optics",1],
 		["ACE_DAGR",1],
         ["ACE_MapTools",1],
 		["SatchelCharge_Remote_Mag",1],
 		["DemoCharge_Remote_Mag",1],
 		["ACE_M26_Clacker",1],
-		["ACRE_PRC148",1],
+		["ACRE_PRC148",0],
 		["ACE_microDAGR",1],
 		["ACRE_PRC117F",1]
 	];
@@ -162,7 +180,7 @@
     [
         ["ACE_Vector",1],
         ["rhs_weap_rpg75",10],
-        ["twc_G36A_acog",1]
+        ["twc_G36A_acog",0]
     ];
 
 	_tmp_magazines =
@@ -175,12 +193,15 @@
     ];
 	_tmp_items =
 	[
+        ["cup_optic_g36optics15x",1],
+        ["cup_optic_g36optics_holo",1],
+        ["cup_optic_g36optics",1],
 		["ACE_DAGR",1],
         ["ACE_MapTools",1],
 		["SatchelCharge_Remote_Mag",1],
 		["DemoCharge_Remote_Mag",1],
 		["ACE_M26_Clacker",1],
-		["ACRE_PRC148",1],
+		["ACRE_PRC148",0],
 		["rhsusf_ANPVS_14",1],
 		["ACE_microDAGR",1]
 	];

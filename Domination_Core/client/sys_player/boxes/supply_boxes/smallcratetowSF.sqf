@@ -21,23 +21,36 @@
 _spawntext = parsetext (_title + _text1);
 hint _spawntext;
  };
- 
- twc_spectowsfcount = time + 7200;
+  
+ _title  = "<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>Specialist Equipment</t>"; 
+
+ _text1 =  "<br />A TOW has been spawned, 1 hour until another becomes available.";
+_spawntext = parsetext (_title + _text1);
+hint _spawntext;
+
+ twc_spectowsfcount = time + 3600;
  publicVariable "twc_spectowsfcount";
 
 
-_boxClass = "RHS_TOW_TriPod_D";
-
+_boxClass = "ACE_Box_Ammo";
+twc_towspawned = true;
+publicvariable "twc_towspawned";
 _box = _boxClass createVehicle (getPos AmmoBoxSpawner);
-/*
+
+
+//simple dynamic numbers system. Assign cost of each tier and then assign a tier to an item if you want that item's amount to scale with the player count.
+_players = ( count(allPlayers - entities "HeadlessClient_F"));
+_low = (_players * 0.3);
+_mid = _players;
+_high = (_players * 2);
+
 clearWeaponCargoGlobal _box;
 clearBackpackCargoGlobal _box;
 clearMagazineCargoGlobal _box;
 clearitemCargoGlobal _box;
 
 //Weapons
-_box AddbackpackCargoGlobal ["rhs_TOW_Tripod_Bag",1];
-_box AddbackpackCargoGlobal ["rhs_Tow_Gun_Bag",1];
+_box AddWeaponCargoGlobal ["ace_compat_rhs_usf3_tow_carry",1];
+_box AddWeaponCargoGlobal ["ace_csw_m220CarryTripod",1];
 
-[_box, 5] call ace_cargo_fnc_setSize;*/
-//[_box, false, [0, 3, 1], 10] call ace_dragging_fnc_setCarryable;
+[player, _box] call ace_cargo_fnc_startLoadIn;

@@ -17,8 +17,8 @@
 //missionnamespace setvariable ["twc_lastreplen" + (name player), time];
 
 _weapons = [["twc_L5A4_white",1]];
-_magazines = [["SmokeShell",5], ["SmokeShellYellow",5], ["SmokeShellRed",5], ["SmokeShellGreen",5], ["SmokeShellPurple",5], ["SmokeShellBlue",5], ["SmokeShellOrange",5], ["Chemlight_green",5], ["Chemlight_yellow",5], ["Chemlight_red",5], ["Chemlight_blue",5],["ACE_Chemlight_IR",5]];
-_items = [["ItemMap",4],["ACE_EarPlugs",2],[(["ACE_MRE_SteakVegetables","ACE_MRE_MeatballsPasta","ACE_MRE_LambCurry","ACE_MRE_CreamTomatoSoup","ACE_MRE_CreamChickenSoup","ACE_MRE_ChickenHerbDumplings","ACE_MRE_ChickenTikkaMasala","ACE_MRE_BeefStew"] call bis_fnc_selectrandom),3],[(["ACE_MRE_SteakVegetables","ACE_MRE_MeatballsPasta","ACE_MRE_LambCurry","ACE_MRE_CreamTomatoSoup","ACE_MRE_CreamChickenSoup","ACE_MRE_ChickenHerbDumplings","ACE_MRE_ChickenTikkaMasala","ACE_MRE_BeefStew"] call bis_fnc_selectrandom),3],["ACE_WaterBottle",2],["ACE_MapTools",2],["ACE_DefusalKit",2],["rhsusf_ANPVS_14",2],["ACE_Flashlight_KSF1", 2],["ACE_HandFlare_White",15],["ACE_HandFlare_Green",15],["ACE_fieldDressing",20],["ACE_morphine",20],["ACE_elasticBandage",20],["ACE_quikclot",20],["ACE_packingBandage",20], ["ACE_tourniquet", 4],["ACE_EntrenchingTool",2],["twc_l5a4_w",25]];
+_magazines = [["SmokeShell",5], ["SmokeShellYellow",5], ["SmokeShellRed",5], ["SmokeShellGreen",5], ["SmokeShellPurple",5], ["SmokeShellBlue",5], ["SmokeShellOrange",5], ["Chemlight_green",5], ["Chemlight_yellow",5], ["Chemlight_red",5], ["Chemlight_blue",5],["ACE_Chemlight_IR",5],["twc_l5a4_w",15]];
+_items = [["ItemMap",4],["ACE_EarPlugs",2],[(["ACE_MRE_SteakVegetables","ACE_MRE_MeatballsPasta","ACE_MRE_LambCurry","ACE_MRE_CreamTomatoSoup","ACE_MRE_CreamChickenSoup","ACE_MRE_ChickenHerbDumplings","ACE_MRE_ChickenTikkaMasala","ACE_MRE_BeefStew"] call bis_fnc_selectrandom),3],[(["ACE_MRE_SteakVegetables","ACE_MRE_MeatballsPasta","ACE_MRE_LambCurry","ACE_MRE_CreamTomatoSoup","ACE_MRE_CreamChickenSoup","ACE_MRE_ChickenHerbDumplings","ACE_MRE_ChickenTikkaMasala","ACE_MRE_BeefStew"] call bis_fnc_selectrandom),3],["ACE_WaterBottle",2],["ACE_MapTools",2],["ACE_DefusalKit",2],["rhsusf_ANPVS_14",2],["ACE_Flashlight_KSF1", 2],["ACE_HandFlare_White",15],["ACE_HandFlare_Green",15],["ACE_fieldDressing",20],["ACE_morphine",20],["ACE_elasticBandage",20],["ACE_quikclot",20],["ACE_packingBandage",20], ["ACE_tourniquet", 4],["ACE_EntrenchingTool",2]];
 
 _backpacks = [];
 _tmp_weapons = [];
@@ -84,3 +84,4 @@ if (count _checkweps == 0) then {player setvariable ["twc_allowedweapons", _spaw
 
 {crateBox addBackpackCargo [(_x select 0),(_x select 1)]} foreach _backpacks;
 
+[player] call twc_fnc_buildmagarray;

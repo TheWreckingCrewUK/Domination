@@ -1,8 +1,9 @@
+
+#include "func\init.sqf";
 #include "sys_player\init.sqf";
 #include "sys_restrict\init.sqf";
 #include "sys_cleanup\init.sqf";
 #include "sys_forwardbase\init.sqf";
-#include "func\init.sqf";
 //#include "news.sqf";
 //#include "sys_ragdoll\init.sqf";
 
@@ -132,6 +133,8 @@ if ((time > (twc_serstarttime + 600)) && (twc_firstspawned > 1)) exitwith {
 	} foreach _items;
 };
 
+InsP_MissionStatus = ["MissionStatus","Mission Status","",{call InsP_fnc_MissionStatus},{(side player == west)}] call ace_interact_menu_fnc_createAction;
+[player, 1, ["ACE_SelfActions"], InsP_MissionStatus] call ace_interact_menu_fnc_addActionToObject;
 
 
 
@@ -183,7 +186,7 @@ if ((count _profile) > 0) then {
 };
 twc_firstspawned = time;
 twc_serstarttime = time;
-
+[player] call twc_fnc_buildmagarray_set;
 
 [] spawn {
 sleep 2;
@@ -230,11 +233,6 @@ player addEventHandler ["Fired", {
 	if (_ammo == "rhs_ammo_smaw_SR") exitwith {};
 	if ((_ammo isKindOf ["GrenadeCore", configFile >> "CfgAmmo"]) || (_ammo isKindOf ["RocketCore", configFile >> "CfgAmmo"]) || (_ammo isKindOf ["MissileCore", configFile >> "CfgAmmo"]) || (_ammo isKindOf ["G_40mm_Smoke", configFile >> "CfgAmmo"])) then {[_projectile] call twc_fnc_aps};
 }];
-player addEventHandler ["GetInMan", {
-	params ["_unit", "_role", "_vehicle", "_turret"];
-	_vehicle setunittrait ["camouflageCoef", twc_pubcamo];
-}];
-
 };
 
 }];

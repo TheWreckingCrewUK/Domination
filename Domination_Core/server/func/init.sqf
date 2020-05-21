@@ -1,5 +1,6 @@
 twc_fnc_ao = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_ao.sqf";
 twc_fnc_GetAO = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_getAO.sqf";
+twc_fnc_spawnminefield = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_spawnminefield.sqf";
 twc_fnc_spawnReinforcements = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_spawnReinforcements.sqf";
 twc_fnc_posNearPlayers = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_posNearPlayers.sqf";
 twc_fnc_posNearPlayers = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_posNearPlayers.sqf";
@@ -25,6 +26,17 @@ twc_fnc_perspb_trigger = compile preprocessfilelinenumbers "Domination_Core\serv
 twc_fnc_SFambush = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_SFambush.sqf";
 
 twc_fnc_seenbyblufor = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_seenbyblufor.sqf";
+
+addMissionEventHandler ["EntityKilled", {
+	params ["_unit", "_killer", "_instigator", "_useEffects"];
+	[_unit] spawn {
+		params ["_unit"];
+		sleep 30;
+		deletevehicle _unit;
+	};
+}];
+
+
 
 if (isServer) then {
 	_eventHandlerID = ["twc_event_baseattack", {

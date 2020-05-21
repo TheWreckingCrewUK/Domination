@@ -37,7 +37,7 @@ _spawntext = parsetext (_title + _text1);
 hint _spawntext;
 
 
-
+_veh setammocargo 0;
 
 
 _veh addEventHandler ["Killed",{

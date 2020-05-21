@@ -25,7 +25,9 @@
 			_pos = getpos _exp;
 			
 			waituntil {!alive _exp};
-			sleep 7200;
+			while {alive _exp} do {
+				sleep 60;
+			};
 			deletemarker format ["%1", _exp];
 			
 			_marker = createMarker [format ["%1", _pos], _pos];

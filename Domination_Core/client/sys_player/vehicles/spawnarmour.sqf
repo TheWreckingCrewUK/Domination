@@ -48,7 +48,7 @@ twc_armourcount = twc_armourcount -1;
 publicVariable "twc_armourcount";
 },{(count (player nearobjects ["Land_InfoStand_V1_F", 200]) > 0)}] call ace_interact_menu_fnc_createAction;
 [_veh,0,["ACE_MainActions"],_boxaction] call ace_interact_menu_fnc_addActionToobject;
-
+_veh setammocargo 0;
 
 _veh addEventHandler ["Killed",{
 

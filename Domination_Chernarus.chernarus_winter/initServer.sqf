@@ -1,4 +1,4 @@
-
+/*
 twc_christmas = 1;
 twc_objnames = [
 "SNOW",
@@ -24,7 +24,7 @@ twc_objnames = [
 "RUDOLPH",
 "YULETIDE",
 "ELF"];
-
+*/
 //Enable or Disable Debug
 twc_serverDebug = false;
 

@@ -52,7 +52,7 @@ twc_aacount = twc_aacount * ( 1+ (random 0.2));
 if(isNil "twc_infcount") then{
 	twc_infcount = 3;
 };
-twc_infcount = twc_infcount * ( 1+ (random 0.7));
+twc_infcount = twc_infcount * ( 1.5+ (random 0.7));
 
 
 if(isNil "twc_aainfcount") then{
@@ -71,6 +71,8 @@ twc_artycount = twc_artycount * ( 1+ (random 0.5));
 twc_activearty = 0;
 
 //twc_artycount = 0;
+
+_minefield = [_pos] call twc_fnc_spawnminefield;
 
 //Creates ao marker:
 _markerstr = createMarker ["aoCenterMarker",_pos];
@@ -611,7 +613,7 @@ _trg = createTrigger ["EmptyDetector", _pos];
 _trg setTriggerArea [600, 600, 0, false];
 _trg setTriggerActivation ["EAST", "PRESENT", false];
 _trg setTriggerTimeout [10,10,10,True];
-_trg setTriggerStatements ["((EAST countSide thisList) < 15 && ({(vehicle _x) isKindOf 'landVehicle' && side _x == EAST} count thisList <2))","twc_areaCleared = 1", ""];
+_trg setTriggerStatements ["((EAST countSide thisList) < 15 && ({(vehicle _x) isKindOf 'landVehicle' && side _x == EAST} count thisList <5))","twc_areaCleared = 1", ""];
 /*
 reinforcementsTrg = createTrigger ["reinforcementsTrg", _pos];
 reinforcementsTrg setTriggerArea [3500, 3500, 0, false];
@@ -630,9 +632,19 @@ reinforcementsTrg setTriggerStatements ["this && (time > (missionnamespace getva
 //[getPos thisTrigger] call twc_fnc_spawnReinforcements
 
 
-waitUntil {twc_areaCleared == 1
-// && twc_towerCount == 1
+while {twc_areaCleared != 1} do {
+	sleep 30;
 };
+
+if ((count _minefield) > 0) then {
+	[_minefield] spawn {
+		params ["_minefield"];
+		{
+			deletevehicle _x;
+		} foreach _minefield;
+	};
+};
+
 [_name, "Succeeded",true] spawn BIS_fnc_taskSetState;
 hint "AO captured";
 deleteMarker "aoCenterMarker";
@@ -669,7 +681,9 @@ deleteMarker "radioMarker";
 };
 
 [] call twc_fnc_getao;
-	waitUntil{!([prevartyspawnpos,1000] call twc_fnc_posNearPlayers)};
+	while {([prevartyspawnpos,1000] call twc_fnc_posNearPlayers)} do {
+		sleep 30;
+	};
 	{
 		
 		if ((twc_basepos distance _x) > 300) then {deleteVehicle _x};

@@ -2,6 +2,15 @@
 twc_fnc_seenbyblufor = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_seenbyblufor.sqf";
 twc_fnc_posNearPlayers = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_posNearPlayers.sqf";
 
+twc_fnc_buildmagarray = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_buildmagarray.sqf";
+
+twc_fnc_buildmagarray_set = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_buildmagarray_set.sqf";
+
+twc_fnc_heliparadrop = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_heliparadrop.sqf";
+
+
+twc_fnc_genericfillvehicle = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_genericfillvehicle.sqf";
+InsP_fnc_MissionStatus = compile preProcessFileLineNumbers "Domination_Core\client\func\MissionStatushint.sqf";
 
 twc_fnc_seenbyplayers = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_seenbyplayers.sqf";
 twc_fnc_lookedatbyplayers = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_lookedatbyplayers.sqf";

@@ -7,32 +7,33 @@
 *
 */
 
+_boxClass = "groundWeaponHolder"; 
+ 
+_box = _boxClass createVehicle (if (count (player nearobjects ["Land_InfoStand_V1_F", 200]) > 0) then {
+(getPos AmmoBoxSpawner)} else 
+{(getPos player)});
 
-_boxClass = "UK3CB_BAF_Box_L16";
 
-_box = _boxClass createVehicle (getPos ammoCrateSpawnPad);
 
-//clearWeaponCargoGlobal _box;
-//clearBackpackCargoGlobal _box;
-//clearMagazineCargoGlobal _box;
-//clearitemCargoGlobal _box;
+//_box addWeaponCargoGlobal ["UK3CB_BAF_L16",1];
+//_box addWeaponCargoGlobal ["UK3CB_BAF_L16_Tripod",1];
+_box addWeaponCargoGlobal ["ace_compat_rhs_usf3_m252_carry",1];
+_box addWeaponCargoGlobal ["ace_csw_carryMortarBaseplate",1];
 
-//1 Mortar and Tripod
-//_box AddWeaponCargoGlobal ["UK3CB_BAF_M6",1];
+_boxClass = "TWC_Public_AmmoBox_medium";
 
-//Ammo
+_box = _boxClass createVehicle (if (count (player nearobjects ["Land_InfoStand_V1_F", 200]) > 0) then {
+(getPos AmmoBoxSpawner)} else 
+{(getPos player)});
 
-//_box addItemCargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Shells",50];
-//_box addItemCargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Flare_White",10];
-//_box addItemCargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White",10];
+clearWeaponCargoGlobal _box;
+clearBackpackCargoGlobal _box;
+clearMagazineCargoGlobal _box;
+clearitemCargoGlobal _box;
 
-//Respawn/Despawn Script
-
-_trg = createTrigger ["EmptyDetector", getPos ammoCrateSpawnPad];
-_trg setTriggerArea [5,5,0,false];
-_trg setTriggerActivation ["WEST", "NOT PRESENT", false];
-_trg setTriggerTimeout [1800,1800,1800,true];
-_trg setTriggerStatements ["this", "_box = (getPos thisTrigger) nearestObject 'UK3CB_BAF_Box_L16'; deleteVehicle _box;",""];
-_trg attachTo [_box];
-
-[player, _box] call ace_cargo_fnc_startLoadIn;
+_box addItemCargoGlobal ["ACE_artilleryTable",1];
+_box addItemCargoGlobal ["ACE_1Rnd_82mm_Mo_HE",6];
+//ACE_1Rnd_82mm_Mo_Illum
+//ACE_1Rnd_82mm_Mo_HE
+//ace_csw_carryMortarBaseplate
+//ace_compat_rhs_usf3_m252_carry
