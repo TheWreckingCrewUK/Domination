@@ -33,6 +33,8 @@ publicVariable "twc_is90";
 sirenlist = [idfradar];
 publicVariable "sirenlist";
 
+twc_bluflufflist = ["Modern_British_Pointman_Light", "Modern_USMC_Rifleman", "TWC_Modern_US_Army_Rifleman", "Modern_pol_Base", "Modern_ger_mg", "Modern_British_Quartermaster", "Modern_ger_Base", "Modern_UKSF_Base", "Modern_British_Blank", "Modern_British_Blank", "Modern_British_Quartermaster"];
+
 twc_tankcount = random 1;
 twc_apccount = random 2;
 twc_ifvcount = random 2;

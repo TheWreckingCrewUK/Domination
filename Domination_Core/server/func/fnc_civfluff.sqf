@@ -5,6 +5,7 @@ creates civs in a natural manner in places that cannot be seen by players, then 
 
 params ["_pos", ["_isblufor", false]];
 //systemchat "fluff 7";
+if (true) exitwith {};
 if (_isblufor && (isnil "twc_bluflufflist")) exitwith {};
 //systemchat "fluff4 9";
 missionnamespace setvariable [("twccivfluff" + (str _pos)), 0];

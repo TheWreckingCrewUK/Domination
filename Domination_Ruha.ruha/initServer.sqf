@@ -21,6 +21,7 @@ apc = ["rhs_btr80a_msv", "rhs_btr80_msv"];
 
 twc_wdveh = 1;
 publicVariable "twc_wdveh";
+twc_bluflufflist = ["Modern_British_Pointman_Light", "Modern_USMC_Rifleman", "TWC_Modern_US_Army_Rifleman", "Modern_pol_Base", "Modern_ger_mg", "Modern_British_Quartermaster", "Modern_ger_Base", "Modern_UKSF_Base", "Modern_British_Blank", "Modern_British_Blank", "Modern_British_Quartermaster"];
 
 //add in an object name and the game will create a location there and spawn enemies from it
 customlocations = [];

@@ -26,6 +26,8 @@ if (!isnil "_nobackpack") then {
 };
 */
 
+[player] call twc_fnc_civfluff_client;
+
 if (!((backpack player) == "")) then {
 	_playerbackpack = [(configFile >> "CfgVehicles" >> typeof player), "backpack", ""] call BIS_fnc_returnConfigEntry;
 	_unit = player;

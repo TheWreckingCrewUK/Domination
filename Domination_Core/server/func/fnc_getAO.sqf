@@ -16,6 +16,8 @@ if (twc_aosToComplete > 0) then {
 	_name = "";
 	_town = "";
 	_tname = "";
+	_airfield = getmarkerpos "twc_tp2";
+	_base = missionnamespace getvariable ["twc_basepos", [0,0,0]];
 
 	while {_true}do{
 		_true = false;
@@ -26,6 +28,9 @@ if (twc_aosToComplete > 0) then {
 		if(_tname in (missionnamespace getvariable ["twc_prevaos", []]))then{_true = true};
 		if(_tname == twc_LastAO)then{_true = true};
 		if([_town ,2500] call twc_fnc_posNearPlayers)then{_true = true};
+		if (((str _airfield) != "[0,0,0]") && ((_airfield distance _town) < 1500)) then {_true = true};
+		if (((str _base) != "[0,0,0]") && ((_base distance _town) < 1500)) then {_true = true};
+		
 	};
 
 	townLocationArray deleteat (townLocationArray find _town);

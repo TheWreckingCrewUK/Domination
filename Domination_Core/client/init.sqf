@@ -4,6 +4,7 @@
 #include "sys_restrict\init.sqf";
 #include "sys_cleanup\init.sqf";
 #include "sys_forwardbase\init.sqf";
+#include "interactions\init.sqf";
 //#include "news.sqf";
 //#include "sys_ragdoll\init.sqf";
 

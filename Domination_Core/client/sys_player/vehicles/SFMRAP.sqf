@@ -6,7 +6,7 @@
  publicVariable "twc_sfmraptimeout";
  };
  
-if ((twc_sfmraptimeout > (time))) exitwith {
+if ((twc_sfmraptimeout > (time)) && (!isserver)) exitwith {
 	_title ="<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>Vehicle Spawner</t>";
 	_text1 = format ["<br />The MRAP spawner is on cooldown currently. %1 minutes remaining.<br /><br />Note: The RG's are not restricted in this way.", (ceil ( (twc_sfmraptimeout-time) / 60))];
 	hint parsetext (_title + _text1);
@@ -82,9 +82,10 @@ _veh addItemCargoGlobal ["ACE_Clacker",1];
 _veh addItemCargoGlobal ["ACE_EntrenchingTool",1];
 _veh addItemCargoGlobal ["ACE_fieldDressing",25];
 _veh addItemCargoGlobal ["ACE_elasticBandage",10];
-_veh addItemCargoGlobal ["ACE_packingBandage",10];
+_veh addItemCargoGlobal ["ACE_quikclot",10];
 _veh addItemCargoGlobal ["ACE_salineIV_250",5];
 _veh addItemCargoGlobal ["ACE_epinephrine",3];
+_veh addItemCargoGlobal ["ACE_tourniquet",3];
 _veh addItemCargoGlobal ["ACE_morphine",3];
 _veh addItemCargoGlobal ["HandGrenade",2];
 _veh addItemCargoGlobal ["SmokeShell",3];
@@ -115,3 +116,10 @@ if ((random 1) < 0.2) then {
 
 _veh AddWeaponCargoGlobal _fsgun;
 _veh AddMagazineCargoGlobal _fsmag;
+
+[_veh, 12] call ace_cargo_fnc_setSpace;
+_veh setvariable ["ace_cargo_loaded", ["ACE_Wheel", "ACE_Wheel", "ACE_Wheel", "ACE_Wheel"], true];
+
+_veh setammocargo 0;
+_veh setrepaircargo 0;
+_veh setfuelcargo 0;

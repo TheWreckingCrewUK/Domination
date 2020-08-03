@@ -5,7 +5,7 @@ creates civs in a natural manner in places that cannot be seen by players, then 
 
 listed as twc_fnc_perspb_trigger in server func init so that it boots with PB in domination mode
 */
-
+/*
 params ["_table"];
 
 _pos = getpos _table;

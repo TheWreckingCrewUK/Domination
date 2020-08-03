@@ -29,10 +29,9 @@ cutText ["", "Black", 0.001];
 	
 	sleep 5;
 	
-	if ((count (units group player)) >= 3) then {
 	
-		cutText ["","Black IN",5];
-		player forceWalk false;
+	if ((player distance twc_basepos) > 10) then {
+		player setpos twc_basepos;
 	};
 };
 cutText ["","Black IN",5];

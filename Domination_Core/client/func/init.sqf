@@ -7,16 +7,18 @@ twc_fnc_buildmagarray = compile preprocessfilelinenumbers "Domination_Core\clien
 twc_fnc_buildmagarray_set = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_buildmagarray_set.sqf";
 
 twc_fnc_heliparadrop = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_heliparadrop.sqf";
+twc_fnc_civfluff_server = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_civfluff_server.sqf";
+twc_fnc_civfluff_client = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_civfluff_client.sqf";
 
 
 twc_fnc_genericfillvehicle = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_genericfillvehicle.sqf";
-InsP_fnc_MissionStatus = compile preProcessFileLineNumbers "Domination_Core\client\func\MissionStatushint.sqf";
 
 twc_fnc_seenbyplayers = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_seenbyplayers.sqf";
 twc_fnc_lookedatbyplayers = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_lookedatbyplayers.sqf";
 twc_fnc_findsneakypos = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_findsneakypos.sqf";
 
 twc_fnc_pubstartingloadout = compile preprocessfilelinenumbers "Domination_Core\client\sys_player\fnc_startingloadout.sqf";
+
 
 twc_fnc_cantp1 = {
 

@@ -19,6 +19,12 @@
 		["ACRE_PRC148",1],
 		["rhsusf_ANPVS_14",1]
 	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
+	];
 };
 
 
@@ -51,6 +57,12 @@
 		["ACE_personalAidKit", 1],
 		["ACE_bodyBag", 10]
 	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
+	];
 };
 
 
@@ -78,6 +90,12 @@
 		["ACRE_PRC148",1],
 		["rhsusf_ANPVS_14",1]
 	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
+	];
 };
 
  if (typeOf vehicle player in ["Modern_pol_mg", "Modern_pol_mg_d"]) then {
@@ -97,6 +115,12 @@
         ["ACE_MapTools",1],
 		["ACRE_PRC148",1],
 		["rhsusf_ANPVS_14",1]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
 	];
 };
 
@@ -123,6 +147,12 @@
         ["ACE_MapTools",1],
 		["ACRE_PRC148",1],
 		["rhsusf_ANPVS_14",1]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
 	];
 };
 
@@ -189,6 +219,12 @@
 		["ACRE_PRC148",1],
 		["rhsusf_ANPVS_14",1],
 		["ACE_microDAGR",1]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
 	];
 };
 

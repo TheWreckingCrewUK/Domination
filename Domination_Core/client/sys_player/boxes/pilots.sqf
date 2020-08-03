@@ -1,21 +1,21 @@
 
-_attackcond = {((count units group player) > 1) && (twc_aosToComplete < 2)};
+_attackcond = {((count units group player) > 1) && ((twc_aosToComplete < 2) && ((twc_aosToComplete < 2) || ((count (units (group player))) == (count allplayers))))};
 
-_attackcond2 = {((count units group player) > 1) && (twc_aosToComplete < 2)};
+_attackcond2 = {((count units group player) > 1) && ((twc_aosToComplete < 2) && ((twc_aosToComplete < 2) || ((count (units (group player))) == (count allplayers))))};
 
-_utilitycond = {(twc_aosToComplete < 2)};
+_utilitycond = {(twc_aosToComplete < 2) && ((twc_aosToComplete < 2) || ((count (units (group player))) == (count allplayers)))};
 
 _transportcond1 = {true};
 
-_transportcond2 = {(twc_aosToComplete < 2)};
+_transportcond2 = {(twc_aosToComplete < 2) && ((twc_aosToComplete < 2) || ((count (units (group player))) == (count allplayers)))};
 
-_cascond = {(twc_aosToComplete < 2)};
+_cascond = {(twc_aosToComplete < 2) && ((twc_aosToComplete < 2) || ((count (units (group player))) == (count allplayers)))};
 
 _planecondlow = {( count(allPlayers - entities "HeadlessClient_F")) >= 0};
 
-_planecondmid = {( count(allPlayers - entities "HeadlessClient_F")) >= 8};
+_planecondmid = {(( count(allPlayers - entities "HeadlessClient_F")) >= 8) && ((twc_aosToComplete < 2) || ((count (units (group player))) == (count allplayers)))};
 
-_planecondhi = {( count(allPlayers - entities "HeadlessClient_F")) >= 12};
+_planecondhi = {(( count(allPlayers - entities "HeadlessClient_F")) >= 12) && ((twc_aosToComplete < 2) || ((count (units (group player))) == (count allplayers)))};
 
 /*
 playercount = 0;

@@ -83,6 +83,12 @@
 		["ACE_IR_Strobe_Item",1]
 		
 	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
+	];
 };
 
 //USMC breacher
@@ -110,6 +116,12 @@
         ["ACE_MapTools",1],
 		["rhsusf_acc_anpeq15_bk_light",1],
 		["ACRE_PRC148",1]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
 	];
 };
 
@@ -139,6 +151,12 @@
 	[
 		["ACRE_PRC148",1]
 	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
+	];
 };
 
 //USMC Auto Rifleman
@@ -165,6 +183,12 @@
 		["rhsusf_acc_anpeq15A",1],
 		["bipod_01_F_blk",1],
 		["ACRE_PRC148",1]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
 	];
 };
 
@@ -193,6 +217,12 @@
 		["rhsusf_acc_anpeq15A",1],
 		["ACRE_PRC148",1]
 	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
+	];
 };
 //USMC Machine Gunner
   if ((typeOf vehicle player) in ["Modern_USMC_MachineGunner", "Modern_USMC_MachineGunner_d"]) then {
@@ -215,6 +245,12 @@
 	[
 		["rhsusf_acc_anpeq15A",1],
 		["ACRE_PRC148",1]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
 	];
 };
 
@@ -241,6 +277,12 @@
 		["rhsusf_acc_compm4",1],
 		["rhsusf_acc_anpeq15A",1],
 		["ACRE_PRC148",1]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
 	];
 };
 
@@ -277,5 +319,11 @@
 		["rhsusf_acc_compm4",1],
 		["rhsusf_acc_anpeq15A",1],
 		["ACRE_PRC148",1]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
 	];
 };

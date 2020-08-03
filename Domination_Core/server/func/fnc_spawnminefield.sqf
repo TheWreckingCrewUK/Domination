@@ -12,24 +12,27 @@ if ([_fieldpos,1500] call twc_fnc_posNearPlayers) exitwith {[]};
 
 _minelist = [];
 
-_num = (120 + (random 100));
+_num = (250 + (random 100));
 
 _offset = random 40;
+_signnum = 0;
 
-_signcount = (4 + (random 3));
+_signcount = (20 + (random 5));
 _signinterval = 360 / _signcount;
 
 for "_i" from 1 to _signcount do {
-	_signpos = _fieldpos getPos [210, ((_signinterval * _i) + _offset)];
+	_signnum = _signnum + 1;
+	_signpos = _fieldpos getPos [210, (((_signinterval) * _signnum) + _offset)];
 	_sign = "Sign_DangerMines_ACR" createvehicle _signpos;
 	_signdir = _signpos getdir _fieldpos;
 	_sign setdir (_signdir + (15 - (random 30)));
 };
 
 _offset = random 40;
-
+_signnum = 0;
 for "_i" from 1 to (_signcount * 2) do {
-	_signpos = _fieldpos getPos [420, (((_signinterval / 2) * _i) + _offset)];
+	_signnum = _signnum + 1;
+	_signpos = _fieldpos getPos [420, (((_signinterval / 2) * _signnum) + _offset)];
 	_sign = "Sign_DangerMines_ACR" createvehicle _signpos;
 	_signdir = _signpos getdir _fieldpos;
 	_sign setdir (_signdir + (15 - (random 30)));
@@ -52,7 +55,7 @@ for "_i" from 1 to _num do {
 	};
 };
 
-for "_i" from 1 to (_num / 2) do {
+for "_i" from 1 to (_num) do {
 	_minepos = [_fieldpos, 400] call cba_fnc_randpos;
 	if (!(isOnRoad _minepos)) then {
 		_minepos = _minepos vectoradd [0,0, -0.013];

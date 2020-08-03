@@ -24,6 +24,8 @@ publicVariable "twc_wdveh";
 
 twc_canlandattack = 1;
 
+twc_bluflufflist = ["Modern_British_Pointman_Light", "Modern_USMC_Rifleman", "TWC_Modern_US_Army_Rifleman", "Modern_pol_Base", "Modern_ger_mg", "Modern_British_Quartermaster", "Modern_ger_Base", "Modern_UKSF_Base", "Modern_British_Blank", "Modern_British_Blank", "Modern_British_Quartermaster"];
+
 //add in an object name and the game will create a location there and spawn enemies from it
 customlocations = [c_1, c_2, c_3, c_4, c_5];
 

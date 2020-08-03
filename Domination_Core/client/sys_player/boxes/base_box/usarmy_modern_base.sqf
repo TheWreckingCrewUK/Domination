@@ -80,6 +80,12 @@ if (typeOf vehicle player == "TWC_Modern_US_Army_TeamLeader") then {
 		["ACE_M26_Clacker",1],
 		["ACE_wirecutter", 1]
     ];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
+	];
 };
 
 //US Rifleman
@@ -120,6 +126,12 @@ if (typeOf vehicle player == "TWC_Modern_US_Army_TeamLeader") then {
 		["ACRE_PRC148",1],
 		["rhsusf_acc_compm4",1]
 	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
+	];
 };
 
 //US Automatic Rifleman
@@ -147,6 +159,12 @@ if (typeOf vehicle player == "TWC_Modern_US_Army_TeamLeader") then {
 		["rhsusf_acc_anpeq15_bkA",1],
 		["UK3CB_BAF_Eotech",1],
 		["ACRE_PRC148",1]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
 	];
 };
 
@@ -186,6 +204,12 @@ if (typeOf vehicle player == "TWC_Modern_US_Army_TeamLeader") then {
 		["UK3CB_BAF_TA31F",1],
 		["rhsusf_acc_compm4",1],
 		["ACRE_PRC148",1]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
 	];
 };
 
@@ -227,6 +251,12 @@ if (typeOf vehicle player == "TWC_Modern_US_Army_TeamLeader") then {
 		["rhsusf_acc_anpeq15_bkA",1]
 	
 	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
+	];
 };
 //US Medic
  if (typeOf vehicle player == "TWC_Modern_US_Army_Medic") then {
@@ -265,5 +295,11 @@ if (typeOf vehicle player == "TWC_Modern_US_Army_TeamLeader") then {
 		["rhsusf_acc_compm4",1],
 		["rhsusf_acc_anpeq15_bkA",1],
 		["ACRE_PRC148",1]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
 	];
 };

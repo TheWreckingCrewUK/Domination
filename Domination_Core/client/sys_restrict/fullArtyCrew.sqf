@@ -48,6 +48,10 @@ while {(_com == 0) || (_gun == 0) || (_obs == 0)}do{
 			_obs = 1;
 		};
 	} foreach (units group player);
+	sleep 5;
+	if ((player distance twc_basepos) > 10) then {
+		player setpos twc_basepos;
+	};
 };
 
 cutText ["","Black IN",5];

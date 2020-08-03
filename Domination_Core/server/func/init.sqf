@@ -17,24 +17,24 @@ twc_fnc_crewcount = compile preprocessfilelinenumbers "Domination_Core\server\sy
 twc_fnc_aps_server = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_APS_server.sqf";
 twc_reinforce_land = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_armourattack.sqf";
 
+twc_fnc_flipvehicle = compile preprocessfilelinenumbers "Domination_Core\client\sys_player\flipvehicle.sqf";
+
+twc_fnc_civilianvehicles = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_civilianvehicles.sqf";
 
 twc_fnc_seenbyplayers = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_seenbyplayers.sqf";
 twc_fnc_lookedatbyplayers = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_lookedatbyplayers.sqf";
 twc_fnc_findsneakypos = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_findsneakypos.sqf";
+
+twc_fnc_civfluff_server = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_civfluff_server.sqf";
+
+twc_fnc_changedaynight = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_changedaynight.sqf";
+
 twc_fnc_civfluff = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_civfluff.sqf";
 twc_fnc_perspb_trigger = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_civfluff_trigger.sqf";
 twc_fnc_SFambush = compile preprocessfilelinenumbers "Domination_Core\server\func\fnc_SFambush.sqf";
 
 twc_fnc_seenbyblufor = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_seenbyblufor.sqf";
 
-addMissionEventHandler ["EntityKilled", {
-	params ["_unit", "_killer", "_instigator", "_useEffects"];
-	[_unit] spawn {
-		params ["_unit"];
-		sleep 30;
-		deletevehicle _unit;
-	};
-}];
 
 
 

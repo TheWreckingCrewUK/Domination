@@ -380,6 +380,8 @@ _vehicle addEventHandler ["Fired", {
  [_group, 5] setWaypointType "CYCLE";
 };
 
+_civcars = call twc_fnc_civilianvehicles;
+
 if (( count(allPlayers - entities "HeadlessClient_F")) < 14) then {
 	if (random 1 > 0.8) then {
  
@@ -630,6 +632,17 @@ reinforcementsTrg setTriggerTimeout [_timer,_timer,_timer, true];
 reinforcementsTrg setTriggerStatements ["this && (time > (missionnamespace getvariable ['twc_lastattack', 1800]))","if (!isserver) exitwith {};[getPos thisTrigger, thislist, true] call twc_fnc_spawnReinforcements",""];
 
 //[getPos thisTrigger] call twc_fnc_spawnReinforcements
+
+
+
+	
+_trg = createTrigger ["EmptyDetector", _pos];
+_trg setTriggerArea [600, 600, 0, false];
+_trg setTriggerActivation ["east", "PRESENT", false];
+_trg setTriggerTimeout [10,10,10,True];
+_trg setTriggerStatements ["((east countSide thisList) < 15 && ({(vehicle _x) isKindOf 'landVehicle' && side _x == east} count thisList <5))","twc_areaCleared = 1; _cars = thistrigger getvariable ['twccivcars', []];{deletevehicle _x} foreach _cars;", ""];
+
+_trg setvariable ["twccivcars", _civcars];
 
 
 while {twc_areaCleared != 1} do {

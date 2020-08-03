@@ -1,6 +1,7 @@
 twc_missionname = missionname;
 publicvariable "twc_missionname";
 
+#include "crashprotection.sqf";
 #include "defines.sqf";
 #include "func\init.sqf";
 #include "sys_basedefence\init.sqf";
@@ -11,7 +12,7 @@ CIVILIAN setFriend [EAST, 1];
 basemode = 0;
 publicvariable "basemode";
 
-execvm "domination_core\client\sys_ragdoll\fn_initRagdoll.sqf";
+//execvm "domination_core\client\sys_ragdoll\fn_initRagdoll.sqf";
 
 if(isNil "townLocationArray") then{
 	townLocationArray = [];

@@ -26,6 +26,7 @@ _box addItemCargoGlobal ["ACE_personalAidKit",1];
 _box addItemCargoGlobal ["TWC_Item_Medical_SutureKit_20",1];
 _box addItemCargoGlobal ["ACE_salineIV_500",10];
 _box addItemCargoGlobal ["ACE_salineIV_250",10];
+_box addItemCargoGlobal ["ACE_tourniquet",4];
 _box addItemCargoGlobal ["ACE_atropine",15];
 _box addItemCargoGlobal ["ACE_epinephrine",15];
 _box addItemCargoGlobal ["ACE_morphine",15];

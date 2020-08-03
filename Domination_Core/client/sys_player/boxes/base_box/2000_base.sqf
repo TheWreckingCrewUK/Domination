@@ -49,6 +49,12 @@ if((typeOf player) in ["2000_British_Rifleman","2000_British_Rifleman_Desert","2
 	[
 		["ACRE_PRC343",1]
 	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
+	];
 };
 
 if((typeOf player) in ["2000_British_Grenadier","2000_British_Grenadier_Desert","2000_British_Grenadier_light","2000_British_Grenadier_Desert_light"])then{
@@ -72,6 +78,12 @@ if((typeOf player) in ["2000_British_Grenadier","2000_British_Grenadier_Desert",
 	[
 		["ACRE_PRC343",1]
 	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
+	];
 };
 
 if((typeOf player) in ["2000_British_Gunner","2000_British_Gunner_Desert","2000_British_Gunner_light","2000_British_Gunner_Desert_light"])then{
@@ -91,6 +103,12 @@ if((typeOf player) in ["2000_British_Gunner","2000_British_Gunner_Desert","2000_
 	_tmp_items =
 	[
 		["ACRE_PRC343",1]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
 	];
 };
 
@@ -120,6 +138,12 @@ if((typeOf player) in ["2000_British_2IC","2000_British_2IC_Desert","2000_Britis
 		["ACE_M26_Clacker",1],
 		["ACRE_PRC343",1]
 	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
+	];
 };
 
 if((typeOf player) in ["2000_British_MachineGunner","2000_British_MachineGunner_Desert"])then{
@@ -140,6 +164,12 @@ if((typeOf player) in ["2000_British_MachineGunner","2000_British_MachineGunner_
 	_tmp_items =
 	[
 		["ACRE_PRC343",1]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
 	];
 };
 
@@ -163,6 +193,12 @@ if((typeOf player) in ["2000_British_mg_assistant","2000_British_mg_assistant_De
 	_tmp_items =
 	[
 		["ACRE_PRC343",1]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
 	];
 };
 
@@ -198,6 +234,12 @@ if((typeOf player) in ["2000_British_Medic","2000_British_Medic_Desert","2000_Br
 		["TWC_Item_Medical_SutureKit_20", 50],
 		["ACE_tourniquet", 5],
 		["ACRE_PRC343",1]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
 	];
 };
 
@@ -275,6 +317,12 @@ if((typeOf player) in ["2000_British_FSTAssistant","2000_British_FSTAssistant_De
 	[
 		["ACRE_PRC343",1]
 	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
+	];
 };
 
 if((typeOf player) in ["2000_British_Sniper","2000_British_Sniper_Desert"])then{
@@ -297,6 +345,12 @@ if((typeOf player) in ["2000_British_Sniper","2000_British_Sniper_Desert"])then{
 	[
 		["ACE_Tripod",1],
 		["ACRE_PRC343",1]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
 	];
 };
 
@@ -323,6 +377,12 @@ if((typeOf player) in ["2000_British_Spotter","2000_British_Spotter_Desert"])the
 		["ACE_Tripod",1],
 		["ACRE_PRC148",1],
 		["ACRE_PRC343",1]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
 	];
 };
 
@@ -369,6 +429,12 @@ if((typeOf player) in ["TWC_2000_US_Army_TeamLeader"])then{
 		["ACE_M26_Clacker",1],
 		["ACRE_PRC148",1]
 	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
+	];
 };
 
 if((typeOf player) in ["TWC_2000_US_Army_Rifleman"])then{
@@ -388,6 +454,12 @@ if((typeOf player) in ["TWC_2000_US_Army_Rifleman"])then{
 	_tmp_items =
 	[
 		["ACRE_PRC148",1]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
 	];
 };
 
@@ -409,6 +481,12 @@ if((typeOf player) in ["TWC_2000_US_Army_Grenadier"])then{
 	[
 		["ACRE_PRC148",1]
 	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
+	];
 };
 
 if((typeOf player) in ["TWC_2000_US_Army_AutomaticRifleman"])then{
@@ -426,6 +504,12 @@ if((typeOf player) in ["TWC_2000_US_Army_AutomaticRifleman"])then{
 	_tmp_items =
 	[
 		["ACRE_PRC148",1]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
 	];
 };
 
@@ -458,6 +542,12 @@ if((typeOf player) in ["TWC_2000_US_Army_Medic"])then{
 		["ACE_salineIV_500",50],
 		["ACE_bodyBag",10],
 		["ACE_tourniquet", 5]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2]
 	];
 };
 

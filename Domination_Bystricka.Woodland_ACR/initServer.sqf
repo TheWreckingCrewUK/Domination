@@ -25,6 +25,8 @@ twc_LastAO = "";
 twc_is90 = 1;
 publicVariable "twc_is90";
 
+twc_bluflufflist = ["Modern_British_Pointman_Light", "Modern_USMC_Rifleman", "TWC_Modern_US_Army_Rifleman", "Modern_pol_Base", "Modern_ger_mg", "Modern_British_Quartermaster", "Modern_ger_Base", "Modern_UKSF_Base", "Modern_British_Blank", "Modern_British_Blank", "Modern_British_Quartermaster"];
+
 
 twc_tankcount = random 3;
 twc_apccount = 1 + (random 2);

@@ -56,6 +56,13 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 	[
 		["ACRE_PRC343",1]
 	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2],
+		["twc_mtp_belt",2]
+	];
 };
 
 //BAF Grenadier
@@ -90,6 +97,13 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 	[
 		["ACRE_PRC343",1]
 	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2],
+		["twc_mtp_belt",2]
+	];
 };
 
 //BAF Automatic Rifleman
@@ -113,6 +127,13 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 	_tmp_items =
 	[
 		["ACRE_PRC343",1]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2],
+		["twc_mtp_belt",2]
 	];
 };
 
@@ -161,6 +182,13 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 		["ACE_wirecutter", 1],
 		["ACE_IR_Strobe_Item",1]
 	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2],
+		["twc_mtp_belt",2]
+	];
 };
 
 //BAF Machine Gunner
@@ -184,6 +212,13 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 	_tmp_items = 
 	[
 		["UK3CB_BAF_Tripod",1]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2],
+		["twc_mtp_belt",2]
 	];
 };
  
@@ -211,6 +246,13 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 	[
 		["ACRE_PRC343",1]
 	];	
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2],
+		["twc_mtp_belt",2]
+	];
 };
 
  if (typeOf vehicle player in ["Modern_British_Medic", "Modern_British_Medic_Light"]) then {
@@ -247,14 +289,21 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 		["ACE_tourniquet", 5],
 		["ACRE_PRC343",1]
 	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2],
+		["twc_mtp_belt",2]
+	];
 };
 
-//BAF Sniper - adding insurgency kit for the moment as it works
+//BAF Sniper
  if (typeOf vehicle player == "Modern_British_Sniper") then {
     _tmp_weapons =
     [
 		["twc_rhs_weap_M107",1],
-		["UK3CB_BAF_L85A2_RIS_ELCAN3D",1],
+		["UK3CB_BAF_L85A2_RIS_ELCAN3D",3],
 		["rhsusf_weap_glock17g4",1]
     ];
 
@@ -265,7 +314,10 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 		["rhsusf_mag_10Rnd_STD_50BMG_M33",10],
 		["rhsusf_mag_10Rnd_STD_50BMG_mk211",5],
 		["UK3CB_BAF_556_30Rnd",10],
-		["rhsusf_mag_17Rnd_9x19_JHP",15]
+		["rhsusf_mag_17Rnd_9x19_JHP",15],
+		["rhsusf_mine_m14_mag",10],
+		["ClaymoreDirectionalMine_Remote_Mag",10],
+		["ATMine_Range_Mag",5]
 	];
 
 	_tmp_items = 
@@ -277,16 +329,24 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 		["cup_optic_an_pas_13c1",1],
 		["rhsusf_acc_premier_anpvs27",1],
 		["ACE_Tripod",1],
+		["ACE_M26_Clacker",2],
 		["HandGrenade",5]
 	];
-
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2],
+		["twc_mtp_belt",2]
+	];
+	
 };
 
 //BAF Spotter
  if (typeOf vehicle player == "Modern_British_Spotter") then {
     _tmp_weapons =
     [
-		["UK3CB_BAF_L85A2_RIS_ELCAN3D",1],
+		["UK3CB_BAF_L85A2_RIS_ELCAN3D",3],
 		["ACE_Vector",1],
 		["rhsusf_weap_glock17g4",1]
     ];
@@ -301,7 +361,10 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 		["rhsusf_mag_10Rnd_STD_50BMG_M33",50],
 		["rhsusf_mag_10Rnd_STD_50BMG_mk211",10],
 		["rhsusf_mag_17Rnd_9x19_JHP",15],
-		["HandGrenade",5]
+		["HandGrenade",5],
+		["rhsusf_mine_m14_mag",10],
+		["ClaymoreDirectionalMine_Remote_Mag",10],
+		["ATMine_Range_Mag",5]
 	];
 
 	_tmp_items = 
@@ -315,7 +378,16 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 		["ACE_MX2A",1],
 		["ACRE_PRC117F_ID_1",1],
 		["UK3CB_BAF_MaxiKite",1],
-		["ACE_Tripod",1]
+		["ACE_Tripod",1],
+		["ACE_M26_Clacker",2],
+		["ATMine_Range_Mag",5]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2],
+		["twc_mtp_belt",2]
 	];
 
 };
@@ -421,6 +493,13 @@ if (typeOf vehicle player == "Modern_British_FSTCommander") then {
 		["UK3CB_BAF_Eotech",1],
 		["ACRE_PRC343",1],
 		["UK3CB_BAF_LLM_IR_Black",1]
+	];
+	
+	_tmp_backpacks = 
+	[ 
+		["UK3CB_BAF_B_Bergen_OLI_Rifleman_B",2],
+		["TWC_BAF_B_Bergen_OLI_Rifleman_XL_A",2],
+		["twc_mtp_belt",2]
 	];
 };
 
