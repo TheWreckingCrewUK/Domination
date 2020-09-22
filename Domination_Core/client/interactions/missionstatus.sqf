@@ -1,6 +1,6 @@
 
 
-InsP_MissionStatus = ["MissionStatus","Mission Status","",{call twc_missionstatusplayerhint},{(twc_campaignmode == 0) || (isnil "twc_campaignmode")}] call ace_interact_menu_fnc_createAction;
+InsP_MissionStatus = ["MissionStatus","Mission Status","",{call twc_missionstatusplayerhint},{((missionnamespace getvariable ["twc_campaignmode", 0]) == 0)}] call ace_interact_menu_fnc_createAction;
 [player, 1, ["ACE_SelfActions"], InsP_MissionStatus] call ace_interact_menu_fnc_addActionToObject;
 
 twc_missionstatusplayerhint = {

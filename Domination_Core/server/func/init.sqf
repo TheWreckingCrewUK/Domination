@@ -35,6 +35,8 @@ twc_fnc_SFambush = compile preprocessfilelinenumbers "Domination_Core\server\fun
 
 twc_fnc_seenbyblufor = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_seenbyblufor.sqf";
 
+twc_fnc_playerheadshot = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_playerheadshot.sqf";
+
 
 
 

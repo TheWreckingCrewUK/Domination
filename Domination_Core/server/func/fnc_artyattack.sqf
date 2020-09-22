@@ -17,7 +17,9 @@
 //Recieved Parameters
 params ["_mortar"];
 
-waituntil {(count twc_mortar_targetlist) > 0};
+while {(count twc_mortar_targetlist) == 0} do {
+	sleep 20;
+};
 
 if (twc_enemyhasradio == 0) exitwith {
 	twc_mortar_targetlist deleteAt 0;

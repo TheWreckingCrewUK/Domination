@@ -19,6 +19,8 @@ twc_fnc_findsneakypos = compile preprocessfilelinenumbers "Domination_Core\serve
 
 twc_fnc_pubstartingloadout = compile preprocessfilelinenumbers "Domination_Core\client\sys_player\fnc_startingloadout.sqf";
 
+twc_fnc_playerheadshot = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_playerheadshot.sqf";
+
 
 twc_fnc_cantp1 = {
 

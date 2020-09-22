@@ -372,7 +372,10 @@ if((typeOf player) in ["Modern_British_HeliPilot","Modern_British_crewchief", "M
 	_hfstaction4 = ["spawn762","Spawn 7.62 Ammo","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\762ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnsupport"],_hfstaction4,true] call ace_interact_menu_fnc_addActionToClass;
 	
-	_hfstaction5 = ["spawnm6","Spawn M6 Ammo","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallMortarAmmo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	_hfstaction5 = ["spawnm6","Spawn 82mm Ammo","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallMortarAmmo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnsupport"],_hfstaction5,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_hfstaction5 = ["spawnm6","Spawn 60mm Ammo","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallMortarAmmo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnsupport"],_hfstaction5,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_hfstaction6 = ["spawn40","Spawn 40mm Ammo","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\40ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;

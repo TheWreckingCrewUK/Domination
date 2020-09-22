@@ -34,6 +34,7 @@ _tmp_backpacks = [];
 #include "baf_modern_base.sqf";
 
 
+_tmp_items pushback [(headgear player), 1];
 
 {
         _weapons set [count _weapons, _x];

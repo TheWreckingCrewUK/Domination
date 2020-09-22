@@ -9,7 +9,7 @@ Once they have enough, then it runs itself again to wait until the situation cha
 
 waitUntil {!isNull player};
 
-waituntil {(count (units group player)) < 2};
+if ((count (units group player)) > 1) exitwith {};
 
 if(!isMultiplayer)exitWith{};
 cutText ["", "Black", 0.001];
@@ -24,7 +24,8 @@ cutText ["", "Black", 0.001];
     [
         "<t size='1.2'>Sniper Team</t><br/><t size='0.6'>You need both members of the sniper team online to proceed</t>", 0, 0.22, 5, 0, 0, 2
     ] spawn bis_fnc_dynamictext;
-	sleep 5;
+	sleep 0.5;
+	closeDialog 602;
 	if ((player distance twc_basepos) > 10) then {
 		player setpos twc_basepos;
 	};
@@ -34,5 +35,3 @@ player forceWalk false;
 
 
 [player] call twc_fnc_legitgroup;
-
-execvm "domination_core\client\sys_restrict\fullsniperteam.sqf";

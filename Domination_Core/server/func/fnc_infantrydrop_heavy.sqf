@@ -147,7 +147,7 @@ _trig setTriggerStatements ["this","{havocgunner reveal [_x, 4];} foreach thisli
 		_wp = _group1 addwaypoint [_enemylandingpos, 200]; 
 		_wp setWaypointSpeed "LIMITED";
 		_wp setWaypointCompletionRadius 500;
-		_wp setWaypointStatements ["true", "[this] spawn {params ['_this'];(driver _this) enableai 'autotarget';(driver _this) enableai 'autocombat'; systemchat 'start combat';_this flyinheight 50; sleep 160;(driver _this) disableai 'autotarget';(driver _this) disableai 'autocombat';(driver _this) disableai 'TARGET'; _this flyinheight 150;}"];
+		_wp setWaypointStatements ["true", "[this] spawn {params ['_this'];(driver _this) enableai 'autotarget';(driver _this) enableai 'autocombat'; _this flyinheight 50; sleep 160;(driver _this) disableai 'autotarget';(driver _this) disableai 'autocombat';(driver _this) disableai 'TARGET'; _this flyinheight 150;}"];
 
 
 		_wph = _group1 addwaypoint [[0,0,0], 300]; 

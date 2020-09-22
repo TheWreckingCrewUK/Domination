@@ -30,6 +30,9 @@ if(isNil "idfGuns") then{
 	idfGuns = [];
 	publicvariable "idfGuns";
 };
+
+
+/*
 twc_fnc_idf = compile preprocessfilelinenumbers "domination_core\server\sys_basedefence\IDF_Alarmfire.sqf";
 twc_fnc_cram_init = compile preprocessfilelinenumbers "domination_core\server\sys_basedefence\IDF_cram_init.sqf";
 twc_fnc_cram_init_2 = compile preprocessfilelinenumbers "domination_core\server\sys_basedefence\IDF_cram_init_2.sqf";
@@ -38,6 +41,8 @@ twc_fnc_cram_init_2 = compile preprocessfilelinenumbers "domination_core\server\
 waituntil {(!(isnil "twc_basepos"))};
 {[_x] spawn twc_fnc_cram_init} foreach (twc_basepos nearobjects ["B_AAA_System_01_F", 5000]);
 };
+
+*/
 
 /* code dump for future base attack plans
 

@@ -129,7 +129,11 @@ for "_i" from 1 to twc_aainfcount do {
 for "_i" from 1 to twc_infcount do {
 	_spawnPos = [_pos,[0,250],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
-	[_group, _spawnPos, 150,3,false,true] call cba_fnc_taskDefend;
+	//[_group, _spawnPos, 150,3,false,true] call cba_fnc_taskDefend;
+	
+	_units = [_spawnPos, nil, units _group, 3, 2, true, true] call ace_ai_fnc_garrison;
+
+	[_group, _spawnPos, 300] call cba_fnc_taskPatrol;
 	[leader _group, 2] spawn TWC_fnc_aiscramble;
 	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
 		{

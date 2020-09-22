@@ -70,7 +70,7 @@ if(((typeOf player) in ["Modern_British_logitech"]) || (["fst", typeof player] c
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "", "Spawntowrockets"],_UKaction5,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	
-	_fstaction5 = ["l16ammo","Spawn 81mm Ammo","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallMortarAmmo.sqf"},_condition] call ace_interact_menu_fnc_createAction;
+	_fstaction5 = ["l16ammo","Spawn 82mm Ammo","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\staticL16_mix.sqf"},_condition] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnheavy"],_fstaction5,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_fstaction5 = ["l16he","HE","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\staticL16_HE.sqf"},_condition] call ace_interact_menu_fnc_createAction;
@@ -82,6 +82,18 @@ if(((typeOf player) in ["Modern_British_logitech"]) || (["fst", typeof player] c
 	_fstaction5 = ["l16he","Smoke","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\staticL16_smoke.sqf"},_condition] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnheavy", "l16ammo"],_fstaction5,true] call ace_interact_menu_fnc_addActionToClass;
 	
+	
+	_fstaction5 = ["spawnm6","Spawn 60mm Ammo","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallMortarAmmo_mix.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnheavy"],_fstaction5,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_fstaction5 = ["m6ammo","HE","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallMortarAmmo_HE.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnheavy", "spawnm6"],_fstaction5,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_fstaction5 = ["m6ammo","Smoke","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallMortarAmmo_Smoke.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnheavy", "spawnm6"],_fstaction5,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_fstaction5 = ["m6ammo","Illum","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallMortarAmmo_Illum.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnheavy", "spawnm6"],_fstaction5,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_fstaction3 = ["spawn50","Spawn .50 Ammo","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\50calammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnheavy"],_fstaction3,true] call ace_interact_menu_fnc_addActionToClass;
@@ -96,13 +108,13 @@ if(((typeOf player) in ["Modern_British_logitech"]) || (["fst", typeof player] c
 	_UKaction5 = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnsupport"],_UKaction5,true] call ace_interact_menu_fnc_addActionToClass;	
 	
-	_fstaction5 = ["spawnm6","Spawn M6 Ammo","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallMortarAmmo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnheavy"],_fstaction5,true] call ace_interact_menu_fnc_addActionToClass;
-	
 		_hfstaction3 = ["spawn50","Spawn Spare Wheels","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\Repairkit.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnsupport"],_hfstaction3,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_fstaction6 = ["spawn40","Spawn 40mm Ammo","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\40ammo.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnheavy"],_fstaction6,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_fstaction6 = ["spawn40","Spawn Large Empty Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\largeemptycrate.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnheavy"],_fstaction6,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_fstaction7 = ["SpawnsmallUKCreate","Spawn Small UK Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallcrateuk.sqf"},{true}] call ace_interact_menu_fnc_createAction;

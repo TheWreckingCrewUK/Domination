@@ -11,7 +11,7 @@ if (typeOf vehicle player == "TWC_Modern_US_Army_SectionCommander") then {
     [
         ["30Rnd_556x45_Stanag",50],
 		["30Rnd_556x45_Stanag_Tracer_Red",10],
-        ["rhsusf_mag_15Rnd_9x19_JHP",15],
+        ["rhsusf_mag_15Rnd_9x19_FMJ",15],
 		["HandGrenade",5]
     ];
 
@@ -49,7 +49,7 @@ if (typeOf vehicle player == "TWC_Modern_US_Army_TeamLeader") then {
     [
         ["30Rnd_556x45_Stanag",50],
 		["30Rnd_556x45_Stanag_Tracer_Red",10],
-        ["rhsusf_mag_15Rnd_9x19_JHP",15],
+        ["rhsusf_mag_15Rnd_9x19_FMJ",15],
 		["1Rnd_HE_Grenade_shell", 40],
 	    ["1Rnd_Smoke_Grenade_shell", 10],
 	    ["1Rnd_SmokeRed_Grenade_shell", 10],
@@ -105,7 +105,7 @@ if (typeOf vehicle player == "TWC_Modern_US_Army_TeamLeader") then {
     [
 		["30Rnd_556x45_Stanag",50],
 		["30Rnd_556x45_Stanag_Tracer_Red",10],
-        ["rhsusf_mag_15Rnd_9x19_JHP",15],
+        ["rhsusf_mag_15Rnd_9x19_FMJ",15],
 		["rhsusf_8Rnd_00Buck",10],
 		["rhsusf_8Rnd_Slug",10],
 		["rhs_mag_smaw_HEAA",8],
@@ -148,7 +148,7 @@ if (typeOf vehicle player == "TWC_Modern_US_Army_TeamLeader") then {
         ["rhsusf_100Rnd_556x45_mixed_soft_pouch",20],
 		["rhsusf_200rnd_556x45_mixed_box",10],
 		["ACE_SpareBarrel",1],
-		["rhsusf_mag_15Rnd_9x19_JHP",15],
+		["rhsusf_mag_15Rnd_9x19_FMJ",15],
 		["HandGrenade",5]
     ];
 
@@ -183,7 +183,7 @@ if (typeOf vehicle player == "TWC_Modern_US_Army_TeamLeader") then {
     [
 		["30Rnd_556x45_Stanag",50],
 		["30Rnd_556x45_Stanag_Tracer_Red",10],
-		["rhsusf_mag_15Rnd_9x19_JHP",15],
+		["rhsusf_mag_15Rnd_9x19_FMJ",15],
 		["1Rnd_HE_Grenade_shell", 40],
 	    ["1Rnd_Smoke_Grenade_shell", 10],
 	    ["1Rnd_SmokeRed_Grenade_shell", 10],
@@ -231,7 +231,7 @@ if (typeOf vehicle player == "TWC_Modern_US_Army_TeamLeader") then {
         ["30Rnd_556x45_Stanag",50],
 		["30Rnd_556x45_Stanag_Tracer_Red",10],
 		["rhsusf_20Rnd_762x51_m118_special_Mag",25],
-        ["rhsusf_mag_15Rnd_9x19_JHP",15],
+        ["rhsusf_mag_15Rnd_9x19_FMJ",15],
 		["HandGrenade",5]
     ];
 		
@@ -270,7 +270,7 @@ if (typeOf vehicle player == "TWC_Modern_US_Army_TeamLeader") then {
     [
         ["30Rnd_556x45_Stanag",50],
 		["30Rnd_556x45_Stanag_Tracer_Red",20],
-        ["rhsusf_mag_15Rnd_9x19_JHP",15],
+        ["rhsusf_mag_15Rnd_9x19_FMJ",15],
 		["HandGrenade",5]
     ];
 

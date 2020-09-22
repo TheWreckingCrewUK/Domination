@@ -18,6 +18,9 @@ if((typeOf player) in ["Modern_USMC_Squadleader","Modern_USMC_Teamleader","Moder
 
 	_alphaaction4 = ["spawn762","Spawn 7.62 Ammo","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\762ammo.sqf"},_condition] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn","ammospawnsupport"],_alphaaction4,true] call ace_interact_menu_fnc_addActionToClass;
+	
+	_fstaction6 = ["spawn40","Spawn Large Empty Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\largeemptycrate.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions", "ammospawn", "ammospawnheavy"],_fstaction6,true] call ace_interact_menu_fnc_addActionToClass;
 
 	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Javelin Launcher","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallcratejav.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 	["Land_InfoStand_V1_F",0,["ACE_MainActions", "weaponspawn"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;

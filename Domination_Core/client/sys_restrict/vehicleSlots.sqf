@@ -38,7 +38,7 @@ _list=[
 	
 		["rhsusf_m1a2sep1wd_usarmy",[ 
 		["driver", 
-			_armourcrew
+			_armourcrew + _armourcommanders
 		],
 		["gunner", 
 			_armourcrew
@@ -49,7 +49,7 @@ _list=[
 	],
 		["rhsusf_m1a2sep1tuskiid_usarmy",[ 
 		["driver", 
-			_armourcrew
+			_armourcrew + _armourcommanders
 		],
 		["gunner", 
 			_armourcrew
@@ -60,7 +60,7 @@ _list=[
 	],
 		["rhsusf_m1a2sep1tuskiiwd_usarmy",[ 
 		["driver", 
-			_armourcrew
+			_armourcrew + _armourcommanders
 		],
 		["gunner", 
 			_armourcrew
@@ -71,7 +71,7 @@ _list=[
 	],
 		["rhsusf_m1a2sep1d_usarmy",[ 
 		["driver", 
-			_armourcrew
+			_armourcrew + _armourcommanders
 		],
 		["gunner", 
 			_armourcrew
@@ -112,7 +112,7 @@ _list=[
 	
 		["CUP_B_MCV80_GB_W_SLAT",[ 
 		["driver", 
-			_armourcrew
+			_armourcrew + _armourcommanders
 		],
 		["gunner", 
 			_armourcrew
@@ -124,7 +124,7 @@ _list=[
 	
 			["CUP_B_AAV_USMC",[ 
 		["driver", 
-			_armourcrew
+			_armourcrew + _armourcommanders
 		],
 		["gunner", 
 			_armourcrew
@@ -135,7 +135,7 @@ _list=[
 	],	
 			["RHS_M2A2",[ 
 		["driver", 
-			_armourcrew
+			_armourcrew + _armourcommanders
 		],
 		["gunner", 
 			_armourcrew
@@ -146,7 +146,7 @@ _list=[
 	],	
 			["RHS_M2A2_wd",[ 
 		["driver", 
-			_armourcrew
+			_armourcrew + _armourcommanders
 		],
 		["gunner", 
 			_armourcrew
@@ -157,7 +157,7 @@ _list=[
 	],	
 			["RHS_M2A3_BUSKIII",[ 
 		["driver", 
-			_armourcrew
+			_armourcrew + _armourcommanders
 		],
 		["gunner", 
 			_armourcrew
@@ -169,7 +169,7 @@ _list=[
 	
 			["CUP_B_MCV80_GB_D_SLAT",[ 
 		["driver", 
-			_armourcrew
+			_armourcrew + _armourcommanders
 		],
 		["gunner", 
 			_armourcrew
@@ -256,7 +256,7 @@ _list=[
 	
 		["CUP_B_LAV25_USMC",[ 
 		["driver", 
-			_armourcrew
+			_armourcrew + _armourcommanders
 		],
 		["gunner", 
 			_armourcrew
@@ -268,7 +268,7 @@ _list=[
 		
 		["CUP_B_LAV25_desert_USMC",[ 
 		["driver", 
-			_armourcrew
+			_armourcrew + _armourcommanders
 		],
 		["gunner", 
 			_armourcrew
@@ -559,7 +559,7 @@ _list=[
 	],
 		["rhsusf_m1a1aimwd_usarmy",[ 
 		["driver", 
-			_armourcrew
+			_armourcrew + _armourcommanders
 		],
 		["gunner", 
 			_armourcrew
@@ -600,7 +600,7 @@ _list=[
 	],
 			["RHS_M6_wd",[ 
 		["driver", 
-			_armourcrew
+			_armourcrew + _armourcommanders
 		],
 		["gunner", 
 			_armourcrew
@@ -611,7 +611,7 @@ _list=[
 	],
 			["RHS_M6",[ 
 		["driver", 
-			_armourcrew
+			_armourcrew + _armourcommanders
 		],
 		["gunner", 
 			_armourcrew
@@ -623,7 +623,7 @@ _list=[
 	
 		["ukcw_cvrt_Scim_d",[
 		["driver",
-			_armourcrew
+			_armourcrew + _armourcommanders
 		],
 		["gunner", 
 			_armourcrew
@@ -635,7 +635,7 @@ _list=[
 	
 		["ukcw_cvrt_Scim_w_L1",[
 		["driver",
-			_armourcrew
+			_armourcrew + _armourcommanders
 		],
 		["gunner", 
 			_armourcrew
@@ -646,7 +646,7 @@ _list=[
 	],
 		["ukcw_cvrt_Scim_d_L1",[
 		["driver",
-			_armourcrew
+			_armourcrew + _armourcommanders
 		],
 		["gunner", 
 			_armourcrew
@@ -659,7 +659,7 @@ _list=[
 	
 		["ukcw_cvrt_Scim_w",[
 		["driver",
-			_armourcrew
+			_armourcrew + _armourcommanders
 		],
 		["gunner", 
 			_armourcrew

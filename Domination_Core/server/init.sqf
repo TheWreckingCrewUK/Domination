@@ -24,6 +24,20 @@ if(isNil "twc_basepos") then{
 };
 
 
+
+addMissionEventHandler ["EntityKilled", {
+	params ["_unit", "_killer", "_instigator", "_useEffects"];
+	if (!isplayer _unit) exitwith {};
+	if ((_unit distance (missionnamespace getvariable ["twc_basepos", [0,0,0]])) > 150) exitwith {};
+	[(vehicle _unit)] spawn {
+		params ["_unit"];
+		while {isplayer _unit} do {
+			sleep 1;
+		};
+		deletevehicle _unit;
+	};
+}];
+
 _trg = createTrigger ["EmptyDetector", twc_basepos];
 _trg setTriggerArea [1000, 1000, 0, false];
 _trg setTriggerActivation ["ANYPLAYER", "PRESENT", true];
