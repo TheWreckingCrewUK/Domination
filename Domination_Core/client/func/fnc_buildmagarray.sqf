@@ -5,7 +5,7 @@ looks at the magazines in each player's inventory on spawn (before the persisten
 
 params ["_player"];
 
-_blacklist = ["ACE_ATragMX", "ACE_Kestrel4500", "TWC_Item_Medical_SutureKit_20", "ACE_microDAGR", "ACE_DAGR", "rhsusf_spc_corpsman", "rhsusf_spc_rifleman", "rhsusf_spc_teamleader", "bipod_01_F_blk", "rhsusf_acc_anpeq15_bk_light", "rhsusf_acc_anpeq15A", "UK3CB_BAF_Kite", "CUP_optic_AN_PAS_13c1", "UK3CB_BAF_MaxiKite", "rhsusf_acc_premier_anpvs27", "UK3CB_BAF_TA648_308", "CUP_optic_GOSHAWK_RIS", "cup_optic_an_pvs_10", "uk3cb_baf_llm_ir_tan"];
+_blacklist = ["ACE_ATragMX", "ACE_Kestrel4500", "TWC_Item_Medical_SutureKit_20", "ACE_microDAGR", "ACE_DAGR", "rhsusf_spc_corpsman", "rhsusf_spc_rifleman", "rhsusf_spc_teamleader", "bipod_01_F_blk", "rhsusf_acc_anpeq15_bk_light", "rhsusf_acc_anpeq15A", "UK3CB_BAF_Kite", "CUP_optic_AN_PAS_13c1", "UK3CB_BAF_MaxiKite", "rhsusf_acc_premier_anpvs27", "UK3CB_BAF_TA648_308", "CUP_optic_GOSHAWK_RIS", "cup_optic_an_pvs_10", "uk3cb_baf_llm_ir_tan", "itemCTAB", "CUP_optic_CWS", "H_PilotHelmetFighter_B"];
 
 _array = group _player getvariable ["twc_magazinearray", []];
 
@@ -52,8 +52,8 @@ _mags pushback (["ACE_MRE_SteakVegetables", "ACE_MRE_MeatballsPasta", "ACE_MRE_L
 
 _mags pushback "ACE_WaterBottle";
 _mags pushback "ACE_WaterBottle";
-_mags pushback "ACE_Cabletie";
-_mags pushback "toolkit";
+//_mags pushback "ACE_Cabletie";
+_mags pushback "ToolKit";
 
 _checkedarray = [];
 

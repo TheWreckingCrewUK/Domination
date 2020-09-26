@@ -20,6 +20,12 @@ if (isNil "fixedWingPilots") then {
 	fixedWingPilots = ["Modern_British_JetPilot"];
 };
 
+twc_rearmvehicle = {
+params ["_vehicle"];
+	_vehicle setVehicleAmmo 1; 
+};
+
+
 twc_reinwarnmsg = {
 
 	_title ="<t color='#ff0000' size='1.5' shadow='1' shadowColor='#000000' align='center'>ENEMY ACTION</t>";
@@ -195,7 +201,7 @@ call twc_fnc_pubstartingloadout;
 
 
 if (typeOf player in fixedWingPilots) then {
-	["TWC_PilotConnected", [getPlayerUID player]] call CBA_fnc_serverEvent;
+//	["TWC_PilotConnected", [getPlayerUID player]] call CBA_fnc_serverEvent;
 };
 
 

@@ -32,7 +32,7 @@ _veh setPos (getPos _veh);
 
 clearWeaponCargoGlobal _veh;
 clearBackpackCargoGlobal _veh;
-//clearMagazineCargoGlobal _veh;
+clearMagazineCargoGlobal _veh;
 clearitemCargoGlobal _veh;
 
 
@@ -51,6 +51,10 @@ publicVariable "twc_planecount";
 [_veh,0,["ACE_MainActions"],_boxaction] call ace_interact_menu_fnc_addActionToobject;
 
 
+_boxaction = ["deleteCreate","Rearm Plane","",{[this] remoteexec ["twc_rearmvehicle", 0];
+},{(count (player nearobjects ["Land_InfoStand_V1_F", 500]) > 0)}] call ace_interact_menu_fnc_createAction;
+[_veh,0,["ACE_MainActions"],_boxaction] call ace_interact_menu_fnc_addActionToobject;
+
 
 _veh addEventHandler ["Killed",{
 	[] spawn { 
@@ -63,3 +67,4 @@ _veh addEventHandler ["Killed",{
 
 #include "planespecifics.sqf";
 
+[_veh, player, 0.5] call twc_fnc_genericfillvehicle;

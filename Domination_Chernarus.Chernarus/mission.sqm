@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2644;
+		nextID=2647;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={11867.755,163.9335,12659.292};
-		dir[]={-0.92456162,-0.32212412,0.20371021};
-		up[]={-0.3146176,0.94668478,0.069320552};
-		aside[]={0.21517657,1.3065292e-006,0.97660649};
+		pos[]={12074.317,163.21114,12659.381};
+		dir[]={-0.92903131,-0.27912456,-0.24306749};
+		up[]={-0.27008197,0.96023959,-0.070662573};
+		aside[]={-0.25312522,1.2118835e-006,0.96747166};
 	};
 };
 binarizationWanted=0;
@@ -12795,7 +12795,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=351;
+		items=352;
 		class Item0
 		{
 			dataType="Object";
@@ -23849,7 +23849,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11850.744,161.59764,12658.83};
-				angles[]={-0,1.8323665,0};
+				angles[]={0,1.8323665,0};
 			};
 			side="Empty";
 			flags=4;
@@ -23859,6 +23859,7 @@ class Mission
 			};
 			id=2640;
 			type="UK3CB_BAF_Husky_Logistics_GMG_Green";
+			atlOffset=-0.00045776367;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23889,7 +23890,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={11840.283,161.59789,12661.846};
-				angles[]={-0,1.8536204,0};
+				angles[]={0,1.8536204,0};
 			};
 			side="Empty";
 			flags=4;
@@ -23899,6 +23900,7 @@ class Mission
 			};
 			id=2641;
 			type="UK3CB_BAF_Husky_Logistics_GMG_Green";
+			atlOffset=-0.00021362305;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23939,6 +23941,7 @@ class Mission
 			};
 			id=2642;
 			type="UK3CB_BAF_Husky_Logistics_HMG_Green";
+			atlOffset=-0.00050354004;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -23979,6 +23982,7 @@ class Mission
 			};
 			id=2643;
 			type="UK3CB_BAF_Husky_Logistics_HMG_Green";
+			atlOffset=-0.0012664795;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -24001,6 +24005,65 @@ class Mission
 					};
 				};
 				nAttributes=1;
+			};
+		};
+		class Item351
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12045.205,164.52751,12655.118};
+				angles[]={-0,0.34673557,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=2646;
+			type="USMC_WarfareBAircraftFactory";
+			atlOffset=-0.27064514;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isRepairFacility";
+					expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_rearm_rearmCargo";
+					expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_rearm_defaultSupply"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_rearm_defaultSupply"")} else {-1})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=99999;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 	};

@@ -123,3 +123,5 @@ _veh setvariable ["ace_cargo_loaded", ["ACE_Wheel", "ACE_Wheel", "ACE_Wheel", "A
 _veh setammocargo 0;
 _veh setrepaircargo 0;
 _veh setfuelcargo 0;
+
+[_veh, player, 1] call twc_fnc_genericfillvehicle;

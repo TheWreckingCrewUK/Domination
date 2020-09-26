@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=1.5707964;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=522;
 	class ItemIDProvider
 	{
-		nextID=2764;
+		nextID=2767;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={12099.138,137.88896,12985.053};
-		dir[]={0.92425531,-0.38074598,0.02844736};
-		up[]={0.38059244,0.92467046,0.011714532};
-		aside[]={0.03076517,-3.3614924e-007,-0.99954373};
+		pos[]={12063.569,162.95207,12670.42};
+		dir[]={-0.88622218,-0.093227126,-0.4537887};
+		up[]={-0.082982332,0.99564701,-0.042491134};
+		aside[]={-0.45577449,-5.9371814e-009,0.8900997};
 	};
 };
 binarizationWanted=0;
@@ -313,7 +313,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Scenario";
 		class Attribute0
@@ -12819,7 +12819,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=377;
+		items=378;
 		class Item0
 		{
 			dataType="Object";
@@ -24958,6 +24958,65 @@ class Mission
 					};
 				};
 				nAttributes=1;
+			};
+		};
+		class Item377
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12045.295,164.52904,12655.006};
+				angles[]={-0,0.36033088,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=2766;
+			type="USMC_WarfareBAircraftFactory";
+			atlOffset=-0.26911926;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isRepairFacility";
+					expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_rearm_rearmCargo";
+					expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_rearm_defaultSupply"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_rearm_defaultSupply"")} else {-1})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=99999;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 	};

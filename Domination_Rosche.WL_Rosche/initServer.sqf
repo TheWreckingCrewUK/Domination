@@ -42,18 +42,19 @@ twc_ifvcount = random 2;
 twc_aacount = 1;
 twc_infcount = 3;
 twc_aainfcount = 1;
-/*
-twc_tankcount = 5;
-twc_apccount = 0;
-twc_ifvcount = 0;
-twc_aacount = 0;
-twc_infcount = 0;
-twc_aainfcount = 0;
-*/
 twc_aosToComplete = 3;
 twc_enemyFlag = "Faction_CUP_RU";
 twc_badAOs = ["airstrip","Krasnostav","Olsha"];
 twc_LastAO = "";
+if (hasinterface) then {
+twc_tankcount = 0;
+twc_apccount = 0;
+twc_ifvcount = 0;
+twc_aacount = 0;
+twc_infcount = 5;
+twc_aainfcount = 0;
+twc_aosToComplete = 10;
+};
 
 // event handlers run in the non-scheduled environment (can't be execVM)
 [] call compile preprocessFile "Domination_Core\server\init.sqf";

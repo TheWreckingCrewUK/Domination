@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2698;
+		nextID=2705;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={14548.919,22.102098,16424.516};
-		dir[]={-0.97154671,-0.1737328,-0.16103065};
-		up[]={-0.17139919,0.98479366,-0.028408937};
-		aside[]={-0.16351722,-8.4401108e-008,0.98654884};
+		pos[]={14656.009,23.043234,16546.879};
+		dir[]={-0.1659214,-0.23153673,-0.95859027};
+		up[]={-0.03949172,0.97282517,-0.22815822};
+		aside[]={-0.98536831,4.824833e-007,0.17055334};
 	};
 };
 binarizationWanted=0;
@@ -54,13 +54,14 @@ addons[]=
 	"rhsusf_vehicles",
 	"UK3CB_BAF_Vehicles_MAN",
 	"UK3CB_BAF_Vehicles_Husky",
-	"rhsusf_c_mrzr"
+	"rhsusf_c_mrzr",
+	"CUP_CAMisc"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=29;
+		items=30;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -242,6 +243,11 @@ class AddonsMetaData
 			name="MRZR";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
+		};
+		class Item29
+		{
+			className="CUP_CAMisc";
+			name="CUP_CAMisc";
 		};
 	};
 };
@@ -12758,14 +12764,14 @@ class Mission
 	};
 	class Entities
 	{
-		items=83;
+		items=86;
 		class Item0
 		{
 			dataType="Marker";
 			position[]={14583.026,17.70085,16472.389};
 			name="crate";
 			type="Empty";
-			angle=227.73206;
+			angle=227.73203;
 			id=167;
 		};
 		class Item1
@@ -13789,7 +13795,7 @@ class Mission
 			position[]={14591.941,17.896667,16476.029};
 			name="respawn_west";
 			type="Empty";
-			angle=227.8307;
+			angle=227.83067;
 			id=1920;
 		};
 		class Item16
@@ -14590,7 +14596,7 @@ class Mission
 			name="base_1";
 			text="Spawner";
 			type="b_hq";
-			angle=132.45232;
+			angle=132.45229;
 			id=2333;
 		};
 		class Item34
@@ -20889,6 +20895,155 @@ class Mission
 					};
 				};
 				nAttributes=1;
+			};
+		};
+		class Item83
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14652.462,17.91,16612.307};
+				angles[]={0,2.3380954,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="planespawnpad";
+			};
+			id=2700;
+			type="HeliHEmpty";
+		};
+		class Item84
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14473.955,17.901869,15956.593};
+						angles[]={0,2.3832819,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						skill=0.44999999;
+						rank="CORPORAL";
+						isPlayable=1;
+					};
+					id=2702;
+					type="Modern_British_JetPilot";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={14469.714,17.88776,15956.708};
+						angles[]={0,2.3832819,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+						isPlayable=1;
+					};
+					id=2703;
+					type="Modern_British_FSTForwardObserver";
+					atlOffset=1.9073486e-006;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=2701;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Fixed Wing";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item85
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={14660.842,23.656147,16570.535};
+				angles[]={0,0.80929172,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=2704;
+			type="USMC_WarfareBAircraftFactory";
+			atlOffset=-0.25200081;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isRepairFacility";
+					expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_rearm_rearmCargo";
+					expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_rearm_defaultSupply"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_rearm_defaultSupply"")} else {-1})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=99999;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 	};

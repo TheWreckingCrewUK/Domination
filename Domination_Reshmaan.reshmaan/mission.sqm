@@ -8,7 +8,7 @@ class EditorData
 	toggles=522;
 	class ItemIDProvider
 	{
-		nextID=2577;
+		nextID=2581;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={16768.156,105.09902,2665.5747};
-		dir[]={0,-0.70710683,0.70710671};
-		up[]={0,0.70710665,0.70710677};
-		aside[]={0.99999994,0,0};
+		pos[]={16584.092,93.292351,3617.1318};
+		dir[]={-0.079996981,-0.18836056,0.9788453};
+		up[]={-0.015343185,0.98210013,0.18774341};
+		aside[]={0.99668723,-1.6100239e-007,0.081454962};
 	};
 };
 binarizationWanted=0;
@@ -56,13 +56,14 @@ addons[]=
 	"HAG_Signs",
 	"UK3CB_BAF_Vehicles_MAN",
 	"CUP_WheeledVehicles_Mastiff",
-	"rhsusf_c_Caiman"
+	"rhsusf_c_Caiman",
+	"CUP_StandaloneTerrains_Core_Faction"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=28;
+		items=29;
 		class Item0
 		{
 			className="CUP_WarfareBuildings";
@@ -238,6 +239,11 @@ class AddonsMetaData
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
+		class Item28
+		{
+			className="CUP_StandaloneTerrains_Core_Faction";
+			name="CUP_StandaloneTerrains_Core_Faction";
+		};
 	};
 };
 randomSeed=16337384;
@@ -271,7 +277,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=167;
+		items=168;
 		class Item0
 		{
 			dataType="Object";
@@ -9065,17 +9071,16 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={16764.701,63.44651,2688.4949};
+						position[]={16764.701,63.44598,2688.4951};
 					};
 					side="West";
-					flags=1;
 					class Attributes
 					{
 						isPlayable=1;
 					};
-					id=2552;
-					type="Modern_British_FSTForwardObserver";
-					atlOffset=2.4224892;
+					id=2577;
+					type="Modern_British_FAC";
+					atlOffset=2.4220009;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9116,7 +9121,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.05;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
@@ -9445,13 +9469,13 @@ class Mission
 				angles[]={0,3.1405454,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				init="call{if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
 			};
 			id=2562;
 			type="rhsusf_m1025_d_m2";
+			atlOffset=0.26977539;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9504,13 +9528,13 @@ class Mission
 				angles[]={0,3.1405454,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				init="call{if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
 			};
 			id=2563;
 			type="rhsusf_m1025_d_m2";
+			atlOffset=0.26977539;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9563,13 +9587,13 @@ class Mission
 				angles[]={0,3.1405454,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				init="call{if(!isServer)exitWith{};[this] execVM ""Domination_Core\server\sys_vehicleRespawn\fnc_vehicleRespawn.sqf"";}";
 			};
 			id=2564;
 			type="rhsusf_m1025_d_m2";
+			atlOffset=0.26977539;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9629,6 +9653,7 @@ class Mission
 			};
 			id=2565;
 			type="rhsusf_m1025_d_Mk19";
+			atlOffset=0.084114075;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9688,6 +9713,7 @@ class Mission
 			};
 			id=2566;
 			type="rhsusf_m1025_d_Mk19";
+			atlOffset=0.084114075;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9878,6 +9904,65 @@ class Mission
 			{
 			};
 			id=2573;
+		};
+		class Item167
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16586.965,88.505081,3641.1516};
+				angles[]={0,3.1553321,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=2580;
+			type="USMC_WarfareBAircraftFactory";
+			atlOffset=-0.32321167;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isRepairFacility";
+					expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_rearm_rearmCargo";
+					expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_rearm_defaultSupply"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_rearm_defaultSupply"")} else {-1})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=99999;
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 	};
 };

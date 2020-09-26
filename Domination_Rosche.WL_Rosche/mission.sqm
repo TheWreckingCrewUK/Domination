@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=1.5707964;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1025;
+	toggles=1034;
 	class ItemIDProvider
 	{
-		nextID=3065;
+		nextID=3069;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6659.0576,55.138573,7196.8613};
-		dir[]={0.84502256,-0.40974596,0.34358004};
-		up[]={0.37957186,0.91219878,0.15433122};
-		aside[]={0.3766503,4.0978193e-008,-0.92635661};
+		pos[]={742.39539,23.890577,4754.7173};
+		dir[]={0.60178566,-0.34135708,-0.72204119};
+		up[]={0.2185514,0.93993396,-0.26222461};
+		aside[]={-0.76818484,4.8545189e-008,-0.64024389};
 	};
 };
 binarizationWanted=0;
@@ -12820,7 +12820,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=118;
+		items=119;
 		class Item0
 		{
 			dataType="Marker";
@@ -19752,17 +19752,59 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6704.8774,30.541439,7174.915};
+						position[]={6704.877,30.541439,7174.915};
 					};
 					side="West";
-					flags=5;
+					flags=4;
 					class Attributes
 					{
 						skill=0.40000001;
 						isPlayable=1;
 					};
-					id=2952;
-					type="Modern_British_FSTForwardObserver";
+					id=3065;
+					type="Modern_British_FAC";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male11ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 			};
 			class Attributes
@@ -20348,6 +20390,65 @@ class Mission
 					};
 				};
 				nAttributes=1;
+			};
+		};
+		class Item118
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={764.48065,20.741138,4728.605};
+				angles[]={-0,4.0286865,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=3068;
+			type="USMC_WarfareBAircraftFactory";
+			atlOffset=-0.38701057;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isRepairFacility";
+					expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_rearm_rearmCargo";
+					expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_rearm_defaultSupply"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_rearm_defaultSupply"")} else {-1})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=99999;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 	};

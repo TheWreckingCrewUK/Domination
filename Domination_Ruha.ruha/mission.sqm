@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=522;
 	class ItemIDProvider
 	{
-		nextID=2694;
+		nextID=2711;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6763.9805,95.55159,1255.9851};
-		dir[]={-0.70644993,-0.52106452,-0.47910368};
-		up[]={-0.43124586,0.85352808,-0.29246432};
-		aside[]={-0.56131345,7.157214e-007,0.82767218};
+		pos[]={6777.0903,51.164886,1279.7855};
+		dir[]={0.74234551,-0.020889491,-0.66974878};
+		up[]={0.015528464,0.99978435,-0.014010205};
+		aside[]={-0.66989499,-4.1769817e-007,-0.74250531};
 	};
 };
 binarizationWanted=0;
@@ -54,13 +54,14 @@ addons[]=
 	"twc_framework_public_modern_us",
 	"rhsusf_vehicles",
 	"UK3CB_BAF_Vehicles_MAN",
-	"UK3CB_BAF_Vehicles_Husky"
+	"UK3CB_BAF_Vehicles_Husky",
+	"CUP_CAMisc"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=29;
+		items=30;
 		class Item0
 		{
 			className="CUP_Misc3_Config";
@@ -242,6 +243,11 @@ class AddonsMetaData
 			name="3CB BAF Vehicles - Husky";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
+		};
+		class Item29
+		{
+			className="CUP_CAMisc";
+			name="CUP_CAMisc";
 		};
 	};
 };
@@ -12758,7 +12764,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=83;
+		items=86;
 		class Item0
 		{
 			dataType="Object";
@@ -13823,8 +13829,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6959.2612,65.431,1282.5266};
-				angles[]={0,0.0024802426,0};
+				position[]={6553.6372,65.431,1208.4984};
+				angles[]={0,1.5567877,0};
 			};
 			side="Empty";
 			flags=4;
@@ -20311,6 +20317,7 @@ class Mission
 			};
 			id=2690;
 			type="UK3CB_BAF_Husky_Logistics_GMG_Green";
+			atlOffset=-0.036907196;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -20351,6 +20358,7 @@ class Mission
 			};
 			id=2691;
 			type="UK3CB_BAF_Husky_Logistics_GMG_Green";
+			atlOffset=-0.044113159;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -20391,7 +20399,7 @@ class Mission
 			};
 			id=2692;
 			type="UK3CB_BAF_Husky_Logistics_HMG_Green";
-			atlOffset=-3.8146973e-006;
+			atlOffset=-0.019523621;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -20432,6 +20440,7 @@ class Mission
 			};
 			id=2693;
 			type="UK3CB_BAF_Husky_Logistics_HMG_Green";
+			atlOffset=-0.00028991699;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -20454,6 +20463,195 @@ class Mission
 					};
 				};
 				nAttributes=1;
+			};
+		};
+		class Item83
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7332.6211,54.145531,1752.8403};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						skill=0.44999999;
+						rank="CORPORAL";
+						isPlayable=1;
+					};
+					id=2695;
+					type="Modern_British_JetPilot";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7335.6211,54.228443,1749.8401};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.40000001;
+						isPlayable=1;
+					};
+					id=2697;
+					type="Modern_British_FAC";
+					atlOffset=3.8146973e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male11ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=2694;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="[_this, _value] call CBA_fnc_setCallsign";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Fixed Wing";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item84
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6859.0869,46.669998,1249.994};
+				angles[]={0,1.5056781,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="planespawnpad";
+			};
+			id=2698;
+			type="HeliHEmpty";
+		};
+		class Item85
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6793.9629,52.357864,1264.1012};
+				angles[]={-0,2.9775758,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=2710;
+			type="USMC_WarfareBAircraftFactory";
+			atlOffset=-0.31028366;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isRepairFacility";
+					expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_repair_canRepair"")} else {0})) then {_this setVariable ['ace_isRepairFacility', _value, true]}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_rearm_rearmCargo";
+					expression="if (_value != (if (isNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_rearm_defaultSupply"")) then {getNumber (configFile >> 'CfgVehicles' >> typeOf _this >> ""ace_rearm_defaultSupply"")} else {-1})) then {[_this, _value] call ace_rearm_fnc_makeSource}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=99999;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 	};
