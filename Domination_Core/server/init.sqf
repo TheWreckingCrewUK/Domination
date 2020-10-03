@@ -1,3 +1,4 @@
+[] spawn {
 twc_missionname = missionname;
 publicvariable "twc_missionname";
 
@@ -190,4 +191,4 @@ _trg3 setTriggerActivation ["EAST", "PRESENT", true];
 _trg3 setTriggerTimeout [0,0,0,True];
 _trg3 setTriggerStatements ["this","basemode = 1; publicVariable 'basemode';", "basemode = 0; publicVariable 'basemode';"];
 
-
+};

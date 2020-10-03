@@ -6,7 +6,7 @@ twc_serverDebug = false;
 twc_surrenderVote = false;
 
 _script = execVM "Domination_Core\SHK_pos\shk_pos_init.sqf";
-waitUntil{scriptDone _script};
+//waitUntil{scriptDone _script};
 
 twc_maxObjDistance = 12000;
 
