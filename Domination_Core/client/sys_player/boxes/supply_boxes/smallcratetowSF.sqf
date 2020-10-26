@@ -35,7 +35,7 @@ hint _spawntext;
 _boxClass = "ACE_Box_Ammo";
 twc_towspawned = true;
 publicvariable "twc_towspawned";
-_box = _boxClass createVehicle (getPos AmmoBoxSpawner);
+_box = _boxClass createVehicle (call twc_fnc_getammospawnloc);
 
 
 //simple dynamic numbers system. Assign cost of each tier and then assign a tier to an item if you want that item's amount to scale with the player count.

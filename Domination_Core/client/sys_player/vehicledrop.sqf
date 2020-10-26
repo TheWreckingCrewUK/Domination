@@ -1,27 +1,52 @@
 // add vehicles to forward base, requestable by leaders
-params ["_boxpos"];
+params ["_boxpos", ["_showhint", false]];
 
-_car1 = "UK3CB_BAF_LandRover_Soft_Sand_A";
+
+_basepos = missionnamespace getvariable ["twc_basepos", _boxpos];
+
+if ((_basepos distance _boxpos) < 400) exitwith {};
+
+_car1 = "rhsusf_m1043_d";
+
+_car2 = "rhsusf_m1043_d_m2";
 
 	if (twc_wdveh == 1) then {
-_car1 = "UK3CB_BAF_LandRover_Soft_Green_A";};
+_car1 = "rhsusf_m1043_w_s";
+_car2 = "rhsusf_m1043_w_m2";
+};
 
 
-//car2 stays green because a later script turns it sandy coloured in a different way to differentiate it from base vehicles
-_car2 = "UK3CB_BAF_LandRover_WMIK_GPMG_Green_A";
 
 if (["twc_ana", typeof player] call BIS_fnc_inString) then {
 
-_car1 = "C_Offroad_01_F";
+_car1 = "CUP_O_Hilux_unarmed_TK_INS";
 
-_car2 = "I_G_Offroad_01_armed_F";
+_car2 = "CUP_O_Hilux_M2_TK_INS";
 };
 
-if (["usmc", typeof player] call BIS_fnc_inString) then {
+if ((["Modern_Brit", typeof player] call BIS_fnc_inString)) then {
 
-_car1 = "CUP_B_HMMWV_Unarmed_USMC";
+_car1 = "UK3CB_BAF_LandRover_Soft_Sand_A";
 
-_car2 = "CUP_B_HMMWV_M1114_USMC";
+if (twc_wdveh == 1) then {
+	_car1 = "UK3CB_BAF_LandRover_Soft_Green_A";
+};
+_car2 = "UK3CB_BAF_LandRover_WMIK_GPMG_Green_A";
+};
+
+
+if (["70", twc_missionname] call BIS_fnc_inString) then {
+	_car1 = "UK3CB_BAF_LandRover_Snatch_NI_A";
+	_car2 = "UK3CB_BAF_LandRover_Snatch_NI_A";
+
+	if (["twc_ana", typeof player] call BIS_fnc_inString) then {
+		_car1 = "CUP_C_V3S_Open_TKC";
+		_car2 = "CUP_I_Datsun_4seat_TK";
+	};
+	if (["CUP_O_RU", typeof player] call BIS_fnc_inString) then {
+		_car1 = "CUP_O_UAZ_Unarmed_RU";
+		_car2 = "CUP_O_Ural_Open_RU";
+	};
 };
 
 
@@ -29,8 +54,10 @@ if (["90", twc_missionname] call BIS_fnc_inString) then {
 
 
 	if (twc_wdveh == 0) then {
-_car1 = "UK3CB_BAF_LandRover_Snatch_FFR_Sand_A";} else {
-_car1 = "UK3CB_BAF_LandRover_Snatch_FFR_Green_A"};
+	_car1 = "UK3CB_BAF_LandRover_Snatch_FFR_Sand_A";
+} else {
+	_car1 = "UK3CB_BAF_LandRover_Snatch_FFR_Green_A";
+};
 
 
 _car2 = "UK3CB_BAF_LandRover_WMIK_GPMG_Green_A";
@@ -45,33 +72,44 @@ _car2 = "CUP_I_Datsun_PK_TK_Random";
 
 if (["usmc", typeof player] call BIS_fnc_inString) then {
 
-_car1 = "CUP_B_HMMWV_Unarmed_USMC";
+_car1 = "rhsusf_m1043_d";
 
-_car2 = "CUP_B_HMMWV_M1114_USMC";
-};
+_car2 = "rhsusf_m1043_d_m2";
 };
 
-_playercount = (((count(allPlayers - entities "HeadlessClient_F"))/1.5) +2) max 2;
-if (count (_boxpos nearentities ["car", 200]) >_playercount) exitwith {hint "there are already enough vehicles here"};
-if (count (_boxpos nearobjects ["Vysilacka", 200]) == 0) exitwith {hint "There's no forward base here"};
+
+
+};
+
+_playercount = (((count(allPlayers - entities "HeadlessClient_F"))/1.4) +2) max 2;
+if (count (_boxpos nearentities [_car2, 200]) >_playercount) exitwith {
+	if (_showhint) then {
+		hint "there are already enough vehicles here";
+	};
+};
+if (count (_boxpos nearobjects ["Vysilacka", 200]) == 0) exitwith {
+	if (_showhint) then {
+		hint "There's no forward base here"
+	};
+};
 
 _vehicle = createvehicle [_car1, [0,0,0]];
-_total = (ceil (((_playercount * 1)-(count (_boxpos nearentities ["car", 200])))* 1.5) max 1) min 4;
-hint format ["Spawning %1 Vehicles", _total *2];
-
+_total = (ceil (((_playercount * 0.5)-(count (_boxpos nearentities [_car1, 200])))* 1.5) max 1) min 2;
+if (_showhint) then {
+	hint format ["Spawning %1 Vehicles", _total *2];
+};
 //vehdrop = {
 //params ["_boxpos"];
 
 //_pos = [_boxpos,[5,50],random 360,0, [1,50], [50,(typeof _vehicle)]] call SHK_pos; 
 _pos = [_boxpos, 5, 50, 10, 0, 1, 0, [], [_boxpos, _boxpos]] call BIS_fnc_findSafePos;
 
-for "_i" from 1 to _total do{ 
+for "_i" from 1 to _total do{
 
 //_spawnPos = [_pos,[5,50],random 360,0, [1,40], [50,(typeof _vehicle)]] call SHK_pos; 
 _spawnPos = [_pos, 5, 50, 10, 0, 1, 0, [], [_pos, _pos]] call BIS_fnc_findSafePos;
 _wmik = createvehicle [_car2, _spawnPos];  
 clearweaponcargoglobal _wmik; 
-_wmik addmagazinecargoglobal ["UK3CB_BAF_762_200Rnd_T", 5];
 
 
 
@@ -101,6 +139,7 @@ _wmik setdamage 0;
 clearweaponcargoglobal _wmik; 
 clearitemcargoglobal _wmik; 
 clearmagazinecargoglobal _wmik; 
+clearbackpackcargoglobal _wmik;
 
 if (typeof _wmik == "UK3CB_BAF_LandRover_WMIK_GPMG_Green_A") then {
 [ 
@@ -134,10 +173,11 @@ if (typeof _wmik == "I_G_Offroad_01_armed_F") then {
 _wmik setObjectTextureGlobal [0, "a3\soft_f\offroad_01\data\offroad_01_ext_base01_co.paa"];
 };
 
-if (typeof _wmik == "CUP_B_HMMWV_M2_USA") then {
-
+if (typeof _wmik in ["rhsusf_m1043_d_m2", "rhsusf_m1043_w_m2"]) then {
+	_wmik addmagazinecargoglobal ["UK3CB_BAF_127_100Rnd", 3];
 };
 
+[_wmik, player, 0.5] call twc_fnc_genericfillvehicle;
 //_spawnPos = [_pos,[5,50],random 360,0, [1,50], [50,(typeof _vehicle)]] call SHK_pos; 
 _spawnPos = [_pos, 5, 50, 10, 0, 1, 0, [], [_pos, _pos]] call BIS_fnc_findSafePos;
 _car = createvehicle [_car1, _spawnPos];
@@ -162,8 +202,9 @@ _car setdamage 0;
 clearweaponcargoglobal _car; 
 clearitemcargoglobal _car; 
 clearmagazinecargoglobal _car; 
+clearbackpackcargoglobal _car;
 
-if (typeof _car == "UK3CB_BAF_LandRover_Soft_Green_A") then {[ 
+if ((typeof _car == "UK3CB_BAF_LandRover_Soft_Green_A") || (typeof _car == "UK3CB_BAF_LandRover_Soft_Green_A")) then {[ 
 _car, 
  nil, 
  ["AirIntakeSnorkel_Hide",0,"CamoNet_Hide",1,"stripdowndoorrear_hide",1,"AerialAtuL_Hide",1,"AerialAtuR_Hide",1,"AerialFL_Hide",0,"AerialFR_Hide",1,"Flag_Hide",0,"sparewheel_hide",0,"javelintubespare_hide",1,"radio_hide",0] 
@@ -181,13 +222,14 @@ _car
 ] call BIS_fnc_initVehicle;
 };
 
-if (typeof _car == "CUP_B_HMMWV_Unarmed_USA") then {
+if (typeof _car == "rhsusf_m1043_d") then {
 
 };
 
 
 
 
+[_car, player, 0.5] call twc_fnc_genericfillvehicle;
 
 
 };

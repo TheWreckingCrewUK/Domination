@@ -8,12 +8,9 @@
 //#include "news.sqf";
 //#include "sys_ragdoll\init.sqf";
 
-_alphaaction = ["SpawnsmallAlphaCreate","TWC News","",{call twc_news},{true}] call ace_interact_menu_fnc_createAction;
-["TWC_Item_Public_Base_LOCSTAT",0,["ACE_MainActions"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;
 
 
 twc_fnc_crewcount = compile preprocessfilelinenumbers "Domination_Core\server\sys_mechanised\crewcount.sqf";
-twc_news = compile preprocessfilelinenumbers "Domination_Core\client\news.sqf";
 twc_fnc_aps = compile preprocessfilelinenumbers "Domination_Core\client\func\fn_APS.sqf";
 
 if (isNil "fixedWingPilots") then {
@@ -140,8 +137,6 @@ if ((time > (twc_serstarttime + 600)) && (twc_firstspawned > 1)) exitwith {
 	} foreach _items;
 };
 
-InsP_MissionStatus = ["MissionStatus","Mission Status","",{call InsP_fnc_MissionStatus},{(side player == west)}] call ace_interact_menu_fnc_createAction;
-[player, 1, ["ACE_SelfActions"], InsP_MissionStatus] call ace_interact_menu_fnc_addActionToObject;
 
 
 
@@ -227,13 +222,6 @@ if (!(["infantry", str (group player)] call BIS_fnc_inString)) then {
 execvm "domination_core\client\sys_restrict\attachmentcount.sqf" 
 };
 
-//Set Radios Correctly
-_radioID = [getText (configFile >> "cfgVehicles" >> (typeOf player) >> "twc_radioType")] call acre_api_fnc_getRadioByType; 
- if (!isNil "_radioID") then {
-_channelNumber = getNumber (configFile >> "cfgVehicles" >> (typeOf player) >> "twc_radioChannel"); 
- _switchChannel = [_radioID, _channelNumber] call acre_api_fnc_setRadioChannel; 
- Hint parseText format ["<t color='#d0dd00' size='1.2' shadow='1' shadowColor='#000000' align='center'>Radio Set</t><br/><t color='#d0dd00' size='0.8' shadow='1' shadowColor='#565656' align='left'>Radio:</t><t color='##013bb6' size='0.8' shadow='1' shadowColor='#565656' align='right'>%1</t><br/><t color='#d0dd00' size='0.8' shadow='1' shadowColor='#565656' align='left'>Channel:</t><t color='##013bb6' size='0.8' shadow='1' shadowColor='#565656' align='right'>%2</t>",getText (configFile >> "cfgVehicles" >> (typeOf player) >> "twc_radioType"),_channelNumber]; 
- };
 
 player addEventHandler ["Fired", {
 	params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];

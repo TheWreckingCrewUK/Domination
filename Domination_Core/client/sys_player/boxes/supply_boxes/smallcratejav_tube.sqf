@@ -36,7 +36,7 @@ if (!(["uksf", typeof player] call BIS_fnc_inString)) then {
 };
 _boxClass = "twc_public_launcherbox_small_jav";
 
-_box = _boxClass createVehicle (getPos AmmoBoxSpawner);
+_box = _boxClass createVehicle (call twc_fnc_getammospawnloc);
 
 clearWeaponCargoGlobal _box;
 clearBackpackCargoGlobal _box;

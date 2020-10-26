@@ -10,7 +10,7 @@
 
 _boxClass = "twc_public_medicalbox_small";
 
-_box = _boxClass createVehicle (getPos AmmoBoxSpawner);
+_box = _boxClass createVehicle (call twc_fnc_getammospawnloc);
 
 clearWeaponCargoGlobal _box;
 clearBackpackCargoGlobal _box;

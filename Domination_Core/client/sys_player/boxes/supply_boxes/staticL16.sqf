@@ -9,9 +9,7 @@
 
 _boxClass = "groundWeaponHolder"; 
  
-_box = _boxClass createVehicle (if (count (player nearobjects ["Land_InfoStand_V1_F", 200]) > 0) then {
-(getPos AmmoBoxSpawner)} else 
-{(getPos player)});
+_box = _boxClass createVehicle (call twc_fnc_getammospawnloc);
 
 
 
@@ -22,9 +20,7 @@ _box addWeaponCargoGlobal ["ace_csw_carryMortarBaseplate",1];
 
 _boxClass = "TWC_Public_AmmoBox_medium";
 
-_box = _boxClass createVehicle (if (count (player nearobjects ["Land_InfoStand_V1_F", 200]) > 0) then {
-(getPos AmmoBoxSpawner)} else 
-{(getPos player)});
+_box = _boxClass createVehicle (call twc_fnc_getammospawnloc);
 
 clearWeaponCargoGlobal _box;
 clearBackpackCargoGlobal _box;

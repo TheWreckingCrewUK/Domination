@@ -10,7 +10,7 @@
 
 _boxClass = "UK3CB_BAF_Box_M6";
 
-_box = _boxClass createVehicle (getPos AmmoBoxSpawner);
+_box = _boxClass createVehicle (call twc_fnc_getammospawnloc);
 
 clearWeaponCargoGlobal _box;
 clearBackpackCargoGlobal _box;

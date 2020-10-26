@@ -31,7 +31,7 @@ if((typeOf player) in ["2000_British_Rifleman","2000_British_Rifleman_Desert","2
     _tmp_weapons =
     [
         ["UK3CB_BAF_L85A2_SUSAT",1],
-		["ukcw_law80",5],
+		["ukcw_CUP_launch_APILAS",5],
 		["rhs_weap_M136_hedp",5],
 		["rhs_weap_fim92",1],
 		["rhs_weap_m72a7",4]
@@ -95,7 +95,7 @@ if((typeOf player) in ["2000_British_Gunner","2000_British_Gunner_Desert","2000_
 
 	_tmp_magazines =
    [            
-		["UK3CB_BAF_556_200Rnd_T",20],
+		["UK3CB_BAF_556_200Rnd_T",30],
 		["ACE_SpareBarrel",1],
 		["HandGrenade",5]
     ];
@@ -116,7 +116,8 @@ if((typeOf player) in ["2000_British_2IC","2000_British_2IC_Desert","2000_Britis
 
     _tmp_weapons =
     [
-        ["UK3CB_BAF_L85A2_SUSAT",1]
+        ["UK3CB_BAF_L85A2_SUSAT",1],
+        ["rhs_weap_M136",3]
 	];
 
 	_tmp_magazines =
@@ -155,8 +156,8 @@ if((typeOf player) in ["2000_British_MachineGunner","2000_British_MachineGunner_
 
 	_tmp_magazines =
    [
-		["UK3CB_BAF_762_200Rnd_T",20],
-		["UK3CB_BAF_762_100Rnd_T",20],
+		["UK3CB_BAF_762_200Rnd_T",30],
+		["UK3CB_BAF_762_100Rnd_T",30],
 		["ACE_SpareBarrel",1],
 		["HandGrenade",5]
     ];
@@ -211,7 +212,7 @@ if((typeOf player) in ["2000_British_Medic","2000_British_Medic_Desert","2000_Br
 
 	_tmp_magazines =
    [
-		["UK3CB_BAF_556_30Rnd",20],
+		["UK3CB_BAF_556_30Rnd",30],
 		["UK3CB_BAF_556_30Rnd_T",10],
 		["HandGrenade",5]
     ];

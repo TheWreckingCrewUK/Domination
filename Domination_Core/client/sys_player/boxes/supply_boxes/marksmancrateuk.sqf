@@ -28,7 +28,7 @@ hint _spawntext;
 
 _boxClass = "Box_NATO_WpsSpecial_F";
 
-_box = _boxClass createVehicle (getPos AmmoBoxSpawner);
+_box = _boxClass createVehicle (call twc_fnc_getammospawnloc);
 
 clearWeaponCargoGlobal _box;
 clearBackpackCargoGlobal _box;

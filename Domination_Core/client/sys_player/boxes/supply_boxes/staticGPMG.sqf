@@ -10,7 +10,7 @@
 
 _boxClass = "UK3CB_BAF_Box_L7A2";
 
-_box = _boxClass createVehicle (getPos ammoCrateSpawnPad);
+_box = _boxClass createVehicle (call twc_fnc_getammospawnloc);
 
 //clearWeaponCargoGlobal _box;
 //clearBackpackCargoGlobal _box;
@@ -25,12 +25,3 @@ _box = _boxClass createVehicle (getPos ammoCrateSpawnPad);
 //_box addItemCargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Shells",50];
 //_box addItemCargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Flare_White",10];
 //_box addItemCargoGlobal ["UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White",10];
-
-//Respawn/Despawn Script
-
-_trg = createTrigger ["EmptyDetector", getPos ammoCrateSpawnPad];
-_trg setTriggerArea [5,5,0,false];
-_trg setTriggerActivation ["WEST", "NOT PRESENT", false];
-_trg setTriggerTimeout [1800,1800,1800,true];
-_trg setTriggerStatements ["this", "_box = (getPos thisTrigger) nearestObject 'UK3CB_BAF_Box_L7A2'; deleteVehicle _box;",""];
-_trg attachTo [_box];

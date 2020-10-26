@@ -117,7 +117,7 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
 
 	_tmp_magazines =
    [            
-		["UK3CB_BAF_556_200Rnd_T",20],
+		["UK3CB_BAF_556_200Rnd_T",30],
 		["rhsusf_mag_17Rnd_9x19_FMJ",15],
 		["UK3CB_BAF_9_15Rnd",15],
 		["ACE_SpareBarrel",1],
@@ -202,7 +202,7 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
        
     _tmp_magazines =
     [
-		["UK3CB_BAF_762_100Rnd_T",10],
+		["UK3CB_BAF_762_100Rnd_T",30],
 		["ACE_SpareBarrel",1],
 		["rhsusf_mag_17Rnd_9x19_FMJ",15],
 		["UK3CB_BAF_9_15Rnd",15],
@@ -235,7 +235,7 @@ if (typeOf vehicle player in ["Modern_British_Squadleader", "Modern_British_Squa
        
     _tmp_magazines =
     [
-        ["UK3CB_BAF_762_L42A1_20Rnd",25],
+        ["UK3CB_BAF_762_L42A1_20Rnd",30],
 		["UK3CB_BAF_762_L42A1_20Rnd_T",10],	
 		["rhsusf_mag_17Rnd_9x19_FMJ",15],
 		["UK3CB_BAF_9_15Rnd",15],

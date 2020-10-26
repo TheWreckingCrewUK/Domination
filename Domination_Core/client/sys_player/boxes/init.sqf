@@ -22,72 +22,80 @@ player addEventHandler ["InventoryClosed", {
 */
 //_condition = {true};
 //only allow spawning of ammo if they're at main base
-_condition = {call twc_fnc_isplayeratbase};
+_condition = {call twc_fnc_isplayeratbaseorpb};
 
+twc_fnc_getammospawnloc = {
+	_pos = getpos AmmoBoxSpawner;
+	_markerstring = ("respawn_"+ (str (side player)) + "_forwardbase");
+	if ((player distance (getmarkerpos _markerstring)) < (500)) then {
+		_pos = (getmarkerpos _markerstring);
+	};
+	_pos
+};
 
 
 //"ACE_MainActions","weaponspawn"
 //"ACE_MainActions","ammospawn","ammospawnlight"
 //"ACE_MainActions","ammospawn","ammospawnsupport"
 //"ACE_MainActions","ammospawn","ammospawnheavy"
-
-	_ammoaction = ["weaponspawn","Spawn Heavy Weapons","",{},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_ammoaction,true] call ace_interact_menu_fnc_addActionToClass;
-
-	_ammoaction = ["ammospawn","Spawn Ammo","",{},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_ammoaction,true] call ace_interact_menu_fnc_addActionToClass;
-
-	_ammoaction2 = ["ammospawnlight","Light Ammo","",{},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions","ammospawn"],_ammoaction2,true] call ace_interact_menu_fnc_addActionToClass;
 	
-	_ammoaction3 = ["ammospawnsupport","Support Ammo","",{},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions","ammospawn"],_ammoaction3,true] call ace_interact_menu_fnc_addActionToClass;
-	
-	_ammoaction4 = ["ammospawnheavy","Heavy Ammo","",{},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions","ammospawn"],_ammoaction4,true] call ace_interact_menu_fnc_addActionToClass;
-	
-
+_hasheavy = false;
+{	
 
 	_infaction1 = ["clearbox","Clear Boxes","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\clearboxes.sqf"},{(["lead", typeof player] call BIS_fnc_inString) || (["command", typeof player] call BIS_fnc_inString) || (["2ic", typeof player] call BIS_fnc_inString) || (["pilot", typeof player] call BIS_fnc_inString) || (["crew", typeof player] call BIS_fnc_inString) || ((count units group player) < 3)}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_infaction1,true] call ace_interact_menu_fnc_addActionToClass;
-	
-	_twc_repveh = ["repveh","Repair Nearby Vehicles","",{[_target] execvm "domination_core\client\sys_player\repairvehicle.sqf"},{true}] call ace_interact_menu_fnc_createAction;
-	["UK3CB_BAF_MAN_HX58_Repair_Green",0,["ACE_MainActions"],_twc_repveh,true] call ace_interact_menu_fnc_addActionToClass;
-	
-	_twc_repvehd = ["repveh","Repair Nearby Vehicles","",{[_target] execvm "domination_core\client\sys_player\repairvehicle.sqf"},{true}] call ace_interact_menu_fnc_createAction;
-	["UK3CB_BAF_MAN_HX58_Repair_Sand",0,["ACE_MainActions"],_twc_repvehd,true] call ace_interact_menu_fnc_addActionToClass;
+	[_x,0,["ACE_MainActions"],_infaction1,true] call ace_interact_menu_fnc_addActionToClass;
 
-	_twc_repveh2 = ["repveh","Repair Nearby Vehicles","",{[_target] execvm "domination_core\client\sys_player\repairvehicle.sqf"},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_twc_repveh2,true] call ace_interact_menu_fnc_addActionToClass;	
+	_ammoaction = ["ammospawn","Spawn Ammo","",{},_condition] call ace_interact_menu_fnc_createAction;
+	[_x,0,["ACE_MainActions"],_ammoaction,true] call ace_interact_menu_fnc_addActionToClass;
+
+	_ammoaction2 = ["ammospawnlight","Light Ammo","",{},_condition] call ace_interact_menu_fnc_createAction;
+	[_x,0,["ACE_MainActions","ammospawn"],_ammoaction2,true] call ace_interact_menu_fnc_addActionToClass;
 	
-	_twc_repveh2 = ["repveh","Repair Nearby Vehicles","",{[_target] execvm "domination_core\client\sys_player\repairvehicle.sqf"},_condition] call ace_interact_menu_fnc_createAction;
-	["UK3CB_BAF_MAN_HX58_Container_Green",0,["ACE_MainActions"],_twc_repveh2,true] call ace_interact_menu_fnc_addActionToClass;
+	_ammoaction3 = ["ammospawnsupport","Support Ammo","",{},_condition] call ace_interact_menu_fnc_createAction;
+	[_x,0,["ACE_MainActions","ammospawn"],_ammoaction3,true] call ace_interact_menu_fnc_addActionToClass;
 	
+	if (!_hasheavy) then {
+		_ammoaction = ["weaponspawn","Spawn Heavy Weapons","",{},_condition] call ace_interact_menu_fnc_createAction;
+		["Land_InfoStand_V1_F",0,["ACE_MainActions"],_ammoaction,true] call ace_interact_menu_fnc_addActionToClass;
+	
+		_ammoaction4 = ["ammospawnheavy","Heavy Ammo","",{},_condition] call ace_interact_menu_fnc_createAction;
+		["Land_InfoStand_V1_F",0,["ACE_MainActions","ammospawn"],_ammoaction4,true] call ace_interact_menu_fnc_addActionToClass;
+
+		_twc_repveh2 = ["repveh","Repair Nearby Vehicles","",{[_target] execvm "domination_core\client\sys_player\repairvehicle.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+		["Land_InfoStand_V1_F",0,["ACE_MainActions"],_twc_repveh2,true] call ace_interact_menu_fnc_addActionToClass;
+
+		_hasheavy = true;
+	};
+	
+	
+
 	_twc_repveh2 = ["repveh","Teleport to Airbase","",{call twc_fnc_basetp},{call twc_fnc_cantp1}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_twc_repveh2,true] call ace_interact_menu_fnc_addActionToClass;
+	[_x,0,["ACE_MainActions"],_twc_repveh2,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_twc_repveh2 = ["repveh","Teleport to Mainbase","",{call twc_fnc_basetp},{call twc_fnc_cantp2}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_twc_repveh2,true] call ace_interact_menu_fnc_addActionToClass;
+	[_x,0,["ACE_MainActions"],_twc_repveh2,true] call ace_interact_menu_fnc_addActionToClass;
 
-	
-#include "pilots.sqf";
-#include "armour.sqf";
-#include "fst.sqf";
-#include "HQ.sqf";
+		
 
 
-#include "supply_boxes\1990.sqf";
-#include "supply_boxes\1990_us.sqf";
-#include "supply_boxes\2000.sqf";
-#include "supply_boxes\modern_pol.sqf";
-#include "supply_boxes\modern_ger.sqf";
-#include "supply_boxes\modern_uk.sqf";
-#include "supply_boxes\modern_us.sqf";
-	
+	#include "supply_boxes\1990.sqf";
+	#include "supply_boxes\1990_us.sqf";
+	#include "supply_boxes\2000.sqf";
+	#include "supply_boxes\modern_pol.sqf";
+	#include "supply_boxes\modern_ger.sqf";
+	#include "supply_boxes\modern_uk.sqf";
+	#include "supply_boxes\modern_us.sqf";
+} foreach ["Land_InfoStand_V1_F", "UK3CB_BAF_MAN_HX58_Container_Green"];
+
+	#include "pilots.sqf";
+	#include "armour.sqf";
+	#include "fst.sqf";
+	#include "HQ.sqf";
+
 if(["medic", typeof player] call BIS_fnc_inString)then{
 
 	_medaction = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
-	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_medaction,true] call ace_interact_menu_fnc_addActionToClass;
+	[_x,0,["ACE_MainActions"],_medaction,true] call ace_interact_menu_fnc_addActionToClass;
 		
 	player additemtovest "TWC_Item_Medical_SutureKit_20";
 };
@@ -128,7 +136,7 @@ if([player] call TWC_Core_fnc_ismanagement)then{
 
 
 
-	_vic = ["spawn762","Spawn Vehicles","",{[_target] execvm "domination_core\client\sys_player\vehicledrop.sqf"},{leader _player == _player}] call ace_interact_menu_fnc_createAction;
+	_vic = ["spawn762","Spawn Vehicles","",{[_target, true] execvm "domination_core\client\sys_player\vehicledrop.sqf"},{leader player == player}] call ace_interact_menu_fnc_createAction;
 	["UK3CB_BAF_MAN_HX58_Container_Green",0,["ACE_MainActions"],_vic,true] call ace_interact_menu_fnc_addActionToClass;
 
 

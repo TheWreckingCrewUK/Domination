@@ -25,6 +25,12 @@ if(isNil "twc_basepos") then{
 };
 
 
+["ace_captiveStatusChanged", {
+	params ["_unit", "_state", "_reason"];
+	if (isplayer _unit) exitwith {};
+	if ((_unit getVariable ["twc_bluefluff",0]) == 0) exitwith {};
+	deletevehicle _unit;
+}] call CBA_fnc_addEventHandler;
 
 addMissionEventHandler ["EntityKilled", {
 	params ["_unit", "_killer", "_instigator", "_useEffects"];

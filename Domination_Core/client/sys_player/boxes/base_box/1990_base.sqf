@@ -53,7 +53,7 @@ if((typeOf player) in ["1990_British_SectionCommander","1990_RM_British_SectionC
     _tmp_weapons =
     [
         ["UK3CB_BAF_L85A1_SUSAT3D",1],
-        ["ukcw_law80",6],
+        ["ukcw_CUP_launch_APILAS",6],
         ["rhs_weap_fim92",1],
         ["rhs_weap_m72a7",8]
 	];

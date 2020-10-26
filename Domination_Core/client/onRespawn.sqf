@@ -28,6 +28,8 @@ if (!isnil "_nobackpack") then {
 
 [player] call twc_fnc_civfluff_client;
 
+[player, false] execvm "domination_core\client\sys_player\vehicledrop.sqf";
+
 if (!((backpack player) == "")) then {
 	_playerbackpack = [(configFile >> "CfgVehicles" >> typeof player), "backpack", ""] call BIS_fnc_returnConfigEntry;
 	_unit = player;
@@ -75,6 +77,30 @@ if (!((backpack player) == "")) then {
 	};
 };
  
+[] spawn {
+	sleep 5;
+	//set radios again
+//	_radio = player getvariable ["twc_radio", ""];
+//	if (_radio != "") then {
+		_radio = "";
+		{
+			if (["acre", _x] call BIS_fnc_inString) exitwith {_radio = _x};
+		} foreach ((uniformitems player) + (vestitems player));
+//	};
+	if (_radio != "") then {
+		_channelNumber = (group player) getvariable ["twc_groupradchannel", -1];
+		if (_channelnumber == -1) then {
+			_channelNumber = (ceil (random 20)) + 1;
+			(group player) setvariable ["twc_groupradchannel", _channelNumber, true];
+		};
+		//_radioID = [_radio] call acre_api_fnc_getRadioByType; 
+		_radioID = _radio;
+		_switchChannel = [_radioID, _channelNumber] call acre_api_fnc_setRadioChannel; 
+		Hint parseText format ["<t color='#d0dd00' size='1.2' shadow='1' shadowColor='#000000' align='center'>Radio Set</t><br/><t color='#d0dd00' size='0.8' shadow='1' shadowColor='#565656' align='left'>Radio:</t><t color='##013bb6' size='0.8' shadow='1' shadowColor='#565656' align='right'>%1</t><br/><t color='#d0dd00' size='0.8' shadow='1' shadowColor='#565656' align='left'>Channel:</t><t color='##013bb6' size='0.8' shadow='1' shadowColor='#565656' align='right'>%2</t>",_radioID,_channelNumber];
+		
+	};
+
+};
  
  _armourcrew = ["Modern_British_VehicleCrew",
  "Modern_British_VehicleCommander",

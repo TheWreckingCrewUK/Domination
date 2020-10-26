@@ -21,6 +21,8 @@ twc_fnc_pubstartingloadout = compile preprocessfilelinenumbers "Domination_Core\
 
 twc_fnc_playerheadshot = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_playerheadshot.sqf";
 
+twc_fnc_vehicledrop = compile preprocessfilelinenumbers "Domination_Core\client\sys_player\vehicledrop.sqf";
+
 
 twc_fnc_cantp1 = {
 
@@ -51,6 +53,21 @@ twc_fnc_isplayeratbase = {
 	_return = false;
 	
 	if ((player distance (twc_basepos)) < (500)) then {
+		_return = true;
+	};
+	_return;
+};
+
+twc_fnc_isplayeratbaseorpb = {
+
+	_return = false;
+	
+	if ((player distance (twc_basepos)) < (500)) then {
+		_return = true;
+	};
+	
+	_markerstring = ("respawn_"+ (str (side player)) + "_forwardbase");
+	if ((player distance (getmarkerpos _markerstring)) < (500)) then {
 		_return = true;
 	};
 	_return;

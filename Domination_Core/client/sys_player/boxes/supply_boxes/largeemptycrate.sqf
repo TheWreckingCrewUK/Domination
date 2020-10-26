@@ -12,9 +12,7 @@
 
 _boxClass = "B_supplyCrate_F";
 
-_box = _boxClass createVehicle (if (count (player nearobjects ["Land_InfoStand_V1_F", 200]) > 0) then {
-(getPos AmmoBoxSpawner)} else 
-{(getPos player)});
+_box = _boxClass createVehicle (call twc_fnc_getammospawnloc);
 
 clearWeaponCargoGlobal _box;
 clearBackpackCargoGlobal _box;
