@@ -17,7 +17,7 @@
 //Recieved Parameters
 params ["_mortar"];
 
-while {(count twc_mortar_targetlist) == 0} do {
+while {((count twc_mortar_targetlist) == 0) && ((twc_enemyhasradio) == 1)} do {
 	sleep 20;
 };
 
@@ -55,7 +55,9 @@ for "_i" from 1 to _total do {
 //_random = ( 150 + (random 50)) + ((_mortar distance _targetpos) / 30);
  _firepos = _targetpos;
  _mortar doArtilleryFire [_firepos , currentmagazine _mortar, 1]; 
- waituntil {_ammo > ((gunner _mortar) ammo (currentmuzzle (gunner _mortar)))}; 
+while {(!(_ammo > ((gunner _mortar) ammo (currentmuzzle (gunner _mortar)))))} do {
+	sleep 2;
+};
 
  };
  

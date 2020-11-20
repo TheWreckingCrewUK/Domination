@@ -1,16 +1,16 @@
 if((typeOf player) in ["Modern_Artillery_Gunner","Modern_Artillery_Commander"])then{
 
 	_artaction = ["SpawnsmallcharlieCreate","Spawn L16 Smoke Rounds","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\staticL16_Smoke.sqf"},_condition] call ace_interact_menu_fnc_createAction;
-	[_x,0,["ACE_MainActions"],_artaction,true] call ace_interact_menu_fnc_addActionToClass;
+	[_x,0,["ACE_MainActions", "ammospawn", "ammospawnsupport"],_artaction,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	_artaction1 = ["Spawnheartscrateus","Spawn L16 Ilumination Rounds","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\staticL16_Illum.sqf"},_condition] call ace_interact_menu_fnc_createAction;
-	[_x,0,["ACE_MainActions"],_artaction1,true] call ace_interact_menu_fnc_addActionToClass;
+	[_x,0,["ACE_MainActions", "ammospawn", "ammospawnsupport"],_artaction1,true] call ace_interact_menu_fnc_addActionToClass;
 
 	_artaction2 = ["SpawnmedCreate","Spawn L16 HE Rounds","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\staticL16_HE.sqf"},_condition] call ace_interact_menu_fnc_createAction;
-	[_x,0,["ACE_MainActions"],_artaction2,true] call ace_interact_menu_fnc_addActionToClass;
+	[_x,0,["ACE_MainActions", "ammospawn", "ammospawnsupport"],_artaction2,true] call ace_interact_menu_fnc_addActionToClass;
 	
 		_artaction3 = ["SpawnrepCreate","Spawn Spare Tires","",{execvm "Domination_Core\client\sys_player\boxes\supply_boxes\RepairKit.sqf"},_condition] call ace_interact_menu_fnc_createAction;
-	[_x,0,["ACE_MainActions"],_artaction3,true] call ace_interact_menu_fnc_addActionToClass;
+	[_x,0,["ACE_MainActions", "ammospawn", "ammospawnsupport"],_artaction3,true] call ace_interact_menu_fnc_addActionToClass;
 	
 
 };
@@ -72,10 +72,7 @@ if((typeOf player) in ["Modern_UKSF_Squadleader","Modern_UKSF_2IC"])then{
 
 
 	
-	_vehaction = ["vehiclespawn","Spawn Vehicles","",{},_condition] call ace_interact_menu_fnc_createAction;
-	[_x,0,["ACE_MainActions"],_vehaction,true] call ace_interact_menu_fnc_addActionToClass;
-	
-	
+
 
 	_alphaaction = ["SpawnsmallAlphaCreate","Spawn Small UK Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallcrateuk.sqf"},_condition] call ace_interact_menu_fnc_createAction;
 	[_x,0,["ACE_MainActions","ammospawn", "ammospawnlight"],_alphaaction,true] call ace_interact_menu_fnc_addActionToClass;

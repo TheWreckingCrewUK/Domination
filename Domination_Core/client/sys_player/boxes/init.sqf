@@ -35,6 +35,7 @@ twc_fnc_getammospawnloc = {
 
 
 //"ACE_MainActions","weaponspawn"
+//"ACE_MainActions","vehiclespawn"
 //"ACE_MainActions","ammospawn","ammospawnlight"
 //"ACE_MainActions","ammospawn","ammospawnsupport"
 //"ACE_MainActions","ammospawn","ammospawnheavy"
@@ -53,6 +54,9 @@ _hasheavy = false;
 	
 	_ammoaction3 = ["ammospawnsupport","Support Ammo","",{},_condition] call ace_interact_menu_fnc_createAction;
 	[_x,0,["ACE_MainActions","ammospawn"],_ammoaction3,true] call ace_interact_menu_fnc_addActionToClass;
+		
+	_vehaction = ["vehiclespawn","Spawn Vehicles","",{},{true}] call ace_interact_menu_fnc_createAction;
+	["Land_InfoStand_V1_F",0,["ACE_MainActions"],_vehaction,true] call ace_interact_menu_fnc_addActionToClass;
 	
 	if (!_hasheavy) then {
 		_ammoaction = ["weaponspawn","Spawn Heavy Weapons","",{},_condition] call ace_interact_menu_fnc_createAction;
@@ -63,8 +67,6 @@ _hasheavy = false;
 
 		_twc_repveh2 = ["repveh","Repair Nearby Vehicles","",{[_target] execvm "domination_core\client\sys_player\repairvehicle.sqf"},{true}] call ace_interact_menu_fnc_createAction;
 		["Land_InfoStand_V1_F",0,["ACE_MainActions"],_twc_repveh2,true] call ace_interact_menu_fnc_addActionToClass;
-
-		_hasheavy = true;
 	};
 	
 	
@@ -85,20 +87,22 @@ _hasheavy = false;
 	#include "supply_boxes\modern_ger.sqf";
 	#include "supply_boxes\modern_uk.sqf";
 	#include "supply_boxes\modern_us.sqf";
-} foreach ["Land_InfoStand_V1_F", "UK3CB_BAF_MAN_HX58_Container_Green"];
 
+	if(["medic", typeof player] call BIS_fnc_inString)then{
+
+		_medaction = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
+		[_x,0,["ACE_MainActions"],_medaction,true] call ace_interact_menu_fnc_addActionToClass;
+			
+		player additemtovest "TWC_Item_Medical_SutureKit_20";
+	};
+	
 	#include "pilots.sqf";
 	#include "armour.sqf";
 	#include "fst.sqf";
 	#include "HQ.sqf";
 
-if(["medic", typeof player] call BIS_fnc_inString)then{
-
-	_medaction = ["SpawnmedCreate","Spawn Medical Crate","",{execvm "domination_core\client\sys_player\boxes\supply_boxes\smallMedical.sqf"},{true}] call ace_interact_menu_fnc_createAction;
-	[_x,0,["ACE_MainActions"],_medaction,true] call ace_interact_menu_fnc_addActionToClass;
-		
-	player additemtovest "TWC_Item_Medical_SutureKit_20";
-};
+	_hasheavy = true;
+} foreach ["Land_InfoStand_V1_F", "UK3CB_BAF_MAN_HX58_Container_Green"];
 
 
 

@@ -1,8 +1,9 @@
 //Clearing Script
 
 //box Crate removal
+_pos = (call twc_fnc_getammospawnloc);
 {
-	_arr = nearestObjects [AmmoBoxSpawner, [_x], 30];
+	_arr = nearestObjects [_pos, [_x], 30];
 	{
 		if (!((typeof _x) == "UK3CB_BAF_MAN_HX58_Container_Green")) then {
 			deletevehicle _x;

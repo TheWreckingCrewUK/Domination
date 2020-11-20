@@ -20,9 +20,26 @@ twc_fnc_findsneakypos = compile preprocessfilelinenumbers "Domination_Core\serve
 twc_fnc_pubstartingloadout = compile preprocessfilelinenumbers "Domination_Core\client\sys_player\fnc_startingloadout.sqf";
 
 twc_fnc_playerheadshot = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_playerheadshot.sqf";
+twc_fnc_setradio = compile preprocessfilelinenumbers "Domination_Core\client\func\fnc_setradio.sqf";
 
 twc_fnc_vehicledrop = compile preprocessfilelinenumbers "Domination_Core\client\sys_player\vehicledrop.sqf";
 
+twc_issidenearby = {
+	_check = true;
+	{
+		if ((side _x) == (side player)) then {
+			if ((_x distance player) > 40) then {_check = false};
+		};
+	} foreach (allplayers);
+	if (!_check) then {
+	
+		_title  = "<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>Time Skip</t>"; 
+
+		 _text1 = "<br />All members of the side need to be nearby to switch team";
+		hint parsetext (_title + _text1);
+	};
+	_check;
+};
 
 twc_fnc_cantp1 = {
 

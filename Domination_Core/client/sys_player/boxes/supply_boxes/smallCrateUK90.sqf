@@ -12,12 +12,11 @@ _boxClass = "ACE_Box_Ammo";
 
 if (isnil "_box") then {
 	_box = _boxClass createVehicle (call twc_fnc_getammospawnloc);
+	clearWeaponCargoGlobal _box;
+	clearBackpackCargoGlobal _box;
+	clearMagazineCargoGlobal _box;
+	clearitemCargoGlobal _box;
 };
-
-clearWeaponCargoGlobal _box;
-clearBackpackCargoGlobal _box;
-clearMagazineCargoGlobal _box;
-clearitemCargoGlobal _box;
 
 //Weapons
 _box AddWeaponCargoGlobal ["rhs_weap_m72a7",4];
