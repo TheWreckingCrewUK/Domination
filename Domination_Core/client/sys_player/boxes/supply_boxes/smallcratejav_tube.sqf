@@ -7,7 +7,7 @@
 *
 */
 
-if (!(["uksf", typeof player] call BIS_fnc_inString)) then {
+if (!(["fst", typeof player] call BIS_fnc_inString)) then {
 	 if (isnil "twc_javtubetimeout") then {
 	 twc_javtubetimeout = - 3600;
 	 publicVariable "twc_javtubetimeout";

@@ -68,6 +68,8 @@ if(isNil "twc_artycount") then{
 
 twc_artycount = twc_artycount * ( 1+ (random 0.5));
 
+//arty might be causing server slowdown, remove it until arty script is rewritten
+twc_artycount = 0;
 twc_activearty = 0;
 
 //twc_artycount = 0;
@@ -94,7 +96,11 @@ publicVariable "twc_enemyhasradio";
 _tower setVehicleLock "LOCKED";
 //_tower setDamage 0.99;
 
-_tower addEventHandler ["hit",{params ["_veh", "_source", "_damage", "_instigator"];if (((damage _veh) < 0.2) || (twc_enemyhasradio == 0) || (twc_currentradiotower != _veh)) exitwith {};"Command Vehicle Disabled. The enemies can no longer call in Reinforcements. Well done!" remoteExec ["hint"];
+_tower addEventHandler ["hit",{params ["_veh", "_source", "_damage", "_instigator"];if ((((damage _veh) < 0.2) && ((_veh getHitPointDamage "hitEngine") < 0.5)) || (twc_enemyhasradio == 0) || (twc_currentradiotower != _veh)) exitwith {};"Command Vehicle Disabled. The enemies can no longer call in Reinforcements. Well done!" remoteExec ["hint"];
+twc_enemyhasradio = 0;
+publicVariable "twc_enemyhasradio"; "radioMarker" setMarkerColor "colorWEST"; twc_towerCount = 1; deleteVehicle reinforcementsTrg}];
+
+_tower addEventHandler ["killed",{params ["_veh", "_source", "_damage", "_instigator"];if ((twc_enemyhasradio == 0) || (twc_currentradiotower != _veh)) exitwith {};"Command Vehicle Disabled. The enemies can no longer call in Reinforcements. Well done!" remoteExec ["hint"];
 twc_enemyhasradio = 0;
 publicVariable "twc_enemyhasradio"; "radioMarker" setMarkerColor "colorWEST"; twc_towerCount = 1; deleteVehicle reinforcementsTrg}];
 
@@ -620,22 +626,17 @@ _trg setTriggerArea [600, 600, 0, false];
 _trg setTriggerActivation ["EAST", "PRESENT", false];
 _trg setTriggerTimeout [10,10,10,True];
 _trg setTriggerStatements ["((EAST countSide thisList) < 15 && ({(vehicle _x) isKindOf 'landVehicle' && side _x == EAST} count thisList <5))","twc_areaCleared = 1", ""];
-/*
-reinforcementsTrg = createTrigger ["reinforcementsTrg", _pos];
-reinforcementsTrg setTriggerArea [3500, 3500, 0, false];
-reinforcementsTrg setTriggerActivation ["WEST", "PRESENT", true];
-reinforcementsTrg setTriggerTimeout [1,1,1,True];
-reinforcementsTrg setTriggerStatements ["this", "player setdamage 1",""];
-*/
-_timer = 200 +(random 200);
 
+
+_timer = 200 +(random 200);
+/*
 reinforcementsTrg = createTrigger ["EmptyDetector", _pos];
 reinforcementsTrg setTriggerArea [2700, 2700, 0, false];
 reinforcementsTrg setTriggerActivation ["WEST", "EAST D", true];
 reinforcementsTrg setTriggerTimeout [_timer,_timer,_timer, true];
 reinforcementsTrg setTriggerStatements ["this && (time > (missionnamespace getvariable ['twc_lastattack', 1800]))","if (!isserver) exitwith {};[getPos thisTrigger, thislist, true] call twc_fnc_spawnReinforcements",""];
+*/
 
-//[getPos thisTrigger] call twc_fnc_spawnReinforcements
 
 
 
@@ -643,7 +644,7 @@ reinforcementsTrg setTriggerStatements ["this && (time > (missionnamespace getva
 _trg = createTrigger ["EmptyDetector", _pos];
 _trg setTriggerArea [600, 600, 0, false];
 _trg setTriggerActivation ["east", "PRESENT", false];
-_trg setTriggerTimeout [10,10,10,True];
+_trg setTriggerTimeout [20,20,20,false];
 _trg setTriggerStatements ["((east countSide thisList) < 15 && ({(vehicle _x) isKindOf 'landVehicle' && side _x == east} count thisList <5))","twc_areaCleared = 1; _cars = thistrigger getvariable ['twccivcars', []];{deletevehicle _x} foreach _cars;", ""];
 
 _trg setvariable ["twccivcars", _civcars];

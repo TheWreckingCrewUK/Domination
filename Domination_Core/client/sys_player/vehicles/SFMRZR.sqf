@@ -42,31 +42,27 @@ clearitemCargoGlobal _veh;
 _veh AddWeaponCargoGlobal ["rhs_weap_m72a7",2];
 _veh AddWeaponCargoGlobal ["UK3CB_BAF_Javelin_Slung_Tube",2];
 
-
-_veh AddMagazineCargoGlobal ["UGL_FlareWhite_F",2];
-_veh AddMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",7];
-_veh AddMagazineCargoGlobal ["1Rnd_Smoke_Grenade_shell",3];
-
 _veh addItemCargoGlobal ["DemoCharge_Remote_Mag",1];
 _veh addItemCargoGlobal ["ACE_Clacker",1];
 _veh addItemCargoGlobal ["ACE_EntrenchingTool",1];
-_veh addItemCargoGlobal ["ACE_fieldDressing",25];
+_veh addItemCargoGlobal ["ACE_fieldDressing",20];
 _veh addItemCargoGlobal ["ACE_elasticBandage",15];
 _veh addItemCargoGlobal ["ACE_packingBandage",15];
-_veh addItemCargoGlobal ["ACE_salineIV_250",10];
 _veh addItemCargoGlobal ["ACE_epinephrine",3];
 _veh addItemCargoGlobal ["ACE_morphine",3];
 _veh addItemCargoGlobal ["HandGrenade",2];
 _veh addItemCargoGlobal ["SmokeShell",3];
 _veh addItemCargoGlobal ["SmokeShellRed",3];
 
-_fsgun = ["UK3CB_BAF_L7A2",1];
+_fsgun = ["twc_rhs_weap_m240G_mdo_lazer",1];
 _fsmag = ["UK3CB_BAF_762_100Rnd_T",5];
 
-if ((random 1) < 0.5) then {
-	_fsgun = ["UK3CB_BAF_L110A2_ELCAN3D",1];
-	_fsmag = ["UK3CB_BAF_556_200Rnd_T",5];
+if ((random 1) < 0.3) then {
+	_fsgun = ["rhs_weap_M320",1];
+	_fsmag = ["1Rnd_HE_Grenade_shell",10];
 };
 
 _veh AddWeaponCargoGlobal _fsgun;
 _veh AddMagazineCargoGlobal _fsmag;
+
+[_veh, player, 4] call twc_fnc_genericfillvehicle;

@@ -433,7 +433,6 @@ if (typeOf vehicle player == "Modern_British_FSTCommander") then {
     _tmp_weapons =
     [
         ["UK3CB_BAF_L85A2_UGL_ELCAN3D",1],
-        ["CUP_SOFLAM",1],
 		["rhsusf_weap_glock17g4",1]
 	];
 
@@ -474,8 +473,6 @@ if (typeOf vehicle player == "Modern_British_FSTCommander") then {
     [
 		["UK3CB_BAF_L85A2_RIS_ELCAN3D",1],
 		["rhsusf_weap_glock17g4",1],
-		["UK3CB_BAF_Javelin_Slung_Tube",5],
-		["UK3CB_BAF_Javelin_CLU",1],
 		["rhs_weap_fim92",1],
 		["rhs_weap_m72a7",1]
     ];

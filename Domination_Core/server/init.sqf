@@ -7,6 +7,7 @@ publicvariable "twc_missionname";
 #include "func\init.sqf";
 #include "sys_basedefence\init.sqf";
 #include "sys_mechanised\init.sqf";
+#include "sys_vehicleRespawn\init.sqf";
 
 CIVILIAN setFriend [EAST, 1];
 

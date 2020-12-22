@@ -1,4 +1,5 @@
 #include "boxes\init.sqf";
+#include "loadouts\init.sqf";
 #include "landscaping.sqf";
 
 

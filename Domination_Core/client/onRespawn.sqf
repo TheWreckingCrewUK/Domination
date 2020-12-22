@@ -121,8 +121,6 @@ if ((group player getvariable ["twc_ismechanised", 0]) == 1) then {
 		};
 	
 };
-sleep 5;
-
 
  
 if ((random 1)< 0.1) then {
@@ -162,6 +160,29 @@ if ((random 1)< 0.1) then {
 	if ((player distance artyspawnpos) < 4000) then {
 		twc_mortar_targetlist pushback getpos player;
 		publicVariable "twc_mortar_targetlist";
+		};
+	};
+};
+
+
+
+_firstloadout = missionnamespace getvariable ["twc_hasloadout", false];
+
+if (!_firstloadout) then {
+	twc_hasloadout = true;
+	if (((["uksf", typeof player] call BIS_fnc_inString) && (!(["70", twc_missionname] call BIS_fnc_inString)) && (!(["90", twc_missionname] call BIS_fnc_inString)) && (!(["00", twc_missionname] call BIS_fnc_inString))) || ((typeOf player) in ["Modern_British_Sniper_coin", "Modern_British_Spotter_coin", "Modern_British_FAC", "Modern_British_JetPilot", "Modern_British_HeliPilot","Modern_British_crewchief", "Modern_British_FSTAssistant","Modern_British_FSTForwardObserver","Modern_British_FSTCommander"])) then {
+		[] spawn {
+			_pos = getpos player;
+			waituntil {(player distance _pos) > 3};
+			
+			_team = (group player) getvariable ["twc_groupcountry", "baf"]; 
+			_role = player getvariable ["twc_loadoutrole", ""]; 
+			if (_role != "") then {
+				_var = missionnamespace getvariable [("twc_loadout_" + _team + "_" + _role), []]; 
+				_var call twc_loadout_switchloadout; 
+				[player] call twc_fnc_buildmagarray_set; 
+				[player] call twc_fnc_buildmagarray;
+			};
 		};
 	};
 };

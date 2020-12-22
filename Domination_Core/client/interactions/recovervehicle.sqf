@@ -22,15 +22,16 @@ twc_fnc_flipvehicle = {
 		_neededhelpers = (round ((_mass / 1200) min ((_nearplayers) * 0.6)));
 		
 		if (_helpers >= _neededhelpers) then {
+			sleep 6;
 			_vehicle allowdamage false;
-			sleep 10;
+			sleep 2;
 			_vehicle setpos ((getpos _vehicle) vectoradd [0,0,4]);
 			_vehicle setvectordirandup [vectordir _vehicle, [0,0,1]];
 			
 			_vehicle setpos [((getpos _vehicle) select 0), ((getpos _vehicle) select 1), 0];
 			sleep 5;
-			_vehicle allowdamage true;
 			("Recovery complete.") remoteExec ["hint", _caller];
+			_vehicle allowdamage true;
 		} else {
 			(format ["You need %1 players nearby to recover this vehicle", _neededhelpers]) remoteExec ["hint", _caller];
 		};

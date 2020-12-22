@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2299;
+		nextID=2303;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2291.4607,322.19711,6063.0815};
-		dir[]={-0.88153523,-0.4042531,-0.24403402};
-		up[]={-0.38961774,0.91464067,-0.10785715};
-		aside[]={-0.26680559,1.4522811e-007,0.96379256};
+		pos[]={2278.2893,319.54047,6065.3599};
+		dir[]={-0.27972531,-0.53344131,0.79829371};
+		up[]={-0.17640729,0.84583211,0.50344014};
+		aside[]={0.94377857,-2.5029294e-009,0.33070418};
 	};
 };
 binarizationWanted=0;
@@ -12707,7 +12707,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=86;
+		items=85;
 		class Item0
 		{
 			dataType="Marker";
@@ -16920,7 +16920,7 @@ class Mission
 			side="West";
 			class Entities
 			{
-				items=4;
+				items=6;
 				class Item0
 				{
 					dataType="Object";
@@ -16989,6 +16989,40 @@ class Mission
 					};
 					id=2280;
 					type="Modern_British_logitech";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2277.2979,313.65567,6073.3389};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+						isPlayable=1;
+					};
+					id=2300;
+					type="Modern_British_FSTAssistant";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2279.2979,313.75433,6073.3389};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						skill=0.40000001;
+						isPlayable=1;
+					};
+					id=2301;
+					type="Modern_British_FSTAssistant";
 				};
 			};
 			class Attributes
@@ -17243,162 +17277,6 @@ class Mission
 								};
 							};
 							value="QM";
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item85
-		{
-			dataType="Group";
-			side="West";
-			class Entities
-			{
-				items=7;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2267.55,311.89743,6059.8071};
-					};
-					side="West";
-					flags=7;
-					class Attributes
-					{
-						skill=0.44999999;
-						rank="CORPORAL";
-						isPlayable=1;
-					};
-					id=2292;
-					type="Modern_UKSF_Squadleader";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2272.55,311.75659,6056.8071};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-						isPlayable=1;
-					};
-					id=2293;
-					type="Modern_UKSF_Base";
-				};
-				class Item2
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2274.55,311.7966,6056.8071};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-						isPlayable=1;
-					};
-					id=2294;
-					type="Modern_UKSF_Grenadier";
-				};
-				class Item3
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2276.55,311.84415,6056.8071};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-						isPlayable=1;
-					};
-					id=2295;
-					type="Modern_UKSF_2IC";
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2278.55,311.90283,6056.8071};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-						isPlayable=1;
-					};
-					id=2296;
-					type="Modern_UKSF_Base";
-				};
-				class Item5
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2280.55,311.94974,6056.8071};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-						isPlayable=1;
-					};
-					id=2297;
-					type="Modern_UKSF_Marksman";
-				};
-				class Item6
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={2282.55,311.96573,6056.8071};
-					};
-					side="West";
-					flags=5;
-					class Attributes
-					{
-						skill=0.40000001;
-						isPlayable=1;
-					};
-					id=2298;
-					type="Modern_UKSF_Medic";
-				};
-			};
-			class Attributes
-			{
-			};
-			id=2291;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="groupID";
-					expression="[_this, _value] call CBA_fnc_setCallsign";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="SF";
 						};
 					};
 				};
