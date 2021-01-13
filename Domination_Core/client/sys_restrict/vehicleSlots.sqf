@@ -523,7 +523,7 @@ _list=[
 		]],10
 	],
 	
-				["twc_c5_hercules", [
+				["CUP_B_C130J_GB", [
 		["driver", 
 			["Modern_British_JetPilot"]
 		]],5

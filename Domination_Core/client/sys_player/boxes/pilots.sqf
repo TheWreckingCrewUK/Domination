@@ -85,7 +85,7 @@ if((typeOf player) in ["Modern_British_JetPilot", "2000_British_JetPilot"])then{
 
 	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Hercules","",{
 	
-	["twc_c5_hercules"] execvm "domination_core\client\sys_player\vehicles\plane.sqf"
+	["CUP_B_C130J_GB"] execvm "domination_core\client\sys_player\vehicles\plane.sqf"
 	
 	},_planecondlow] call ace_interact_menu_fnc_createAction;
 	[_x,0,["ACE_MainActions", "vehiclespawn"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;

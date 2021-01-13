@@ -1,5 +1,7 @@
 #include "bluforloadouts.sqf";
 
+twc_fnc_getradiotype = compile preprocessfilelinenumbers "Domination_Core\client\sys_player\loadouts\fn_getradiotype.sqf";
+
 if((typeOf player) in ["Modern_British_Sniper", "Modern_British_Spotter"])then{
 
 	_ammoaction = ["teamswitch","Switch Team","",{},{true}] call ace_interact_menu_fnc_createAction;

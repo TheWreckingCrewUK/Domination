@@ -19,21 +19,24 @@ _backpackradios = [];
 
 {
 	if ("ACRE" in _x) then {
-		_uniformradios pushback _x;
+		_radio = [_x] call twc_fnc_getradiotype;
+		_uniformradios pushback _radio;
 		//systemchat _x;
 	};
 } foreach uniformitems player;
 
 {
 	if ("ACRE" in _x) then {
-		_vestradios pushback _x;
+		_radio = [_x] call twc_fnc_getradiotype;
+		_vestradios pushback _radio;
 		//systemchat _x;
 	};
 } foreach vestitems player;
 
 {
 	if ("ACRE" in _x) then {
-		_backpackradios pushback _x;
+		_radio = [_x] call twc_fnc_getradiotype;
+		_backpackradios pushback _radio;
 		//systemchat _x;
 	};
 } foreach backpackitems player;
@@ -48,7 +51,6 @@ if (!("ACE_EarPlugs" in (_profile select 0))) then {
 if (!("ACE_Canteen" in (_profile select 0))) then {
 //	player additemtouniform "ACE_Canteen";
 };
-	
 {
 		player additemtouniform _x;
 
@@ -89,10 +91,12 @@ if (!("ACE_Canteen" in (_profile select 0))) then {
 		player additemtobackpack _x;
 	};
 } foreach (_profile select 2);
-
 player removeitem "ACE_Canteen_Empty";
 player removeitem "ACE_Canteen_Half";
 player removeitem "ACE_Canteen";
 
+	
+
 //systemchat "loaded loadout";
+
 call twc_fnc_setradio;
