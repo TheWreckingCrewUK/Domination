@@ -38,11 +38,11 @@ twc_maxObjDistance = 6000;
 crampresent = 1;
 publicVariable "crampresent";
 
-tank = ["rhs_t72be_tv","rhs_t72be_tv","rhs_t72be_tv", "rhs_t80um", "rhs_t80um", "rhs_t80um", "rhs_t80um", "rhs_t90a_tv", "rhs_t90sab_tv", "rhs_t90saa_tv"];
+tank = ["CUP_O_T72_RU","CUP_O_T72_RU","CUP_O_T72_RU", "CUP_O_T90_RU", "CUP_O_T90_RU", "CUP_O_T90_RU", "CUP_O_T90_RU", "CUP_O_T90_RU", "CUP_O_T90_RU", "CUP_O_T90_RU"];
 
-ifv = ["rhs_bmp2d_msv"];
+ifv = ["CUP_O_BMP3_RU"];
 
-apc = ["rhs_btr80a_msv", "rhs_btr80_msv"];
+apc = ["CUP_O_BTR80A_GREEN_RU", "CUP_O_BTR80_GREEN_RU"];
 
 twc_wdveh = 1;
 publicVariable "twc_wdveh";

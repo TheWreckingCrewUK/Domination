@@ -5,7 +5,7 @@ if (["british", typeof player] call BIS_fnc_inString) then {
 	player forceadduniform "UK3CB_BAF_U_Smock_MTP";
 	{player additemtouniform _x} foreach _uniformitems;
 	if ((headgear player) == "") then {
-		player addHeadgear (["rhs_beanie_green", "rhsusf_bowman_cap"] call bis_fnc_selectrandom);
+		player addHeadgear (["CUP_H_SLA_BeanieGreen", "CUP_H_FR_Headset"] call bis_fnc_selectrandom);
 	};
 } else {
 	

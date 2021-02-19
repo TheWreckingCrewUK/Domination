@@ -18,7 +18,7 @@ squadAA = (configfile >> "CfgGroups" >> "East" >> "CUP_O_TK" >> "Infantry" >> "C
 
 tankaaCombined = (configfile >> "CfgGroups" >> "East" >> "CUP_O_TK" >> "Armored" >> "CUP_O_TK_T55Platoon");
 
-tank = ["CUP_O_T55_TK", "rhs_t72ba_tv"];
+tank = ["CUP_O_T55_TK", "CUP_O_T72_RU"];
 
 ifv = ["CUP_O_BMP1P_TKA", "CUP_O_BMP1_TKA"];
 

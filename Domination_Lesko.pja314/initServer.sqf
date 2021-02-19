@@ -19,11 +19,11 @@ publicVariable "twc_wdveh";
 //add in an object name and the game will create a location there and spawn enemies from it
 customlocations = [];
 
-tank = ["rhs_t72be_tv", "rhs_t80um", "rhs_t90a_tv"];
+tank = ["CUP_O_T72_RU", "CUP_O_T90_RU", "CUP_O_T90_RU"];
 
-ifv = ["rhs_bmp2d_msv", "rhs_bmp1_msv"];
+ifv = ["CUP_O_BMP3_RU", "CUP_O_BMP2_RU"];
 
-apc = ["rhs_btr80a_msv", "rhs_btr80_msv"];
+apc = ["CUP_O_BTR80A_GREEN_RU", "CUP_O_BTR80_GREEN_RU"];
 
 twc_canlandattack = 1;
 

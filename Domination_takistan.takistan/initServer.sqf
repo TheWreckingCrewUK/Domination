@@ -10,11 +10,11 @@ _script = execVM "Domination_Core\SHK_pos\shk_pos_init.sqf";
 
 twc_maxObjDistance = 7000;
 
-tank = ["rhs_t72bd_tv", "rhs_t80uk", "rhs_t80", "rhs_t90a_tv"];
+tank = ["CUP_O_T72_RU", "CUP_O_T90_RU", "CUP_O_T90_RU", "CUP_O_T90_RU"];
 
-ifv = ["rhs_bmp2d_msv", "rhs_bmp1_msv"];
+ifv = ["CUP_O_BMP3_RU", "CUP_O_BMP2_RU"];
 
-apc = ["rhs_btr80a_msv", "rhs_btr80_msv"];
+apc = ["CUP_O_BTR80A_GREEN_RU", "CUP_O_BTR80_GREEN_RU"];
 
 twc_aosToComplete = 3;
 twc_enemyFlag = "Faction_CUP_RU";

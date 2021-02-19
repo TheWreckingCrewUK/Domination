@@ -14,11 +14,11 @@ twc_armourcount = -100;
 publicVariable "twc_armourcount";
 
 
-tank = ["rhs_t90a_tv","rhs_t80uk","rhs_t80bvk"];
+tank = ["CUP_O_T90_RU","CUP_O_T90_RU","CUP_O_T90_RU"];
 
-ifv = ["rhs_bmp3_late_msv", "rhs_bmp3mera_msv", "rhs_bmp2k_msv"];
+ifv = ["CUP_O_BMP3_RU", "CUP_O_BMP3_RU", "CUP_O_BMP2_RU"];
 
-apc = ["rhs_btr80a_vv"];
+apc = ["CUP_O_BTR80A_GREEN_RU"];
 
 aa = ["CUP_O_BMP2_ZU_TKA", "CUP_O_ZSU23_SLA"];
 
