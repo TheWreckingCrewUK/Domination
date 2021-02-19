@@ -20,31 +20,29 @@ clearMagazineCargoGlobal _box;
 clearitemCargoGlobal _box;
 
 //Weapons
-_box AddWeaponCargoGlobal ["rhs_weap_M136",2];
-_box AddMagazineCargoGlobal ["rhs_fim92_mag",1];
+_box AddWeaponCargoGlobal ["CUP_launch_M136",2];
+
 
 _box AddMagazineCargoGlobal ["ACE_SpareBarrel",1];
 
 //supplies
 
-_box AddMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855_Stanag",20];
-_box AddMagazineCargoGlobal ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",5];
+_box AddMagazineCargoGlobal ["30Rnd_556x45_Stanag",20];
+_box AddMagazineCargoGlobal ["30Rnd_556x45_Stanag_Tracer_Red",5];
 
-_box AddMagazineCargoGlobal ["rhs_mag_smaw_HEAA",6];
-_box AddMagazineCargoGlobal ["rhs_mag_smaw_HEDP",6];
-_box AddMagazineCargoGlobal ["rhs_mag_smaw_SR",3];
+_box AddMagazineCargoGlobal ["CUP_SMAW_HEAA_M",6];
+_box AddMagazineCargoGlobal ["CUP_SMAW_HEDP_M",6];
+_box AddMagazineCargoGlobal ["CUP_SMAW_Spotting",3];
 
 _box AddMagazineCargoGlobal ["UGL_FlareWhite_F",5];
 _box AddMagazineCargoGlobal ["1Rnd_HE_Grenade_shell",20];
 _box AddMagazineCargoGlobal ["1Rnd_Smoke_Grenade_shell",5];
 
-_box AddMagazineCargoGlobal ["rhsusf_200Rnd_556x45_soft_pouch",5];
+_box AddMagazineCargoGlobal ["CUP_200Rnd_TE4_Red_Tracer_556x45_M249",5];
 
-_box AddMagazineCargoGlobal ["rhsusf_20Rnd_762x51_m118_special_Mag",5];
+_box AddMagazineCargoGlobal ["CUP_20Rnd_762x51_DMR",5];
 
-_box AddMagazineCargoGlobal ["rhsusf_mag_15Rnd_9x19_JHP",10];
-_box AddMagazineCargoGlobal ["rhsusf_8Rnd_00Buck",5];
-_box AddMagazineCargoGlobal ["rhsusf_8Rnd_Slug",5];
+_box AddMagazineCargoGlobal ["CUP_15Rnd_9x19_M9",10];
 
 _box AddMagazineCargoGlobal ["CUP_5Rnd_762x51_M24",10];
 

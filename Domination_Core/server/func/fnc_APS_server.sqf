@@ -1,12 +1,7 @@
 
-twc_smokegen = {[(_this select 0), "rhs_weap_smokegen"] call BIS_fnc_fire;
-//systemchat "exhaust smoke";
-};
+twc_smokegen = {};
 
-twc_smoketurret = {[(_this select 0), "rhs_weap_902a"] call BIS_fnc_fire;
-[(_this select 0), "rhs_weap_902b"] call BIS_fnc_fire;
-//systemchat "turret smoke";
-};
+twc_smoketurret = {};
 
 twc_revealtotank = {
 params ["_player", "_tank", "_amount"];

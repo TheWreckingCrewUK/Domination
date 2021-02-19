@@ -18,7 +18,7 @@
 
 		_group1 = createGroup East;  
 		 
-		_driver = _group1 createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
+		_driver = _group1 createUnit ["CUP_O_RU_Pilot_VDV_M_EMR", _spawnPos,[], 0.3,"NONE"];  
 		 
 		_driver moveInDriver _plane; 
 		//systemchat format ["%1", _driver];
@@ -52,10 +52,10 @@ _wp = _group1 addwaypoint [_stagepos , 500];
 					
 					sleep 3;
 					//systemchat "ejecting tank";
-					_vehtype = "rhs_bmd2";
+					_vehtype = "CUP_O_BMP2_RU";
 					if (!(isnil "twc_missionname")) then {
 						if ((["90", twc_missionname] call BIS_fnc_inString) || (["00", twc_missionname] call BIS_fnc_inString)) then {
-							_vehtype = "rhs_bmd1k";
+							_vehtype = "CUP_I_BMP1_TK_GUE";
 						};
 					};
 	for "_i" from 1 to 2 do {

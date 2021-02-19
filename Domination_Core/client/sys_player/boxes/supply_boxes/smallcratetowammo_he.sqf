@@ -20,7 +20,7 @@ clearMagazineCargoGlobal _box;
 clearitemCargoGlobal _box;
 
 //Weapons
-_box AddMagazineCargoGlobal ["ace_compat_rhs_usf3_mag_TOW2",6];
+
 
 
 

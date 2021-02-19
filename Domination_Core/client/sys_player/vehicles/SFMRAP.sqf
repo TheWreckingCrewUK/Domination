@@ -41,19 +41,6 @@ _boxaction = ["deleteCreate","Return Vehicle","",{deleteVehicle this;
 [_veh,0,["ACE_MainActions"],_boxaction] call ace_interact_menu_fnc_addActionToobject;
 
 
-if ((missionnamespace getvariable ["twc_wdveh", 0]) == 0) then {
-	[
-		_veh,
-		["rhs_desert",1], 
-		["DUKE_Hide",1]
-	] call BIS_fnc_initVehicle;
-} else {
-	[
-		_veh,
-		["rhs_woodland",1], 
-		["DUKE_Hide",1]
-	] call BIS_fnc_initVehicle;
-};
 
 clearWeaponCargoGlobal _veh;
 clearBackpackCargoGlobal _veh;
@@ -62,13 +49,13 @@ clearitemCargoGlobal _veh;
 _mult = 1;
 _veh AddMagazineCargoGlobal ["UK3CB_BAF_127_100Rnd",9];
 
-_veh AddWeaponCargoGlobal ["rhs_weap_m72a7",2];
-_veh AddWeaponCargoGlobal ["rhs_weap_maaws_optic",1];
+_veh AddWeaponCargoGlobal ["CUP_launch_M72A6",2];
+_veh AddWeaponCargoGlobal ["CUP_launch_MAAWS_optic",1];
 _veh AddWeaponCargoGlobal ["UK3CB_BAF_Javelin_Slung_Tube",2];
 _veh AddWeaponCargoGlobal ["ACE_Yardage450",1];
 
-_veh AddMagazineCargoGlobal ["rhs_mag_maaws_HEAT",4];
-_veh AddMagazineCargoGlobal ["rhs_mag_maaws_flechette",2];
+_veh AddMagazineCargoGlobal ["CUP_MAAWS_HEAT_M",4];
+
 
 _veh addItemCargoGlobal ["SatchelCharge_Remote_Mag",1];
 _veh addItemCargoGlobal ["ACE_Clacker",1];
@@ -81,11 +68,11 @@ _veh addItemCargoGlobal ["HandGrenade",2];
 _veh addItemCargoGlobal ["SmokeShell",3];
 _veh addItemCargoGlobal ["SmokeShellRed",3];
 
-_fsgun = ["twc_rhs_weap_m240G_mdo_lazer",1];
+_fsgun = ["CUP_lmg_M240_ElcanM143",1];
 _fsmag = ["UK3CB_BAF_762_100Rnd_T",5];
 
 if ((random 1) < 0.3) then {
-	_fsgun = ["rhs_weap_M320",1];
+	_fsgun = ["CUP_glaunch_M320",1];
 	_fsmag = ["1Rnd_HE_Grenade_shell",10];
 };
 

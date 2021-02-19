@@ -21,10 +21,10 @@ _helicount = ceil (((count allplayers) / 8) min 4);
 		[_spawnpos,_enemy, _stagepos, _enemylandingpos] spawn {
 		params ["_spawnpos", "_enemy", "_stagepos", "_enemylandingpos"];
 		_Cargo = [];
-		_helitype = "RHS_Mi8mt_vvsc";
+		_helitype = "CUP_O_Mi8AMT_RU";
 	/*	
 		if ((_num) > 0.3) then {
-			_helitype = "RHS_Mi24P_vvsc";
+			_helitype = "CUP_O_Mi24_P_Dynamic_RU";
 		};
 		*/
 		_plane = createVehicle [_helitype, (([_spawnPos, 200] call CBA_fnc_randPos) vectoradd [0,0,500]), [], 0, "FLY"]; 
@@ -35,7 +35,7 @@ _helicount = ceil (((count allplayers) / 8) min 4);
 
 		_group1 = createGroup East;  
 		 
-		_driver = _group1 createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
+		_driver = _group1 createUnit ["CUP_O_RU_Pilot_VDV_M_EMR", _spawnPos,[], 0.3,"NONE"];  
 		 
 		_driver moveInDriver _plane; 
 		
@@ -45,7 +45,7 @@ _helicount = ceil (((count allplayers) / 8) min 4);
 		_plane setVehicleLock "LOCKEDPLAYER";
 
 		_group2 = createGroup East;
-		_gunner = _group2 createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
+		_gunner = _group2 createUnit ["CUP_O_RU_Pilot_VDV_M_EMR", _spawnPos,[], 0.3,"NONE"];  
 		 
 		_gunner moveIngunner _plane; 
 		//systemchat format ["%1", _driver];
@@ -71,11 +71,7 @@ _helicount = ceil (((count allplayers) / 8) min 4);
 
 
 				_group = [[0,0,0], EAST, squad] call BIS_fnc_spawnGroup;
-	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
-		{
-			_x addHeadgear "rhs_xmas_antlers";
-		} foreach (units _group);
-	};
+
 				
 				{_x moveincargo _plane; _Cargo pushback _x; if (!(_x in crew _plane)) then {deletevehicle _x};} foreach (units _group);
 				
@@ -119,7 +115,7 @@ _helicount = ceil (((count allplayers) / 8) min 4);
 
 		_group1 = createGroup East;  
 		 
-		_driver = _group1 createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
+		_driver = _group1 createUnit ["CUP_O_RU_Pilot_VDV_M_EMR", _spawnPos,[], 0.3,"NONE"];  
 		 
 		_driver moveInDriver _plane; 
 		//systemchat format ["%1", _driver];
@@ -143,11 +139,7 @@ _helicount = ceil (((count allplayers) / 8) min 4);
 			for "_i" from 1 to 2 do {
 
 				_group = [[0,0,0], EAST, squad] call BIS_fnc_spawnGroup;
-	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
-		{
-			_x addHeadgear "rhs_xmas_antlers";
-		} foreach (units _group);
-	};
+
 				
 				{_x moveincargo _plane; _Cargo pushback _x} foreach (units _group);
 				
@@ -199,10 +191,10 @@ _helicount = ceil (((count allplayers) / 8) min 4);
 			
 			
 		_Cargo = [];
-		_helitype = "RHS_Mi24V_UPK23_vdv";
+		_helitype = "CUP_O_Mi24_V_Dynamic_RU";
 	/*	
 		if ((_num) > 0.3) then {
-			_helitype = "RHS_Mi24P_vvsc";
+			_helitype = "CUP_O_Mi24_P_Dynamic_RU";
 		};
 		*/
 		_plane = createVehicle [_helitype, (([_spawnPos, 200] call CBA_fnc_randPos) vectoradd [0,0,500]), [], 0, "FLY"]; 
@@ -213,7 +205,7 @@ _helicount = ceil (((count allplayers) / 8) min 4);
 
 		_group1 = createGroup East;  
 		 
-		_driver = _group1 createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
+		_driver = _group1 createUnit ["CUP_O_RU_Pilot_VDV_M_EMR", _spawnPos,[], 0.3,"NONE"];  
 		 
 		_driver moveInDriver _plane; 
 		
@@ -223,7 +215,7 @@ _helicount = ceil (((count allplayers) / 8) min 4);
 		_plane setVehicleLock "LOCKEDPLAYER";
 
 		_group2 = createGroup East;
-		_gunner = _group2 createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
+		_gunner = _group2 createUnit ["CUP_O_RU_Pilot_VDV_M_EMR", _spawnPos,[], 0.3,"NONE"];  
 		 
 		_gunner moveIngunner _plane; 
 		//systemchat format ["%1", _driver];
@@ -249,11 +241,7 @@ _helicount = ceil (((count allplayers) / 8) min 4);
 
 
 				_group = [[0,0,0], EAST, squad] call BIS_fnc_spawnGroup;
-	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
-		{
-			_x addHeadgear "rhs_xmas_antlers";
-		} foreach (units _group);
-	};
+
 				
 				{_x moveincargo _plane; _Cargo pushback _x; if (!(_x in crew _plane)) then {deletevehicle _x};} foreach (units _group);
 				

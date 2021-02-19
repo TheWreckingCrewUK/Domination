@@ -47,6 +47,6 @@ clearMagazineCargoGlobal _box;
 clearitemCargoGlobal _box;
 
 //Weapons
-_box AddMagazineCargoGlobal ["rhs_mag_maaws_HEAT",6];
-_box AddMagazineCargoGlobal ["rhs_mag_maaws_HE",2];
+_box AddMagazineCargoGlobal ["CUP_MAAWS_HEAT_M",6];
+_box AddMagazineCargoGlobal ["CUP_MAAWS_HEDP_M",2];
 

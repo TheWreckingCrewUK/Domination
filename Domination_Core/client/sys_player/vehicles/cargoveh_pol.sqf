@@ -4,7 +4,7 @@
 
  
  
- _veh = "rhs_kamaz5350_msv" createvehicle _spawnpos;  
+ _veh = "CUP_B_Kamaz_CDF" createvehicle _spawnpos;  
   
  
  
@@ -21,21 +21,21 @@ _spawntext = parsetext (_title + _text1);
 hint _spawntext;
 
 _box = _veh;
-_box AddWeaponCargoGlobal ["rhs_weap_rpg75",3];
+_box AddWeaponCargoGlobal ["CUP_launch_RPG18",3];
 
-_box AddMagazineCargoGlobal ["twc_rhsgref_30rnd_556x45_m21",30];
-_box AddMagazineCargoGlobal ["twc_rhsgref_30rnd_556x45_m21_t",10];
-
-
-_box AddMagazineCargoGlobal ["rhs_rpg7_PG7VL_mag",3];
-_box AddMagazineCargoGlobal ["rhs_rpg7_TBG7V_mag",2];
+_box AddMagazineCargoGlobal ["CUP_30Rnd_556x45_AK",30];
+_box AddMagazineCargoGlobal ["CUP_30Rnd_TE1_Red_Tracer_556x45_AK",10];
 
 
-_box AddMagazineCargoGlobal ["rhs_100Rnd_762x54mmR_7N26",5];
-_box AddMagazineCargoGlobal ["rhs_100Rnd_762x54mmR_green",2];
+_box AddMagazineCargoGlobal ["CUP_PG7VL_M",3];
+_box AddMagazineCargoGlobal ["CUP_TBG7V_M",2];
 
-_box AddMagazineCargoGlobal ["rhs_VOG25",15];
-_box AddMagazineCargoGlobal ["rhs_GRD40_White",5];
+
+_box AddMagazineCargoGlobal ["CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Red_M",5];
+_box AddMagazineCargoGlobal ["CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Red_M",2];
+
+_box AddMagazineCargoGlobal ["CUP_1Rnd_HE_GP25_M",15];
+_box AddMagazineCargoGlobal ["CUP_1Rnd_SMOKE_GP25_M",5];
 
 
 _box addItemCargoGlobal ["ACE_fieldDressing",20];

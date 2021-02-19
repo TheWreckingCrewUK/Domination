@@ -33,7 +33,7 @@ _tankattack = {
 	params [["_spawnpos", [0,0,0]], "_enemy", "_dis2"];
 	
 	
-	_vehtype = ["rhsgref_BRDM2_msv", "rhs_t80um"] call bis_fnc_selectrandom;
+	_vehtype = ["CUP_O_BRDM2_RUS", "CUP_O_T90_RU"] call bis_fnc_selectrandom;
 	
 	
 	_title ="<t color='#ff0000' size='1.2' shadow='1' shadowColor='#000000' align='center'>ENEMY ACTION</t>";
@@ -41,8 +41,8 @@ _tankattack = {
 	_text1 = "<br />ENEMY ARMOURED FORCES CONVERGING ON BASE.<br />PREPARE DEFENCES.";
 	
 	SWITCH (_vehtype) do {
-		case "rhsgref_BRDM2_msv": {_text1 = "<br />ENEMY SCOUT FORCES CONVERGING ON BASE.<br />PREPARE DEFENCES.";};
-		case "rhs_t90a_tv": {_text1 = "<br />ENEMY T90 PLATOON CONVERGING ON BASE.<br />PREPARE DEFENCES.";};
+		case "CUP_O_BRDM2_RUS": {_text1 = "<br />ENEMY SCOUT FORCES CONVERGING ON BASE.<br />PREPARE DEFENCES.";};
+		case "CUP_O_T90_RU": {_text1 = "<br />ENEMY T90 PLATOON CONVERGING ON BASE.<br />PREPARE DEFENCES.";};
 		//DEFAULT {_text1 = "<br />ENEMY FORCES CONVERGING ON BASE.<br />PREPARE DEFENCES.";};
 	};
 	
@@ -90,16 +90,16 @@ _tankattack = {
 _mechattack = {
 	params [["_spawnpos", [0,0,0]], "_enemy", "_dis2"];
 	
-	_vehtype = [["Rhs_tigr_sts_msv", 1], ["Rhs_btr80_msv", 1], ["Rhs_bmp2k_msv", 1], ["rhs_kamaz5350_msv", 4]] call bis_fnc_selectrandom;
+	_vehtype = [["CUP_O_GAZ_Vodnik_AGS_RU", 1], ["CUP_O_BTR80_GREEN_RU", 1], ["CUP_O_BMP_HQ_RU", 1], ["CUP_B_Kamaz_CDF", 4]] call bis_fnc_selectrandom;
 	
 	_title ="<t color='#ff0000' size='1.2' shadow='1' shadowColor='#000000' align='center'>ENEMY ACTION</t>";
 	_text1 = "<br />ENEMY MOTORISED FORCES CONVERGING ON BASE.<br />PREPARE DEFENCES.";
 
 	SWITCH (_vehtype select 0) do {
-		case "Rhs_tigr_sts_msv": {_text1 = "<br />ENEMY MOTORISED FORCES CONVERGING ON BASE.<br />PREPARE DEFENCES.";};
-		case "Rhs_btr80_msv": {_text1 = "<br />ENEMY BTR PLATOON CONVERGING ON BASE.<br />PREPARE DEFENCES.";};
-		case "Rhs_bmp2k_msv": {_text1 = "<br />ENEMY BMP PLATOON CONVERGING ON BASE.<br />PREPARE DEFENCES.";};
-		case "rhs_kamaz5350_msv": {_text1 = "<br />ENEMY MOTORISED COMPANY CONVERGING ON BASE.<br />PREPARE DEFENCES.";};
+		case "CUP_O_GAZ_Vodnik_AGS_RU": {_text1 = "<br />ENEMY MOTORISED FORCES CONVERGING ON BASE.<br />PREPARE DEFENCES.";};
+		case "CUP_O_BTR80_GREEN_RU": {_text1 = "<br />ENEMY BTR PLATOON CONVERGING ON BASE.<br />PREPARE DEFENCES.";};
+		case "CUP_O_BMP_HQ_RU": {_text1 = "<br />ENEMY BMP PLATOON CONVERGING ON BASE.<br />PREPARE DEFENCES.";};
+		case "CUP_B_Kamaz_CDF": {_text1 = "<br />ENEMY MOTORISED COMPANY CONVERGING ON BASE.<br />PREPARE DEFENCES.";};
 		//DEFAULT {_text1 = "<br />ENEMY FORCES CONVERGING ON BASE.<br />PREPARE DEFENCES.";};
 	};
 	
@@ -133,12 +133,8 @@ _mechattack = {
 		_veh setvehiclelock "lockedplayer";
 		
 		for "_i" from 1 to (_vehtype select 1) do {
-			_infgroup =[_spawnPos, EAST, (configfile >> "CfgGroups" >> "East" >> "rhs_faction_msv" >> "rhs_group_rus_msv_infantry_emr" >> "rhs_group_rus_msv_infantry_emr_fireteam")] call BIS_fnc_spawnGroup;
-	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
-		{
-			_x addHeadgear "rhs_xmas_antlers";
-		} foreach (units _group);
-	};
+			_infgroup =[_spawnPos, EAST, (configfile >> "CfgGroups" >> "East" >> "CUP_O_RU" >> "Infantry_EMR" >> "CUP_O_RU_InfSquad_EMR")] call BIS_fnc_spawnGroup;
+
 			{
 				_x moveincargo _veh;
 				_x addEventHandler ["Killed", {

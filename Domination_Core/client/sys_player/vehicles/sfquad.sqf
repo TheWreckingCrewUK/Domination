@@ -13,7 +13,7 @@ _spawntext = parsetext (_title + _text1);
 hint _spawntext;
 
 
-_veh AddWeaponCargoGlobal ["rhs_weap_M136",3];
+_veh AddWeaponCargoGlobal ["CUP_launch_M136",3];
 _veh addItemCargoGlobal ["SmokeShell",3];
 _veh addItemCargoGlobal ["ACE_fieldDressing",10];
 _veh addItemCargoGlobal ["ACE_elasticBandage",5];

@@ -43,7 +43,7 @@ for "_i" from 1 to _num do {
 	if (!(isOnRoad _minepos)) then {
 		_minepos = _minepos vectoradd [0,0, -0.013];
 	};
-	_mine = "Rhs_ammo_pfm1" createvehicle _minepos;
+	_mine = "APERSMine_Range_Mag" createvehicle _minepos;
 	_minelist pushback _mine;
 	
 	if (hasinterface) then {
@@ -60,7 +60,7 @@ for "_i" from 1 to (_num) do {
 	if (!(isOnRoad _minepos)) then {
 		_minepos = _minepos vectoradd [0,0, -0.013];
 	};
-	_mine = "Rhs_ammo_ptm1" createvehicle _minepos;
+	_mine = "APERSMine_Range_Mag" createvehicle _minepos;
 	_mine setdir (random 360);
 	_minelist pushback _mine;
 	

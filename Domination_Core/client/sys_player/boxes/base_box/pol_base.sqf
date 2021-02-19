@@ -4,20 +4,20 @@
     _tmp_weapons =
     [
         ["twc_ak74_pol",1],
-        ["rhs_weap_M136_hedp",5]
+        ["CUP_launch_M136",5]
     ];
 
 	_tmp_magazines =
     [
-        ["twc_rhsgref_30rnd_556x45_m21",50],
-		["twc_rhsgref_30rnd_556x45_m21_t",30],
+        ["CUP_30Rnd_556x45_AK",50],
+		["CUP_30Rnd_TE1_Red_Tracer_556x45_AK",30],
 		["HandGrenade",5]
     ];
 	_tmp_items =
 	[
         ["ACE_MapTools",1],
 		["ACRE_PRC148",1],
-		["rhsusf_ANPVS_14",1]
+		["CUP_NVG_PVS14",1]
 	];
 	
 	_tmp_backpacks = 
@@ -36,8 +36,8 @@
 
 	_tmp_magazines =
     [
-        ["twc_rhsgref_30rnd_556x45_m21",30],
-		["twc_rhsgref_30rnd_556x45_m21_t",10],
+        ["CUP_30Rnd_556x45_AK",30],
+		["CUP_30Rnd_TE1_Red_Tracer_556x45_AK",10],
 		["HandGrenade",5]
     ];
 	_tmp_items =
@@ -71,24 +71,24 @@
     _tmp_weapons =
     [
         ["twc_ak74_gp25_pol",1],
-        ["rhs_weap_rpg75",4]
+        ["CUP_launch_RPG18",4]
     ];
 
 	_tmp_magazines =
     [
-        ["twc_rhsgref_30rnd_556x45_m21",50],
-		["twc_rhsgref_30rnd_556x45_m21_t",20],
-		["rhs_VOG25",30],
-		["rhs_GRD40_White",30],
-		["rhs_GRD40_Green",30],
-		["rhs_GRD40_Red",30],
+        ["CUP_30Rnd_556x45_AK",50],
+		["CUP_30Rnd_TE1_Red_Tracer_556x45_AK",20],
+		["CUP_1Rnd_HE_GP25_M",30],
+		["CUP_1Rnd_SMOKE_GP25_M",30],
+		["CUP_1Rnd_SMOKEGREEN_GP25_M",30],
+		["CUP_1Rnd_SMOKERED_GP25_M",30],
 		["HandGrenade",5]
     ];
 	_tmp_items =
 	[
         ["ACE_MapTools",1],
 		["ACRE_PRC148",1],
-		["rhsusf_ANPVS_14",1]
+		["CUP_NVG_PVS14",1]
 	];
 	
 	_tmp_backpacks = 
@@ -101,12 +101,12 @@
  if (typeOf vehicle player in ["Modern_pol_mg", "Modern_pol_mg_d"]) then {
     _tmp_weapons =
     [
-        ["rhs_weap_pkp",1]
+        ["CUP_lmg_Pecheneg",1]
     ];
 
 	_tmp_magazines =
     [
-		["rhs_100Rnd_762x54mmR_green",30],
+		["CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Red_M",30],
 		["ACE_SpareBarrel",1],
 		["HandGrenade",5]
     ];
@@ -114,7 +114,7 @@
 	[
         ["ACE_MapTools",1],
 		["ACRE_PRC148",1],
-		["rhsusf_ANPVS_14",1]
+		["CUP_NVG_PVS14",1]
 	];
 	
 	_tmp_backpacks = 
@@ -129,24 +129,24 @@
     _tmp_weapons =
     [
         ["twc_ak74_pol",1],
-        ["rhs_weap_fim92",1]
+        ["CUP_launch_FIM92Stinger",1]
     ];
 
 	_tmp_magazines =
     [
-        ["twc_rhsgref_30rnd_556x45_m21",50],
-		["twc_rhsgref_30rnd_556x45_m21_t",20],
-		["rhs_rpg7_OG7V_mag",10],
-		["rhs_rpg7_PG7V_mag",30],
-		["rhs_rpg7_PG7VL_mag",10],
-		["rhs_fim92_mag",3],
+        ["CUP_30Rnd_556x45_AK",50],
+		["CUP_30Rnd_TE1_Red_Tracer_556x45_AK",20],
+		["CUP_OG7_M",10],
+		["CUP_PG7V_M",30],
+		["CUP_PG7VL_M",10],
+
 		["HandGrenade",5]
     ];
 	_tmp_items =
 	[
         ["ACE_MapTools",1],
 		["ACRE_PRC148",1],
-		["rhsusf_ANPVS_14",1]
+		["CUP_NVG_PVS14",1]
 	];
 	
 	_tmp_backpacks = 
@@ -160,14 +160,14 @@
     _tmp_weapons =
     [
         ["ACE_Vector",1],
-        ["rhs_weap_rpg75",3],
+        ["CUP_launch_RPG18",3],
         ["twc_ak74_pol_2",1]
     ];
 
 	_tmp_magazines =
     [
-        ["twc_rhsgref_30rnd_556x45_m21",50],
-		["twc_rhsgref_30rnd_556x45_m21_t",20],
+        ["CUP_30Rnd_556x45_AK",50],
+		["CUP_30Rnd_TE1_Red_Tracer_556x45_AK",20],
 		["HandGrenade",5]
     ];
 	_tmp_items =
@@ -178,7 +178,7 @@
 		["DemoCharge_Remote_Mag",1],
 		["ACE_M26_Clacker",1],
 		["ACRE_PRC148",1],
-		["rhsusf_ANPVS_14",1],
+		["CUP_NVG_PVS14",1],
 		["ACE_microDAGR",1],
 		["ACRE_PRC117F",1]
 	];
@@ -188,21 +188,21 @@
     _tmp_weapons =
     [
         ["ACE_Vector",1],
-        ["rhs_weap_rpg75",5],
+        ["CUP_launch_RPG18",5],
         ["twc_ak74_pol_2",1]
     ];
 
 	_tmp_magazines =
     [
-        ["twc_rhsgref_30rnd_556x45_m21",50],
-		["twc_rhsgref_30rnd_556x45_m21_t",30],
-		["rhs_100Rnd_762x54mmR_green",20],
+        ["CUP_30Rnd_556x45_AK",50],
+		["CUP_30Rnd_TE1_Red_Tracer_556x45_AK",30],
+		["CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Red_M",20],
 		["ACE_SpareBarrel",1],
-		["rhs_VOG25",30],
-		["rhs_rpg7_OG7V_mag",10],
-		["rhs_rpg7_PG7V_mag",30],
-		["rhs_rpg7_PG7VL_mag",10],
-		["rhs_fim92_mag",3],
+		["CUP_1Rnd_HE_GP25_M",30],
+		["CUP_OG7_M",10],
+		["CUP_PG7V_M",30],
+		["CUP_PG7VL_M",10],
+
 		["ATMine_Range_Mag", 5],
 		["SLAMDirectionalMine_Wire_Mag", 5],
 		["APERSMine_Range_Mag", 5],
@@ -217,7 +217,7 @@
 		["DemoCharge_Remote_Mag",1],
 		["ACE_M26_Clacker",1],
 		["ACRE_PRC148",1],
-		["rhsusf_ANPVS_14",1],
+		["CUP_NVG_PVS14",1],
 		["ACE_microDAGR",1]
 	];
 	

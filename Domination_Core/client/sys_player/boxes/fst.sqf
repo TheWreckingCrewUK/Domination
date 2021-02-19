@@ -124,17 +124,6 @@ _isranger = {((((group player) getvariable ["twc_groupcountry", "baf"])) == "uss
 				_fstaction7 = ["SpawnsmallUKCreate","Spawn AUV (M2)","",{execvm "domination_core\client\sys_player\vehicles\SFmrap.sqf"},_isranger] call ace_interact_menu_fnc_createAction;
 				[_x,0,["ACE_MainActions", "vehiclespawn"],_fstaction7,true] call ace_interact_menu_fnc_addActionToClass;
 
-				_fstaction7 = ["SpawnsmallUKCreate","Spawn M-ATV (M2)","",{["rhsusf_m1240a1_m2crows_usmc_wd"] execvm "domination_core\client\sys_player\vehicles\matv.sqf"},_isus] call ace_interact_menu_fnc_createAction;
-				[_x,0,["ACE_MainActions", "vehiclespawn"],_fstaction7,true] call ace_interact_menu_fnc_addActionToClass;
-
-				
-				_fstaction7 = ["SpawnsmallUKCreate","Spawn M-ATV (MK19)","",{["rhsusf_m1240a1_mk19crows_usmc_wd"] execvm "domination_core\client\sys_player\vehicles\matv.sqf"},_isus] call ace_interact_menu_fnc_createAction;
-				[_x,0,["ACE_MainActions", "vehiclespawn"],_fstaction7,true] call ace_interact_menu_fnc_addActionToClass;
-
-				
-				_fstaction7 = ["SpawnsmallUKCreate","Spawn Truck","",{["rhsusf_M1083A1P2_B_M2_WD_fmtv_usarmy"] execvm "domination_core\client\sys_player\vehicles\truck.sqf"},_isus] call ace_interact_menu_fnc_createAction;
-				[_x,0,["ACE_MainActions", "vehiclespawn"],_fstaction7,true] call ace_interact_menu_fnc_addActionToClass;
-
 				
 				_fstaction7 = ["SpawnsmallUKCreate","Spawn MRZR","",{execvm "domination_core\client\sys_player\vehicles\SFMRZR.sqf"},_isus] call ace_interact_menu_fnc_createAction;
 				[_x,0,["ACE_MainActions", "vehiclespawn"],_fstaction7,true] call ace_interact_menu_fnc_addActionToClass;

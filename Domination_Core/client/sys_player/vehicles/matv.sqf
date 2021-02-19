@@ -31,19 +31,7 @@ clearBackpackCargoGlobal _veh;
 clearMagazineCargoGlobal _veh;
 clearitemCargoGlobal _veh;
 
-if ((missionnamespace getvariable ["twc_wdveh", 0]) == 0) then {
-	[
-		_veh,
-		["rhs_desert",1], 
-		["hide_rhino",1,"DoorLF",0,"DoorRF",0,"DoorLB",0,"DoorRB",0,"DUKE_Hide",1,"hide_spare",0]
-	] call BIS_fnc_initVehicle;
-} else {
-	[
-		_veh,
-		["rhs_olive",1], 
-		["hide_rhino",1,"DoorLF",0,"DoorRF",0,"DoorLB",0,"DoorRB",0,"DUKE_Hide",1,"hide_spare",0]
-	] call BIS_fnc_initVehicle;
-};
+
 
 
 _title  = "<t color='#ffbf00' size='1.2' shadow='1' shadowColor='#000000' align='center'>Vehicle Spawner</t>"; 
@@ -56,20 +44,11 @@ hint _spawntext;
 _veh setammocargo 0;
 
 
-if (_heli == "rhsusf_m1240a1_m2crows_usmc_wd") then {
-	_veh AddMagazineCargoGlobal ["UK3CB_BAF_127_100Rnd",8];
-};
-
-if (_heli == "rhsusf_m1240a1_mk19crows_usmc_wd") then {
-	_veh AddMagazineCargoGlobal ["UK3CB_BAF_32Rnd_40mm_G_Box",8];
-};
-
-
-_fsgun = ["twc_rhs_weap_m240G_mdo_lazer",1];
+_fsgun = ["CUP_lmg_M240_ElcanM143",1];
 _fsmag = ["UK3CB_BAF_762_100Rnd_T",5];
 
 if ((random 1) < 0.3) then {
-	_fsgun = ["rhs_weap_M320",1];
+	_fsgun = ["CUP_glaunch_M320",1];
 	_fsmag = ["1Rnd_HE_Grenade_shell",10];
 };
 _veh AddWeaponCargoGlobal _fsgun;

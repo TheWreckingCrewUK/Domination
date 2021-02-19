@@ -18,10 +18,10 @@ clearitemCargoGlobal _box;
 //Weapons
 
 //supplies
-_box AddMagazineCargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_M33",5];
-_box AddMagazineCargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_mk211",3];
+_box AddMagazineCargoGlobal ["CUP_10Rnd_127x99_m107",5];
+_box AddMagazineCargoGlobal ["CUP_10Rnd_127x99_m107",3];
 
-_box AddMagazineCargoGlobal ["rhsusf_mag_17Rnd_9x19_JHP",10];
+_box AddMagazineCargoGlobal ["CUP_17Rnd_9x19_glock17",10];
 
 _box AddMagazineCargoGlobal ["UK3CB_BAF_762_L42A1_10Rnd_T",2];
 _box AddMagazineCargoGlobal ["UK3CB_BAF_762_L42A1_10Rnd",7];

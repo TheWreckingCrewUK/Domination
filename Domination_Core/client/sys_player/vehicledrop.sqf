@@ -6,13 +6,13 @@ _basepos = missionnamespace getvariable ["twc_basepos", _boxpos];
 
 if ((_basepos distance _boxpos) < 400) exitwith {};
 
-_car1 = "rhsusf_m1043_d";
+_car1 = "CUP_B_HMMWV_Unarmed_USA";
 
-_car2 = "rhsusf_m1043_d_m2";
+_car2 = "CUP_B_HMMWV_M2_USA";
 
 	if (twc_wdveh == 1) then {
-_car1 = "rhsusf_m1043_w_s";
-_car2 = "rhsusf_m1043_w_m2";
+_car1 = "CUP_B_HMMWV_Unarmed_USMC";
+_car2 = "CUP_B_HMMWV_M2_USMC";
 };
 
 
@@ -72,9 +72,9 @@ _car2 = "CUP_I_Datsun_PK_TK_Random";
 
 if (["usmc", typeof player] call BIS_fnc_inString) then {
 
-_car1 = "rhsusf_m1043_d";
+_car1 = "CUP_B_HMMWV_Unarmed_USA";
 
-_car2 = "rhsusf_m1043_d_m2";
+_car2 = "CUP_B_HMMWV_M2_USA";
 };
 
 
@@ -173,7 +173,7 @@ if (typeof _wmik == "I_G_Offroad_01_armed_F") then {
 _wmik setObjectTextureGlobal [0, "a3\soft_f\offroad_01\data\offroad_01_ext_base01_co.paa"];
 };
 
-if (typeof _wmik in ["rhsusf_m1043_d_m2", "rhsusf_m1043_w_m2"]) then {
+if (typeof _wmik in ["CUP_B_HMMWV_M2_USA", "CUP_B_HMMWV_M2_USMC"]) then {
 	_wmik addmagazinecargoglobal ["UK3CB_BAF_127_100Rnd", 3];
 };
 
@@ -222,7 +222,7 @@ _car
 ] call BIS_fnc_initVehicle;
 };
 
-if (typeof _car == "rhsusf_m1043_d") then {
+if (typeof _car == "CUP_B_HMMWV_Unarmed_USA") then {
 
 };
 

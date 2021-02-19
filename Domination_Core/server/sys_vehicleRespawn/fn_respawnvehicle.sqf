@@ -5,7 +5,7 @@ params ["_veh"];
 _respawnInfo = _veh getVariable "respawnInfo";
 
 
-if {(count((ASLToATL (_respawnInfo select 1)) nearobjects ["all", 4]) > 0)} exitwith {
+if ((count((ASLToATL (_respawnInfo select 1)) nearobjects ["all", 4]) > 0)) exitwith {
 	[_veh] call twc_fnc_addvehtorespawnlist;
 };
 

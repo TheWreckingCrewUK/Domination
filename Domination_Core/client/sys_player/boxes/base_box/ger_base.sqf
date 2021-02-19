@@ -4,7 +4,7 @@
     _tmp_weapons =
     [
         ["twc_G36A_acog",0],
-        ["rhs_weap_rpg75",10]
+        ["CUP_launch_RPG18",10]
     ];
 
 	_tmp_magazines =
@@ -20,7 +20,7 @@
         ["cup_optic_g36optics",1],
         ["ACE_MapTools",1],
 		["ACRE_PRC148",0],
-		["rhsusf_ANPVS_14",1]
+		["CUP_NVG_PVS14",1]
 	];
 	
 	_tmp_backpacks = 
@@ -75,7 +75,7 @@
  if (typeOf vehicle player in ["Modern_ger_grenadier", "Modern_ger_grenadier_d"]) then {
     _tmp_weapons =
     [
-        ["rhs_weap_rpg75",5],
+        ["CUP_launch_RPG18",5],
         ["twc_G36A_AG36_acog",0]
     ];
 
@@ -97,7 +97,7 @@
         ["cup_optic_g36optics",1],
         ["ACE_MapTools",1],
 		["ACRE_PRC148",0],
-		["rhsusf_ANPVS_14",1]
+		["CUP_NVG_PVS14",1]
 	];
 	
 	_tmp_backpacks = 
@@ -120,7 +120,7 @@
     [
         ["CUP_30Rnd_TE1_Red_Tracer_556x45_G36",50],
 		["UK3CB_BAF_762_200Rnd_T",10],
-		["rhs_200rnd_556x45_T_SAW",15],
+		["CUP_200Rnd_TE4_Red_Tracer_556x45_M249",15],
 		["CUP_100Rnd_TE1_Red_Tracer_556x45_BetaCMag",5],
 		["ACE_SpareBarrel",1],
 		["HandGrenade",5]
@@ -132,7 +132,7 @@
         ["cup_optic_g36optics",1],
         ["ACE_MapTools",1],
 		["ACRE_PRC148",0],
-		["rhsusf_ANPVS_14",1]
+		["CUP_NVG_PVS14",1]
 	];
 	
 	_tmp_backpacks = 
@@ -146,8 +146,8 @@
  if (typeOf vehicle player in ["Modern_ger_rif_AT", "Modern_ger_rif_AT_d"]) then {
     _tmp_weapons =
     [
-        ["rhs_weap_fim92",1],
-        ["rhs_weap_rpg75",15],
+        ["CUP_launch_FIM92Stinger",1],
+        ["CUP_launch_RPG18",15],
         ["twc_G36A_acog",0]
     ];
 
@@ -155,8 +155,7 @@
     [
         ["CUP_30Rnd_556x45_G36",50],
 		["CUP_30Rnd_TE1_Red_Tracer_556x45_G36",10],
-		["rhs_mag_maaws_HEDP",20],
-		["rhs_fim92_mag",2],
+		["CUP_MAAWS_HEDP_M",20],
 		["HandGrenade",5]
     ];
 	_tmp_items =
@@ -166,7 +165,7 @@
         ["cup_optic_g36optics",1],
         ["ACE_MapTools",1],
 		["ACRE_PRC148",0],
-		["rhsusf_ANPVS_14",1]
+		["CUP_NVG_PVS14",1]
 	];
 	
 	_tmp_backpacks = 
@@ -209,7 +208,7 @@
     _tmp_weapons =
     [
         ["ACE_Vector",1],
-        ["rhs_weap_rpg75",10],
+        ["CUP_launch_RPG18",10],
         ["twc_G36A_acog",0]
     ];
 
@@ -217,7 +216,7 @@
     [
         ["CUP_30Rnd_556x45_G36",80],
 		["CUP_30Rnd_TE1_Red_Tracer_556x45_G36",50],
-		["rhs_mag_maaws_HEDP",20],
+		["CUP_MAAWS_HEDP_M",20],
 		["ACE_SpareBarrel",1],
 		["HandGrenade",5]
     ];
@@ -232,7 +231,7 @@
 		["DemoCharge_Remote_Mag",1],
 		["ACE_M26_Clacker",1],
 		["ACRE_PRC148",0],
-		["rhsusf_ANPVS_14",1],
+		["CUP_NVG_PVS14",1],
 		["ACE_microDAGR",1]
 	];
 	

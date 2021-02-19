@@ -156,7 +156,7 @@ _pos = getpos _shell;
 //systemchat "shell defeated";
 if (alive _shell) then {
 deletevehicle _shell;
-'rhs_ammo_ptb1500' createvehicle _pos;
+'CUP_BOX_RU_Ammo_F' createvehicle _pos;
 };
 _complete = 1;
 

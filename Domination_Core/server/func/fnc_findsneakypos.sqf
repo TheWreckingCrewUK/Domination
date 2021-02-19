@@ -100,7 +100,7 @@ if ((str _fncreturn) != (str _pos)) then {
 /*
 [_fncreturn, _checkpos] spawn {
 	params ["_fncreturn", "_checkpos"];
-	_cone = "RHS_Ural_Civ_01" createvehicle _fncreturn;
+	_cone = "CUP_C_Ural_Open_Civ_01" createvehicle _fncreturn;
 	_cone setpos _fncreturn;
 	_checkvis = ([_checkpos] call twc_fnc_lookedatbyplayers);
 	//systemchat (str _checkvis);

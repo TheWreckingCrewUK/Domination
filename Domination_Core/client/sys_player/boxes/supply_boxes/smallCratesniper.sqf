@@ -21,13 +21,13 @@ clearitemCargoGlobal _box;
 _box AddMagazineCargoGlobal ["ACE_10Rnd_338_API526_Mag",10];
 _box AddMagazineCargoGlobal ["ACE_10Rnd_338_300gr_HPBT_Mag",10];
 
-_box AddMagazineCargoGlobal ["rhsusf_mag_17Rnd_9x19_JHP",10];
+_box AddMagazineCargoGlobal ["CUP_17Rnd_9x19_glock17",10];
 
 _box AddMagazineCargoGlobal ["UK3CB_BAF_762_L42A1_20Rnd_T",2];
 _box AddMagazineCargoGlobal ["UK3CB_BAF_762_L42A1_20Rnd",7];
 
-_box AddMagazineCargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_mk211",3];
-_box AddMagazineCargoGlobal ["rhsusf_mag_10Rnd_STD_50BMG_M33",5];
+_box AddMagazineCargoGlobal ["CUP_10Rnd_127x99_m107",3];
+_box AddMagazineCargoGlobal ["CUP_10Rnd_127x99_m107",5];
 
 
 _box addItemCargoGlobal ["ACE_fieldDressing",5];

@@ -208,14 +208,14 @@ if ((["uksf", typeof player] call BIS_fnc_inString)) then {
 	};
 
 	if ((secondaryweapon player) == "") then {
-		player addweapon "rhs_weap_M136";
+		player addweapon "CUP_launch_M136";
 	};
 
 };
 
 
 if (sunormoon == 0) then {
-	player addweapon "rhsusf_ANPVS_14";
+	player addweapon "CUP_NVG_PVS14";
 };
 
 if (!(["infantry", str (group player)] call BIS_fnc_inString)) then {
@@ -225,7 +225,7 @@ execvm "domination_core\client\sys_restrict\attachmentcount.sqf"
 
 player addEventHandler ["Fired", {
 	params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
-	if (_ammo == "rhs_ammo_smaw_SR") exitwith {};
+	if (_ammo == "CUP_SMAW_Spotting") exitwith {};
 	if ((_ammo isKindOf ["GrenadeCore", configFile >> "CfgAmmo"]) || (_ammo isKindOf ["RocketCore", configFile >> "CfgAmmo"]) || (_ammo isKindOf ["MissileCore", configFile >> "CfgAmmo"]) || (_ammo isKindOf ["G_40mm_Smoke", configFile >> "CfgAmmo"])) then {[_projectile] call twc_fnc_aps};
 }];
 };

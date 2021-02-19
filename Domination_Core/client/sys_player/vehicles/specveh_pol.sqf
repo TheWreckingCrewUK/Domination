@@ -20,7 +20,7 @@ hint _spawntext;
  publicVariable "twc_specvehcount";
  
  
- _veh = "rhsgref_cdf_b_gaz66_zu23" createvehicle _spawnpos;  
+ _veh = "CUP_O_Ural_ZU23_SLA" createvehicle _spawnpos;  
   
  
  

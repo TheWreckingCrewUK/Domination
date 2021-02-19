@@ -15,7 +15,7 @@
 	
 			
 		_Cargo = [];
-		_plane = createVehicle ["RHS_Mi8AMT_vvsc", (([_spawnPos, 200] call CBA_fnc_randPos) vectoradd [0,0,500]), [], 0, "FLY"]; 
+		_plane = createVehicle ["CUP_O_Mi8AMT_RU", (([_spawnPos, 200] call CBA_fnc_randPos) vectoradd [0,0,500]), [], 0, "FLY"]; 
 		_plane setvariable ["twc_walk_onlydisperse", 4];
 		_dir = ([_plane, _enemy] call BIS_fnc_relativeDirTo);
 
@@ -23,7 +23,7 @@
 
 		_group1 = createGroup East;  
 		 
-		_driver = _group1 createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
+		_driver = _group1 createUnit ["CUP_O_RU_Pilot_VDV_M_EMR", _spawnPos,[], 0.3,"NONE"];  
 		 
 		_driver moveInDriver _plane;
 		
@@ -56,11 +56,7 @@ sleep 1;
 
 	for "_i" from 1 to 2 do {
 				_group = [[0,0,0], EAST, squad] call BIS_fnc_spawnGroup;
-	if ((missionnamespace getvariable ["twc_christmas", 0]) == 1) then {
-		{
-			_x addHeadgear "rhs_xmas_antlers";
-		} foreach (units _group);
-	};
+
 				
 				{_x moveincargo _plane; _Cargo pushback _x; if (!(_x in crew _plane)) then {deletevehicle _x};} foreach (units _group);
 				
@@ -97,7 +93,7 @@ sleep 1;
 	
 			
 		_Cargo = [];
-		_plane = createVehicle ["rhs_mi28n_vvsc", (([_spawnPos, 200] call CBA_fnc_randPos) vectoradd [0,0,500]), [], 0, "FLY"]; 
+		_plane = createVehicle ["CUP_O_Ka52_RU", (([_spawnPos, 200] call CBA_fnc_randPos) vectoradd [0,0,500]), [], 0, "FLY"]; 
 		_plane setvariable ["twc_walk_onlydisperse", 4];
 		_dir = ([_plane, _enemy] call BIS_fnc_relativeDirTo);
 
@@ -105,7 +101,7 @@ sleep 1;
 
 		_group1 = createGroup East;  
 		 
-		_driver = _group1 createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
+		_driver = _group1 createUnit ["CUP_O_RU_Pilot_VDV_M_EMR", _spawnPos,[], 0.3,"NONE"];  
 		 
 		_driver moveInDriver _plane; 
 		_driver setskill 1;
@@ -115,16 +111,10 @@ sleep 1;
 			[_this select 1, _this select 6, _this select 7] call twc_fnc_gunwalk; }]; 
 
 		_group2 = createGroup East;
-		_gunner = _group2 createUnit ["rhs_pilot_combat_heli", _spawnPos,[], 0.3,"NONE"];  
+		_gunner = _group2 createUnit ["CUP_O_RU_Pilot_VDV_M_EMR", _spawnPos,[], 0.3,"NONE"];  
 		 
 		_gunner moveIngunner _plane; 
 		//systemchat format ["%1", _driver];
-		
-		_plane addEventHandler ["Fired", {
-		 params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
-		 if (_weapon == "rhs_weap_2a42") then {
-		 _bullet = _projectile; _bullet setvelocity [(velocity _bullet select 0) + (random 40) - 20, (velocity _bullet select 1) + (random 40) - 20,  (velocity _bullet select 2) + (random 30) - 15]; 
-		} else {_bullet = _projectile; _bullet setvelocity [(velocity _bullet select 0) + (random 30) - 15, (velocity _bullet select 1) + (random 30) - 15,  (velocity _bullet select 2) + (random 20) - 10]; }; }];
 
 		_driver disableai "autotarget";
 		_driver disableai "autocombat";

@@ -1,18 +1,18 @@
 
 if (isNil "tank") then {
-	tank = ["rhs_t72ba_tv"];
+	tank = ["CUP_O_T72_RU"];
 };
 
 if (isNil "ifv") then {
-ifv = ["rhs_bmp1_msv"];
+ifv = ["CUP_I_BMP1_TK_GUE"];
 };
 
 if (isNil "apc") then {
-apc = ["rhs_btr70_msv"];
+apc = ["CUP_O_BTR60_Green_RU"];
 };
 
 if (isNil "squad") then {
-squad = (configfile >> "CfgGroups" >> "East" >> "rhs_faction_msv" >> "rhs_group_rus_msv_infantry_emr" >> "rhs_group_rus_msv_infantry_emr_squad");
+squad = (configfile >> "CfgGroups" >> "East" >> "CUP_O_RU" >> "Infantry_EMR" >> "CUP_O_RU_InfSquad_EMR");
 };
 
 if (isNil "SF") then {
@@ -21,27 +21,27 @@ SF = ["TWC_Russian_SF_MG", "TWC_Russian_SF_SMG", "TWC_Russian_SF_SL", "TWC_Russi
 };
 
 if (isNil "squadAT") then {
-squadAT = (configfile >> "CfgGroups" >> "East" >> "rhs_faction_msv" >> "rhs_group_rus_msv_infantry_emr" >> "rhs_group_rus_msv_infantry_emr_section_AT");
+squadAT = (configfile >> "CfgGroups" >> "East" >> "CUP_O_RU" >> "Infantry_EMR" >> "CUP_O_RU_InfSection_AT_EMR");
 };
  
 if (isNil "squadAA") then {
-squadAA = (configfile >> "CfgGroups" >> "East" >> "rhs_faction_msv" >> "rhs_group_rus_msv_infantry_emr" >> "rhs_group_rus_msv_infantry_emr_section_AA");
+squadAA = (configfile >> "CfgGroups" >> "East" >> "CUP_O_RU" >> "Infantry_EMR" >> "CUP_O_RU_InfSection_AA_EMR");
 };
 
 if (isNil "aa") then {
-aa = ["rhs_zsu234_aa", "CUP_O_2S6M_RU"];
+aa = ["CUP_O_ZSU23_SLA", "CUP_O_2S6M_RU"];
 };
 
 if (isNil "radioTower") then {
-radioTower = "rhs_gaz66_r142_vdv";
+radioTower = "CUP_O_BRDM2_HQ_RUS";
 };
 
 if (isNil "mortar") then {
-mortar = ["rhs_2b14_82mm_vdv"];
+mortar = ["CUP_O_2b14_82mm_RU"];
 };
 
 if (isNil "arty") then {
-arty = ["rhs_2b14_82mm_msv","rhs_2b14_82mm_msv","rhs_D30_msv", "RHS_BM21_MSV_01"];
+arty = ["CUP_O_2b14_82mm_RU","CUP_O_2b14_82mm_RU","CUP_O_D30_RU", "CUP_O_BM21_RU"];
 };
 
 if (isNil "tankaaCombined") then {
@@ -49,7 +49,7 @@ tankaaCombined = (configfile >> "CfgGroups" >> "East" >> "OPF_F" >> "Armored" >>
 };
 
 if (isNil "enemyFlag") then {
-enemyFlag = "rhs_flag_Russia";
+enemyFlag = "flag_Russia";
 };
 
 if (isNil "bunkerMarkerClass") then {
@@ -57,7 +57,7 @@ bunkerMarkerClass = "n_unknown";
 };
 
 if (isNil "lightheli") then {
-lightheli = ["RHS_Mi8MTV3_heavy_vdv", "RHS_Mi8MTV3_heavy_vvs"] call BIS_fnc_selectRandom;
+lightheli = ["CUP_O_Mi8_RU", "CUP_O_Mi8AMT_RU"] call BIS_fnc_selectRandom;
 };
 
 if (isNil "heavyheli") then {
@@ -65,7 +65,7 @@ heavyheli = ["CUP_O_Mi24_D_Dynamic_SLA", "CUP_O_Mi24_D_Dynamic_TK"] call BIS_fnc
 };
 
 if (isNil "jet") then {
-jet = ["RHS_Su25SM_vvs"] call BIS_fnc_selectRandom;
+jet = ["CUP_O_Su25_Dyn_RU"] call BIS_fnc_selectRandom;
 };
 
 

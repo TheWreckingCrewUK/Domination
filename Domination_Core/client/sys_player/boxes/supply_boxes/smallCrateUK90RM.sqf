@@ -16,13 +16,13 @@ clearMagazineCargoGlobal _box;
 clearitemCargoGlobal _box;
 
 //Weapons
-_box AddWeaponCargoGlobal ["rhs_weap_m72a7",2];
+_box AddWeaponCargoGlobal ["CUP_launch_M72A6",2];
 
 
 //supplies
 _box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd",30];
 _box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd_T",10];
-_box AddMagazineCargoGlobal ["rhs_fim92_mag",1];
+
 
 _box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd",5];
 _box AddMagazineCargoGlobal ["UK3CB_BAF_556_200Rnd_T",3];

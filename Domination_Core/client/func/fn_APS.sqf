@@ -13,14 +13,9 @@ if ((isnil "twc_APS_list") && (isnil "twc_nonAPS_list")) exitwith {};
 if (((count twc_APS_list) == 0) && ((count twc_nonAPS_list) == 0)) exitwith {};
 //systemchat "start2";
 
-twc_smokegen = {[(_this select 0), "rhs_weap_smokegen"] call BIS_fnc_fire;
-//systemchat "exhaust smoke";
-};
+twc_smokegen = {};
 
-twc_smoketurret = {[(_this select 0), "rhs_weap_902a"] call BIS_fnc_fire;
-[(_this select 0), "rhs_weap_902b"] call BIS_fnc_fire;
-//systemchat "turret smoke";
-};
+twc_smoketurret = {};
 
 twc_revealtotank = {
 params ["_player", "_tank", "_amount"];
@@ -287,15 +282,11 @@ twc_tankfacethreat = {
 								_charge = str (ceil(_dir / 20));
 								if ((_x getvariable ["twc_aps_fired" + _charge, 0]) == 0) then {
 									playSound3D ["A3\Sounds_F\sfx\alarm_independent.wss", _x, false, getPosASL _x, 1.5, 2, 0];
-									_bang = createvehicle ["rhsusf_mine_m14_ammo", ((position _x) vectoradd [0,0,2]), [], 0, "can_collide"];
-									_bang setdamage 1;
 									_x setvariable ["twc_aps_fired" + _charge, 1, true];
 									
 									waituntil {((_rocket distance _x) < 30) || (!alive _rocket) || (!alive _x)};
 									
 									_c1 = (_x getRelPos [3, _hulldir]) vectoradd [0,0,3.5];
-									//_bang2 = createvehicle ["rhsusf_mine_m14_ammo", _c1, [], 0, "can_collide"];
-									//_bang2 setdamage 1;
 									_bang3 = createvehicle ["APERSMine_Range_Ammo", _c1, [], 0, "can_collide"];
 									_bang3 setdamage 1;
 									sleep 0.1;
@@ -315,7 +306,6 @@ twc_tankfacethreat = {
 											} else {
 												_airpos = getpos _rocket;
 												deletevehicle _rocket;
-												'rhs_ammo_ptb1500' createvehicle _airpos;
 												[player, gunner _x, 4] remoteexec ["twc_revealtotank", _x];
 											};
 										};

@@ -24,7 +24,7 @@ if (twc_wdveh == 1) then {
 
 
 
-if (typeof _veh == "RHS_M2A3_BUSKIII_wd") then {
+if (typeof _veh == "CUP_B_M2A3Bradley_USA_W") then {
 
 if (twc_wdveh == 1) then {
 	[
@@ -43,7 +43,7 @@ if (twc_wdveh == 1) then {
 
 
 
-if (typeof _veh == "RHS_M2A2_wd") then {
+if (typeof _veh == "CUP_B_M2Bradley_USA_W") then {
 
 if (twc_wdveh == 1) then {
 	[
@@ -139,7 +139,7 @@ if (typeof _veh == "CUP_B_MCV80_GB_D_SLAT") then {
 };
 
 
-if (typeof _veh == "rhsusf_m1a2sep1tuskiid_usarmy") then {
+if (typeof _veh == "CUP_B_M1A2_TUSK_MG_US_Army") then {
 
 if (twc_wdveh == 1) then {
 	[
@@ -157,25 +157,7 @@ if (twc_wdveh == 1) then {
 	};
 };
 
-if (typeof _veh == "rhsusf_m1a2sep1tuskid_usarmy") then {
-
-if (twc_wdveh == 1) then {
-	[
-	_veh,
-	["woodland",1], 
-	["IFF_Panels_Hide",0,"Miles_Hide",1,"showCamonetTurret",0,"showCamonetHull",0]
-	] call BIS_fnc_initVehicle;
-	} else {
-
-[
-	_veh,
-	["desert",1], 
-	["IFF_Panels_Hide",0,"Miles_Hide",1,"showCamonetTurret",0,"showCamonetHull",0]
-	] call BIS_fnc_initVehicle;
-	};
-};
-
-if (typeof _veh == "rhsusf_m1a1aimwd_usarmy") then {
+if (typeof _veh == "CUP_B_M1A1_Woodland_US_Army") then {
 
 if (twc_wdveh == 1) then {
 	[

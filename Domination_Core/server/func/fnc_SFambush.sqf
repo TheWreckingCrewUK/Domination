@@ -30,12 +30,6 @@ _iedpos = getpos _enemy;
 		
 	};
 	
-	{
-		if (sunormoon == 0) then {
-			_x addgoggles "rhs_1PN138";
-		};
-	} foreach (units _group);
-	
 	_group addwaypoint [_iedpos, 0];
 	_wp = _group addwaypoint [getmarkerpos "aocentermarker", 50];
 

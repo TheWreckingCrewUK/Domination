@@ -174,14 +174,14 @@ if((typeOf player) in ["Modern_British_HeliPilot","Modern_British_crewchief", "M
 
 	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Apache","",{
 	
-	["RHS_AH64D"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
+	["UK3CB_BAF_Apache_AH1_DynamicLoadout"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
 	
 	},_attackcond2] call ace_interact_menu_fnc_createAction;
 	[_x,0,["ACE_MainActions", "vehiclespawn", "vehiclespawnattack"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
 
 	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Cobra","",{
 	
-	["RHS_AH1Z"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
+	["CUP_B_AH1Z_Dynamic_USMC"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
 	
 	},_attackcond2] call ace_interact_menu_fnc_createAction;
 	[_x,0,["ACE_MainActions", "vehiclespawn", "vehiclespawnattack"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
@@ -215,7 +215,7 @@ if((typeOf player) in ["Modern_British_HeliPilot","Modern_British_crewchief", "M
 	
 	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Blackhawk","",{
 	
-	["RHS_UH60M"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
+	["CUP_B_UH60M_US"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
 	
 	},_transportcond1] call ace_interact_menu_fnc_createAction;
 	[_x,0,["ACE_MainActions", "vehiclespawn", "vehiclespawntransport"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
@@ -230,7 +230,7 @@ if((typeOf player) in ["Modern_British_HeliPilot","Modern_British_crewchief", "M
 
 	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Venom","",{
 	
-	["RHS_UH1Y_d"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
+	["CUP_B_UH1Y_UNA_USMC"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
 	
 	},{true}] call ace_interact_menu_fnc_createAction;
 	[_x,0,["ACE_MainActions", "vehiclespawn", "vehiclespawncas"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
@@ -238,7 +238,7 @@ if((typeOf player) in ["Modern_British_HeliPilot","Modern_British_crewchief", "M
 	
 	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Hind","",{
 	
-	["rhsgref_cdf_Mi35"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
+	["CUP_B_Mi35_Dynamic_CZ"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
 	
 	},{((count units group player) > 1)}] call ace_interact_menu_fnc_createAction;
 	[_x,0,["ACE_MainActions", "vehiclespawn", "vehiclespawncas"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
@@ -350,7 +350,7 @@ if((typeOf player) in ["1990_British_HeliPilot_Desert","1990_British_HeliPilot",
 	
 	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Blackhawk (Armed)","",{
 	
-	["RHS_UH60M_ESSS_d"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
+	["CUP_B_UH60M_US_ESSS_d"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
 	
 	},_cascond] call ace_interact_menu_fnc_createAction;
 	[_x,0,["ACE_MainActions", "vehiclespawn", "vehiclespawncas"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
@@ -420,7 +420,7 @@ if((typeOf player) in ["2000_British_HeliPilot_Desert","2000_British_HeliPilot",
 
 	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Apache","",{
 	
-	["RHS_AH64D"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
+	["UK3CB_BAF_Apache_AH1_DynamicLoadout"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
 	
 	},_attackcond2] call ace_interact_menu_fnc_createAction;
 	[_x,0,["ACE_MainActions", "vehiclespawn", "vehiclespawnattack"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;
@@ -436,7 +436,7 @@ if((typeOf player) in ["2000_British_HeliPilot_Desert","2000_British_HeliPilot",
 
 	_helispawn1 = ["SpawnsmallcharlieCreate","Spawn Blackhawk (Armed)","",{
 	
-	["RHS_UH60M_ESSS_d"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
+	["CUP_B_UH60M_US_ESSS_d"] execvm "domination_core\client\sys_player\vehicles\heli.sqf"
 	
 	},_cascond] call ace_interact_menu_fnc_createAction;
 	[_x,0,["ACE_MainActions", "vehiclespawn", "vehiclespawncas"],_helispawn1,true] call ace_interact_menu_fnc_addActionToClass;

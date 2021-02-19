@@ -38,7 +38,7 @@ clearMagazineCargoGlobal _box;
 clearitemCargoGlobal _box;
 
 //Weapons
-_box AddWeaponCargoGlobal ["ace_compat_rhs_usf3_tow_carry",1];
+
 _box AddWeaponCargoGlobal ["ace_csw_m220CarryTripod",1];
 
 [_box, 5] call ace_cargo_fnc_setSize;

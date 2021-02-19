@@ -19,14 +19,14 @@ if (isnil "_box") then {
 };
 
 //Weapons
-_box AddWeaponCargoGlobal ["rhs_weap_m72a7",4];
+_box AddWeaponCargoGlobal ["CUP_launch_M72A6",4];
 _box AddWeaponCargoGlobal ["ukcw_law80",3];
 
 
 //supplies
 _box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd",30];
 _box AddMagazineCargoGlobal ["UK3CB_BAF_556_30Rnd_T",10];
-_box AddMagazineCargoGlobal ["rhs_fim92_mag",2];
+
 
 _box addItemCargoGlobal ["ACE_fieldDressing",5];
 _box addItemCargoGlobal ["ACE_elasticBandage",5];

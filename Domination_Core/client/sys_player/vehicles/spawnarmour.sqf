@@ -26,13 +26,6 @@ _armourcrew = ["Modern_British_VehicleCrew",
  "2000_British_Vehicle_Commander",
  "2000_British_Vehicle_Crew"];
 	
-	if (typeof _veh == "rhsusf_M1117_D") then {
-[
-	_veh,
-	["desert",1], 
-	["DUKE_Hide",1]
-] call BIS_fnc_initVehicle;
-};
 	_crewcount = 0;
 
 	{if (typeof _x in _armourcrew) then {_crewcount = _crewcount + 1;}} foreach units group player;
