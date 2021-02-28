@@ -60,8 +60,20 @@ if(isNil "twc_aainfcount") then{
 };
 
 twc_aainfcount = twc_aainfcount * ( 1+ (random 0.5));
+
+
+
+
+
+
+
+
+
+
 // removing artillery for the moment until I stop them firing on people at really bad times
 
+//comented out ALL the arti code becoase it just slows down the server -n
+/*
 if(isNil "twc_artycount") then{
 	twc_artycount = 3;
 };
@@ -71,7 +83,7 @@ twc_artycount = twc_artycount * ( 1+ (random 0.5));
 //arty might be causing server slowdown, remove it until arty script is rewritten
 twc_artycount = 0;
 twc_activearty = 0;
-
+*/
 //twc_artycount = 0;
 
 _minefield = [_pos] call twc_fnc_spawnminefield;
@@ -108,14 +120,22 @@ _spawnPos = [(_spawnPos select 0) + 5,(_spawnPos select 1), (_spawnPos select 2)
 _group = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
 [_group, _spawnPos, 50] call cba_fnc_taskPatrol;
 
-		
-_markerstr = createMarker ["radioMarker",_spawnPos];
-_markerstr setMarkerShape "ICON";
-_markerstr setMarkerType "loc_Transmitter";
-_markerstr setMarkerColor "colorEAST";
-_markerstr setMarkerSize [0.75,0.75];
-_markerstr setMarkeralpha 0;
+if (isNil "radioMarker") then{
+	hint "creating radio marker";
+	_markerstr = createMarker ["radioMarker",_spawnPos];
+	_markerstr setMarkerShape "ICON";
+	_markerstr setMarkerType "loc_Transmitter";
+	_markerstr setMarkerColor "colorEAST";
+	_markerstr setMarkerSize [0.75,0.75];
+	_markerstr setMarkeralpha 0;
+}
+else
+{
+	"radioMarker" setMarkerPos _spawnPos;
+	hint "moving radio marker";
+};
 
+hint "spawning enemys";
 for "_i" from 1 to twc_aainfcount do {
 	_spawnPos = [_pos,[200,400],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squadAA] call BIS_fnc_spawnGroup;
@@ -464,18 +484,18 @@ _jet flyInHeight  _flyalt;
 	};
 
 };
-
+/*
 //artyspawnpos = [_spawnpos, 1500, 3000, 10, 0, 1, 0, [], [_spawnpos, _spawnpos]] call BIS_fnc_findSafePos;
 
 maptrg = createTrigger ["EmptyDetector", [worldSize / 2, worldsize / 2, 0]];
 maptrg setTriggerArea [worldSize / 2, worldSize / 2, 0, true];
 
 artyspawnpos = [_spawnpos, 150, 3500, 50, 0, 0.7, 0] call BIS_fnc_findSafePos;
-/*
+
 while {!(artyspawnpos inarea maptrg)} do {
 	artyspawnpos = [_spawnpos, 1500, 3500, 50, 0, 0.7, 0] call BIS_fnc_findSafePos;
 };
-*/
+
 if (isnil "prevartyspawnpos") then {prevartyspawnpos = artyspawnpos;};
 
 //if ((random 1) < 0.4) then {
@@ -514,7 +534,7 @@ clearitemCargoGlobal _vehicle;
  //_driver moveInDriver _vehicle;  
  _gunner moveInGunner _vehicle;
 
-  /*
+  
  [_gunner, _vehicle] spawn {
  params ["_gunner", "_vehicle"];
 	sleep 5;
@@ -523,7 +543,7 @@ clearitemCargoGlobal _vehicle;
 		[_this select 6, _this select 7] call twc_fnc_mortarwalk; }];
 		
 };
-*/
+
  //_driver disableAI "AUTOTARGET";  
  _gunner disableAI "AUTOTARGET";
  _gunner disableAI "AUTOCOMBAT";
@@ -548,15 +568,26 @@ _vehicle addEventHandler ["Fired", {[(_this select 0), (_this select 6)] call tw
 
 	
 	};
+*/
+
+
+//^^^ commented out the arti code -n
+
+
+
+
+
 _trg = createTrigger ["EmptyDetector", _pos];
 _trg setTriggerArea [600, 600, 0, false];
 _trg setTriggerActivation ["EAST", "PRESENT", false];
 _trg setTriggerTimeout [10,10,10,True];
-_trg setTriggerStatements ["((EAST countSide thisList) < 15 && ({(vehicle _x) isKindOf 'landVehicle' && side _x == EAST} count thisList <5))","twc_areaCleared = 1", ""];
+_trg setTriggerStatements ["((EAST countSide thisList) < 15 && ({(vehicle _x) isKindOf 'landVehicle' && side _x == EAST} count thisList <5))","twc_areaCleared = 1;", ""];
 
 
-_timer = 200 +(random 200);
+
+
 /*
+_timer = 200 +(random 200);
 reinforcementsTrg = createTrigger ["EmptyDetector", _pos];
 reinforcementsTrg setTriggerArea [2700, 2700, 0, false];
 reinforcementsTrg setTriggerActivation ["WEST", "EAST D", true];
@@ -566,8 +597,9 @@ reinforcementsTrg setTriggerStatements ["this && (time > (missionnamespace getva
 
 
 
-
-	
+//for some reason there are two triggers ??? I am comenting out the second one as it just slows down the server.
+//The civ vehicles get deleted in the code later along with everything else -n
+/*
 _trg = createTrigger ["EmptyDetector", _pos];
 _trg setTriggerArea [600, 600, 0, false];
 _trg setTriggerActivation ["east", "PRESENT", false];
@@ -575,12 +607,15 @@ _trg setTriggerTimeout [20,20,20,false];
 _trg setTriggerStatements ["((east countSide thisList) < 15 && ({(vehicle _x) isKindOf 'landVehicle' && side _x == east} count thisList <5))","twc_areaCleared = 1; _cars = thistrigger getvariable ['twccivcars', []];{deletevehicle _x} foreach _cars;", ""];
 
 _trg setvariable ["twccivcars", _civcars];
-
+*/
 
 while {twc_areaCleared != 1} do {
 	sleep 30;
 };
 
+
+
+hint"passed the while";
 if ((count _minefield) > 0) then {
 	[_minefield] spawn {
 		params ["_minefield"];
@@ -590,22 +625,54 @@ if ((count _minefield) > 0) then {
 	};
 };
 
+
+
 [_name, "Succeeded",true] spawn BIS_fnc_taskSetState;
-hint "AO captured";
+hint "AO captured main";
 deleteMarker "aoCenterMarker";
 twc_LastAO = _tname;
 
-missionnamespace setvariable ["twc_prevaos", (missionnamespace getvariable ["twc_prevaos", []]) + [_tname]];
 
+
+//missionnamespace setvariable ["twc_prevaos", (missionnamespace getvariable ["twc_prevaos", []]) + [_tname]];
+/*
 _wreck = (getMarkerPos "radioMarker") nearestObject radioTower;
 deleteVehicle _wreck;
 deleteMarker "radioMarker";
-[_pos]spawn{
-	params["_pos"];
-	
-	while {([_pos,3000] call twc_fnc_posNearPlayers)} do {
+*/
+// this code as far as I understand removes a marker so it can be placed in the new ao
+//but the program gets stuck here so I made some changes that make this algorithm obsolite and also removes unesecery stuff -n
+_pos_old = _pos;
+
+
+[] call twc_fnc_getao;
+
+
+
+/*
+while {([prevartyspawnpos,1000] call twc_fnc_posNearPlayers)} do {
+	sleep 30;
+};
+{
+	if ((twc_basepos distance _x) > 300) then {deleteVehicle _x};
+}forEach (nearestObjects [prevartyspawnpos,["Man","Car","Tank","Air","StaticWeapon"],800]);
+sleep 10;
+prevartyspawnpos = artyspawnpos;
+*/
+//more arti code commented out -n
+
+
+
+
+while {([_pos_old,3000] call twc_fnc_posNearPlayers)} do {
 		sleep 10;
 	};
+	
+
+[_pos_old]spawn{
+	params["_pos"];
+	
+	
 	
 	{
 		if ((twc_basepos distance _x) > 300) then {deleteVehicle _x};
@@ -625,14 +692,4 @@ deleteMarker "radioMarker";
 	}forEach allGroups;
 };
 
-[] call twc_fnc_getao;
-	while {([prevartyspawnpos,1000] call twc_fnc_posNearPlayers)} do {
-		sleep 30;
-	};
-	{
-		
-		if ((twc_basepos distance _x) > 300) then {deleteVehicle _x};
-	}forEach (nearestObjects [prevartyspawnpos,["Man","Car","Tank","Air","StaticWeapon"],800]);
-	sleep 10;
-	prevartyspawnpos = artyspawnpos;
 	
