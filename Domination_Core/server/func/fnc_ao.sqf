@@ -121,7 +121,7 @@ _group = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
 [_group, _spawnPos, 50] call cba_fnc_taskPatrol;
 
 if (isNil "radioMarker") then{
-	hint "creating radio marker";
+	
 	_markerstr = createMarker ["radioMarker",_spawnPos];
 	_markerstr setMarkerShape "ICON";
 	_markerstr setMarkerType "loc_Transmitter";
@@ -132,10 +132,10 @@ if (isNil "radioMarker") then{
 else
 {
 	"radioMarker" setMarkerPos _spawnPos;
-	hint "moving radio marker";
+	
 };
 
-hint "spawning enemys";
+
 for "_i" from 1 to twc_aainfcount do {
 	_spawnPos = [_pos,[200,400],random 360,0] call SHK_pos;
 	_group = [_spawnPos, EAST, squadAA] call BIS_fnc_spawnGroup;
@@ -615,7 +615,7 @@ while {twc_areaCleared != 1} do {
 
 
 
-hint"passed the while";
+
 if ((count _minefield) > 0) then {
 	[_minefield] spawn {
 		params ["_minefield"];
@@ -628,7 +628,7 @@ if ((count _minefield) > 0) then {
 
 
 [_name, "Succeeded",true] spawn BIS_fnc_taskSetState;
-hint "AO captured main";
+hint "AO captured";
 deleteMarker "aoCenterMarker";
 twc_LastAO = _tname;
 
