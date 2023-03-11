@@ -1,0 +1,4 @@
+[arsenalAmmoBox,["CUP_arifle_L85A2_G","CUP_hgun_Glock17_blk"],false] call BIS_fnc_addVirtualWeaponCargo;
+[arsenalAmmoBox,["CUP_30Rnd_556x45_Stanag_L85","CUP_30Rnd_556x45_Stanag_L85_Tracer_Red","CUP_17Rnd_9x19_glock17"],false] call BIS_fnc_addVirtualMagazineCargo;
+[arsenalAmmoBox,["CUP_H_BAF_MTP_MK7","CUP_H_BAF_MTP_Mk7_PRR_SCRIM_A","CUP_H_BAF_MTP_Mk7_PRR_SCRIM_B","CUP_U_B_BAF_MTP_UBACSROLLEDKNEE","CUP_U_B_BAF_MTP_UBACSLONG_Gloves","CUP_V_B_BAF_MTP_Osprey_Mk4_Rifleman","CUP_acc_LLM_black","CUP_optic_Elcan_reflex_pip","ACRE_PRC343","ACE_salineIV","ACE_salineIV_250","ACE_salineIV_500"],false] call Bis_fnc_addVirtualItemCargo;
+[arsenalAmmoBox,["CUP_B_Motherlode_MTP"],false] call Bis_fnc_addVirtualBackpackCargo;

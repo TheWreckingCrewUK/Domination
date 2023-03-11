@@ -1,1 +1,0 @@
-// a pilot (fixed wing) has connected, time to spawn an enemy!

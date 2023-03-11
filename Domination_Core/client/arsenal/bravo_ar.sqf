@@ -1,0 +1,4 @@
+[arsenalAmmoBox,["CUP_lmg_M249_ElcanM145","CUP_hgun_M9","CUP_launch_M72A6","CUP_launch_M136","ace_csw_staticM2ShieldCarry","ace_csw_m3CarryTripodLow"],false] call BIS_fnc_addVirtualWeaponCargo;
+[arsenalAmmoBox,["CUP_200Rnd_TE4_Red_Tracer_556x45_M249","CUP_15Rnd_9x19_M9"],false] call BIS_fnc_addVirtualMagazineCargo;
+[arsenalAmmoBox,["CUP_H_USArmy_HelmetACH_ESS_Headset_OEFCP","CUP_U_B_USArmy_ACU_Kneepad_Gloves_OEFCP","CUP_V_B_IOTV_OEFCP_SL_USArmy","CUP_optic_ElcanM145_PIP","ACRE_PRC148"],false] call Bis_fnc_addVirtualItemCargo;
+[arsenalAmmoBox,["CUP_B_US_IIID_OEFCP"],false] call Bis_fnc_addVirtualBackpackCargo;

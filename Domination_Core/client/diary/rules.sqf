@@ -1,0 +1,3 @@
+player createDiaryRecord ["Rules",["Attitude / Actions","This is a cooperative mission. Obviously team killing, griefing, etc is not allowed."]];
+
+player createDiaryRecord ["Rules",["Work with your Squad","Players have their equipment and abilities restricted to promote teamwork. Players are expected to play aligned to their role.<br /> <br />Alone we can do so little, together we can do so much"]];
