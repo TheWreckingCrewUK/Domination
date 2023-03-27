@@ -4,7 +4,7 @@ player addEventHandler ["InventoryClosed", {
 			hintSilent "Weapons and Gear left on the ground will delete in the base";
 			deleteVehicle (_this select 1);
 		}else{
-			hint "You can leave your backpack on the ground in base for 5 minutes before it deletes";
+			hintSilent "You can leave your backpack on the ground in base for 5 minutes before it deletes";
 		
 			[(_this select 1)]spawn {
 				params["_container"];

@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={15295.005,251.44794,17083.344};
-		dir[]={-0.48335624,-0.45268512,0.74929565};
-		up[]={-0.24539094,0.89166927,0.38040411};
-		aside[]={0.84032756,-1.4551915e-010,0.54207873};
+		pos[]={15149.718,27.567139,17335.736};
+		dir[]={-0.55654305,-0.78430986,0.27407685};
+		up[]={-0.70361662,0.62036914,0.34650514};
+		aside[]={0.44179624,0,0.89711559};
 	};
 };
 binarizationWanted=0;
@@ -64,14 +64,13 @@ addons[]=
 	"CUP_Creatures_Military_USArmy",
 	"CUP_Weapons_M16",
 	"CUP_Weapons_M9",
-	"CUP_Creatures_People_Core",
 	"acre_sys_prc148",
 	"CUP_Creatures_Extra_IOTV",
 	"CUP_Weapons_MAAWS",
 	"CUP_Weapons_M72A6",
-	"CUP_Weapons_MK14_EBR",
+	"A3_Weapons_F_LongRangeRifles_EBR",
+	"ace_scopes",
 	"ace_ballistics",
-	"CUP_Weapons_Items",
 	"acre_api",
 	"CUP_Creatures_Military_USMC",
 	"CUP_Weapons_M136",
@@ -98,7 +97,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=60;
+		items=58;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -303,156 +302,148 @@ class AddonsMetaData
 		};
 		class Item32
 		{
-			className="CUP_Creatures_People_Core";
-			name="CUP_Creatures_People_Core";
-		};
-		class Item33
-		{
 			className="acre_sys_prc148";
 			name="ACRE2 - AN/PRC-148";
 			author="ACRE2Team";
 			url="https://github.com/IDI-Systems/acre2";
 		};
-		class Item34
+		class Item33
 		{
 			className="CUP_Creatures_Extra";
 			name="CUP_Creatures_Extra_IOTV";
 		};
-		class Item35
+		class Item34
 		{
 			className="CUP_Weapons_MAAWS";
 			name="CUP_Weapons_MAAWS";
 		};
-		class Item36
+		class Item35
 		{
 			className="CUP_Weapons_M72A6";
 			name="CUP_Weapons_M72A6";
 		};
-		class Item37
+		class Item36
 		{
-			className="CUP_Weapons_MK14_EBR";
-			name="CUP_Weapons_MK14_EBR";
+			className="ace_scopes";
+			name="ACE3 - Scopes";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
 		};
-		class Item38
+		class Item37
 		{
 			className="ace_ballistics";
 			name="ACE3 - Ballistics";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item39
-		{
-			className="CUP_Weapons_Items";
-			name="CUP_Weapons_Items";
-		};
-		class Item40
+		class Item38
 		{
 			className="acre_api";
 			name="ACRE2 - API";
 			author="ACRE2Team";
 			url="https://github.com/IDI-Systems/acre2";
 		};
-		class Item41
+		class Item39
 		{
 			className="CUP_Creatures_Military_USMC";
 			name="CUP_Creatures_Military_USMC";
 		};
-		class Item42
+		class Item40
 		{
 			className="CUP_Weapons_M136";
 			name="CUP_Weapons_M136";
 		};
-		class Item43
+		class Item41
 		{
 			className="ace_optics";
 			name="ACE3 - Optics";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item44
+		class Item42
 		{
 			className="CUP_WheeledVehicles_NewHMMWV";
 			name="CUP_WheeledVehicles_NewHMMWV";
 		};
-		class Item45
+		class Item43
 		{
 			className="CUP_WheeledVehicles_NewM1036";
 			name="CUP_WheeledVehicles_NewM1036";
 		};
-		class Item46
+		class Item44
 		{
 			className="CUP_WheeledVehicles_RG31";
 			name="CUP_WheeledVehicles_RG31";
 		};
-		class Item47
+		class Item45
 		{
 			className="CUP_WheeledVehicles_Jackal";
 			name="CUP_WheeledVehicles_Jackal";
 		};
-		class Item48
+		class Item46
 		{
 			className="CUP_WheeledVehicles_Ridgeback";
 			name="CUP_WheeledVehicles_Ridgeback";
 		};
-		class Item49
+		class Item47
 		{
 			className="CUP_TrackedVehicles_NewM113";
 			name="CUP_TrackedVehicles_NewM113";
 		};
-		class Item50
+		class Item48
 		{
 			className="CUP_Weapons_MP5";
 			name="CUP_Weapons_MP5";
 		};
-		class Item51
+		class Item49
 		{
 			className="ace_attach";
 			name="ACE3 - Attach";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item52
+		class Item50
 		{
 			className="ace_chemlights";
 			name="ace_chemlights";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item53
+		class Item51
 		{
 			className="ace_grenades";
 			name="ACE3 - Grenades";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item54
+		class Item52
 		{
 			className="CUP_AirVehciles_AW159";
 			name="CUP_AirVehciles_AW159";
 		};
-		class Item55
+		class Item53
 		{
 			className="CUP_Weapons_NVG";
 			name="CUP_Weapons_NVG";
 		};
-		class Item56
+		class Item54
 		{
 			className="CUP_Weapons_Grenades";
 			name="CUP_Weapons_Grenades";
 		};
-		class Item57
+		class Item55
 		{
 			className="CUP_AirVehicles_UH60";
 			name="CUP_AirVehicles_UH60";
 		};
-		class Item58
+		class Item56
 		{
 			className="A3_Structures_F_Enoch_Military";
 			name="Arma 3 Contact Platform - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item59
+		class Item57
 		{
 			className="A3_Structures_F_Bootcamp";
 			name="Arma 3 Bootcamp Update - Buildings and Structures";
@@ -473,6 +464,9 @@ randomSeed=9521518;
 class ScenarioData
 {
 	author="jayman9696";
+};
+class CustomAttributes
+{
 };
 class Mission
 {
@@ -3798,7 +3792,6 @@ class Mission
 							compass="ItemCompass";
 							watch="ItemWatch";
 							radio="ItemRadio";
-							goggles="CUP_G_Shades_Blue";
 							headgear="CUP_H_USArmy_HelmetACH_ESS_Headset_OEFCP";
 						};
 					};
@@ -4453,9 +4446,9 @@ class Mission
 						{
 							class primaryWeapon
 							{
-								name="CUP_lmg_M249_ElcanM145";
+								name="CUP_lmg_m249_pip1";
 								optics="CUP_optic_ElcanM145_PIP";
-								firemode="CUP_lmg_M249_ElcanM145:FullAuto";
+								firemode="CUP_lmg_m249_pip1:FullAuto";
 								class primaryMuzzleMag
 								{
 									name="CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
@@ -4529,21 +4522,21 @@ class Mission
 									items=3;
 									class Item0
 									{
-										name="CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
-										count=2;
-										ammoLeft=200;
-									};
-									class Item1
-									{
 										name="HandGrenade";
 										count=2;
 										ammoLeft=1;
 									};
-									class Item2
+									class Item1
 									{
 										name="SmokeShell";
 										count=3;
 										ammoLeft=1;
+									};
+									class Item2
+									{
+										name="CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
+										count=2;
+										ammoLeft=200;
 									};
 								};
 							};
@@ -5011,9 +5004,9 @@ class Mission
 						{
 							class primaryWeapon
 							{
-								name="CUP_lmg_M249_ElcanM145";
+								name="CUP_lmg_m249_pip1";
 								optics="CUP_optic_ElcanM145_PIP";
-								firemode="CUP_lmg_M249_ElcanM145:FullAuto";
+								firemode="CUP_lmg_m249_pip1:FullAuto";
 								class primaryMuzzleMag
 								{
 									name="CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
@@ -5087,21 +5080,21 @@ class Mission
 									items=3;
 									class Item0
 									{
-										name="CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
-										count=2;
-										ammoLeft=200;
-									};
-									class Item1
-									{
 										name="HandGrenade";
 										count=2;
 										ammoLeft=1;
 									};
-									class Item2
+									class Item1
 									{
 										name="SmokeShell";
 										count=3;
 										ammoLeft=1;
+									};
+									class Item2
+									{
+										name="CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
+										count=2;
+										ammoLeft=200;
 									};
 								};
 							};
@@ -5180,11 +5173,11 @@ class Mission
 						{
 							class primaryWeapon
 							{
-								name="CUP_srifle_Mk18_blk_LP4";
+								name="srifle_EBR_F";
 								optics="CUP_optic_LeupoldMk4_pip";
 								flashlight="CUP_acc_LLM_black";
 								underBarrel="CUP_bipod_Harris_1A2_L_BLK";
-								firemode="CUP_srifle_Mk18_blk_LP4:Single";
+								firemode="srifle_EBR_F:Single";
 								class primaryMuzzleMag
 								{
 									name="20Rnd_762x51_Mag";
@@ -5202,7 +5195,7 @@ class Mission
 							};
 							class binocular
 							{
-								name="CUP_Vector21Nite";
+								name="ACE_Vector";
 							};
 							class uniform
 							{
@@ -6220,9 +6213,9 @@ class Mission
 						{
 							class primaryWeapon
 							{
-								name="CUP_lmg_M249";
+								name="CUP_lmg_m249_pip1";
 								optics="CUP_optic_ElcanM145_PIP";
-								firemode="CUP_lmg_M249:FullAuto";
+								firemode="CUP_lmg_m249_pip1:FullAuto";
 								class primaryMuzzleMag
 								{
 									name="CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
@@ -6296,15 +6289,15 @@ class Mission
 									items=2;
 									class Item0
 									{
-										name="CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
-										count=3;
-										ammoLeft=200;
-									};
-									class Item1
-									{
 										name="HandGrenade";
 										count=2;
 										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
+										count=3;
+										ammoLeft=200;
 									};
 								};
 							};
@@ -6906,9 +6899,9 @@ class Mission
 						{
 							class primaryWeapon
 							{
-								name="CUP_lmg_M249";
+								name="CUP_lmg_m249_pip1";
 								optics="CUP_optic_ElcanM145_PIP";
-								firemode="CUP_lmg_M249:FullAuto";
+								firemode="CUP_lmg_m249_pip1:FullAuto";
 								class primaryMuzzleMag
 								{
 									name="CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
@@ -6982,15 +6975,15 @@ class Mission
 									items=2;
 									class Item0
 									{
-										name="CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
-										count=3;
-										ammoLeft=200;
-									};
-									class Item1
-									{
 										name="HandGrenade";
 										count=2;
 										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="CUP_200Rnd_TE4_Red_Tracer_556x45_M249";
+										count=3;
+										ammoLeft=200;
 									};
 								};
 							};
@@ -7874,7 +7867,6 @@ class Mission
 							compass="ItemCompass";
 							watch="ItemWatch";
 							radio="ItemRadio";
-							goggles="CUP_G_Oakleys_Clr";
 							headgear="CUP_H_USMC_LWH_ESS_HS_WDL";
 						};
 					};
@@ -7926,6 +7918,7 @@ class Mission
 					{
 						name="usmcmed";
 						description="Corpsman";
+						isPlayer=1;
 						isPlayable=1;
 						class Inventory
 						{
@@ -9062,7 +9055,6 @@ class Mission
 						rank="SERGEANT";
 						name="ushelo";
 						description="Pilot@Blackhawk Pilot";
-						isPlayer=1;
 						isPlayable=1;
 						class Inventory
 						{
@@ -9482,7 +9474,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={15174.039,18.000521,17364.494};
-				angles[]={0,3.8124287,-0};
+				angles[]={0,3.8124287,0};
 			};
 			side="Empty";
 			flags=1;

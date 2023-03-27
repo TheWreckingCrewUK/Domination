@@ -1,4 +1,4 @@
-[arsenalAmmoBox,["CUP_arifle_M4A1_M203_ACOG_Laser","CUP_hgun_M9","CUP_launch_M136","CUP_launch_M72A6","ACE_Vector","ace_csw_staticM2ShieldCarry","ace_csw_m3CarryTripodLow"],false] call BIS_fnc_addVirtualWeaponCargo;
+[arsenalAmmoBox,["CUP_arifle_M4A1_BUIS_GL","CUP_hgun_M9","CUP_launch_M136","CUP_launch_M72A6","ACE_Vector","ace_csw_staticM2ShieldCarry","ace_csw_m3CarryTripodLow"],false] call BIS_fnc_addVirtualWeaponCargo;
 [arsenalAmmoBox,["CUP_30Rnd_556x45_Stanag","CUP_30Rnd_556x45_Stanag_Tracer_Red","CUP_15Rnd_9x19_M9","1Rnd_HE_Grenade_shell","1Rnd_SmokeRed_Grenade_shell","1Rnd_SmokeGreen_Grenade_shell","1Rnd_SmokeBlue_Grenade_shell","1Rnd_SmokeOrange_Grenade_shell","1Rnd_SmokePurple_Grenade_shell","1Rnd_SmokeYellow_Grenade_shell","1Rnd_Smoke_Grenade_shell"],false] call BIS_fnc_addVirtualMagazineCargo;
 [arsenalAmmoBox,["CUP_H_USArmy_HelmetACH_ESS_Headset_OEFCP","CUP_U_B_USArmy_ACU_Kneepad_Gloves_OEFCP","CUP_V_B_IOTV_OEFCP_SL_USArmy","CUP_acc_LLM_black","CUP_optic_ACOG","ACRE_PRC148"],false] call Bis_fnc_addVirtualItemCargo;
 [arsenalAmmoBox,["CUP_B_US_IIID_OEFCP"],false] call Bis_fnc_addVirtualBackpackCargo;
