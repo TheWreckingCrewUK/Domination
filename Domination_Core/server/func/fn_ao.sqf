@@ -104,6 +104,7 @@ if((count allPlayers) > 10) then{
 	}else{
 	
 		_script = [_pos,_name] spawn TWC_Domination_fnc_lowPlayers;
+	};
 };
 //Waits to set order of objectives correctly. Cause autism or something.
 waitUntil{scriptDone _script};
