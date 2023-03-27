@@ -5,7 +5,7 @@ badAOs = ["Agia Triada","Telos"];
 //sets up enemy variables based on mods
 //Allows it to be switched if we want new maps or enemy types.
 //Enemies always spawn as OPFOR
-_enemyType = 2;
+_enemyType = 6;
 //1. CSAT
 if(_enemyType == 1)then{
 	tank = ["O_MBT_02_cannon_F"];
@@ -94,6 +94,24 @@ if(_enemyType == 5)then{
 	attackHelo = ["I_C_Heli_Light_01_civil_F"];
 	tankaaCombined = (configfile >> "CfgGroups" >> "East" >> "OPF_F" >> "Armored" >> "OIA_TankPlatoon_AA");
 	enemyFlag = "flag_Syndicat";
+	bunkerMarkerClass = "n_unknown";
+};
+//6. Russian MSV Modern
+if(_enemyType == 6)then{
+	tank = ["CUP_O_T90_RU"];
+	ifv = ["CUP_O_BMP3_RU"];
+	apc = ["CUP_O_BTR80_CAMO_RU"];
+	squad = (configfile >> "CfgGroups" >> "East" >> "CUP_O_RU" >> "Infantry_M_EMR" >> "InfSquad");
+	squadAT = (configfile >> "CfgGroups" >> "East" >> "CUP_O_RU" >> "Infantry_M_EMR" >> "InfTeam_AT");
+	squadAA = (configfile >> "CfgGroups" >> "East" >> "CUP_O_RU" >> "Infantry_M_EMR" >> "InfTeam_AA");
+	TWC_Domination_hardpointSoldierType = "CUP_O_RU_Soldier_Lite_M_EMR_V2";
+	aa = ["CUP_O_2S6M_RU"];
+	radioTower = "Land_TTowerBig_2_F";
+	mortar = ["CUP_O_2b14_82mm_RU_M_MSV"];
+	spg = ["CUP_O_BM21_RU"];
+	attackHelo = ["CUP_O_Mi24_P_Dynamic_RU"];
+	tankaaCombined = ["CUP_O_T90_RU","CUP_O_T90_RU","CUP_O_T90_RU","CUP_O_2S6M_RU"];
+	enemyFlag = "flag_Russia";
 	bunkerMarkerClass = "n_unknown";
 };
 

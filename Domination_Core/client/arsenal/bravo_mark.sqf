@@ -1,4 +1,4 @@
-[arsenalAmmoBox,["CUP_srifle_Mk18_blk_LP4","CUP_hgun_M9","CUP_launch_Javelin","CUP_launch_M47","CUP_launch_M72A6","CUP_launch_M136","ace_csw_staticM2ShieldCarry","ace_csw_m3CarryTripodLow"],false] call BIS_fnc_addVirtualWeaponCargo;
+[arsenalAmmoBox,["CUP_srifle_Mk18_blk_LP4","CUP_hgun_M9","CUP_launch_Javelin","CUP_launch_M47","CUP_launch_M72A6","CUP_launch_M136","ace_csw_staticM2ShieldCarry","ace_csw_m3CarryTripodLow","CUP_TOW2_carry","ace_csw_m220CarryTripod"],false] call BIS_fnc_addVirtualWeaponCargo;
 [arsenalAmmoBox,["20Rnd_762x51_Mag","ACE_20Rnd_762x51_Mag_Tracer","CUP_15Rnd_9x19_M9","CUP_Javelin_M","CUP_Dragon_EP1_M"],false] call BIS_fnc_addVirtualMagazineCargo;
 [arsenalAmmoBox,["CUP_H_USArmy_HelmetACH_ESS_Headset_OEFCP","CUP_U_B_USArmy_ACU_Kneepad_Gloves_OEFCP","CUP_V_B_IOTV_OEFCP_SL_USArmy","CUP_acc_LLM_black","CUP_optic_LeupoldMk4_pip","CUP_bipod_Harris_1A2_L_BLK","ACRE_PRC148"],false] call Bis_fnc_addVirtualItemCargo;
 [arsenalAmmoBox,["CUP_B_US_IIID_OEFCP"],false] call Bis_fnc_addVirtualBackpackCargo;

@@ -1,44 +1,4 @@
-[arsenalAmmoBox,["arifle_MX_GL_F","hgun_ACPC2_F"],false] call BIS_fnc_addVirtualWeaponCargo;
-[arsenalAmmoBox,["30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer","200Rnd_65x39_cased_Box","130Rnd_338_Mag","9Rnd_45ACP_Mag""Titan_AT","Titan_AP"],false] call BIS_fnc_addVirtualMagazineCargo;
-[arsenalAmmoBox,["H_HelmetB_snakeskin","U_B_CombatUniform_mcam_vest","V_PlateCarrier1_rgr","acc_pointer_IR","optic_Hamr","ACRE_PRC148"],false] call Bis_fnc_addVirtualItemCargo;
-[arsenalAmmoBox,["B_Carryall_cbr"],false] call Bis_fnc_addVirtualBackpackCargo;
-
-comment "Exported from Arsenal by jayman";
-
-comment "Remove existing items";
-removeAllWeapons player;
-removeAllItems player;
-removeAllAssignedItems player;
-removeUniform player;
-removeVest player;
-removeBackpack player;
-removeHeadgear player;
-
-comment "Add containers";
-player forceAddUniform "U_B_CombatUniform_mcam_vest";
-player addItem "ACRE_PRC148";
-
-//Infantry Medical Equipment
-[] call TWC_Domination_fnc_addInfantryMedicalGear;
-
-player addVest "V_PlateCarrier1_rgr";
-for "_i" from 1 to 2 do {player addItemToVest "HandGrenade";};
-for "_i" from 1 to 2 do {player addItemToVest "9Rnd_45ACP_Mag";};
-for "_i" from 1 to 8 do {player addItemToVest "30Rnd_65x39_caseless_mag";};
-for "_i" from 1 to 2 do {player addItemToVest "30Rnd_65x39_caseless_mag_Tracer";};
-player addBackpack "B_Carryall_cbr";
-for "_i" from 1 to 3 do {player addItemToBackpack "SmokeShell";};
-for "_i" from 1 to 3 do {player addItemToBackpack "200Rnd_65x39_cased_Box";};
-player addHeadgear "H_HelmetB_snakeskin";
-
-comment "Add weapons";
-player addWeapon "arifle_MX_F";
-player addPrimaryWeaponItem "acc_pointer_IR";
-player addPrimaryWeaponItem "optic_Hamr";
-player addWeapon "hgun_ACPC2_F";
-
-comment "Add items";
-player linkItem "ItemMap";
-player linkItem "ItemCompass";
-player linkItem "ItemWatch";
-player linkItem "NVGoggles";
+[arsenalAmmoBox,["CUP_arifle_M16A4_Base","CUP_hgun_M9","CUP_launch_M136","CUP_launch_M72A6","ace_csw_staticM2ShieldCarry","ace_csw_m3CarryTripodLow"],false] call BIS_fnc_addVirtualWeaponCargo;
+[arsenalAmmoBox,["CUP_30Rnd_556x45_Stanag","CUP_30Rnd_556x45_Stanag_Tracer_Red","CUP_100Rnd_TE4_LRT4_Red_Tracer_762x51_Belt_M","CUP_15Rnd_9x19_M9"],false] call BIS_fnc_addVirtualMagazineCargo;
+[arsenalAmmoBox,["CUP_H_USMC_LWH_ESS_LR_WDL","CUP_U_B_USMC_FROG2_WMARPAT","CUP_V_B_Eagle_SPC_SL","CUP_acc_LLM_black","CUP_optic_ACOG","ACRE_PRC148"],false] call Bis_fnc_addVirtualItemCargo;
+[arsenalAmmoBox,["CUP_B_USMC_MOLLE"],false] call Bis_fnc_addVirtualBackpackCargo;

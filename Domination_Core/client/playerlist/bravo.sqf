@@ -1,17 +1,18 @@
 //made by hartzie edited by FakeMatty
-_player9 = if(!isNil "p9")then{if(!isPlayer p9)then{"";}else{(name p9);};}else{"";};
-_player10 = if(!isNil "p10")then{if(!isPlayer p10)then{"";}else{(name p10);};}else{"";};
-_player11 = if(!isNil "p11")then{if(!isPlayer p11)then{"";}else{(name p11);};}else{"";};
-_player12 = if(!isNil "p12")then{if(!isPlayer p12)then{"";}else{(name p12);};}else{"";};
-_player13 = if(!isNil "p13")then{if(!isPlayer p13)then{"";}else{(name p13);};}else{"";};
-_player14 = if(!isNil "p14")then{if(!isPlayer p14)then{"";}else{(name p14);};}else{"";};
-_player15 = if(!isNil "p15")then{if(!isPlayer p15)then{"";}else{(name p15);};}else{"";};
-_player16 = if(!isNil "p16")then{if(!isPlayer p16)then{"";}else{(name p16);};}else{"";};
-_player17 = if(!isNil "p17")then{if(!isPlayer p17)then{"";}else{(name p17);};}else{"";};
+_player1 = if(!isNil "usp1")then{if(!isPlayer usp1)then{"";}else{(name usp1);};}else{"";};
+_player2 = if(!isNil "usp2")then{if(!isPlayer usp2)then{"";}else{(name usp2);};}else{"";};
+_player3 = if(!isNil "usp3")then{if(!isPlayer usp3)then{"";}else{(name usp3);};}else{"";};
+_player4 = if(!isNil "usp4")then{if(!isPlayer usp4)then{"";}else{(name usp4);};}else{"";};
+_player5 = if(!isNil "usp5")then{if(!isPlayer usp5)then{"";}else{(name usp5);};}else{"";};
+_player6 = if(!isNil "usp6")then{if(!isPlayer usp6)then{"";}else{(name usp6);};}else{"";};
+_player7 = if(!isNil "usp7")then{if(!isPlayer usp7)then{"";}else{(name usp7);};}else{"";};
+_player8 = if(!isNil "usp8")then{if(!isPlayer usp8)then{"";}else{(name usp8);};}else{"";};
+_player9 = if(!isNil "usp9")then{if(!isPlayer usp9)then{"";}else{(name usp9);};}else{"";};
+_playermed = if(!isNil "usmed")then{if(!isPlayer usmed)then{"";}else{(name usmed);};}else{"";};
 
 
 
-g_playerlist = [ ["Bravo US Army",      [["Bravo Squad Leader", [_player9, "Squad Leader"]], ["Fire Team 1", [_player10, "Fire Team Leader"], [_player11, "Rifleman"], [_player12, "Grenadier"], [_player13, "Automatic Rifleman"]], ["Fire Team 2", [_player14, "Fire Team Leader"], [_player15, "Automatic Rifleman"], [_player16, "Marksman"], [_player17, "Medic"]]]]				
+g_playerlist = [ ["Bravo US Army",      [["Bravo Squad Leader", [_player1, "Squad Leader"]], ["Fire Team 1", [_player2, "Fire Team Leader"], [_player3, "Rifleman"], [_player4, "Grenadier"], [_player5, "Automatic Rifleman"]], ["Fire Team 2", [_player6, "Fire Team Leader"], [_player7, "Rifleman"], [_player8, "Automatic Rifleman"], [_player9, "Marksman"], [_playermed, "Medic"]]]]				
 				
 				];
 

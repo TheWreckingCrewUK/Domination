@@ -45,17 +45,17 @@ _markerstr setMarkerSize [0.75,0.75];
 [West,["radioTowerObj"],["Destroy the radio tower to stop the enemies from calling in reinforcements","Destroy the Radio Tower",""],(getMarkerPos _markerstr),false,1,false,"radio",False] call BIS_fnc_taskCreate;
 
 for "_i" from 1 to 3 do {
-	_spawnPos = [_pos,[200,500],random 360,0] call SHK_pos;
+	_spawnPos = [_pos,[200,600],random 360,0] call SHK_pos;
 	_unit = [_spawnPos, EAST, squadAA] call BIS_fnc_spawnGroup;
 	[_unit, _spawnPos, 200] call TWC_Domination_fnc_patrol;
 };
-for "_i" from 1 to 6 do {
+for "_i" from 1 to 4 do {
 	_spawnPos = [_pos,[0,250],random 360,0] call SHK_pos;
 	_unit = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
 	[_unit, _spawnPos, 150] call TWC_Domination_fnc_defend;
 };
-for "_i" from 1 to 7 do {
-	_spawnPos = [_pos,[200,600],random 360,0] call SHK_pos;
+for "_i" from 1 to 5 do {
+	_spawnPos = [_pos,[400,1000],random 360,0] call SHK_pos;
 	_unit = [_spawnPos, EAST, squad] call BIS_fnc_spawnGroup;
 	[_unit, _spawnPos, 200] call TWC_Domination_fnc_patrol;
 };
@@ -65,12 +65,12 @@ for "_i" from 1 to 1 do {
 	[_unit, _spawnPos, 200] call TWC_Domination_fnc_patrol;
 };
 for "_i" from 1 to 1 do {
-	_spawnPos = [_pos,[400,500],random 360,0,[1,100]] call SHK_pos;
+	_spawnPos = [_pos,[400,1000],random 360,0,[1,100]] call SHK_pos;
 	_unit = [_spawnPos, EAST, ifv] call BIS_fnc_spawnGroup;
 	[_unit, _spawnPos, 300] call TWC_Domination_fnc_patrol;
 };
 for "_i" from 1 to 3 do {
-	_spawnPos = [_pos,[400,700],random 360,0,[1,100]] call SHK_pos;
+	_spawnPos = [_pos,[400,1000],random 360,0,[1,100]] call SHK_pos;
 	_unit = [_spawnPos, EAST, apc] call BIS_fnc_spawnGroup;
 	[_unit, _spawnPos, 300] call TWC_Domination_fnc_patrol;
 };
@@ -80,6 +80,6 @@ for "_i" from 1 to 2 do {
 	[_unit, _spawnPos, 200] call TWC_Domination_fnc_patrol;
 };
 
-_spawnPos = [_pos,[0,200],random 360,0,[1,100]] call SHK_pos;
+_spawnPos = [_pos,[0,1000],random 360,0,[1,100]] call SHK_pos;
 _unit = [_spawnPos, EAST, attackHelo] call BIS_fnc_spawnGroup;
 [_unit, _spawnPos, 1000,8] call TWC_Domination_fnc_patrol;

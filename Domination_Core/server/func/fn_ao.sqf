@@ -93,12 +93,17 @@ twc_aoBoolArray pushback aobunkerTwo;
 
 //if there is more than 8 players it spawns the side missions and a 3rd bunker
 _script = "";
-if((count allPlayers) > 5) then{
+if((count allPlayers) > 10) then{
 
 	_script = [_pos,_name] spawn TWC_Domination_fnc_highPlayers;
 }else{
+	if((count allPlayers) > 5) then{
 
-	_script = [_pos,_name] spawn TWC_Domination_fnc_lowPlayers;
+		_script = [_pos,_name] spawn TWC_Domination_fnc_mediumPlayers;
+	
+	}else{
+	
+		_script = [_pos,_name] spawn TWC_Domination_fnc_lowPlayers;
 };
 //Waits to set order of objectives correctly. Cause autism or something.
 waitUntil{scriptDone _script};

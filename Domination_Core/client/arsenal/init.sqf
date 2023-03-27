@@ -1,6 +1,6 @@
 [arsenalAmmoBox,[""],false] call Bis_fnc_addVirtualWeaponCargo;
 
-[arsenalAmmoBox,["HandGrenade","SmokeShell","SmokeShellRed","SmokeShellGreen","SmokeShellYellow","SmokeShellPurple","SmokeShellPurple","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_red","Chemlight_yellow","Chemlight_blue","ACE_M14","ACE_CTS9","B_IR_Grenade","ACE_HandFlare_Green","ACE_HandFlare_Red","ACE_HandFlare_White","ACE_HandFlare_Yellow","ACE_M84"],false] call BIS_fnc_addVirtualMagazineCargo;
+[arsenalAmmoBox,["HandGrenade","SmokeShell","SmokeShellRed","SmokeShellGreen","SmokeShellYellow","SmokeShellPurple","SmokeShellPurple","SmokeShellBlue","SmokeShellOrange","Chemlight_green","Chemlight_red","Chemlight_yellow","Chemlight_blue","B_IR_Grenade","ACE_HandFlare_Green","ACE_HandFlare_Red","ACE_HandFlare_White","ACE_HandFlare_Yellow"],false] call BIS_fnc_addVirtualMagazineCargo;
 
 [arsenalAmmoBox,["ItemMap","ItemCompass","ItemWatch","CUP_NVG_1PN138","ACE_fieldDressing","ACE_splint","ACE_morphine","ACE_epinephrine","ACE_tourniquet","ACE_EntrenchingTool","ACE_IR_Strobe_Item","ACE_Flashlight_XL50","ACE_SpraypaintBlack","ACE_SpraypaintBlue","ACE_SpraypaintGreen","ACE_SpraypaintRed","ACE_wirecutter","ACE_Clacker","ACE_EarPlugs"],false] call Bis_fnc_addVirtualItemCargo;
 
@@ -29,15 +29,18 @@ switch(typeOf player)do{
 	case "CUP_B_US_Medic_OEFCP":{execVM "Domination_Core\client\arsenal\bravo_med.sqf"};
 	case "CUP_B_USMC_Soldier_SL_FROG_WDL":{execVM "Domination_Core\client\arsenal\charlie_sl.sqf"};
 	case "CUP_B_USMC_Soldier_TL_FROG_WDL":{execVM "Domination_Core\client\arsenal\charlie_tl.sqf"};
-	case "CUP_B_USMC_Soldier_TL_FROG_WDL":{execVM "Domination_Core\client\arsenal\charlie_rf.sqf"};
-	case "CUP_B_USMC_Soldier_FROG_WDL":{execVM "Domination_Core\client\arsenal\charlie_ar.sqf"};
+	case "CUP_B_USMC_Soldier_FROG_WDL":{execVM "Domination_Core\client\arsenal\charlie_rf.sqf"};
+	case "CUP_B_USMC_Soldier_AR_FROG_WDL":{execVM "Domination_Core\client\arsenal\charlie_ar.sqf"};
 	case "CUP_B_USMC_Soldier_LAT_FROG_WDL":{execVM "Domination_Core\client\arsenal\charlie_aar.sqf"};
 	case "CUP_B_USMC_Soldier_MG_FROG_WDL":{execVM "Domination_Core\client\arsenal\charlie_mg.sqf"};
 	case "CUP_B_USMC_Soldier_Light_FROG_WDL":{execVM "Domination_Core\client\arsenal\charlie_mgass.sqf"};
 	case "CUP_B_USMC_Medic_FROG_WDL":{execVM "Domination_Core\client\arsenal\charlie_med.sqf"};
+	case "CUP_B_BAF_Soldier_Helipilot_MTP":{execVM "Domination_Core\client\arsenal\alpha_helo.sqf"};
+	case "CUP_B_US_Pilot":{execVM "Domination_Core\client\arsenal\bravo_helo.sqf"};
 	default {hint "Arsenal/init.sqf Failed"};
 };
 
+/*
 if (!isNil "armour1" && {player == armour1}) then {
 	execVM "Domination_Core\client\arsenal\armour_co.sqf";
 };
@@ -61,7 +64,7 @@ if (!isNil "helo3" && {player == helo3}) then {
 if (!isNil "jet1" && {player == jet1}) then {
 	execVM "Domination_Core\client\arsenal\jet.sqf";
 };
-/*
+
 if (!isNil "bafp1" && {player == bafp1}) then {
 	execVM "Domination_Core\client\arsenal\alpha_sl.sqf";
 };

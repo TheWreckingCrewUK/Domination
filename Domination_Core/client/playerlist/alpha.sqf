@@ -1,17 +1,18 @@
 //made by hartzie edited by FakeMatty
-_player1 = if(!isNil "p1")then{if(!isPlayer p1)then{"";}else{(name p1);};}else{"";};
-_player2 = if(!isNil "p2")then{if(!isPlayer p2)then{"";}else{(name p2);};}else{"";};
-_player3 = if(!isNil "p3")then{if(!isPlayer p3)then{"";}else{(name p3);};}else{"";};
-_player4 = if(!isNil "p4")then{if(!isPlayer p4)then{"";}else{(name p4);};}else{"";};
-_player5 = if(!isNil "p5")then{if(!isPlayer p5)then{"";}else{(name p5);};}else{"";};
-_player6 = if(!isNil "p6")then{if(!isPlayer p6)then{"";}else{(name p6);};}else{"";};
-_player7 = if(!isNil "p7")then{if(!isPlayer p7)then{"";}else{(name p7);};}else{"";};
-_player8 = if(!isNil "p8")then{if(!isPlayer p8)then{"";}else{(name p8);};}else{"";};
+_player1 = if(!isNil "bafp1")then{if(!isPlayer bafp1)then{"";}else{(name bafp1);};}else{"";};
+_player2 = if(!isNil "bafp2")then{if(!isPlayer bafp2)then{"";}else{(name bafp2);};}else{"";};
+_player3 = if(!isNil "bafp3")then{if(!isPlayer bafp3)then{"";}else{(name bafp3);};}else{"";};
+_player4 = if(!isNil "bafp4")then{if(!isPlayer bafp4)then{"";}else{(name bafp4);};}else{"";};
+_player5 = if(!isNil "bafp5")then{if(!isPlayer bafp5)then{"";}else{(name bafp5);};}else{"";};
+_player6 = if(!isNil "bafp6")then{if(!isPlayer bafp6)then{"";}else{(name bafp6);};}else{"";};
+_player7 = if(!isNil "bafp7")then{if(!isPlayer bafp7)then{"";}else{(name bafp7);};}else{"";};
+_player8 = if(!isNil "bafp8")then{if(!isPlayer bafp8)then{"";}else{(name bafp8);};}else{"";};
+_player9 = if(!isNil "bafmed")then{if(!isPlayer bafmed)then{"";}else{(name bafmed);};}else{"";};
 
 
 
 
-g_playerlist = [["Alpha British Army", [["Alpha Section Leader", [_player1, "Section Leader"], [_player2, "Rifleman"], [_player3, "Grenadier"], [_player4, "Automatic Rifleman"]], ["Fire Team 2", [_player5, "2IC"], [_player6, "Machine Gunner"], [_player7, "Marksman"], [_player8, "Medic"]]]]					
+g_playerlist = [["Alpha British Army", [["Alpha Section Leader", [_player1, "Section Leader"], [_player2, "Rifleman"], [_player3, "Grenadier"], [_player4, "Automatic Rifleman"]], ["Fire Team 2", [_player5, "2IC"], [_player6, "Automatic Rifleman"], [_player7, "Machine Gunner"], [_player8, "Marksman"], [_player9, "Medic"]]]]					
 				
 				];
 

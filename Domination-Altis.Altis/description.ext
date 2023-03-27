@@ -18,7 +18,7 @@ class Header
 
 
 respawn="BASE";
-respawndelay = 0;
+respawndelay = 5;
 respawnDialog = true;
 respawnOnStart = 0;
 enableDebugConsole = 1;
@@ -38,6 +38,7 @@ class cfgFunctions
 			class extraOBJ {};
 			class GlobalChat {};
 			class highPlayers {};
+			class mediumPlayers {};
 			class lowPlayers {};
 			class mortar {};
 			class patrol {};
@@ -57,6 +58,8 @@ class cfgFunctions
 			class playerList {};
 			class removeWeapons {};
 			class setRadio {};
+			class spawnBoxes {};
+			class weaponAssembleFix {};
 		};
 		class Functions
 		{

@@ -1,6 +1,6 @@
 //made by hartzie edited by FakeMatty
-_player1 = if(!isNil "helo1")then{if(!isPlayer helo1)then{"";}else{(name helo1);};}else{"";};
-_player2 = if(!isNil "helo2")then{if(!isPlayer helo2)then{"";}else{(name helo2);};}else{"";};
+_player1 = if(!isNil "bafhelo")then{if(!isPlayer bafhelo)then{"";}else{(name bafhelo);};}else{"";};
+_player2 = if(!isNil "ushelo")then{if(!isPlayer ushelo)then{"";}else{(name ushelo);};}else{"";};
 
 g_playerlist = [["Air Assets", [["Wildcat", [_player1, "Pilot"]],["BlackHawk", [_player2, "Pilot"]]]]				
 				
