@@ -1,0 +1,149 @@
+DisabledAI = 1;
+joinUnassigned = 1;
+disableChannels[] = {6};
+
+
+onLoadName = "Domination";
+onLoadMission = "http://www.thewreckingcrew.eu/";
+author = "Jayman[TWC]";
+loadScreen = "Domination_Core\server\pics\loading.jpg";
+
+
+class Header
+{
+	gameType = Coop;
+	minPlayers = 0;
+	maxPlayers = 40;
+};
+
+
+respawn="BASE";
+respawndelay = 5;
+respawnDialog = true;
+respawnOnStart = 0;
+enableDebugConsole = 1;
+
+class cfgFunctions
+{
+	class TWC_Domination
+	{
+		class AO
+		{
+			file = "Domination_Core\server\func";
+			class ao {};
+			class armour {};
+			class arty {};
+			class defend {};
+			class deleteDead {};
+			class extraOBJ {};
+			class GlobalChat {};
+			class highPlayers {};
+			class mediumPlayers {};
+			class lowPlayers {};
+			class mortar {};
+			class patrol {};
+			
+		};
+		class Client
+		{
+			file = "Domination_Core\client\func";
+			class jumpOut {};
+			class addInfantryMedicalGear {};
+			class addMedicMedicalGear {};
+		};
+		class Respawn
+		{
+			file = "Domination_Core\client\respawn";
+			class earplugFix {};
+			class playerList {};
+			class removeWeapons {};
+			class setRadio {};
+			class spawnBoxes {};
+			class weaponAssembleFix {};
+		};
+		class Functions
+		{
+			file = "Domination_Core\server\sys_vehicleRespawn";
+			class vehicleRespawn {};
+		};
+	};
+	class CBA
+	{
+		class Functions
+		{
+			file = "Domination_Core\server\cba";
+			class addWaypoint {};
+		};
+	};
+};
+class CfgDebriefing
+{
+	class End1
+	{
+		title = "Not enough players";
+		subtitle = "Play as general infantry for now";
+		description = "";
+		// pictureBackground = "";
+		// picture = "";
+		// pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class End2
+	{
+		title = "Pilot Unavailable";
+		subtitle = "You need at least 5 players per pilot.";
+		description = "Play general infantry for now!";
+		// pictureBackground = "";
+		// picture = "";
+		// pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class End3
+	{
+		title = "Not a member";
+		subtitle = "You must be a [TWC] member for this slot";
+		description = "Apply at http://www.thewreckingcrew.eu/";
+		// pictureBackground = "";
+		// picture = "";
+		// pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class End4
+	{
+		title = "Pilot unavailable";
+		subtitle = "You need 5 people online to play as the Pilot.";
+		description = "Play general infantry for now!";
+		// pictureBackground = "";
+		// picture = "";
+		// pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class End5
+	{
+		title = "Mission End";
+		subtitle = "Good Job!";
+		description = "You will need to to download our mods off Arma 3 Sync to continue playing.";
+		// pictureBackground = "";
+		// picture = "";
+		// pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+	class End6
+	{
+		title = "You can not play as a human Civilian";
+		subtitle = "You must be a member and have at least 20 people online";
+		description = "Play as Blufor for now";
+		// pictureBackground = "";
+		// picture = "";
+		// pictureColor[] = {0.0,0.3,0.6,1};
+	};
+	class End7
+	{
+		title = "You can not play as the Apache crew";
+		subtitle = "You must be a member and have at least 20 people online";
+		description = "Play as Blufor for now";
+		// pictureBackground = "";
+		// picture = "";
+		// pictureColor[] = {0.0,0.3,0.6,1};
+	};
+};

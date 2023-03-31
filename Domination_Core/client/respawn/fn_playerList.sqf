@@ -23,14 +23,21 @@ TWC_Domination_fnc_playerListAction = {
 				} forEach actions;
 				call TWC_Domination_fnc_playerListAction;
 			}, [], 1, false, false]];
-			actions set [4, player addAction [" Air List ", {
+			actions set [4, player addAction [" Delta List ", {
+				execVM "Domination_Core\client\playerList\Delta.sqf";
+				{
+					player removeAction _x;
+				} forEach actions;
+				call TWC_Domination_fnc_playerListAction;
+			}, [], 1, false, false]];
+			actions set [5, player addAction [" Air List ", {
 				execVM "Domination_Core\client\playerList\air.sqf";
 				{
 					player removeAction _x;
 				} forEach actions;
 				call TWC_Domination_fnc_playerListAction;
 			}, [], 1, false, false]];
-			actions set [5, player addAction [" Armour List ", {
+			actions set [6, player addAction [" Armour List ", {
 				execVM "Domination_Core\client\playerList\armourcrew.sqf";
 				{
 					player removeAction _x;

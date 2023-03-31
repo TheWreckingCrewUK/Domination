@@ -12,6 +12,7 @@ if(configNull == (configFile >> "kat_pharma"))then{
 };
 
 switch(typeOf player)do{
+	//Alpha
 	case "CUP_B_BAF_Soldier_SquadLeader_MTP":{execVM "Domination_Core\client\arsenal\alpha_sl.sqf"};
 	case "CUP_B_BAF_Soldier_Rifleman_MTP":{execVM "Domination_Core\client\arsenal\alpha_rf.sqf"};
 	case "CUP_B_BAF_Soldier_Grenadier_MTP":{execVM "Domination_Core\client\arsenal\alpha_grn.sqf"};
@@ -20,6 +21,7 @@ switch(typeOf player)do{
 	case "CUP_B_BAF_Soldier_Marksman_MTP":{execVM "Domination_Core\client\arsenal\alpha_mark.sqf"};
 	case "CUP_B_BAF_Soldier_TeamLeader_MTP":{execVM "Domination_Core\client\arsenal\alpha_2ic.sqf"};
 	case "CUP_B_BAF_Soldier_Medic_MTP":{execVM "Domination_Core\client\arsenal\alpha_med.sqf"};
+	//Bravo
 	case "CUP_B_US_Soldier_SL_OEFCP":{execVM "Domination_Core\client\arsenal\bravo_sl.sqf"};
 	case "CUP_B_US_Soldier_TL_OEFCP":{execVM "Domination_Core\client\arsenal\bravo_tl.sqf"};
 	case "CUP_B_US_Soldier_ACOG_OEFCP":{execVM "Domination_Core\client\arsenal\bravo_rf.sqf"};
@@ -27,6 +29,7 @@ switch(typeOf player)do{
 	case "CUP_B_US_Soldier_AR_OEFCP":{execVM "Domination_Core\client\arsenal\bravo_ar.sqf"};
 	case "CUP_B_US_Soldier_Marksman_EBR_OEFCP":{execVM "Domination_Core\client\arsenal\bravo_mark.sqf"};
 	case "CUP_B_US_Medic_OEFCP":{execVM "Domination_Core\client\arsenal\bravo_med.sqf"};
+	//Charlie
 	case "CUP_B_USMC_Soldier_SL_FROG_WDL":{execVM "Domination_Core\client\arsenal\charlie_sl.sqf"};
 	case "CUP_B_USMC_Soldier_TL_FROG_WDL":{execVM "Domination_Core\client\arsenal\charlie_tl.sqf"};
 	case "CUP_B_USMC_Soldier_FROG_WDL":{execVM "Domination_Core\client\arsenal\charlie_rf.sqf"};
@@ -35,6 +38,19 @@ switch(typeOf player)do{
 	case "CUP_B_USMC_Soldier_MG_FROG_WDL":{execVM "Domination_Core\client\arsenal\charlie_mg.sqf"};
 	case "CUP_B_USMC_Soldier_Light_FROG_WDL":{execVM "Domination_Core\client\arsenal\charlie_mgass.sqf"};
 	case "CUP_B_USMC_Medic_FROG_WDL":{execVM "Domination_Core\client\arsenal\charlie_med.sqf"};
+	//Delta
+	case "CUP_B_CDF_Officer_FST":{execVM "Domination_Core\client\arsenal\delta_sl.sqf"};
+	case "CUP_B_CDF_Soldier_TL_FST":{execVM "Domination_Core\client\arsenal\delta_tl.sqf"};
+	case "CUP_B_CDF_Soldier_FST":{execVM "Domination_Core\client\arsenal\delta_rf.sqf"};
+	case "CUP_B_CDF_Soldier_LAT_FST":{execVM "Domination_Core\client\arsenal\delta_at.sqf"};
+	case "CUP_B_CDF_Soldier_AAT_FST":{execVM "Domination_Core\client\arsenal\delta_aat.sqf"};
+	case "CUP_B_CDF_Soldier_MG_FST":{execVM "Domination_Core\client\arsenal\delta_mg.sqf"};
+	case "CUP_B_CDF_Soldier_AMG_FST":{execVM "Domination_Core\client\arsenal\delta_mgass.sqf"};
+	case "CUP_B_CDF_Medic_FST":{execVM "Domination_Core\client\arsenal\delta_med.sqf"};
+	//Armour crew
+	case "CUP_B_US_Soldier_Engineer_OEFCP":{execVM "Domination_Core\client\arsenal\armour_co.sqf"};
+	case "CUP_B_US_Crew_OEFCP":{execVM "Domination_Core\client\arsenal\armour_cr.sqf"};	
+	//Pilots
 	case "CUP_B_BAF_Soldier_Helipilot_MTP":{execVM "Domination_Core\client\arsenal\alpha_helo.sqf"};
 	case "CUP_B_US_Pilot":{execVM "Domination_Core\client\arsenal\bravo_helo.sqf"};
 	default {hint "Arsenal/init.sqf Failed"};

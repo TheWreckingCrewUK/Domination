@@ -88,6 +88,74 @@ if (player in USMCGroup)then{
 			[_veh, true, [0,1,1], 0, false] call ace_dragging_fnc_setCarryable;
 	},nil,10,false,false,"","cursorObject == infSpawner"];
 };
+if(player in CDFGroup)then{
+	player addAction ["<t color = '#cc4d00'>Basic Ammo</t>",{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+			_veh = "CUP_BOX_CDF_Ammo_F" createVehicle (getPos infSpawner);
+			clearWeaponCargoGlobal _veh;
+			clearMagazineCargoGlobal _veh;
+			clearItemCargoGlobal _veh;
+			//Magazines
+			_veh addMagazineCargoGlobal ["CUP_30Rnd_545x39_AK_M",15];
+			_veh addMagazineCargoGlobal ["CUP_30Rnd_TE1_Green_Tracer_545x39_AK_M",6];
+			_veh addMagazineCargoGlobal ["HandGrenade",6];
+			_veh addMagazineCargoGlobal ["SmokeShell",6];
+			_veh addMagazineCargoGlobal ["CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Green_M",8];
+			
+			//items
+			_veh addItemCargoGlobal ["ACE_fieldDressing",25];
+			_veh addItemCargoGlobal ["ACE_splint",4];
+			_veh addItemCargoGlobal ["ACE_morphine",4];
+			_veh addItemCargoGlobal ["ACE_epinephrine",2];
+			
+			//Allow Dragging + carry
+			[_veh, true, [0,1.5,0], 0, false] call ace_dragging_fnc_setDraggable;
+			[_veh, true, [0,1,1], 0, false] call ace_dragging_fnc_setCarryable;
+	},nil,10,false,false,"","cursorObject == infSpawner"];
+	
+	player addAction ["<t color = '#cc4d00'>AGS-30 Ammo</t>",{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+			_veh = "CUP_BOX_CDF_Ammo_F" createVehicle (getPos infSpawner);
+			clearWeaponCargoGlobal _veh;
+			clearMagazineCargoGlobal _veh;
+			clearItemCargoGlobal _veh;
+			//Magazines
+			_veh addItemCargoGlobal ["CUP_compats_29Rnd_30mm_AGS30_M",15];
+			
+			//Allow Dragging + carry
+			[_veh, true, [0,1.5,0], 0, false] call ace_dragging_fnc_setDraggable;
+			[_veh, true, [0,1,1], 0, false] call ace_dragging_fnc_setCarryable;
+	},nil,10,false,false,"","cursorObject == infSpawner"];
+	
+	player addAction ["<t color = '#cc4d00'>SPG-9 Ammo</t>",{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+			_veh = "CUP_BOX_CDF_Ammo_F" createVehicle (getPos infSpawner);
+			clearWeaponCargoGlobal _veh;
+			clearMagazineCargoGlobal _veh;
+			clearItemCargoGlobal _veh;
+			//Magazines
+			_veh addItemCargoGlobal ["CUP_compats_PG9_M",10];
+			_veh addItemCargoGlobal ["CUP_compats_OG9_M",10];
+			
+			//Allow Dragging + carry
+			[_veh, true, [0,1.5,0], 0, false] call ace_dragging_fnc_setDraggable;
+			[_veh, true, [0,1,1], 0, false] call ace_dragging_fnc_setCarryable;
+	},nil,10,false,false,"","cursorObject == infSpawner"];
+	
+	player addAction ["<t color = '#cc4d00'>Kord + DSHKM Ammo</t>",{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+			_veh = "CUP_BOX_CDF_Ammo_F" createVehicle (getPos infSpawner);
+			clearWeaponCargoGlobal _veh;
+			clearMagazineCargoGlobal _veh;
+			clearItemCargoGlobal _veh;
+			//Magazines
+			_veh addItemCargoGlobal ["ace_csw_50Rnd_127x108_mag",20];
+			
+			//Allow Dragging + carry
+			[_veh, true, [0,1.5,0], 0, false] call ace_dragging_fnc_setDraggable;
+			[_veh, true, [0,1,1], 0, false] call ace_dragging_fnc_setCarryable;
+	},nil,10,false,false,"","cursorObject == infSpawner"];
+};
 if(player in MedicGroup)then{
 	player addAction ["<t color = '#cc4d00'>Medical Supplies</t>",{
 		params ["_target", "_caller", "_actionId", "_arguments"];
@@ -121,10 +189,10 @@ player addAction ["<t color = '#cc4d00'>Smoke Mortar Ammo</t>",{
 },nil,10,false,false,"","cursorObject == infSpawner"];
 
 //Helicopters
-if(player in PilotGroup)then{
+if(player in PilotGroup || player in ArmourGroup)then{
 	player addAction ["<t color = '#cc4d00'>BAF Ammo</t>",{
 		params ["_target", "_caller", "_actionId", "_arguments"];
-			_veh = "CUP_BOX_GB_Ammo_F" createVehicle (getPos heliSpawner);
+			_veh = "CUP_BOX_GB_Ammo_F" createVehicle (getPos heliSpawnPad);
 			clearWeaponCargoGlobal _veh;
 			clearMagazineCargoGlobal _veh;
 			clearItemCargoGlobal _veh;
@@ -153,7 +221,7 @@ if(player in PilotGroup)then{
 	
 	player addAction ["<t color = '#cc4d00'>US Ammo</t>",{
 		params ["_target", "_caller", "_actionId", "_arguments"];
-			_veh = "CUP_BOX_US_ARMY_Ammo_F" createVehicle (getPos heliSpawner);
+			_veh = "CUP_BOX_US_ARMY_Ammo_F" createVehicle (getPos heliSpawnPad);
 			clearWeaponCargoGlobal _veh;
 			clearMagazineCargoGlobal _veh;
 			clearItemCargoGlobal _veh;
@@ -182,7 +250,7 @@ if(player in PilotGroup)then{
 	
 	player addAction ["<t color = '#cc4d00'>USMC Ammo</t>",{
 		params ["_target", "_caller", "_actionId", "_arguments"];
-			_veh = "CUP_BOX_USMC_Ammo_F" createVehicle (getPos heliSpawner);
+			_veh = "CUP_BOX_USMC_Ammo_F" createVehicle (getPos heliSpawnPad);
 			clearWeaponCargoGlobal _veh;
 			clearMagazineCargoGlobal _veh;
 			clearItemCargoGlobal _veh;
@@ -208,33 +276,57 @@ if(player in PilotGroup)then{
 			[_veh, true, [0,1,1], 0, false] call ace_dragging_fnc_setCarryable;
 	},nil,10,false,false,"","cursorObject == heliSpawner"];
 	
+	player addAction ["<t color = '#cc4d00'>CDF Ammo</t>",{
+		params ["_target", "_caller", "_actionId", "_arguments"];
+			_veh = "CUP_BOX_CDF_Ammo_F" createVehicle (getPos heliSpawnPad);
+			clearWeaponCargoGlobal _veh;
+			clearMagazineCargoGlobal _veh;
+			clearItemCargoGlobal _veh;
+			//Magazines
+			_veh addMagazineCargoGlobal ["CUP_30Rnd_545x39_AK_M",15];
+			_veh addMagazineCargoGlobal ["CUP_30Rnd_TE1_Green_Tracer_545x39_AK_M",6];
+			_veh addMagazineCargoGlobal ["HandGrenade",6];
+			_veh addMagazineCargoGlobal ["SmokeShell",6];
+			_veh addMagazineCargoGlobal ["CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Green_M",8];
+			
+			//items
+			_veh addItemCargoGlobal ["ACE_fieldDressing",25];
+			_veh addItemCargoGlobal ["ACE_splint",4];
+			_veh addItemCargoGlobal ["ACE_morphine",4];
+			_veh addItemCargoGlobal ["ACE_epinephrine",2];
+			
+			//Allow Dragging + carry
+			[_veh, true, [0,1.5,0], 0, false] call ace_dragging_fnc_setDraggable;
+			[_veh, true, [0,1,1], 0, false] call ace_dragging_fnc_setCarryable;
+	},nil,10,false,false,"","cursorObject == heliSpawner"];
+	
 	player addAction ["<t color = '#cc4d00'>Medical Supplies</t>",{
 		params ["_target", "_caller", "_actionId", "_arguments"];
-			"ACE_medicalSupplyCrate_advanced" createVehicle (getPos heliSpawner);
+			"ACE_medicalSupplyCrate_advanced" createVehicle (getPos heliSpawnPad);
 	},nil,10,false,false,"","cursorObject == heliSpawner"];
 	
 		player addAction ["<t color = '#cc4d00'>HE Mortar Ammo</t>",{
 		params ["_target", "_caller", "_actionId", "_arguments"];
-			"ACE_Box_82mm_Mo_HE" createVehicle (getPos heliSpawner);
+			"ACE_Box_82mm_Mo_HE" createVehicle (getPos heliSpawnPad);
 	},nil,10,false,false,"","cursorObject == heliSpawner"];
 
 	player addAction ["<t color = '#cc4d00'>Mixed Mortar Ammo</t>",{
 		params ["_target", "_caller", "_actionId", "_arguments"];
-			"ACE_Box_82mm_Mo_Combo" createVehicle (getPos heliSpawner);
+			"ACE_Box_82mm_Mo_Combo" createVehicle (getPos heliSpawnPad);
 	},nil,10,false,false,"","cursorObject == heliSpawner"];
 
 	player addAction ["<t color = '#cc4d00'>HE Mortar Ammo</t>",{
 		params ["_target", "_caller", "_actionId", "_arguments"];
-			"ACE_Box_82mm_Mo_HE" createVehicle (getPos heliSpawner);
+			"ACE_Box_82mm_Mo_HE" createVehicle (getPos heliSpawnPad);
 	},nil,10,false,false,"","cursorObject == heliSpawner"];
 
 	player addAction ["<t color = '#cc4d00'>Illum Mortar Ammo</t>",{
 		params ["_target", "_caller", "_actionId", "_arguments"];
-			"ACE_Box_82mm_Mo_Illum" createVehicle (getPos heliSpawner);
+			"ACE_Box_82mm_Mo_Illum" createVehicle (getPos heliSpawnPad);
 	},nil,10,false,false,"","cursorObject == heliSpawner"];
 
 	player addAction ["<t color = '#cc4d00'>Smoke Mortar Ammo</t>",{
 		params ["_target", "_caller", "_actionId", "_arguments"];
-			"ACE_Box_82mm_Mo_Smoke" createVehicle (getPos heliSpawner);
+			"ACE_Box_82mm_Mo_Smoke" createVehicle (getPos heliSpawnPad);
 	},nil,10,false,false,"","cursorObject == heliSpawner"];
 };

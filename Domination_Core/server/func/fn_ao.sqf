@@ -8,6 +8,11 @@
 
 params["_pos","_name"];
 
+//variable flag for ao started
+if(_name in badAOs)exitWith {};
+if(_name == lastAO)exitWith {};
+TWC_aoStarted = true;
+
 //Creates ao marker, tasks, and hints
 _markerstr = createMarker ["aoCenterMarker",_pos];
 _markerstr setMarkerShape "ICON";
@@ -110,9 +115,16 @@ if((count allPlayers) > 10) then{
 waitUntil{scriptDone _script};
 
 [_pos] call TWC_Domination_fnc_extraOBJ;
+/*
+debug to force next objectives RUN ON SERVER
+aoBunkerOne = true;
+aoBunkerTwo = true;
+aoBunkerThree = true;
+extraOBJ = true;
+radioTowerObj = true;
+*/
 
-
-waitUntil{twc_aoBoolArray = [aoBunkerOne, aoBunkerTwo, aoBunkerThree, extraOBJ, radioTowerObj]; !(false in twc_aoBoolArray)};
+waitUntil{sleep 2; twc_aoBoolArray = [aoBunkerOne, aoBunkerTwo, aoBunkerThree, extraOBJ, radioTowerObj]; !(false in twc_aoBoolArray)};
 
 //updates Tasks
 [_name, "Succeeded",true] spawn BIS_fnc_taskSetState;

@@ -39,6 +39,16 @@ switch (player) do{
 	case usmcp12: {_radioId = ["ACRE_PRC148"] call acre_api_fnc_getRadioByType; [_radioId, 3] call acre_api_fnc_setRadioChannel};
 	case usmcp13: {_radioId = ["ACRE_PRC148"] call acre_api_fnc_getRadioByType; [_radioId, 3] call acre_api_fnc_setRadioChannel};
 	case usmcmed: {_radioId = ["ACRE_PRC148"] call acre_api_fnc_getRadioByType; [_radioId, 3] call acre_api_fnc_setRadioChannel};
+	case cdfp1: {_radioId = ["ACRE_PRC117F"] call acre_api_fnc_getRadioByType; [_radioId, 1] call acre_api_fnc_setRadioChannel};
+	case cdfp2: {};
+	case cdfp3: {};
+	case cdfp4: {};
+	case cdfp5: {};
+	case cdfp6: {};
+	case cdfp7: {};
+	case cdfp8: {};
+	case cdfp9: {};
+	case cdfmed: {};
 	case bafhelo: {player addItem "ACRE_PRC343"; sleep 1; _radioId = ["ACRE_PRC117F"] call acre_api_fnc_getRadioByType; [_radioId, 1] call acre_api_fnc_setRadioChannel};
 	case ushelo: {_radioId = ["ACRE_PRC117F"] call acre_api_fnc_getRadioByType; [_radioId, 1] call acre_api_fnc_setRadioChannel};
 	case armour1: {_radioId = ["ACRE_PRC148"] call acre_api_fnc_getRadioByType; [_radioId, 4] call acre_api_fnc_setRadioChannel; _radioId = ["ACRE_PRC117F"] call acre_api_fnc_getRadioByType; [_radioId, 1] call acre_api_fnc_setRadioChannel};

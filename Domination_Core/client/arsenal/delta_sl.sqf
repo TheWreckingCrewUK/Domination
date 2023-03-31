@@ -1,0 +1,4 @@
+[arsenalAmmoBox,["CUP_arifle_AK74","CUP_hgun_Makarov","ACE_Vector","CUP_launch_RPG18","CUP_DSHKM_carry","CUP_KORD_carry","ace_csw_kordCarryTripod","CUP_SPG9_carry","ace_csw_spg9CarryTripod","CUP_launch_Metis","CUP_AGS30_carry","ace_csw_sag30CarryTripod","CUP_2b14_carry","ace_csw_carryMortarBasePlate"],false] call BIS_fnc_addVirtualWeaponCargo;
+[arsenalAmmoBox,["CUP_30Rnd_545x39_AK_M","CUP_30Rnd_TE1_Green_Tracer_545x39_AK_M","CUP_8Rnd_9x18_Makarov_M","DemoCharge_Remote_Mag","CUP_AT13_M","ace_csw_50Rnd_127x108_mag","CUP_compats_PG9_M","CUP_compats_OG9_M","CUP_compats_29Rnd_30mm_AGS30_M"],false] call BIS_fnc_addVirtualMagazineCargo;
+[arsenalAmmoBox,["CUP_H_CDF_OfficerCap_FST","CUP_U_B_CDF_FST_1","CUP_V_CDF_6B3_1_FST","ACE_DAGR","CUP_optic_Kobra","ACRE_PRC117F"],false] call Bis_fnc_addVirtualItemCargo;
+[arsenalAmmoBox,["CUP_O_RUS_Patrol_bag_Green"],false] call Bis_fnc_addVirtualBackpackCargo;
